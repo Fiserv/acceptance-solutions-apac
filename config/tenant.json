@@ -1,6 +1,6 @@
 {
-  "title": "Merchant Solutions APAC",
-  "name": "MerchantSolutionsAPAC",
+  "title": "Acceptance Solutions - APAC",
+  "name": "AcceptanceSolutionsAPAC",
   "brand": "Fiserv",
   "brandLogoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Fiserv_Logo.jpg",
   "solution": ["merchants"],
@@ -31,11 +31,11 @@
     "logoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Portal_Logo.png",
     "description": "To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
     "longDescription":"To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "apiSpecification": "/v1/apis/MerchantSolutionsAPAC",
-    "layout": "/v1/layouts/MerchantSolutionsAPAC",
-    "documentation": "/v1/docs/MerchantSolutionsAPAC",
-    "documenttree": "/v1/docs/MerchantSolutionsAPAC",
-    "documenttreeV2": "/v2/docs/MerchantSolutionsAPAC",
+    "apiSpecification": "/v1/apis/AcceptanceSolutionsAPAC",
+    "layout": "/v1/layouts/AcceptanceSolutionsAPAC",
+    "documentation": "/v1/docs/AcceptanceSolutionsAPAC",
+    "documenttree": "/v1/docs/AcceptanceSolutionsAPAC",
+    "documenttreeV2": "/v2/docs/AcceptanceSolutionsAPAC",
     "feature":[
       {
         "name": "sandBox",
@@ -57,17 +57,17 @@
   },
    "supportConfig": [{ 
 		"bug": {
-			"label": "bug,MerchantSolutionsAPAC",
+			"label": "bug,AcceptanceSolutionsAPAC",
 			"template": "bug.md",
 			"assignees": "replace.me@fiserv.com,replace.me@fiserv.com"
 		},
 		"feedback": {
-			"label": "feedback,MerchantSolutionsAPAC",
+			"label": "feedback,AcceptanceSolutionsAPAC",
 			"template": "feedback.md",
 			"assignees": "replace.me@fiserv.com"
 		},
 		"enhancement": {
-			"label": "enhancement,MerchantSolutionsAPAC",
+			"label": "enhancement,AcceptanceSolutionsAPAC",
 			"template": "feature.md",
 			"assignees": "replace.me@fiserv.com"
 		}

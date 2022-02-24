@@ -28,15 +28,15 @@
 # the delivery of this work
 ################################################################################
 header:
-  productName: MerchantSolutionsAPAC
+  productName: AcceptanceSolutionsAPAC
   productionDescription: REPLACEME
   whoIsItFor: REPLACEME
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
-    altText: MerchantSolutionsAPAC™
+    altText: AcceptanceSolutionsAPAC™
 featuredFeatures:
   - title: Credit Issuance
-    description:  MerchantSolutionsAPAC solution allows financial Institution to issue and manage the Credit Card products to their end customers.
+    description:  AcceptanceSolutionsAPAC solution allows financial Institution to issue and manage the Credit Card products to their end customers.
     tags: ["APAC", "FirstVision", "Credit"]
     bullets: ["Activate Card", "Block Card", "Lost Stolen Card Transfer", "CVV2 Validation" ]
     relatedDocs:
