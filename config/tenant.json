@@ -36,6 +36,7 @@
     "documentation": "/v1/docs/AcceptanceSolutionsAPAC",
     "documenttree": "/v1/docs/AcceptanceSolutionsAPAC",
     "documenttreeV2": "/v2/docs/AcceptanceSolutionsAPAC",
+    "sandbox": "/v1/sandboxrun/AcceptanceSolutionsAPAC",
     "feature":[
       {
         "name": "sandBox",
