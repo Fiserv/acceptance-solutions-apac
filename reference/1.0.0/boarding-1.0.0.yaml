@@ -19,6 +19,8 @@ paths:
       summary: Login API
       description: This API validates the external client with the unique credentials shared with each of partner.This API respond back with a session token & expiry time for the session token. This token is required in header of each subsequent API triggered by partner.
       operationId: login
+      x-group-name: Boarding
+      x-proxy-name: Login 
       requestBody:
         content:
           application/json:
@@ -42,6 +44,8 @@ paths:
         - Boarding
       summary: Get Package ID
       operationId: packagebyID
+      x-group-name: Boarding
+      x-proxy-name: packagebyID 
       parameters:
         - name: id
           in: path
@@ -61,6 +65,8 @@ paths:
       tags:
         - Boarding
       operationId: packgeInfo_5
+      x-group-name: Boarding
+      x-proxy-name: package info
       parameters:
         - name: packageRequest
           in: query
@@ -79,6 +85,8 @@ paths:
       tags:
       - Boarding
       operationId: refIdInquiry
+      x-group-name: Boarding
+      x-proxy-name: packagebyID
       parameters:
       - name: refId
         in: path
@@ -104,6 +112,8 @@ paths:
       tags:
       - Boarding
       operationId: getApplicationURN
+      x-group-name: Boarding
+      x-proxy-name: get Application URN
       requestBody:
         content:
           application/json:
@@ -122,6 +132,8 @@ paths:
       tags:
       - Boarding
       operationId: submitApplication
+      x-group-name: Boarding
+      x-proxy-name: Submit Application
       parameters:
       - name: appURN
         in: path
@@ -146,6 +158,8 @@ paths:
       tags:
       - Boarding
       operationId: additionalTid
+      x-group-name: Boarding
+      x-proxy-name: additionalTid
       parameters:
       - name: appURN
         in: path
@@ -170,6 +184,8 @@ paths:
       tags:
       - Boarding
       operationId: additionalMid
+      x-group-name: Boarding
+      x-proxy-name: additionalMid
       parameters:
       - name: appURN
         in: path
@@ -194,6 +210,8 @@ paths:
       tags:
       - Boarding
       operationId: addLocation
+      x-group-name: Boarding
+      x-proxy-name: addLocation
       parameters:
       - name: appURN
         in: path
@@ -218,6 +236,8 @@ paths:
       tags:
       - Boarding
       operationId: uploadMerchantDocument
+      x-group-name: Boarding
+      x-proxy-name: upload merchant document
       parameters:
       - name: appURN
         in: path
@@ -241,6 +261,8 @@ paths:
       tags:
       - Boarding
       operationId: getDocumentMatrix
+      x-group-name: Boarding
+      x-proxy-name: get Document matrix
       requestBody:
         content:
           application/json:
