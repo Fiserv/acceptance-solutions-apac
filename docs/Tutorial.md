@@ -5,9 +5,9 @@ The Merchant Solutions APIs are built on the foundation of REST. The APIs accept
 Our APIs are broadly grouped into following sub-catagories.  Please click to specific category of interest to get more details
 
 # Cloud POI
-- [Login](./?path=/docs/UAM.md)
+- [Login](./?path=/docs/APIs/UAM/UAM.md)
 
-- [Payment API](./?path=/docs/PaymentAPI.md)
+- [Payment API](./?path=docs/APIs/PaymentAPI/ProcessAmount.md)
 
 # Commerce Connect
 - Coming soon
