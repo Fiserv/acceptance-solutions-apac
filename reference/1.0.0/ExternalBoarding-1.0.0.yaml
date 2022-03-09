@@ -1,0 +1,254 @@
+openapi: 3.0.2
+info:
+  title: External Boarding
+  version: 1.0v
+  description: ' External Boarding API '
+servers:
+- url: https://www.uat.fdmerchantservices.com
+  description: UAT URL
+security:
+- BasicAuth: []
+- ApiKeyAuth: []
+tags:
+- name: Login
+  description: User login API
+- name: Boarding
+  description: REST API for Boarding
+paths:
+  /Externalboarding/partner/login:
+    get:
+      tags:
+      - Login
+      summary: User Login
+      operationId: getAuthJWTToken
+      parameters:
+      - name: ain
+        in: query
+        required: true
+        example: 4700000
+        description: instituiion id
+        schema:
+          type: string
+      - name: source
+        in: query
+        required: true
+        example: API
+        description: SOURCE TYPE i.e API , TAB etc ..
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /Externalboarding/secure/newmid:
+    post:
+      tags:
+      - Boarding
+      summary: New Merchant
+      operationId: submitapplication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              description: encrypted string
+              example: "sdsd"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+                description: encrypted string
+                example: ""
+  /Externalboarding/secure/refmid/{appType}/{referenceMID}:
+    get:
+      tags:
+      - Boarding
+      summary: Inquiry MID
+      operationId: refForAdditionalMID
+      parameters:
+      - name: appType
+        in: path
+        required: true
+        example: ADDLTID
+        description: ADDLTID / ADDLMID
+        schema:
+          type: string
+      - name: referenceMID
+        in: path
+        required: true
+        example: 99000154
+        description: mid
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                 $ref: '#/components/schemas/Response'
+  /Externalboarding/secure/create:
+    post:
+      tags:
+      - Boarding
+      summary: Create Application
+      operationId: createapplication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              description: encrypted string
+              example: ""
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+                description: encrypted string
+                example: ""
+  /Externalboarding/secure/appstatus/{appUrn}:
+    get:
+      tags:
+      - Boarding
+      summary: Application Status
+      operationId: getAppStatus
+      parameters:
+      - name: appUrn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Response'
+  /Externalboarding/secure/packages:
+    get:
+      tags:
+      - Boarding
+      summary: Get Package List
+      operationId: getPackageList
+      parameters:
+      - name: RequestParam
+        in: query
+        required: true
+        schema:
+          $ref: '#/components/schemas/DocAndPkgRequestParam'
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/PkgListResponse'
+components:
+  schemas:
+    PkgListResponse:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/Status'
+        data:
+          type: object
+        documentOverride:
+          type: array
+          items:
+            $ref: '#/components/schemas/DocumentOverride'
+    DocumentOverride:
+      type: object
+      properties:
+        packageId:
+          type: string
+        category:
+          type: string
+        documentId:
+          type: string
+    DocAndPkgRequestParam:
+      type: object
+      properties:
+        appType:
+          type: string
+          description: Application type
+          example: API
+        mccCode:
+          type: string
+          description: Merchant currency code
+          example: 5813
+        merchantType:
+          type: string
+          description: Merchant Type
+          example: SM
+        acceptanceType:
+          type: string
+          description: Acceptance Type
+          example: POSMOB
+        typeOfBusiness:
+          type: string
+          description: type of business
+          example: SOLPROR
+        international:
+          type: string
+          description: international
+          example: No
+        iciciMerchant:
+          type: string
+          description: ICICI Merchant
+          example: No
+        dcc:
+          type: string
+          description: Dynamic currency code
+          example: Yes
+        fundingCurrency:
+          type: string
+          description: Funding Currency
+          example: NET_AUD
+        boardingType:
+          type: string
+          description: Boarding Type
+          example: NEWMID
+        merchantGrade:
+          type: string
+          description: Merchant Grade
+          example: NA
+        newFundingAc:
+          type: string
+          description: new funding account
+          example: ""
+    Response:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/Status"
+        data:
+          type: object
+    Status:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+        message:
+          type: string
+
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization

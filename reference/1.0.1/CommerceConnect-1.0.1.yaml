@@ -1,0 +1,1017 @@
+openapi: 3.0.2
+info:
+  title: Commerce Connect
+  version: 1.0v
+servers:
+- url: https://test.fdconnect.com/FirstPayL2Services
+  description: UAT
+- url: http://10.95.12.100:8080/FirstPayL2Services
+  description: UAT Direct
+paths:
+  /getToken:
+    post:
+      tags:
+      - FirstPay
+      operationId: getToken
+      parameters:
+      - name: keyValue
+        in: header
+        schema:
+         type: string
+        required: true
+        description: key value
+        example: CNy+HimxmI4PmrJWrpLarBfbo6jIY/CHcezg2VQ8u5o=
+      - name: ivValue
+        in: header
+        schema:
+         type: string
+        required: true
+        description: Iv value
+        example: 9T4hd3Nx0b0sMgYuyWLCTg==
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EncryptDataBean'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinalResponseBean'
+  /decryptMerchantResponse:
+    post:
+      tags:
+      - FirstPay
+      operationId: decryptMerchantResponse
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DecryptMerchantRequest'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+  /getHMAC:
+    post:
+      tags:
+      - FirstPay
+      operationId: getHMAC
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetTokenBean'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HmacVo'
+  /getTxnInquiryDetail:
+    post:
+      tags:
+      - FirstPay
+      operationId: getTxnInquiryDetail
+      parameters:
+      - name: merchantId
+        in: header
+        schema:
+         type: string
+        required: true
+        description: merchant id
+        example: 470000000332260
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EncryptDataBean'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MerchantInquiryTxnResponseBean'
+  /refundTxnDetail:
+    post:
+      tags:
+      - FirstPay
+      operationId: refundTxnDetail
+      parameters:
+      - name: merchantId
+        in: header
+        schema:
+         type: string
+        required: true
+        description: merchant id
+        example: 470000000332260
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EncryptDataBean'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MerchantInquiryTxnResponseBean'
+
+  /encryptData:
+    post:
+      tags:
+      - FirstPay
+      operationId: encryptDataUsingAES
+      parameters:
+        - name: keyValue
+          in: header
+          schema:
+            type: string
+          required: true
+          description: key value
+          example: CNy+HimxmI4PmrJWrpLarBfbo6jIY/CHcezg2VQ8u5o=
+        - name: ivValue
+          in: header
+          schema:
+           type: string
+          required: true
+          description: Iv value
+          example: 9T4hd3Nx0b0sMgYuyWLCTg==
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              description: requestdata
+              example: {"resultURL": "https://test.fdconnect.com/MerchantApp/merchantSuccessPage.jsp",
+                transactionDetails": {
+                "amount": "100",
+                "currencyCode": "INR",
+                "clientTransactionId": "af92c1a4-82b7-4327-b1a9-fc92504f792f",
+                "transactionType": "SALE"
+                },
+                "customerDetails": {
+                    "hostedIds": []
+                },
+                "linkPaymentData": {
+                    "sessionTokenExpireDate": "25-07-2020",
+                    "configId": "PageId2019080820099"
+                },
+                "integrationType": "MERCHANT_LINK_PAYMENT_MODE_INTEGRATION"
+                } 
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+components:
+  schemas:
+    FDConnectSaleRequest:
+      type: object
+      properties:
+        merchantId:
+          type: string
+        key:
+          type: string
+        iv:
+          type: string
+        resultURL:
+          type: string
+        amount:
+          type: string
+        currencyCode:
+          type: string
+        merchantTxnId:
+          type: string
+        transactionType:
+          type: string
+        customerId:
+          type: string
+        hostedId:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        middleName:
+          type: string
+        suffix:
+          type: string
+        mobileNo:
+          type: string
+        emailId:
+          type: string
+        billStreet1:
+          type: string
+        billStree2:
+          type: string
+        billCity:
+          type: string
+        billState:
+          type: string
+        billCountry:
+          type: string
+        billZipcode:
+          type: string
+        shipStreet1:
+          type: string
+        shipStree2:
+          type: string
+        shipCity:
+          type: string
+        shipState:
+          type: string
+        shipCountry:
+          type: string
+        shipZipcode:
+          type: string
+        cardNumber:
+          type: string
+        expMonth:
+          type: string
+        expYear:
+          type: string
+        getcVV:
+          type: string
+        nameOnCard:
+          type: string
+        bankId:
+          type: string
+        bankName:
+          type: string
+        walletId:
+          type: string
+        walletName:
+          type: string
+        getvPAId:
+          type: string
+        apiURL:
+          type: string
+        vaultCard:
+          type: boolean
+        integrationType:
+          type: string
+        paymentMethodType:
+          type: string
+        sessionTokenExpireDate:
+          type: string
+        configId:
+          type: string
+        udf1:
+          type: string
+        udf2:
+          type: string
+        udf3:
+          type: string
+        udf4:
+          type: string
+        udf5:
+          type: string
+        udf6:
+          type: string
+        udf7:
+          type: string
+        udf8:
+          type: string
+        udf9:
+          type: string
+        udf10:
+          type: string
+        autoDebit:
+          type: string
+        getsIFrequency:
+          type: string
+        getsIStartDate:
+          type: string
+        getsIEndDate:
+          type: string
+        getsIAmtType:
+          type: string
+        maxDebitAmt:
+          type: string
+        invoiceFlag:
+          type: string
+        sihubBin:
+          type: string
+        sihubid:
+          type: string
+        sihubEnable:
+          type: string
+        txnRetry:
+          type: string
+        sihubStatus:
+          type: string
+        subscriptionRefid:
+          type: string
+        subscriptionDesc:
+          type: string
+        siTxnType:
+          type: string
+        enrolmentId:
+          type: string
+        invoiceId:
+          type: string
+        invoiceNo:
+          type: string
+        invoiceDisplayNumber:
+          type: string
+        invoiceDesc:
+          type: string
+        debitDate:
+          type: string
+        notificationid:
+          type: string
+        sihubMerchantConsent:
+          type: string
+        sihubMerchantApproval:
+          type: string
+        custEmailNotify:
+          type: string
+        sip:
+          type: string
+        authResult:
+          type: string
+        authCode:
+          type: string
+        rrn:
+          type: string
+        authDate:
+          type: string
+        transactionId:
+          type: string
+        networkId:
+          type: string
+        eci:
+          type: string
+        enrolled:
+          type: string
+        cavv:
+          type: string
+        cavvAlgorithm:
+          type: string
+        xid:
+          type: string
+        threeDsStatus:
+          type: string
+        remark:
+          type: string
+        txnInitiationEntity:
+          type: string
+        siAmount:
+          type: string
+        storeId:
+          type: string
+        institutionId:
+          type: string
+        hostedIds:
+          type: string
+          writeOnly: true
+    MerchDccResposeBean:
+      type: object
+      properties:
+        foreignCurrencyCode:
+          type: string
+        foreignAmount:
+          type: string
+        exchangeRate:
+          type: string
+        marginRatePercentage:
+          type: string
+    MerchEmiDetail:
+      type: object
+      properties:
+        bankCode:
+          type: string
+        bankName:
+          type: string
+        emiTenure:
+          type: string
+        emiInterestRate:
+          type: string
+        emiInterestAmount:
+          type: string
+        emiProcFee:
+          type: string
+        emiPerMonth:
+          type: string
+        emiTotalAmt:
+          type: string
+    SIHUBBean:
+      type: object
+      properties:
+        invoiceFlag:
+          type: string
+        sihubBin:
+          type: string
+        sihubid:
+          type: string
+        sihubEnable:
+          type: string
+        txnRetry:
+          type: string
+        sihubStatus:
+          type: string
+        subscriptionRefid:
+          type: string
+        subscriptionDesc:
+          type: string
+        siTxnType:
+          type: string
+        enrolmentId:
+          type: string
+        invoiceId:
+          type: string
+        invoiceNo:
+          type: string
+        invoiceDisplayNumber:
+          type: string
+        invoiceDesc:
+          type: string
+        debitDate:
+          type: string
+        notificationid:
+          type: string
+        sihubMerchantConsent:
+          type: string
+        sihubMerchantApproval:
+          type: string
+        custEmailNotify:
+          type: string
+        sip:
+          type: string
+        authResult:
+          type: string
+        authCode:
+          type: string
+        rrn:
+          type: string
+        authDate:
+          type: string
+        transactionId:
+          type: string
+        networkId:
+          type: string
+        eci:
+          type: string
+        enrolled:
+          type: string
+        cavv:
+          type: string
+        cavvAlgorithm:
+          type: string
+        xid:
+          type: string
+        threeDsStatus:
+          type: string
+        remark:
+          type: string
+        txnInitiationEntity:
+          type: string
+        createdon:
+          type: string
+        updatedon:
+          type: string
+        deletedon:
+          type: string
+        cancelledon:
+          type: string
+        status:
+          type: string
+        validationId:
+          type: string
+        siAmount:
+          type: string
+        authorizationId:
+          type: string
+        custEmailId:
+          type: string
+        custMobileNo:
+          type: string
+        additionalField1:
+          type: string
+        additionalField2:
+          type: string
+        additionalField3:
+          type: string
+        additionalField4:
+          type: string
+        additionalField5:
+          type: string
+        storeId:
+          type: string
+        institutionId:
+          type: string
+    SIHUBBin:
+      type: object
+      properties:
+        bin:
+          type: string
+        type:
+          type: string
+        issuer_name:
+          type: string
+        amount_limit:
+          type: string
+        createdTime:
+          type: string
+          format: date-time
+        modifiedTime:
+          type: string
+          format: date-time
+    SIHUBMerchantResponseBean:
+      type: object
+      properties:
+        fpTransactionId:
+          type: string
+        newFpTransactionId:
+          type: string
+        merchantTxnId:
+          type: string
+        externalTxnId:
+          type: string
+        merchantId:
+          type: string
+        resultUrl:
+          type: string
+        transactionType:
+          type: string
+        baseCurrency:
+          type: string
+        transactionCurrency:
+          type: string
+        baseAmount:
+          type: string
+        transactionAmount:
+          type: string
+        balanceAmount:
+          type: string
+        paymentMethod:
+          type: string
+        convFee:
+          type: string
+        taxFee:
+          type: string
+        transactionStatus:
+          type: string
+        transactionStatusCode:
+          type: string
+        transactionStatusDescription:
+          type: string
+        transactionDateTime:
+          type: string
+        standingInstruction:
+          type: boolean
+        standingInstructionData:
+          $ref: '#/components/schemas/StandingInstructionBean'
+        dccDetail:
+          $ref: '#/components/schemas/MerchDccResposeBean'
+        emiDetail:
+          $ref: '#/components/schemas/MerchEmiDetail'
+        udf1:
+          type: string
+        udf2:
+          type: string
+        udf3:
+          type: string
+        udf4:
+          type: string
+        udf5:
+          type: string
+        udf6:
+          type: string
+        udf7:
+          type: string
+        udf8:
+          type: string
+        udf9:
+          type: string
+        udf10:
+          type: string
+        bankCode:
+          type: string
+        bankName:
+          type: string
+        cardScheme:
+          type: string
+        sessionTokenId:
+          type: string
+        sihubBin:
+          $ref: '#/components/schemas/SIHUBBin'
+        paymentLink:
+          type: string
+    StandingInstructionBean:
+      required:
+      - getsIAmtType
+      - getsIFrequency
+      type: object
+      properties:
+        getsIFrequency:
+          type: string
+        getsIStartDate:
+          pattern: ^(3[01]|[12][0-9]|0[1-9])-(1[0-2]|0[1-9])-[0-9]{4}$
+          type: string
+        getsIEndDate:
+          pattern: ^(3[01]|[12][0-9]|0[1-9])-(1[0-2]|0[1-9])-[0-9]{4}$
+          type: string
+        getsIAmtType:
+          type: string
+        maxDebitAmt:
+          type: string
+        hostedId:
+          type: string
+        sihubBean:
+          $ref: '#/components/schemas/SIHUBBean'
+    EncryptDataBean:
+      type: object
+      properties:
+        encryptData:
+          type: string
+          example: pv1SuId0Ca8YxWBGVBHD/e6yT1PRH8Ps4pmm6vatlcEu1xtm33Xay36ago2Ll0QNK3QpS5tRQXqhWnbLVcsTd6PzHRV+LQ6jx8OKwjmP9aQtIlY8wIAS1WxUcLPNaVb/I6qp49bERPToOLREts/X7i5g7QO/Mpd8Q7WNYT6dIKVSZ1XO8y4Yrzk8Lh5OfiqGVc4ulv99zbMZbawiN+1dmQgyzMlM9nyUa8oyoCBP2wmJjjJS83dS5Ic809cqMxqjMi1s47mNroag94WdklV41cmBDaQ3RGKQySCD7YWghocy1t0JI/QjBqF0lo32gCDYowUPHL8YnlxFdkJiqDnljePzOyNRX0wQdoEZEIx/f3pNv3XRLYVusvUMgwF6OppjdpfZW1a5ZsjnK0u2GD0GNlpUtyQjnjQsWBwgJlb6C9sRRiqeaEogPudQaoNdHjPqPvOwUYXsbGZ7sHIxpr3LPSlT4TuGKdaIpHVHFHbno2mtZweWyB1I+AnYJ97LhAdEnZOCxO+8gcuiq5nrWmMfoSGgFx/cNvo0M/zo90JJNKcTAAgdyPi6GV/VJ0g47F2ph3PI+QYaU8gizlBbwpBuNPPX2QeoEo879S1xywLjkbIDa37j21nq5i8ajzqpKmSC7LDRPKVP93kp2Tp/BFLa9Xm7EcVqqfhNI+yMBuE8lb7OQ4OXEYy3e9ZMhXkOHnWjfthgRdsy0g9nOeYEh35fsjIE757aWGOfl03u+bRn4RrXKFxo+sJ1r/CHrY4YeTY0LfiO2i72mbI4ENRuzVZTuXgx01wCCnHLZbrqsYd60SNdd4GwXq22Hm6HdZpDMnlZ5+9MvPlHnRyRli9pN/TdfWCuyYk9J64GXJkyUrDv4exm6y15hBCPrqs7NWs0YJYAy8JhqF5QnR7p6SeBlY7Sv4+iqYfk+QAgdjkJDDa4Lu4Gwo1LpJxR15osvex5frC2gZA+s5rJYL4WZLdnpHW0GB+HTvrTDYWSpU546RydhqVz25cNQu2WHtpeHeT4txtW5+UVKxm1Lo+q5EIIxoYtoJSSUrHc9Gsea/AS0ABkqwt2787Y8wzjj/BJTKTqR5o5rNCOpKVL0tFrv/3I1grbJnH2GVUwatYrWQ6PfL40G+3NmJgVRn67cu9mGZKEFOhrVEgNi35MSze+lLHzlq4EAS6+uTLwQvftRnQ02lXqwkX9lSA12F2un1pc805T4SBU6QdPCtP0wGPbgRkluNGaVdspK0Dbxo525o+3SLgVpNR4VrfcBh/QwFeNm6sj5ggyy6gQ3Pc3lIsNcbv1vf+H4B2HjZWBEK2cFP8UY93W4/uHPIWJCC7mlp1Tfi2Uxso9+bp6hHYaykj1ftU1p1qSQz/uxN9W2Etp/g+sH6jaVF9ajk2xItEcwAP0aiS//6PXKh1V7jwO003JuvniX+4C4dVIB1r8Z77kCriHDJ9DU4TjeDNKDgsgOKI6njLOcca0HqAd595Wli/vv1H0wwMy9FqfTeWFb+bj2fl3Y/tjduG2FlaNNT33EQGIjvVPeOGGL25r9qtbPI9qytl5CJw89oi++Fh0f3rjDhqhDyQlBGnVmBrThS9WeZZ3wgjiWVHXGbv5euFHoR8Ip2a/tcepgAb0G6/datzaVEbAjrNbQZK96gSneIWHeasLQgIn3eyDX+16yG/BPG5ZXWbnQzTmRqVGJtypTv7x51N6M90Ivu32oWUbbgA8nBHaFKYbhSi1yYol+YCraOlZAUhWyBeS2w==
+    FinalResponseBean:
+      type: object
+      properties:
+        response:
+          type: object
+    AirlineInfoBean:
+      type: object
+      properties:
+        passengerName:
+          type: string
+        ticketNo:
+          type: string
+        issuingCarrier:
+          type: string
+        flightNo:
+          type: string
+        travelAgencyName:
+          type: string
+        travelRoute:
+          type: string
+        departureDate:
+          type: string
+        origin:
+          type: string
+        destination:
+          type: string
+        carrierCode:
+          type: string
+        serviceClass:
+          type: string
+        stopoverType:
+          type: string
+        fareBasisCode:
+          type: string
+        airlineInvoiceNo:
+          type: string
+        customerCode:
+          type: string
+        travelAgencyCode:
+          type: string
+        departureTax:
+          type: string
+    BankDataBean:
+      required:
+      - bankName
+      - firstPayBankCode
+      type: object
+      properties:
+        firstPayBankCode:
+          type: string
+        bankName:
+          type: string
+    BillingAddressBean:
+      type: object
+      properties:
+        street1:
+          type: string
+        stree2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        zipcode:
+          type: string
+    CardDataBean:
+      required:
+      - cardNumber
+      - expMonth
+      - expYear
+      type: object
+      properties:
+        cardNumber:
+          type: string
+        expMonth:
+          type: string
+        expYear:
+          type: string
+        getcVV:
+          type: string
+        nameOnCard:
+          type: string
+        vaultCard:
+          type: boolean
+    CustomerDetailsBean:
+      type: object
+      properties:
+        customerId:
+          type: string
+        hostedId:
+          type: string
+        name:
+          $ref: '#/components/schemas/NameBean'
+        mobileNo:
+          pattern: ^([+]{1}([(]{1}[0-9]{2}[)]{1}|[0-9]{2}))*[0-9]{10}$
+          type: string
+        emailId:
+          type: string
+        billingAddress:
+          $ref: '#/components/schemas/BillingAddressBean'
+        shippingAddress:
+          $ref: '#/components/schemas/ShippingAddressBean'
+        customerVPAId:
+          type: string
+        hostedIds:
+          type: string
+          writeOnly: true
+    GetTokenBean:
+      required:
+      - customerDetails
+      - resultURL
+      - transactionDetails
+      type: object
+      properties:
+        resultURL:
+          type: string
+        transactionDetails:
+          $ref: '#/components/schemas/TransactionDetailsBean'
+        customerDetails:
+          $ref: '#/components/schemas/CustomerDetailsBean'
+        integrationType:
+          type: string
+        paymentMethodType:
+          type: string
+        cardData:
+          $ref: '#/components/schemas/CardDataBean'
+        bankData:
+          $ref: '#/components/schemas/BankDataBean'
+        walletData:
+          $ref: '#/components/schemas/WalletDataBean'
+        upiData:
+          $ref: '#/components/schemas/UpiDataBean'
+        productData:
+          $ref: '#/components/schemas/ProductDataBean'
+        airlineInfo:
+          $ref: '#/components/schemas/AirlineInfoBean'
+        udf:
+          $ref: '#/components/schemas/UdfBean'
+        linkPaymentData:
+          $ref: '#/components/schemas/LinkPaymentData'
+        sender:
+          $ref: '#/components/schemas/SenderBean'
+    LinkPaymentData:
+      required:
+      - configId
+      type: object
+      properties:
+        sessionTokenExpireDate:
+          pattern: ^(3[01]|[12][0-9]|0[1-9])-(1[0-2]|0[1-9])-[0-9]{4}$
+          type: string
+        configId:
+          type: string
+    NameBean:
+      required:
+      - firstName
+      - lastName
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        middleName:
+          type: string
+        suffix:
+          type: string
+    ProductDataBean:
+      type: object
+      properties:
+        productId:
+          type: string
+        productDescription:
+          type: string
+        quantity:
+          type: string
+        price:
+          type: string
+        txnAmount:
+          type: string
+        shippingFee:
+          type: string
+        discountPrice:
+          type: string
+    SenderBean:
+      type: object
+      properties:
+        senderPmtAcct:
+          type: string
+        senderPmtAcctAlias:
+          type: string
+        senderFirstName:
+          type: string
+        senderLastName:
+          type: string
+        senderAddress:
+          type: string
+        senderState:
+          type: string
+        senderCity:
+          type: string
+        senderCountry:
+          type: string
+        senderZipCode:
+          type: string
+    ShippingAddressBean:
+      type: object
+      properties:
+        street1:
+          type: string
+        stree2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        zipcode:
+          type: string
+    TransactionDetailsBean:
+      required:
+      - amount
+      - clientTransactionId
+      - currencyCode
+      - transactionType
+      type: object
+      properties:
+        amount:
+          pattern: ^[0-9]\d{0,11}(\.\d{1,2})?%?$
+          type: string
+        currencyCode:
+          type: string
+        clientTransactionId:
+          type: string
+        transactionType:
+          type: string
+        autoDebit:
+          type: string
+        standingInstructionBean:
+          $ref: '#/components/schemas/StandingInstructionBean'
+    MerchantInquiryTxnResponseBean:
+      type: object
+      properties:
+        fpTransactionId:
+          type: string
+        merchantId:
+          type: string
+        saleTxnDetail:
+          $ref: '#/components/schemas/MerchantInquiryDetailBean'
+        refundTxnDetail:
+          type: array
+          items:
+            $ref: '#/components/schemas/MerchantInquiryDetailBean'
+        errorCode:
+          type: string
+        errorMessage:
+          type: string
+    MerchantInquiryDetailBean:
+      type: object
+      properties:
+        merchantTxnId:
+          type: string
+        externalTxnId:
+          type: string
+        transactionType:
+          type: string
+        baseCurrency:
+          type: string
+        transactionCurrency:
+          type: string
+        baseAmount:
+          type: string
+        transactionAmount:
+          type: string
+        balanceAmount:
+          type: string
+        paymentMethod:
+          type: string
+        transactionStatus:
+          type: string
+        transactionStatusCode:
+          type: string
+        transactionStatusDescription:
+          type: string
+        tranEnquiryCount:
+          type: string
+        transactionDateTime:
+          type: string
+        bankName:
+          type: string
+        cardScheme:
+          type: string
+        bankCode:
+          type: string
+        udf1:
+          type: string
+        udf2:
+          type: string
+        udf3:
+          type: string
+        udf4:
+          type: string
+        udf5:
+          type: string
+        udf6:
+          type: string
+        udf7:
+          type: string
+        udf8:
+          type: string
+        udf9:
+          type: string
+        udf10:
+          type: string
+    UdfBean:
+      type: object
+      properties:
+        udf1:
+          type: string
+        udf2:
+          type: string
+        udf3:
+          type: string
+        udf4:
+          type: string
+        udf5:
+          type: string
+        udf6:
+          type: string
+        udf7:
+          type: string
+        udf8:
+          type: string
+        udf9:
+          type: string
+        udf10:
+          type: string
+    UpiDataBean:
+      type: object
+      properties:
+        getvPAId:
+          type: string
+    WalletDataBean:
+      type: object
+      properties:
+        firstPayWalletCode:
+          type: string
+        firstPayWalletName:
+          type: string
+    HmacVo:
+      type: object
+      properties:
+        hmac:
+          type: string
+    DecryptMerchantRequest:
+      type: object
+      properties:
+        merchantTxnId:
+          type: string
+          description: merchant transaction id
+          example: 470000000332260
+        fpTxnId:
+          type: string
+          description: firstpay transaction id
+          example: 2020120349669891
+        encData:
+           type: string
+           description: encrypted encData
+           example: dMaRD5LgrSQ2sfIM8eFjZK7Eyf9drYBu0xdF3rIPHaEZ/ZHnHkL3YV7xSWmXN+MvGcS1hdZ0AKXNn793avtZ94Tl45McTfaKLP2oq9LmQ5gbGl0x/fpQzaUhFfP2d7SWEwsJUscE2P5vP3OaGOzVIERgmhI7jBY406J6PUMIAZpkXtYjsv6quu0e3yKEsUd+//T4rbDccrtve6f5aod/EwdWGF7d8qTp0X3DZ3JeDsj5Be+7bgegHnzh0nT+RVHA0fE1b31ovuo3EbMVITssS+GbwI23URzYdrX4Wbf6xZcVhEYv4UXmxy5pgFCebD2kgSl5ZfdrqZeycQ9SSWVqynA+2+oq9rfP9U1l2MnUc8r+ms9koVRMM1GNtNIvM9zI09vk0K1/3F2nV+rEwa7cuL6lIRwl7BQjpelPyZmw8bVOw84az8sB0paovHETISmBegbAQNWMWfUzsOcIy2hAi+UCZyMgITgRQfSmbQ8Q7a3qORw86Jlnw7idHbwbC5zVaeauCJ/xnUNa7xzTgz9HM7nCyB+M0cKHt/B7jDtojtBoi1tzcAJj4MvFyLl2ze/qgEzqBIfy1dvoGDotThbF4M2Otc31HKuOfoSFvm53BDzREMM2KfErUzMp/GTqSpEwqqF/XWG2IrVjtKaK0Fbo5Mfpa02fX2yH8VEzFmhQR0369S5LUTyoz7C3BNTsrKUEtqakOKW5p1f8v1Ihn4iOCHnL+KTsRMXTFi+4Zw12m/TUiQwLeozDL6+5PCOuV2zhwrg4q6vVeoyG0fCsL/WfsodLxul0VCxRjvcZKT75D7bfmY2OZGssc1v/+z27ZuG2
+        

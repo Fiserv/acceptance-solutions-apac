@@ -23,14 +23,14 @@
         "version": "1.0.0",
         "versionType": "major",
         "releaseNotesPath": "/release-notes/release-notes-1.0.0.md",
-        "apiSpecFileNames": ["cloudPoi-1.0.0"]
-      }
+        "apiSpecFileNames": ["cloudPoi-1.0.0","boarding-1.0.0","CommerceConnect-1.0.0","ExternalBoarding-1.0.0"]
+      } 
   ],
   "product": {
     "featured": true,
     "logoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Portal_Logo.png",
     "description": "To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "longDescription":"To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
+    "longDescription":"To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
     "apiSpecification": "/v1/apis/AcceptanceSolutionsAPAC",
     "layout": "/v1/layouts/AcceptanceSolutionsAPAC",
     "documentation": "/v1/docs/AcceptanceSolutionsAPAC",

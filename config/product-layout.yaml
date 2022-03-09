@@ -35,27 +35,28 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: AcceptanceSolutionsAPAC™
 featuredFeatures:
-  - title: Credit Issuance
-    description:  AcceptanceSolutionsAPAC solution allows financial Institution to issue and manage the Credit Card products to their end customers.
-    tags: ["APAC", "FirstVision", "Credit"]
-    bullets: ["Activate Card", "Block Card", "Lost Stolen Card Transfer", "CVV2 Validation" ]
+  - title: PaymentAPI
+    description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
+    tags: ["UAM", "PaymentAPI"]
+    bullets: ["Login", "PaymentAPI"]  
     relatedDocs:
       - relatedDoc: 
-        title: Account Management
-        description: Allows management of an accounts that holds financial information of Credit available/ used.
-        link: ./docs/Account-Management.md
+        title: Login
+        description: Get Token.
+        link: ./docs/UAM.md
       - relatedDoc: 
-        title: Customer Management
-        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.
-        link: ./docs/Customer-Management.md
+        title: Payment API
+        description: Non OPi Processing Amount
+        link: ./docs/PaymentAPI.md
     relatedAPIs:
       - relatedAPI: 
-        title: Block-Unblock Account
-        description: This service is used to update the Account Block Code.
-        type: "patch"        
-        path: "/v1/accounts/blockUnblock"
-      - relatedAPI: 
-        title: Block-Unblock Card
-        description: This service is used to update the block codes and the reason codes for the block codes for cards and accounts
+        title: Login
+        description: This service is used to get the token.
         type: "post"        
-        path: "/v1/cards/blockUnblock"
+        path: "/boardinggateway/boarding/auth/signin"
+      - relatedAPI: 
+        title: Payment API
+        description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
+        type: "post"        
+        path: "/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount"
+ 
