@@ -37,20 +37,10 @@
           link: docs/introduction/contact-us.md
 
 - sections:
-  - title: Getting Started
-    link: docs/getting-started.md
-    open: true
-    sections:
-    - title: Setup a Tenant
-      link: docs/getting-started/setup-tenant/setup-tenant.md
-    - title: Deploy Tenant
-      link: docs/getting-started/setup-tenant/deploy-tenant.md
-    - title: Register Tenant
-      link: docs/getting-started/setup-tenant/register-tenant.md
-    - title: Code a Tenant
-      link: docs/getting-started/code-a-tenant/code-tenant.md
-    - title: Preview & Publish
-      link: docs/getting-started/preview-and-publish-content/preview-and-publish.md
+    - title: Getting Started
+      link: docs/getting-started.md
+      open: true
+
 - sections:
     - title: API Reference
       link:

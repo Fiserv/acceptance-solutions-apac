@@ -1,39 +1,41 @@
-# Getting Started
+# Welcome to Merchant Solutions Web Services
 
-## Welcome to the Developer Studio!
+The Merchant Solutions APIs are built on the foundation of REST. The APIs accept standard JSON requests and return JSON encoded responses while leveraging industry standard [HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) for a seamless integration. Interaction through our APIs provides the developer community the ability to retrieve/update the customer demographic information, account's financial information,and, the payment instrument details in a simple and intuitive manner. It also provides APIs to retrieve transactions, statements details, loyalty points, offers, and, multiple EMIs conversion details.  
 
-To onboard into the `Fiserv Developer Studio` as a new Tenant each product must support following APIs standard. So that `Fiserv` will able to retrieve product API specifications and documentation.
- 
-## Setting up Tenant
+Our APIs are broadly grouped into following sub-catagories.  Please click to specific category of interest to get more details
 
-Products within the Fiserv portfolio that are showcase through the Studio are known as `tenants`.  Tenants standup a `tenant server` that will serve all the content through the studio to developers visiting the Fiserv Developer Studio.
-For more information please refere to [Setup tenant](?path=docs/getting-started/setup-tenant/setup-tenant.md)
+# Cloud POI
+- [Login](./?path=/docs/UAM.md)
 
+- [Payment API](./?path=/docs/PaymentAPI.md)
 
-## Deploying Tenant
+# Commerce Connect
+- Coming soon
 
-New registered Tenant must provide public tenant server.
-For more information please refer to [How to deploy tenant Server](?path=docs/getting-started/setup-tenant/deploy-tenant.md)
+#  Boarding
+   ## SameDay 
+   -  coming soon
+   ## External
+   - coming soon
 
+---
 
-## Tenant Registration
+## Access Merchant Solution APIs
 
-To get started with as a new Studio Tenant, developer needs to setup new account by [Tenant Registration](?path=docs/getting-started/setup-tenant/register-tenant.md)
+Follow the below steps to get an access to the Developer Studio and use merchant solution APIs.
 
+### 1. Sign up for  Developer Studio
 
-## Code Tenant
-New Tenant can start with [Sample tenant repo](https://github.com/fiserv/sample-tenant) to setup Tenant server. Tenant can also build new codebase with choice of their own programming language. To learn more about this, please refere to [Code Tenant](?path=docs/getting-started/code-a-tenant/code-tenant.md)
-test
-___
+Request for APIs credentials through your Account relationship manager.
 
-##  Next steps [Setup Tenant](?path=docs/getting-started/setup-tenant/setup-tenant.md)
+### 2. Getting your API key
 
+The Account relationship manager will share the credentials via the preferred secure channel.
 
-Need Help ?
-[FAQ](?path=docs/faq/faq.md)
+### 3. Constructing the API call
 
+Once the credentials are provided, make a call to the signon API. In the response, a a unique one-time token will be provided in the response. 
 
-___
+Use the token for any subsequent API calls.  The token must be passed in the request header name "Authorization".  
 
-
- 
+---
