@@ -35,10 +35,10 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: AcceptanceSolutionsAPAC™
 featuredFeatures:
-  - title: PaymentAPI
+  - title: ClouPOI
     description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
-    tags: ["UAM", "PaymentAPI"]
-    bullets: ["Login", "PaymentAPI"]  
+    tags: ["ClouPOI"]
+    bullets: ["ClouPOI"]  
     relatedDocs:
       - relatedDoc: 
         title: Login

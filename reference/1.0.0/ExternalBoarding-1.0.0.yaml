@@ -10,17 +10,19 @@ security:
 - BasicAuth: []
 - ApiKeyAuth: []
 tags:
-- name: Login
-  description: User login API
-- name: Boarding
+
+- name: ExternalBoarding
   description: REST API for Boarding
+
 paths:
   /Externalboarding/partner/login:
     get:
       tags:
-      - Login
+      - ExternalBoarding
       summary: User Login
       operationId: getAuthJWTToken
+      x-group-name:  ExternalBoarding
+      x-proxy-name: User Login
       parameters:
       - name: ain
         in: query
@@ -46,9 +48,11 @@ paths:
   /Externalboarding/secure/newmid:
     post:
       tags:
-      - Boarding
+      - ExternalBoarding
       summary: New Merchant
       operationId: submitapplication
+      x-group-name: ExternalBoarding
+      x-proxy-name: Submit Application
       requestBody:
         content:
           application/json:
@@ -69,9 +73,11 @@ paths:
   /Externalboarding/secure/refmid/{appType}/{referenceMID}:
     get:
       tags:
-      - Boarding
+      - ExternalBoarding
       summary: Inquiry MID
       operationId: refForAdditionalMID
+      x-group-name: ExternalBoarding
+      x-proxy-name: Ref For Additional MID
       parameters:
       - name: appType
         in: path
@@ -97,7 +103,7 @@ paths:
   /Externalboarding/secure/create:
     post:
       tags:
-      - Boarding
+      - ExternalBoarding
       summary: Create Application
       operationId: createapplication
       requestBody:
@@ -120,9 +126,11 @@ paths:
   /Externalboarding/secure/appstatus/{appUrn}:
     get:
       tags:
-      - Boarding
+      - ExternalBoarding
       summary: Application Status
       operationId: getAppStatus
+      x-group-name: ExternalBoarding
+      x-proxy-name: Get App Status
       parameters:
       - name: appUrn
         in: path
@@ -139,9 +147,11 @@ paths:
   /Externalboarding/secure/packages:
     get:
       tags:
-      - Boarding
+      - ExternalBoarding
       summary: Get Package List
       operationId: getPackageList
+      x-group-name: ExternalBoarding
+      x-proxy-name: Get Package List
       parameters:
       - name: RequestParam
         in: query
