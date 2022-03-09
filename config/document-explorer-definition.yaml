@@ -35,6 +35,7 @@
       sections:
         - title: Contact Us
           link: docs/introduction/contact-us.md
+
 - sections:
   - title: Getting Started
     link: docs/getting-started.md
@@ -51,21 +52,13 @@
     - title: Preview & Publish
       link: docs/getting-started/preview-and-publish-content/preview-and-publish.md
 - sections:
-  - title: Resources
-    link:
-    open: true
-    sections:
-    - title: API Guide
-      link: docs/resources/guides/api-guide.md
-    - title: How it works
-      link: docs/resources/guides/how-it-works.md
-    - title: How to use Stoplight
-      link: docs/resources/guides/how-to-use-stoplight.md
-    - title: How to use Docignore
-      link: docs/resources/guides/how-to-use-docignore.md
-    - title: Markdown Support
-      link: docs/resources/markdown-support.md
-    - title: Tutorials
-      link: docs/tutorials/tutorials.md
-    - title: FAQ
-      link: docs/faq/faq.md
+    - title: API Reference
+      link:
+      open: true
+      sections:
+        - title: Cloud POI 
+          sections:
+            - title: Login
+              link: docs/APIs/UAM/UAM.md
+            - title: PaymentAPI
+              link: docs/APIs/PaymentAPI/ProcessAmount.md 
