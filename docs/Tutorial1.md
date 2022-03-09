@@ -13,10 +13,7 @@ Our APIs are broadly grouped into following sub-catagories.  Please click to spe
 - Coming soon
 
 #  Boarding
-   ## SameDay 
-   -  coming soon
-   ## External
-   - coming soon
+- Comming soon
 
 ---
 
