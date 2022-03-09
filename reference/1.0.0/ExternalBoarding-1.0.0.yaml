@@ -106,6 +106,8 @@ paths:
       - ExternalBoarding
       summary: Create Application
       operationId: createapplication
+      x-group-name: ExternalBoarding
+      x-proxy-name: Create Application
       requestBody:
         content:
           application/json:
