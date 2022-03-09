@@ -51,4 +51,8 @@
             - title: Login
               link: docs/APIs/UAM/UAM.md
             - title: PaymentAPI
-              link: docs/APIs/PaymentAPI/ProcessAmount.md 
+              link: docs/APIs/PaymentAPI/ProcessAmount.md
+        - title: Commerce Connect
+          sections:
+            - title: GetToken
+              link: docs/APIs/CommerceConnect/GetToken.md
