@@ -37,8 +37,8 @@
           link: docs/introduction/contact-us.md
 
 - sections:
-    - title: Getting Started
-      link: docs/getting-started.md
+    - title: Tutorial
+      link: docs/Tutorial.md
       open: true
 
 - sections:
