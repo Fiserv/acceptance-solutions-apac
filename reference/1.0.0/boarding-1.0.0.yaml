@@ -45,7 +45,7 @@ paths:
       summary: Get Package ID
       operationId: packagebyID
       x-group-name: Boarding
-      x-proxy-name: packagebyID 
+      x-proxy-name: Packageby ID 
       parameters:
         - name: id
           in: path
@@ -113,7 +113,7 @@ paths:
       - Boarding
       operationId: getApplicationURN
       x-group-name: Boarding
-      x-proxy-name: get Application URN
+      x-proxy-name: Get Application URN
       requestBody:
         content:
           application/json:
@@ -211,7 +211,7 @@ paths:
       - Boarding
       operationId: addLocation
       x-group-name: Boarding
-      x-proxy-name: add Location
+      x-proxy-name: Add Location
       parameters:
       - name: appURN
         in: path
@@ -237,7 +237,7 @@ paths:
       - Boarding
       operationId: uploadMerchantDocument
       x-group-name: Boarding
-      x-proxy-name: Upload merchant document
+      x-proxy-name: Upload Merchant Document
       parameters:
       - name: appURN
         in: path

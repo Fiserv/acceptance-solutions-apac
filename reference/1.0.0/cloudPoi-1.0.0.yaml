@@ -7,7 +7,7 @@ servers:
   - url: https://www.uat.fdmerchantservices.com
     description: UAT
 tags:
-  - name: ClouPOI
+  - name: CloudPOI
     description: CloudPOI APIs
 
 security:
@@ -16,11 +16,11 @@ paths:
   /boardinggateway/boarding/auth/signin:
     post:
       tags:
-        - ClouPOI
+        - CloudPOI
       summary: LoginApi
       description: This API authenticates the external client with the unique credentials shared earlier as part of initial setup. This API respond back with a session token. This token is required in header of each subsequent API triggered by partner.
       operationId: login
-      x-group-name: ClouPOI
+      x-group-name: CloudPOI
       x-proxy-name: Login
       requestBody:
         content:
@@ -39,11 +39,11 @@ paths:
   /boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount:
     post:
       tags:
-      - ClouPOI
+      - CloudPOI
       summary: PaymentAPI
       description: This API is used to send refund transaction request. Merchants needs to add session token received during login api call in the header of this API and encrypt the payload using the encryption key provided before sending it to gateway.
       operationId: nonOpiProcessAmount
-      x-group-name: ClouPOI
+      x-group-name: CloudPOI
       x-proxy-name: Non Opi Process Amount
       requestBody:
         content:
