@@ -66,8 +66,6 @@
               link: docs/APIs/CommerceConnect/RefundTxnInquiryDetail.md
             - title: Encrypt Data Using AES
               link: docs/APIs/CommerceConnect/EncryptDataUsingAES.md
-            - title: Encrypt Data Using AES
-              link: docs/APIs/CommerceConnect/EncryptDataUsingAES.md
         - title: SameDay Boarding
           sections:
             - title: Login
@@ -101,7 +99,7 @@
             - title: Submit Application
               link: docs/APIs/ExternalBoarding/SubmitApplication.md
             - title: Ref For Additional MID
-              link: docs/APIs/ExternalBoarding/RefForAdditional MID.md
+              link: docs/APIs/ExternalBoarding/RefForAdditionalMID.md
             - title: CreateApplication
               link: docs/APIs/ExternalBoarding/CreateApplication.md
             - title: Get App Status
