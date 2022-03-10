@@ -38,7 +38,7 @@
 
 - sections:
     - title: Getting Started
-      link: docs/Tutorial1.md
+      link: docs/Tutorial.md
       open: true
 
 - sections:
