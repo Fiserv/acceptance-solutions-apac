@@ -56,3 +56,58 @@
           sections:
             - title: GetToken
               link: docs/APIs/CommerceConnect/GetToken.md
+            - title: Decrypt Merchant Response
+              link: docs/APIs/CommerceConnect/DecryptMerchantResponse.md
+            - title: GET HMAC
+              link: docs/APIs/CommerceConnect/GetHMAC.md
+            - title: Get Txn Inquiry Detail
+              link: docs/APIs/CommerceConnect/GetTxnInquiryDetail.md
+            - title: Refund Txn Inquiry Detail
+              link: docs/APIs/CommerceConnect/RefundTxnInquiryDetail.md
+            - title: Encrypt Data Using AES
+              link: docs/APIs/CommerceConnect/EncryptDataUsingAES.md
+            - title: Encrypt Data Using AES
+              link: docs/APIs/CommerceConnect/EncryptDataUsingAES.md
+        - title: SameDay Boarding
+          sections:
+            - title: Login
+              link: docs/APIs/Boarding/Login.md
+            - title: Packageby ID
+              link: docs/APIs/Boarding/PackagebyID.md
+            - title: Package info
+              link: docs/APIs/Boarding/Packageinfo.md
+            - title: RefId Inquiry
+              link: docs/APIs/Boarding/RefIdInquiry.md
+            - title: get Application URN
+              link: docs/APIs/Boarding/getApplicationURN.md
+            - title: CREATE
+              link: docs/APIs/Boarding/CREATE.md
+            - title: Submit Application
+              link: docs/APIs/Boarding/SubmitApplication.md
+            - title: Additional Tid
+              link: docs/APIs/Boarding/AdditionalTid.md
+            - title:  Additional Mid
+              link: docs/APIs/Boarding/AdditionalMid.md
+            - title: add Location
+              link: docs/APIs/Boarding/addLocation.md
+            - title:  Upload merchant document
+              link: docs/APIs/Boarding/UploadMerchantDocument.md
+            - title: Get Document Matrix
+              link: docs/APIs/Boarding/GetDocumentMatrix.md
+        - title: Extenal Boarding
+          sections:
+            - title: Login
+              link: docs/APIs/ExternalBoarding/Login.md
+            - title: Submit Application
+              link: docs/APIs/ExternalBoarding/SubmitApplication.md
+            - title: Ref For Additional MID
+              link: docs/APIs/ExternalBoarding/RefForAdditional MID.md
+            - title: CreateApplication
+              link: docs/APIs/ExternalBoarding/CreateApplication.md
+            - title: Get App Status
+              link: docs/APIs/ExternalBoarding/GetAppStatus.md
+            - title: Get Package List
+              link: docs/APIs/ExternalBoarding/GetPackageList.md
+            
+
+

@@ -66,7 +66,7 @@ paths:
         - Boarding
       operationId: packgeInfo_5
       x-group-name: Boarding
-      x-proxy-name: package info
+      x-proxy-name: Package info
       parameters:
         - name: packageRequest
           in: query
@@ -86,7 +86,7 @@ paths:
       - Boarding
       operationId: refIdInquiry
       x-group-name: Boarding
-      x-proxy-name: packagebyID
+      x-proxy-name: RefId Inquiry
       parameters:
       - name: refId
         in: path
@@ -159,7 +159,7 @@ paths:
       - Boarding
       operationId: additionalTid
       x-group-name: Boarding
-      x-proxy-name: additionalTid
+      x-proxy-name: Additional Tid
       parameters:
       - name: appURN
         in: path
@@ -185,7 +185,7 @@ paths:
       - Boarding
       operationId: additionalMid
       x-group-name: Boarding
-      x-proxy-name: additionalMid
+      x-proxy-name: Additional Mid
       parameters:
       - name: appURN
         in: path
@@ -211,7 +211,7 @@ paths:
       - Boarding
       operationId: addLocation
       x-group-name: Boarding
-      x-proxy-name: addLocation
+      x-proxy-name: add Location
       parameters:
       - name: appURN
         in: path
@@ -237,7 +237,7 @@ paths:
       - Boarding
       operationId: uploadMerchantDocument
       x-group-name: Boarding
-      x-proxy-name: upload merchant document
+      x-proxy-name: Upload merchant document
       parameters:
       - name: appURN
         in: path
@@ -262,7 +262,7 @@ paths:
       - Boarding
       operationId: getDocumentMatrix
       x-group-name: Boarding
-      x-proxy-name: get Document matrix
+      x-proxy-name: Get Document Matrix
       requestBody:
         content:
           application/json:
