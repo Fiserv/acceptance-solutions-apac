@@ -52,21 +52,8 @@
               link: docs/APIs/UAM/UAM.md
             - title: PaymentAPI
               link: docs/APIs/PaymentAPI/ProcessAmount.md
-        - title: Commerce Connect
-          sections:
-            - title: GetToken
-              link: docs/APIs/CommerceConnect/GetToken.md
-            - title: Decrypt Merchant Response
-              link: docs/APIs/CommerceConnect/DecryptMerchantResponse.md
-            - title: GET HMAC
-              link: docs/APIs/CommerceConnect/GetHMAC.md
-            - title: Get Txn Inquiry Detail
-              link: docs/APIs/CommerceConnect/GetTxnInquiryDetail.md
-            - title: Refund Txn Inquiry Detail
-              link: docs/APIs/CommerceConnect/RefundTxnInquiryDetail.md
-            - title: Encrypt Data Using AES
-              link: docs/APIs/CommerceConnect/EncryptDataUsingAES.md
-        - title: SameDay Boarding
+
+        - title: Boarding
           sections:
             - title: Login
               link: docs/APIs/Boarding/Login.md
@@ -92,20 +79,3 @@
               link: docs/APIs/Boarding/UploadMerchantDocument.md
             - title: Get Document Matrix
               link: docs/APIs/Boarding/GetDocumentMatrix.md
-        - title: Extenal Boarding
-          sections:
-            - title: Login
-              link: docs/APIs/ExternalBoarding/Login.md
-            - title: Submit Application
-              link: docs/APIs/ExternalBoarding/SubmitApplication.md
-            - title: Ref For Additional MID
-              link: docs/APIs/ExternalBoarding/RefForAdditionalMID.md
-            - title: CreateApplication
-              link: docs/APIs/ExternalBoarding/CreateApplication.md
-            - title: Get App Status
-              link: docs/APIs/ExternalBoarding/GetAppStatus.md
-            - title: Get Package List
-              link: docs/APIs/ExternalBoarding/GetPackageList.md
-            
-
-
