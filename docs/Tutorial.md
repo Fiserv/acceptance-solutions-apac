@@ -5,12 +5,26 @@ The Merchant Solutions APIs are built on the foundation of REST. The APIs accept
 Our APIs are broadly grouped into following sub-catagories.  Please click to specific category of interest to get more details
 
 # Cloud POI
+
 - [Login](./?path=/docs/APIs/UAM/UAM.md)
 
-- [Payment API](./?path=docs/APIs/PaymentAPI/ProcessAmount.md)
+- [Sale Card](./?path=docs/APIs/PaymentAPI/SaleCard.md)
 
-# Commerce Connect
-- Coming soon
+- [PreAuth Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
+
+- [PreAuth Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
+
+- [Refund](./?path=docs/APIs/PaymentAPI/Refund.md)
+
+- [Void](./?path=docs/APIs/PaymentAPI/Void.md)
+
+- [EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
+
+- [Transaction status Check](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
+
+- [Sale Local Payment Method](./?path=docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md)
+
+- [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
 #  Boarding
 - Comming soon
