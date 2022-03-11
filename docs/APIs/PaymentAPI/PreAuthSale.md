@@ -1,8 +1,7 @@
 # Pre Auth Sale
 
 This API is used to send preAuth transaction request. Merchants needs to add session 
-token received during login api call in the header of this API and encrypt the payload using the 
-encryption key provided before sending it to gateway. 
+token received during login api call in the header of this API. 
 
 
 ## Endpoint
