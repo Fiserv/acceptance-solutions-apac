@@ -73,25 +73,31 @@
           sections:
             - title: Login
               link: docs/APIs/Boarding/Login.md
-            - title: Packageby ID
-              link: docs/APIs/Boarding/PackagebyID.md
-            - title: Package info
-              link: docs/APIs/Boarding/Packageinfo.md
-            - title: RefId Inquiry
-              link: docs/APIs/Boarding/RefIdInquiry.md
-            - title: get Application URN
-              link: docs/APIs/Boarding/getApplicationURN.md
-            - title: CREATE
-              link: docs/APIs/Boarding/CREATE.md
-            - title: Submit Application
-              link: docs/APIs/Boarding/SubmitApplication.md
-            - title: Additional Tid
-              link: docs/APIs/Boarding/AdditionalTid.md
-            - title:  Additional Mid
-              link: docs/APIs/Boarding/AdditionalMid.md
-            - title: add Location
-              link: docs/APIs/Boarding/addLocation.md
-            - title:  Upload merchant document
-              link: docs/APIs/Boarding/UploadMerchantDocument.md
+            - title: Create URN
+              link: docs/APIs/Boarding/CreateURN.md
+            - title: Get Package List
+              link: docs/APIs/Boarding/GetPackageList.md
+            - title: Get Individual Package
+              link: docs/APIs/Boarding/GetIndividualPackage.md
             - title: Get Document Matrix
               link: docs/APIs/Boarding/GetDocumentMatrix.md
+            - title: Upload Document
+              link: docs/APIs/Boarding/UploadDocument.md
+            - title: MID - INQUIRY
+              link: docs/APIs/Boarding/MidInquiry.md
+            - title: SUBMIT - New Merchant
+              link: docs/APIs/Boarding/NewMerchant.md
+            - title: SUBMIT - Additional Outlet
+              link: docs/APIs/Boarding/AdditionalOutlet.md
+            - title: SUBMIT - Additional Device
+              link: docs/APIs/Boarding/AdditionalDevice.md
+            - title: SUBMIT - Single MID PayFac
+              link: docs/APIs/Boarding/SingleMIDPayFac.md
+            - title: SUBMIT - Multi MID PayFac
+              link: docs/APIs/Boarding/MultiMIDPayFac.md
+            - title: Application Status Inquiry
+              link: docs/APIs/Boarding/ApplicationStatusInquiry.md
+            - title: MSF Tariff Inquiry
+              link: docs/APIs/Boarding/MSFTariffInquiry.md
+            
+   
