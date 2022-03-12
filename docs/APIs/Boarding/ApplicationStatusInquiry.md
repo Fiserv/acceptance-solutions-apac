@@ -1,4 +1,4 @@
-# Application Status inquiry
+# Application Status Inquiry
 
 This API is used to application status inquiry. Merchants needs to add session 
 token received during login api call in the header of this API.
@@ -13,8 +13,7 @@ GET `/Externalboarding/secure/appstatus/{appUrn}`
 ### Request Payload
 
 ```json
-
-appUrn 
+Path Variable - appUrn : 1000007294
 
 ```
   

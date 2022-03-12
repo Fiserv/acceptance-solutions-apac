@@ -13,7 +13,8 @@ GET `/Externalboarding/secure/refmid/{appType}/{refmid}`
 ### Request Payload
 
 ```json
-Path valiabe : 
+Path variabe : 
+                example:
                 /ADDLTID/99000154
                 /ADDLMID/99000154
 ```
