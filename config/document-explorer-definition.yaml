@@ -78,12 +78,12 @@
             - title: Get Package List
               link: docs/APIs/Boarding/GetPackageList.md
             - title: Get Individual Package
-              link: docs/APIs/Boarding/GetIndividualPackage.md
+              link: docs/APIs/Boarding/GetPackageId.md
             - title: Get Document Matrix
               link: docs/APIs/Boarding/GetDocumentMatrix.md
             - title: Upload Document
               link: docs/APIs/Boarding/UploadDocument.md
-            - title: MID - INQUIRY
+            - title: MID - Inquiry
               link: docs/APIs/Boarding/MidInquiry.md
             - title: SUBMIT - New Merchant
               link: docs/APIs/Boarding/NewMerchant.md
