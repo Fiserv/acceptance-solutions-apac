@@ -1,8 +1,8 @@
 openapi: 3.0.2
 info:
-  title: External Boarding
+  title: Merchant On Boarding
   version: 1.0v
-  description: ' External Boarding API '
+  description: ' The partner API '
 servers:
 - url: https://www.uat.fdmerchantservices.com
   description: UAT URL
@@ -11,17 +11,17 @@ security:
 - ApiKeyAuth: []
 tags:
 
-- name: ExternalBoarding
+- name: Boarding
   description: REST API for Boarding
 
 paths:
   /Externalboarding/partner/login:
     get:
       tags:
-      - ExternalBoarding
+      - Boarding
       summary: User Login
       operationId: getAuthJWTToken
-      x-group-name:  ExternalBoarding
+      x-group-name:  Boarding
       x-proxy-name: User Login
       parameters:
       - name: ain
@@ -48,10 +48,10 @@ paths:
   /Externalboarding/secure/newmid:
     post:
       tags:
-      - ExternalBoarding
+      - Boarding
       summary: New Merchant
       operationId: submitapplication
-      x-group-name: ExternalBoarding
+      x-group-name: Boarding
       x-proxy-name: Submit Application
       requestBody:
         content:
@@ -73,10 +73,10 @@ paths:
   /Externalboarding/secure/refmid/{appType}/{referenceMID}:
     get:
       tags:
-      - ExternalBoarding
+      - Boarding
       summary: Inquiry MID
       operationId: refForAdditionalMID
-      x-group-name: ExternalBoarding
+      x-group-name: Boarding
       x-proxy-name: Ref For Additional MID
       parameters:
       - name: appType
@@ -103,10 +103,10 @@ paths:
   /Externalboarding/secure/create:
     post:
       tags:
-      - ExternalBoarding
+      - Boarding
       summary: Create Application
       operationId: createapplication
-      x-group-name: ExternalBoarding
+      x-group-name: Boarding
       x-proxy-name: Create Application
       requestBody:
         content:
@@ -128,10 +128,10 @@ paths:
   /Externalboarding/secure/appstatus/{appUrn}:
     get:
       tags:
-      - ExternalBoarding
+      - Boarding
       summary: Application Status
       operationId: getAppStatus
-      x-group-name: ExternalBoarding
+      x-group-name: Boarding
       x-proxy-name: Get App Status
       parameters:
       - name: appUrn
@@ -139,6 +139,8 @@ paths:
         required: true
         schema:
           type: string
+        description: Application URN
+        example: "1000007294"
       responses:
         "200":
           description: OK
@@ -149,10 +151,10 @@ paths:
   /Externalboarding/secure/packages:
     get:
       tags:
-      - ExternalBoarding
+      - Boarding
       summary: Get Package List
       operationId: getPackageList
-      x-group-name: ExternalBoarding
+      x-group-name: Boarding
       x-proxy-name: Get Package List
       parameters:
       - name: RequestParam
@@ -167,6 +169,114 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/PkgListResponse'
+
+  /Externalboarding/secure/msf/{msfId}:
+    get:
+      tags:
+      - Boarding
+      summary: MSF Tariff Inquiry
+      description: Get MSFProfile Details
+      operationId: getMsById
+      parameters:
+      - name: msfId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /Externalboarding/secure/addtid:
+    post:
+      tags:
+      - Boarding
+      summary: Additional Device
+      description: Additional Terminal
+      operationId: submitAdditionalTidApplication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /Externalboarding/secure/document:
+    get:
+      tags:
+      - Boarding
+      summary: document Matrix 
+      description: Get Document List
+      operationId: getDocumentList
+      parameters:
+      - name: RequestParam
+        in: query
+        required: true
+        schema:
+          $ref: '#/components/schemas/DocAndPkgRequestParam'
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+
+  /Externalboarding/secure/addmid:
+    post:
+      tags:
+      - Boarding
+      summary: Additional Outlet
+      description: Additional Merchant
+      operationId: submitAdditionalMidApplication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  
+  /Externalboarding/secure/document/{appUrn}:
+    post:
+      tags:
+      - Boarding
+      summary: Document Upload
+      description: Document Upload
+      operationId: uploadMerchantDocument
+      parameters:
+      - name: appUrn
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MerchantDocumentUploadRequest'
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
 components:
   schemas:
     PkgListResponse:
@@ -180,6 +290,19 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/DocumentOverride'
+    MerchantDocumentUploadRequest:
+      type: object
+      properties:
+        docType:
+          type: string
+        fileType:
+          type: string
+        principalNo:
+          type: string
+        categoryName:
+          type: string
+        level:
+          type: string
     DocumentOverride:
       type: object
       properties:

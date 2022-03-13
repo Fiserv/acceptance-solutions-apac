@@ -7,7 +7,7 @@ servers:
   - url: https://www.uat.fdmerchantservices.com
     description: UAT
 tags:
-  - name: Boarding
+  - name: SameDayBoarding
     description: boarding API
 security:
 - ApiKeyAuth: []    
@@ -15,11 +15,11 @@ paths:
   /boardinggateway/boarding/auth/login:
     post:
       tags:
-        - Boarding
+        - SameDayBoarding
       summary: Login API
       description: This API validates the external client with the unique credentials shared with each of partner.This API respond back with a session token & expiry time for the session token. This token is required in header of each subsequent API triggered by partner.
       operationId: login
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Login 
       requestBody:
         content:
@@ -41,10 +41,10 @@ paths:
   /boardinggateway/boarding/misc/package/list.details/{id}:
     get:
       tags:
-        - Boarding
+        - SameDayBoarding
       summary: Get Package ID
       operationId: packagebyID
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Packageby ID 
       parameters:
         - name: id
@@ -63,9 +63,9 @@ paths:
   /boardinggateway/boarding/misc/package/list:
     get:
       tags:
-        - Boarding
+        - SameDayBoarding
       operationId: packgeInfo_5
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Package info
       parameters:
         - name: packageRequest
@@ -83,9 +83,9 @@ paths:
   /boardinggateway/boarding/mmstar/app/{refId}/inquiry:
     get:
       tags:
-      - Boarding
+      - SameDayBoarding
       operationId: refIdInquiry
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: RefId Inquiry
       parameters:
       - name: refId
@@ -110,9 +110,9 @@ paths:
   /boardinggateway/boarding/mmstar/app/create:
     post:
       tags:
-      - Boarding
+      - SameDayBoarding
       operationId: getApplicationURN
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Get Application URN
       requestBody:
         content:
@@ -130,9 +130,9 @@ paths:
   /boardinggateway/boarding/mmstar/app/{appURN}/submit:
     post:
       tags:
-      - Boarding
+      - SameDayBoarding
       operationId: submitApplication
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Submit Application
       parameters:
       - name: appURN
@@ -156,9 +156,9 @@ paths:
   /boardinggateway/boarding/mmstar/app/{appURN}/addtid:
     post:
       tags:
-      - Boarding
+      - SameDayBoarding
       operationId: additionalTid
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Additional Tid
       parameters:
       - name: appURN
@@ -182,9 +182,9 @@ paths:
   /boardinggateway/boarding/mmstar/app/{appURN}/addmid:
     post:
       tags:
-      - Boarding
+      - SameDayBoarding
       operationId: additionalMid
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Additional Mid
       parameters:
       - name: appURN
@@ -208,9 +208,9 @@ paths:
   /boardinggateway/boarding/mmstar/app/{appURN}/addlocation:
     post:
       tags:
-      - Boarding
+      - SameDayBoarding
       operationId: addLocation
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Add Location
       parameters:
       - name: appURN
@@ -234,9 +234,9 @@ paths:
   /boardinggateway/boarding/document/{appURN}/merchdoc/upload:
     post:
       tags:
-      - Boarding
+      - SameDayBoarding
       operationId: uploadMerchantDocument
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Upload Merchant Document
       parameters:
       - name: appURN
@@ -259,9 +259,9 @@ paths:
   /boardinggateway/boarding/document/listUpdated:
     post:
       tags:
-      - Boarding
+      - SameDayBoarding
       operationId: getDocumentMatrix
-      x-group-name: Boarding
+      x-group-name: SameDayBoarding
       x-proxy-name: Get Document Matrix
       requestBody:
         content:
@@ -1012,6 +1012,3 @@ components:
       type: apiKey
       in: header
       name: Authorization
-
-  
-      
