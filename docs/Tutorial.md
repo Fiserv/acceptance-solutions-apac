@@ -27,7 +27,33 @@ Our APIs are broadly grouped into following sub-catagories.  Please click to spe
 - [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
 #  Boarding
-- Comming soon
+- [Login](./?path=/docs/APIs/Boarding/Login.md)
+
+- [Create URN](./?path=/docs/APIs/Boarding/CreateURN.md)
+
+- [Get Package List](./?path=/docs/APIs/Boarding/GetPackageList.md)
+
+- [Get Individual Package](./?path=/docs/APIs/Boarding/GetPackageId.md)
+
+- [Get Document Matrix](./?path=/docs/APIs/Boarding/GetDocumentMatrix.md)
+
+- [Upload Document](./?path=/docs/APIs/Boarding/UploadDocument.md)
+
+- [MID - Inquiry](./?path=/docs/APIs/Boarding/MidInquiry.md)
+
+- [SUBMIT - New Merchant](./?path=/docs/APIs/Boarding/NewMerchant.md)
+
+- [SUBMIT - Additional Outlet](./?path=/docs/APIs/Boarding/AdditionalOutlet.md)
+
+- [SUBMIT - Additional Device](./?path=/docs/APIs/Boarding/AdditionalDevice.md)
+
+- [SUBMIT - Single MID PayFac](./?path=/docs/APIs/Boarding/SingleMIDPayFac.md)
+
+- [SUBMIT - Multi MID PayFac](./?path=/docs/APIs/Boarding/MultiMIDPayFac.md)
+
+- [Application Status Inquiry](./?path=/docs/APIs/Boarding/ApplicationStatusInquiry.md)
+
+- [MSF Tariff Inquiry](./?path=/docs/APIs/Boarding/MSFTariffInquiry.md)
 
 ---
 
