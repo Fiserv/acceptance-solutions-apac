@@ -77,7 +77,7 @@
               link: docs/APIs/Boarding/CreateURN.md
             - title: Get Package List
               link: docs/APIs/Boarding/GetPackageList.md
-            - title: Get Individual Package
+            - title: Get Package ID
               link: docs/APIs/Boarding/GetPackageId.md
             - title: Get Document Matrix
               link: docs/APIs/Boarding/GetDocumentMatrix.md

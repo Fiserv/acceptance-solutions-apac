@@ -34,7 +34,7 @@ Our APIs are broadly grouped into following sub-catagories.  Please click to spe
 
 - [Get Package List](./?path=/docs/APIs/Boarding/GetPackageList.md)
 
-- [Get Individual Package](./?path=/docs/APIs/Boarding/GetPackageId.md)
+- [Get Package ID](./?path=/docs/APIs/Boarding/GetPackageId.md)
 
 - [Get Document Matrix](./?path=/docs/APIs/Boarding/GetDocumentMatrix.md)
 
