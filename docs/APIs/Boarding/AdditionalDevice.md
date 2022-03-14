@@ -13,10 +13,11 @@ POST `/Externalboarding/secure/addtid`
 ### Request Payload
 
 ```json
+
 {
-  "appURN": "1000008471f",
+  "appURN": "1000008465",
   "appType": "Tab",
-  "boardingType": "ADDLMID",
+  "boardingType": "ADDLTID",
   "appChannel": "A12",
   "institutionId": "47",
   "salesId": "SureshBC",
@@ -32,35 +33,35 @@ POST `/Externalboarding/secure/addtid`
     "iciciMerchant": "No",
     "dcc": "No",
     "fundingCurrency": "NET_INR",
-    "newFundingAc": "No"
+    "newFundingAc": null
   },
   "channelCode": "ISO Channel1",
-  "osvFlagValue": "Y",
-  "cardedUncarded": "Yes",
+  "osvFlagValue": null,
+  "cardedUncarded": "No",
   "countryCode": "IND",
   "leadId": null,
   "merchantDetails": {
-    "businessName": "Tets",
+    "businessName": null,
     "legalName": "ezetap provisioning testing",
     "businessType": "Sole Proprietor",
-    "registrationNo": "829282",
+    "registrationNo": null,
     "dateTrading": null,
-    "dateIncorporated": "25-03-2000",
-    "websiteURL": "",
+    "dateIncorporated": null,
+    "websiteURL": null,
     "communicationEmail": "Prerana.kumbhar@firstdata.com",
     "legalAddress": {
       "addressLine": "Near central fire briged, Ganj peth",
       "addressLine2": ",, opposite kamble lane,",
-      "addressLine3": "",
+      "addressLine3": null,
       "city": "PUN-PUNE",
       "state": "MAH",
       "pincode": "411042",
       "country": null,
       "phone1": "8358353553",
-      "phone2": "",
+      "phone2": null,
       "contactName": "Test",
       "mobileNo": null,
-      "email": "prerana.kumbhar@firstdata.com"
+      "email": null
     },
     "fundingMethod": "NEFT",
     "clientTariff": null,
@@ -68,18 +69,18 @@ POST `/Externalboarding/secure/addtid`
     "billingLevel": "01",
     "gstNo": "27AAOFN4566A1Z6",
     "isdnFlag": null,
-    "gstMerchantStateCode": "27",
+    "gstMerchantStateCode": null,
     "merchantType": "LG",
     "acceptanceType": "POSMOB",
     "iciciMerchant": "No",
-    "newFundingAc": "No",
+    "newFundingAc": null,
     "merchantGrade": "EO",
     "idDocDetails": [
       {
         "entity": "Member",
         "idType": "Capture the Merchant Store Photos",
         "idValue": "",
-        "docId": "37ea3324bea6404bbc23a3bf78f4d238",
+        "docId": "dbab41ff030c49dc9cdc562f8e640e21",
         "categoryName": "LOCATION PHOTOS",
         "level": "1",
         "mandatory": "Y"
@@ -88,7 +89,7 @@ POST `/Externalboarding/secure/addtid`
         "entity": "Member",
         "idType": "MITC Document Page 1",
         "idValue": "",
-        "docId": "cad26f43ff4c4956b30b2230727df1d2",
+        "docId": "7771684880c3440a8d69ebe936c8178e",
         "categoryName": "MITC",
         "level": "1",
         "mandatory": "Y"
@@ -97,7 +98,7 @@ POST `/Externalboarding/secure/addtid`
         "entity": "Member",
         "idType": "MITC Document Page 2",
         "idValue": "",
-        "docId": "e28aea1da58c41c6b37c137e379f1ce1",
+        "docId": "85a0203e2ba84e3ebfc4158665862f00",
         "categoryName": "MITC",
         "level": "2",
         "mandatory": "Y"
@@ -106,7 +107,7 @@ POST `/Externalboarding/secure/addtid`
         "entity": "Member",
         "idType": "socDocument",
         "idValue": "",
-        "docId": "073e4a4c5c9b4311895f0a0527b04dbd",
+        "docId": "b00d608f1cf14bd8bfc80fc32e9e2284",
         "categoryName": "SOC",
         "level": "1",
         "mandatory": "Y"
@@ -118,17 +119,17 @@ POST `/Externalboarding/secure/addtid`
     },
     "taxDetails": {
       "taxidType": "businessPan",
-      "taxidValue": "AAOFN4566A"
+      "taxidValue": null
     }
   },
   "tradingLocations": [
     {
       "locationNo": 1,
-      "tradingName": "jhcjgjcg",
+      "tradingName": "ezetap provisioning te",
       "tradingAddress": {
         "addressLine": "Near central fire briged, Ganj peth",
         "addressLine2": ",, opposite kamble lane,",
-        "addressLine3": "",
+        "addressLine3": null,
         "city": "PUN-PUNE",
         "state": "MAH",
         "pincode": "411042",
@@ -137,26 +138,22 @@ POST `/Externalboarding/secure/addtid`
         "phone2": "",
         "contactName": "Test",
         "mobileNo": null,
-        "email": "prerana.kumbhar@firstdata.com"
+        "email": null
       },
-      "packageId": 1771,
-      "packageName": "Add Indi Base Merchant - Add MID",
-      "packageDescription": "Add Indi Base Merchant - Add MID",
+      "packageId": 1056,
+      "packageName": "Industry Type Additional TID Normal GPRS with fuel",
+      "packageDescription": "Industry Type Additional TID Normal GPRS with fuel",
       "memberType": "POS",
-      "tariff": null,
+      "tariff": "RetailP185LM",
       "amexTariff": "Amex Miscellane",
       "merchantGrade": "EO",
-      "acqProfile": "International",
-      "msfProfile": null,
+      "acqProfile": "Domestic",
+      "msfProfile": "C120P185COR220IC000INC260D090",
       "mid": "470000099000154",
       "leadsubgroupmid": "470000056000250",
       "subgroupmid": "470000056000251",
-      "otpEnabled": false,
+      "otpEnabled": true,
       "feePlans": [
-        {
-          "serviceName": "Cashback",
-          "feePlan": "0075"
-        },
         {
           "serviceName": "UPI",
           "feePlan": "Y"
@@ -166,36 +163,36 @@ POST `/Externalboarding/secure/addtid`
           "feePlan": "Y"
         },
         {
-          "serviceName": "TONETAG POD",
+          "serviceName": "Email / SMS Invoicing",
           "feePlan": "Y"
         },
         {
-          "serviceName": "Charge Slip Type",
-          "feePlan": "P"
+          "serviceName": "BBPS",
+          "feePlan": "ICICI-2015"
         },
         {
-          "serviceName": "Debit plus pin",
+          "serviceName": "AEPS",
+          "feePlan": "4-1001"
+        },
+        {
+          "serviceName": "MicroATM SARVATRA",
+          "feePlan": "1101"
+        },
+        {
+          "serviceName": "FDConnect",
           "feePlan": "Y"
         },
         {
-          "serviceName": "BILLING SOLUTION",
-          "feePlan": "Intuition"
+          "serviceName": "UPICashWithdraw",
+          "feePlan": "U-9003"
         },
         {
-          "serviceName": "Razor Netbanking",
-          "feePlan": "Y"
+          "serviceName": "Mobikwik",
+          "feePlan": "1001"
         },
         {
-          "serviceName": "Instant Settlement",
-          "feePlan": "1"
-        },
-        {
-          "serviceName": "Integrator_PMS solution",
-          "feePlan": "MICROS PMS"
-        },
-        {
-          "serviceName": "Auto Settlement Time",
-          "feePlan": "Y"
+          "serviceName": "AmazonPay",
+          "feePlan": "Amazon1"
         },
         {
           "serviceName": "Chargeslip Table ID",
@@ -214,12 +211,11 @@ POST `/Externalboarding/secure/addtid`
       "cpvGroupId": "",
       "regionalcpvGroupid": null,
       "commerceConnectReferenceMID": null,
-			"isMsfTariffOverride":null,
       "terminals": [
         {
-          "terminalType": "APOS",
-          "terminalModel": "APOS",
-          "batteryFlag": "N",
+          "terminalType": "GPRS",
+          "terminalModel": "Verifone Vx680 (W BC) GPRS GSM",
+          "batteryFlag": "Y",
           "count": 1,
           "currencyCode": null,
           "templateId": null,
@@ -228,16 +224,12 @@ POST `/Externalboarding/secure/addtid`
             {
               "serviceName": "AMEX",
               "serviceValue": "N"
-            },
-            {
-              "serviceName": "DCC",
-              "serviceValue": "Y"
             }
           ],
-          "withBiller": "Yes",
-          "billingSolProvider": "Intuition",
+          "withBiller": null,
+          "billingSolProvider": null,
           "preferedDate": "03-07-2022",
-          "preferedTime": "15:09",
+          "preferedTime": "12:27",
           "discount": "0",
           "tdrPlan": null,
           "userInstruction1": "",
@@ -248,7 +240,7 @@ POST `/Externalboarding/secure/addtid`
       "amcFee": null,
       "cardedUncarded": "Uncarded",
       "altmerchCode": null,
-      "sameLocation": "false"
+      "sameLocation": null
     }
   ],
   "principalDetails": [
@@ -258,20 +250,20 @@ POST `/Externalboarding/secure/addtid`
       "title": "Mr",
       "firstName": "Manan",
       "lastName": "Gupta",
-      "middleName": "",
+      "middleName": null,
       "gender": null,
-      "dateOfBirth": "04-05-1985",
-      "nationality": "INDIAN",
+      "dateOfBirth": "04/05/1985",
+      "nationality": null,
       "principalAddress": {
         "addressLine": "Keshavnagar",
-        "addressLine2": "",
-        "addressLine3": "",
+        "addressLine2": null,
+        "addressLine3": null,
         "city": "PUN-PUNE",
         "state": "MAH",
         "pincode": "411036",
-        "country": "India",
+        "country": null,
         "phone1": "9426855672",
-        "phone2": "",
+        "phone2": null,
         "contactName": "Manan",
         "mobileNo": null,
         "email": null
@@ -280,8 +272,8 @@ POST `/Externalboarding/secure/addtid`
       "kycDetails": [
         {
           "kycCategory": "Individual POA1 KYC",
-          "identityType": "aadhaar",
-          "identityValue": "000000006746",
+          "identityType": "",
+          "identityValue": "",
           "identitymetaName1": null,
           "identitymetaValue1": null
         },
@@ -300,20 +292,20 @@ POST `/Externalboarding/secure/addtid`
       "title": "Mr",
       "firstName": "Manan",
       "lastName": "Gupta",
-      "middleName": "",
+      "middleName": null,
       "gender": null,
-      "dateOfBirth": "04-05-1985",
-      "nationality": "INDIAN",
+      "dateOfBirth": "04/05/1985",
+      "nationality": null,
       "principalAddress": {
         "addressLine": "Keshavnagar",
-        "addressLine2": "",
-        "addressLine3": "",
+        "addressLine2": null,
+        "addressLine3": null,
         "city": "PUN-PUNE",
         "state": "MAH",
         "pincode": "411036",
-        "country": "India",
+        "country": null,
         "phone1": "9426855672",
-        "phone2": "",
+        "phone2": null,
         "contactName": "Manan",
         "mobileNo": null,
         "email": null
@@ -322,8 +314,8 @@ POST `/Externalboarding/secure/addtid`
       "kycDetails": [
         {
           "kycCategory": "Individual POA2 KYC",
-          "identityType": "aadhaar",
-          "identityValue": "000000007546",
+          "identityType": "",
+          "identityValue": "",
           "identitymetaName1": null,
           "identitymetaValue1": null
         },
@@ -347,39 +339,39 @@ POST `/Externalboarding/secure/addtid`
       "bankName": "JANASEVA SAHAKARI BANK LIMITED",
       "branch": "CAMP",
       "currency": "INR",
-      "accType": "Savings"
+      "accType": null
     }
   },
   "businessSummary": {
-    "briefSummary": "test",
+    "briefSummary": null,
     "mccCode": "5999",
     "mccDescription": "Miscellaneous and Specialty Retail Stores",
-    "totalTurnover": "0",
-    "totalTurnoverPerMID": "0",
-    "dccTurnoverPerMID": "0",
-    "pgTurnover": "25",
-    "pgTurnoverPerMID": "5",
-    "cardTurnover": "2525",
-    "avgTicketAmt": "25",
-    "avgEMITicketAmt": "0",
-    "tranVolumeInternet": "0",
-    "tranVolumeMoto": "0",
-    "tranVolumeInStore": "100",
-    "deliveryDays0": "100",
-    "deliveryDays7": "0",
-    "deliveryDays14": "0",
-    "deliveryDays30": "0",
-    "deliveryDaysOver30": "0",
-    "tranTypeMagStrip": "0",
-    "tranTypeChip": "100",
-    "tranTypeKeyed": "0",
-    "creditSalesConsumer": "0",
-    "creditSalesBusiness": "100",
-    "firsReport": "Not Required",
-    "recurringTranFlag": "No",
+    "totalTurnover": null,
+    "totalTurnoverPerMID": null,
+    "dccTurnoverPerMID": null,
+    "pgTurnover": null,
+    "pgTurnoverPerMID": null,
+    "cardTurnover": null,
+    "avgTicketAmt": null,
+    "avgEMITicketAmt": null,
+    "tranVolumeInternet": null,
+    "tranVolumeMoto": null,
+    "tranVolumeInStore": null,
+    "deliveryDays0": null,
+    "deliveryDays7": null,
+    "deliveryDays14": null,
+    "deliveryDays30": null,
+    "deliveryDaysOver30": null,
+    "tranTypeMagStrip": null,
+    "tranTypeChip": null,
+    "tranTypeKeyed": null,
+    "creditSalesConsumer": null,
+    "creditSalesBusiness": null,
+    "firsReport": null,
+    "recurringTranFlag": null,
     "refundPolicy": null,
     "cardRefundDays": null,
-    "thirdPartyProcessorFlag": "No",
+    "thirdPartyProcessorFlag": null,
     "thirdPartyProcessorName": null,
     "smallMerchant": "Y"
   },
@@ -403,10 +395,23 @@ The below table contains the mandatory fields required for a successful request.
 
 ```json
 {
-  "status": {
-    "statusCode": 200,
-    "message": "SUCCESS"
-  }
+    "status": {
+        "statusCode": 200,
+        "message": "Success"
+    },
+    "isAcvSuccess": null,
+    "data": {
+        "appUrn": "1000008469",
+        "lsg": "51675948",
+        "sgArray": [
+            {
+                "subgroupmId": "51672434",
+                "merchantId": "95515434",
+                "submerchantId": "00267746",
+                "terminals": null
+            }
+        ]
+    }
 }
 ```
 

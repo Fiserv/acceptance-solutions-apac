@@ -13,8 +13,9 @@ POST `/Externalboarding/secure/addmid`
 ### Request Payload
 
 ```json
+
 {
-  "appURN": "1000008471f",
+  "appURN": "1000008471",
   "appType": "Tab",
   "boardingType": "ADDLMID",
   "appChannel": "A12",
@@ -214,7 +215,6 @@ POST `/Externalboarding/secure/addmid`
       "cpvGroupId": "",
       "regionalcpvGroupid": null,
       "commerceConnectReferenceMID": null,
-			"isMsfTariffOverride":null,
       "terminals": [
         {
           "terminalType": "APOS",
@@ -402,12 +402,27 @@ The below table contains the mandatory fields required for a successful request.
 ### Successful Response Payload
 
 ```json
+
 {
-  "status": {
-    "statusCode": 200,
-    "message": "SUCCESS"
-  }
+    "status": {
+        "statusCode": 200,
+        "message": "Success"
+    },
+    "isAcvSuccess": null,
+    "data": {
+        "appUrn": "1000008469",
+        "lsg": "51675948",
+        "sgArray": [
+            {
+                "subgroupmId": "51672434",
+                "merchantId": "95515434",
+                "submerchantId": "00267746",
+                "terminals": null
+            }
+        ]
+    }
 }
+
 ```
 
 ### Error Response Payload
