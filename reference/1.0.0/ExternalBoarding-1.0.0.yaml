@@ -177,6 +177,8 @@ paths:
       summary: MSF Tariff Inquiry
       description: Get MSFProfile Details
       operationId: getMsById
+      x-group-name: Boarding
+      x-proxy-name: MSF Tariff Inquiry
       parameters:
       - name: msfId
         in: path
@@ -197,6 +199,8 @@ paths:
       summary: Additional Device
       description: Additional Terminal
       operationId: submitAdditionalTidApplication
+      x-group-name: Boarding
+      x-proxy-name: Additional Device
       requestBody:
         content:
           application/json:
@@ -217,6 +221,8 @@ paths:
       summary: document Matrix 
       description: Get Document List
       operationId: getDocumentList
+      x-group-name: Boarding
+      x-proxy-name: Get Document List
       parameters:
       - name: RequestParam
         in: query
@@ -238,6 +244,8 @@ paths:
       summary: Additional Outlet
       description: Additional Merchant
       operationId: submitAdditionalMidApplication
+      x-group-name: Boarding
+      x-proxy-name: Additional Outlet
       requestBody:
         content:
           application/json:
@@ -259,12 +267,16 @@ paths:
       summary: Document Upload
       description: Document Upload
       operationId: uploadMerchantDocument
+      x-group-name: Boarding
+      x-proxy-name: Document Upload
       parameters:
       - name: appUrn
         in: path
         required: true
         schema:
           type: string
+        description: App URN
+        example: "1000004745"
       requestBody:
         content:
           application/json:
