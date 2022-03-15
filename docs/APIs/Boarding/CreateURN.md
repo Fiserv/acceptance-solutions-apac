@@ -13,7 +13,20 @@ POST `/Externalboarding/secure/create`
 ### Request Payload
 
 ```json
-
+{
+  "appType" : "API",
+  "salesId" : "ecomuser",
+  "channelCode" : "EAZYAPY_ECOM",
+  "keySelection" : {
+    "boardingType" : "NEWMID"
+  },
+  "merchantDetails" : {
+    "businessName" : "ECOM",
+    "legalName" : "ECOM"
+  },
+  "institutionId" : "47",
+  "countryCode" : "IND"
+}
 
 ```
   
@@ -39,20 +52,6 @@ The below table contains the mandatory fields required for a successful request.
 ### Successful Response Payload
 
 ```json
-{
-  "appType" : "API",
-  "salesId" : "ecomuser",
-  "channelCode" : "EAZYAPY_ECOM",
-  "keySelection" : {
-    "boardingType" : "NEWMID"
-  },
-  "merchantDetails" : {
-    "businessName" : "ECOM",
-    "legalName" : "ECOM"
-  },
-  "institutionId" : "47",
-  "countryCode" : "IND"
-}
 {
 	"appURN": "1000007936",
 	"appType": "API",

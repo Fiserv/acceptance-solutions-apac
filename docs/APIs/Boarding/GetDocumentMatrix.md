@@ -1615,21 +1615,19 @@ The below table contains the mandatory fields required for a successful request.
 }
 ```
 
-### Response
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
-| `merchantId` | *string* | 20 | M | Merchant ID |
-
-
-
-
 Below table provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`401` |Token not found|  
-|`200` |Success|
-|`300` |Request Failure|
-|`500` |Internal Server Error|
-|`404` |Not Found|
-|`502` |Request Timed Out|
+|`200`| Success |
+|`400`| Terminal not in Proper Status |  
+|`401`| Unauthorized |
+|`900`|  Invalid AppURN |  
+|`901`| AppURN Not Match |
+|`902`| AppURN is Mandatory |
+|`903`| Application already Submitted |  
+|`904`| Json Processing Error |
+|`905`|  Json Parse Error |  
+|`906`| Json Mapping Error |
+|`907`| Comments are empty |
+|`908`| App URN not matching |

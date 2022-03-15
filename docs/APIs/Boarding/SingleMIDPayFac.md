@@ -233,9 +233,28 @@ Below table provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`401` |Token not found|  
-|`200` |Success|
-|`300` |Request Failure|
-|`500` |Internal Server Error|
-|`404` |Not Found|
-|`502` |Request Timed Out|
+|`100`| Invalid Request |
+|`103`| Data Not Found.Please contact Application Support Team |
+|`200`| Success |
+|`302`| IO Exception |
+|`404`| Not Found |
+|`401`| Unauthorized |	
+|`500`| Internal Error.Please contact Application Support Team |
+|`505`| Internal server Error. Please contact Application Support Team |
+|`708`| AppURN already submitted |
+|`902`| AppURN is Mandatory |
+|`903`| Application already Submitted |
+|`904`| Json Processing Error |
+|`905`| Json Parse Error |
+|`906`| Json Mapping Error |
+|`907`| Comments are empty |
+|`908`| App URN not matching |
+|`909`| Given Merchant Hierarchy Cannot handle via TAB. Please contact Application Support Team |
+|`910`| Given Merchant Id Doesnt qualify for Add Outlet. Please contact Application Support Team |
+|`911`| Given Merchant Super MID is Inactive. Please contact Application Support Team |
+|`912`| One of MID in hierarchy is Inactive. Please contact Application Support Team |
+|`913`| Please use member level Mid.Please contact Application Support Team |
+|`914`| Ref MID should be 8 digits |
+|`915`| Business Rule Exception |
+|`916`| All Adress Types are not available for Ref MID.Please contact Application Suport Team |
+|`917`| No Services avaiable for Ref MID. Please contact Application Support Team |

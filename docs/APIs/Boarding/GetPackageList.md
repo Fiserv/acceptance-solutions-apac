@@ -27,7 +27,7 @@ GET `/Externalboarding/secure/packages`
   "boardingType": "NEWMID",
   "merchantGrade": "NA",
   "newFundingAc": ""
-
+}
 
 ```
   
@@ -360,9 +360,19 @@ Below table provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`401` |Token not found|  
-|`200` |Success|
-|`300` |Request Failure|
-|`500` |Internal Server Error|
-|`404` |Not Found|
-|`502` |Request Timed Out|
+|`103`| Data Not Found.Please contact Application Support Team |
+|`105`| Given RM details not found |
+|`200`| Success |
+|`400`| Termial not in proper Status |
+|`401`| Unauthorized |
+|`405`| HttpClientError Exception |
+|`700`| No record found for given AppURN and Sales Id |
+|`900`| Invalid AppURN |
+|`901`| AppURN Not Match |
+|`902`| AppURN is mandatory |
+|`903`| Application already Submitted |
+|`904`| Json Processing Error |
+|`905`| Json Parse Error |
+|`906`| Json Mapping Error |
+|`907`| Comments are empty |
+|`908`| App URN not matching |
