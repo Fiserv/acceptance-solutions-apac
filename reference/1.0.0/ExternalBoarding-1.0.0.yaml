@@ -287,7 +287,7 @@ paths:
           example: 1000004745
       requestBody:
         content:
-          application/json:
+          multipart/form-data:
             schema:
               $ref: '#/components/schemas/MerchantDocumentUploadRequest'
       responses:
@@ -338,14 +338,35 @@ components:
       properties:
         docType:
           type: string
+          example: Cheque
+          description: document type
         fileType:
           type: string
+          example: .jpeg
+          description: filet Type
         principalNo:
           type: string
+          example: "1"
+          description: Principal No
         categoryName:
           type: string
+          example: "Fungding proof"
+          description: category name
         level:
           type: string
+          example: "1"
+        entity:
+          type: string
+          example: "Merchant"
+        Mandatory:
+          type: string 
+          example: "Y"
+        imageback:
+            type: string
+            format: binary
+        imageFront:
+            type: string
+            format: binary
     DocumentOverride:
       type: object
       properties:
