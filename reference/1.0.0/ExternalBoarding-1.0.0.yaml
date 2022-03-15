@@ -10,10 +10,8 @@ security:
 - BasicAuth: []
 - ApiKeyAuth: []
 tags:
-
 - name: Boarding
   description: REST API for Boarding
-
 paths:
   /Externalboarding/partner/login:
     get:
@@ -231,12 +229,11 @@ paths:
       operationId: getDocumentList
       x-group-name: Boarding
       x-proxy-name: Get Document List
-      parameters:
-      - name: RequestParam
-        in: query
-        required: true
-        schema:
-          $ref: '#/components/schemas/DocAndPkgRequestParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DocAndPkgRequestParam'
       responses:
         "200":
           description: OK
