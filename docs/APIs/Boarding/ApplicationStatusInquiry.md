@@ -26,7 +26,7 @@ The below table contains the mandatory fields required for a successful request.
 ### Request
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `appURN` | *path Variable* | 10 | M | Application URN |
+| `appURN` | *path Variable* | 30 | M | App URN retured as part of Create URN API |
 
 ### Successful Response Payload
 

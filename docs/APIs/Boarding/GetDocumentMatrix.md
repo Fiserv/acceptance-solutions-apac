@@ -44,7 +44,21 @@ The below table contains the mandatory fields required for a successful request.
 ### Request
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `merchantId` | *string* | 20 | M | Merchant ID |
+| `boardingType` |	*Alphanumeric* |	20 | M | Type of Merchant: NEWMID/ADDMID/ADDTID |
+| `institutionCode` |	*Alphanumeric* |	3 |	M |	The unique value assigned to each channel |
+| `appChannel` |	*Alphanumeric* |	|	M	| |
+| `appType` |	*Alphanumeric*  |	8 |	M |	 Fixed Value 'API' |
+| `institutionId` |	*Numeric*	 |10 |	M |	Institution number assigned to the institution |
+| `typeOfBusiness` |	*Alphanumeric* |	50 |	M |	Type of Bussiness means Sole Proprieter, Individual etc |
+| `mccCode` |	*Numeric* |	20 | M | Unique value assigned for each industry |
+| `merchantGrade` |	*Alphanumeric* |	40 | M | The grade of the merchant decided as per the turnover |
+| `merchantType` |	*Alphanumeric* |	20 | M |	Type of Merchant whether Small or Large Merchant |
+| `acceptanceType` |	*Alphanumeric* |	10 |	M |	Static Value: 'ECOM'/ 'POSMOB' |
+| `international` |	*Alphanumeric* |	3 | M |		Applicable if the merchant accepts international transactions |
+| `iciciMerchant` |	 *Alphanumeric* |	20 |	O |	Applicable if the merchant is ICICI current bank account holder|
+| `dcc`	 | *Alphanumeric*	| 3	| O	 | It is applicable for Foreign rate conversion(Y/N) |
+| `fundingCurrency`	| *Alphanumeric* |	8 |	M |	"The currency is settled to the merchant NET_INR, NET_USD, NET_AUD etc |
+| `newFundingAc` |	*Alphanumeric* |	20 |	O |	Merchant settlement account.|
 
 ### Successful Response Payload
 
