@@ -136,11 +136,11 @@ paths:
       parameters:
       - name: appUrn
         in: path
+        description: Application - Unique Identification number 
         required: true
         schema:
           type: string
-        description: Application URN
-        example: "1000007294"
+          example: "1000007294"
       responses:
         "200":
           description: OK
@@ -275,8 +275,8 @@ paths:
         required: true
         schema:
           type: string
-        description: App URN
-        example: "1000004745"
+          description: App URN
+          example: 1000004745
       requestBody:
         content:
           application/json:
