@@ -55,11 +55,11 @@ paths:
       x-proxy-name: Submit Application
       requestBody:
         content:
-          application/json:
+          application/text:
             schema:
               type: string
               description: encrypted string
-              example: "sdsd"
+              example: sdsd
         required: true
       responses:
         "200":
@@ -112,11 +112,11 @@ paths:
       x-proxy-name: Create Application
       requestBody:
         content:
-          application/json:
+          text/plain:
             schema:
               type: string
               description: encrypted string
-              example: ""
+              example: test
         required: true
       responses:
         "200":
