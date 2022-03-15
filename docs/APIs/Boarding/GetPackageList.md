@@ -40,17 +40,19 @@ The below table contains the mandatory fields required for a successful request.
 ### Request
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `appType` | *Json Property* | 10 | M | Application Type |
-| `mccCode` | *Json Property* | 4 | M | Mcc Code |
-| `merchantType` | *Json Property* |  | M | merchant Type |
-| `acceptanceType` | *Json Property* |  | M | Acceptance Type |
-| `typeOfBusiness` | *Json Property* |  | M | Type Of Business |
-| `international` | *Json Property* |  | M | International |
-| `iciciMerchant` | *Json Property* |  | M | ICICI Merchant |
-| `dcc` | *Json Property* |  | M | DCC |
-| `fundingCurrency` | *Json Property* |  | M | Funding Currency |
-| `boardingType` | *Json Property* |  | M | BoardingType |
-| `merchantGrade` | *Json Property* |  | M | Merchant Grade| 
+| `appType` |	*Alphanumeric* |	8 |	M |	Fixed Value 'API' |
+| `salesId` | *Alphanumeric* | 	70 | M	| User Credential created for each partner | 
+| `channelCode` |	*Alphanumeric* |	10 | M |	Static Channel Code shared with each partner
+| `mccCode` |	*Numeric* | 20 |	M |	Unique value assigned for each industry |
+| `merchantType` | *Alphanumeric* |	20 | M | Type of Merchant whether Small or Large Merchant |
+| `acceptanceType` |	*Alphanumeric* |	10	| M	 | Static Value: 'ECOM' /  'POSMOB' |
+| `typeOfBusiness` |	*Alphanumeric* |	50 | M | Type of Bussiness means Sole Proprieter, Individual etc |
+| `international`	| *Alphanumeric* | 3 | O | Applicable if the merchant supports international Card Transactions |
+| `iciciMerchant` | *Alphanumeric* | 20 | O	| Applicable if the merchant is ICICI current bank account holder |
+| `dcc` |	*Alphanumeric* |	3 |	 O | It is applicable for Foreign rate conversion(Y/N) |
+| `fundingCurrency` |	*Alphanumeric* |	8 |	 M | The currency  settled to the merchant NET_INR, NET_USD, NET_AUD etc |
+| `boardingTyp`e | *Alphanumeric* |	20 | M | Type of Merchant: NEWMID/ADDMID/ADDTID |
+| `merchantGrade` | *Alphanumeric* | 40 | M	| The grade of the merchant decided as per the turnover |
 
 
 ### Successful Response Payload
