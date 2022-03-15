@@ -82,17 +82,17 @@ paths:
       - name: appType
         in: path
         required: true
-        example: ADDLTID
         description: ADDLTID / ADDLMID
         schema:
           type: string
+          example: ADDLTID
       - name: referenceMID
         in: path
         required: true
-        example: 99000154
         description: mid
         schema:
           type: string
+          example: 99000154
       responses:
         "200":
           description: OK
@@ -183,8 +183,10 @@ paths:
       - name: msfId
         in: path
         required: true
+        description: msf id
         schema:
           type: string
+          example: 745
       responses:
         "200":
           description: OK
