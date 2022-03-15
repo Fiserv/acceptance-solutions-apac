@@ -37,10 +37,10 @@ The below table identifies the required parameters in the request payload.
 
 | Variable | Passed as | Type | Length | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `username` | Basic Authentication | *String* | 15 | User Id / Fiserv Lan ID. |
-| `Password ` | Basic Authentication | *string* | 15 | Password. |
+| `username` | Basic Authentication | *alphanumeric* | 15 | User Id / Fiserv Lan ID. |
+| `Password ` | Basic Authentication | *alphanumeric* | 15 | Password. |
 | `source ` | Query Parameter | *string* | | Source Type like API / TAB |
-| `Ain ` | Query Parameter | *string* |  | Password |
+| `ain ` | Query Parameter | *number* |  | Password |
 
 
 ### Successful Response Payload
