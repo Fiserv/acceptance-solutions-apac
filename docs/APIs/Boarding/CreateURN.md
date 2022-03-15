@@ -158,9 +158,8 @@ Below table provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`401` |Token not found|  
-|`200` |Success|
-|`300` |Request Failure|
-|`500` |Internal Server Error|
-|`404` |Not Found|
-|`502` |Request Timed Out|
+|`200`| Token not found | 
+|`401`| Unauthorized | 
+|`100`| Invalid Request | 
+|`702`| Unable to create merchant | 
+|`500`| Internal Error, Please contact application support team | 

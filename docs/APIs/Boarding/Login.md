@@ -69,5 +69,8 @@ Below table provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-| `401` | Authenticatin failed.|
-| `402` | Bad Credential.|
+|`200`| Token not found | 
+|`401`| Unauthorized |  
+|`403`| Forbidden |
+|`404`|  Not found |  
+|`400`| Generic Error |
