@@ -39,7 +39,15 @@ The below table contains the mandatory fields required for a successful request.
 ### Request
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `merchantId` | *string* | 20 | M | Merchant ID |
+| `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value 'API' |
+| **KeySelection** |	 |	 | |	This is the object |
+| `boardingType` | *Alphanumeric* |	20 |	M |	Type of Merchant: NEWMID/ADDMID/ADDTID |
+| **MerchantDetails** | |	 |  |	This is the object |
+| `businessName` |	*Alphanumeric* |	64 | M | Trade Name of the Merchant |
+| `legalName` |	*Alphanumeric* |	64	| M	 | Legal Name of the Merchant |
+| `institutionId` |	*Numeric* |	10 | O | Institution number assigned to the institution |
+| `countryCode` |	*Numeric* |	10 | O	| Country code where the institution belongs  |
+
 
 ### Successful Response Payload
 
@@ -149,14 +157,7 @@ The below table contains the mandatory fields required for a successful request.
 ### Response
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value 'API' |
-| ####`KeySelection` |	 |	 | |	This is the object |
-| `boardingType` | *Alphanumeric* |	20 |	M |	Type of Merchant: NEWMID/ADDMID/ADDTID |
-| ####`MerchantDetails` | |	 |  |	This is the object |
-| `businessName` |	*Alphanumeric* |	64 | M | Trade Name of the Merchant |
-| `legalName` |	*Alphanumeric* |	64	| M	 | Legal Name of the Merchant |
-| `institutionId` |	*Numeric* |	10 | O | Institution number assigned to the institution |
-| `countryCode` |	*Numeric* |	10 | O	| Country code where the institution belongs  |
+| `merchantId` | *string* | 20 | M | Merchant ID |
 
 
 
