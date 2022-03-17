@@ -1,7 +1,7 @@
 # Additional Device
 
 This API is used to additional device. Merchants needs to add session 
-token received during login api call in the header of this API,
+token received during login api call in the header of this API.
 
 
 ## Endpoint

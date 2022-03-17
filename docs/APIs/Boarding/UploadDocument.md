@@ -93,7 +93,7 @@ Below table provides the list of application's error code and its description.
 |`303`| Atleast One Document Required |  
 |`304`| Invalid Document Type |
 |`400`| Terminal not in Proper Status |  
-|`415`| ---------- |
+|`415`| Invalid media type |
 |`500`| Internal Error. Please contact Application Support Team |
 |`700`| No record found for given AppURN and Sales Id |
 |`701`| Unable to create APPURN |  
