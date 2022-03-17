@@ -540,6 +540,122 @@ The below table contains the mandatory fields required for a successful request.
  | `mobileNo` | M | *Numeric* | 15 | Mobile number of the Merchant | M | NA | NA | 
  | `phone1` | O | *Numeric* | 15 | phone1 of the Merchant | M | NA | NA | 
  | `contactName` | M | *Alphanumeric* | 35 | Contact name of the Merchant | M | NA | NA | 
+ | **idDocDetails** | C | - | - | "ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application. | - | This object not applicable forSingleMID PFAC | This object not applicable for Multimid PFAC | 
+ | **idDocDetails** | C | - | - | All documents uploaded under ""categoryInd"": ""P"" has to be included under principalDetails.idDocDetails" | - | This object not applicable forSingleMID PFAC | This object not applicable for Multimid PFAC | 
+ | `entity` | C | - | - | Static Value - `Member` | M | NA | NA | 
+ | `idType` | C | - | - | Value of docType received as response of uploaded document | M | NA | NA | 
+ | `idValue` | C- | - | -M | NA | NA | 
+ | `docId` | C | - | - | Value of docID received as response of uploaded document | M | NA | NA | 
+ | `categoryName` | C | *Alphanumeric* | 30 | Value of categoryName received as response of uploaded document | M | NA | NA | 
+ | `level` | C | *Alphanumeric* | 2 | Value of level received as response of uploaded document | M | NA | NA | 
+ | `mandatory` | C | *Alphanumeric* | 10 | Mandatory of the Merchant | M | NA | NA | 
+ | `entity` | C | - | - | Static Value - `Member` | M | NA | NA | 
+ | `idType` | C | - | - | Value of docType received as response of uploaded document | M | NA | NA | 
+ | `idValue` | C | - | - | - | M | NA | NA | 
+ | `docId` | C | - | - | Value of docID received as response of uploaded document | M | NA | NA | 
+ | `categoryName` | C | *Alphanumeric* | 30 | Value of categoryName received as response of uploaded document | M | NA | NA | 
+ | `level` | C | *Alphanumeric* | 2 | Value of level received as response of uploaded document | M | NA | NA | 
+ | `mandatory` | C | *Alphanumeric* | 10 | Mandatory of the Merchant | M | NA | NA | 
+ | **uboDetails** | - | - | - | This section is used to capture details of Ultimate Benefeciary Owner for the said merchant. The same section can be repeated for multiple UBOs. We can have upto maximum of 5 UBOs per merchant. | - | - | This object not applicable for Multimid PFAC | 
+ | `serialNo` | C | *Numeric* | 2 | Serial number of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `title` | C | *Alphanumeric* | 20 | Title of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `firstName` | C | *Alphanumeric* | 25 | First NAme of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `lastName` | C | *Alphanumeric* | 25 | Last NAme of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `middleName` | O | *Alphanumeric* | 25 | Middle NAme of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `dateOfBirth` | C | *Numeric* | 10 | Format - YYYYMMDD | M | NA | NA | 
+ | `shareholderPercentage` | C | *Numeric* | 8 | Shareholder percentage the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `Nationality` | C | *Alphanumeric* | 35 | Nationality of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | **kycDetails** | C | - | - | This is the object | - | - | - | 
+ | `kycCategory` | - | - | - | POI/POA of the Ultimate Benefeciary Owner | - | NA | NA | 
+ | `identityType` | C | *Alphanumeric* | 50 | "Type of KYC Document submitted for UBO. | M | NA | NA | 
+ | `identityType` | C | *Alphanumeric* | 50 | For India - PAN/AADHAR | M | NA | NA | 
+ | `identityType` | C | *Alphanumeric* | 50 | For ASEAN - Passport/Driving Licence/HKID or SGID or MYID | M | NA | NA | 
+ | `identityType` | C | *Alphanumeric* | 50 | For AU - Passport/Driving Licence" | M | NA | NA | 
+ | `identityValue` | C | *Alphanumeric* | 100 | Value of the Kyc Document submitted | M | NA | NA | 
+ | `identitymetaName1` | C | *Alphanumeric* | 100 | "AdditioNAl information pertaning to the KYC docuements submitted for UBO. | O | NA | NA | 
+ | `identitymetaName1` | C | *Alphanumeric* | 100 | For AU - Driving License State Code" | O | NA | NA | 
+ | `identitymetaValue1` | C | *Alphanumeric* | 100 | "AdditioNAl information pertaning to the KYC docuements submitted. | O | NA | NA | 
+ | `identitymetaValue1` | C | *Alphanumeric* | 100 | For AU - Value Driving License State Code" | O | NA | NA | 
+ | **uboAddress** | - | - | - | This is the object | - | NA | NA | 
+ | `addressLine` | C | *Alphanumeric* | 35 | Address of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `addressLine2` | O | *Alphanumeric* | 35 | addressLine2 Ultimate Benefeciary Owner | O | NA | NA | 
+ | `addressLine3` | O | *Alphanumeric* | 35 | addressLine3 Ultimate Benefeciary Owner | O | NA | NA | 
+ | `city` | C | *Alphanumeric* | 25 | City of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `state` | C | *Alphanumeric* | 25 | State of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `pincode` | C | *Alphanumeric* | 8 | Pincode of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `country` | C | *Alphanumeric* | 25 | Country of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `mobileNo` | C | *Numeric* | 15 | Mobile number of Ultimate Benefeciary Owner | M | NA | NA | 
+ | `phone1` | O | *Numeric* | 15 | phone1 of the Ultimate Benefeciary Owner | M | NA | NA | 
+ | `contactName` | C | *Alphanumeric* | 35 | Contact Name of Ultimate Benefeciary Owner | M | NA | NA | 
+ | **bankDetails** | - | - | - | This tag will contain the Bank account details of Partner/PayFac which needs to be configured at Fiserv End | - | This object is not applicable for SingleMid PFAC | This object not applicable for MultiMid PFAC | 
+ | **uwaccountdetails** | - | - | - | UW Account details are primarily the actual merchant account which will be used while underwriting the merchant | - | - | - | 
+ | `accountNo` | M | *Numeric* | 100 | Account number of the Merchant | M | NA | NA | 
+ | `accountName` | M | *Alphanumeric* | 35 | Account name of the Merchant | M | NA | NA | 
+ | `ifsc` | M | *Alphanumeric* | 15 | Ifsc of the Merchant | M | NA | NA | 
+ | `bankName` | M | *Alphanumeric* | 80 | Bank name of the Merchant | M | NA | NA | 
+ | `currency` | M | *Alphanumeric* | 3 | Currency of the Merchant | M | NA | NA | 
+ | `branch` | O | *Alphanumeric* | 500 | Branch of the Merchant | M | NA | NA | 
+ | `bankAddress` | M | *Alphanumeric* | 500 | Bank address of the Merchant | O | NA | NA | 
+ | `accType` | M | *Alphanumeric* | 30 | Acc Type of the Merchant | M | NA | NA | 
+ | **fundingaccountdetails** | C | - | - | "Funding account will the details of account to which Fiserv will process the funding on daily basis. | - | - | - | 
+ | `fundingaccountdetails` | C | - | - | For PayFacs, this will be the PayFac account. | - | - | - | 
+ | `fundingaccountdetails` | C | - | - | For Normal Partners, UW Account & Funding account both will be the same" | - | - | - | 
+ | `accountNo` | C | *Numeric* | 100 | If different form UW details | NA | NA | NA | 
+ | `accountName` | C | *Alphanumeric* | 35 | Account number of the Merchant | NA | NA | NA | 
+ | `ifsc` | C | *Alphanumeric* | 15 | Ifsc of the Merchant | NA | NA | NA | 
+ | `bankName` | C | *Alphanumeric* | 80 | Bank Name of the Cerchant | NA | NA | NA | 
+ | `currency` | C | *Alphanumeric* | 3 | Currency of the Merchant | NA | NA | NA | 
+ | `branch` | O | *Alphanumeric* | 500 | Branch of the Merchant | NA | NA | NA | 
+ | `bankAddress` | C | *Alphanumeric* | 500 | Bank address of the Merchant | NA | NA | NA | 
+ | `accType` | C | *Alphanumeric* | - | Account Type of the Merchant | NA | NA | NA | 
+ | **collectionaccountdetails** | C | - | - | "This section will have details of account which needs to be used for collection of charges. This account may or may not be the same as UW account/Funding account." | - | - | - | 
+ | `accountNo` | C | *Numeric* | 100 | If different form UW details | NA | NA | NA | 
+  |  `accountName`  |  C  |  *Alphanumeric*  |  35  |  Account name of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `ifsc`  |  C  |  *Alphanumeric*  |  15  |  Ifsc of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `bankName`  |  C  |  *Alphanumeric*  |  80  |  Bank Name of the Cerchant  |  NA  |  NA  |  NA  |  
+  |  `currency`  |  C  |  *Alphanumeric*  |  3  |  Currency of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `branch`  |  O  |  *Alphanumeric*  |  500  |  Branch of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `bankAddress`  |  C  |  *Alphanumeric*  |  500  |  Bank address of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `accType`  |  	C  |  *Alphanumeric*  |  30  |  Acc type of the Merchant  |  NA  |  NA  |  NA  |  
+  |  **submerchantDetails**  |  -  |  -  |  -  |  This section is used to capture the sub Partner Details of the merchant  |  This object is not applicable for ISO   |  This object is not applicable for SingleMid PFAC  |  This object is not applicable for MultiMid PFAC  |  
+  |  `submerchantID`  |  C  |  *Numeric*  |  15  |  "This is an optional field which the Single MID PayFacs can use to pass their own MID to Fiserv.  |  NA  |  NA  |  NA  |  
+  |  `submerchantID`  |  C  |  *Numeric*  |  15  |  This field will be mandatory if the Channel level parameter for Payfac Provided SMID is set to Y.  |  NA  |  NA  |  NA  |  
+  |  `submerchantID`  |  C  |  *Numeric*  |  15  |  If the same is set to `N', Boarding backend will generate its own MID for the merchant"  |  NA  |  NA  |  NA  |  
+  |  **businessSummary**  |  -  |  -  |  -  |  This section is used to capture the summary of the merchant  |  -  |  -  |  -  |  
+  |  `briefSummary`  |  M  |  *Alphanumeric*  |  100  |  Brief summary of the Merchant  |  M  |  NA  |  NA  |  
+  |  `salessrNumber`  |  O  |  *Alphanumeric*  |  100  |  Sales number of the Merchant  |  O  |  NA  |  NA  |  
+  |  `mccCode`  |  M  |  *Numeric*  |  20  |  Mcc number of the Merchant  |  M  |  NA  |  NA  |  
+  |  `mccDescription`  |  M  |  *Alphanumeric*  |  200  |  Mcc description of the Merchant  |  M  |  NA  |  NA  |  
+  |  `totalTurnover`  |  M  |  *Numeric*  |  20  |  Total turnover number of the Merchant  |  M  |  NA  |  NA  |  
+  |  `totalTurnoverPerMID`  |  M  |  *Numeric*  |  20  |  Totalturnoverpermid of the Merchant  |  M  |  NA  |  NA  |  
+  |  `cardTurnover`  |  M  |  *Numeric*  |  20  |  Card turnover of the Merchant  |  M  |  NA  |  NA  |  
+  |  `avgTicketAmt`  |  M  |  *Numeric*  |  20  |  Avgticketamt of the Merchant  |  M  |  NA  |  NA  |  
+  |  `dccTurnoverPerMID`  |  M  |  *Numeric*  |  20  |  Dccturnoverpermid of the Merchant  |  M  |  NA  |  NA  |  
+  |  `pgTurnover`  |  M  |  *Numeric*  |  20  |  Pg turnover of the Merchant  |  M  |  NA  |  NA  |  
+  |  `pgTurnoverPerMID`  |  M  |  *Numeric*  |  20  |  Pgturnoverpermid of the Merchant  |  M  |  NA  |  NA  |  
+  |  `avgEMITicketAmt`  |  O  |  *Numeric*  |  20  |  Avgemiticketamt of the Merchant  |  M  |  NA  |  NA  |  
+  |  `tranVolumeInternet`  |  M  |  *Numeric*  |  20  |  Tranvolume internet of the Merchant  |  M  |  NA  |  NA  |  
+  |  `tranVolumeMoto`  |  M  |  *Numeric*  |  20  |  Tranvolume moto of the Merchant  |  M  |  NA  |  NA  |  
+  |  `tranVolumeinStore`  |  M  |  *Numeric*  |  20  |  Tranvolume in store of the Merchant  |  M  |  NA  |  NA  |  
+  |  `deliveryDays0`  |  M  |  *Numeric*  |  20  |  deliveryDays0 of the Merchant  |  M  |  NA  |  NA  |  
+  |  `deliveryDays7`  |  M  |  *Numeric*  |  20  |  deliveryDays7 of the Merchant  |  M  |  NA  |  NA  |  
+  |  `deliveryDays14`  |  M  |  *Numeric*  |  20  |  deliveryDays14 of the Merchant  |  M  |  NA  |  NA  |  
+  |  `deliveryDays30`  |  M  |  *Numeric*  |  20  |  deliveryDays30 of the Merchant  |  M  |  NA  |  NA  |  
+  |  `deliveryDaysOver30`  |  M  |  *Numeric*  |  20  |  deliveryDaysOver30 of the Merchant  |  M  |  NA  |  NA  |  
+  |  `tranTypeMagStrip`  |  M  |  *Numeric*  |  20  |  Trantypemagstrip of the Merchant  |  M  |  NA  |  NA  |  
+  |  `tranTypeChip`  |  M  |  *Numeric*  |  20  |  Trantypechip of the Merchant  |  M  |  NA  |  NA  |  
+  |  `tranTypeKeyed`  |  M  |  *Numeric*  |  20  |  Trantypekeyed of the Merchant  |  M  |  NA  |  NA  |  
+  |  `creditSalesConsumer`  |  M  |  *Numeric*  |  20  |  Creditsalesconsumer of the Merchant  |  M  |  NA  |  NA  |  
+  |  `creditSalesBusiness`  |  M  |  *Numeric*  |  20  |  Creditsalesbusiness of the Merchant  |  M  |  NA  |  NA  |  
+  |  `firsReport`  |  O  |  *Alphanumeric*  |  20  |  Firs report of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `recurringTranFlag`  |  O  |  *Alphanumeric*  |  20  |  Recurringtranflag of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `refundPolicy`  |  O  |  *Alphanumeric*  |  20  |  Refund policy of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `cardRefundDays`  |  O  |  *Alphanumeric*  |  20  |  Cardrefunddays of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `thirdPartyProcessorFlag`  |  O  |  *Alphanumeric*  |  20  |  Thirdpartyprocessorflag of the Merchant  |  M  |  NA  |  NA  |  
+  |  `thirdPartyProcessorName`  |  O  |  *Alphanumeric*  |  40  |  Thirdpartyprocessorname of the Merchant  |  NA  |  NA  |  NA  |  
+  |  `smallMerchant`  |  O  |  *Alphanumeric*  |  20  |  Applicable if the merchant is a Small Merchant  |  M  |  NA  |  NA  |
+
+
 ### Successful Response Payload
 
 ```json
