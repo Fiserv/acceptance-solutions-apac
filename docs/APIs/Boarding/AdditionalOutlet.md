@@ -483,6 +483,63 @@ The below table contains the mandatory fields required for a successful request.
  | `cpvGroupId` | O | *Alphanumeric* | 50 | Cpvgroupid of the Merchant | NA | NA | NA | 
  | `regionalcpvGroupid` | O | *Alphanumeric* | 50 | Regionalcpv groupid of the Merchant | O | NA | NA | 
  | `commerceConnectReferenceMID` | O | *Alphanumeric* | 8 | Commerceconnectreferencemid of the Merchant | O | NA | NA |
+ | **terminals** | - | - | - | This is the object | - | - | - | 
+ | `count` | M | *Numeric* | 2 | Count of terminals for the Merchant | M | NA | NA | 
+ | `preferedDate` | M | *Numeric* | 8 | YYYYMMDD | M | NA | NA | 
+ | `preferedTime` | M | *Numeric* | 	 | 6 | HHMMSS | M | NA | NA | 
+ | `discount` | O | *Numeric* | 3 | Discount of the Merchant | M | NA | NA | 
+ | `userInstruction1` | O | *Alphanumeric* | 100 | userInstruction1 of the Merchant | O | NA | NA | 
+ | `userInstruction2` | O | *Alphanumeric* | 100 | userInstruction2 of the Merchant | O | NA | NA | 
+ | `surchargeAmount` | - | - | - | Surcharge values currently selected by Partner on MVSI in AU | This object not applicable for ISO | This object not applicable forSingleMID PFAC | This object not applicable for Multimid PFAC | 
+ | `visaBase` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `visaPercent` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `mcBase` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `mcPercent` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `upiBase` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `upiPercent` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `eftposBase` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `eftposPercent` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `amexBase` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `amexPercent` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `jcbBase` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `jcbPercent` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `dinersBase` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `dinersPercent` | C | *Numeric* | 11 | For AU Only | NA | NA | NA | 
+ | `altmerchCode` | O | *Alphanumeric* | 20 | This is an optional field which has to be populated only if there is merchant MID or Dealer Code has to be captured at MID Level | NA | NA | NA | 
+ | `sameLocation` | C | *Alphanumeric* | 1 | This flag has to be set to `Y` if Partner wants multiple MIDs at the same location | NA | NA | NA | 
+ | `mid` | C | *Numeric* | 15 | This is the reference Member MID which needs to be given in case of ADD MID/ ADD TID. | O | NA | NA | 
+ | `parentmid` | C | *Numeric* | 	 | 15 | This is the SG (parent MID) of the reference MID which needs to be given in case of ADD MID & ADD TID | 	O	 | NA | NA | 
+ | `otpEnabled` | O | *Alphanumeric* | 10 | Otp alpber naf the Oerchant | M | NA | NA | 
+ | **principalDetails** | - | - | - | This section is used to capture details of Principal Owner for the said merchant. The same section can be repeated for multiple Principal Owners. We can have upto maximum of 2 Principal Owners per merchant. | - | - | - | 
+ | `principalNo` | M | *Alphanumeric* | 2 | Principal number of the Merchant | M | NA | NA | 
+ | `position` | M | *Alphanumeric* | 20 | Position of the Merchant | M | NA | NA | 
+ | `title` | M | *Alphanumeric* | 20 | Title of the Merchant | M | NA | NA | 
+ | `firstName` | M | *Alphanumeric* | 25 | First Name mf the Merchant | M | NA | NA | 
+ | `lastName` | M | *Alphanumeric* | 25 | Last Name of the Merchant | M | NA | NA | 
+ | `middleName` | O | *Alphanumeric* | 25 | Middle Name of the Oerchant | M | NA | NA | 
+ | `gender` | M | *Alphanumeric* | 10 | Gender of the Merchant | M | NA | NA | 
+ | `dateOfBirth` | M | *Numeric* | 8 | YYYYMMDD | M | NA | NA | 
+ | **kycDetails** | - | - | - | This is the object | - | - | - | 
+ | `kycCategory` | - | - | - | POI/POA of the Merchant | - | - | NA | 
+ | `identityType` | M | *Alphanumeric* | 50 | "Type of KYC Document submitted. | M | NA | NA | 
+ | `identityType` | M | *Alphanumeric* | 50 | For India - PAN/AADHAR | M | NA | NA | 
+ | `identityType` | M | *Alphanumeric* | 50 | For ASEAN - Passport/Driving Licence/HKID or SGID or MYID | M | NA | NA | 
+ | `identityType` | M | *Alphanumeric* | 50 | For AU - Passport/Driving Licence" | M | NA | NA | 
+ | `identityValue` | M | *Alphanumeric* | 100 | Value of the Kyc Document submitted | M | NA | NA | 
+ | `identitymetaName1` | C | *Alphanumeric* | 100 | "Additional information pertaning to the KYC docuements submitted. For AU - Driving License State Code" | NA | NA | NA | 
+ | `identitymetaValue1` | C | *Alphanumeric* | 100 | "Additional information pertaning to the KYC docuements submitted. For AU - Value Driving License State Code" | NA | NA | NA | 
+ | `nationality` | M | *Alphanumeric* | 35 | Nationality of the Merchant | M | NA | NA | 
+ | **principalAddress** | - | - | - | This is the object | - | - | - | 
+ | `addressLine` | M | *Alphanumeric* | 35 | Address line of the Merchant | M | NA | NA | 
+ | `addressLine2` | O | *Alphanumeric* | 35 | addressLine2 of the Merchant | O | NA | NA | 
+ | `addressLine3` | O | *Alphanumeric* | 35 | addressLine3 of the Merchant | O | NA | NA | 
+ | `city` | M | *Alphanumeric* | 25 | City of the Merchant | M | NA | NA | 
+ | `state` | M | *Alphanumeric* | 25 | State of the Merchant | M | NA | NA | 
+ | `pincode` | M | *Alphanumeric* | 8 | Pincode of the Merchant | M | NA | NA | 
+ | `country` | M | *Alphanumeric* | 25 | Country of the Merchant | M | NA | NA | 
+ | `mobileNo` | M | *Numeric* | 15 | Mobile number of the Merchant | M | NA | NA | 
+ | `phone1` | O | *Numeric* | 15 | phone1 of the Merchant | M | NA | NA | 
+ | `contactName` | M | *Alphanumeric* | 35 | Contact name of the Merchant | M | NA | NA | 
 ### Successful Response Payload
 
 ```json
