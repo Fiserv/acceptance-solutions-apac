@@ -443,6 +443,25 @@ The below table contains the mandatory fields required for a successful request.
  | `contactName` | M | *Alphanumeric* | 35 | Contact Name of the Merchant | M | NA | NA | 
  | `gstNo` | C | *Alphanumeric* | 100 | Mandatory for Large merchants | NA | NA | NA | 
  | `gstMerchantStateCode` | O | *Alphanumeric* | 40 | Mandatory for Large Partners | NA | NA | NA | 
+ | `isdnFlag` | C | *Alphanumeric* | 20 | |  M | NA | NA | 
+  | **idDocDetails** | - | - | - | *"ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application. All documents uploaded under ""categoryInd"": ""E"" has to be included under merchantDetails.idDocDetails"* | This object not applicable forSingleMID PFAC | - | This object not applicable for Multimid PFAC | 
+ | `entity` | C | *Alphanumeric* | - | Static Value - `Member` | M | NA | NA | 
+ | `idType` | C | *Alphanumeric* | - | Value of docType received as response of uploaded document | M | NA | NA | 
+ | `idValue` | C | *Alphanumeric* | - | - | M | NA | NA | 
+ | `docId` | C | *Alphanumeric* | - | Value of docID received as response of uploaded document | M | NA | NA | 
+ | `categoryName` | C | *Alphanumeric* | - | Value of category | NA | me received as response of uploaded document | M | NA | NA | 
+ | `level` | C | *Numeric* | - | Value of level received as response of uploaded document | M | NA | NA | 
+ | `mandatory` | C | *Alphanumeric* | - | - | M | NA | NA | 
+ | `entity` | C | *Alphanumeric* | - | Static Value - `Member` | M | NA | NA | 
+ | `idType` | C | *Alphanumeric* | 	 | - | 	 | Value of docType received as response of uploaded document | M | NA | NA | 
+ | `idValue` | C | *Alphanumeric* | - | - | M | NA | NA | 
+ | `docId` | C | *Alphanumeric* | - | Value of docID received as response of uploaded document | M | NA | NA | 
+ | `categoryName` | C | *Alphanumeric* | - | Value of category | NA | me received as response of uploaded document | M | NA | NA | 
+ | `level` | C | *Numeric* | - | Value of level received as response of uploaded document | M | NA | NA | 
+ | `mandatory` | C | *Alphanumeric* | - | - | M | NA | NA | 
+ | **geoLocation** | - | - | - | This is the object | - | - | This object not applicable for Multimid PFAC | 
+ | `latitude` | O | *Numeric* | 20 | Lattitude of the Merchant | M | NA | NA | 
+ | `longitude` | O | *Numeric* | 20 | Longitude of the Merchant | M | NA | NA | 
 ### Successful Response Payload
 
 ```json
