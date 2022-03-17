@@ -462,6 +462,27 @@ The below table contains the mandatory fields required for a successful request.
  | **geoLocation** | - | - | - | This is the object | - | - | This object not applicable for Multimid PFAC | 
  | `latitude` | O | *Numeric* | 20 | Lattitude of the Merchant | M | NA | NA | 
  | `longitude` | O | *Numeric* | 20 | Longitude of the Merchant | M | NA | NA | 
+ | **tradingLocations** | - | - | - | "This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application. | - | - | - | 
+ | **tradingLocations** | - | - | - | The entire trading location section needs to be repeated for multiple trading locations." | - | - | - | 
+ | `locationNo` | M | *Numeric* | 2 | Trading location number of the Merchant | M | NA | NA | 
+ | `tradingName` | M | *Alphanumeric* | 22 | Trade Name of the Merchant | M | NA | NA | 
+ | **tradingAddress** | - | - | - | This is the object | - | - | - | 
+ | `addressLine` | M | *Alphanumeric* | 35 | Address of the Merchant | - | NA | NA | 
+ | `addressLine2` | O | *Alphanumeric* | 35 | Address of the Merchant | M | NA | NA | 
+ | `addressLine3` | O | *Alphanumeric* | 35 | Address of the Merchant | O | NA | NA | 
+ | `city` | M | *Alphanumeric* | 25 | City of the Merchant | O | NA | NA | 
+ | `state` | M | *Alphanumeric* | 25 | State of the Merchant | M | NA | NA | 
+ | `pincode` | M | *Alphanumeric* | 8 | Pincode of the Merchant | M | NA | NA | 
+ | `country` | M | *Alphanumeric* | 25 | Country of the Merchant | M | NA | NA | 
+ | `mobileNo` | M | *Numeric* | 15 | Mobile number of the Merchant | M | NA | NA | 
+ | `phone1` | O | *Numeric* | 15 | phone1 of the Merchant | M | NA | NA | 
+ | `email` | O | *Numeric* | 30 | Email of the Merchant | M | NA | NA | 
+ | `contactName` | M | *Alphanumeric* | 35 | Contact Name of the Merchant | M | NA | NA | 
+ | `packageId` | M | *Numeric* | 10 | Package number assigned to the Merchant | M | NA | NA | 
+ | `autoSettlementTime` | O | *Numeric* | 6 | HHMMSS | M | NA | NA | 
+ | `cpvGroupId` | O | *Alphanumeric* | 50 | Cpvgroupid of the Merchant | NA | NA | NA | 
+ | `regionalcpvGroupid` | O | *Alphanumeric* | 50 | Regionalcpv groupid of the Merchant | O | NA | NA | 
+ | `commerceConnectReferenceMID` | O | *Alphanumeric* | 8 | Commerceconnectreferencemid of the Merchant | O | NA | NA |
 ### Successful Response Payload
 
 ```json
