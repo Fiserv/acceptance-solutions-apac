@@ -404,7 +404,9 @@ The below table contains the mandatory fields required for a successful request.
  | `institutionId` | C | *Numeric* | 10 | Institution number assigned to the institution | M | NA | NA | 
  | `boardingType` | O | *Alphanumeric* | 20 | Type of Merchant: NEWMID/ADDMID/ADDTID | M | NA | NA | 
  | `IS_ADD_LOCATION` | O | *Alphanumeric* | 20 | Applicable if the merchant wants additional location | M | NA | NA | 
- | `IS_ADD_MID` | O | *Alphanumeric* | 20 | Applicable if the merchant wants additional MID | M | NA | NA | 
+ | `IS_ADD_MID` | O | *Alphanumeric* | 20 | Applicable if the merchant wants additional MID | M | NA | NA |
+ | `appChannel` | O | *AlphanuMeric* | 20 | | M | NA | NA | 
+ | `osvFlagValue` | O | *AlphanuMeric* | 1 | Original Seen & Verified flag.| M | NA | NA | 
 
 
 ### Successful Response Payload
