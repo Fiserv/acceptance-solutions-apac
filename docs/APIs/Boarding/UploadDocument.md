@@ -6,7 +6,7 @@ token received during login api call in the header of this API,
 
 ## Endpoint
 
-GET `/Externalboarding/secure/document/{appUrn}`
+POST `/Externalboarding/secure/document/{appUrn}`
 
 ## Payload Example
 

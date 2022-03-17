@@ -441,12 +441,6 @@ The below table contains the mandatory fields required for a successful request.
 }
 ```
 
-### Response
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
-| `merchantId` | *string* | 20 | M | Merchant ID |
-
-
 Below table provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |

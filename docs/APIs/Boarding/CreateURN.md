@@ -34,7 +34,7 @@ POST `/Externalboarding/secure/create`
 
 ### Minimum Requirements
 
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/create).
+The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/create).
 
 ### Request
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |

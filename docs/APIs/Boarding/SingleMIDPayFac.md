@@ -6,7 +6,7 @@ token received during login api call in the header of this API.
 
 ## Endpoint
 
-GET `/Externalboarding/secure/newmid`
+POST  `/Externalboarding/secure/newmid`
 
 ## Payload Example
 
@@ -185,7 +185,7 @@ GET `/Externalboarding/secure/newmid`
 
 ### Minimum Requirements
 
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/newmid``).
+The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/newmid``).
 
 ### Request
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
@@ -220,15 +220,6 @@ The below table contains the mandatory fields required for a successful request.
 }
 
 ```
-
-### Response
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
-
-
-
-
-
 Below table provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
