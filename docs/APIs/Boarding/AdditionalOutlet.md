@@ -426,6 +426,23 @@ The below table contains the mandatory fields required for a successful request.
  | `websiteURL` | C | *Alphanumeric* | 100 | Eligible for ECOM Merchant | M | NA | NA | 
  | `communicationEmail` | M | *AlphanuMeric* | 60 | Communication Email of the Merchant | M | NA | NA | 
  | `merchantType` | M | *Alphanumeric* | 20 | Whether it is small merchant or Large merchant | M | NA | NA | 
+ | `acceptanceType` | M | *Alphanumeric* | 10 | Static Value - POSMOB /ECOM | M | NA | NA | 
+ | `iciciMerchant` | M | *Alphanumeric* | 20 | Applicable if the merchant has ICICI account | M | NA | NA | 
+ | `newFundingAc` | M | *Alphanumeric* | 20 | Applicable if the merchant wants the new settlement account | NA | NA | NA | 
+ | **legalAddress** | - | - | - | This is the object | - | - | - | 		
+ | `addressLine` | M | *Alphanumeric* | 35 | Address of the Merchant | M | NA | NA | 
+ | `addressLine2` | O | *Alphanumeric* | 35 | Address of the Merchant | O | NA | NA | 
+ | `addressLine3` | O | *Alphanumeric* | 35 | Address of the Merchant | O | NA | NA | 
+ | `city` | M | *Alphanumeric* | 25 | City of the Merchant | M | NA | NA | 
+ | `state | M | *Alphanumeric* | 	 | 25 | State of the Merchant | M | NA | NA | 
+ | `pincode` | M | *Alphanumeric* | 8 | Pincode of the Merchant | M | NA | NA | 
+ | `country` | M | *Alphanumeric* | 25 | Country of the Merchant | M | NA | NA | 
+ | `mobileNo` | M | *Numeric* | 15 | Mobile number of the Merchant | M | NA | NA | 
+ | `phone1` | O | *Numeric* | 15 | Phone number of the Merchant | M | NA | NA | 
+ | `email` | O | *Numeric* | 30 | Email of the Merchant | M | NA | NA | 
+ | `contactName` | M | *Alphanumeric* | 35 | Contact Name of the Merchant | M | NA | NA | 
+ | `gstNo` | C | *Alphanumeric* | 100 | Mandatory for Large merchants | NA | NA | NA | 
+ | `gstMerchantStateCode` | O | *Alphanumeric* | 40 | Mandatory for Large Partners | NA | NA | NA | 
 ### Successful Response Payload
 
 ```json
