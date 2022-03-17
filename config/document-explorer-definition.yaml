@@ -97,7 +97,5 @@
               link: docs/APIs/Boarding/MultiMIDPayFac.md
             - title: Application Status Inquiry
               link: docs/APIs/Boarding/ApplicationStatusInquiry.md
-            - title: MSF Tariff Inquiry
-              link: docs/APIs/Boarding/MSFTariffInquiry.md
             
    

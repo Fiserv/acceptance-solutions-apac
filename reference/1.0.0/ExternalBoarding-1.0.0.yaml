@@ -6,6 +6,8 @@ info:
 servers:
 - url: https://www.uat.fdmerchantservices.com
   description: UAT URL
+- url: http://localhost:8080
+  description: Local URL
 security:
 - BasicAuth: []
 - ApiKeyAuth: []
@@ -173,31 +175,6 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/PkgListResponse'
-
-  /Externalboarding/secure/msf/{msfId}:
-    get:
-      tags:
-      - Boarding
-      summary: MSF Tariff 
-      description: Get MSFProfile Details
-      operationId: getMsById
-      x-group-name: Boarding
-      x-proxy-name: MSF Tariff Inquiry
-      parameters:
-      - name: msfId
-        in: path
-        required: true
-        description: msf id
-        schema:
-          type: string
-          example: 745
-      responses:
-        "200":
-          description: OK
-          content:
-            '*/*':
-              schema:
-                type: string
   /Externalboarding/secure/addtid:
     post:
       tags:

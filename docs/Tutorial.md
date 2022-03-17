@@ -54,8 +54,6 @@ Our APIs are broadly grouped into following sub-catagories.  Please click to spe
 
 - [Application Status Inquiry](./?path=/docs/APIs/Boarding/ApplicationStatusInquiry.md)
 
-- [MSF Tariff Inquiry](./?path=/docs/APIs/Boarding/MSFTariffInquiry.md)
-
 ---
 
 ## Access Merchant Solution APIs
