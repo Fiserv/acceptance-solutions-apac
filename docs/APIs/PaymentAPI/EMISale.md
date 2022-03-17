@@ -6,7 +6,7 @@ token received during login api call in the header of this API,
 
 ## Endpoint
 
-`/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
+POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
 
 ## Payload Example
 
@@ -59,7 +59,7 @@ token received during login api call in the header of this API,
 
 ### Minimum Requirements
 
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount).
+The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount).
 
 The below table identifies the required query parameters in the request message.
 

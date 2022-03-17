@@ -33,7 +33,7 @@ This API authenticates the external client with the unique credentials shared ea
 
 ### Minimum Requirements
 
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/boardinggateway/boarding/auth/signin).
+The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/boardinggateway/boarding/auth/signin).
 
 The below table identifies the required parameters in the request payload.
 
