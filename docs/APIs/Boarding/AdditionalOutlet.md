@@ -395,7 +395,7 @@ POST `/Externalboarding/secure/addmid`
 The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/addmid).
 
 ### Request
-| FieldName | Mandatory/Optional/Conditional | Data Type | Length | Description/Values | ISO/Direct Merchant | SMPFAC | MMPFAC |
+| FieldName | FiledType | Data Type | Length | Description/Values | ISO/Direct Merchant | SMPFAC | MMPFAC |
  |  --------  |  :-------:  |  :--:  |  :------------:  |  :--:  |  :------------: |  :------------: |  ------------------  | 
  |`appURN`| M |	*Alphanumeric*|30| App URN retured as part of Create URN API |	M| NA| NA|
  
