@@ -407,12 +407,25 @@ The below table contains the mandatory fields required for a successful request.
  | `IS_ADD_MID` | O | *Alphanumeric* | 20 | Applicable if the merchant wants additional MID | M | NA | NA |
  | `appChannel` | O | *AlphanuMeric* | 20 | | M | NA | NA | 
  | `osvFlagValue` | O | *AlphanuMeric* | 1 | Original Seen & Verified flag.| M | NA | NA | 
- | **MerchantDetails** | - | - | This is the object | - | - | - | - | 			
+ | **MerchantDetails** | - | - |  - | This is the object | - | - | - | 			
  | `businessName` | M | *AlphanuMeric* | 22 | Trade Name of the Merchant | M | NA | NA | 
  | `legalName` | M | *AlphanuMeric* | 35 | Legal Name of the Merchant | M | NA | NA | 
  | `businessType` | M | *AlphanuMeric* | 50 | Type of Business of the Merchant | M | NA | NA | 
  | `registrationNo` | M | *AlphanuMeric* | 100 | Registration number of the Merchant | M | NA | NA | 
-
+| **taxDetails** | - | - | - | This is the object | - | - | - | 			
+ | `taxidType` | M | *AlphanuMeric* | 50 | "Tax ID Type provided for the Merchant. | M | NA | NA | 
+ | `taxidType` | M | *AlphanuMeric* | 50 | For India - PAN | M | NA | NA | 
+ | `taxidType` | M | *AlphanuMeric* | 50 | Individual PAN for Individual/Soleprop Merchants | M | NA | NA | 
+ | `taxidValue` | M | *AlphanuMeric* | 100 | PAN, ABN nuMber of the Merchant | M | NA | NA | 
+ | `taxidValue` | M | *AlphanuMeric* | 100 | PAN, ABN nuMber of the Merchant | M | NA | NA | 
+ | `taxidValue` | M | *AlphanuMeric* | 100 | PAN, ABN nuMber of the Merchant | M | NA | NA | 
+ | `taxidValue` | M | *AlphanuMeric* | 100 | PAN, ABN nuMber of the Merchant | M | NA | NA | 
+ | `taxidValue` | M | *AlphanuMeric* | 100 | PAN, ABN nuMber of the Merchant | M | NA | NA | 
+ | `taxidValue` | M | *AlphanuMeric* | 100 | PAN, ABN nuMber of the Merchant | M | NA | NA | 
+ | `dateIncorporated` | M | *Numeric* | 8 | YYYYMMDD | M | NA | NA | 
+ | `websiteURL` | C | *Alphanumeric* | 100 | Eligible for ECOM Merchant | M | NA | NA | 
+ | `communicationEmail` | M | *AlphanuMeric* | 60 | Communication Email of the Merchant | M | NA | NA | 
+ | `merchantType` | M | *Alphanumeric* | 20 | Whether it is small merchant or Large merchant | M | NA | NA | 
 ### Successful Response Payload
 
 ```json
