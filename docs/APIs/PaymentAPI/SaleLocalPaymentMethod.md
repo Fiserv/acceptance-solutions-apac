@@ -1,8 +1,6 @@
-# Sale Local Payment Method
+# Sale with Local Payment Method
 
-This API is used to send sale card transaction request. Merchants needs to add session 
-token received during login api call in the header of this API.
-
+This API is used to send a sale request for card transactions. Merchants needs to add the session token received during Login  API call in the header field of this API.
 
 ## Endpoint
 
@@ -58,44 +56,46 @@ POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
 ***Token should be sent as Authorization.***
 
 ### Minimum Requirements
-
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount).
-
-The below table identifies the required query parameters in the request message.
+The table below contains the mandatory fields:
+Required for a successful Sale request
+Required query parameters in the request message
+Required json properties
+Merchants can access the full request schemas in our API Explorer[API Explorer](../api/?type=post&path=/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount).
 
 The below table identifies the required json properties in the request message.
 ### Request
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `merchantId` | *string* | 15 | M | Merchant ID assigned. |
-| `ain` | *string* | 07 | M | Acquirer institution number. |
-| `functionCode` | *string* | 02 | M | 00 = Sale  - Digital and Card|
-|  |  |  |  | 01 = "Sale" - Card|
-|  |  |  |  | 02 = "Preauth"|
-|  |  |  |  | 03 = "Preauth Completion|
-|  |  |  |  | 04 = "Refund"|
-|  |  |  |  | 12 = "Settlement"|
-|  |  |  |  | 11 = "Transaction Status Check" (Inquiry)
-|  |  |  |  | 05 = "Void"|
-|  |  |  |  | 04 = "efund"|
-| `terminalId` | *string* | 07 | M | Terminal ID. |
-| `billerId` | *string* | 03 | M | Biller Id provided by Fiserv. |
-| `merchantRefNumber` | *string* | 14(BOCM – 50) | M | Unique number for each transaction. Inquiry transaction should have same MRN of original txn. |
+| `merchantId` | *string* | 15 | M | Merchant ID assigned |
+| `ain` | *string* | 07 | M | Acquirer institution number |
+| `functionCode` | *string* | 02 | M | Examples: |
+|  |  |  |  | 00 = Sale  - Digital and Card|
+|  |  |  |  | 01 = Sale - Card|
+|  |  |  |  | 02 = Preauth|
+|  |  |  |  | 03 = Preauth Completion|
+|  |  |  |  | 04 = Refund|
+|  |  |  |  | 12 = Settlement|
+|  |  |  |  | 11 = Transaction Status Check (Inquiry)
+|  |  |  |  | 05 = Void|
+|  |  |  |  | 04 = Refund|
+| `terminalId` | *string* | 07 | M | Terminal ID |
+| `billerId` | *string* | 03 | M | Biller Id provided by Fiserv |
+| `merchantRefNumber` | *string* | 14(BOCM – 50) | M | Unique number for each transaction. Inquiry transaction should have same MRN of original txn |
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
-| `authAmount` | *string* | 19 | M | Bill Amount including decimal (Ex: “50.00” for $50 sale). Send 0.00 for inquiry txn. |
+| `authAmount` | *string* | 19 | M | Bill Amount including decimal (Ex: 50.00 for $50 sale). Send 0.00 for inquiry txn. |
 | `convFee` | *string* | 10 | C – To be sent if fee is charged | Convenience Fee including decimal (Ex: "5.00" for $5 fee) |
-| `cgst` | *string* | 10 | C – To be sent if CGST is included in the total amount | Central GST Including decimal (Ex: "10.00" for $10 cgst) |
-| `igst` | *string* | 10 | C – To be sent if IGST is included in the total amount | State GST Including decimal (Ex: "10.00" for $10 igst) |
-| `sgst` | *string* | 10 | C – To be sent if SGST is included in the total amount | State GST Including decimal (Ex: "100.00" for $10 sgst) |
-| `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal ((Ex: "57.00" for $57 sale). |
-| `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value). |
-| `reqDate` | *Date* | DDMMYYYY | M | Transaction initiated Date. |
-| `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time. |
-| `tranDate` | *Date* | DDMMYYYY | C (required for Refund and transaction status check) |Original transaction date. |
-| `tranTime` | *Timestamp* | HHMMSS | C (required for Refund and transaction status check) | Original transaction time. |
+| `cgst` | *string* | 10 | C – To be sent if CGST is included in the total amount | Central GST Including decimal (Ex: 10.00 for $10 cgst) |
+| `igst` | *string* | 10 | C – To be sent if IGST is included in the total amount | State GST Including decimal (Ex: 10.00 for $10 igst) |
+| `sgst` | *string* | 10 | C – To be sent if SGST is included in the total amount | State GST Including decimal (Ex: 100.00 for $10 sgst) |
+| `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal ((Ex: 57.00 for $57 sale). |
+| `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value) |
+| `reqDate` | *Date* | DDMMYYYY | M | Transaction initiated Date |
+| `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time |
+| `tranDate` | *Date* | DDMMYYYY | C (required for Refund and transaction status check) |Original transaction date |
+| `tranTime` | *Timestamp* | HHMMSS | C (required for Refund and transaction status check) | Original transaction time |
 | `cardLastNumber` | *string* | 04 | C (required for pre auth Completion) | Last 4 Digits of Card Number |
 | `cardBin` | *string* | 06 | C (required refund) | First six digits of the Card, used in the original (sale) transaction |
-| `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature). |
+| `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature) |
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value) |
 | `tranType` | *string* | 50 | O | Transaction Description |
 | `rrn` | *string* | 20 | C (Mandatory for Refund and optional for Inquiry txn) | Must pass the same value received in original transaction response |

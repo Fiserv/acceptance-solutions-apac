@@ -50,7 +50,7 @@
           sections:
             - title: Login
               link: docs/APIs/UAM/UAM.md
-            - title: Sale Local Payment Method
+            - title: Sale with Local Payment Method
               link: docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md
             - title: Sale Card
               link: docs/APIs/PaymentAPI/SaleCard.md

@@ -42,8 +42,8 @@ The below table identifies the required parameters in the request payload.
 
 | Variable | Passed as | Type | Length | Description / Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `username` | Json property | *String* | 15 | User ID |
-| `Password ` | Json Property | *string* | 15 | Password. |
+| `username` | Json Property | *string* | 15 | User ID |
+| `Password ` | Json Property | *string* | 15 | Password |
 
 ### Successful Response in Payload
 
