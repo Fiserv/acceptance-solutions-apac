@@ -81,6 +81,7 @@ The below table identifies the required json properties in the request message.
 | `terminalId` | *string* | 07 | M | Terminal ID |
 | `billerId` | *string* | 03 | M | Biller Id provided by Fiserv |
 | `merchantRefNumber` | *string* | 14(BOCM – 50) | M | Unique number for each transaction. Inquiry transaction should have same MRN of original txn |
+|  |  | (BOCM – 50) |  | |
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (Ex: 50.00 for $50 sale). Send 0.00 for inquiry txn. |
 | `convFee` | *string* | 10 | C – To be sent if fee is charged | Convenience Fee including decimal (Ex: "5.00" for $5 fee) |
