@@ -40,9 +40,9 @@ The below table contains the mandatory fields required for a successful request.
 
 The below table identifies the required parameters in the request payload.
 
-| Variable | Passed as | Type | Length | Description/Values |
+| Variable | Passed as | Type | Length | Description / Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `username` | Json property | *String* | 15 | User Id / Fiserv Lan ID. |
+| `username` | Json property | *String* | 15 | User ID |
 | `Password ` | Json Property | *string* | 15 | Password. |
 
 ### Successful Response in Payload
@@ -72,12 +72,12 @@ The below table identifies the required parameters in the request payload.
 }
 ```
 
-Below table provides the list of application's error code and its description.
+The table below provides the list of error codes and description for this application.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
-| `401` | Authenticatin failed.|
-| `402` | Bad Credential.|
+| `401` | Authenticatin failed |
+| `402` | Bad Credential |
 |`200`| Token not found |   
 |`403`| Forbidden |
 |`404`|  Not found |  
