@@ -1,24 +1,27 @@
 # Login
 
-This API authenticates the external client with the unique credentials shared earlier as part of initial setup. This API respond back with a session token & expiry time for the session token. This token is required in header of each subsequent API triggered by partner.
+As part of the initial set-up, prior to integration, merchants would have received unique credentials as part of the set up process.
+Login API authenticates merchants’ unique credentials, with a response that includes: -
+A session token
+- Expiry time of the session token
+- This token is mandatory in the header submitted for each API being triggered. 
 
-## Mandatory/Optional/Conditional: Mandatory
 
-## Event Trigger:
+## API Category: Mandatory
 
-* External client need to initiate a Login request to fetch session token before submitting any API to Fiserv backend system.
+## How it works
 
-* Each session token is active for a specific amount of time as provided in ttl (time to live) field in response.
+1. Merchants need to initiates a Login request to fetch a session token before submitting any APIs to Fiserv backend system.
+2. Each session token is active for a specific amount of time provided in ttl (time to live) field in the response message.
+3. If the merchant tries to use the token beyond the expiry, Fiserv backend system will return with an error response.
+4. The merchant will then need to initiate another login request to request for a fresh token, in order to submit any creation of new user request.
 
-* If external client tries to use the token beyond the expiry, Fiserv backend system will respond back with an error response.
-
-* External client need to initiate another login request to fetch fresh token to submit any new create user request.
 
 ## Endpoint
 
 `/boardinggateway/boarding/auth/signin`
 
-## Payload Example
+## Payload Examples
 
 ### Request Payload
 
@@ -42,7 +45,7 @@ The below table identifies the required parameters in the request payload.
 | `username` | Json property | *String* | 15 | User Id / Fiserv Lan ID. |
 | `Password ` | Json Property | *string* | 15 | Password. |
 
-### Successful Response Payload
+### Successful Response in Payload
 
 ```json
 {
@@ -57,7 +60,7 @@ The below table identifies the required parameters in the request payload.
 }
 ```
 
-### Error Response Payload
+### Error Response in Payload
 
 ```json
 {
@@ -75,3 +78,7 @@ Below table provides the list of application's error code and its description.
 | --------  | ------------------ |
 | `401` | Authenticatin failed.|
 | `402` | Bad Credential.|
+|`200`| Token not found |   
+|`403`| Forbidden |
+|`404`|  Not found |  
+|`400`| Generic Error |
