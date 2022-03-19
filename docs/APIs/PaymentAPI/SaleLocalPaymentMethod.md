@@ -84,13 +84,13 @@ The below table identifies the required json properties in the request message.
 |  |  | (BOCM – 50) |  | |
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
-| `convFee` | *string* | 10 | C – To be sent if fee is charged | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
+| `convFee` | *string* | 10 | C | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
 |  | |  | (C – To be sent if fee is charged) |  |
-| `cgst` | *string* | 10 | C – To be sent if CGST is included in the total amount | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
+| `cgst` | *string* | 10 | C  | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
 |  | |  | (if CGST is included in the total amount) |  |
-| `igst` | *string* | 10 | C – To be sent if IGST is included in the total amount | State GST Including decimal (E.g. 10.00 for $10 igst) |
+| `igst` | *string* | 10 | C  | State GST Including decimal (E.g. 10.00 for $10 igst) |
 |  | | | | (if IGST is included in the total amount) |  |
-| `sgst` | *string* | 10 | C – To be sent if SGST is included in the total amount | State GST Including decimal (E.g. 100.00 for $10 sgst) |
+| `sgst` | *string* | 10 | C  | State GST Including decimal (E.g. 100.00 for $10 sgst) |
 |  | |  | | (if SGST is included in the total amount) |  |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal ((E.g. 57.00 for $57 sale). |
 | `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value) |
@@ -105,8 +105,10 @@ The below table identifies the required json properties in the request message.
 | `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature |
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value) |
 | `tranType` | *string* | 50 | O | Transaction Description |
-| `rrn` | *string* | 20 | C (Mandatory for Refund and optional for Inquiry txn) | Must pass the same value received in original transaction response |
-| `emiTenure` | *string* | 02 | C (required for EMI transactions) | EMI duration |
+| `rrn` | *string* | 20 | C | Must pass the same value received in original transaction response |
+ | | | | (It is applicable for Refund and optional for Inquiry txn) |  |
+| `emiTenure` | *string* | 02 | C  | EMI duration |
+ | | | | (if required for EMI transactions) |  |
 | `paramList` | *array* | NA | O | Biller can pass any additional details if required in arrary format "paramList": [{"param_lit": "param1 key","param": "23"}] |
 | `udf1` | *string* | 100 | O | User Defined Field |
 | `udf2` | *string* | 100 | O | User Defined Field |
