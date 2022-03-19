@@ -89,17 +89,19 @@ The below table identifies the required json properties in the request message.
 | `cgst` | *string* | 10 | C – To be sent if CGST is included in the total amount | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
 |  | |  | (if CGST is included in the total amount) |  |
 | `igst` | *string* | 10 | C – To be sent if IGST is included in the total amount | State GST Including decimal (E.g. 10.00 for $10 igst) |
-|  | |  | (if IGST is included in the total amount) |  |
+|  | | | | (if IGST is included in the total amount) |  |
 | `sgst` | *string* | 10 | C – To be sent if SGST is included in the total amount | State GST Including decimal (E.g. 100.00 for $10 sgst) |
-|  | |  | (if SGST is included in the total amount) |  |
+|  | |  | | (if SGST is included in the total amount) |  |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal ((E.g. 57.00 for $57 sale). |
 | `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value) |
 | `reqDate` | *Date* | DDMMYYYY | M | Transaction initiated date |
 | `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time |
-| `tranDate` | *Date* | DDMMYYYY | C (required for Refund and transaction status check) |Original transaction date |
-| `tranTime` | *Timestamp* | HHMMSS | C (required for Refund and transaction status check) | Original transaction time |
-| `cardLastNumber` | *string* | 04 | C (required for pre auth Completion) | Last 4 digits ....  |
-| `cardBin` | *string* | 06 | C (required refund) | First 6 digits .... of the Card, used in the original (sale) transaction |
+| `tranDate` | *Date* | DDMMYYYY | C  |Original transaction date |
+| `tranTime` | *Timestamp* | HHMMSS | C | Original transaction time |
+| `cardLastNumber` | *string* | 04 | C  | Last 4 digits ....  |
+ | | | | (if required for pre auth Completion) |  |
+| `cardBin` | *string* | 06 | C  | First 6 digits .... of the Card, used in the original (sale) transaction |
+ | | | | (if required refund) |   |
 | `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature |
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value) |
 | `tranType` | *string* | 50 | O | Transaction Description |
@@ -204,8 +206,8 @@ The below table identifies the required json properties in the request message.
 | `cardNumber` | *string* | 19 | O | Card Number |
 | `expDate` | *string* | 4 | O |  |
 | `posEntryMode` | *string* | 10 | M | MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC |
-| `walletType` | *string* | 10 | C – Digital transactions | Type of wallet used such as UPI, Amazon Pay LPM name |
-| `primaryId` | *string* | 20 | C - Digital transactions | Reference Number of the QR Request |
+| `walletType` | *string* | 10 | C  | Type of wallet used such as UPI, Amazon Pay LPM name |
+| `primaryId` | *string* | 20 | C | Reference Number of the QR Request |
 | `custId` | *string* | 35 | O | Customer identifier,Vehicle number for fasttag VPA for UPI QR |
 | `walletId` | *string* | 05 | O | Unique wallet ID associated with each wallet |
 | `Source` | *string* | 20 | O | Transaction Initiated source |
@@ -216,9 +218,6 @@ The below table identifies the required json properties in the request message.
 | `tranDate` | *date* | DDMMYYYY | O | transaction date |
 | `tranTime` | *string* | HHMMS | O | transaction time |
 | `settlementDetails` | *string* | 2000 | O | set settlement Details |
-
-
-
 
 Below table provides the list of application's error code and its description.
 
