@@ -99,16 +99,16 @@ The below table identifies the required json properties in the request message.
 | `tranDate` | *Date* | DDMMYYYY | C  |Original transaction date |
 | `tranTime` | *Timestamp* | HHMMSS | C | Original transaction time |
 | `cardLastNumber` | *string* | 04 | C  | Last 4 digits ....  |
- | | | | (if required for pre auth Completion) |  |
+ | | | | (if included pre auth Completion) |  |
 | `cardBin` | *string* | 06 | C  | First 6 digits .... of the Card, used in the original (sale) transaction |
- | | | | (if required refund) |   |
+ | | | | (if included refund) |   |
 | `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature |
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value) |
 | `tranType` | *string* | 50 | O | Transaction Description |
 | `rrn` | *string* | 20 | C | Must pass the same value received in original transaction response |
  | | | | (It is applicable for Refund and optional for Inquiry txn) |  |
 | `emiTenure` | *string* | 02 | C  | EMI duration |
- | | | | (if required for EMI transactions) |  |
+ | | | | (if included EMI transactions) |  |
 | `paramList` | *array* | NA | O | Biller can pass any additional details if required in arrary format "paramList": [{"param_lit": "param1 key","param": "23"}] |
 | `udf1` | *string* | 100 | O | User Defined Field |
 | `udf2` | *string* | 100 | O | User Defined Field |
