@@ -22,7 +22,7 @@ Our APIs are broadly grouped into following sub-catagories.  Please click to spe
 
 - [Transaction status Check](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
 
-- [Sale Local Payment Method](./?path=docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md)
+- [Sale with Local Payment Method](./?path=docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md)
 
 - [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
