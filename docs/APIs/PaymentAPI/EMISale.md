@@ -66,7 +66,7 @@ The below table identifies the required query parameters in the request message.
 The below table identifies the required json properties in the request message.
 ### Request
 | Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 15 | M | Merchant ID assigned |
 | `ain` | *string* | 07 | M | Acquirer institution number |
 | `functionCode` | *string* | 02 | M | Examples: |
@@ -176,7 +176,7 @@ The below table identifies the required json properties in the request message.
 
 ### Response
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
 | `transactionId` | *string* | 20 | M | Unique Id (Biller tran details table) |
 | `functionCode` | *string* | 02 | M | Same as request |
