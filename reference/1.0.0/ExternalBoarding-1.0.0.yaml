@@ -72,6 +72,59 @@ paths:
                 type: string
                 description: encrypted string
                 example: ""
+
+  /Externalboarding/convert/decrypt:
+    post:
+      tags:
+      - Boarding
+      summary: decrypt
+      description: decrypt
+      operationId: decryptPayload
+      x-group-name: Boarding
+      x-proxy-name: decrypt
+      requestBody:
+        content:
+           application/json::
+            schema:
+              type: string
+              description: encrypted string
+              example: "wT/izrHrPefuqOfVPrqItzSbEkBGF/4TX7zfx8GjIGcmRaamXThWuKIfNcX0aH0PRqrWyYhOHCHbiA82aqp+LwcnIbNwrtzPD1E4z3XDIj3DqbplCrP6Ge6rxi0zzlOVp80UBujaywNCd1nLAJHnpDOnTc4LfJRvK96MdZwjpVUWxADG1nazE6rm2lryJ0wxcSN/SGsN7EWCh1+9JaLBWXmL3lEwsGmKSdkeFDbW4z/Cw6fdz200G2Tre/I+hAJstsffaItyQkHyL+/1R7xe8r9ld0SHFJa3HbvwkHxz7TFv7fwp6kQSj35MhQc7uiuZdcXfQXRBAQA9JnPs8nnhIQA7FYTIuMozE0Cp9JI+spZ2Vvxo4X4TKz9dfVHYxVqp"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+                description: decrypted string
+                example:  "{\"salesId\":\"ecomuser\",\"institutionId\":\"47\",\"appType\":\"API\",\"keySelection\":{\"boardingType\":\"NEWMID\"},\"countryCode\":\"IND\",\"merchantDetails\":{\"legalName\":\"ECOM\",\"businessName\":\"ECOM\"},\"channelCode\":\"EAZYAPY_ECOM\"}"
+                
+  /Externalboarding/convert/encrypt:
+    post:
+      tags:
+      - Boarding
+      summary: encrypt
+      description: encrypt
+      operationId: encryptPayload
+      x-group-name: Boarding
+      x-proxy-name: encrypt
+      requestBody:
+        content:
+           application/json::
+            schema:
+              type: string
+              description: encrypted string
+              example: "{\"salesId\":\"ecomuser\",\"institutionId\":\"47\",\"appType\":\"API\",\"keySelection\":{\"boardingType\":\"NEWMID\"},\"countryCode\":\"IND\",\"merchantDetails\":{\"legalName\":\"ECOM\",\"businessName\":\"ECOM\"},\"channelCode\":\"EAZYAPY_ECOM\"}"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/EncDecResponse'
+  
   /Externalboarding/secure/refmid/{appType}/{referenceMID}:
     get:
       tags:
@@ -416,7 +469,17 @@ components:
           format: int32
         message:
           type: string
-
+    EncDecResponse:
+      type: object
+      properties:
+        statusCode:
+          type: string
+          description: status code
+          example: "200"
+        response:
+          type: string
+          description: encrypeted response
+          example: wT/izrHrPefuqOfVPrqItzSbEkBGF/4TX7zfx8GjIGcmRaamXThWuKIfNcX0aH0PRqrWyYhOHCHbiA82aqp+LwcnIbNwrtzPD1E4z3XDIj3DqbplCrP6Ge6rxi0zzlOVp80UBujaywNCd1nLAJHnpDOnTc4LfJRvK96MdZwjpVUWxADG1nazE6rm2lryJ0wxcSN/SGsN7EWCh1+9JaLBWXmL3lEwsGmKSdkeFDbW4z/Cw6fdz200G2Tre/I+hAJstsffaItyQkHyL+/1R7xe8r9ld0SHFJa3HbvwkHxz7TFv7fwp6kQSj35MhQc7uiuZdcXfQXRBAQA9JnPs8nnhIQA7FYTIuMozE0Cp9JI+spZ2Vvxo4X4TKz9dfVHYxVqp
   securitySchemes:
     BasicAuth:
       type: http
@@ -425,3 +488,4 @@ components:
       type: apiKey
       in: header
       name: Authorization
+
