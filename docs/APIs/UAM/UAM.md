@@ -41,7 +41,7 @@ The below table contains the mandatory fields required for a successful request.
 The below table identifies the required parameters in the request payload.
 
 | Variable | Passed as | Type | Length | Description / Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 | `username` | Json Property | *string* | 15 | User ID |
 | `Password ` | Json Property | *string* | 15 | Password |
 
