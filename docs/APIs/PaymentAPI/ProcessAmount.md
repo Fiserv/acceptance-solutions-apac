@@ -78,7 +78,7 @@ The below table identifies the required json properties in the request message.
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
 | `convFee` | *string* | 10 | C | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
-|  | |  | (C – To be sent if fee is charged) |  |
+|  | |  | (To be sent if fee is charged) |  |
 | `cgst` | *string* | 10 | C  | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
 |  | |  | (if CGST is included in the total amount) |  |
 | `igst` | *string* | 10 | C  | State GST Including decimal (E.g. 10.00 for $10 igst) |
