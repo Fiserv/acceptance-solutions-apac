@@ -50,6 +50,27 @@ paths:
           application/json:
             schema:
                $ref: "#/components/schemas/NonOpiProcessAmountRequest"
+            examples:
+              sale card:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_SALE"
+              sale with LPM:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_SALE_WITH_LPM"
+              preauth sale:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_PREAUTH_SALE"
+              preauth completion:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_PREAUTH_COMPLETION"
+              refund:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_PREAUTH_REFUND"
+              void:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_VOID"
+              transaction status check:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_TXN_STATUS_CHECK"
+              emai sale:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_EMI_SALE"
+              settlment transaction:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest_SETTLEMENT_TRANSACTION"
+            
+
         required: true
       responses:
         "200":
@@ -69,6 +90,1482 @@ components:
         data:
           type: object
     NonOpiProcessAmountRequest:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_SALE:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_SALE_WITH_LPM:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_PREAUTH_SALE:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_PREAUTH_COMPLETION:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_PREAUTH_REFUND:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_VOID:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_TXN_STATUS_CHECK:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_EMI_SALE:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    NonOpiProcessAmountRequest_SETTLEMENT_TRANSACTION:
       required:
         - merchantId
         - ain
