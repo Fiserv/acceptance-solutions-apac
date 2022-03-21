@@ -81,7 +81,7 @@ paths:
       description: decrypt
       operationId: decryptPayload
       x-group-name: Boarding
-      x-proxy-name: decrypt
+      x-proxy-name: Decrypt
       requestBody:
         content:
            application/json:
@@ -108,7 +108,7 @@ paths:
       description: encrypt
       operationId: encryptPayload
       x-group-name: Boarding
-      x-proxy-name: encrypt
+      x-proxy-name: Encrypt
       requestBody:
         content:
            application/json:
