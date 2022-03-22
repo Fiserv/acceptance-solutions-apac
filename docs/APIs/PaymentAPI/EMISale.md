@@ -81,35 +81,26 @@ The below table identifies the required json properties in the request message.
 |  |  |  |  | 04 = Refund|
 | `terminalId` | *string* | 07 | M | Terminal ID |
 | `billerId` | *string* | 03 | M | Biller Id provided by Fiserv |
-| `merchantRefNumber` | *string* | 14 | M | Unique number for each transaction. Inquiry transaction should have same MRN of original txn |
-|  |  | (BOCM – 50) |  | |
+| `merchantRefNumber` | *string* | 14 | M (BOCM – 50) | Unique number for each transaction. Inquiry transaction should have same MRN of original txn |
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
-| `convFee` | *string* | 10 | C | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
-|  | |  | (To be sent if fee is charged) |  |
-| `cgst` | *string* | 10 | C  | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
-|  | |  | (if CGST is included in the total amount) |  |
-| `igst` | *string* | 10 | C  | State GST Including decimal (E.g. 10.00 for $10 igst) |
-|  | | | | (if IGST is included in the total amount) |  |
-| `sgst` | *string* | 10 | C  | State GST Including decimal (E.g. 100.00 for $10 sgst) |
-|  | |  | | (if SGST is included in the total amount) |  |
+| `convFee` | *string* | 10 | C (To be sent if fee is charged) | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
+|| `cgst` | *string* | 10 | C (if CGST is included in the total amount)  | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
+| `igst` | *string* | 10 | C (if IGST is included in the total amount) | State GST Including decimal (E.g. 10.00 for $10 igst) |
+| `sgst` | *string* | 10 | C (if SGST is included in the total amount)  | State GST Including decimal (E.g. 100.00 for $10 sgst) |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal ((E.g. 57.00 for $57 sale). |
 | `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value) |
 | `reqDate` | *Date* | DDMMYYYY | M | Transaction initiated date |
 | `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time |
 | `tranDate` | *Date* | DDMMYYYY | C  |Original transaction date |
 | `tranTime` | *Timestamp* | HHMMSS | C | Original transaction time |
-| `cardLastNumber` | *string* | 04 | C  | Last 4 digits ....  |
- | | | | (if included pre auth Completion) |  |
-| `cardBin` | *string* | 06 | C  | First 6 digits .... of the Card, used in the original (sale) transaction |
- | | | | (if included refund) |   |
+| `cardLastNumber` | *string* | 04 | C (if included pre auth Completion)  | Last 4 digits .... of Card Number  |
+| `cardBin` | *string* | 06 | C (if included refund) | First 6 digits .... of the Card, used in the original (sale) transaction |
 | `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature |
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value) |
 | `tranType` | *string* | 50 | O | Transaction Description |
-| `rrn` | *string* | 20 | C | Must pass the same value received in original transaction response |
- | | | | (It is applicable for Refund and optional for Inquiry txn) |  |
-| `emiTenure` | *string* | 02 | C  | EMI duration |
- | | | | (if included EMI transactions) |  |
+| `rrn` | *string* | 20 | C (It is applicable for Refund and optional for Inquiry txn) | Must pass the same value received in original transaction response |
+| `emiTenure` | *string* | 02 | C (if included EMI transactions) | EMI duration |
 | `paramList` | *array* | NA | O | Biller can pass any additional details if required in arrary format "paramList": [{"param_lit": "param1 key","param": "23"}] |
 | `udf1` | *string* | 100 | O | User Defined Field |
 | `udf2` | *string* | 100 | O | User Defined Field |
@@ -181,11 +172,9 @@ The below table identifies the required json properties in the request message.
 | `transactionId` | *string* | 20 | M | Unique Id (Biller tran details table) |
 | `functionCode` | *string* | 02 | M | Same as request |
 | `invoiceNumber` | *string* | 20 | O | Terminal Invoice Number |
-| `cardLastNumber` | *string* | 4 | C | Last 4 Digits of Card Number |
-|  | | |  (if required for Pre-auth) | |
+| `cardLastNumber` | *string* | 4 | C (if required for Pre-auth) | Last 4 Digits of Card Number |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts, tip) including decimal (E.g. 57.00 for $57 sale) |
-| `tipAmount` | *string* | 10 | C  | Tip Amount including decimal (E.g. 7.00 for $7 tip)|
-|  | | |  (if Tip is included) | |
+| `tipAmount` | *string* | 10 | C (if Tip is included) | Tip Amount including decimal (E.g. 7.00 for $7 tip)|
 | `merchantRefNumber` | *string* | 14 | M | Merchant Reference Number |
 | `customerRefNumber` | *string* | 20 | 0 | Custmer Reference Number |
 | `respCode` | *string* | 05 | M | 200 / 300 / actual switch response |
