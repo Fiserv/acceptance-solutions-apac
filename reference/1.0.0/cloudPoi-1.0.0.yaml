@@ -50,7 +50,12 @@ paths:
           application/json:
             schema:
                $ref: "#/components/schemas/NonOpiProcessAmountRequest"
-        required: true
+            examples:
+              Sample Sale:
+                 $ref: "#/components/schemas/NonOpiProcessAmountRequest_SALE"
+              Sample LPM:
+                 $ref: "#/components/schemas/NonOpiProcessAmountRequest_LPM"
+        
       responses:
         "200":
           description: OK
@@ -297,6 +302,68 @@ components:
           type: string
           description: password
           example: December01
+    NonOpiProcessAmountRequest_LPM:
+        value:
+          functionCode: "00" 
+          ain: "47000"
+          merchantId: "470000095488745" 
+          terminalId: "33878692" 
+          customerRefNumber: "33333333333"
+          merchantRefNumber: "Guru415" 
+          billerId: "22" 
+          convFee: "43" 
+          cgst: "12" 
+          igst: "23" 
+          sgst: "55" 
+          totalAmount: "10" 
+          tranCurrency: "356" 
+          reqDate: "22022022" 
+          reqTime: "161900" 
+          authAmount: "111" 
+          tranDate: ""  
+          tranTime:  "" 
+          invoiceNumber:  "" 
+          cardLastNumber: ""  
+          callbackURL:  "" 
+          mrchCountryCode: "366" 
+          tranType:  "" 
+          rrn:  "" 
+          emiRefNumber:  "" 
+          emiTenure: ""  
+          udf1: "" 
+          udf2: ""  
+    NonOpiProcessAmountRequest_SALE:
+        value:
+          functionCode: "00" 
+          ain: "47000"
+          merchantId: "470000095488827" 
+          terminalId: "33878692" 
+          customerRefNumber: "33333333333"
+          merchantRefNumber: "Guru415" 
+          billerId: "22" 
+          convFee: "43" 
+          cgst: "12" 
+          igst: "23" 
+          sgst: "55" 
+          totalAmount: "10" 
+          tranCurrency: "356" 
+          reqDate: "22022022" 
+          reqTime: "161900" 
+          authAmount: "111" 
+          tranDate: ""  
+          tranTime:  "" 
+          invoiceNumber:  "" 
+          cardLastNumber: ""  
+          callbackURL:  "" 
+          mrchCountryCode: "366" 
+          tranType:  "" 
+          rrn:  "" 
+          emiRefNumber:  "" 
+          emiTenure: ""  
+          udf1: "" 
+          udf2: ""
+         
+
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
