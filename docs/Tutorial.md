@@ -2,7 +2,7 @@
 
 The Merchant Solutions APIs are built on the foundation of REST. The APIs accept standard JSON requests and return JSON encoded responses while leveraging industry standard [HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) for a seamless integration. Interaction through our APIs provides the developer community the ability to retrieve/update the customer demographic information, account's financial information,and, the payment instrument details in a simple and intuitive manner. It also provides APIs to retrieve transactions, statements details, loyalty points, offers, and, multiple EMIs conversion details.  
 
-Our APIs are broadly grouped into following sub-catagories.  Please click to specific category of interest to get more details
+Our APIs are broadly grouped into following sub-catagories. Please click to specific category of interest to get more details
 
 # Cloud POI
 
