@@ -29,7 +29,7 @@ paths:
               $ref: "#/components/schemas/AuthRequest"
         required: true
       responses:
-        "200":
+        200:
           description: OK
           content:
             "*/*":
@@ -50,12 +50,7 @@ paths:
           application/json:
             schema:
                $ref: "#/components/schemas/NonOpiProcessAmountRequest"
-            examples:
-              Sample Sale:
-                 $ref: "#/components/schemas/NonOpiProcessAmountRequest_SALE"
-              Sample LPM:
-                 $ref: "#/components/schemas/NonOpiProcessAmountRequest_LPM"
-        
+        required: true
       responses:
         "200":
           description: OK
@@ -121,11 +116,14 @@ components:
          example: "62850698" 
         merchantRefNumber:
          type: string
-
+         maxLength: 14
+         minLength: 14
          description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
          example: "REVAMRNSALE140208"
         customerRefNumber:
          type: string
+         maxLength: 20
+         minLength: 20
          description: Consumer Number
          example: "REVASALE140208"
         authAmount:
@@ -163,25 +161,29 @@ components:
         reqDate:
          type: string
          description: Transaction initiated Date(DDMMYYYY) 
-         example: "28022022"
+         example: 28022022
         reqTime:
          type: string
          description: Transaction initiated Time(HHMMSS)
-         example: "013034"
+         example: 013034
         tranDate:
          type: string
          description: Original transaction  Date(DDMMYYYY) 
-         example: "28022022"
+         example: 28022022
         tranTime:
          type: string
          description: Original transaction  Time(HHMMSS)
-         example: "013034"
+         example: 013034
         invoiceNumber:
          type: string
+         maxLength: 20
+         minLength: 20
          description: Must pass the same value as original transaction
          example: ""
         authCode:
          type: string
+         maxLength: 6
+         minLength: 6
          description: Must pass the same value received in original transaction response
          example: ""
         cardLastNumber:
@@ -189,7 +191,7 @@ components:
          maxLength: 4
          minLength: 4
          description: Last 4 Digits of Card Number
-         example: "1234"
+         example: ""
         cardBin:
          type: string
          description: First six digits of the Card, used in the original (sale) transaction
@@ -302,68 +304,6 @@ components:
           type: string
           description: password
           example: December01
-    NonOpiProcessAmountRequest_LPM:
-        value:
-          functionCode: "00" 
-          ain: "47000"
-          merchantId: "470000095488745" 
-          terminalId: "33878692" 
-          customerRefNumber: "33333333333"
-          merchantRefNumber: "Guru415" 
-          billerId: "22" 
-          convFee: "43" 
-          cgst: "12" 
-          igst: "23" 
-          sgst: "55" 
-          totalAmount: "10" 
-          tranCurrency: "356" 
-          reqDate: "22022022" 
-          reqTime: "161900" 
-          authAmount: "111" 
-          tranDate: ""  
-          tranTime:  "" 
-          invoiceNumber:  "" 
-          cardLastNumber: ""  
-          callbackURL:  "" 
-          mrchCountryCode: "366" 
-          tranType:  "" 
-          rrn:  "" 
-          emiRefNumber:  "" 
-          emiTenure: ""  
-          udf1: "" 
-          udf2: ""  
-    NonOpiProcessAmountRequest_SALE:
-        value:
-          functionCode: "00" 
-          ain: "47000"
-          merchantId: "470000095488827" 
-          terminalId: "33878692" 
-          customerRefNumber: "33333333333"
-          merchantRefNumber: "Guru415" 
-          billerId: "22" 
-          convFee: "43" 
-          cgst: "12" 
-          igst: "23" 
-          sgst: "55" 
-          totalAmount: "10" 
-          tranCurrency: "356" 
-          reqDate: "22022022" 
-          reqTime: "161900" 
-          authAmount: "111" 
-          tranDate: ""  
-          tranTime:  "" 
-          invoiceNumber:  "" 
-          cardLastNumber: ""  
-          callbackURL:  "" 
-          mrchCountryCode: "366" 
-          tranType:  "" 
-          rrn:  "" 
-          emiRefNumber:  "" 
-          emiTenure: ""  
-          udf1: "" 
-          udf2: ""
-         
-
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
