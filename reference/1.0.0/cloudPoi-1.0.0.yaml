@@ -50,6 +50,11 @@ paths:
           application/json:
             schema:
                $ref: "#/components/schemas/NonOpiProcessAmountRequest"
+            examples:
+              Sample PAYMENTAPI - SALE:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_SALE'
+              Sample PAYMENTAPI - LCM:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_LCM'
         required: true
       responses:
         "200":
@@ -243,42 +248,6 @@ components:
           type: string
           description: param
           example: "54"
-
-    Request:
-      required:
-      - acceptanceType
-      - boardingType
-      - iciciMerchant
-      - institutionCode
-      - merchantGrade
-      - merchantType
-      - typeOfBusiness
-      type: object
-      properties:
-        typeOfBusiness:
-          type: string
-        merchantGrade:
-          type: string
-        merchantType:
-          type: string
-        acceptanceType:
-          type: string
-        institutionCode:
-          type: string
-        iciciMerchant:
-          type: string
-        boardingType:
-          type: string
-        fillType:
-          type: string
-        newFundingAc:
-          type: string
-        additionalInfo:
-          type: object
-          additionalProperties:
-            type: string
-        userGroup:
-          type: string
     Status:
       type: object
       properties:
@@ -304,6 +273,34 @@ components:
           type: string
           description: password
           example: December01
+  
+  examples:
+    NonOpiProcessAmountRequest_SALE:
+      value:
+        merchantId: "123456789123457"
+        ain: "1233456"
+        terminalId: "12345678"
+        merchantRefNumber: "12345678912345"
+        authAmount: ""
+        totalAmount: ""
+        tranCurrency: 7
+        reqDate: ""
+        reqTime: ""
+        mrchCountryCode: "123"
+
+    NonOpiProcessAmountRequest_LCM:
+      value:
+        merchantId: "123456789123456"
+        ain: "1233456"
+        terminalId: "12345678"
+        merchantRefNumber: "12345678912345"
+        authAmount: ""
+        totalAmount: ""
+        tranCurrency: 7
+        reqDate: ""
+        reqTime: ""
+        mrchCountryCode: "123"
+
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
