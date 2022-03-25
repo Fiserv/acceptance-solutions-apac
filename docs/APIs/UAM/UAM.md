@@ -76,7 +76,7 @@ The table below provides the list of error codes and description for this applic
 
 | Error Code |  Description / Values |
 | --------  | ------------------ |
-| `401` | Authenticatin failed |
+| `401` | Authentication failed |
 | `402` | Bad Credential |
 |`200`| Token not found |   
 |`403`| Forbidden |
