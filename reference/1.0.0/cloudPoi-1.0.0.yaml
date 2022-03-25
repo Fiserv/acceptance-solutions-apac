@@ -51,10 +51,14 @@ paths:
             schema:
                $ref: "#/components/schemas/NonOpiProcessAmountRequest"
             examples:
-              Sample PAYMENTAPI - SALE:
+              Sample - SALE:
                 $ref: '#/components/examples/NonOpiProcessAmountRequest_SALE'
-              Sample PAYMENTAPI - LCM:
-                $ref: '#/components/examples/NonOpiProcessAmountRequest_LCM'
+              Sample - SALE WITH LPM:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_LPM'
+              Sample - PreAuth Sale:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_PREAUTHSALE'
+              Sample - PreAuth Completion:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_PREAUTCOMPLETION'
         required: true
       responses:
         "200":
@@ -309,18 +313,104 @@ components:
           [{ param_lit: param1 key, param: ""}]
 
 
-    NonOpiProcessAmountRequest_LCM:
+    NonOpiProcessAmountRequest_LPM:
       value:
-        merchantId: "123456789123456"
-        ain: "1233456"
-        terminalId: "12345678"
-        merchantRefNumber: "12345678912345"
-        authAmount: ""
-        totalAmount: ""
-        tranCurrency: 7
-        reqDate: ""
-        reqTime: ""
-        mrchCountryCode: "123"
+        ain: "4700000"
+        functionCode: "00"
+        merchantId: "470000095488828"
+        terminalId: "33878692"
+        customerRefNumber: "12345678998765432912"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "22"
+        convFee: "43"
+        cgst: "12"
+        igst: "23"
+        sgst: "55"
+        totalAmount: "10"
+        tranCurrency: 356
+        reqDate: "22022022"
+        reqTime: "161900"
+        authAmount: "111"
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}]
+  
+    NonOpiProcessAmountRequest_PREAUTHSALE:
+      value:
+        ain: "4700000"
+        functionCode: "02"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "555"
+        convFee: "6"
+        cgst: "7"
+        igst: "8"
+        sgst: "7"
+        totalAmount: "25"
+        tranCurrency: 840
+        reqDate: "28022022"
+        reqTime: "161900"
+        authAmount: "12"
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+
+    NonOpiProcessAmountRequest_PREAUTCOMPLETION:
+      value:
+        ain: "4700000"
+        functionCode: "03"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "999"
+        convFee: "666"
+        cgst: "55557"
+        igst: "66666"
+        sgst: "7777"
+        totalAmount: "111"
+        tranCurrency: 840
+        reqDate: "28022022"
+        reqTime: "161900"
+        authAmount: "13"
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: "Sale"
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  "23133"
+        udf2:  "21313"
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]    
 
   securitySchemes:
     ApiKeyAuth:
