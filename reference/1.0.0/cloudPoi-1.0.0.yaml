@@ -277,16 +277,37 @@ components:
   examples:
     NonOpiProcessAmountRequest_SALE:
       value:
-        merchantId: "123456789123457"
-        ain: "1233456"
-        terminalId: "12345678"
-        merchantRefNumber: "12345678912345"
-        authAmount: ""
-        totalAmount: ""
-        tranCurrency: 7
-        reqDate: ""
-        reqTime: ""
-        mrchCountryCode: "123"
+        ain: "4700000"
+        functionCode: "00"
+        merchantId: "470000095488827"
+        terminalId: "33878692"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "22"
+        convFee: "43"
+        cgst: "12"
+        igst: "23"
+        sgst: "55"
+        totalAmount: "10"
+        tranCurrency: 356
+        reqDate: "22022022"
+        reqTime: "161900"
+        authAmount: "111"
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}]
+
 
     NonOpiProcessAmountRequest_LCM:
       value:
