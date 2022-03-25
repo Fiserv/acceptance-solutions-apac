@@ -59,6 +59,16 @@ paths:
                 $ref: '#/components/examples/NonOpiProcessAmountRequest_PREAUTHSALE'
               Sample - PreAuth Completion:
                 $ref: '#/components/examples/NonOpiProcessAmountRequest_PREAUTCOMPLETION'
+              Sample - Refund:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_Refund'
+              Sample - Void:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_Void'
+              Sample - Emi Sale:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_EmiSale'
+              Sample - Transacton Status Check:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_TransactionStatusCheck'
+              Sample - Settlement Transacton:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_SettlementTransaction'     
         required: true
       responses:
         "200":
@@ -411,7 +421,180 @@ components:
         udf2:  "21313"
         paramList:
           [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]    
-
+    NonOpiProcessAmountRequest_Refund:
+      value:
+        ain: "4700000"
+        functionCode: "04"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: ""
+        convFee: ""
+        cgst: ""
+        igst: ""
+        sgst: ""
+        totalAmount: "10"
+        tranCurrency: 356
+        reqDate: "01032022"
+        reqTime: "161900"
+        authAmount: "15"
+        tranDate: "17022021"
+        tranTime: "160218"
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: "refund"
+        rrn:  "000000000010"
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  "refund123"
+        udf2:  "21321313"
+        mrchDiscountAmt: ""
+        cardBin: "438628"
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}] 
+    NonOpiProcessAmountRequest_Void:
+      value:
+        ain: "4700000"
+        functionCode: "05"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "222"
+        convFee: "3"
+        cgst: "3"
+        igst: "3"
+        sgst: "4"
+        totalAmount: "25"
+        tranCurrency: 840
+        reqDate: "27022022"
+        reqTime: "161900"
+        authAmount: "123"
+        tipAmount: ""
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  "2132313"
+        mrchDiscountAmt: ""
+        cardBin: ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+    NonOpiProcessAmountRequest_EmiSale:
+      value:
+        ain: "4700000"
+        functionCode: "08"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "809"
+        convFee: "36"
+        cgst: "63"
+        igst: "43"
+        sgst: "34"
+        totalAmount: "250"
+        tranCurrency: 849
+        reqDate: "27022022"
+        reqTime: "161900"
+        authAmount: "12345678"
+        tipAmount: ""
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: ""
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  "3"
+        udf1:  ""
+        udf2:  ""
+        mrchDiscountAmt: ""
+        cardBin: ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+    NonOpiProcessAmountRequest_TransactionStatusCheck:
+      value:
+        ain: "4700000"
+        functionCode: "11"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "124"
+        convFee: ""
+        cgst: ""
+        igst: ""
+        sgst: ""
+        totalAmount: "200"
+        tranCurrency: 849
+        reqDate: "16022022"
+        reqTime: "161900"
+        authAmount: "12345678900"
+        tipAmount: ""
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: ""
+        callbackURL: ""
+        mrchCountryCode: "356"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        mrchDiscountAmt: ""
+        cardBin: ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+    NonOpiProcessAmountRequest_SettlementTransaction:
+      value:
+        ain: "4700000"
+        functionCode: "12"
+        merchantId: "470000032001091"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "845"
+        convFee: "20"
+        cgst: "16"
+        igst: "14"
+        sgst: "12"
+        totalAmount: "200"
+        tranCurrency: 256
+        reqDate: "26022022"
+        reqTime: "161900"
+        authAmount: ""
+        tipAmount: ""
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: ""
+        cardLastNumber: ""
+        callbackURL: ""
+        mrchCountryCode: ""
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        mrchDiscountAmt: ""
+        cardBin: ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
