@@ -77,6 +77,57 @@ paths:
             application/json:
               schema:
                  $ref: "#/components/schemas/Response"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Response"
+              examples:
+                "401":
+                  $ref: '#/components/examples/401-Premier'
+        "300":
+          description: Request Failure
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Response"
+              examples:
+                "300":
+                  $ref: '#/components/examples/300-Premier'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Response"
+              examples:
+                "500":
+                  $ref: '#/components/examples/500-Premier'
+        "502":
+          description: Request Timed Out
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Response"
+              examples:
+                "502":
+                  $ref: '#/components/examples/502-Premier'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Response"
+              examples:
+                "404":
+                  $ref: '#/components/examples/404-Premier'
+        default:
+          description: See HTTP Status Code Standards
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
  
 components:
   schemas:
@@ -87,6 +138,8 @@ components:
           $ref: "#/components/schemas/Status"
         data:
           type: object
+          description: response info
+          example:    { "functionCode": "00","source": null,"billingAmount": null,"invoiceNumber": "202251211","customerMobile": null,"billingCurrency": "INR","transactionId": "202202250834781",    "customerName": null, "respCode": "200","response": "SUCCESS","cardType": null,"rrn": null, "authCode": null, "merchantId": "470000095488827", "terminalId": "33878692",    "respMsg": "Transaction Success","amexSeNumber": "","emiTenure": "","emiInterestRate": "", "emiProcessingFee": "0",  "emiDiscAmt": "0.08",   "dccIndicator": "0",    "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "", "totalAmount": "10.00",   "merchantRefNumber": "Guru415",    "customerRefNumber": "33333333333",    "emiFlag": "",    "cardNumber": null,  "expDate": "",  "posEntryMode": "",  "walletType": "W0", "primaryId": "Guru415",  "custId": "220225121129",   "emiPerMonth": "0",    "tranDate": "22022022",   "tranTime": "",    "cardBin": null,    "tipAmount": null,    "settlementDetails": "",    "walletId": "W0"}
     NonOpiProcessAmountRequest:
       required:
         - merchantId
@@ -268,8 +321,12 @@ components:
         statusCode:
           type: integer
           format: int32
+          example: 200
+          description:  status code
         message:
           type: string
+          description: success message
+          example: success
     AuthRequest:
       required:
         - ain
@@ -595,6 +652,32 @@ components:
         cardBin: ""
         paramList:
           [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+    "401-Premier":
+      value:
+        status:
+          statusCode: 401
+          messages: Token not found
+    "300-Premier":
+      value:
+        status:
+          statusCode: 300
+          messages: Request Failure
+    "500-Premier":
+      value:
+        status:
+          statusCode: 500
+          messages: Internal Server Error
+    "404-Premier":
+      value:
+        status:
+          statusCode: 404
+          messages: Not Found
+    "502-Premier":
+      value:
+        status:
+          statusCode: 502
+          messages: Request Timed Out
+
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
