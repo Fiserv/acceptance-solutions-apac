@@ -28,31 +28,31 @@ Our APIs are broadly grouped into following sub-catagories. Please click to spec
 
 #  Boarding
 
-- [Login](./?path=/docs/APIs/boarding/Login.md)
+- [Login](./?path=/docs/APIs/externalboarding/Login.md)
 
-- [Create URN](./?path=/docs/APIs/boarding/CreateURN.md)
+- [Create URN](./?path=/docs/APIs/externalboarding/CreateURN.md)
 
-- [Get Package List](./?path=/docs/APIs/boarding/GetPackageList.md)
+- [Get Package List](./?path=/docs/APIs/externalboarding/GetPackageList.md)
 
-- [Get Package ID](./?path=/docs/APIs/boarding/GetPackageId.md)
+- [Get Package ID](./?path=/docs/APIs/externalboarding/GetPackageId.md)
 
-- [Get Document Matrix](./?path=/docs/APIs/boarding/GetDocumentMatrix.md)
+- [Get Document Matrix](./?path=/docs/APIs/externalboarding/GetDocumentMatrix.md)
 
-- [Upload Document](./?path=/docs/APIs/boarding/UploadDocument.md)
+- [Upload Document](./?path=/docs/APIs/externalboarding/UploadDocument.md)
 
-- [MID - Inquiry](./?path=/docs/APIs/boarding/MidInquiry.md)
+- [MID - Inquiry](./?path=/docs/APIs/externalboarding/MidInquiry.md)
 
-- [SUBMIT - New Merchant](./?path=/docs/APIs/boarding/NewMerchant.md)
+- [SUBMIT - New Merchant](./?path=/docs/APIs/externalboarding/NewMerchant.md)
 
-- [SUBMIT - Additional Outlet](./?path=/docs/APIs/boarding/AdditionalOutlet.md)
+- [SUBMIT - Additional Outlet](./?path=/docs/APIs/externalboarding/AdditionalOutlet.md)
 
-- [SUBMIT - Additional Device](./?path=/docs/APIs/boarding/AdditionalDevice.md)
+- [SUBMIT - Additional Device](./?path=/docs/APIs/externalboarding/AdditionalDevice.md)
 
-- [SUBMIT - Single MID PayFac](./?path=/docs/APIs/boarding/SingleMIDPayFac.md)
+- [SUBMIT - Single MID PayFac](./?path=/docs/APIs/externalboarding/SingleMIDPayFac.md)
 
-- [SUBMIT - Multi MID PayFac](./?path=/docs/APIs/boarding/MultiMIDPayFac.md)
+- [SUBMIT - Multi MID PayFac](./?path=/docs/APIs/externalboarding/MultiMIDPayFac.md)
 
-- [Application Status Inquiry](./?path=/docs/APIs/boarding/ApplicationStatusInquiry.md)
+- [Application Status Inquiry](./?path=/docs/APIs/externalboarding/ApplicationStatusInquiry.md)
 
 ---
 
