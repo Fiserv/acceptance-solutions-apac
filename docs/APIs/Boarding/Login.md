@@ -16,7 +16,7 @@ This API authenticates the external client with the unique credentials shared ea
 
 ## Endpoint
 
-GET  `/Externalboarding/partner/login`
+`/Externalboarding/partner/login`
 
 ## Payload Example
 
@@ -36,11 +36,11 @@ The below table contains the mandatory fields required for a successful request.
 The below table identifies the required parameters in the request payload.
 
 | Variable | Passed as | Type | Length | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
-| `username` | Basic Authentication | *alphanumeric* | 15 | User Id / Fiserv Lan ID. |
-| `Password ` | Basic Authentication | *alphanumeric* | 15 | Password. |
+| -------- | ------- | -- | ------------ | ------------------ |
+| `username` | Basic Authentication | *String* | 15 | User Id / Fiserv Lan ID. |
+| `Password ` | Basic Authentication | *string* | 15 | Password. |
 | `source ` | Query Parameter | *string* | | Source Type like API / TAB |
-| `ain ` | Query Parameter | *number* |  | Password |
+| `Ain ` | Query Parameter | *string* |  | Password |
 
 
 ### Successful Response Payload
