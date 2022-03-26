@@ -68,11 +68,6 @@
               link: docs/APIs/PaymentAPI/TransactionStatusCheck.md
             - title: Settlement Transaction
               link: docs/APIs/PaymentAPI/SettlementTransaction.md
-        - title: Local POI 
-          sections:
-            title: FDMS
-            link: docs/APIs/LocalPOI.md
-
         - title: Boarding
           sections:
             - title: Login
