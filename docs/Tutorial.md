@@ -28,31 +28,31 @@ Our APIs are broadly grouped into following sub-catagories. Please click to spec
 
 #  Boarding
 
-- [Login](./?path=/docs/APIs/Boarding/Login.md)
+- [Login](./?path=/docs/APIs/boarding/Login.md)
 
-- [Create URN](./?path=/docs/APIs/Boarding/CreateURN.md)
+- [Create URN](./?path=/docs/APIs/boarding/CreateURN.md)
 
-- [Get Package List](./?path=/docs/APIs/Boarding/GetPackageList.md)
+- [Get Package List](./?path=/docs/APIs/boarding/GetPackageList.md)
 
-- [Get Package ID](./?path=/docs/APIs/Boarding/GetPackageId.md)
+- [Get Package ID](./?path=/docs/APIs/boarding/GetPackageId.md)
 
-- [Get Document Matrix](./?path=/docs/APIs/Boarding/GetDocumentMatrix.md)
+- [Get Document Matrix](./?path=/docs/APIs/boarding/GetDocumentMatrix.md)
 
-- [Upload Document](./?path=/docs/APIs/Boarding/UploadDocument.md)
+- [Upload Document](./?path=/docs/APIs/boarding/UploadDocument.md)
 
-- [MID - Inquiry](./?path=/docs/APIs/Boarding/MidInquiry.md)
+- [MID - Inquiry](./?path=/docs/APIs/boarding/MidInquiry.md)
 
-- [SUBMIT - New Merchant](./?path=/docs/APIs/Boarding/NewMerchant.md)
+- [SUBMIT - New Merchant](./?path=/docs/APIs/boarding/NewMerchant.md)
 
-- [SUBMIT - Additional Outlet](./?path=/docs/APIs/Boarding/AdditionalOutlet.md)
+- [SUBMIT - Additional Outlet](./?path=/docs/APIs/boarding/AdditionalOutlet.md)
 
-- [SUBMIT - Additional Device](./?path=/docs/APIs/Boarding/AdditionalDevice.md)
+- [SUBMIT - Additional Device](./?path=/docs/APIs/boarding/AdditionalDevice.md)
 
-- [SUBMIT - Single MID PayFac](./?path=/docs/APIs/Boarding/SingleMIDPayFac.md)
+- [SUBMIT - Single MID PayFac](./?path=/docs/APIs/boarding/SingleMIDPayFac.md)
 
-- [SUBMIT - Multi MID PayFac](./?path=/docs/APIs/Boarding/MultiMIDPayFac.md)
+- [SUBMIT - Multi MID PayFac](./?path=/docs/APIs/boarding/MultiMIDPayFac.md)
 
-- [Application Status Inquiry](./?path=/docs/APIs/Boarding/ApplicationStatusInquiry.md)
+- [Application Status Inquiry](./?path=/docs/APIs/boarding/ApplicationStatusInquiry.md)
 
 ---
 

@@ -1,0 +1,311 @@
+openapi: 3.0.2
+info:
+  title: Cloud POI
+  description: Cloud POI - Specifications
+  version: v1.0
+servers:
+  - url: https://www.uat.fdmerchantservices.com
+    description: UAT
+tags:
+  - name: CloudPOI
+    description: CloudPOI APIs
+
+security:
+- ApiKeyAuth: []    
+paths:
+  /boardinggateway/boarding/auth/signin:
+    post:
+      tags:
+        - CloudPOI
+      summary: LoginApi
+      description: This API authenticates the external client with the unique credentials shared earlier as part of initial setup. This API respond back with a session token. This token is required in header of each subsequent API triggered by partner.
+      operationId: login
+      x-group-name: CloudPOI
+      x-proxy-name: Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AuthRequest"
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            "*/*":
+              schema:
+                $ref: "#/components/schemas/Response"
+      security: []
+  /boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount:
+    post:
+      tags:
+      - CloudPOI
+      summary: PaymentAPI
+      description: This API is used to send refund transaction request. Merchants needs to add session token received during login api call in the header of this API.
+      operationId: nonOpiProcessAmount
+      x-group-name: CloudPOI
+      x-proxy-name: Non Opi Process Amount
+      requestBody:
+        content:
+          application/json:
+            schema:
+               $ref: "#/components/schemas/NonOpiProcessAmountRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Response"
+ 
+components:
+  schemas:
+    Response:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/Status"
+        data:
+          type: object
+    NonOpiProcessAmountRequest:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      type: object
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "REVAMRNSALE140208"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "REVASALE140208"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: 28022022
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: 013034
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: 28022022
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: 013034
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: ""
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: ""
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: ""
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: ""
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    Params:
+      type: object
+      properties:
+        param_lit:
+          type: string
+          description: kparam_lit
+          example: "param 2 key"
+        param:
+          type: string
+          description: param
+          example: "54"
+
+    Request:
+      required:
+      - acceptanceType
+      - boardingType
+      - iciciMerchant
+      - institutionCode
+      - merchantGrade
+      - merchantType
+      - typeOfBusiness
+      type: object
+      properties:
+        typeOfBusiness:
+          type: string
+        merchantGrade:
+          type: string
+        merchantType:
+          type: string
+        acceptanceType:
+          type: string
+        institutionCode:
+          type: string
+        iciciMerchant:
+          type: string
+        boardingType:
+          type: string
+        fillType:
+          type: string
+        newFundingAc:
+          type: string
+        additionalInfo:
+          type: object
+          additionalProperties:
+            type: string
+        userGroup:
+          type: string
+    Status:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+        message:
+          type: string
+    AuthRequest:
+      required:
+        - ain
+        - appVersionName
+        - pin
+        - source
+        - terminalId
+      type: object
+      properties:
+        username:
+          type: string
+          description: user name
+          example: "bocmuser1"
+        password:
+          type: string
+          description: password
+          example: December01
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
