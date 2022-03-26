@@ -76,30 +76,30 @@
         - title: Boarding
           sections:
             - title: Login
-              link: docs/APIs/boarding/Login.md
+              link: docs/APIs/externalboarding/Login.md
             - title: Create URN
-              link: docs/APIs/boarding/CreateURN.md
+              link: docs/APIs/externalboarding/CreateURN.md
             - title: Get Package List
-              link: docs/APIs/boarding/GetPackageList.md
+              link: docs/APIs/externalboarding/GetPackageList.md
             - title: Get Package ID
-              link: docs/APIs/boarding/GetPackageId.md
+              link: docs/APIs/externalboarding/GetPackageId.md
             - title: Get Document Matrix
-              link: docs/APIs/boarding/GetDocumentMatrix.md
+              link: docs/APIs/externalboarding/GetDocumentMatrix.md
             - title: Upload Document
-              link: docs/APIs/boarding/UploadDocument.md
+              link: docs/APIs/externalboarding/UploadDocument.md
             - title: MID - Inquiry
-              link: docs/APIs/boarding/MidInquiry.md
+              link: docs/APIs/externalboarding/MidInquiry.md
             - title: SUBMIT - New Merchant
-              link: docs/APIs/boarding/NewMerchant.md
+              link: docs/APIs/externalboarding/NewMerchant.md
             - title: SUBMIT - Additional Outlet
-              link: docs/APIs/boarding/AdditionalOutlet.md
+              link: docs/APIs/externalboarding/AdditionalOutlet.md
             - title: SUBMIT - Additional Device
-              link: docs/APIs/boarding/AdditionalDevice.md
+              link: docs/APIs/externalboarding/AdditionalDevice.md
             - title: SUBMIT - Single MID PayFac
-              link: docs/APIs/boarding/SingleMIDPayFac.md
+              link: docs/APIs/externalboarding/SingleMIDPayFac.md
             - title: SUBMIT - Multi MID PayFac
-              link: docs/APIs/boarding/MultiMIDPayFac.md
+              link: docs/APIs/externalboarding/MultiMIDPayFac.md
             - title: Application Status Inquiry
-              link: docs/APIs/boarding/ApplicationStatusInquiry.md
+              link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
             
    
