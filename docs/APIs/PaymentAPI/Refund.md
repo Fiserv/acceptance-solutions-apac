@@ -214,10 +214,7 @@ The below table identifies the required json properties in the request message.
 | `settlementDetails` | *string* | 2000 | O | set settlement Details |
 
 
-
-
-
-Below table provides the list of application's error code and its description.
+The table below provides the list of error codes and description for this application.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
