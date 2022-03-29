@@ -72,7 +72,7 @@ The below table identifies the required json properties in the request message.
 |  |  |  |  | 05 = Void|
 |  |  |  |  | 04 = Refund|
 | `terminalId` | *string* | 07 | M | Terminal ID |
-| `billerId` | *string* | 03 | M | Biller Id provided by Fiserv |
+| `billerId` | *string* | 03 | M | Biller ID provided by Fiserv |
 | `merchantRefNumber` | *string* | 14 | M (BOCM – 50) | Unique number for each transaction. Inquiry transaction should have same MRN of original txn |
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
@@ -162,7 +162,7 @@ The below table identifies the required json properties in the request message.
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
-| `transactionId` | *string* | 20 | M | Unique Id (Biller tran details table) |
+| `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table) |
 | `functionCode` | *string* | 02 | M | Same as request |
 | `invoiceNumber` | *string* | 20 | O | Terminal Invoice Number |
 | `cardLastNumber` | *string* | 4 | C (if required for Pre-auth) | Last 4 Digits of Card Number |

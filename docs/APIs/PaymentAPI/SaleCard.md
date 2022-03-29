@@ -170,7 +170,7 @@ The below table identifies the required json properties in the request message.
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
-| `transactionId` | *string* | 20 | M | Unique Id (Biller tran details table) |
+| `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table) |
 | `functionCode` | *string* | 02 | M | Same as request |
 | `invoiceNumber` | *string* | 20 | O | Terminal Invoice Number |
 | `cardLastNumber` | *string* | 4 | C (if required for Pre-auth) | Last 4 Digits of Card Number |
