@@ -22,7 +22,7 @@ This API authenticates the external client with the unique credentials shared ea
 ```
 ?ain=4700000&source=API
 
-*** Get Token from above api and need to pass the same token to other apies.***
+*** Get Token from above api and need to pass the same token to other APIs.***
 
 ``` 
 
