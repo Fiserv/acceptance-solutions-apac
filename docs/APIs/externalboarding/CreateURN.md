@@ -1,7 +1,6 @@
 # Create URN
 
-This API is used to create URN. Merchants needs to add session 
-token received during login api call in the header of this API,
+This API is used to create URN. Merchants needs to add session token received during login api call in the header of this API.
 
 
 ## Endpoint

@@ -1,7 +1,6 @@
 # New Merchant
 
-This API is used to new merchant. Merchants needs to add session 
-token received during login api call in the header of this API.
+This API is used to new merchant. Merchants needs to add session token received during login api call in the header of this API.
 
 
 ## Endpoint

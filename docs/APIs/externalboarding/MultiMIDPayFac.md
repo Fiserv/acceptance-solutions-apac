@@ -1,7 +1,6 @@
 # Multiple MID Payfac
 
-This API is used to multiple mid payfac. Merchants needs to add session 
-token received during login api call in the header of this API.
+This API is used to multiple mid payfac. Merchants needs to add session token received during login API call in the header of this API.
 
 
 ## Endpoint

@@ -1,7 +1,6 @@
 # Get Package List
 
-This API is used to get package list. Merchants needs to add session 
-token received during login api call in the header of this API.
+This API is used to get package list. Merchants needs to add session token received during login API call in the header of this API.
 
 
 ## Endpoint

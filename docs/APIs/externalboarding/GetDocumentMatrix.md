@@ -1,7 +1,7 @@
 # Document Matrix
 
 This API is used to document matrix. Merchants needs to add session 
-token received during login api call in the header of this API,
+token received during login API call in the header of this API
 
 
 ## Endpoint
