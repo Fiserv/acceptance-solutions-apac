@@ -1,7 +1,7 @@
 # Transaction Status Check
 
 This API is used to send transaction inquiry request. Merchants needs to add session 
-token received during login api call in the header of this API.
+token received during login API call in the header of this API.
 
 
 ## Endpoint

@@ -1,7 +1,7 @@
 # Process Amount
 
 This API is used to send refund transaction request. Merchants needs to add session 
-token received during login api call in the header of this API and encrypt the payload using the 
+token received during login API call in the header of this API and encrypt the payload using the 
 encryption key provided before sending it to gateway. 
 
 
