@@ -83,7 +83,7 @@ The below table identifies the required json properties in the request message.
 |  |  |  |  | 05 = Void|
 |  |  |  |  | 04 = Refund|
 | `terminalId` | *string* | 07 | M | Terminal ID |
-| `billerId` | *string* | 03 | M | Biller Id provided by Fiserv |
+| `billerId` | *string* | 03 | M | Biller ID provided by Fiserv |
 | `merchantRefNumber` | *string* | 14 | M (BOCM – 50) | Unique number for each transaction. Inquiry transaction should have same MRN of original txn |
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
@@ -91,7 +91,7 @@ The below table identifies the required json properties in the request message.
 || `cgst` | *string* | 10 | C (if CGST is included in the total amount)  | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
 | `igst` | *string* | 10 | C (if IGST is included in the total amount) | State GST Including decimal (E.g. 10.00 for $10 igst) |
 | `sgst` | *string* | 10 | C (if SGST is included in the total amount)  | State GST Including decimal (E.g. 100.00 for $10 sgst) |
-| `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal ((E.g. 57.00 for $57 sale). |
+| `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal (E.g. 57.00 for $57 sale). |
 | `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value) |
 | `reqDate` | *Date* | DDMMYYYY | M | Transaction initiated date |
 | `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time |
