@@ -62,11 +62,12 @@ POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
 
 ### Minimum Requirements
 
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount).
+##### The table below contains:- #####
+- Mandatory fields required for a successful request
+- Full request schemas are available in our  [API Explorer](../api/?type=post&path=/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount)
+- Identifies the required query parameters in the request message
+- Identifies the required json properties in the request message.
 
-The below table identifies the required query parameters in the request message.
-
-The below table identifies the required json properties in the request message.
 ### Request
 | Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
