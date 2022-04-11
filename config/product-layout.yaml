@@ -1,32 +1,3 @@
-################################################################################
-# Copyrights © 2021-2022 Fiserv, Inc. or its affiliates. 
-# Fiserv is a trademark of Fiserv, Inc., 
-# registered or used in the United States and foreign countries, 
-# and may or may not be registered in your country.  
-# All trademarks, service marks, 
-# and trade names referenced in this 
-# material are the property of their 
-# respective owners. This work, including its contents 
-# and programming, is confidential and its use 
-# is strictly limited. This work is furnished only 
-# for use by duly authorized licensees of Fiserv, Inc. 
-# or its affiliates, and their designated agents 
-# or employees responsible for installation or 
-# operation of the products. Any other use, 
-# duplication, or dissemination without the 
-# prior written consent of Fiserv, Inc. 
-# or its affiliates is strictly prohibited. 
-# Except as specified by the agreement under 
-# which the materials are furnished, Fiserv, Inc. 
-# and its affiliates do not accept any liabilities 
-# with respect to the information contained herein 
-# and are not responsible for any direct, indirect, 
-# special, consequential or exemplary damages 
-# resulting from the use of this information. 
-# No warranties, either express or implied, 
-# are granted or extended by this work or 
-# the delivery of this work
-################################################################################
 header:
   productName: AcceptanceSolutionsAPAC
   productionDescription: An APAC optimized section providing a one-stop-solution for SMB and enterprise clients, as well as ISO's to get easy and instant access to API's required to integrate with our terminal and eCommerce solutions.<br> Enable secure and reliable offerings with multi-payment acceptance to enrich your clients' omnichannel experience with Fiserv's APIs.<br> Explore intuitive APIs to drive your business with our scalable and comprehensive suite of solutions for your consumers.
@@ -35,10 +6,10 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: AcceptanceSolutionsAPAC™
 featuredFeatures:
-  - title: ClouPOI
+  - title: Cloud POI
     description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
-    tags: ["ClouPOI"]
-    bullets: ["ClouPOI"]  
+    tags: ["APAC", "eCommmerce", "API"]
+    bullets: ["Cloud POI", "Boarding", "Local POI"]  
     relatedDocs:
       - relatedDoc: 
         title: Login
@@ -59,4 +30,35 @@ featuredFeatures:
         description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
         type: "post"        
         path: "/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount"
+  - title: Boarding
+    description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
+    tags: ["APAC", "eCommmerce", "API"]
+    bullets: ["Boarding"]
+    relatedDocs:
+      - relatedDoc: 
+        title: Login
+        description: Get Token.
+        link: ./externalboarding/Login.md
+    relatedAPIs:
+      - relatedAPI: 
+        title: Login
+        description: This service is used to get the token.
+        type: "post"        
+        path: "/Externalboarding/partner/login"
+  - title: Local POI
+    description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
+    tags: ["APAC", "eCommmerce", "API"]
+    bullets: ["LocalPOI"]
+    relatedDocs:
+      - relatedDoc: 
+        title: Login
+        description: Get Token.
+        link: ./docs/UAM.md
+    relatedAPIs:
+      - relatedAPI: 
+        title: Local POI
+        description: This service is used to get the token.
+        type: "post"        
+        path: "/#"
+  
  

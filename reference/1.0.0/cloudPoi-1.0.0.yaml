@@ -7,8 +7,8 @@ servers:
   - url: https://www.uat.fdmerchantservices.com
     description: UAT
 tags:
-  - name: CloudPOI
-    description: CloudPOI APIs
+  - name: Cloud POI
+    description: Cloud POI APIs
 
 security:
 - ApiKeyAuth: []    
@@ -16,11 +16,11 @@ paths:
   /boardinggateway/boarding/auth/signin:
     post:
       tags:
-        - CloudPOI
+        - Cloud POI
       summary: LoginApi
       description: This API authenticates the external client with the unique credentials shared earlier as part of initial setup. This API respond back with a session token. This token is required in header of each subsequent API triggered by partner.
       operationId: login
-      x-group-name: CloudPOI
+      x-group-name: Cloud POI
       x-proxy-name: Login
       requestBody:
         content:
@@ -39,11 +39,11 @@ paths:
   /boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount:
     post:
       tags:
-      - CloudPOI
+      - Cloud POI
       summary: PaymentAPI
       description: This API is used to send refund transaction request. Merchants needs to add session token received during login api call in the header of this API.
       operationId: nonOpiProcessAmount
-      x-group-name: CloudPOI
+      x-group-name: Cloud POI
       x-proxy-name: Non Opi Process Amount
       requestBody:
         content:
