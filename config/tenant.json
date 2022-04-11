@@ -4,7 +4,7 @@
   "brand": "Fiserv",
   "brandLogoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Fiserv_Logo.jpg",
   "solution": ["merchants"],
-  "brandDescription": "REPLACE ME ",
+  "brandDescription": "GBS APAC ",
   "categories": [
     {
       "name": "businessTypes",
@@ -60,17 +60,17 @@
 		"bug": {
 			"label": "bug,AcceptanceSolutionsAPAC",
 			"template": "bug.md",
-			"assignees": "replace.me@fiserv.com,replace.me@fiserv.com"
+			"assignees": "rajendra.kumar1@fiserv.com"
 		},
 		"feedback": {
 			"label": "feedback,AcceptanceSolutionsAPAC",
 			"template": "feedback.md",
-			"assignees": "replace.me@fiserv.com"
+			"assignees": "rajendra.kumar1@fiserv.com"
 		},
 		"enhancement": {
 			"label": "enhancement,AcceptanceSolutionsAPAC",
 			"template": "feature.md",
-			"assignees": "replace.me@fiserv.com"
+			"assignees": "rajendra.kumar1@fiserv.com"
 		}
 	}]
 }
