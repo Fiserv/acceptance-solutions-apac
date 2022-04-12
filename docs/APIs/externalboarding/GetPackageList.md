@@ -34,7 +34,7 @@ GET `/Externalboarding/secure/packages`
 
 ### Minimum Requirements
 
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/appstatus/{appUrn}).
+The table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/appstatus/{appUrn}).
 
 ### Request
 | Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
@@ -355,7 +355,7 @@ The below table contains the mandatory fields required for a successful request.
 
 
 
-Below table provides the list of application's error code and its description.
+The table below provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |

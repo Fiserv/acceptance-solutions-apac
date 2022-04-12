@@ -184,7 +184,7 @@ POST  `/Externalboarding/secure/newmid`
 
 ### Minimum Requirements
 
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/newmid``).
+The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/newmid``).
 
 ### Request
 | FieldName | FieldType | Data Type | Length | Description/Values | ISO/Direct Merchant | SMPFAC | MMPFAC |
@@ -476,7 +476,7 @@ The below table contains the mandatory fields required for a successful request.
 }
 
 ```
-Below table provides the list of application's error code and its description.
+The table below provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
