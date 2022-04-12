@@ -37,7 +37,7 @@ Login API authenticates merchants’ unique credentials, with a response that
 
 ### Minimum Requirements
 
-The below table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/boardinggateway/boarding/auth/signin).
+The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/boardinggateway/boarding/auth/signin).
 
 The table below identifies the required parameters in the request payload.
 
