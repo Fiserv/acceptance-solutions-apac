@@ -30,8 +30,8 @@ featuredFeatures:
         description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
         type: "post"        
         path: "/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount"
-  - title: Boarding
-    description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
+  - title: Boarding APIs
+    description: Partners (ISO/ISV/Payment Facilitator) that are on-boarded as a separate channel onto Fiserv Platform will be able to board your merchants on Fiserv platform by invoking the boarding APIs for this set-up by using assigned credentials. Click here for more details.
     tags: ["APAC", "eCommmerce", "API"]
     bullets: ["Boarding"]
     relatedDocs:
