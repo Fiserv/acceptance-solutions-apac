@@ -7,7 +7,7 @@ header:
     altText: AcceptanceSolutionsAPAC™
 featuredFeatures:
   - title: Cloud POI
-    description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
+    description: Fiserv Cloud POI (Point of Integration) is an API (application programming interface) based integration which facilitates to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions.
     tags: ["APAC", "eCommmerce", "API"]
     bullets: ["Cloud POI", "Boarding", "Local POI"]  
     relatedDocs:
@@ -164,7 +164,7 @@ featuredFeatures:
         path: "/Externalboarding/secure/document/{appUrn}"
       
   - title: Local POI
-    description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
+    description: Fiserv Local POI (Point of Integration) is an API (application programming interface) locally based integration which facilitates to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions.
     tags: ["APAC", "eCommmerce", "API"]
     bullets: ["LocalPOI"]
     relatedDocs:
