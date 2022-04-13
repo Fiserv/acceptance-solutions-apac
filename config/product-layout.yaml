@@ -38,13 +38,131 @@ featuredFeatures:
       - relatedDoc: 
         title: Login
         description: Get Token.
-        link: ./externalboarding/Login.md
+        link: ./docs/APIs/externalboarding/Login.md
+      - relatedDoc: 
+        title: Create URN
+        description: Create URN.
+        link: ./docs/APIs/externalboarding/CreateURN.md
+      - relatedDoc: 
+        title: Get Package List
+        description: Get Package List.
+        link: ./docs/APIs/externalboarding/GetPackageList.md
+      - relatedDoc: 
+        title: Get Package ID
+        description: Get Package List.
+        link: ./docs/APIs/externalboarding/GetPackageId.md
+      - relatedDoc: 
+        title: Get Document Matrix
+        description: Get Document Matrix
+        link: ./docs/APIs/externalboarding/GetDocumentMatrix.md
+      - relatedDoc: 
+        title: Upload Document
+        description: Get Document Matrix
+        link: ./docs/APIs/externalboarding/UploadDocument.md
+      - relatedDoc: 
+        title: MID - Inquiry
+        description: MID - Inquiry
+        link: ./docs/APIs/externalboarding/MidInquiry.md
+      - relatedDoc: 
+        title: SUBMIT - New Merchant
+        description: New Merchant
+        link: ./docs/APIs/externalboarding/NewMerchant.md
+      - relatedDoc: 
+        title: SUBMIT - Additional Outlet
+        description: Additional Outlet
+        link: ./docs/APIs/externalboarding/AdditionalOutlet.md
+      - relatedDoc: 
+        title: SUBMIT - Additional Device
+        description: Additional Device
+        link: ./docs/APIs/externalboarding/AdditionalDevice.md
+      - relatedDoc: 
+        title: SUBMIT - Single MID PayFac
+        description: Single MID PayFac
+        link: ./docs/APIs/externalboarding/SingleMIDPayFac.md
+      - relatedDoc: 
+        title: SUBMIT - Multi MID PayFac
+        description: Single MID PayFac
+        link: ./docs/APIs/externalboarding/MultiMIDPayFac.md
+      - relatedDoc: 
+        title: SUBMIT - Multi MID PayFac
+        description: Single MID PayFac
+        link: ./docs/APIs/externalboarding/MultiMIDPayFac.md
+      - relatedDoc: 
+        title: SUBMIT - Application Status Inquiry
+        description: Application Status Inquiry
+        link: ./docs/APIs/externalboarding/ApplicationStatusInquiry.md
     relatedAPIs:
       - relatedAPI: 
         title: Login
         description: This service is used to get the token.
         type: "post"        
         path: "/Externalboarding/partner/login"
+      - relatedAPI: 
+        title: Additional Device
+        description: Additional Device.
+        type: "post"        
+        path: "/Externalboarding/secure/addtid"
+      - relatedAPI: 
+        title: Additional Outlet
+        description: AdditionalOutlet
+        type: "post"        
+        path: "/Externalboarding/secure/addmid"
+      - relatedAPI: 
+        title: Application Status Inquiry
+        description: Application Status Inquiry
+        type: "get"        
+        path: "/Externalboarding/secure/appstatus/{appUrn}"
+      - relatedAPI: 
+        title: Create URN
+        description: Create URN
+        type: "post"        
+        path: "/Externalboarding/secure/create"
+      - relatedAPI: 
+        title: Get Document Matrix
+        description: GetDocumentMatrix
+        type: "get"        
+        path: "/Externalboarding/secure/document"
+      - relatedAPI: 
+        title: Get Individual Package
+        description: Get Individual Package
+        type: "get"        
+        path: "/Externalboarding/secure/packages/{packageId}"
+      - relatedAPI: 
+        title: Get Package Id
+        description: Get Package Id
+        type: "get"        
+        path: "/Externalboarding/secure/packages/{packageId}"
+      - relatedAPI: 
+        title: Get Package List
+        description: Get Package List
+        type: "get"        
+        path: "/Externalboarding/secure/packages/"
+      - relatedAPI: 
+        title: Mid Inquiry
+        description: MidInquiry
+        type: "get"        
+        path: "/Externalboarding/secure/refmid/{appType}/{refmid}"
+      - relatedAPI: 
+        title: Multi MID PayFac
+        description: Multi MID PayFac
+        type: "post"        
+        path: "/Externalboarding/secure/newmid"
+      - relatedAPI: 
+        title: New Merchant
+        description: New Merchant
+        type: "post"        
+        path: "/Externalboarding/secure/newmid"
+      - relatedAPI: 
+        title: Single MID PayFac
+        description: Single MID PayFac
+        type: "post"        
+        path: "/Externalboarding/secure/newmid"
+      - relatedAPI: 
+        title: Upload Document
+        description: Upload Document
+        type: "post"        
+        path: "/Externalboarding/secure/document/{appUrn}"
+      
   - title: Local POI
     description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
     tags: ["APAC", "eCommmerce", "API"]
