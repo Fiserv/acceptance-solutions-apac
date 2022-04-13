@@ -96,5 +96,10 @@
               link: docs/APIs/externalboarding/MultiMIDPayFac.md
             - title: Application Status Inquiry
               link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
+        - title: Local POI 
+          sections:
+            - title: FDMS
+              sections: 
+                  - title: PAX ECR Interface specifications
             
    
