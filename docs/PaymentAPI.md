@@ -4,4 +4,20 @@ Retail is all about selling goods and services to the end-consumer - it's everyw
 
 Please click on the below link to explore the specific API of interest
 
-- [Process Amount](./?path=docs/APIs/PaymentAPI/ProcessAmount.md)
+- [EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
+
+- [PreAuth Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
+
+- [PreAuth Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
+
+- [Refund](./?path=docs/APIs/PaymentAPI/Refund.md)
+
+- [Sale Card](./?path=docs/APIs/PaymentAPI/SaleCard.md)
+
+- [Sale Local Payment Method](./?path=docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md)
+
+- [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
+
+- [Transaction Status Check](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
+
+- [Void](./?path=docs/APIs/PaymentAPI/Void.md)

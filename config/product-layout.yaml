@@ -14,7 +14,7 @@ featuredFeatures:
       - relatedDoc: 
         title: Login
         description: Get Token.
-        link: ./docs/UAM.md
+        link: ./docs/APIs/UAM/UAM.md
       - relatedDoc: 
         title: Payment API
         description: Non OPi Processing Amount
