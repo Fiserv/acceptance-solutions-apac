@@ -49,7 +49,7 @@ featuredFeatures:
         link: ./docs/APIs/externalboarding/GetPackageList.md
       - relatedDoc: 
         title: Get Package ID
-        description: Get Package List.
+        description: Get Package ID
         link: ./docs/APIs/externalboarding/GetPackageId.md
       - relatedDoc: 
         title: Get Document Matrix
@@ -57,7 +57,7 @@ featuredFeatures:
         link: ./docs/APIs/externalboarding/GetDocumentMatrix.md
       - relatedDoc: 
         title: Upload Document
-        description: Get Document Matrix
+        description: Upload Document
         link: ./docs/APIs/externalboarding/UploadDocument.md
       - relatedDoc: 
         title: MID - Inquiry
@@ -81,11 +81,7 @@ featuredFeatures:
         link: ./docs/APIs/externalboarding/SingleMIDPayFac.md
       - relatedDoc: 
         title: SUBMIT - Multi MID PayFac
-        description: Single MID PayFac
-        link: ./docs/APIs/externalboarding/MultiMIDPayFac.md
-      - relatedDoc: 
-        title: SUBMIT - Multi MID PayFac
-        description: Single MID PayFac
+        description: Multi MID PayFac
         link: ./docs/APIs/externalboarding/MultiMIDPayFac.md
       - relatedDoc: 
         title: SUBMIT - Application Status Inquiry
