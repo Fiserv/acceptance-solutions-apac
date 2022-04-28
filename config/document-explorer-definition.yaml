@@ -98,12 +98,19 @@
               link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
         - title: Local POI
           sections:
-            - title: Inter- App (IMS)
-              link: docs/APIs/localpoi/InterAppIms.md
-            - title: Inter- App (FDMS)
-              link: docs/APIs/localpoi/InterAppFDMS.md
-            - title: USB / Static Wi-Fi (IMS)
-              link: docs/APIs/localpoi/WIFIIMS.md
-            - title: USB / Static Wi-Fi (FDMS)
-              link: docs/APIs/localpoi/WIFIFDMS.md   
+            - title: IMS
+              link:
+               sections:
+                - title: Inter-App
+                  link: docs/APIs/localpoi/InterAppIms.md
+                - title: USB / Static Wi-fi
+                  link: docs/APIs/localpoi/WIFIFDMS.md
+            - title: FDMS
+              link:
+               sections:
+                - title: Inter-APP
+                  link: docs/APIs/localpoi/WIFIIMS.md
+                - title: USB / Static Wi-Fi
+                  link: docs/APIs/localpoi/InterAppFDMS.md
+
    
