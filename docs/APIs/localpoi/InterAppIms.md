@@ -34,3 +34,26 @@ MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ``` 
 
+### PreAuth Sale Request
+```
+Base24Request request = new Base24Request();
+request.setFunctionCode(Base24Constant.TYPE_PREAUTH_SALE);
+request.setTotalTxnAmount("12300"); 
+JSONObject requestParams = new JSONObject();
+requestParams.put("base24Request", request.toString());
+MSApi.getInstance().doPayment(context, 123, requestParams);
+
+```
+
+### PreAuth Completition Request
+```
+Base24Request request = new Base24Request();
+request.setFunctionCode(Base24Constant.TYPE_PREAUTH_COMPLETIN);
+request.setTotalTxnAmount(“12000”); 
+request.setTerminalInvoiceNo("01"); 
+request.setAuthCode("123456"); 
+JSONObject requestParams = new JSONObject();
+requestParams.put("base24Request", request.toString());
+MSApi.getInstance().doPayment(context, 123, requestParams);
+
+```
