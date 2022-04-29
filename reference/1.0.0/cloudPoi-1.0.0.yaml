@@ -44,7 +44,7 @@ paths:
       description: This API is used to send refund transaction request. Merchants needs to add session token received during login api call in the header of this API.
       operationId: nonOpiProcessAmount
       x-group-name: Cloud POI
-      x-proxy-name: Non Opi Process Amount
+      x-proxy-name: Payment API
       requestBody:
         content:
           application/json:

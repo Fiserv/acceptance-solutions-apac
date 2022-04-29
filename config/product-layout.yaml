@@ -13,11 +13,11 @@ featuredFeatures:
     relatedDocs:
       - relatedDoc: 
         title: Login
-        description: Get Token.
-        link: ./docs/APIs/UAM/UAM.md
+        description: Get started with Cloud POI with Login API which is used to authenticate the external client with the unique credentials in the set-up.
+        link: ./docs/APIs/CloudPOI/Login.md
       - relatedDoc: 
         title: Payment API
-        description: Non OPi Processing Amount
+        description: For card not present transactions using Cloud POI.
         link: ./docs/PaymentAPI.md
     relatedAPIs:
       - relatedAPI: 
