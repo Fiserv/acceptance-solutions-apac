@@ -28,8 +28,8 @@ Login API authenticates merchants’ unique credentials, with a response that
 
 ```json
 {
-  "username": "bocmuser1",
-  "password": "December01"
+  "username": "Testuser135",
+  "password": "Test@1234"
 }
 *** Get Token from above api and need to pass the same token to other apies.***
 }

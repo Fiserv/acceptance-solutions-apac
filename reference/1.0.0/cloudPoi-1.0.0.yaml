@@ -339,11 +339,11 @@ components:
         username:
           type: string
           description: user name
-          example: "bocmuser1"
+          example: "Testuser135"
         password:
           type: string
           description: password
-          example: December01
+          example: Test@1234
   
   examples:
     NonOpiProcessAmountRequest_SALE:
