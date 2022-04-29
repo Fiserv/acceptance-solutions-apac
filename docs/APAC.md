@@ -10,7 +10,6 @@ Our services include; tokenization, 3-D Secure, creating and managing recurring 
 
 Browse our catalogue and integrate with our APIs to enrich your clients' digital experiences.
 
-
 # Cloud POI
 
 - [Login](./?path=/docs/APIs/CloudPOI/Login.md)
