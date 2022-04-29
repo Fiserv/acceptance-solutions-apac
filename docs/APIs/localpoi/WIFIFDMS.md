@@ -5,37 +5,37 @@ USB / Static Wi-fi is an integration between system to APOS device. E.g., Biller
 Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, PreAuth Sale, PreAuth Completion, Transaction Status Check, EMI Sale, Void, Settlement, Bharat QR code generation.
 
 ## How it works
-•	System Requirements to setup USB / Static Wi-fi
-    •	OS: Windows 8 and above
-    •	Cable: Micro USB Data Cable for RS232 Serial communication.
-    •	Wi-Fi: Same Wi-Fi connectivity for Socket communication for Both PAX and Integrating APPs
-    •	JDK Version: JDK 1.8.0 version or above (64 bit or 32 bit)
-    •	Other Libs: (Available in Windows as javax.mail.jar)
-    •	Use any serial lib for java that should support window platform
-    •	Get a list of available port name and select comm port no
-    •	Open VSP (Virtual Serial Port ) 
-    •	PAX Use the following detail for serial communication 
-        o	BaudRate – 9600 
-        o	Partity – NONE 
-        o	StopBits – 1 
-        o	DataBits – 8
-    •	Use The JAVA NIO Channels or Classic Input/Output Streams to read and write data 
-•	Bluetooth Setup 
-    •	POS terminal and PC Client should be connected. Then we send some information from PC to POS terminal by ECR-Bluetooth
-    •	User should choose a paired Bluetooth device as our ECR’s target device after
+-	System Requirements to setup USB / Static Wi-fi
+    -	OS: Windows 8 and above
+    -	Cable: Micro USB Data Cable for RS232 Serial communication.
+    -	Wi-Fi: Same Wi-Fi connectivity for Socket communication for Both PAX and Integrating APPs
+    -	JDK Version: JDK 1.8.0 version or above (64 bit or 32 bit)
+    -	Other Libs: (Available in Windows as javax.mail.jar)
+    -	Use any serial lib for java that should support window platform
+    -	Get a list of available port name and select comm port no
+    -	Open VSP (Virtual Serial Port ) 
+    -	PAX Use the following detail for serial communication 
+        -	BaudRate – 9600 
+        -	Partity – NONE 
+        -	StopBits – 1 
+        -	DataBits – 8
+    -	Use The JAVA NIO Channels or Classic Input/Output Streams to read and write data 
+-	Bluetooth Setup 
+    -	POS terminal and PC Client should be connected. Then we send some information from PC to POS terminal by ECR-Bluetooth
+    -	User should choose a paired Bluetooth device as our ECR’s target device after
         we select the Type-Bluetooth as our ECR communication type. If the device, we want to choose was not paired, we must pair it at first, then choose the device as our target device
-•	Terminal Setup 
-    •	Download and install the desired MCommerce app (Full Download)
-    •	Full Download A920 integration kit in your system
-    •	Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download & Login)
-    •	Go to ECR Preference settings menu enable ECR option and select the ECR type as USB
-    •	Connect ECR and the terminal by RS232
-•	Connect the desired cable (USB) to PC
-•	Trigger transactions from PC application to check the line status
+-	Terminal Setup 
+    -	Download and install the desired MCommerce app (Full Download)
+    -	Full Download A920 integration kit in your system
+    -	Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download & Login)
+    -	Go to ECR Preference settings menu enable ECR option and select the ECR type as USB
+    -	Connect ECR and the terminal by RS232
+-	Connect the desired cable (USB) to PC
+-	Trigger transactions from PC application to check the line status
     | Param1 |  Param2 | Descriptions | Comment |
     | --------  | ------ | ------ | ------ |
     | dataType | | Indicate the request data type. | `active` |
-•	Terminal will reply a ACK message
+-	Terminal will reply a ACK message
 
 ### Payload Examples
 
