@@ -49,7 +49,7 @@
         - title: Cloud POI 
           sections:
             - title: Login
-              link: docs/APIs/UAM/UAM.md
+              link: docs/APIs/CloudPOI/Login.md
             - title: Sale with Local Payment Method
               link: docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md
             - title: Sale Card

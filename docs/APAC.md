@@ -6,7 +6,7 @@ Our APIs are broadly grouped into following sub-catagories. Please click to spec
 
 # Cloud POI
 
-- [Login](./?path=/docs/APIs/UAM/UAM.md)
+- [Login](./?path=/docs/APIs/CloudPOI/Login.md)
 
 - [Sale Card](./?path=docs/APIs/PaymentAPI/SaleCard.md)
 

@@ -20,7 +20,7 @@ Login API authenticates merchants’ unique credentials, with a response that
 
 ## Endpoint
 
-`/boardinggateway/boarding/auth/signin`
+`https://www.uat.fdmerchantservices.com/boardinggateway/boarding/auth/signin`
 
 ## Payload Examples
 
