@@ -6,7 +6,7 @@ token received during login API call in the header of this API,
 
 ## Endpoint
 
-POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
 
 ## Payload Example
 

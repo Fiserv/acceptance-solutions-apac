@@ -7,7 +7,7 @@ encryption key provided before sending it to gateway.
 
 ## Endpoint
 
-POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
 
 ## Payload Example
 

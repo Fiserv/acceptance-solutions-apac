@@ -4,7 +4,7 @@ This API is used to send a sale request for card transactions. Merchants needs t
 
 ## Endpoint
 
-POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
 
 ## Payload Example
 
