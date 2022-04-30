@@ -1,3 +1,7 @@
+---
+tags: [APAC, Enterprise, Online, Integration, Getting-started, SMB, Card-present, Card-not-present, Digital, Features, POS, Cloud, Local-payment-methods]
+---
+
 # Getting Started with APAC Merchant Solutions 
 
 APAC Merchant Solutions a one-stop-solution for SMB and enterprise clients, as well as ISO’s to get easy and instant access to API’s required to integrate with our terminal and eCommerce solutions.
