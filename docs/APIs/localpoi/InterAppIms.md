@@ -27,7 +27,7 @@ request.setCustomerNum("customer_random_ref_no");
 request.setUserDefinedFields("panudf"); 
 request.setcGST("150"); 
 request.setsGST("150");  
-request. setSuppressPrintChargeSlips("y"); //can be “y” or “n” request. setMrn("merchant_random_ref_no"); 
+request. setSuppressPrintChargeSlips("y"); //can be "y" or "n" request. setMrn("merchant_random_ref_no"); 
 JSONObject requestParams = new JSONObject();
 requestParams.put("base24Request", request.toString());
 MSApi.getInstance().doPayment(context, 123, requestParams);
@@ -161,7 +161,7 @@ MSApi.getInstance().doUpiTransaction(context,123, requestParams);
 ### BBPS Sale Request
 ```
 JSONObject requestParams = new JSONObject();
-requestParams.put("transaction_type",“BBPS”); 
+requestParams.put("transaction_type","BBPS"); 
 MSApi.getInstance().doBBPSTransaction(context, 123, requestParams);
 
 ```
@@ -170,16 +170,39 @@ MSApi.getInstance().doBBPSTransaction(context, 123, requestParams);
 JSONObject requestParams = new JSONObject();
 requestParams.put("transaction_amount", “100”);
 requestParams.put("vehicle_number", “TN10AB0001”);
-requestParams.put("mrn", “23423423”);
-requestParams.put("sap_code", “2323”);
+requestParams.put("mrn", "23423423");
+requestParams.put("sap_code", "2323");
 MSApi.getInstance().doFastagTransaction(context, 123, requestParams);
 
 ```
 ### Request
-```
+
 The below table identifies the required properties in the request message
 
-```
+| Variable |     Length     | Mandatory/Optional/Conditional  | Description / Values |
+| -------- | -------------- | -----------------------| ------------------ |
+| `functionCode`	| 2bytes | 00- Digital and Carded both,01-Sale(Sale,DCC),02-Preauth Sale,03- Preauth Completion,04-Refund,05-Void,06-TIP,07-Cash@POS,08-EMI Sale,09-Loyality Earn,10-Loyality Burn,11-Settlement Transaction,12-Transaction status |
+| `source` | 10bytes | O | TILL,Mobile,AVTM,etc |
+| `totalTxnAmount(Auth+ConvFee + GTS )`| 10bytes | M | Total Amount including decimal |
+| `convenienceFee` | 10bytes | O | Convenience Fee including decimal |
+| `CGST` | 10bytes | O | GST Including decimal (GST) |
+| `SGST` | 10bytes | O | GST Including decimal (GST) |
+| `billAmount` | 10bytes | O (Mandotory for QR generation/ Wallet Transactions | Bill amount including decimal |
+| `merchantReferenceNumber(MRN)` | 20bytes | M | Unique merchant number generated on mobile |
+| `EMIReferenceNumber(ERN)` | 8bytes | O(Mandatory for EMI transaction ) | EMI reference number generated on mobile |
+| `consumeNumber` | 20bytes | O | consume number (CRN) |
+| `currencySelection` | 3bytes | O | NA |
+| `userDefinedFields` | 30bytes | O | PAN + UDF |
+| `terminalInvoiceNumber` | 8bytes | O(Mandatory for void Transaction) | Used for Preauth completion & cancelletion |
+| `cardLastFourDigit` | 4bytes | O | Used for preauth completion & cancelletion |
+| `authCode` | 8bytes | O | Used for preauth completion & cancelletion |
+| `emailId` | 50bytes | O | Email ID on which Email needs to be received |
+| `billerId` | 10bytes | O | Biller ID received |
+| `DCC flag` | 1byte | O | DCC conversion flag yes or no |
+| `UDF 1`| 10bytes | O | UDF1 |
+| `UDF 2` | 10bytes | O | UDF2 |
+| `printChargeSlip` | 1byte | O | Y o N ( Default - Y ) |
+
 ### Response in Payload
 ```
 NOTE: This is used for all transaction requests to receive the response. 
@@ -197,6 +220,58 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ```
 ### Response
+
+The below table identifies the required properties in the response message
+
+| Variable |  Length  | Description / Values |
+| -------- | ------------- | ------------------ |
+| `functionCode`	| 2bytes | 00- Digital and Carded both,01-Sale(Sale,DCC),02-Preauth Sale,03- Preauth Completion,04-Refund,05-Void,06-TIP,07-Cash@POS,08-EMI Sale,09-Loyality Earn,10-Loyality Burn,11-Settlement Transaction,12-Transaction status |
+| `source` | 10bytes | TILL,Mobile,AVTM,etc |
+| `tipAamount` | 10 bytes | Length 10 including decimal |
+| `totalTransactionAmount( Bill Amount + Convience Fee + GST )` | 10bytes | Length 10 including decimal |
+| `fuelDiscountCashback` | 10bytes | Length 10 including decimal |
+| `convenienceFee` | 10bytes | Length 10 including decimal |
+| `CGST` | 10bytes | Length 10 including decimal |
+| `SGST` | 10bytes | Length 10 including decimal |
+| `billAmount` | 10bytes | Length 10 including decimal |
+| `emiSpecificData` | 20bytes | Interesting rate,Processing fee,Tenure,etc |
+| `merchaneReferenceNumber(MRN)`| 20bytes | same as request |
+| `terminalInvoiceNumber` | 8bytes | Terminal Invoice Number |
+| `currencySelection` | 3bytes | currency code/currency which been selected |
+| `transactionId`| 10bytes | same as request |
+| `customerName` | 25bytes | Customer name extracted from Card |
+| `userDefinedFields` | 30bytes | same as request |
+| `maskedCardNumber` | 21bytes | First Six digit & last four digit, Inbeetween number should be masked |
+| `applicationVersionNumber` | 10bytes | This terminal version number |
+| `Date&Time` | 20bytes | Host Date & Time |
+| `ATID` | 8bytes | Aquirer TID |
+| `AMID` | 15bytes | Aquirer MID |
+| `aquirerName` | 20bytes | Aquirer Name |
+| `responseCode` | 12bytes | Host Response code, it has response message |
+| `batchNumber` | 6bytes | Terminal Batch Number |
+| `cardType` | 10bytes | This will card type |
+| `RRN` | 12bytes | RRN received from the host |
+| `SE` | 10bytes |  Value would be populated incase of Amex txns |
+| `emvSpecificData` | 256bytes | EMV data like TC,Application identifier , Application Name, TSL,etc |
+| `dcc Indicator` | 1byte | DCC flag yes or no DCC : Sale , Void value as '1' |
+| `emiFlag`| 1byte | EMI flag yes or no, YES : 1, NO :0 To be sent in OTC EMI Sale,EMI Void |
+| `posEntryMode` | 3bytes |Magstipe,Chip,Contactless,Manual entry,etc |
+| `pinVerified` | 3bytes | "Yes" when PIN was entered & "No" when pin was not prompt |
+| `authCode` | 8bytes | Received from issue/host |
+| `billerID` | 10bytes | same as request |
+| `specificIndicator` | 3bytes |To be used for BBPS |
+| `merchantUniqueNumber` | 20bytes | same as request |
+| `theSameAsTerminalInvoiceNumber`| 20bytes | same as request |
+| `suppressPrintChargeSlip` | 2bytes | "y" or "no" .. To suppress chargeslip prints for financial transactions |
+| `EMI` | 20bytes | EMI details - emi flag is 1/10 EMI refernce number generated on 8 bytes |
+| `consumerNumber`| 20bytes | CRN/Consumer number 20bytes (CRN : Mandatory) |
+| `cardLastFourDigit` | 4bytes | Used for pre-auth completion & cancellation |
+| `emailID` | 50bytes | Email ID on which Email needs to be received 50 bytes optional |
+| `cardTxnMobile` | 3bytes | NA |
+| `purchaseAmount` | 10bytes | Purchase Amount |
+| `cashBackAmount` | 10bytes | Transaction cash amount |
+| ` nacStatus` | 3bytes | Identify the network status	True -> private network False -> public network |
+| `cardExpDate` | 4bytes | Transaction Card expire date |
 
 
 
