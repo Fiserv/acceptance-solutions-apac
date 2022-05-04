@@ -31,11 +31,13 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
     -	Go to ECR Preference settings menu enable ECR option and select the ECR type as USB
     -	Connect ECR and the terminal by RS232
 -	Connect the desired cable (USB) to PC
--	Trigger transactions from PC application to check the line status
-    | Param1 |  Param2 | Descriptions | Comment |
-    | --------  | ------ | ------ | ------ |
-    | dataType | | Indicate the request data type. | `active` |
--	Terminal will reply a ACK message
+- Trigger transactions from PC application to check the line status
+
+        |  Param1    |  Param2 | Descriptions |  Comment |
+        | ---------- | ------- | ------- | ------------------ |
+        | `dataType` | 	 NA   | Indicate the request data type.| active | 
+
+- Terminal will reply a ACK message
 
 ### Payload Examples
 
