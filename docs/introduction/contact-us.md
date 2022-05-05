@@ -11,5 +11,4 @@ For APAC related integration, our dedicated support teams would be available to 
 | * Malaysia | [firstdatagateway@fiserv.com](mailto:firstdatagateway@fiserv.com)  | 
 | * Singapore | [firstdatagateway@fiserv.com](mailto:firstdatagateway@fiserv.com) |  
 
-[firstdatagateway@fiserv.com](mailto:firstdatagateway@fiserv.com)
 
