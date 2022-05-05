@@ -144,26 +144,26 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 }
 ```
 ### Request
-The below table identifies the required properties in the request message
+The table below identifies the required properties in the request message
 
 | Variable | Mandatory/Optional/Conditional |  Description / Values |
 | -------- | ---------------- | ------------------------- |
-| Function Code | M	| 01 - Sale ( Sale, DCC ), 02 - Preauth Sale, 03 - Preauth Completion,  05 - Void, 08 - EMI Sale, 12 -Settlement Transaction, 11- Transaction status check |
-| Total Txn Amount (  Auth + ConvFee+ GTS) | M	| This transaction involves amount "100.00" |
-| Tip Amt |	O | This transaction involves "10.00". (optional) |
-| Detail | O | To define the respond message in detail format.Y means detail message, N or skip this format means simple format "Y"(optional) |
-| ECR Ref |	O | ECR reference no. up to 16 digits. (optional)| 
-| Merchant Reference Number(MRN) | M | Unique merchant number for reconciliation. This merchant reference Number |
-| Terminal Invoice No |	O  (Mandatory for void & PreAuth Completion transaction) | Use the terminal Invoice No to indicate the invoice of terminal |
-| Customer Number	| O	| To identify this transaction is initiated by respective customer |
-| User Defined Fields |	O |	UDF fields |
-| Pwd |	O | Void password (Optional) |
-| RRN |	O | 12 digits RRN (optional) |
-| Auth Code |	O (Mandatory for PreAuth Completion transaction) | Approval code of authorization |
-| Print charge slip | O | Y or N ( Default - Y ) |
-| Transaction_type | O  (Mandatory for Transaction check status transaction) | Type of transaction |
-| Tenure |	O (Mandatory for EMI transaction) |	The instalment plan of this transaction |
-| checksum | O | Checksum for "data" field data.Use SHA256  calculate “data” field data. |
+| `functionCode` | M	| 01 - Sale ( Sale, DCC ), 02 - Preauth Sale, 03 - Preauth Completion,  05 - Void, 08 - EMI Sale, 12 -Settlement Transaction, 11- Transaction status check |
+| `totalTxnAmount (  Auth + ConvFee+ GTS)` | M	| This transaction involves amount "100.00" |
+| `tipAmt` |	O | This transaction involves "10.00". (optional) |
+| `detail` | O | To define the respond message in detail format.Y means detail message, N or skip this format means simple format "Y"(optional) |
+| `ECRRef` |	O | ECR reference no. up to 16 digits. (optional)| 
+| `merchantReferenceNumber(MRN)` | M | Unique merchant number for reconciliation. This merchant reference Number |
+| `terminalInvoiceNo` |	O  (Mandatory for void & PreAuth Completion transaction) | Use the terminal Invoice No to indicate the invoice of terminal |
+| `customerNumber`	| O	| To identify this transaction is initiated by respective customer |
+| `userDefinedFields` |	O |	UDF fields |
+| `pwd` |	O | Void password (Optional) |
+| `RRN` |	O | 12 digits RRN (optional) |
+| `authCode` |	O (Mandatory for PreAuth Completion transaction) | Approval code of authorization |
+| `printChargeSlip` | O | Y or N ( Default - Y ) |
+| `transaction_type` | O  (Mandatory for Transaction check status transaction) | Type of transaction |
+| `tenure` |	O (Mandatory for EMI transaction) |	The instalment plan of this transaction |
+| `checksum` | O | Checksum for "data" field data.Use SHA256  calculate “data” field data. |
 
 ### Response in Payload
 ### Sale Response
@@ -479,7 +479,7 @@ The below table identifies the required properties in the request message
 
 ```
 ### Response
-The below table identifies the required properties in the response message
+The table below identifies the required properties in the response message
 | Variable |  Length  | Description / Values |
 | -------- | -------------- | ------------------ |
 | `functionCode`	| 2bytes | 00- Digital and Carded both,01-Sale(Sale,DCC),02-Preauth Sale,03- Preauth Completion,04-Refund,05-Void,06-TIP,07-Cash@POS,08-EMI Sale,09-Loyality Earn,10-Loyality Burn,11-Settlement Transaction,12-Transaction status |

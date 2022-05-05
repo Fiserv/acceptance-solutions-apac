@@ -145,7 +145,7 @@ SHA256({"amt":"35900","detail":"Y","ecrRef":"1234567890123456"})
 
 
 ### Request
-The below table identifies the required properties in the request message
+The table below identifies the required properties in the request message
 | Variable | Mandatory/Optional/Conditional | Description/Values |
 | --------  | ------------------ |	--------  |
 |`Data Type`|	M	Sale , Preauth Sale|Preauth Completion,  Void, EMI Sale, Settlement Transaction, Refund|
@@ -277,7 +277,7 @@ checksum":"89672c091ceeb3da18e851d77f02d132a8f52f7efbd02e62bc8662b6faf5293c"
 ```
 
 ### Response
-The below table identifies the required properties in the response message
+The table below identifies the required properties in the response message
 *Response (Base24Constant.java)*	
 | Variable |	Description / Values |
 | --------  | ------------------ |
@@ -331,8 +331,3 @@ The table below provides the list of error codes and description for this applic
 |`6` |	Error in transaction amount |
 |`7` |	Unsupported transaction types |
 |`8` |	Error inquiring order |
-
-
-
-
-

@@ -177,7 +177,7 @@ MSApi.getInstance().doFastagTransaction(context, 123, requestParams);
 ```
 ### Request
 
-The below table identifies the required properties in the request message
+The table below identifies the required properties in the request message
 
 | Variable |     Length     | Mandatory/Optional/Conditional  | Description / Values |
 | -------- | -------------- | -----------------------| ------------------ |
@@ -221,7 +221,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 ### Response
 
-The below table identifies the required properties in the response message
+The table below identifies the required properties in the response message
 
 | Variable |  Length  | Description / Values |
 | -------- | ------------- | ------------------ |
@@ -276,7 +276,7 @@ The below table identifies the required properties in the response message
 
 
 
-Below table provides the list of application's error code and its description.
+The table below provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
