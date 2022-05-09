@@ -328,14 +328,14 @@ paths:
     get:
       tags:
       - Boarding
-      summary: Get Package Info
+      summary: Get Package ID
       operationId: getPackageById
       x-group-name: Boarding
-      x-proxy-name: Get Individual Package
+      x-proxy-name: Get Package ID
       parameters:
       - name: packageId
         in: path
-        description: package id
+        description: Get Package ID
         required: true
         schema:
           type: string
