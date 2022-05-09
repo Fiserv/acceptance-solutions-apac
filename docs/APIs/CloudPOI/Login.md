@@ -56,7 +56,7 @@ The table below identifies the required parameters in the request payload.
   },
   "data": {
     "token": "Wl3iTXZWZVrhoqNIiFPNwLBYe32NyTvh",
-    "userName": "bocmuser1"
+    "userName": "Testuser135"
   }
 }
 ```
