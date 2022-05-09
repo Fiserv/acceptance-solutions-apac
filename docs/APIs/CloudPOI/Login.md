@@ -77,9 +77,9 @@ The table below provides the list of error codes and description for this applic
 
 | Error Code |  Description / Values |
 | --------  | ------------------ |
-| `401` | Authentication failed |
-| `402` | Bad Credential |
-|`200`| Token not found |   
-|`403`| Forbidden |
-|`404`|  Not found |  
-|`400`| Generic Error |
+| `200`| Success |
+| `300`| Request Failure |
+| `401`| Token not valid or Token not passed at all |   
+| `404`| Not Found |
+| `500`| Internal Server Error |  
+| `502`| Request Timed Out |
