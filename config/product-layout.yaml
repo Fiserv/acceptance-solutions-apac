@@ -119,13 +119,8 @@ featuredFeatures:
         type: "get"        
         path: "/Externalboarding/secure/document"
       - relatedAPI: 
-        title: Get Individual Package
-        description: Get Individual Package
-        type: "get"        
-        path: "/Externalboarding/secure/packages/{packageId}"
-      - relatedAPI: 
-        title: Get Package Id
-        description: Get Package Id
+        title: Get Package ID
+        description: Get Package ID
         type: "get"        
         path: "/Externalboarding/secure/packages/{packageId}"
       - relatedAPI: 
