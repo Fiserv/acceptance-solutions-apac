@@ -33,9 +33,10 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 -	Connect the desired cable (USB) to PC
 - Trigger transactions from PC application to check the line status
 
-        |  Param1    |  Param2 | Descriptions |  Comment |
-        | ---------- | ------- | ------- | ------------------ |
-        | `dataType` | 	 NA   | Indicate the request data type.| active | 
+|  Param1    |  Param2 | Descriptions |  Comment |
+| ---------- | ------- | ------- | ------------------ |
+| `dataType` | 	 NA   | Indicate the request data type.| active | 
+
 
 - Terminal will reply a ACK message
 
