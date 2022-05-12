@@ -119,8 +119,9 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 }
 ```
 
-```json
+
 ### Transaction Status check Request
+
 ```json
 {
     "workflow": "CardTransaction",
@@ -133,6 +134,7 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 }
 ```
 ### Settlement Request
+
 ```json
 {
     "workflow": "CardTransaction",
@@ -166,6 +168,7 @@ The table below identifies the required properties in the request message
 | `checksum` | O | Checksum for "data" field data.Use SHA256  calculate “data” field data. |
 
 ### Response in Payload
+
 ### Sale Response
 ```json
 {

@@ -280,7 +280,7 @@ The table below provides the list of application's error code and its descriptio
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`0`|	SUCC |
+|`0`|	SUCCESS |
 |`1`|	ERR_TIMEOUT |
 |`2`|	ERR_CONNECT |
 |`3`|	ERR_SEND |
