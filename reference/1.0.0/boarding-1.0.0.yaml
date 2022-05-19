@@ -7,7 +7,7 @@ servers:
   - url: https://www.uat.fdmerchantservices.com
     description: UAT
 tags:
-  - name: DigitalBoarding
+  - name: SameDayBoarding
     description: boarding API
 security:
 - ApiKeyAuth: []    
@@ -15,9 +15,12 @@ paths:
   /boardinggateway/boarding/auth/login:
     post:
       tags:
-        - DigitalBoarding
+        - SameDayBoarding
+      summary: Login API
       description: This API validates the external client with the unique credentials shared with each of partner.This API respond back with a session token & expiry time for the session token. This token is required in header of each subsequent API triggered by partner.
       operationId: login
+      x-group-name: SameDayBoarding
+      x-proxy-name: Login 
       requestBody:
         content:
           application/json:
@@ -38,11 +41,16 @@ paths:
   /boardinggateway/boarding/misc/package/list.details/{id}:
     get:
       tags:
-        - DigitalBoarding
-      operationId: packgebyID_5
+        - SameDayBoarding
+      summary: Get Package ID
+      operationId: packagebyID
+      x-group-name: SameDayBoarding
+      x-proxy-name: Packageby ID 
       parameters:
         - name: id
           in: path
+          schema:
+              type: string
           required: true
       responses:
         200:
@@ -55,8 +63,11 @@ paths:
   /boardinggateway/boarding/misc/package/list:
     get:
       tags:
-        - DigitalBoarding
+        - SameDayBoarding
+      summary: Package Info
       operationId: packgeInfo_5
+      x-group-name: SameDayBoarding
+      x-proxy-name: Package info
       parameters:
         - name: packageRequest
           in: query
@@ -73,8 +84,11 @@ paths:
   /boardinggateway/boarding/mmstar/app/{refId}/inquiry:
     get:
       tags:
-      - DigitalBoarding
+      - SameDayBoarding
+      summary: Ref Id Inquiry
       operationId: refIdInquiry
+      x-group-name: SameDayBoarding
+      x-proxy-name: RefId Inquiry
       parameters:
       - name: refId
         in: path
@@ -98,8 +112,11 @@ paths:
   /boardinggateway/boarding/mmstar/app/create:
     post:
       tags:
-      - DigitalBoarding
+      - SameDayBoarding
+      summary: Get Application URN
       operationId: getApplicationURN
+      x-group-name: SameDayBoarding
+      x-proxy-name: Get Application URN
       requestBody:
         content:
           application/json:
@@ -116,8 +133,11 @@ paths:
   /boardinggateway/boarding/mmstar/app/{appURN}/submit:
     post:
       tags:
-      - DigitalBoarding
+      - SameDayBoarding
+      summary: Submit Application
       operationId: submitApplication
+      x-group-name: SameDayBoarding
+      x-proxy-name: Submit Application
       parameters:
       - name: appURN
         in: path
@@ -140,8 +160,11 @@ paths:
   /boardinggateway/boarding/mmstar/app/{appURN}/addtid:
     post:
       tags:
-      - DigitalBoarding
+      - SameDayBoarding
+      summary: addiadditional Tid
       operationId: additionalTid
+      x-group-name: SameDayBoarding
+      x-proxy-name: Additional Tid
       parameters:
       - name: appURN
         in: path
@@ -164,8 +187,11 @@ paths:
   /boardinggateway/boarding/mmstar/app/{appURN}/addmid:
     post:
       tags:
-      - DigitalBoarding
+      - SameDayBoarding
+      summary: addiadditional Mid
       operationId: additionalMid
+      x-group-name: SameDayBoarding
+      x-proxy-name: Additional Mid
       parameters:
       - name: appURN
         in: path
@@ -188,8 +214,11 @@ paths:
   /boardinggateway/boarding/mmstar/app/{appURN}/addlocation:
     post:
       tags:
-      - DigitalBoarding
+      - SameDayBoarding
+      summary: add Location
       operationId: addLocation
+      x-group-name: SameDayBoarding
+      x-proxy-name: Add Location
       parameters:
       - name: appURN
         in: path
@@ -212,8 +241,11 @@ paths:
   /boardinggateway/boarding/document/{appURN}/merchdoc/upload:
     post:
       tags:
-      - DigitalBoarding
+      - SameDayBoarding
+      summary: upload Merchant Document
       operationId: uploadMerchantDocument
+      x-group-name: SameDayBoarding
+      x-proxy-name: Upload Merchant Document
       parameters:
       - name: appURN
         in: path
@@ -235,8 +267,11 @@ paths:
   /boardinggateway/boarding/document/listUpdated:
     post:
       tags:
-      - DigitalBoarding
+      - SameDayBoarding
+      summary: Get Document Matrix
       operationId: getDocumentMatrix
+      x-group-name: SameDayBoarding
+      x-proxy-name: Get Document Matrix
       requestBody:
         content:
           application/json:
@@ -986,6 +1021,3 @@ components:
       type: apiKey
       in: header
       name: Authorization
-
-  
-      
