@@ -45,12 +45,15 @@ paths:
       operationId: nonOpiProcessAmount
       x-group-name: Cloud POI
       x-proxy-name: Payment API
+      x-default-example: Default example
       requestBody:
         content:
           application/json:
-            schema:
-               $ref: "#/components/schemas/NonOpiProcessAmountRequest"
+            #schema:
+              # $ref: "#/components/schemas/NonOpiProcessAmountRequest"
             examples:
+              Default example:
+                $ref: '#/components/schemas/NonOpiProcessAmountRequest'
               Sample - SALE:
                 $ref: '#/components/examples/NonOpiProcessAmountRequest_SALE'
               Sample - SALE WITH LPM:
