@@ -4,7 +4,7 @@ This API is used to send a sale request for card transactions. Merchants needs t
 
 ## Endpoint
 
-POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/nonOpiProcessAmount`
 
 ## Payload Example
 
@@ -58,7 +58,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoi/PosPush/no
 ### Minimum Requirements
 ##### The table below contains:- #####
 - Mandatory fields required for a successful request
-- Full request schemas are available in our  [API Explorer](../api/?type=post&path=/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount)
+- Full request schemas are available in our  [API Explorer](../api/?type=post&path=/boardinggateway/cloudpoidp/PosPush/nonOpiProcessAmount)
 - Identifies the required query parameters in the request message
 - Identifies the required json properties in the request message.
 
