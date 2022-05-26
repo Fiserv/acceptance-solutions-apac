@@ -22,6 +22,8 @@ paths:
       operationId: login
       x-group-name: Cloud POI
       x-proxy-name: Login
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyAuth"}
       requestBody:
         content:
           application/json:
@@ -46,6 +48,8 @@ paths:
       x-group-name: Cloud POI
       x-proxy-name: Payment API
       x-default-example: Default example
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyAuth"}
       requestBody:
         content:
           application/json:
@@ -133,6 +137,13 @@ paths:
                 $ref: "#/components/schemas/Response"
  
 components:
+  parameters:
+    ApiKeyHeader:
+      name: Authorization
+      schema: {type: string}
+      in: header
+      required: true
+      description: never expiring token for all apis
   schemas:
     Response:
       type: object
