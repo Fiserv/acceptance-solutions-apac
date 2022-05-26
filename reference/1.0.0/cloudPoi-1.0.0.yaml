@@ -23,7 +23,7 @@ paths:
       x-group-name: Cloud POI
       x-proxy-name: Login
       parameters:
-      - {$ref: "#/components/parameters/ApiKeyAuth"}
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
@@ -49,7 +49,7 @@ paths:
       x-proxy-name: Payment API
       x-default-example: Default example
       parameters:
-      - {$ref: "#/components/parameters/ApiKeyAuth"}
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
