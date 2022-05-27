@@ -64,9 +64,6 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Application Status Inquiry](./?path=/docs/APIs/externalboarding/ApplicationStatusInquiry.md)
 
-# Contact US
-- [Test](./?path=docs/APIs/PaymentAPI/test.html)
-
 ---
 
 ## Access Merchant Solution APIs
