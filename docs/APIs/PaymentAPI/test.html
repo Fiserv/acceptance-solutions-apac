@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head><title>test</title>
-        <meta http-equiv="Content-Security-Policy" content="default-src *;
-    img-src * 'self' data: https: http:;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
-    style-src  'self' 'unsafe-inline' *">
-        <script language="JavaScript">
-            function myFunction() {
-             alert("test");
-			
-			
 
-  document.getElementById("demo").innerHTML = 'OK';
-            }
-            </script>
-    </head>
+<html>
 <body>
 
-<h2>Test</h2>
+<h2>HTML Forms</h2>
 
-<p>Please input a number between 1 and 10:</p>
-
-<input id="numb">
-
-<button type="button" onclick="myFunction()">Submit</button>
-
-<p id="demo"></p>
+<form action="/test.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="test"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="test"><br><br>
+  <input type="submit" value="Submit">
+</form> 
 
 
 </body>
