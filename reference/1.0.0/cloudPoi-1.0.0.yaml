@@ -76,6 +76,7 @@ paths:
                 $ref: '#/components/examples/NonOpiProcessAmountRequest_TransactionStatusCheck'
               Sample - Settlement Transacton:
                 $ref: '#/components/examples/NonOpiProcessAmountRequest_SettlementTransaction'     
+        required: true     
       responses:
         "200":
           description: OK
