@@ -53,8 +53,8 @@ paths:
       requestBody:
         content:
           application/json:
-            #schema:
-              # $ref: "#/components/schemas/NonOpiProcessAmountRequest"
+            schema:
+              $ref: "#/components/schemas/NonOpiProcessAmountRequest"
             examples:
               Default example:
                 $ref: '#/components/schemas/NonOpiProcessAmountRequest'
