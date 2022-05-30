@@ -3,6 +3,8 @@ info:
   title: Cloud POI
   description: Cloud POI - Specifications
   version: v1.0
+  contact:
+    name: Rajendra Kumar
 servers:
   - url: https://www.uat.fdmerchantservices.com
     description: UAT
@@ -31,7 +33,7 @@ paths:
               $ref: "#/components/schemas/AuthRequest"
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             "*/*":
@@ -166,7 +168,6 @@ components:
         - reqDate
         - reqTime
         - mrchCountryCode
-      type: object
       properties:
         merchantId:
          type: string
@@ -205,13 +206,13 @@ components:
          maxLength: 14
          minLength: 14
          description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
-         example: "REVAMRNSALE140208"
+         example: "12345678900987"
         customerRefNumber:
          type: string
          maxLength: 20
          minLength: 20
          description: Consumer Number
-         example: "REVASALE140208"
+         example: "12345678900987654321"
         authAmount:
          type: string
          maxLength: 19
@@ -247,41 +248,41 @@ components:
         reqDate:
          type: string
          description: Transaction initiated Date(DDMMYYYY) 
-         example: 28022022
+         example: "28022022"
         reqTime:
          type: string
          description: Transaction initiated Time(HHMMSS)
-         example: 013034
+         example: "013034"
         tranDate:
          type: string
          description: Original transaction  Date(DDMMYYYY) 
-         example: 28022022
+         example: "28022022"
         tranTime:
          type: string
          description: Original transaction  Time(HHMMSS)
-         example: 013034
+         example: "013034"
         invoiceNumber:
          type: string
          maxLength: 20
          minLength: 20
          description: Must pass the same value as original transaction
-         example: ""
+         example: "12345678900987654321"
         authCode:
          type: string
          maxLength: 6
          minLength: 6
          description: Must pass the same value received in original transaction response
-         example: ""
+         example: "123456"
         cardLastNumber:
          type: string
          maxLength: 4
          minLength: 4
          description: Last 4 Digits of Card Number
-         example: ""
+         example: "1234"
         cardBin:
          type: string
          description: First six digits of the Card, used in the original (sale) transaction
-         example: ""
+         example: "8456"
         callbackURL:
          type: string
          description: Response URL, place holder for notification API call feature)
@@ -583,7 +584,7 @@ components:
         tranDate: ""
         tranTime: ""
         invoiceNumber: "12345678998765432121"
-        cardLastNumber: ""
+        cardLastNumber: "1234"
         callbackURL: ""
         mrchCountryCode: "366"
         tranType: ""
@@ -618,7 +619,7 @@ components:
         tranDate: ""
         tranTime: ""
         invoiceNumber: "12345678998765432121"
-        cardLastNumber: ""
+        cardLastNumber: "1234"
         callbackURL: ""
         mrchCountryCode: "356"
         tranType: ""
@@ -652,10 +653,10 @@ components:
         tipAmount: ""
         tranDate: ""
         tranTime: ""
-        invoiceNumber: ""
-        cardLastNumber: ""
+        invoiceNumber: "12345678900987654321"
+        cardLastNumber: "1234"
         callbackURL: ""
-        mrchCountryCode: ""
+        mrchCountryCode: "123"
         tranType: ""
         rrn:  ""
         emiRefNumber:  ""
