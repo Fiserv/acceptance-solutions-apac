@@ -21,6 +21,8 @@ paths:
       operationId: login
       x-group-name: SameDayBoarding
       x-proxy-name: Login 
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
@@ -47,6 +49,7 @@ paths:
       x-group-name: SameDayBoarding
       x-proxy-name: Packageby ID 
       parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
         - name: id
           in: path
           schema:
@@ -69,6 +72,7 @@ paths:
       x-group-name: SameDayBoarding
       x-proxy-name: Package info
       parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
         - name: packageRequest
           in: query
           required: true
@@ -90,18 +94,19 @@ paths:
       x-group-name: SameDayBoarding
       x-proxy-name: RefId Inquiry
       parameters:
-      - name: refId
-        in: path
-        example: 99000154
-        required: true
-        schema:
-          type: string
-      - name: appType
-        in: query
-        required: true
-        example: ADM
-        schema:
-          type: string
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+        - name: refId
+          in: path
+          example: 99000154
+          required: true
+          schema:
+            type: string
+        - name: appType
+          in: query
+          required: true
+          example: ADM
+          schema:
+            type: string
       responses:
         200:
           description: OK
@@ -286,6 +291,15 @@ paths:
               schema:
                 $ref: '#/components/schemas/Response'
 components:
+  parameters:
+    ApiKeyHeader:
+      name: Authorization
+      in: header
+      required: true
+      description: never expiring token for all apis
+      schema: {type: string}
+      example: '0pMHhH9J0D3_P5yUJDsjGUWBcAzEquRT'
+
   schemas:
     Response:
       type: object
