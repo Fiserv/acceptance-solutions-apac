@@ -59,7 +59,7 @@ paths:
               $ref: "#/components/schemas/NonOpiProcessAmountRequest"
             examples:
               Default example:
-                $ref: '#/components/schemas/NonOpiProcessAmountRequest'
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_SALE'
               Sample - SALE:
                 $ref: '#/components/examples/NonOpiProcessAmountRequest_SALE'
               Sample - SALE WITH LPM:
