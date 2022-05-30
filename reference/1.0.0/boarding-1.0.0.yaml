@@ -2,6 +2,8 @@ openapi: 3.0.2
 info:
   title: Merchant On Boarding
   description: Every Client (ISO/ISV/Payment Facilitator) will be on-boarded as a separate channel onto Fiserv Platform.
+  contact:
+    name: Rajendra Kumar
   version: v1.0
 servers:
   - url: https://www.uat.fdmerchantservices.com
@@ -30,7 +32,7 @@ paths:
               $ref: "#/components/schemas/AuthRequest"
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             "*/*":
@@ -45,6 +47,7 @@ paths:
       tags:
         - SameDayBoarding
       summary: Get Package ID
+      description: Get Package ID
       operationId: packagebyID
       x-group-name: SameDayBoarding
       x-proxy-name: Packageby ID 
@@ -56,7 +59,7 @@ paths:
               type: string
           required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             "*/*":
@@ -68,6 +71,7 @@ paths:
       tags:
         - SameDayBoarding
       summary: Package Info
+      description: Package Info
       operationId: packgeInfo_5
       x-group-name: SameDayBoarding
       x-proxy-name: Package info
@@ -79,7 +83,7 @@ paths:
           schema:
             $ref: "#/components/schemas/PackageRequest"
       responses:
-        200:
+        "200":
           description: OK
           content:
             "*/*":
@@ -90,6 +94,7 @@ paths:
       tags:
       - SameDayBoarding
       summary: Ref Id Inquiry
+      description: Ref Id Inquiry
       operationId: refIdInquiry
       x-group-name: SameDayBoarding
       x-proxy-name: RefId Inquiry
@@ -97,7 +102,7 @@ paths:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
         - name: refId
           in: path
-          example: 99000154
+          example: "99000154"
           required: true
           schema:
             type: string
@@ -108,7 +113,7 @@ paths:
           schema:
             type: string
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
@@ -119,6 +124,7 @@ paths:
       tags:
       - SameDayBoarding
       summary: Get Application URN
+      description: Get Application URN
       operationId: getApplicationURN
       x-group-name: SameDayBoarding
       x-proxy-name: Get Application URN
@@ -131,7 +137,7 @@ paths:
               $ref: '#/components/schemas/MerchantApplication'
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
@@ -142,6 +148,7 @@ paths:
       tags:
       - SameDayBoarding
       summary: Submit Application
+      description: Submit APplication
       operationId: submitApplication
       x-group-name: SameDayBoarding
       x-proxy-name: Submit Application
@@ -159,7 +166,7 @@ paths:
               $ref: '#/components/schemas/MerchantApplication'
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
@@ -170,6 +177,7 @@ paths:
       tags:
       - SameDayBoarding
       summary: addiadditional Tid
+      description: addiadditional Tid
       operationId: additionalTid
       x-group-name: SameDayBoarding
       x-proxy-name: Additional Tid
@@ -187,7 +195,7 @@ paths:
               $ref: '#/components/schemas/MerchantApplication'
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
@@ -198,6 +206,7 @@ paths:
       tags:
       - SameDayBoarding
       summary: addiadditional Mid
+      description: addiadditional Mid
       operationId: additionalMid
       x-group-name: SameDayBoarding
       x-proxy-name: Additional Mid
@@ -215,7 +224,7 @@ paths:
               $ref: '#/components/schemas/MerchantApplication'
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
@@ -226,6 +235,7 @@ paths:
       tags:
       - SameDayBoarding
       summary: add Location
+      description: add Location
       operationId: addLocation
       x-group-name: SameDayBoarding
       x-proxy-name: Add Location
@@ -243,7 +253,7 @@ paths:
               $ref: '#/components/schemas/MerchantApplication'
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
@@ -254,6 +264,7 @@ paths:
       tags:
       - SameDayBoarding
       summary: upload Merchant Document
+      description: upload Merchant Document
       operationId: uploadMerchantDocument
       x-group-name: SameDayBoarding
       x-proxy-name: Upload Merchant Document
@@ -270,7 +281,7 @@ paths:
             schema:
               $ref: '#/components/schemas/MerchantDocument'
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
@@ -281,6 +292,7 @@ paths:
       tags:
       - SameDayBoarding
       summary: Get Document Matrix
+      description: Get Document Matrix
       operationId: getDocumentMatrix
       x-group-name: SameDayBoarding
       x-proxy-name: Get Document Matrix
@@ -293,7 +305,7 @@ paths:
               $ref: '#/components/schemas/Request'
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
