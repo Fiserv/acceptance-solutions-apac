@@ -122,6 +122,8 @@ paths:
       operationId: getApplicationURN
       x-group-name: SameDayBoarding
       x-proxy-name: Get Application URN
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
@@ -144,6 +146,7 @@ paths:
       x-group-name: SameDayBoarding
       x-proxy-name: Submit Application
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: appURN
         in: path
         required: true
@@ -171,6 +174,7 @@ paths:
       x-group-name: SameDayBoarding
       x-proxy-name: Additional Tid
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: appURN
         in: path
         required: true
@@ -198,6 +202,7 @@ paths:
       x-group-name: SameDayBoarding
       x-proxy-name: Additional Mid
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: appURN
         in: path
         required: true
@@ -225,6 +230,7 @@ paths:
       x-group-name: SameDayBoarding
       x-proxy-name: Add Location
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: appURN
         in: path
         required: true
@@ -252,6 +258,7 @@ paths:
       x-group-name: SameDayBoarding
       x-proxy-name: Upload Merchant Document
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: appURN
         in: path
         required: true
@@ -277,6 +284,8 @@ paths:
       operationId: getDocumentMatrix
       x-group-name: SameDayBoarding
       x-proxy-name: Get Document Matrix
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
