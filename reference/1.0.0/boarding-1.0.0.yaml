@@ -316,10 +316,10 @@ paths:
     post:
       tags:
       - SameDayBoarding
-      summary: mvsi update
-      description: mvsi update
+      summary: Mvsi update
+      description: Mvsi update
       x-group-name: SameDayBoarding
-      x-proxy-name: mvsi update
+      x-proxy-name: Mvsi update
       operationId: update_1
       requestBody:
         content:
