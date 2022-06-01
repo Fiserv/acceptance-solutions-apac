@@ -311,6 +311,29 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/Response'
+
+  /boardinggateway/boarding/misc-alpha/mvsi/update:
+    post:
+      tags:
+      - SameDayBoarding
+      summary: mvsi update
+      description: mvsi update
+      x-group-name: SameDayBoarding
+      x-proxy-name: mvsi update
+      operationId: update_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MvsiUpdate'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Response'
 components:
   parameters:
     ApiKeyHeader:
@@ -1051,6 +1074,24 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/IdDocDetails'
+    MvsiPayload:
+      type: object
+      properties:
+        verificationId:
+          type: string
+        personId:
+          type: string
+    MvsiUpdate:
+      type: object
+      properties:
+        accountId:
+          type: string
+        partnerId:
+          type: string
+        event:
+          type: string
+        payload:
+          $ref: '#/components/schemas/MvsiPayload'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
