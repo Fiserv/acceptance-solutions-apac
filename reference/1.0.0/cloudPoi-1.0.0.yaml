@@ -142,7 +142,7 @@ components:
   parameters:
     ApiKeyHeader:
       name: Authorization
-      schema: {type: string}
+      schema: {type: string, example: '0pMHhH9J0D3_P5yUJDsjGUWBcAzEquRT'}
       in: header
       required: true
       description: never expiring token for all apis
