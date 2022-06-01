@@ -328,7 +328,7 @@ paths:
               $ref: '#/components/schemas/MvsiUpdate'
         required: true
       responses:
-        200:
+        "200":
           description: OK
           content:
             '*/*':
