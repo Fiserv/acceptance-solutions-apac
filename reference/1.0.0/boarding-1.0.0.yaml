@@ -341,8 +341,7 @@ components:
       in: header
       required: true
       description: never expiring token for all apis
-      schema: {type: string}
-      example: '0pMHhH9J0D3_P5yUJDsjGUWBcAzEquRT'
+      schema: {type: string, example: '0pMHhH9J0D3_P5yUJDsjGUWBcAzEquRT'}
 
   schemas:
     Response:
