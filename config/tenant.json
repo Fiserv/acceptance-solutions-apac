@@ -60,17 +60,17 @@
 		"bug": {
 			"label": "bug,AcceptanceSolutionsAPAC",
 			"template": "bug.md",
-			"assignees": "rajendra.kumar1@fiserv.com"
+			"assignees": "brijesh.gupta@fiserv.com"
 		},
 		"feedback": {
 			"label": "feedback,AcceptanceSolutionsAPAC",
 			"template": "feedback.md",
-			"assignees": "rajendra.kumar1@fiserv.com"
+			"assignees": "brijesh.gupta@fiserv.com"
 		},
 		"enhancement": {
 			"label": "enhancement,AcceptanceSolutionsAPAC",
 			"template": "feature.md",
-			"assignees": "rajendra.kumar1@fiserv.com"
+			"assignees": "eileen.quek@fiserv.com"
 		}
 	}]
 }
