@@ -97,7 +97,7 @@ paths:
           content:
             application/json:
               schema:
-                 $ref: "#/components/schemas/Response"
+                 $ref: "#/components/schemas/Status401"
               examples:
                 "401":
                   $ref: '#/components/examples/401-Premier'
@@ -106,7 +106,7 @@ paths:
           content:
             application/json:
               schema:
-                 $ref: "#/components/schemas/Response"
+                 $ref: "#/components/schemas/Status300"
               examples:
                 "300":
                   $ref: '#/components/examples/300-Premier'
@@ -115,7 +115,7 @@ paths:
           content:
             application/json:
               schema:
-                 $ref: "#/components/schemas/Response"
+                 $ref: "#/components/schemas/Status500"
               examples:
                 "500":
                   $ref: '#/components/examples/500-Premier'
@@ -124,7 +124,7 @@ paths:
           content:
             application/json:
               schema:
-                 $ref: "#/components/schemas/Response"
+                 $ref: "#/components/schemas/Status502"
               examples:
                 "502":
                   $ref: '#/components/examples/502-Premier'
@@ -133,7 +133,7 @@ paths:
           content:
             application/json:
               schema:
-                 $ref: "#/components/schemas/Response"
+                 $ref: "#/components/schemas/Status404"
               examples:
                 "404":
                   $ref: '#/components/examples/404-Premier'
@@ -366,6 +366,66 @@ components:
           type: string
           description: success message
           example: Success
+    Status401:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 401
+          description:  status code
+        message:
+          type: string
+          description: Token not found
+          example: Token not found
+    Status300:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 300
+          description:  status code
+        message:
+          type: string
+          description: Request Failure
+          example: Request Failure
+    Status404:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 404
+          description:  status code
+        message:
+          type: string
+          description: Not Found
+          example: Not Found
+    Status500:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 500
+          description:  status code
+        message:
+          type: string
+          description: Internal Server Error
+          example: Internal Server Error
+    Status502:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 502
+          description:  status code
+        message:
+          type: string
+          description: Request Timed Out
+          example: Request Timed Out
     Status1:
       type: object
       properties:
