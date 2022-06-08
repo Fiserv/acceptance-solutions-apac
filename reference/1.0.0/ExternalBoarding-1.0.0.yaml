@@ -77,7 +77,30 @@ paths:
                 type: string
                 description: encrypted string
                 example: ""
-
+  /boardinggateway/externalboarding/secure/msf/{msfId}:
+    get:
+      tags:
+      - Boarding
+      summary: Get MSFProfile Details
+      operationId: getMsById
+      description: Get MSFProfile Details
+      x-group-name: Boarding
+      x-proxy-name: MSFProfile
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - name: msfId
+        in: path
+        required: true
+        schema:
+          type: string
+          example: '745'
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
   /boardinggateway/externalboarding/convert/decrypt:
     post:
       tags:
