@@ -10,9 +10,9 @@ servers:
   description: UAT URL
 - url: http://localhost:8080
   description: Local URL
+
 security:
-#- BasicAuth: []
-- ApiKeyAuth: []
+- ApiKeyAuth: [] 
 tags:
 - name: Boarding
   description: REST API for Boarding
@@ -513,9 +513,6 @@ components:
           description: encrypeted response
           example: wT/izrHrPefuqOfVPrqItzSbEkBGF/4TX7zfx8GjIGcmRaamXThWuKIfNcX0aH0PRqrWyYhOHCHbiA82aqp+LwcnIbNwrtzPD1E4z3XDIj3DqbplCrP6Ge6rxi0zzlOVp80UBujaywNCd1nLAJHnpDOnTc4LfJRvK96MdZwjpVUWxADG1nazE6rm2lryJ0wxcSN/SGsN7EWCh1+9JaLBWXmL3lEwsGmKSdkeFDbW4z/Cw6fdz200G2Tre/I+hAJstsffaItyQkHyL+/1R7xe8r9ld0SHFJa3HbvwkHxz7TFv7fwp6kQSj35MhQc7uiuZdcXfQXRBAQA9JnPs8nnhIQA7FYTIuMozE0Cp9JI+spZ2Vvxo4X4TKz9dfVHYxVqp
   securitySchemes:
-    #BasicAuth:
-    #  type: http
-    #  scheme: basic
     ApiKeyAuth:
       type: apiKey
       in: header
