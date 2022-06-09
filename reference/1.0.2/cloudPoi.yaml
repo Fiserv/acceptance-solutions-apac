@@ -1,0 +1,132 @@
+openapi: 3.0.2
+info:
+  title: Cloud POI
+  description: Cloud POI - Specifications
+  version: v1.0
+  contact:
+    name: OZ-FS
+servers:
+  - url: https://www.uat.fdmerchantservices.com
+    description: UAT
+tags:
+  - name: Cloud POI
+    description: Cloud POI APIs
+
+paths:
+  /boardinggateway/boarding/auth/signin:
+    post:
+      tags:
+        - Cloud POI
+      summary: LoginApi
+      description: This API authenticates the external client with the unique credentials shared earlier as part of initial setup. This API respond back with a session token. This token is required in header of each subsequent API triggered by partner.
+      operationId: login
+      x-group-name: Cloud POI
+      x-proxy-name: Login
+      x-default-example: Login Sample
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AuthRequest"
+            examples:
+              Login Sample:
+                $ref: "#/components/examples/LoginRq"
+        required: true
+      responses:
+        '200':
+          description:  "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response200"
+              examples:
+                Login Sample:
+                  $ref: "#/components/examples/LoginRs200"
+        '402':
+          description:  "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response402"
+              examples:
+                Login Sample:
+                  $ref: "#/components/examples/LoginRs402"
+components:
+  schemas:
+
+    AuthRequest:
+      required:
+        - username
+        - password
+      type: object
+      properties:
+        username:
+          type: string
+          description: user name
+          example: "Testuser135"
+        password:
+          type: string
+          description: password
+          example: "Test@1234"
+
+    Status200:
+      type: object
+      properties:
+        statusCode:
+          type: string
+          example: "200"
+          description:  status code
+        message:
+          type: string
+          description: success message
+          example: Success
+    Response200:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/Status200"
+        data:
+          type: object
+          properties:
+            token:
+              type: string
+              example: "Wl3iTXZWZVrhoqNIiFPNwLBYe32NyTvh"
+            userName:
+              type: string
+              example: "Testuser135"
+          description: response info
+
+    Status402:
+      type: object
+      properties:
+        statusCode:
+          type: string
+          description:  status code
+          example: "402"
+        message:
+          type: string
+          description: "Token not found"
+          example: "Token not found"
+    Response402:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/Status402"
+
+  examples:
+    LoginRq:
+      value:
+        username: "Testuser135"
+        password: "Test@1234"
+    LoginRs200:
+      value:
+        status:
+          statusCode: "200"
+          message: "Success"
+        data:
+          userName: "Testuser135"
+          token: "Wl3iTXZWZVrhoqNIiFPNwLBYe32NyTvh"
+    LoginRs402:
+      value:
+        statusCode: "402"
+        message: "Unauthorized"
