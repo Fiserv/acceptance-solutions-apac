@@ -120,13 +120,9 @@ components:
         password: "Test@1234"
     LoginRs200:
       value:
-        status:
-          statusCode: "200"
-          message: "Success"
         data:
           userName: "Testuser135"
           token: "Wl3iTXZWZVrhoqNIiFPNwLBYe32NyTvh"
     LoginRs402:
       value:
-        statusCode: "402"
         message: "Unauthorized"
