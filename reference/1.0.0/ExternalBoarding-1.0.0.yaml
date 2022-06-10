@@ -1,6 +1,8 @@
 openapi: 3.0.2
 info:
-  title: Merchant On Boarding
+  title: Merchant On Boarding (External)
+  contact:
+    name: Rajendra Kumar
   version: 1.0v
   description: ' The partner API '
 servers:
@@ -8,14 +10,14 @@ servers:
   description: UAT URL
 - url: http://localhost:8080
   description: Local URL
+
 security:
-- BasicAuth: []
-- ApiKeyAuth: []
+- ApiKeyAuth: [] 
 tags:
 - name: Boarding
   description: REST API for Boarding
 paths:
-  /Externalboarding/partner/login:
+  /boardinggateway/externalboarding/partner/login:
     get:
       tags:
       - Boarding
@@ -25,10 +27,11 @@ paths:
       x-group-name:  Boarding
       x-proxy-name: User Login
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: ain
         in: query
         required: true
-        example: 4700000
+        example: "4700000"
         description: instituiion id
         schema:
           type: string
@@ -46,7 +49,7 @@ paths:
             '*/*':
               schema:
                 type: string
-  /Externalboarding/secure/newmid:
+  /boardinggateway/externalboarding/secure/newmid:
     post:
       tags:
       - Boarding
@@ -55,6 +58,8 @@ paths:
       operationId: submitapplication
       x-group-name: Boarding
       x-proxy-name: Submit Application
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
@@ -72,8 +77,31 @@ paths:
                 type: string
                 description: encrypted string
                 example: ""
-
-  /Externalboarding/convert/decrypt:
+  /boardinggateway/externalboarding/secure/msf/{msfId}:
+    get:
+      tags:
+      - Boarding
+      summary: Get MSFProfile Details
+      operationId: getMsById
+      description: Get MSFProfile Details
+      x-group-name: Boarding
+      x-proxy-name: MSFProfile
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - name: msfId
+        in: path
+        required: true
+        schema:
+          type: string
+          example: '745'
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /boardinggateway/externalboarding/convert/decrypt:
     post:
       tags:
       - Boarding
@@ -82,6 +110,8 @@ paths:
       operationId: decryptPayload
       x-group-name: Boarding
       x-proxy-name: Decrypt
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
            application/json:
@@ -100,7 +130,7 @@ paths:
                 description: decrypted string
                 example:  "{\"salesId\":\"ecomuser\",\"institutionId\":\"47\",\"appType\":\"API\",\"keySelection\":{\"boardingType\":\"NEWMID\"},\"countryCode\":\"IND\",\"merchantDetails\":{\"legalName\":\"ECOM\",\"businessName\":\"ECOM\"},\"channelCode\":\"EAZYAPY_ECOM\"}"
                 
-  /Externalboarding/convert/encrypt:
+  /boardinggateway/externalboarding/convert/encrypt:
     post:
       tags:
       - Boarding
@@ -109,6 +139,8 @@ paths:
       operationId: encryptPayload
       x-group-name: Boarding
       x-proxy-name: Encrypt
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
            application/json:
@@ -125,7 +157,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/EncDecResponse'
   
-  /Externalboarding/secure/refmid/{appType}/{referenceMID}:
+  /boardinggateway/externalboarding/secure/refmid/{appType}/{referenceMID}:
     get:
       tags:
       - Boarding
@@ -135,6 +167,7 @@ paths:
       x-group-name: Boarding
       x-proxy-name: Ref For Additional MID
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: appType
         in: path
         required: true
@@ -148,7 +181,7 @@ paths:
         description: mid
         schema:
           type: string
-          example: 99000154
+          example: "99000154"
       responses:
         "200":
           description: OK
@@ -156,7 +189,7 @@ paths:
             '*/*':
               schema:
                  $ref: '#/components/schemas/Response'
-  /Externalboarding/secure/create:
+  /boardinggateway/externalboarding/secure/create:
     post:
       tags:
       - Boarding
@@ -165,6 +198,8 @@ paths:
       operationId: createapplication
       x-group-name: Boarding
       x-proxy-name: Create Application
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
@@ -182,7 +217,7 @@ paths:
                 type: string
                 description: encrypted string
                 example: ""
-  /Externalboarding/secure/appstatus/{appUrn}:
+  /boardinggateway/externalboarding/secure/appstatus/{appUrn}:
     get:
       tags:
       - Boarding
@@ -192,6 +227,7 @@ paths:
       x-group-name: Boarding
       x-proxy-name: Get App Status
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: appUrn
         in: path
         description: Application - Unique Identification number 
@@ -206,7 +242,7 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/Response'
-  /Externalboarding/secure/packages:
+  /boardinggateway/externalboarding/secure/packages:
     get:
       tags:
       - Boarding
@@ -216,6 +252,7 @@ paths:
       x-group-name: Boarding
       x-proxy-name: Get Package List
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: RequestParam
         in: query
         required: true
@@ -228,7 +265,7 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/PkgListResponse'
-  /Externalboarding/secure/addtid:
+  /boardinggateway/externalboarding/secure/addtid:
     post:
       tags:
       - Boarding
@@ -237,6 +274,8 @@ paths:
       operationId: submitAdditionalTidApplication
       x-group-name: Boarding
       x-proxy-name: Additional Device
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
@@ -250,7 +289,7 @@ paths:
             '*/*':
               schema:
                 type: string
-  /Externalboarding/secure/document:
+  /boardinggateway/externalboarding/secure/document:
     get:
       tags:
       - Boarding
@@ -259,11 +298,13 @@ paths:
       operationId: getDocumentList
       x-group-name: Boarding
       x-proxy-name: Get Document List
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/DocAndPkgRequestParam'
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+        - name: docAndPkgRequestParam
+          in: query
+          required: true
+          schema:
+            $ref: "#/components/schemas/DocAndPkgRequestParam"
       responses:
         "200":
           description: OK
@@ -272,7 +313,7 @@ paths:
               schema:
                 type: string
 
-  /Externalboarding/secure/addmid:
+  /boardinggateway/externalboarding/secure/addmid:
     post:
       tags:
       - Boarding
@@ -281,6 +322,8 @@ paths:
       operationId: submitAdditionalMidApplication
       x-group-name: Boarding
       x-proxy-name: Additional Outlet
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
@@ -295,7 +338,7 @@ paths:
               schema:
                 type: string
   
-  /Externalboarding/secure/document/{appUrn}:
+  /boardinggateway/externalboarding/secure/document/{appUrn}:
     post:
       tags:
       - Boarding
@@ -305,13 +348,14 @@ paths:
       x-group-name: Boarding
       x-proxy-name: Document Upload
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: appUrn
         in: path
         required: true
         schema:
           type: string
           description: App URN
-          example: 1000004745
+          example: "1000004745"
       requestBody:
         content:
           multipart/form-data:
@@ -324,22 +368,24 @@ paths:
             '*/*':
               schema:
                 type: string
-  /secure/packages/{packageId}:
+  /boardinggateway/externalboarding/secure/packages/{packageId}:
     get:
       tags:
       - Boarding
-      summary: Get Package Info
+      summary: Get Package ID
+      description: Get Package ID
       operationId: getPackageById
       x-group-name: Boarding
-      x-proxy-name: Get Individual Package
+      x-proxy-name: Get Package ID
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: packageId
         in: path
-        description: package id
+        description: Get Package ID
         required: true
         schema:
           type: string
-          example: 7502
+          example: "7502"
       responses:
         "200":
           description: OK
@@ -348,6 +394,14 @@ paths:
               schema:
                 type: string
 components:
+  parameters:
+    ApiKeyHeader:
+      name: Authorization
+      schema: {type: string, example: '0pMHhH9J0D3_P5yUJDsjGUWBcAzEquRT'}
+      in: header
+      required: true
+      description: never expiring token for all apis
+
   schemas:
     PkgListResponse:
       type: object
@@ -413,7 +467,7 @@ components:
         mccCode:
           type: string
           description: Merchant currency code
-          example: 5813
+          example: "5813"
         merchantType:
           type: string
           description: Merchant Type
@@ -481,11 +535,7 @@ components:
           description: encrypeted response
           example: wT/izrHrPefuqOfVPrqItzSbEkBGF/4TX7zfx8GjIGcmRaamXThWuKIfNcX0aH0PRqrWyYhOHCHbiA82aqp+LwcnIbNwrtzPD1E4z3XDIj3DqbplCrP6Ge6rxi0zzlOVp80UBujaywNCd1nLAJHnpDOnTc4LfJRvK96MdZwjpVUWxADG1nazE6rm2lryJ0wxcSN/SGsN7EWCh1+9JaLBWXmL3lEwsGmKSdkeFDbW4z/Cw6fdz200G2Tre/I+hAJstsffaItyQkHyL+/1R7xe8r9ld0SHFJa3HbvwkHxz7TFv7fwp6kQSj35MhQc7uiuZdcXfQXRBAQA9JnPs8nnhIQA7FYTIuMozE0Cp9JI+spZ2Vvxo4X4TKz9dfVHYxVqp
   securitySchemes:
-    BasicAuth:
-      type: http
-      scheme: basic
     ApiKeyAuth:
       type: apiKey
       in: header
       name: Authorization
-
