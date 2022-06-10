@@ -20,7 +20,7 @@ Login API authenticates merchants’ unique credentials, with a response that
 
 ## Endpoint
 
-`/boardinggateway/boarding/auth/signin`
+`https://www.uat.fdmerchantservices.com/boardinggateway/boarding/auth/signin`
 
 ## Payload Examples
 
@@ -28,8 +28,8 @@ Login API authenticates merchants’ unique credentials, with a response that
 
 ```json
 {
-  "username": "bocmuser1",
-  "password": "December01"
+  "username": "Testuser135",
+  "password": "Test@1234"
 }
 *** Get Token from above api and need to pass the same token to other apies.***
 }
@@ -56,7 +56,7 @@ The table below identifies the required parameters in the request payload.
   },
   "data": {
     "token": "Wl3iTXZWZVrhoqNIiFPNwLBYe32NyTvh",
-    "userName": "bocmuser1"
+    "userName": "Testuser135"
   }
 }
 ```
@@ -77,9 +77,9 @@ The table below provides the list of error codes and description for this applic
 
 | Error Code |  Description / Values |
 | --------  | ------------------ |
-| `401` | Authentication failed |
-| `402` | Bad Credential |
-|`200`| Token not found |   
-|`403`| Forbidden |
-|`404`|  Not found |  
-|`400`| Generic Error |
+| `200`| Success |
+| `300`| Request Failure |
+| `401`| Token not valid or Token not passed at all |   
+| `404`| Not Found |
+| `500`| Internal Server Error |  
+| `502`| Request Timed Out |

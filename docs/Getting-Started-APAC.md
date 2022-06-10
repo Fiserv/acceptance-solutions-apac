@@ -1,12 +1,22 @@
-# Welcome to Merchant Solutions Web Services
+---
+tags: [APAC, Enterprise, Online, Integration, Getting-started, SMB, Card-present, Card-not-present, Digital, Features, POS, Cloud, Local-payment-methods]
+---
 
-The Merchant Solutions APIs are built on the foundation of REST. The APIs accept standard JSON requests and return JSON encoded responses while leveraging industry standard [HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) for a seamless integration. Interaction through our APIs provides the developer community the ability to retrieve/update the customer demographic information, account's financial information,and, the payment instrument details in a simple and intuitive manner. It also provides APIs to retrieve transactions, statements details, loyalty points, offers, and, multiple EMIs conversion details.  
+# Getting Started with APAC Merchant Solutions 
 
-Our APIs are broadly grouped into following sub-catagories. Please click to specific category of interest to get more details
+APAC Merchant Solutions a one-stop-solution for SMB and enterprise clients, as well as ISO’s to get easy and instant access to API’s required to integrate with our terminal and eCommerce solutions.
+
+From payments to onboarding, eCommerce or Point-of-Sale integrations, enjoy the benefits of hassle free integration through seamless sample code sharing, quick access sandbox environment, test credential management. 
+
+APAC Merchant Solution extends a multitude of payment options to support your payment needs, including debit cards, credit cards and digital payments like Apple Pay, and Google Pay, as well as local payment methods.
+
+Our services include; tokenization, 3-D Secure, creating and managing recurring payments, instalments, setting up standing instructions, EMV and contactless payments, secure hosted Payment Pages, Payment URLs, and more.
+
+Browse our catalogue and integrate with our APIs to enrich your clients' digital experiences.
 
 # Cloud POI
 
-- [Login](./?path=/docs/APIs/UAM/UAM.md)
+- [Login](./?path=/docs/APIs/CloudPOI/Login.md)
 
 - [Sale Card](./?path=docs/APIs/PaymentAPI/SaleCard.md)
 

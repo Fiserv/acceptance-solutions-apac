@@ -7,7 +7,7 @@ encryption key provided before sending it to gateway.
 
 ## Endpoint
 
-POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/nonOpiProcessAmount`
 
 ## Payload Example
 
@@ -53,7 +53,7 @@ POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
 
 ##### The table below contains:- #####
 - Mandatory fields required for a successful request
-- Full request schemas are available in our  [API Explorer](../api/?type=post&path=/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount)
+- Full request schemas are available in our  [API Explorer](../api/?type=post&path=/boardinggateway/cloudpoidp/PosPush/nonOpiProcessAmount)
 - Identifies the required query parameters in the request message
 - Identifies the required json properties in the request message.
 
@@ -207,11 +207,11 @@ POST `/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount`
 
 The table below provides the list of error codes and description for this application.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
-|`401` |Token not found|  
-|`200` |Success|
-|`300` |Request Failure|
-|`500` |Internal Server Error|
-|`404` |Not Found|
-|`502` |Request Timed Out|
+| `200`| Success |
+| `300`| Request Failure |
+| `401`| Token not valid or Token not passed at all |   
+| `404`| Not Found |
+| `500`| Internal Server Error |  
+| `502`| Request Timed Out |
