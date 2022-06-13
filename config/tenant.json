@@ -60,17 +60,17 @@
 		"bug": {
 			"label": "bug,AcceptanceSolutionsAPAC",
 			"template": "bug.md",
-			"assignees": "brijesh.gupta@fiserv.com"
+			"assignees": "brijesh.gupta@fiserv.com,tsegurajimen,gitHubId,gitHubId"
 		},
 		"feedback": {
 			"label": "feedback,AcceptanceSolutionsAPAC",
 			"template": "feedback.md",
-			"assignees": "brijesh.gupta@fiserv.com"
+			"assignees": "brijesh.gupta@fiserv.com,tsegurajimen,gitHubId,gitHubId"
 		},
 		"enhancement": {
 			"label": "enhancement,AcceptanceSolutionsAPAC",
 			"template": "feature.md",
-			"assignees": "eileen.quek@fiserv.com"
+			"assignees": "eileen.quek@fiserv.com,tsegurajimen,gitHubId,gitHubId"
 		}
 	}]
 }
