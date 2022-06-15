@@ -4,7 +4,7 @@ info:
   description: Cloud POI - Specifications
   version: v1.0
   contact:
-    name: OZ-FS
+    name: Rajendra Kumar
 servers:
   - url: https://www.uat.fdmerchantservices.com
     description: UAT
@@ -51,9 +51,115 @@ paths:
               examples:
                 Login Sample:
                   $ref: "#/components/examples/LoginRs402"
+  /boardinggateway/cloudpoidp/PosPush/nonOpiProcessAmount:
+    post:
+      tags:
+      - Cloud POI
+      summary: PaymentAPI
+      description: This API is used to send refund transaction request. Merchants needs to add session token received during login api call in the header of this API.
+      operationId: nonOpiProcessAmount
+      x-group-name: Cloud POI
+      x-proxy-name: Payment API
+      x-default-example: Default example
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NonOpiProcessAmountRequest"
+            examples:
+              Default example:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_SALE'
+              Sample - SALE:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_SALE'
+              Sample - SALE WITH LPM:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_LPM'
+              Sample - PreAuth Sale:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_PREAUTHSALE'
+              Sample - PreAuth Completion:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_PREAUTCOMPLETION'
+              Sample - Refund:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_Refund'
+              Sample - Void:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_Void'
+              Sample - Emi Sale:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_EmiSale'
+              Sample - Transaction Status Check:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_TransactionStatusCheck'
+              Sample - Settlement Transacton:
+                $ref: '#/components/examples/NonOpiProcessAmountRequest_SettlementTransaction'     
+        required: true     
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Response"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Status401"
+              examples:
+                "401":
+                  $ref: '#/components/examples/401-Premier'
+        "300":
+          description: Request Failure
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Status300"
+              examples:
+                "300":
+                  $ref: '#/components/examples/300-Premier'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Status500"
+              examples:
+                "500":
+                  $ref: '#/components/examples/500-Premier'
+        "502":
+          description: Request Timed Out
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Status502"
+              examples:
+                "502":
+                  $ref: '#/components/examples/502-Premier'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Status404"
+              examples:
+                "404":
+                  $ref: '#/components/examples/404-Premier'
 components:
+  parameters:
+    ApiKeyHeader:
+      name: Authorization
+      schema: {type: string, example: '0pMHhH9J0D3_P5yUJDsjGUWBcAzEquRT'}
+      in: header
+      required: true
+      description: never expiring token for all apis
   schemas:
-
+    Response:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/Status"
+        data:
+          type: object
+          description: response info
+          example:    { "functionCode": "00","source": null,"billingAmount": null,"invoiceNumber": "202251211","customerMobile": null,"billingCurrency": "INR","transactionId": "202202250834781",    "customerName": null, "respCode": "200","response": "SUCCESS","cardType": null,"rrn": null, "authCode": null, "merchantId": "470000095488827", "terminalId": "33878692",    "respMsg": "Transaction Success","amexSeNumber": "","emiTenure": "","emiInterestRate": "", "emiProcessingFee": "0",  "emiDiscAmt": "0.08",   "dccIndicator": "0",    "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "", "totalAmount": "10.00",   "merchantRefNumber": "Guru415",    "customerRefNumber": "33333333333",    "emiFlag": "",    "cardNumber": null,  "expDate": "",  "posEntryMode": "",  "walletType": "W0", "primaryId": "Guru415",  "custId": "220225121129",   "emiPerMonth": "0",    "tranDate": "22022022",   "tranTime": "",    "cardBin": null,    "tipAmount": null,    "settlementDetails": "",    "walletId": "W0"}
     AuthRequest:
       required:
         - username
@@ -112,8 +218,596 @@ components:
       properties:
         status:
           $ref: "#/components/schemas/Status402"
-
+    NonOpiProcessAmountRequest:
+      required:
+        - merchantId
+        - ain
+        - terminalId
+        - merchantRefNumber
+        - authAmount
+        - totalAmount
+        - tranCurrency
+        - reqDate
+        - reqTime
+        - mrchCountryCode
+      properties:
+        merchantId:
+         type: string
+         maxLength: 15
+         minLength: 15
+         description: Merchant ID assigned
+         example: "470000050790214"
+        ain:
+         type: string
+         maxLength: 7
+         minLength: 7
+         description: Acquirer institution number
+         example: "4700000"
+        functionCode:
+         type: string
+         maxLength: 02
+         minLength: 02
+         description: 00 = "Sale"  - Digital and Card
+          01 = "Sale" - Card
+          02 = "Preauth"
+          03 = "Preauth Completion
+          04 = "Refund"
+          05 = "Void"
+          08 = "EMI Sale"
+          11 = "Transaction Status Check" (Inquiry)
+          12 = "Settlement"
+         example: "01" 
+        terminalId:
+         type: string
+         maxLength: 8
+         minLength: 8
+         description: Terminal Id
+         example: "62850698" 
+        merchantRefNumber:
+         type: string
+         maxLength: 14
+         minLength: 14
+         description: Unique number for each transaction. Inquiry transaction should have same MRN of original txn
+         example: "12345678900987"
+        customerRefNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Consumer Number
+         example: "12345678900987654321"
+        authAmount:
+         type: string
+         maxLength: 19
+         minLength: 0
+         description: Bill Amount including decimal (ex 50.00 for $50 sale). Send 0.00 for inquiry txn
+         example: "50.05"
+        convFee:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "10.05"
+        sgst:
+         type: string
+         description: State GST Including decimal (Ex:- "100.00" for $10 sgst)
+         example: "100.00"
+        igst:
+         type: string
+         description: State GST Including decimal (Ex:- "10.00" for $10 igst
+         example: "10.05"
+        cgst:
+         type: string
+         description: Central GST Including decimal (Ex:- "10.00" for $10 cgst)
+         example: "50.05"
+        totalAmount:
+         type: string
+         description: Total Amount (auth, fee, gsts) including decimal ((Ex:- "57.00" for $57 sale)
+         example: "57.00"
+        tranCurrency:
+         type: integer
+         maxLength: 3
+         minLength: 3
+         description: Transaction Currency Code (3-digit numeric value)
+         example: 126
+        reqDate:
+         type: string
+         description: Transaction initiated Date(DDMMYYYY) 
+         example: "28022022"
+        reqTime:
+         type: string
+         description: Transaction initiated Time(HHMMSS)
+         example: "013034"
+        tranDate:
+         type: string
+         description: Original transaction  Date(DDMMYYYY) 
+         example: "28022022"
+        tranTime:
+         type: string
+         description: Original transaction  Time(HHMMSS)
+         example: "013034"
+        invoiceNumber:
+         type: string
+         maxLength: 20
+         minLength: 20
+         description: Must pass the same value as original transaction
+         example: "12345678900987654321"
+        authCode:
+         type: string
+         maxLength: 6
+         minLength: 6
+         description: Must pass the same value received in original transaction response
+         example: "123456"
+        cardLastNumber:
+         type: string
+         maxLength: 4
+         minLength: 4
+         description: Last 4 Digits of Card Number
+         example: "1234"
+        cardBin:
+         type: string
+         description: First six digits of the Card, used in the original (sale) transaction
+         example: "8456"
+        callbackURL:
+         type: string
+         description: Response URL, place holder for notification API call feature)
+         example: ""
+        mrchCountryCode:
+         type: string
+         maxLength: 3
+         minLength: 3
+         description: Merchant Country Code (3-digit numeric value)
+         example: "356"
+        tranType:
+         type: string
+         maxLength: 50
+         minLength: 0
+         description: Transaction Description
+         example: "sale"
+        rrn:
+         type: string
+         description: Must pass the same value received in original transaction response
+         example: ""
+        udf1:
+         type: string
+         description: User Defined Field
+         example: ""
+        udf2:
+         type: string
+         description: User Defined Field
+         example: ""
+        emiTenure:
+         type: string
+         description: EMI duration
+         example: ""
+        paramList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Params"
+    Params:
+      type: object
+      properties:
+        param_lit:
+          type: string
+          description: kparam_lit
+          example: "param 2 key"
+        param:
+          type: string
+          description: param
+          example: "54"
+    Status:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 200
+          description:  status code
+        message:
+          type: string
+          description: success message
+          example: Success
+    Status401:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 401
+          description:  status code
+        message:
+          type: string
+          description: Token not found
+          example: Token not found
+    Status300:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 300
+          description:  status code
+        message:
+          type: string
+          description: Request Failure
+          example: Request Failure
+    Status404:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 404
+          description:  status code
+        message:
+          type: string
+          description: Not Found
+          example: Not Found
+    Status500:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 500
+          description:  status code
+        message:
+          type: string
+          description: Internal Server Error
+          example: Internal Server Error
+    Status502:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 502
+          description:  status code
+        message:
+          type: string
+          description: Request Timed Out
+          example: Request Timed Out
+    Status1:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          example: 402
+          description:  status code
+        message:
+          type: string
+          description: Bad Credential
+          example: 'Bad Credential'
   examples:
+    NonOpiProcessAmountRequest_SALE:
+      value:
+        ain: "4700000"
+        functionCode: "00"
+        merchantId: "470000095488827"
+        terminalId: "33878692"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "22"
+        convFee: "43"
+        cgst: "12"
+        igst: "23"
+        sgst: "55"
+        totalAmount: "10"
+        tranCurrency: 356
+        reqDate: "22022022"
+        reqTime: "161900"
+        authAmount: "111"
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}]
+
+
+    NonOpiProcessAmountRequest_LPM:
+      value:
+        ain: "4700000"
+        functionCode: "00"
+        merchantId: "470000095488828"
+        terminalId: "33878692"
+        customerRefNumber: "12345678998765432912"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "22"
+        convFee: "43"
+        cgst: "12"
+        igst: "23"
+        sgst: "55"
+        totalAmount: "10"
+        tranCurrency: 356
+        reqDate: "22022022"
+        reqTime: "161900"
+        authAmount: "111"
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}]
+  
+    NonOpiProcessAmountRequest_PREAUTHSALE:
+      value:
+        ain: "4700000"
+        functionCode: "02"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "555"
+        convFee: "6"
+        cgst: "7"
+        igst: "8"
+        sgst: "7"
+        totalAmount: "25"
+        tranCurrency: 840
+        reqDate: "28022022"
+        reqTime: "161900"
+        authAmount: "12"
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+
+    NonOpiProcessAmountRequest_PREAUTCOMPLETION:
+      value:
+        ain: "4700000"
+        functionCode: "03"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "999"
+        convFee: "666"
+        cgst: "55557"
+        igst: "66666"
+        sgst: "7777"
+        totalAmount: "111"
+        tranCurrency: 840
+        reqDate: "28022022"
+        reqTime: "161900"
+        authAmount: "13"
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: "Sale"
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  "23133"
+        udf2:  "21313"
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]    
+    NonOpiProcessAmountRequest_Refund:
+      value:
+        ain: "4700000"
+        functionCode: "04"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: ""
+        convFee: ""
+        cgst: ""
+        igst: ""
+        sgst: ""
+        totalAmount: "10"
+        tranCurrency: 356
+        reqDate: "01032022"
+        reqTime: "161900"
+        authAmount: "15"
+        tranDate: "17022021"
+        tranTime: "160218"
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: "refund"
+        rrn:  "000000000010"
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  "refund123"
+        udf2:  "21321313"
+        mrchDiscountAmt: ""
+        cardBin: "438628"
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}] 
+    NonOpiProcessAmountRequest_Void:
+      value:
+        ain: "4700000"
+        functionCode: "05"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "222"
+        convFee: "3"
+        cgst: "3"
+        igst: "3"
+        sgst: "4"
+        totalAmount: "25"
+        tranCurrency: 840
+        reqDate: "27022022"
+        reqTime: "161900"
+        authAmount: "123"
+        tipAmount: ""
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  "2132313"
+        mrchDiscountAmt: ""
+        cardBin: ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+    NonOpiProcessAmountRequest_EmiSale:
+      value:
+        ain: "4700000"
+        functionCode: "08"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "809"
+        convFee: "36"
+        cgst: "63"
+        igst: "43"
+        sgst: "34"
+        totalAmount: "250"
+        tranCurrency: 849
+        reqDate: "27022022"
+        reqTime: "161900"
+        authAmount: "12345678"
+        tipAmount: ""
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "366"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  "3"
+        udf1:  ""
+        udf2:  ""
+        mrchDiscountAmt: ""
+        cardBin: ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+    NonOpiProcessAmountRequest_TransactionStatusCheck:
+      value:
+        ain: "4700000"
+        functionCode: "11"
+        merchantId: "470000095241203"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "124"
+        convFee: ""
+        cgst: ""
+        igst: ""
+        sgst: ""
+        totalAmount: "200"
+        tranCurrency: 849
+        reqDate: "16022022"
+        reqTime: "161900"
+        authAmount: "12345678900"
+        tipAmount: ""
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678998765432121"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "356"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        mrchDiscountAmt: ""
+        cardBin: ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+    NonOpiProcessAmountRequest_SettlementTransaction:
+      value:
+        ain: "4700000"
+        functionCode: "12"
+        merchantId: "470000032001091"
+        terminalId: "33533344"
+        customerRefNumber: "12345678998765432112"
+        merchantRefNumber: "Guru1234567891"
+        billerId: "845"
+        convFee: "20"
+        cgst: "16"
+        igst: "14"
+        sgst: "12"
+        totalAmount: "200"
+        tranCurrency: 256
+        reqDate: "26022022"
+        reqTime: "161900"
+        authAmount: ""
+        tipAmount: ""
+        tranDate: ""
+        tranTime: ""
+        invoiceNumber: "12345678900987654321"
+        cardLastNumber: "1234"
+        callbackURL: ""
+        mrchCountryCode: "123"
+        tranType: ""
+        rrn:  ""
+        emiRefNumber:  ""
+        emiTenure:  ""
+        udf1:  ""
+        udf2:  ""
+        mrchDiscountAmt: ""
+        cardBin: ""
+        paramList:
+          [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
+    "401-Premier":
+      value:
+        status:
+          statusCode: 401
+          messages: Token not found
+    "300-Premier":
+      value:
+        status:
+          statusCode: 300
+          messages: Request Failure
+    "500-Premier":
+      value:
+        status:
+          statusCode: 500
+          messages: Internal Server Error
+    "404-Premier":
+      value:
+        status:
+          statusCode: 404
+          messages: Not Found
+    "502-Premier":
+      value:
+        status:
+          statusCode: 502
+          messages: Request Timed Out
     LoginRq:
       value:
         username: "Testuser135"
@@ -126,3 +820,4 @@ components:
     LoginRs402:
       value:
         message: "Unauthorized"
+  
