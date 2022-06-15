@@ -60,17 +60,17 @@
 		"bug": {
 			"label": "bug,AcceptanceSolutionsAPAC",
 			"template": "bug.md",
-			"assignees": "brijesh.gupta@fiserv.com,Eileenqfsv,rajenkumfirstdata,rajenkumfiserv"
+			"assignees": "brijesh.gupta@fiserv.com,Eileenqfsv,rajenkumfirstdata,rajenkumfiserv,cindy628,brijeshgu"
 		},
 		"feedback": {
 			"label": "feedback,AcceptanceSolutionsAPAC",
 			"template": "feedback.md",
-			"assignees": "brijesh.gupta@fiserv.com,Eileenqfsv,rajenkumfirstdata,rajenkumfiserv"
+			"assignees": "brijesh.gupta@fiserv.com,Eileenqfsv,rajenkumfirstdata,rajenkumfiserv,cindy628,brijeshgu"
 		},
 		"enhancement": {
 			"label": "enhancement,AcceptanceSolutionsAPAC",
 			"template": "feature.md",
-			"assignees": "eileen.quek@fiserv.com,Eileenqfsv,rajenkumfirstdata,rajenkumfiserv"
+			"assignees": "eileen.quek@fiserv.com,Eileenqfsv,rajenkumfirstdata,rajenkumfiserv,cindy628,brijeshgu"
 		}
 	}]
 }
