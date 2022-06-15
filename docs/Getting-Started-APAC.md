@@ -36,6 +36,8 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
+- [test](./?path=docs/APIs/PaymentAPI/test.html)
+
 #  Boarding
 
 - [Login](./?path=/docs/APIs/externalboarding/Login.md)
