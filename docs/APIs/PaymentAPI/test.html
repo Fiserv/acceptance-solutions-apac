@@ -1,25 +1,24 @@
-
+<!DOCTYPE html>
 <html>
-  <Header><title> test </title></Header>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src https://dev-developerstudio.fiserv.com; child-src 'none'; object-src 'none'">
-
-  <script language="javascript">
-    function test() {
-      alert('test');
-    }
-  </script>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    alert("Text: " + $("#test").text());
+  });
+  $("#btn2").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+});
+</script>
+</head>
 <body>
 
-<h2>HTML Forms</h2>
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
 
-<form action="/test.html">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="test1"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="test"><br><br>
-  <input type="submit" value="Submit" onclick="test()">
-</form> 
-
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
 
 </body>
 </html>
