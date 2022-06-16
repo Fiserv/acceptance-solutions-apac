@@ -1,18 +1,20 @@
 
 <html>
-<body>
+  <Header><title> test </title></Header>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src https://dev-developerstudio.fiserv.com; child-src 'none'; object-src 'none'">
 
-<h2>HTML Forms
   <script language="javascript">
     function test() {
       alert('test');
     }
   </script>
-</h2>
+<body>
 
-<form action="/test.jsp">
+<h2>HTML Forms</h2>
+
+<form action="/test.html">
   <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="test"><br>
+  <input type="text" id="fname" name="fname" value="test1"><br>
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname" value="test"><br><br>
   <input type="submit" value="Submit" onclick="test()">
