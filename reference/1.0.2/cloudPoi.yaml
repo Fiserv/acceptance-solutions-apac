@@ -857,63 +857,429 @@ components:
           statusCode: 200
           message: Success
         data:
-           {"functionCode": "00", "source": null, "billingAmount": null, "invoiceNumber": "202251211", "customerMobile": null, "billingCurrency": "INR", "transactionId": "202202250834781", "customerName": null, "respCode": "200", "response": "SUCCESS", "cardType": null, "rrn": null, "authCode": null, "merchantId": "470000095488827", "terminalId": "33878692", "respMsg": "Transaction Success", "amexSeNumber": "", "emiTenure": "", "emiInterestRate": "", "emiProcessingFee": "0", "emiDiscAmt": "0.08", "dccIndicator": "0", "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "", "totalAmount": "10.00", "merchantRefNumber": "Guru415", "customerRefNumber": "33333333333", "emiFlag": "", "cardNumber": null, "expDate": "", "posEntryMode": "", "walletType": "W0", "primaryId": "Guru415", "custId": "220225121129", "emiPerMonth": "0", "tranDate": "22022022", "tranTime": "", "cardBin": null, "tipAmount": null, "settlementDetails": "", "walletId": "W0"}
+            functionCode: "00"
+            source: null
+            billingAmount: null
+            invoiceNumber: "202251211"
+            customerMobile: null
+            billingCurrency: "INR"
+            transactionId: "202202250834781"
+            customerName: null
+            respCode: "200"
+            response: "SUCCESS"
+            cardType: null
+            rrn: null
+            authCode: null
+            merchantId: "470000095488827"
+            terminalId: "33878692"
+            respMsg: "Transaction Success"
+            amexSeNumber: ""
+            emiTenure: ""
+            emiInterestRate: ""
+            emiProcessingFee: "0"
+            emiDiscAmt: "0.08"
+            dccIndicator: "0"
+            dccExchangeRate": ""
+            offlineFlag: "N"
+            cardLastNumber: ""
+            totalAmount: "10.00"
+            merchantRefNumber: "Guru415"
+            customerRefNumber: "33333333333"
+            emiFlag: ""
+            cardNumber: null,
+            expDate: ""
+            posEntryMode: ""
+            walletType: "W0"
+            primaryId: "Guru15"
+            custId: "220225121129"
+            emiPerMonth: "0"
+            tranDate: "22022022"
+            tranTime: ""
+            cardBin: null
+            tipAmount: null
+            settlementDetails: ""
+            walletId: "W0"
     ResponseSALEWITHLPM:
       value:
         status: 
           statusCode: 200
           message: Success
         data:
-           {"functionCode": "00", "source": null, "billingAmount": null, "invoiceNumber": "202251211", "customerMobile": null, "billingCurrency": "INR", "transactionId": "202202250834781", "customerName": null, "respCode": "200", "response": "SUCCESS", "cardType": null, "rrn": null, "authCode": null, "merchantId": "470000095488827", "terminalId": "33878692", "respMsg": "Transaction Success", "amexSeNumber": "", "emiTenure": "", "emiInterestRate": "", "emiProcessingFee": "0", "emiDiscAmt": "0.08", "dccIndicator": "0", "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "", "totalAmount": "10.00", "merchantRefNumber": "Guru415", "customerRefNumber": "33333333333", "emiFlag": "", "cardNumber": null, "expDate": "", "posEntryMode": "", "walletType": "W0", "primaryId": "Guru415", "custId": "220225121129", "emiPerMonth": "0", "tranDate": "22022022", "tranTime": "", "cardBin": null, "tipAmount": null, "settlementDetails": "", "walletId": "W0"}
+             functionCode: "00"
+             source: null
+             billingAmount: null
+             invoiceNumber: "202251211"
+             customerMobile: null
+             billingCurrency: "INR"
+             transactionId: "202202250834781"
+             customerName: null
+             respCode: "200"
+             response: "SUCCESS"
+             cardType: null
+             rrn: null
+             authCode: null
+             merchantId: "470000095488827"
+             terminalId: "33878692"
+             respMsg: "Transaction Success"
+             amexSeNumber: ""
+             emiTenure: ""
+             emiInterestRate: ""
+             emiProcessingFee: "0"
+             emiDiscAmt: "0.08"
+             dccIndicator: "0"
+             dccExchangeRate": ""
+             offlineFlag: "N"
+             cardLastNumber: ""
+             totalAmount: "10.00"
+             merchantRefNumber: "Guru415"
+             customerRefNumber: "33333333333"
+             emiFlag: ""
+             cardNumber: null,
+             expDate: ""
+             posEntryMode: ""
+             walletType: "W0"
+             primaryId: "Guru15"
+             custId: "220225121129"
+             emiPerMonth: "0"
+             cardBin: null
+             tipAmount: null
+             settlementDetails: ""
+             walletId: "W0"
     ResponsePreAuthSale:
       value:
         status: 
           statusCode: 200
           message: Success
         data:
-           { "functionCode": "02", "source": null, "billingAmount": null, "invoiceNumber": "32", "customerMobile": null, "billingCurrency": "INR", "transactionId": "202203015176096", "customerName": null, "respCode": "200", "response": "SUCCESS", "cardType": null, "rrn": "000000000113", "authCode": "006556", "merchantId": "470000095241203", "terminalId": "33533344", "respMsg": "Transaction Success", "amexSeNumber": "", "emiTenure": "", "emiInterestRate": "", "emiProcessingFee": "0", "emiDiscAmt": "0", "dccIndicator": "0", "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "0042", "totalAmount": "25.00", "merchantRefNumber": "Guru601", "customerRefNumber": "444444444", "emiFlag": "0", "cardNumber": "541333****0042", "expDate": "4912", "posEntryMode": "CLSS", "walletType": "", "primaryId": "", "custId": "", "emiPerMonth": "0", "tranDate": "28022022", "tranTime": "", "cardBin": null, "tipAmount": null, "settlementDetails": "TILL", "walletId": ""}
+           functionCode: "02"
+           source: null
+           billingAmount: null
+           invoiceNumber: "32"
+           customerMobile: null
+           billingCurrency: "INR"
+           transactionId: "202203015176096"
+           customerName: null
+           respCode: "200"
+           response: "SUCCESS"
+           cardType: null
+           rrn: "000000000113"
+           authCode: "006556"
+           merchantId: "470000095241203"
+           terminalId: "33533344"
+           respMsg: "Transaction Success"
+           amexSeNumber: ""
+           emiTenure: ""
+           emiInterestRate: ""
+           emiProcessingFee: "0"
+           emiDiscAmt: "0"
+           dccIndicator: "0"
+           dccExchangeRate: ""
+           offlineFlag: "N"
+           cardLastNumber: "0042"
+           totalAmount: "25.00"
+           merchantRefNumber: "Guru601"
+           customerRefNumber: "444444444"
+           emiFlag: "0"
+           cardNumber: "541333****0042"
+           expDate: "4912"
+           posEntryMode: "CLSS"
+           walletType: ""
+           primaryId: ""
+           custId: ""
+           emiPerMonth: "0"
+           tranDate: "28022022"
+           tranTime: ""
+           cardBin: null
+           tipAmount: null
+           settlementDetails: "TILL"
+           walletId: ""
     ResponsePreAuthCompletion:
       value:
         status: 
           statusCode: 200
           message: Success
         data:
-           { "functionCode": "03", "source": null, "billingAmount": null, "invoiceNumber": "13", "customerMobile": null, "billingCurrency": "INR", "transactionId": 202202154855355", "customerName": null, "respCode": "200", "response": "SUCCESS", "cardType": null, "rrn": "000000000036", "authCode": "110251", "merchantId": "470000095241203", "terminalId": "33533344", "respMsg": "Transaction Success", "amexSeNumber": "", "emiTenure": "", "emiInterestRate": "", "emiProcessingFee": "", "emiDiscAmt": "", "dccIndicator": "0", "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "0010", "totalAmount": "111.00", "merchantRefNumber": "Guru132", "customerRefNumber": "1111111111", "emiFlag": "0", "cardNumber": "4761 ****0010", "expDate": "2212", "posEntryMode": "INSERT", "walletType": "", "primaryId": "", "custId": "", "emiPerMonth": "", "tranDate": "13022022", "tranTime": "122434", "cardBin": null, "tipAmount": null, "walletId": ""}
+            functionCode: "03"
+            source: null
+            billingAmount: null
+            invoiceNumber: "13"
+            customerMobile: null
+            billingCurrency: "INR"
+            transactionId: "202202154855355"
+            customerName: null
+            respCode: "200"
+            response: "SUCCESS"
+            cardType: null
+            rrn: "000000000036"
+            authCode: "110251"
+            merchantId: "470000095241203"
+            terminalId: "33533344"
+            respMsg: "Transaction Success"
+            amexSeNumber: ""
+            emiTenure: ""
+            emiInterestRate: ""
+            emiProcessingFee: ""
+            emiDiscAmt: ""
+            dccIndicator: "0"
+            dccExchangeRate: ""
+            offlineFlag: "N"
+            cardLastNumber: "0010"
+            totalAmount: "111.00"
+            merchantRefNumber: "Guru132"
+            customerRefNumber: "1111111111"
+            emiFlag: "0"
+            cardNumber: "4761 ****0010"
+            expDate: "2212"
+            posEntryMode: "INSERT"
+            walletType: ""
+            primaryId: ""
+            custId: ""
+            emiPerMonth: ""
+            tranDate: "13022022"
+            tranTime: "122434"
+            cardBin: null
+            tipAmount: null
+            walletId: ""
     ResponseRefund:
       value:
         status: 
           statusCode: 200
           message: Success
         data:
-           { "functionCode": "04", "source": null, "billingAmount": null, "invoiceNumber": null, "customerMobile": null, "billingCurrency": null, "transactionId": "202203010754152", "customerName": null, "respCode": "200", "response": "SUCCESS", "cardType": null, "rrn": "000000000010", "authCode": "177559", "merchantId": "470000095241203", "terminalId": "33533344", "respMsg": null, "amexSeNumber": "", "emiTenure": null, "emiInterestRate": null, "emiProcessingFee": null, "emiDiscAmt": null, "dccIndicator": "0", "dccExchangeRate": null, "offlineFlag": null, "cardLastNumber": null, "totalAmount": "10", "merchantRefNumber": "GuruR14", "customerRefNumber": "", "emiFlag": null, "cardNumber": null, "expDate": null, "posEntryMode": "MANUAL", "walletType": null, "primaryId": null,   "custId": null, "emiPerMonth": null, "tranDate": "17022021", "tranTime": "160218", "cardBin": "438628", "tipAmount": null, "settlementDetails": null, "walletId": null}
+            functionCode": "04"
+            source: null
+            billingAmount: null
+            invoiceNumber: null
+            customerMobile: null
+            billingCurrency: null
+            transactionId: "202203010754152"
+            customerName: null
+            respCode: "200"
+            response: "SUCCESS"
+            cardTyp": null
+            rrn: "000000000010"
+            authCode: "177559"
+            merchantId: "470000095241203"
+            terminalId: "33533344"
+            respMsg: null
+            amexSeNumber: ""
+            emiTenure: null
+            emiInterestRate: null
+            emiProcessingFee: null
+            emiDiscAmt: null
+            dccIndicator: "0"
+            dccExchangeRate: null
+            offlineFlag: null
+            cardLastNumber: null
+            totalAmount: "10"
+            merchantRefNumber: "GuruR14"
+            customerRefNumber: ""
+            emiFlag: null
+            cardNumber: null
+            expDate: null
+            posEntryMode: "MANUAL"
+            walletType: null
+            primaryId: null
+            custId: null
+            emiPerMonth: null
+            tranDate: "17022021"
+            tranTime: "160218"
+            cardBin: "438628"
+            tipAmount: null
+            settlementDetails: null
+            walletId: null
     ResponseVoid:
       value:
         status: 
           statusCode: 200
           message: Success
         data:
-           { "functionCode": "05", "source": null, "billingAmount": null, "invoiceNumber": "18", "customerMobile": null, "billingCurrency": "INR", "transactionId": "202202274190781", "customerName": null, "respCode": "200", "response": "SUCCESS", "cardType": null, "rrn": "000000000045", "authCode": "180024", "merchantId": "470000095241203", "terminalId": "33533344", "respMsg": "Transaction Success", "amexSeNumber": "", "emiTenure": "", "emiInterestRate": "", "emiProcessingFee": "0", "emiDiscAmt": "0", "dccIndicator": "0", "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "0010", "totalAmount": "25.00", "merchantRefNumber": "GURU513", "customerRefNumber": "7777777", "emiFlag": "0", "cardNumber": "476173****0010", "expDate": "2212", "posEntryMode": "INSERT", "walletType": "", "primaryId": "", "custId": "", "emiPerMonth": "0", "tranDate": "27022022", "tranTime": "", "cardBin": null, "tipAmount": null, "settlementDetails": "TILL", "walletId": ""}
+             functionCode: "05"
+             source: null
+             billingAmount: null
+             invoiceNumber: "18"
+             customerMobile: null
+             billingCurrency: "INR"
+             transactionId: "202202274190781"
+             customerName: null
+             respCode: "200"
+             response: "SUCCESS"
+             cardType: null
+             rrn: "000000000045"
+             authCode: "180024"
+             merchantId: "470000095241203"
+             terminalId: "33533344"
+             respMsg: "Transaction Success"
+             amexSeNumber: ""
+             emiTenure: ""
+             emiInterestRate: ""
+             emiProcessingFee: "0"
+             emiDiscAmt: "0"
+             dccIndicator: "0"
+             dccExchangeRate: ""
+             offlineFlag: "N"
+             cardLastNumber: "0010"
+             totalAmount: "25.00"
+             merchantRefNumber: "GURU513"
+             customerRefNumber: "7777777"
+             emiFlag: "0"
+             cardNumber: "476173****0010"
+             expDate: "2212"
+             posEntryMode: "INSERT"
+             walletType: ""
+             primaryId: ""
+             custId: ""
+             emiPerMonth: "0"
+             tranDate: "27022022"
+             tranTime: ""
+             cardBin: null
+             tipAmount: null
+             settlementDetails: "TILL"
+             walletId: ""
     ResponseEmiSale:
       value:
         status: 
           statusCode: 200
           message: Success
         data:
-           { "functionCode": "08", "source": null, "billingAmount": null, "invoiceNumber": "22", "customerMobile": null, "billingCurrency": "INR", "transactionId": "202202280728139", "customerName": null, "respCode": "200", "response": "SUCCESS", "cardType": null, "rrn": "000000000075", "authCode": "006264", "merchantId": "470000095241203", "terminalId": "33533344", "respMsg": "Transaction Success", "amexSeNumber": "", "emiTenure": "03", "emiInterestRate": "13.00", "emiProcessingFee": "10", "emiDiscAmt": "0", "dccIndicator": "0", "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "0042", "totalAmount": "250.00", "merchantRefNumber": "Guru526", "customerRefNumber": "1051104367", "emiFlag": "1", "cardNumber": "541333****0042", "expDate": "4912", "posEntryMode": "CLSS", "walletType": "", "primaryId": "", "custId": "", "emiPerMonth": "85.14", "tranDate": "28022022", "tranTime": "", "cardBin": null, "tipAmount": null, "settlementDetails": "TILL", "walletId": ""}
+            functionCode: "08"
+            source: null
+            billingAmount: null
+            invoiceNumber: "22"
+            customerMobile: null
+            billingCurrency: "INR"
+            transactionId: "202202280728139"
+            customerName: null
+            respCode": "200"
+            response: "SUCCESS"
+            cardType: null
+            rrn: "000000000075"
+            authCode: "006264"
+            merchantId: "470000095241203"
+            terminalId: "33533344"
+            respMsg: "Transaction Success"
+            amexSeNumber: ""
+            emiTenure: "03"
+            emiInterestRate: "13.00"
+            emiProcessingFee: "10"
+            emiDiscAmt: "0"
+            dccIndicator: "0"
+            dccExchangeRate: ""
+            offlineFlag: "N"
+            cardLastNumber: "0042"
+            totalAmount: "250.00"
+            merchantRefNumber: "Guru526"
+            customerRefNumber: "1051104367"
+            emiFlag: "1"
+            cardNumber: "541333****0042"
+            expDate: "4912"
+            posEntryMode: "CLSS"
+            walletType: ""
+            primaryId: ""
+            custId: ""
+            emiPerMonth: "85.14"
+            tranDate: "28022022"
+            tranTime: ""
+            cardBin: null
+            tipAmount: null
+            settlementDetails: "TILL"
+            walletId: ""
     ResponseTransactionStatusCheck:
       value:
         status: 
           statusCode: 200
           message: Success
         data:
-            { "functionCode": "11", "source": null, "billingAmount": null, "invoiceNumber": "18", "customerMobile": null, "billingCurrency": "INR", "transactionId": "202202274190781", "customerName": null, "respCode": "200", "response": "SUCCESS", "cardType": null, "rrn": "000000000045", "authCode": "180024", "merchantId": "470000095241203", "terminalId": "33533344", "respMsg": "Transaction Success", "amexSeNumber": "", "emiTenure": "", "emiInterestRate": "", "emiProcessingFee": "0", "emiDiscAmt": "0", "dccIndicator": "0", "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "0010", "totalAmount": "25.00", "merchantRefNumber": "GURU513", "customerRefNumber": "7777777", "emiFlag": "0", "cardNumber": "476173****0010", "expDate": "2212", "posEntryMode": "INSERT", "walletType": "", "primaryId": "", "custId": "", "emiPerMonth": "0", "tranDate": "27022022", "tranTime": " ", "cardBin": null, "tipAmount": null, "settlementDetails": "TILL", "walletId": ""}       
+             functionCode: "11"
+             source: null
+             billingAmount: null
+             invoiceNumber: "18"
+             customerMobile: null
+             billingCurrency: "INR"
+             transactionId: "202202274190781"
+             customerName: null
+             respCode: "200"
+             response: "SUCCESS"
+             cardType: null
+             rrn: "000000000045"
+             authCode: "180024"
+             merchantId: "470000095241203"
+             terminalId: "33533344"
+             respMsg: "Transaction Success"
+             amexSeNumber: ""
+             emiTenure: ""
+             emiInterestRate: ""
+             emiProcessingFee: "0"
+             emiDiscAmt: "0"
+             dccIndicator: "0"
+             dccExchangeRate: ""
+             offlineFlag: "N"
+             cardLastNumber: "0010"
+             totalAmount: "25.00"
+             merchantRefNumber: "GURU513"
+             customerRefNumber: "7777777"
+             emiFlag: "0"
+             cardNumber: "476173****0010"
+             expDate: "2212"
+             posEntryMode: "INSERT"
+             walletType: ""
+             primaryId: ""
+             custId: ""
+             emiPerMonth: "0"
+             tranDate: "27022022"
+             tranTime: " "
+             cardBin: null
+             tipAmount: null
+             settlementDetails: "TILL"
+             walletId: ""       
     ResponseDefault:
       value:
         status: 
           statusCode: 200
           message: Success
         data:
-             { "functionCode": "00","source": null,"billingAmount": null,"invoiceNumber": "202251211","customerMobile": null,"billingCurrency": "INR","transactionId": "202202250834781",    "customerName": null, "respCode": "200","response": "SUCCESS","cardType": null,"rrn": null, "authCode": null, "merchantId": "470000095488827", "terminalId": "33878692",    "respMsg": "Transaction Success","amexSeNumber": "","emiTenure": "","emiInterestRate": "", "emiProcessingFee": "0",  "emiDiscAmt": "0.08",   "dccIndicator": "0",    "dccExchangeRate": "", "offlineFlag": "N", "cardLastNumber": "", "totalAmount": "10.00",   "merchantRefNumber": "Guru415",    "customerRefNumber": "33333333333",    "emiFlag": "",    "cardNumber": null,  "expDate": "",  "posEntryMode": "",  "walletType": "W0", "primaryId": "Guru415",  "custId": "220225121129",   "emiPerMonth": "0",    "tranDate": "22022022",   "tranTime": "",    "cardBin": null,    "tipAmount": null,    "settlementDetails": "",    "walletId": "W0"}
+            functionCode: "00"
+            source: null
+            billingAmount: null
+            invoiceNumber: "202251211"
+            customerMobile: null
+            billingCurrency: "INR"
+            transactionId: "202202250834781"
+            customerName: null
+            respCode: "200"
+            response: "SUCCESS"
+            cardType: null
+            rrn: null
+            authCode: null
+            merchantId: "470000095488827"
+            terminalId: "33878692"
+            respMsg: "Transaction Success"
+            amexSeNumber: ""
+            emiTenure: ""
+            emiInterestRate: ""
+            emiProcessingFee: "0"
+            emiDiscAmt: "0.08"
+            dccIndicator: "0"
+            dccExchangeRate": ""
+            offlineFlag: "N"
+            cardLastNumber: ""
+            totalAmount: "10.00"
+            merchantRefNumber: "Guru415"
+            customerRefNumber: "33333333333"
+            emiFlag: ""
+            cardNumber: null,
+            expDate: ""
+            posEntryMode: ""
+            walletType: "W0"
+            primaryId: "Guru15"
+            custId: "220225121129"
+            emiPerMonth: "0"
+            tranDate: "22022022"
+            tranTime: ""
+            cardBin: null
+            tipAmount: null
+            settlementDetails: ""
+            walletId: "W0"
     "401-Premier":
       value:
         status:
