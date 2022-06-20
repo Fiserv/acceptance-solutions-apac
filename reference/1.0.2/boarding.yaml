@@ -623,7 +623,7 @@ paths:
         "200":
           description: OK
           content:
-            '*/*':
+            application/json:
               schema:
                type: object
                description: get package List
@@ -1335,7 +1335,7 @@ paths:
         "200":
           description: OK
           content:
-            '*/*':
+            application/json:
               schema:
                 type: object
                 description: document matrix response
