@@ -168,7 +168,7 @@ paths:
         "200":
           description: OK
           content:
-            '*/*':
+            application/json:
               schema:
                  type: object
                  description: ref mid response
@@ -562,7 +562,7 @@ paths:
         "200":
           description: OK
           content:
-            '*/*':
+            application/json:
               schema:
                 type: object
                 description: application status
@@ -3324,7 +3324,7 @@ paths:
         "200":
           description: OK
           content:
-            '*/*':
+             application/json:
               schema:
                 type: object
                 description: upload document response
@@ -3376,7 +3376,7 @@ paths:
         "200":
           description: OK
           content:
-            '*/*':
+             application/json:
               schema:
                 type: object
                 description: get pakcage id
