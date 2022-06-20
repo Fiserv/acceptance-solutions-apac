@@ -1,0 +1,3787 @@
+openapi: 3.0.2
+info:
+  title: Merchant On Boarding
+  contact:
+    name: Rajendra Kumar
+  version: 1.0v
+  description: ' The partner API '
+servers:
+- url: https://www.uat.fdmerchantservices.com
+  description: UAT URL
+
+security:
+- ApiKeyAuth: [] 
+tags:
+- name: Boarding
+  description: REST API for Boarding
+paths:
+  /boardinggateway/externalboarding/partner/login:
+    get:
+      tags:
+      - Boarding
+      summary: User Login
+      description: User Login
+      operationId: getAuthJWTToken
+      x-group-name:  Boarding
+      x-proxy-name: User Login
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - name: ain
+        in: query
+        required: true
+        example: "4700000"
+        description: instituiion id
+        schema:
+          type: string
+      - name: source
+        in: query
+        required: true
+        example: API
+        description: SOURCE TYPE i.e API , TAB etc ..
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                description: response from login api
+                example:
+                   {
+                    "authToken": "eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.Lb1bHTkIf39A3aZjPQlovMegOPquGZQxNZHMMmBkodKYFgEKkSoocQ.ouWgCX3kAAt3yxFTLsZjQw.hEkAaKujQuNj7_3L2WjtKyY2pf-lRv5ARTMNq1-YQWGnSDWswEsxba6BY4n8gifp07eKdw7c9cYtGWcnZ1FCRJaKJqHAn8dn55xOjYEYFv8JRCZI4KHjAPIgkHhKZrxuKFw8hPRkzFx5ANC4MMetTizAlgKx8f0JUvhSF1qVzhBMwHUqw4seG2D7fDCMlNujLGWRJrU_Dz9BIW7yWMKkN8kXho7A3lC7QeMR7k1_NJb7aEQ_m8hO0Cb9tP9Sc2ivSjMg4yGtOvo3WAegbfsahJsfknYODV5Pj0jignTIcx7SLNfjUMMzFOVuv7dSRaQl52xYCAu0zxrWBnF3QmaZROejY55Fm3gBHKChPP2q1gcsDLX9vBW_TgpKD7sLOh_ltjDUNCJPCjujGZJfRDdW5IurGcNpif075zEdSvydENwV_5KJj1bPjOFPENWDJEhvCQbQsNmMES6qYeSouS2epl6X6UoFcCoIrVK9geyOdOJPtYK5kwDdkGCmJPlnc6OfPgjdVMqep1KwYkQOzqVrnnihP1wj7Ei-W94UvS6fVGvB2nR55fJz-Ztoy7zez7HV6D0HETcPDaA_gz8fsHuHZc4KhDwTrB452iWjAB-Eed93AtKGVUPuty2VPfis_tt4QqWMQMqNQeOGRoViSgmeixnZmYhz9z3tkF-bFAc_DSB_WvPlnxzcYRxSB7q4LYgDImJETHJDi_OSPreqoaneCTjTJoeXOOTtj7qHEj99N47UeXOIvK3W1UFta7pjcpDFbbir2zrpVvyhHtuOEtbDJXxqiUDbuc80HfpsgsBwtnbZWavJg7ABUea165EkLjdgqHFvV2da2FCV3Qq6v2pS5hufLNfpw9yOAD-czZrLeH5DaRMcHhEDkYDlYhQmcwKwsPA-rHgqFGYNLZWyWFIZH0VEPsCsoY74ptJ93uKthtgiHszfNsX7Qm8J5q25W6-QhbHdfY0WRdiK3U3Ym2H_8vK-Vgk1CKZX_NwqZWfcyCdDjtMB6x3EkOUqNYS-OsXpFrH-v9WareSrlFkgbNIY5LD4TdTu8wuid7-V8XQ1q54B4VPXCAt3q9Pcevt3RnpDzsDVS-1kkoGq4N8aj3TwAugB91PaqvhROWWEEwdRbNhugKbKRHtVW9oyDAkmVKjJx8hkFLkFMWbCeeyipuZH-MhhZBVIX0DabEHX7IJMvVOAiR9rtAgfUmJ5VrTud52dao1pMPnOt7xgWxocG3KHBbNIwk9_ub0kutLQ4P0eaFGIluqhfnJYz1nTzM_EU4CIKpI-LVcknWuNMmHbJlsvcFlsYTH-P74uJVz-UziKEMMqrmYeH--dZwEwLTD7Z5rnS8HPD1GDt8FhySXLjrKDCGeBG2dgo4HD3DNCRjDnONU.hk_0ZUHha82WP7NVj9EzOQ",
+                    "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZmlzZXJ2LmNvbSIsImF1ZCI6IkZpc2VydiBHQlMiLCJUWVBFIjoiUkVGUkVTSCIsImV4cCI6MTY0NTg3MjcwMCwianRpIjoiaDlaWnR5cUJESWZKSmFFU2JrTi1vdyIsImlhdCI6MTY0NTY5OTkwMCwibmJmIjoxNjQ1Njk5NjAwLCJ2ZXJzaW9uIjoiMS4wIiwic3ViIjoicHJlcmFuYWF1cyJ9.GMFTfttx9ClDBViB8OshCJBMtEfSDisi_O75nYRUgd4",
+                    "ttl": 30
+                  }
+  /boardinggateway/externalboarding/secure/newmid:
+    post:
+      tags:
+      - Boarding
+      summary: New Merchant
+      description: New Merchant
+      operationId: submitapplication
+      x-group-name: Boarding
+      x-proxy-name: Submit Application
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              description: encrypted string
+              example: "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"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+                description: encrypted string
+                example: ""
+  /boardinggateway/externalboarding/convert/decrypt:
+    post:
+      tags:
+      - Boarding
+      summary: decrypt
+      description: decrypt
+      operationId: decryptPayload
+      x-group-name: Boarding
+      x-proxy-name: Decrypt
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+           application/json:
+            schema:
+              type: string
+              description: encrypted string
+              example: "wT/izrHrPefuqOfVPrqItzSbEkBGF/4TX7zfx8GjIGcmRaamXThWuKIfNcX0aH0PRqrWyYhOHCHbiA82aqp+LwcnIbNwrtzPD1E4z3XDIj3DqbplCrP6Ge6rxi0zzlOVp80UBujaywNCd1nLAJHnpDOnTc4LfJRvK96MdZwjpVUWxADG1nazE6rm2lryJ0wxcSN/SGsN7EWCh1+9JaLBWXmL3lEwsGmKSdkeFDbW4z/Cw6fdz200G2Tre/I+hAJstsffaItyQkHyL+/1R7xe8r9ld0SHFJa3HbvwkHxz7TFv7fwp6kQSj35MhQc7uiuZdcXfQXRBAQA9JnPs8nnhIQA7FYTIuMozE0Cp9JI+spZ2Vvxo4X4TKz9dfVHYxVqp"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+                description: decrypted string
+                example:  "{\"salesId\":\"ecomuser\",\"institutionId\":\"47\",\"appType\":\"API\",\"keySelection\":{\"boardingType\":\"NEWMID\"},\"countryCode\":\"IND\",\"merchantDetails\":{\"legalName\":\"ECOM\",\"businessName\":\"ECOM\"},\"channelCode\":\"EAZYAPY_ECOM\"}"
+
+  /boardinggateway/externalboarding/convert/encrypt:
+    post:
+      tags:
+      - Boarding
+      summary: encrypt
+      description: encrypt
+      operationId: encryptPayload
+      x-group-name: Boarding
+      x-proxy-name: Encrypt
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+           application/json:
+            schema:
+              type: string
+              description: encrypted string
+              example:  "{\"salesId\":\"ecomuser1\",\"institutionId\":\"47\",\"appType\":\"API\",\"keySelection\":{\"boardingType\":\"NEWMID\"},\"countryCode\":\"IND\",\"merchantDetails\":{\"legalName\":\"ECOM\",\"businessName\":\"ECOM\"},\"channelCode\":\"EAZYAPY_ECOM\"}"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+                description: decrypted string
+                example: "wT/izrHrPefuqOfVPrqItzSbEkBGF/4TX7zfx8GjIGcmRaamXThWuKIfNcX0aH0PRqrWyYhOHCHbiA82aqp+LwcnIbNwrtzPD1E4z3XDIj3DqbplCrP6Ge6rxi0zzlOVp80UBujaywNCd1nLAJHnpDOnTc4LfJRvK96MdZwjpVUWxADG1nazE6rm2lryJ0wxcSN/SGsN7EWCh1+9JaLBWXmL3lEwsGmKSdkeFDbW4z/Cw6fdz200G2Tre/I+hAJstsffaItyQkHyL+/1R7xe8r9ld0SHFJa3HbvwkHxz7TFv7fwp6kQSj35MhQc7uiuZdcXfQXRBAQA9JnPs8nnhIQA7FYTIuMozE0Cp9JI+spZ2Vvxo4X4TKz9dfVHYxVqp"
+  /boardinggateway/externalboarding/secure/refmid/{appType}/{referenceMID}:
+    get:
+      tags:
+      - Boarding
+      summary: Inquiry MID
+      description: Inquiry MID
+      operationId: refForAdditionalMID
+      x-group-name: Boarding
+      x-proxy-name: Ref For Additional MID
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - name: appType
+        in: path
+        required: true
+        description: ADDLTID / ADDLMID
+        schema:
+          type: string
+          example: ADDLTID
+      - name: referenceMID
+        in: path
+        required: true
+        description: mid
+        schema:
+          type: string
+          example: "99000154"
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                 type: object
+                 description: ref mid response
+                 example:
+                  {
+                      "appURN": null,
+                      "appType": null,
+                      "boardingType": null,
+                      "appChannel": null,
+                      "institutionId": null,
+                      "salesId": null,
+                      "channelCode": null,
+                      "osvFlagValue": null,
+                      "merchantGrade": null,
+                      "typeOfBusiness": null,
+                      "merchantDetails": {
+                        "businessName": null,
+                        "legalName": "ezetap provisioning testing",
+                        "businessType": "Sole proprietor",
+                        "registrationNo": null,
+                        "dateIncorporated": null,
+                        "websiteURL": null,
+                        "communicationEmail": prerana.kumbhar@Fiserv.com,
+                        "legalAddress": {
+                          "addressLine": "Near central fire briged, Ganj peth,, opposite kamble lane, ",
+                          "addressLine2": null,
+                          "addressLine3": null,
+                          "city": "PUN-PUNE",
+                          "state": "MAH",
+                          "pincode": "411042",
+                          "country": null,
+                          "phone1": "8358353553",
+                          "phone2": null,
+                          "contactName": "Test",
+                          "mobileNo": null,
+                          "email": null
+                        },
+                        "fundingMethod": "NEFT",
+                        "clientTariff": null,
+                        "postingTariff": "NETINR",
+                        "billingLevel": "MID",
+                        "gstNo": "06AXVPM0608G1ZD",
+                        "isdnFlag": null,
+                        "gstMerchantStateCode": null,
+                        "idDocDetails": null,
+                        "geoLocation": null,
+                        "merchantGrade": null,
+                        "iciciMerchant": null,
+                        "newFundingAc": null,
+                        "taxDetails": {
+                          "taxidType": "businessPan",
+                          "taxidValue": null
+                        },
+                        "merchantType": null,
+                        "acceptanceType": null,
+                        "dcc": null,
+                        "international": null,
+                        "fundingCurrency": null
+                      },
+                      "submerchantDetails": null,
+                      "tradingLocations": [
+                        {
+                          "locationNo": 1,
+                          "tradingName": "ezetap provisioning te",
+                          "tradingAddress": {
+                            "addressLine": "test, , ",
+                            "addressLine2": null,
+                            "addressLine3": null,
+                            "city": "MUM-MUMBAI",
+                            "state": "MAH",
+                            "pincode": "400606",
+                            "country": null,
+                            "phone1": "8600433238",
+                            "phone2": "8600433238",
+                            "contactName": "Prerana",
+                            "mobileNo": null,
+                            "email": null
+                          },
+                          "sameLocation": false,
+                          "otpEnabled": false,
+                          "mid": "470000099000154",
+                          "leadsubgroupmid": "470000056000250",
+                          "subgroupmid": "470000056000251",
+                          "packageId": 0,
+                          "packageName": null,
+                          "packageDescription": null,
+                          "memberType": "POSMOB",
+                          "tariff": "RetailP185LM",
+                          "amexTariff": null,
+                          "merchantGrade": "EO",
+                          "acqProfile": null,
+                          "feePlans": null,
+                          "terminals": [],
+                          "msfProfile": "C120P185COR220IC000INC260D090",
+                          "cardedUncarded": null,
+                          "autoSettlementTime": null,
+                          "regionalCpvGroupId": null,
+                          "cpvGroupId": null,
+                          "commerceConnectReferenceMID": null,
+                          "altmerchCode": null,
+                          "isMsfTariffOverride": null,
+                          "packageOverride": null
+                        }
+                      ],
+                      "principalDetails": [
+                        {
+                          "principalNo": 1,
+                          "position": "Owner",
+                          "title": "Mr",
+                          "firstName": "Manan",
+                          "lastName": "Gupta",
+                          "middleName": null,
+                          "gender": null,
+                          "dateOfBirth": "04/05/1985",
+                          "principalAddress": {
+                            "addressLine": "Keshavnagar",
+                            "addressLine2": null,
+                            "addressLine3": null,
+                            "city": "PUN-PUNE",
+                            "state": "MAH",
+                            "pincode": "411036",
+                            "country": null,
+                            "phone1": "9426855672",
+                            "phone2": null,
+                            "contactName": "Manan",
+                            "mobileNo": null,
+                            "email": null
+                          },
+                          "idDocDetails": null,
+                          "kycDetails": [
+                            {
+                              "kycCategory": "Individual POA1 KYC",
+                              "identityType": "aadhar",
+                              "identityValue": "",
+                              "identitymetaName1": null,
+                              "identitymetaValue1": null
+                            },
+                            {
+                              "kycCategory": "Individual POI1 KYC",
+                              "identityType": "individualPan",
+                              "identityValue": "ABCDE1234F",
+                              "identitymetaName1": null,
+                              "identitymetaValue1": null
+                            }
+                          ],
+                          "nationality": null
+                        },
+                        {
+                          "principalNo": 2,
+                          "position": "Owner",
+                          "title": "Mr",
+                          "firstName": "Manan",
+                          "lastName": "Gupta",
+                          "middleName": null,
+                          "gender": null,
+                          "dateOfBirth": "04/05/1985",
+                          "principalAddress": {
+                            "addressLine": "Keshavnagar",
+                            "addressLine2": null,
+                            "addressLine3": null,
+                            "city": "PUN-PUNE",
+                            "state": "MAH",
+                            "pincode": "411036",
+                            "country": null,
+                            "phone1": "9426855672",
+                            "phone2": null,
+                            "contactName": "Manan",
+                            "mobileNo": null,
+                            "email": null
+                          },
+                          "idDocDetails": null,
+                          "kycDetails": [
+                            {
+                              "kycCategory": "Individual POA2 KYC",
+                              "identityType": "aadhar",
+                              "identityValue": "",
+                              "identitymetaName1": null,
+                              "identitymetaValue1": null
+                            },
+                            {
+                              "kycCategory": "Individual POI2 KYC",
+                              "identityType": "individualPan",
+                              "identityValue": "ABCDE1234F",
+                              "identitymetaName1": null,
+                              "identitymetaValue1": null
+                            }
+                          ],
+                          "nationality": null
+                        }
+                      ],
+                      "uboDetails": null,
+                      "bankDetails": {
+                        "accountNo": "12231000013575757",
+                        "accountName": "test",
+                        "ifsc": "JANA0000012",
+                        "bankName": "JANASEVA SAHAKARI BANK LIMITED",
+                        "branch": "",
+                        "currency": null,
+                        "accType": null,
+                        "fundingAccountDetails": null,
+                        "collectionAccountDetails": null,
+                        "uwAccountDetails": null
+                      },
+                      "businessSummary": {
+                        "briefSummary": null,
+                        "mccCode": "5999",
+                        "mccDescription": "Miscellaneous & spec",
+                        "totalTurnover": null,
+                        "totalTurnoverPerMID": null,
+                        "dccTurnoverPerMID": null,
+                        "pgTurnover": null,
+                        "pgTurnoverPerMID": null,
+                        "cardTurnover": null,
+                        "avgTicketAmt": null,
+                        "avgEMITicketAmt": null,
+                        "tranVolumeInternet": null,
+                        "tranVolumeMoto": null,
+                        "tranVolumeInStore": null,
+                        "deliveryDays0": null,
+                        "deliveryDays7": null,
+                        "deliveryDays14": null,
+                        "deliveryDays30": null,
+                        "deliveryDaysOver30": null,
+                        "tranTypeMagStrip": null,
+                        "tranTypeChip": null,
+                        "tranTypeKeyed": null,
+                        "creditSalesConsumer": null,
+                        "creditSalesBusiness": null,
+                        "firsReport": null,
+                        "recurringTranFlag": null,
+                        "refundPolicy": null,
+                        "cardRefundDays": null,
+                        "thirdPartyProcessorFlag": null,
+                        "thirdPartyProcessorName": null,
+                        "smallMerchant": null
+                      },
+                      "keySelection": null,
+                      "preapproval_id": null,
+                      "countryCode": null
+                    }
+  /boardinggateway/externalboarding/secure/create:
+    post:
+      tags:
+      - Boarding
+      summary: Create Application
+      description: Create Application
+      operationId: createapplication
+      x-group-name: Boarding
+      x-proxy-name: Create Application
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              description: encrypted string
+              example:
+               {
+                "appType" : "API",
+                "salesId" : "ecomuser",
+                "channelCode" : "EAZYAPY_ECOM",
+                "keySelection" : {
+                  "boardingType" : "NEWMID"
+                },
+                "merchantDetails" : {
+                  "businessName" : "ECOM",
+                  "legalName" : "ECOM"
+                },
+                "institutionId" : "47",
+                "countryCode" : "IND"
+              }
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                description: encrypted string
+                example: 
+                 {
+                  "appURN": "1000007936",
+                  "appType": "API",
+                  "boardingType": null,
+                  "appChannel": null,
+                  "institutionId": "21",
+                  "salesId": "preranaaus",
+                  "status": "Saved",
+                  "statusDate": null,
+                  "keySelection": {
+                    "mccCode": null,
+                    "merchantGrade": null,
+                    "merchantType": null,
+                    "acceptanceType": null,
+                    "typeOfBusiness": null,
+                    "international": null,
+                    "iciciMerchant": null,
+                    "dcc": null,
+                    "fundingCurrency": null,
+                    "newFundingAc": null
+                  },
+                  "channelCode": "TestAUS",
+                  "osvFlagValue": null,
+                  "countryCode": "IND",
+                  "leadId": null,
+                  "merchantDetails": {
+                    "businessName": "PAYFAC",
+                    "legalName": "PAYFAC",
+                    "businessType": null,
+                    "registrationNo": null,
+                    "dateTrading": null,
+                    "dateIncorporated": null,
+                    "websiteURL": null,
+                    "communicationEmail": null,
+                    "legalAddress": null,
+                    "fundingMethod": null,
+                    "clientTariff": null,
+                    "postingTariff": null,
+                    "billingLevel": null,
+                    "gstNo": null,
+                    "isdnFlag": null,
+                    "gstMerchantStateCode": null,
+                    "merchantType": null,
+                    "acceptanceType": null,
+                    "iciciMerchant": null,
+                    "newFundingAc": null,
+                    "merchantGrade": null,
+                    "idDocDetails": null,
+                    "geoLocation": null,
+                    "taxDetails": null
+                  },
+                  "tradingLocations": null,
+                  "principalDetails": null,
+                  "bankDetails": null,
+                  "businessSummary": {
+                    "briefSummary": null,
+                    "mccCode": null,
+                    "mccDescription": null,
+                    "totalTurnover": null,
+                    "totalTurnoverPerMID": null,
+                    "dccTurnoverPerMID": null,
+                    "pgTurnover": null,
+                    "pgTurnoverPerMID": null,
+                    "cardTurnover": null,
+                    "avgTicketAmt": null,
+                    "avgEMITicketAmt": null,
+                    "tranVolumeInternet": null,
+                    "tranVolumeMoto": null,
+                    "tranVolumeInStore": null,
+                    "deliveryDays0": null,
+                    "deliveryDays7": null,
+                    "deliveryDays14": null,
+                    "deliveryDays30": null,
+                    "deliveryDaysOver30": null,
+                    "tranTypeMagStrip": null,
+                    "tranTypeChip": null,
+                    "tranTypeKeyed": null,
+                    "creditSalesConsumer": null,
+                    "creditSalesBusiness": null,
+                    "firsReport": null,
+                    "recurringTranFlag": null,
+                    "refundPolicy": null,
+                    "cardRefundDays": null,
+                    "thirdPartyProcessorFlag": null,
+                    "thirdPartyProcessorName": null,
+                    "smallMerchant": null
+                  },
+                  "uboDetails": null
+                }
+  /boardinggateway/externalboarding/secure/appstatus/{appUrn}:
+    get:
+      tags:
+      - Boarding
+      summary: Application Status
+      description: Application Status
+      operationId: getAppStatus
+      x-group-name: Boarding
+      x-proxy-name: Get App Status
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - name: appUrn
+        in: path
+        description: Application - Unique Identification number 
+        required: true
+        schema:
+          type: string
+          example: "1000007294"
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                description: application status
+                example: 
+                  {
+                      "appURN": "1000007294",
+                      "appType": "NEW",
+                      "appChannel": "TAB",
+                      "institutionId": "47",
+                      "salesId": "SureshBC",
+                      "status": null,
+                      "statusDate": null,
+                      "reason": null,
+                      "businessName": "test",
+                      "legalName": "test",
+                      "businessType": "Sole Proprietor",
+                      "submittedDate": 1643977173000,
+                      "createdDate": null,
+                      "lastUpdatedDate": null,
+                      "countofBacktoSales": "0",
+                      "mccCode": "5813",
+                      "merchantGrade": "EA",
+                      "merchantType": null,
+                      "acceptanceType": "POSMOB",
+                      "typeOfBusiness": "Sole Proprietor",
+                      "international": null,
+                      "iciciMerchant": "No",
+                      "dcc": null,
+                      "fundingCurrency": null,
+                      "channelCode": null,
+                      "boardingType": null,
+                      "newFundingAc": null,
+                      "institutionCode": null,
+                      "terminalId": "33917151",
+                      "mid": "96000842",
+                      "atsJobSheet": "",
+                      "preInstall": "false",
+                      "bcInstall": "false",
+                      "selfInstallStatus": "Initiate self install"
+                    }
+  /boardinggateway/externalboarding/secure/packages:
+    get:
+      tags:
+      - Boarding
+      summary: Get Package List
+      description: Get Package List
+      operationId: getPackageList
+      x-group-name: Boarding
+      x-proxy-name: Get Package List
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - name: RequestParam
+        in: query
+        required: true
+        schema:
+          $ref: '#/components/schemas/DocAndPkgRequestParam'
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+               type: object
+               description: get package List
+               example:
+                [
+                    {
+                    "id": "15001",
+                    "name": "Test Package AU 1_NEWMID",
+                    "desc": "NAB Test Package",
+                    "shrtName": null,
+                    "level": null,
+                    "image": null,
+                    "cnrInd": null,
+                    "acceptanceType": "POSMOB",
+                    "isInternational": "No",
+                    "isDCC": "Yes",
+                    "msfTariff": "Tiered I/C",
+                    "fundingCurrency": "NET_AUD",
+                    "preferential": "N",
+                    "otpEnabled": true,
+                    "sbPackageDesc": null,
+                    "sbInstrumentsDesc": null,
+                    "sbVASDesc": null,
+                    "sbTerminalTypeDesc": null,
+                    "sbPricingDesc": null,
+                    "attributes": [
+                    {
+                    "category": "Package VAS",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "Charge Slip Type",
+                    "value": "E",
+                    "codeType": "Package VAS",
+                    "applicableForFilter": true
+                    },
+                    {
+                    "name": "FDConnect",
+                    "value": "Y",
+                    "codeType": "Package VAS",
+                    "applicableForFilter": true
+                    },
+                    {
+                    "name": "Project Call Type",
+                    "value": "ISO",
+                    "codeType": "Package VAS",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "MVV Indicator",
+                    "value": "Y",
+                    "codeType": "Package VAS",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Email / SMS Invoicing",
+                    "value": "Y",
+                    "codeType": "Package VAS",
+                    "applicableForFilter": true
+                    }
+                    ]
+                    },
+                    {
+                    "category": "Additional Peripherals",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "Peripharal2",
+                    "value": "Peripheral 2",
+                    "codeType": "Additional Peripherals",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Peripharal4",
+                    "value": "Peripheral 4",
+                    "codeType": "Additional Peripherals",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Peripharal3",
+                    "value": "Peripheral 3",
+                    "codeType": "Additional Peripherals",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Peripharal5",
+                    "value": "Peripheral 5",
+                    "codeType": "Additional Peripherals",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Peripharal1",
+                    "value": "Peripheral 1",
+                    "codeType": "Additional Peripherals",
+                    "applicableForFilter": false
+                    }
+                    ]
+                    },
+                    {
+                    "category": "Package Currency Acceptance",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "DCC",
+                    "value": "Y",
+                    "codeType": "Package Currency Acceptance",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "DCC PARTNER",
+                    "value": "openFxFuture",
+                    "codeType": "Package Currency Acceptance",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "International",
+                    "value": "N",
+                    "codeType": "Package Currency Acceptance",
+                    "applicableForFilter": false
+                    }
+                    ]
+                    },
+                    {
+                    "category": "Package Acceptance",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "POSMOB",
+                    "value": "Y",
+                    "codeType": "Package Acceptance",
+                    "applicableForFilter": false
+                    }
+                    ]
+                    },
+                    {
+                    "category": "Package Info",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "KET MERCHANT TAGING",
+                    "value": "Key Merchant Tagging",
+                    "codeType": "Package Info",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Package ID",
+                    "value": "477",
+                    "codeType": "Package Info",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Package Level",
+                    "value": "NEWMID",
+                    "codeType": "Package Info",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Package Name",
+                    "value": "Test Package AU 1",
+                    "codeType": "Package Info",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Number of Terminals",
+                    "value": "10",
+                    "codeType": "Package Info",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Package Description",
+                    "value": "NAB Test Package",
+                    "codeType": "Package Info",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "Preferrential?",
+                    "value": "Y",
+                    "codeType": "Package Info",
+                    "applicableForFilter": false
+                    }
+                    ]
+                    },
+                    {
+                    "category": "Package Schemes",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "Master",
+                    "value": "Y",
+                    "codeType": "Package Schemes",
+                    "applicableForFilter": true
+                    },
+                    {
+                    "name": "AMEX",
+                    "value": "Y",
+                    "codeType": "Package Schemes",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "DND",
+                    "value": "Y",
+                    "codeType": "Package Schemes",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "VISA",
+                    "value": "Y",
+                    "codeType": "Package Schemes",
+                    "applicableForFilter": true
+                    },
+                    {
+                    "name": "CUP",
+                    "value": "Y",
+                    "codeType": "Package Schemes",
+                    "applicableForFilter": false
+                    }
+                    ]
+                    },
+                    {
+                    "category": "Package Tariffs",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "MDR",
+                    "value": "Visa@2%,MC@1%,CUP@2% & EFTPOS@1.5%",
+                    "codeType": "Package Tariffs",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "MSF Tariff",
+                    "value": "Tiered I/C",
+                    "codeType": "Package Tariffs",
+                    "applicableForFilter": true
+                    }
+                    ]
+                    },
+                    {
+                    "category": "Additional Terminal Info",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "Terminal Instruction 2",
+                    "value": "Terminal Instruction3",
+                    "codeType": "Additional Terminal Info",
+                    "applicableForFilter": false
+                    }
+                    ]
+                    },
+                    {
+                    "category": "Package Card Types",
+                    "displayName": null,
+                    "attributeList": [
+                    {
+                    "name": "DEBIT",
+                    "value": "Y",
+                    "codeType": "Package Card Types",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "PREPAID",
+                    "value": "Y",
+                    "codeType": "Package Card Types",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "CREDIT",
+                    "value": "Y",
+                    "codeType": "Package Card Types",
+                    "applicableForFilter": false
+                    },
+                    {
+                    "name": "OFFUS",
+                    "value": "Y",
+                    "codeType": "Package Card Types",
+                    "applicableForFilter": false
+                    }
+                    ]
+                    }
+                    ]
+                    }
+                    ]
+  /boardinggateway/externalboarding/secure/addtid:
+    post:
+      tags:
+      - Boarding
+      summary: Additional Device
+      description: Additional Terminal
+      operationId: submitAdditionalTidApplication
+      x-group-name: Boarding
+      x-proxy-name: Additional Device
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              description: add tid
+              example:
+                {
+                  "appURN": "1000008465",
+                  "appType": "Tab",
+                  "boardingType": "ADDLTID",
+                  "appChannel": "A12",
+                  "institutionId": "47",
+                  "salesId": "SureshBC",
+                  "status": null,
+                  "statusDate": null,
+                  "keySelection": {
+                    "mccCode": "5999",
+                    "merchantGrade": "EO",
+                    "merchantType": "LG",
+                    "acceptanceType": "POSMOB",
+                    "typeOfBusiness": "SOLPROR",
+                    "international": "No",
+                    "iciciMerchant": "No",
+                    "dcc": "No",
+                    "fundingCurrency": "NET_INR",
+                    "newFundingAc": null
+                  },
+                  "channelCode": "ISO Channel1",
+                  "osvFlagValue": null,
+                  "cardedUncarded": "No",
+                  "countryCode": "IND",
+                  "leadId": null,
+                  "merchantDetails": {
+                    "businessName": null,
+                    "legalName": "ezetap provisioning testing",
+                    "businessType": "Sole Proprietor",
+                    "registrationNo": null,
+                    "dateTrading": null,
+                    "dateIncorporated": null,
+                    "websiteURL": null,
+                    "communicationEmail": "Prerana.kumbhar@firstdata.com",
+                    "legalAddress": {
+                      "addressLine": "Near central fire briged, Ganj peth",
+                      "addressLine2": ",, opposite kamble lane,",
+                      "addressLine3": null,
+                      "city": "PUN-PUNE",
+                      "state": "MAH",
+                      "pincode": "411042",
+                      "country": null,
+                      "phone1": "8358353553",
+                      "phone2": null,
+                      "contactName": "Test",
+                      "mobileNo": null,
+                      "email": null
+                    },
+                    "fundingMethod": "NEFT",
+                    "clientTariff": null,
+                    "postingTariff": "NET_INR",
+                    "billingLevel": "01",
+                    "gstNo": "27AAOFN4566A1Z6",
+                    "isdnFlag": null,
+                    "gstMerchantStateCode": null,
+                    "merchantType": "LG",
+                    "acceptanceType": "POSMOB",
+                    "iciciMerchant": "No",
+                    "newFundingAc": null,
+                    "merchantGrade": "EO",
+                    "idDocDetails": [
+                      {
+                        "entity": "Member",
+                        "idType": "Capture the Merchant Store Photos",
+                        "idValue": "",
+                        "docId": "dbab41ff030c49dc9cdc562f8e640e21",
+                        "categoryName": "LOCATION PHOTOS",
+                        "level": "1",
+                        "mandatory": "Y"
+                      },
+                      {
+                        "entity": "Member",
+                        "idType": "MITC Document Page 1",
+                        "idValue": "",
+                        "docId": "7771684880c3440a8d69ebe936c8178e",
+                        "categoryName": "MITC",
+                        "level": "1",
+                        "mandatory": "Y"
+                      },
+                      {
+                        "entity": "Member",
+                        "idType": "MITC Document Page 2",
+                        "idValue": "",
+                        "docId": "85a0203e2ba84e3ebfc4158665862f00",
+                        "categoryName": "MITC",
+                        "level": "2",
+                        "mandatory": "Y"
+                      },
+                      {
+                        "entity": "Member",
+                        "idType": "socDocument",
+                        "idValue": "",
+                        "docId": "b00d608f1cf14bd8bfc80fc32e9e2284",
+                        "categoryName": "SOC",
+                        "level": "1",
+                        "mandatory": "Y"
+                      }
+                    ],
+                    "geoLocation": {
+                      "latitude": "12.9403189",
+                      "longitude": "77.7303295"
+                    },
+                    "taxDetails": {
+                      "taxidType": "businessPan",
+                      "taxidValue": null
+                    }
+                  },
+                  "tradingLocations": [
+                    {
+                      "locationNo": 1,
+                      "tradingName": "ezetap provisioning te",
+                      "tradingAddress": {
+                        "addressLine": "Near central fire briged, Ganj peth",
+                        "addressLine2": ",, opposite kamble lane,",
+                        "addressLine3": null,
+                        "city": "PUN-PUNE",
+                        "state": "MAH",
+                        "pincode": "411042",
+                        "country": null,
+                        "phone1": "8358353553",
+                        "phone2": "",
+                        "contactName": "Test",
+                        "mobileNo": null,
+                        "email": null
+                      },
+                      "packageId": 1056,
+                      "packageName": "Industry Type Additional TID Normal GPRS with fuel",
+                      "packageDescription": "Industry Type Additional TID Normal GPRS with fuel",
+                      "memberType": "POS",
+                      "tariff": "RetailP185LM",
+                      "amexTariff": "Amex Miscellane",
+                      "merchantGrade": "EO",
+                      "acqProfile": "Domestic",
+                      "msfProfile": "C120P185COR220IC000INC260D090",
+                      "mid": "470000099000154",
+                      "leadsubgroupmid": "470000056000250",
+                      "subgroupmid": "470000056000251",
+                      "otpEnabled": true,
+                      "feePlans": [
+                        {
+                          "serviceName": "UPI",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "BHARATQR",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "Email / SMS Invoicing",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "BBPS",
+                          "feePlan": "ICICI-2015"
+                        },
+                        {
+                          "serviceName": "AEPS",
+                          "feePlan": "4-1001"
+                        },
+                        {
+                          "serviceName": "MicroATM SARVATRA",
+                          "feePlan": "1101"
+                        },
+                        {
+                          "serviceName": "FDConnect",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "UPICashWithdraw",
+                          "feePlan": "U-9003"
+                        },
+                        {
+                          "serviceName": "Mobikwik",
+                          "feePlan": "1001"
+                        },
+                        {
+                          "serviceName": "AmazonPay",
+                          "feePlan": "Amazon1"
+                        },
+                        {
+                          "serviceName": "Chargeslip Table ID",
+                          "feePlan": "TableCh"
+                        },
+                        {
+                          "serviceName": "Ocean UI User Group",
+                          "feePlan": "GroupCh"
+                        },
+                        {
+                          "serviceName": "Theme ID",
+                          "feePlan": "ThemeCh"
+                        }
+                      ],
+                      "autoSettlementTime": null,
+                      "cpvGroupId": "",
+                      "regionalcpvGroupid": null,
+                      "commerceConnectReferenceMID": null,
+                      "terminals": [
+                        {
+                          "terminalType": "GPRS",
+                          "terminalModel": "Verifone Vx680 (W BC) GPRS GSM",
+                          "batteryFlag": "Y",
+                          "count": 1,
+                          "currencyCode": null,
+                          "templateId": null,
+                          "socScheme": null,
+                          "services": [
+                            {
+                              "serviceName": "AMEX",
+                              "serviceValue": "N"
+                            }
+                          ],
+                          "withBiller": null,
+                          "billingSolProvider": null,
+                          "preferedDate": "03-07-2022",
+                          "preferedTime": "12:27",
+                          "discount": "0",
+                          "tdrPlan": null,
+                          "userInstruction1": "",
+                          "userInstruction2": "",
+                          "cpvGroupId": null
+                        }
+                      ],
+                      "amcFee": null,
+                      "cardedUncarded": "Uncarded",
+                      "altmerchCode": null,
+                      "sameLocation": null
+                    }
+                  ],
+                  "principalDetails": [
+                    {
+                      "principalNo": 1,
+                      "position": "Owner",
+                      "title": "Mr",
+                      "firstName": "Manan",
+                      "lastName": "Gupta",
+                      "middleName": null,
+                      "gender": null,
+                      "dateOfBirth": "04/05/1985",
+                      "nationality": null,
+                      "principalAddress": {
+                        "addressLine": "Keshavnagar",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "PUN-PUNE",
+                        "state": "MAH",
+                        "pincode": "411036",
+                        "country": null,
+                        "phone1": "9426855672",
+                        "phone2": null,
+                        "contactName": "Manan",
+                        "mobileNo": null,
+                        "email": null
+                      },
+                      "idDocDetails": null,
+                      "kycDetails": [
+                        {
+                          "kycCategory": "Individual POA1 KYC",
+                          "identityType": "",
+                          "identityValue": "",
+                          "identitymetaName1": null,
+                          "identitymetaValue1": null
+                        },
+                        {
+                          "kycCategory": "Individual POI1 KYC",
+                          "identityType": "individualPan",
+                          "identityValue": "ABCDE1234F",
+                          "identitymetaName1": null,
+                          "identitymetaValue1": null
+                        }
+                      ]
+                    },
+                    {
+                      "principalNo": 2,
+                      "position": "Owner",
+                      "title": "Mr",
+                      "firstName": "Manan",
+                      "lastName": "Gupta",
+                      "middleName": null,
+                      "gender": null,
+                      "dateOfBirth": "04/05/1985",
+                      "nationality": null,
+                      "principalAddress": {
+                        "addressLine": "Keshavnagar",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "PUN-PUNE",
+                        "state": "MAH",
+                        "pincode": "411036",
+                        "country": null,
+                        "phone1": "9426855672",
+                        "phone2": null,
+                        "contactName": "Manan",
+                        "mobileNo": null,
+                        "email": null
+                      },
+                      "idDocDetails": null,
+                      "kycDetails": [
+                        {
+                          "kycCategory": "Individual POA2 KYC",
+                          "identityType": "",
+                          "identityValue": "",
+                          "identitymetaName1": null,
+                          "identitymetaValue1": null
+                        },
+                        {
+                          "kycCategory": "Individual POI2 KYC",
+                          "identityType": "individualPan",
+                          "identityValue": "ABCDE1234F",
+                          "identitymetaName1": null,
+                          "identitymetaValue1": null
+                        }
+                      ]
+                    }
+                  ],
+                  "bankDetails": {
+                    "fundingAccountDetails": null,
+                    "collectionAccountDetails": null,
+                    "uwAccountDetails": {
+                      "accountNo": "12231000013575757",
+                      "accountName": "test",
+                      "ifsc": "JANA0000012",
+                      "bankName": "JANASEVA SAHAKARI BANK LIMITED",
+                      "branch": "CAMP",
+                      "currency": "INR",
+                      "accType": null
+                    }
+                  },
+                  "businessSummary": {
+                    "briefSummary": null,
+                    "mccCode": "5999",
+                    "mccDescription": "Miscellaneous and Specialty Retail Stores",
+                    "totalTurnover": null,
+                    "totalTurnoverPerMID": null,
+                    "dccTurnoverPerMID": null,
+                    "pgTurnover": null,
+                    "pgTurnoverPerMID": null,
+                    "cardTurnover": null,
+                    "avgTicketAmt": null,
+                    "avgEMITicketAmt": null,
+                    "tranVolumeInternet": null,
+                    "tranVolumeMoto": null,
+                    "tranVolumeInStore": null,
+                    "deliveryDays0": null,
+                    "deliveryDays7": null,
+                    "deliveryDays14": null,
+                    "deliveryDays30": null,
+                    "deliveryDaysOver30": null,
+                    "tranTypeMagStrip": null,
+                    "tranTypeChip": null,
+                    "tranTypeKeyed": null,
+                    "creditSalesConsumer": null,
+                    "creditSalesBusiness": null,
+                    "firsReport": null,
+                    "recurringTranFlag": null,
+                    "refundPolicy": null,
+                    "cardRefundDays": null,
+                    "thirdPartyProcessorFlag": null,
+                    "thirdPartyProcessorName": null,
+                    "smallMerchant": "Y"
+                  },
+                  "uboDetails": null
+                }
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                description: add tid response
+                example:
+                  {
+                    "status": {
+                        "statusCode": 200,
+                        "message": "Success"
+                    },
+                    "isAcvSuccess": null,
+                    "data": {
+                        "appUrn": "1000008469",
+                        "lsg": "51675948",
+                        "sgArray": [
+                            {
+                                "subgroupmId": "51672434",
+                                "merchantId": "95515434",
+                                "submerchantId": "00267746",
+                                "terminals": null
+                            }
+                        ]
+                    }
+                }
+  /boardinggateway/externalboarding/secure/document:
+    get:
+      tags:
+      - Boarding
+      summary: document Matrix 
+      description: Get Document List
+      operationId: getDocumentList
+      x-group-name: Boarding
+      x-proxy-name: Get Document List
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+        - name: docAndPkgRequestParam
+          in: query
+          required: true
+          schema:
+            $ref: "#/components/schemas/DocAndPkgRequestParam"
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                description: document matrix response
+                example:
+                  {
+                    "status": {
+                      "statusCode": 200,
+                      "message": "Success"
+                    },
+                    "data": {
+                      "documentUpload": {
+                        "postFill": [
+                          {
+                            "categoryName": "LOCATION PHOTOS",
+                            "categoryInd": "E",
+                            "levels": [
+                              {
+                                "level": "1",
+                                "isMandatory": "M",
+                                "documents": [
+                                  {
+                                    "documentId": "2",
+                                    "documentName": "Capture the Merchant Store Photos",
+                                    "documentType": "D",
+                                    "fillType": "postfill",
+                                    "documentShortName": "Capture the Merchant Store Photos"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "categoryName": "MITC",
+                            "categoryInd": "E",
+                            "levels": [
+                              {
+                                "level": "1",
+                                "isMandatory": "M",
+                                "documents": [
+                                  {
+                                    "documentId": "1",
+                                    "documentName": "MITC Document Page 1",
+                                    "documentType": "D",
+                                    "fillType": "postfill",
+                                    "documentShortName": "MITC Document Page 1"
+                                  }
+                                ]
+                              },
+                              {
+                                "level": "2",
+                                "isMandatory": "M",
+                                "documents": [
+                                  {
+                                    "documentId": "118",
+                                    "documentName": "MITC Document Page 2",
+                                    "documentType": "D",
+                                    "fillType": "postfill",
+                                    "documentShortName": "MITC Document Page 2"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "categoryName": "SOC",
+                            "categoryInd": "E",
+                            "levels": [
+                              {
+                                "level": "1",
+                                "isMandatory": "M",
+                                "documents": [
+                                  {
+                                    "documentId": "3",
+                                    "documentName": "socDocument",
+                                    "documentType": "D",
+                                    "fillType": "postfill",
+                                    "documentShortName": "socDocument"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "prefill": [
+                          {
+                            "categoryName": "Funding Proof",
+                            "categoryInd": "E",
+                            "levels": [
+                              {
+                                "level": "1",
+                                "isMandatory": "M",
+                                "documents": [
+                                  {
+                                    "documentId": "13",
+                                    "documentName": "cheque",
+                                    "documentType": "D",
+                                    "fillType": "prefill",
+                                    "documentShortName": "I-view, Cancelled Cheque"
+                                  }
+                                ]
+                              },
+                              {
+                                "level": "2",
+                                "isMandatory": "M",
+                                "documents": [
+                                  {
+                                    "documentId": "7",
+                                    "documentName": "nachDocument",
+                                    "documentType": "D",
+                                    "fillType": "prefill",
+                                    "documentShortName": "NACH"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "categoryName": "Other",
+                            "categoryInd": "E",
+                            "levels": [
+                              {
+                                "level": "1",
+                                "isMandatory": "M",
+                                "documents": [
+                                  {
+                                    "documentId": "18",
+                                    "documentName": "Non-HPCL Invoice or Agreement",
+                                    "documentType": "D",
+                                    "fillType": "prefill",
+                                    "documentShortName": "Non-HPCL Invoice or Agreement"
+                                  }
+                                ]
+                              },
+                              {
+                                "level": "2",
+                                "isMandatory": "M",
+                                "documents": [
+                                  {
+                                    "documentId": "14",
+                                    "documentName": "GSTN Declaration",
+                                    "documentType": "D",
+                                    "fillType": "prefill",
+                                    "documentShortName": "GSTN Declaration"
+                                  },
+                                  {
+                                    "documentId": "111",
+                                    "documentName": "GSTN Number",
+                                    "documentType": "D",
+                                    "fillType": "prefill",
+                                    "documentShortName": "GSTN Number"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "document": [
+                        {
+                          "documentId": "89",
+                          "documentName": "Drugs Selling Lic issued by Food&Drug",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "89"
+                            }
+                          ],
+                          "documentShortName": "Drugs Selling Lic issued by Food&Drug"
+                        },
+                        {
+                          "documentId": "46",
+                          "documentName": "Lease Rent agreement Individual",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "46"
+                            }
+                          ],
+                          "documentShortName": "Lease Rent agreement Individual"
+                        },
+                        {
+                          "documentId": "48",
+                          "documentName": "PL",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "48"
+                            }
+                          ],
+                          "documentShortName": "PL"
+                        },
+                        {
+                          "documentId": "49",
+                          "documentName": "Declaration for accepting Donation",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "49"
+                            }
+                          ],
+                          "documentShortName": "Declaration for accepting Donation"
+                        },
+                        {
+                          "documentId": "112",
+                          "documentName": "GSTN Number for Sole Proprietors",
+                          "validations": [
+                            {
+                              "validationCode": "26",
+                              "validationType": "DATAPULL",
+                              "validationName": "Enter GSTN Number",
+                              "required": "Y",
+                              "documentId": "112",
+                              "api": {
+                                "url": "/boarding/signzy/identity/{appURN}/fetch"
+                              }
+                            }
+                          ],
+                          "preFields": [
+                            {
+                              "documentId": "112",
+                              "fieldName": "number",
+                              "fieldDisplayName": "Enter GSTN Number",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "112",
+                              "fieldName": "docType",
+                              "fieldDisplayName": "Type",
+                              "defaultValue": "gstSearch",
+                              "preField": "Y"
+                            }
+                          ],
+                          "postFields": [
+                            {
+                              "documentId": "112",
+                              "fieldName": "tradeName",
+                              "fieldDisplayName": "Trade Name",
+                              "signzyField": "displayLegalname",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "112",
+                              "fieldName": "legalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "solePropLegalName",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "112",
+                              "fieldName": "disputeLegalAddress",
+                              "fieldDisplayName": "Registered Address",
+                              "signzyField": "address",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "112",
+                              "fieldName": "gstn",
+                              "fieldDisplayName": "GSTIN Number",
+                              "signzyField": "number",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "112",
+                              "fieldName": "dateTrading",
+                              "fieldDisplayName": "Date of Commencement",
+                              "signzyField": "dateOfIssue",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "112",
+                              "fieldName": "disputePinCode",
+                              "fieldDisplayName": "Pin Code",
+                              "signzyField": "pincode",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "112",
+                              "fieldName": "merchantDetails.businessName",
+                              "fieldDisplayName": "Entity Name",
+                              "signzyField": "solePropEntityName",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "GSTN Number for Sole Proprietors"
+                        },
+                        {
+                          "documentId": "90",
+                          "documentName": "License by Indian Medical Coun",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "90"
+                            }
+                          ],
+                          "documentShortName": "License by Indian Medical Coun"
+                        },
+                        {
+                          "documentId": "118",
+                          "documentName": "MITC Document Page 2",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "118"
+                            }
+                          ],
+                          "documentShortName": "MITC Document Page 2"
+                        },
+                        {
+                          "documentId": "91",
+                          "documentName": "Resolution  to avail services",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "91"
+                            }
+                          ],
+                          "documentShortName": "Resolution  to avail services"
+                        },
+                        {
+                          "documentId": "92",
+                          "documentName": "Lease Rent agreement for Individual",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "92"
+                            }
+                          ],
+                          "documentShortName": "Lease Rent agreement for Individual"
+                        },
+                        {
+                          "documentId": "93",
+                          "documentName": "Agreement Copy for Socities&Associations",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "93"
+                            }
+                          ],
+                          "documentShortName": "Agreement Copy for Socities&Associations"
+                        },
+                        {
+                          "documentId": "51",
+                          "documentName": "Charity commisenor Certificate",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "51"
+                            }
+                          ],
+                          "documentShortName": "Charity commisenor Certificate"
+                        },
+                        {
+                          "documentId": "52",
+                          "documentName": "Trust Deed",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "52"
+                            }
+                          ],
+                          "documentShortName": "Trust Deed"
+                        },
+                        {
+                          "documentId": "96",
+                          "documentName": "LLP Agreement Deed",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "96"
+                            }
+                          ],
+                          "documentShortName": "LLP Agreement Deed"
+                        },
+                        {
+                          "documentId": "11",
+                          "documentName": "individualPan",
+                          "validations": [
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "11",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            },
+                            {
+                              "validationCode": "12",
+                              "validationType": "OCR",
+                              "validationName": "OCR via Signzy",
+                              "required": "Y",
+                              "documentId": "11"
+                            }
+                          ],
+                          "preFields": [],
+                          "postFields": [
+                            {
+                              "documentId": "11",
+                              "fieldName": "name",
+                              "fieldDisplayName": "Name",
+                              "signzyField": "autoregResponse.name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "11",
+                              "fieldName": "principalInfo.dateOfBirth",
+                              "fieldDisplayName": "DOB",
+                              "signzyField": "autoregResponse.dob",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "11",
+                              "fieldName": "principalInfo.panCardNumber",
+                              "fieldDisplayName": "Individual PAN",
+                              "signzyField": "autoregResponse.number",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Individual Pancard"
+                        },
+                        {
+                          "documentId": "12",
+                          "documentName": "businessPan",
+                          "validations": [
+                            {
+                              "validationCode": "12",
+                              "validationType": "OCR",
+                              "validationName": "OCR via Signzy",
+                              "required": "Y",
+                              "documentId": "12"
+                            },
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "12",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            }
+                          ],
+                          "preFields": [],
+                          "postFields": [
+                            {
+                              "documentId": "12",
+                              "fieldName": "legalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "autoregResponse.name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "12",
+                              "fieldName": "dateOfIssue",
+                              "fieldDisplayName": "Date of Commencement",
+                              "signzyField": "autoregResponse.dateOfIssue",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "12",
+                              "fieldName": "businessPancard",
+                              "fieldDisplayName": "Corporate Pancard",
+                              "signzyField": "autoregResponse.number",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Corporate Pancard"
+                        },
+                        {
+                          "documentId": "13",
+                          "documentName": "cheque",
+                          "validations": [
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "13",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            },
+                            {
+                              "validationCode": "12",
+                              "validationType": "OCR",
+                              "validationName": "OCR via Signzy",
+                              "required": "Y",
+                              "documentId": "13"
+                            }
+                          ],
+                          "preFields": [],
+                          "postFields": [
+                            {
+                              "documentId": "13",
+                              "fieldName": "ifsc",
+                              "fieldDisplayName": "IFSC",
+                              "signzyField": "autoregResponse.ifsc",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "13",
+                              "fieldName": "bankAccountNumber",
+                              "fieldDisplayName": "Bank Account Number",
+                              "signzyField": "autoregResponse.number",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "13",
+                              "fieldName": "bankName",
+                              "fieldDisplayName": "Bank Name",
+                              "signzyField": "autoregResponse.bankName",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Iview,Cancelled Cheque/Bank Statement"
+                        },
+                        {
+                          "documentId": "59",
+                          "documentName": "Tax receipts for property tax paid",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "59"
+                            }
+                          ],
+                          "documentShortName": "Tax receipts for property tax paid"
+                        },
+                        {
+                          "documentId": "19",
+                          "documentName": "VAT Registration Certificate",
+                          "validations": [
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "19",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            },
+                            {
+                              "validationCode": "5",
+                              "validationType": "DATAPULL",
+                              "validationName": "Enter VAT Number",
+                              "required": "Y",
+                              "documentId": "19",
+                              "api": {
+                                "url": "/boarding/signzy/identity/{appURN}/fetch"
+                              }
+                            }
+                          ],
+                          "preFields": [
+                            {
+                              "documentId": "19",
+                              "fieldName": "docType",
+                              "fieldDisplayName": "Type",
+                              "defaultValue": "tin",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "19",
+                              "fieldName": "number",
+                              "fieldDisplayName": "Enter VAT Number",
+                              "preField": "Y"
+                            }
+                          ],
+                          "postFields": [
+                            {
+                              "documentId": "19",
+                              "fieldName": "displayLegalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "displayLegalname",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "19",
+                              "fieldName": "disputePinCode",
+                              "fieldDisplayName": "Pin Code",
+                              "signzyField": "pincode",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "19",
+                              "fieldName": "legalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "19",
+                              "fieldName": "dateTrading",
+                              "fieldDisplayName": "Date of Commencement",
+                              "signzyField": "dateOfIssue",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "19",
+                              "fieldName": "businessRegNumber",
+                              "fieldDisplayName": "VAT Number",
+                              "signzyField": "number",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "19",
+                              "fieldName": "disputeLegalAddress",
+                              "fieldDisplayName": "Registered Address",
+                              "signzyField": "address",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "VAT Registration Certificate"
+                        },
+                        {
+                          "documentId": "2",
+                          "documentName": "Capture the Merchant Store Photos",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "2"
+                            }
+                          ],
+                          "documentShortName": "Capture the Merchant Store Photos"
+                        },
+                        {
+                          "documentId": "3",
+                          "documentName": "socDocument",
+                          "validations": [],
+                          "documentShortName": "socDocument"
+                        },
+                        {
+                          "documentId": "5",
+                          "documentName": "cheque",
+                          "validations": [
+                            {
+                              "validationCode": "10",
+                              "validationType": "DATAPULL",
+                              "validationName": "Enter Bank Account Number",
+                              "required": "Y",
+                              "documentId": "5",
+                              "api": {
+                                "url": "/boarding/signzy/identity/{appURN}/bank"
+                              }
+                            },
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "5",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            },
+                            {
+                              "validationCode": "19",
+                              "validationType": "PENNYDROP",
+                              "validationName": "Penny Drop",
+                              "required": "Y",
+                              "documentId": "5",
+                              "api": {
+                                "url": "/boarding/signzy/identity/{appURN}/bank"
+                              }
+                            },
+                            {
+                              "validationCode": "12",
+                              "validationType": "OCR",
+                              "validationName": "OCR via Signzy",
+                              "required": "Y",
+                              "documentId": "5"
+                            }
+                          ],
+                          "preFields": [
+                            {
+                              "documentId": "5",
+                              "fieldName": "beneficiaryAccount",
+                              "fieldDisplayName": "Bank Account Number",
+                              "signzyField": "autoregResponse.number",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "5",
+                              "fieldName": "beneficiaryIFSC",
+                              "fieldDisplayName": "IFSC Code",
+                              "signzyField": "autoregResponse.ifsc",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "5",
+                              "fieldName": "bankName",
+                              "fieldDisplayName": "Bank Name",
+                              "signzyField": "autoregResponse.bankName",
+                              "preField": "Y"
+                            }
+                          ],
+                          "postFields": [
+                            {
+                              "documentId": "5",
+                              "fieldName": "bankName",
+                              "fieldDisplayName": "Bank Name",
+                              "signzyField": "autoregResponse.bankName",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "5",
+                              "fieldName": "bankAccountNumber",
+                              "fieldDisplayName": "Bank A/C",
+                              "signzyField": "essentials.beneficiaryAccount",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "5",
+                              "fieldName": "nameOnBankAccount",
+                              "fieldDisplayName": "Customer Name",
+                              "signzyField": "result.bankTransfer.beneName",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "5",
+                              "fieldName": "ifsc",
+                              "fieldDisplayName": "IFSC",
+                              "signzyField": "essentials.beneficiaryIFSC",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Cancelled Cheque/Bank Statement"
+                        },
+                        {
+                          "documentId": "8",
+                          "documentName": "Ecom Technical Template",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "8"
+                            }
+                          ],
+                          "documentShortName": "Ecom Technical Template"
+                        },
+                        {
+                          "documentId": "9",
+                          "documentName": "E-com Addendum",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "9"
+                            }
+                          ],
+                          "documentShortName": "E-com Addendum"
+                        },
+                        {
+                          "documentId": "20",
+                          "documentName": "GSTN Registration Certificate",
+                          "validations": [
+                            {
+                              "validationCode": "26",
+                              "validationType": "DATAPULL",
+                              "validationName": "Enter GSTN Number",
+                              "required": "Y",
+                              "documentId": "20",
+                              "api": {
+                                "url": "/boarding/signzy/identity/{appURN}/fetch"
+                              }
+                            },
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "20"
+                            }
+                          ],
+                          "preFields": [
+                            {
+                              "documentId": "20",
+                              "fieldName": "docType",
+                              "fieldDisplayName": "Type",
+                              "defaultValue": "gstSearch",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "20",
+                              "fieldName": "number",
+                              "fieldDisplayName": "Enter GSTN Number",
+                              "preField": "Y"
+                            }
+                          ],
+                          "postFields": [
+                            {
+                              "documentId": "20",
+                              "fieldName": "displayLegalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "displayLegalname",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "20",
+                              "fieldName": "legalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "20",
+                              "fieldName": "disputeLegalAddress",
+                              "fieldDisplayName": "Registered Address",
+                              "signzyField": "address",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "20",
+                              "fieldName": "gstn",
+                              "fieldDisplayName": "GSTIN Number",
+                              "signzyField": "number",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "GSTN Registration Certificate"
+                        },
+                        {
+                          "documentId": "21",
+                          "documentName": "Udhyog Aadhar",
+                          "validations": [
+                            {
+                              "validationCode": "7",
+                              "validationType": "DATAPULL",
+                              "validationName": "Enter Udhyog Aadhar",
+                              "required": "Y",
+                              "documentId": "21",
+                              "api": {
+                                "url": "/boarding/signzy/identity/{appURN}/fetch"
+                              }
+                            },
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "21",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            }
+                          ],
+                          "preFields": [
+                            {
+                              "documentId": "21",
+                              "fieldName": "docType",
+                              "fieldDisplayName": "Type",
+                              "defaultValue": "udhyogAadhaarUan",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "21",
+                              "fieldName": "number",
+                              "fieldDisplayName": "Enter Udhyog Aadhar",
+                              "preField": "Y"
+                            }
+                          ],
+                          "postFields": [
+                            {
+                              "documentId": "21",
+                              "fieldName": "displayLegalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "displayLegalname",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "21",
+                              "fieldName": "dateOfIssue",
+                              "fieldDisplayName": "Date of Commencement",
+                              "signzyField": "dateOfIssue",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "21",
+                              "fieldName": "legalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "21",
+                              "fieldName": "dateOfIssue",
+                              "fieldDisplayName": "Date of Commencement",
+                              "signzyField": "autoregResponse.dateOfIssue",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "21",
+                              "fieldName": "number",
+                              "fieldDisplayName": "UAN",
+                              "signzyField": "number",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Udhyog Aadhar"
+                        },
+                        {
+                          "documentId": "65",
+                          "documentName": "Partnership Deed",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "65"
+                            }
+                          ],
+                          "documentShortName": "Partnership Deed"
+                        },
+                        {
+                          "documentId": "22",
+                          "documentName": "ShopEstablishmentActCertificate",
+                          "validations": [
+                            {
+                              "validationCode": "8",
+                              "validationType": "DATAPULL",
+                              "validationName": "Enter Shop and Est License Number & State",
+                              "required": "Y",
+                              "documentId": "22",
+                              "api": {
+                                "url": "/boarding/signzy/identity/{appURN}/fetch"
+                              }
+                            }
+                          ],
+                          "preFields": [
+                            {
+                              "documentId": "22",
+                              "fieldName": "docType",
+                              "fieldDisplayName": "Type",
+                              "defaultValue": "snec",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "22",
+                              "fieldName": "number",
+                              "fieldDisplayName": "Shop License Number",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "22",
+                              "fieldName": "state",
+                              "fieldDisplayName": "Shop License State",
+                              "preField": "Y"
+                            }
+                          ],
+                          "postFields": [
+                            {
+                              "documentId": "22",
+                              "fieldName": "displayLegalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "displayLegalname",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "22",
+                              "fieldName": "legalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "22",
+                              "fieldName": "dateOfIssue",
+                              "fieldDisplayName": "Date of Commencement",
+                              "signzyField": "dateOfIssue",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "22",
+                              "fieldName": "disputeLegalAddress",
+                              "fieldDisplayName": "Registered Address",
+                              "signzyField": "address",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "22",
+                              "fieldName": "businessRegNumber",
+                              "fieldDisplayName": "License Number",
+                              "signzyField": "number",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "22",
+                              "fieldName": "disputePinCode",
+                              "fieldDisplayName": "disputePinCode",
+                              "signzyField": "splitAddress.pincode",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Shop & Establishment Act Certificate / Gomastha"
+                        },
+                        {
+                          "documentId": "66",
+                          "documentName": "Registered Partnership Deed",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "66"
+                            }
+                          ],
+                          "documentShortName": "Registered Partnership Deed"
+                        },
+                        {
+                          "documentId": "23",
+                          "documentName": "drivingLicence",
+                          "validations": [
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "23",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            },
+                            {
+                              "validationCode": "12",
+                              "validationType": "OCR",
+                              "validationName": "OCR via Signzy",
+                              "required": "Y",
+                              "documentId": "23"
+                            }
+                          ],
+                          "preFields": [],
+                          "postFields": [
+                            {
+                              "documentId": "23",
+                              "fieldName": "principalInfo.pinCode",
+                              "fieldDisplayName": "Pin Code",
+                              "signzyField": "autoregResponse.pincode",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "23",
+                              "fieldName": "principalInfo.state",
+                              "fieldDisplayName": "State",
+                              "signzyField": "autoregResponse.state",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "23",
+                              "fieldName": "principalInfo.city",
+                              "fieldDisplayName": "City",
+                              "signzyField": "autoregResponse.city",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "23",
+                              "fieldName": "name",
+                              "fieldDisplayName": "Name",
+                              "signzyField": "autoregResponse.name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "23",
+                              "fieldName": "principalInfo.address",
+                              "fieldDisplayName": "Address",
+                              "signzyField": "autoregResponse.address",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "23",
+                              "fieldName": "number",
+                              "fieldDisplayName": "License Number",
+                              "signzyField": "autoregResponse.number",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Driving License"
+                        },
+                        {
+                          "documentId": "67",
+                          "documentName": "Property Ownership deed",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "67"
+                            }
+                          ],
+                          "documentShortName": "Property Ownership deed"
+                        },
+                        {
+                          "documentId": "24",
+                          "documentName": "passport",
+                          "validations": [
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "24",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            },
+                            {
+                              "validationCode": "12",
+                              "validationType": "OCR",
+                              "validationName": "OCR via Signzy",
+                              "required": "Y",
+                              "documentId": "24"
+                            }
+                          ],
+                          "preFields": [],
+                          "postFields": [
+                            {
+                              "documentId": "24",
+                              "fieldName": "name",
+                              "fieldDisplayName": "Name",
+                              "signzyField": "autoregResponse.name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "24",
+                              "fieldName": "principalInfo.state",
+                              "fieldDisplayName": "State",
+                              "signzyField": "autoregResponse.state",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "24",
+                              "fieldName": "principalInfo.city",
+                              "fieldDisplayName": "City",
+                              "signzyField": "autoregResponse.city",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "24",
+                              "fieldName": "principalInfo.address",
+                              "fieldDisplayName": "Address",
+                              "signzyField": "autoregResponse.address",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "24",
+                              "fieldName": "principalInfo.pinCode",
+                              "fieldDisplayName": "Pin Code",
+                              "signzyField": "autoregResponse.pincode",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "24",
+                              "fieldName": "number",
+                              "fieldDisplayName": "Passport Number",
+                              "signzyField": "autoregResponse.number",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Passport"
+                        },
+                        {
+                          "documentId": "25",
+                          "documentName": "aadhaar",
+                          "validations": [
+                            {
+                              "validationCode": "12",
+                              "validationType": "OCR",
+                              "validationName": "OCR via Signzy",
+                              "required": "Y",
+                              "documentId": "25"
+                            },
+                            {
+                              "validationCode": "18",
+                              "validationType": "DATAEDIT",
+                              "validationName": "Data Editable",
+                              "required": "Y",
+                              "documentId": "25",
+                              "api": {
+                                "url": "/boarding/document/{appURN}/textmatch"
+                              }
+                            }
+                          ],
+                          "preFields": [],
+                          "postFields": [
+                            {
+                              "documentId": "25",
+                              "fieldName": "principalInfo.state",
+                              "fieldDisplayName": "State",
+                              "signzyField": "autoregResponse.state",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "25",
+                              "fieldName": "principalInfo.city",
+                              "fieldDisplayName": "City",
+                              "signzyField": "autoregResponse.city",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "25",
+                              "fieldName": "name",
+                              "fieldDisplayName": "Name",
+                              "signzyField": "autoregResponse.name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "25",
+                              "fieldName": "number",
+                              "fieldDisplayName": "Aadhaar Number",
+                              "signzyField": "autoregResponse.number",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "25",
+                              "fieldName": "principalInfo.address",
+                              "fieldDisplayName": "Address",
+                              "signzyField": "autoregResponse.address",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "25",
+                              "fieldName": "principalInfo.pinCode",
+                              "fieldDisplayName": "Pin Code",
+                              "signzyField": "autoregResponse.pincode",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "25",
+                              "fieldName": "principalInfo.dateOfBirth",
+                              "fieldDisplayName": "DOB",
+                              "signzyField": "autoregResponse.dob",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Aadhar Card"
+                        },
+                        {
+                          "documentId": "69",
+                          "documentName": "Importer-Exporter with PAN Card",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "69"
+                            }
+                          ],
+                          "documentShortName": "Importer-Exporter with PAN Card"
+                        },
+                        {
+                          "documentId": "27",
+                          "documentName": "Articles of Association AOA",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "27"
+                            }
+                          ],
+                          "preFields": [],
+                          "postFields": [
+                            {
+                              "documentId": "27",
+                              "fieldName": "bankAccountNumber",
+                              "fieldDisplayName": "Bank A/C",
+                              "signzyField": "essentials.beneficiaryAccount",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "27",
+                              "fieldName": "ifsc",
+                              "fieldDisplayName": "IFSC",
+                              "signzyField": "essentials.beneficiaryIFSC",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "27",
+                              "fieldName": "nameOnBankAccount",
+                              "fieldDisplayName": "Customer Name",
+                              "signzyField": "result.bankTransfer.beneName",
+                              "preField": "N"
+                            }
+                          ],
+                          "documentShortName": "Articles of Association AOA"
+                        },
+                        {
+                          "documentId": "28",
+                          "documentName": "Memorandum of association MOA",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "28"
+                            }
+                          ],
+                          "documentShortName": "Memorandum of association MOA"
+                        },
+                        {
+                          "documentId": "71",
+                          "documentName": "Last available Income Tax",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "71"
+                            }
+                          ],
+                          "documentShortName": "Last available Income Tax"
+                        },
+                        {
+                          "documentId": "72",
+                          "documentName": "Income Tax Return - Proprietor",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "72"
+                            }
+                          ],
+                          "documentShortName": "Income Tax Return - Proprietor"
+                        },
+                        {
+                          "documentId": "73",
+                          "documentName": "Tax Return - Partnership",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "73"
+                            }
+                          ],
+                          "documentShortName": "Tax Return - Partnership"
+                        },
+                        {
+                          "documentId": "30",
+                          "documentName": "Certificate of Incorporation",
+                          "validations": [
+                            {
+                              "validationCode": "6",
+                              "validationType": "DATAPULL",
+                              "validationName": "Enter CIN (ROC) Number",
+                              "required": "Y",
+                              "documentId": "30",
+                              "api": {
+                                "url": "/boarding/signzy/identity/{appURN}/fetch"
+                              }
+                            }
+                          ],
+                          "preFields": [
+                            {
+                              "documentId": "30",
+                              "fieldName": "docType",
+                              "fieldDisplayName": "Type",
+                              "defaultValue": "simpleSearchCin",
+                              "preField": "Y"
+                            },
+                            {
+                              "documentId": "30",
+                              "fieldName": "number",
+                              "fieldDisplayName": "Enter CIN",
+                              "preField": "Y"
+                            }
+                          ],
+                          "postFields": [
+                            {
+                              "documentId": "30",
+                              "fieldName": "displayLegalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "displayLegalname",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "30",
+                              "fieldName": "number",
+                              "fieldDisplayName": "CIN",
+                              "signzyField": "number",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "30",
+                              "fieldName": "legalName",
+                              "fieldDisplayName": "Legal Name",
+                              "signzyField": "name",
+                              "preField": "N"
+                            },
+                            {
+                              "documentId": "101",
+                              "fieldName": "disputeLegalAddress",
+                              "fieldDisplayName": "Registered Address",
+                              "validationName": "PDF",
+                              "required": "Y"
+                            }
+                          ],
+                          "documentShortName": "Power of Attorney to members"
+                        },
+                        {
+                          "documentId": "106",
+                          "documentName": "Tax ack land premises allotment",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "106"
+                            }
+                          ],
+                          "documentShortName": "Tax ack land premises allotment"
+                        },
+                        {
+                          "documentId": "108",
+                          "documentName": "Govt registration of AOP BOI",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "108"
+                            }
+                          ],
+                          "documentShortName": "Govt registration of AOP BOI"
+                        },
+                        {
+                          "documentId": "82",
+                          "documentName": "Certificate-cum-ack by District Ind",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "82"
+                            }
+                          ],
+                          "documentShortName": "Certificate-cum-ack by District Ind"
+                        },
+                        {
+                          "documentId": "40",
+                          "documentName": "SalesTaxServiceTaxPTRegCerti",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "40"
+                            }
+                          ],
+                          "documentShortName": "SalesTaxServiceTaxPTRegCerti"
+                        },
+                        {
+                          "documentId": "86",
+                          "documentName": "Reg Certi under Statute Act of GOI",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "86"
+                            }
+                          ],
+                          "documentShortName": "Reg Certi under Statute Act of GOI"
+                        },
+                        {
+                          "documentId": "87",
+                          "documentName": "Application Form for VAT Registration",
+                          "validations": [
+                            {
+                              "validationCode": "27",
+                              "validationType": "PDF",
+                              "validationName": "PDF",
+                              "required": "Y",
+                              "documentId": "87"
+                            }
+                          ],
+                          "documentShortName": "Application Form for VAT Registration"
+                        }
+                      ]
+                    }
+                  }
+
+  /boardinggateway/externalboarding/secure/addmid:
+    post:
+      tags:
+      - Boarding
+      summary: Additional Outlet
+      description: Additional Merchant
+      operationId: submitAdditionalMidApplication
+      x-group-name: Boarding
+      x-proxy-name: Additional Outlet
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              description: add mid
+              example: 
+                {
+                  "appURN": "1000008471",
+                  "appType": "Tab",
+                  "boardingType": "ADDLMID",
+                  "appChannel": "A12",
+                  "institutionId": "47",
+                  "salesId": "SureshBC",
+                  "status": null,
+                  "statusDate": null,
+                  "keySelection": {
+                    "mccCode": "5999",
+                    "merchantGrade": "EO",
+                    "merchantType": "LG",
+                    "acceptanceType": "POSMOB",
+                    "typeOfBusiness": "SOLPROR",
+                    "international": "No",
+                    "iciciMerchant": "No",
+                    "dcc": "No",
+                    "fundingCurrency": "NET_INR",
+                    "newFundingAc": "No"
+                  },
+                  "channelCode": "ISO Channel1",
+                  "osvFlagValue": "Y",
+                  "cardedUncarded": "Yes",
+                  "countryCode": "IND",
+                  "leadId": null,
+                  "merchantDetails": {
+                    "businessName": "Tets",
+                    "legalName": "ezetap provisioning testing",
+                    "businessType": "Sole Proprietor",
+                    "registrationNo": "829282",
+                    "dateTrading": null,
+                    "dateIncorporated": "25-03-2000",
+                    "websiteURL": "",
+                    "communicationEmail": "Prerana.kumbhar@firstdata.com",
+                    "legalAddress": {
+                      "addressLine": "Near central fire briged, Ganj peth",
+                      "addressLine2": ",, opposite kamble lane,",
+                      "addressLine3": "",
+                      "city": "PUN-PUNE",
+                      "state": "MAH",
+                      "pincode": "411042",
+                      "country": null,
+                      "phone1": "8358353553",
+                      "phone2": "",
+                      "contactName": "Test",
+                      "mobileNo": null,
+                      "email": "prerana.kumbhar@firstdata.com"
+                    },
+                    "fundingMethod": "NEFT",
+                    "clientTariff": null,
+                    "postingTariff": "NET_INR",
+                    "billingLevel": "01",
+                    "gstNo": "27AAOFN4566A1Z6",
+                    "isdnFlag": null,
+                    "gstMerchantStateCode": "27",
+                    "merchantType": "LG",
+                    "acceptanceType": "POSMOB",
+                    "iciciMerchant": "No",
+                    "newFundingAc": "No",
+                    "merchantGrade": "EO",
+                    "idDocDetails": [
+                      {
+                        "entity": "Member",
+                        "idType": "Capture the Merchant Store Photos",
+                        "idValue": "",
+                        "docId": "37ea3324bea6404bbc23a3bf78f4d238",
+                        "categoryName": "LOCATION PHOTOS",
+                        "level": "1",
+                        "mandatory": "Y"
+                      },
+                      {
+                        "entity": "Member",
+                        "idType": "MITC Document Page 1",
+                        "idValue": "",
+                        "docId": "cad26f43ff4c4956b30b2230727df1d2",
+                        "categoryName": "MITC",
+                        "level": "1",
+                        "mandatory": "Y"
+                      },
+                      {
+                        "entity": "Member",
+                        "idType": "MITC Document Page 2",
+                        "idValue": "",
+                        "docId": "e28aea1da58c41c6b37c137e379f1ce1",
+                        "categoryName": "MITC",
+                        "level": "2",
+                        "mandatory": "Y"
+                      },
+                      {
+                        "entity": "Member",
+                        "idType": "socDocument",
+                        "idValue": "",
+                        "docId": "073e4a4c5c9b4311895f0a0527b04dbd",
+                        "categoryName": "SOC",
+                        "level": "1",
+                        "mandatory": "Y"
+                      }
+                    ],
+                    "geoLocation": {
+                      "latitude": "12.9403189",
+                      "longitude": "77.7303295"
+                    },
+                    "taxDetails": {
+                      "taxidType": "businessPan",
+                      "taxidValue": "AAOFN4566A"
+                    }
+                  },
+                  "tradingLocations": [
+                    {
+                      "locationNo": 1,
+                      "tradingName": "jhcjgjcg",
+                      "tradingAddress": {
+                        "addressLine": "Near central fire briged, Ganj peth",
+                        "addressLine2": ",, opposite kamble lane,",
+                        "addressLine3": "",
+                        "city": "PUN-PUNE",
+                        "state": "MAH",
+                        "pincode": "411042",
+                        "country": null,
+                        "phone1": "8358353553",
+                        "phone2": "",
+                        "contactName": "Test",
+                        "mobileNo": null,
+                        "email": "prerana.kumbhar@firstdata.com"
+                      },
+                      "packageId": 1771,
+                      "packageName": "Add Indi Base Merchant - Add MID",
+                      "packageDescription": "Add Indi Base Merchant - Add MID",
+                      "memberType": "POS",
+                      "tariff": null,
+                      "amexTariff": "Amex Miscellane",
+                      "merchantGrade": "EO",
+                      "acqProfile": "International",
+                      "msfProfile": null,
+                      "mid": "470000099000154",
+                      "leadsubgroupmid": "470000056000250",
+                      "subgroupmid": "470000056000251",
+                      "otpEnabled": false,
+                      "feePlans": [
+                        {
+                          "serviceName": "Cashback",
+                          "feePlan": "0075"
+                        },
+                        {
+                          "serviceName": "UPI",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "BHARATQR",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "TONETAG POD",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "Charge Slip Type",
+                          "feePlan": "P"
+                        },
+                        {
+                          "serviceName": "Debit plus pin",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "BILLING SOLUTION",
+                          "feePlan": "Intuition"
+                        },
+                        {
+                          "serviceName": "Razor Netbanking",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "Instant Settlement",
+                          "feePlan": "1"
+                        },
+                        {
+                          "serviceName": "Integrator_PMS solution",
+                          "feePlan": "MICROS PMS"
+                        },
+                        {
+                          "serviceName": "Auto Settlement Time",
+                          "feePlan": "Y"
+                        },
+                        {
+                          "serviceName": "Chargeslip Table ID",
+                          "feePlan": "TableCh"
+                        },
+                        {
+                          "serviceName": "Ocean UI User Group",
+                          "feePlan": "GroupCh"
+                        },
+                        {
+                          "serviceName": "Theme ID",
+                          "feePlan": "ThemeCh"
+                        }
+                      ],
+                      "autoSettlementTime": null,
+                      "cpvGroupId": "",
+                      "regionalcpvGroupid": null,
+                      "commerceConnectReferenceMID": null,
+                      "terminals": [
+                        {
+                          "terminalType": "APOS",
+                          "terminalModel": "APOS",
+                          "batteryFlag": "N",
+                          "count": 1,
+                          "currencyCode": null,
+                          "templateId": null,
+                          "socScheme": null,
+                          "services": [
+                            {
+                              "serviceName": "AMEX",
+                              "serviceValue": "N"
+                            },
+                            {
+                              "serviceName": "DCC",
+                              "serviceValue": "Y"
+                            }
+                          ],
+                          "withBiller": "Yes",
+                          "billingSolProvider": "Intuition",
+                          "preferedDate": "03-07-2022",
+                          "preferedTime": "15:09",
+                          "discount": "0",
+                          "tdrPlan": null,
+                          "userInstruction1": "",
+                          "userInstruction2": "",
+                          "cpvGroupId": null
+                        }
+                      ],
+                      "amcFee": null,
+                      "cardedUncarded": "Uncarded",
+                      "altmerchCode": null,
+                      "sameLocation": "false"
+                    }
+                  ],
+                  "principalDetails": [
+                    {
+                      "principalNo": 1,
+                      "position": "Owner",
+                      "title": "Mr",
+                      "firstName": "Manan",
+                      "lastName": "Gupta",
+                      "middleName": "",
+                      "gender": null,
+                      "dateOfBirth": "04-05-1985",
+                      "nationality": "INDIAN",
+                      "principalAddress": {
+                        "addressLine": "Keshavnagar",
+                        "addressLine2": "",
+                        "addressLine3": "",
+                        "city": "PUN-PUNE",
+                        "state": "MAH",
+                        "pincode": "411036",
+                        "country": "India",
+                        "phone1": "9426855672",
+                        "phone2": "",
+                        "contactName": "Manan",
+                        "mobileNo": null,
+                        "email": null
+                      },
+                      "idDocDetails": null,
+                      "kycDetails": [
+                        {
+                          "kycCategory": "Individual POA1 KYC",
+                          "identityType": "aadhaar",
+                          "identityValue": "000000006746",
+                          "identitymetaName1": null,
+                          "identitymetaValue1": null
+                        },
+                        {
+                          "kycCategory": "Individual POI1 KYC",
+                          "identityType": "individualPan",
+                          "identityValue": "ABCDE1234F",
+                          "identitymetaName1": null,
+                          "identitymetaValue1": null
+                        }
+                      ]
+                    },
+                    {
+                      "principalNo": 2,
+                      "position": "Owner",
+                      "title": "Mr",
+                      "firstName": "Manan",
+                      "lastName": "Gupta",
+                      "middleName": "",
+                      "gender": null,
+                      "dateOfBirth": "04-05-1985",
+                      "nationality": "INDIAN",
+                      "principalAddress": {
+                        "addressLine": "Keshavnagar",
+                        "addressLine2": "",
+                        "addressLine3": "",
+                        "city": "PUN-PUNE",
+                        "state": "MAH",
+                        "pincode": "411036",
+                        "country": "India",
+                        "phone1": "9426855672",
+                        "phone2": "",
+                        "contactName": "Manan",
+                        "mobileNo": null,
+                        "email": null
+                      },
+                      "idDocDetails": null,
+                      "kycDetails": [
+                        {
+                          "kycCategory": "Individual POA2 KYC",
+                          "identityType": "aadhaar",
+                          "identityValue": "000000007546",
+                          "identitymetaName1": null,
+                          "identitymetaValue1": null
+                        },
+                        {
+                          "kycCategory": "Individual POI2 KYC",
+                          "identityType": "individualPan",
+                          "identityValue": "ABCDE1234F",
+                          "identitymetaName1": null,
+                          "identitymetaValue1": null
+                        }
+                      ]
+                    }
+                  ],
+                  "bankDetails": {
+                    "fundingAccountDetails": null,
+                    "collectionAccountDetails": null,
+                    "uwAccountDetails": {
+                      "accountNo": "12231000013575757",
+                      "accountName": "test",
+                      "ifsc": "JANA0000012",
+                      "bankName": "JANASEVA SAHAKARI BANK LIMITED",
+                      "branch": "CAMP",
+                      "currency": "INR",
+                      "accType": "Savings"
+                    }
+                  },
+                  "businessSummary": {
+                    "briefSummary": "test",
+                    "mccCode": "5999",
+                    "mccDescription": "Miscellaneous and Specialty Retail Stores",
+                    "totalTurnover": "0",
+                    "totalTurnoverPerMID": "0",
+                    "dccTurnoverPerMID": "0",
+                    "pgTurnover": "25",
+                    "pgTurnoverPerMID": "5",
+                    "cardTurnover": "2525",
+                    "avgTicketAmt": "25",
+                    "avgEMITicketAmt": "0",
+                    "tranVolumeInternet": "0",
+                    "tranVolumeMoto": "0",
+                    "tranVolumeInStore": "100",
+                    "deliveryDays0": "100",
+                    "deliveryDays7": "0",
+                    "deliveryDays14": "0",
+                    "deliveryDays30": "0",
+                    "deliveryDaysOver30": "0",
+                    "tranTypeMagStrip": "0",
+                    "tranTypeChip": "100",
+                    "tranTypeKeyed": "0",
+                    "creditSalesConsumer": "0",
+                    "creditSalesBusiness": "100",
+                    "firsReport": "Not Required",
+                    "recurringTranFlag": "No",
+                    "refundPolicy": null,
+                    "cardRefundDays": null,
+                    "thirdPartyProcessorFlag": "No",
+                    "thirdPartyProcessorName": null,
+                    "smallMerchant": "Y"
+                  },
+                  "uboDetails": null
+                }
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                description: add mid response
+                example:
+                  {
+                    "status": {
+                        "statusCode": 200,
+                        "message": "Success"
+                    },
+                    "isAcvSuccess": null,
+                    "data": {
+                        "appUrn": "1000008469",
+                        "lsg": "51675948",
+                        "sgArray": [
+                            {
+                                "subgroupmId": "51672434",
+                                "merchantId": "95515434",
+                                "submerchantId": "00267746",
+                                "terminals": null
+                            }
+                        ]
+                    }
+                }
+  
+  /boardinggateway/externalboarding/secure/document/{appUrn}:
+    post:
+      tags:
+      - Boarding
+      summary: Document Upload
+      description: Document Upload
+      operationId: uploadMerchantDocument
+      x-group-name: Boarding
+      x-proxy-name: Document Upload
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - name: appUrn
+        in: path
+        required: true
+        schema:
+          type: string
+          description: App URN
+          example: "1000004745"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MerchantDocumentUploadRequest'
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                description: upload document response
+                example:
+                  {
+                    "status": {
+                      "statusCode": 200,
+                      "message": "Success"
+                    },
+                    "data": {
+                      "merchantDocument": {
+                        "appURN": "8000110311",
+                        "docId": "88173d0b16f14c7c9c920d0e16cb90e6",
+                        "docType": "cheque",
+                        "fileType": ".jpeg",
+                        "principalNo": 0,
+                        "locationNo": 0,
+                        "categoryName": "Funding Proof",
+                        "level": "1",
+                        "mandatory": "Y",
+                        "entity": "Merchant"
+                      },
+                      "autoregResponse": {
+                        "number": "658205602030",
+                        "bankName": "ICICI BANK",
+                        "ifsc": "GAUT0MOBILE"
+                      }
+                    }
+                  }
+  /boardinggateway/externalboarding/secure/packages/{packageId}:
+    get:
+      tags:
+      - Boarding
+      summary: Get Package ID
+      description: Get Package ID
+      operationId: getPackageById
+      x-group-name: Boarding
+      x-proxy-name: Get Package ID
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - name: packageId
+        in: path
+        description: Get Package ID
+        required: true
+        schema:
+          type: string
+          example: "7502"
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                description: get pakcage id
+                example:
+                  {
+                    "status": {
+                        "statusCode": 200,
+                        "message": "Success"
+                    },
+                    "data": {
+                        "id": "136",
+                        "name": "TID LG EmergingP090LM existing prod",
+                        "desc": "LG Sole properitor exsting prod with PC Additional TID",
+                        "shrtName": null,
+                        "level": null,
+                        "image": null,
+                        "cnrInd": null,
+                        "acceptanceType": "POSMOB",
+                        "isInternational": "No",
+                        "isDCC": "No",
+                        "msfTariff": "EmergingP090LM",
+                        "fundingCurrency": "NET_INR",
+                        "preferential": "N",
+                        "otpEnabled": true,
+                        "sbPackageDesc": null,
+                        "sbInstrumentsDesc": null,
+                        "sbVASDesc": null,
+                        "sbTerminalTypeDesc": null,
+                        "sbPricingDesc": null,
+                        "attributes": [
+                            {
+                                "category": "Package VAS",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "UPI",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "EMI Profile",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "SODEXO",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "PAYBACK",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "POCKETS WALLET",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "BAJAJ Finserv",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "BHARATQR",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "Google Pay",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "Email / SMS Invoicing",
+                                        "value": "Y",
+                                        "codeType": "Package VAS",
+                                        "applicableForFilter": true
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Funding Currency",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "NET_INR",
+                                        "value": "NET_INR",
+                                        "codeType": "Funding Currency",
+                                        "applicableForFilter": false
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Package Acceptance",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "POSMOB",
+                                        "value": "Y",
+                                        "codeType": "Package Acceptance",
+                                        "applicableForFilter": false
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Additional Parameters",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "Charge Slip Type",
+                                        "value": "Physical Chargeslip",
+                                        "codeType": "Additional Parameters",
+                                        "applicableForFilter": false
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Terminal Type",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "Normal WIFI",
+                                        "value": "Y",
+                                        "codeType": "Terminal Type",
+                                        "applicableForFilter": true
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Package Schemes",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "Master",
+                                        "value": "Y",
+                                        "codeType": "Package Schemes",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "Rupay",
+                                        "value": "Y",
+                                        "codeType": "Package Schemes",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "DND",
+                                        "value": "Y",
+                                        "codeType": "Package Schemes",
+                                        "applicableForFilter": false
+                                    },
+                                    {
+                                        "name": "AMEX",
+                                        "value": "N",
+                                        "codeType": "Package Schemes",
+                                        "applicableForFilter": false
+                                    },
+                                    {
+                                        "name": "CUP",
+                                        "value": "Y",
+                                        "codeType": "Package Schemes",
+                                        "applicableForFilter": false
+                                    },
+                                    {
+                                        "name": "VISA",
+                                        "value": "Y",
+                                        "codeType": "Package Schemes",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "Maestro",
+                                        "value": "Y",
+                                        "codeType": "Package Schemes",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "JCB",
+                                        "value": "Y",
+                                        "codeType": "Package Schemes",
+                                        "applicableForFilter": false
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Package Tariffs",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "Cash at POS Tariff",
+                                        "value": null,
+                                        "codeType": "Package Tariffs",
+                                        "applicableForFilter": false
+                                    },
+                                    {
+                                        "name": "MSF Tariff",
+                                        "value": "EmergingP090LM",
+                                        "codeType": "Package Tariffs",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "SOC Tariff",
+                                        "value": "2500 1st Month GPRS Rental 300",
+                                        "codeType": "Package Tariffs",
+                                        "applicableForFilter": true
+                                    },
+                                    {
+                                        "name": "MDR",
+                                        "value": "C090P090COR090IC000INC260D090",
+                                        "codeType": "Package Tariffs",
+                                        "applicableForFilter": false
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Additional Terminal Info",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "ATS Remarks",
+                                        "value": "New",
+                                        "codeType": "Additional Terminal Info",
+                                        "applicableForFilter": false
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Package Card Types",
+                                "displayName": null,
+                                "attributeList": [
+                                    {
+                                        "name": "DEBIT",
+                                        "value": "Y",
+                                        "codeType": "Package Card Types",
+                                        "applicableForFilter": false
+                                    },
+                                    {
+                                        "name": "PREPAID",
+                                        "value": "Y",
+                                        "codeType": "Package Card Types",
+                                        "applicableForFilter": false
+                                    },
+                                    {
+                                        "name": "CREDIT",
+                                        "value": "Y",
+                                        "codeType": "Package Card Types",
+                                        "applicableForFilter": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+components:
+  parameters:
+    ApiKeyHeader:
+      name: Authorization
+      schema: {type: string, example: '0pMHhH9J0D3_P5yUJDsjGUWBcAzEquRT'}
+      in: header
+      required: true
+      description: never expiring token for all apis
+
+  schemas:
+    PkgListResponse:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/Status'
+        data:
+          type: object
+        documentOverride:
+          type: array
+          items:
+            $ref: '#/components/schemas/DocumentOverride'
+    MerchantDocumentUploadRequest:
+      type: object
+      properties:
+        docType:
+          type: string
+          example: Cheque
+          description: document type
+        fileType:
+          type: string
+          example: .jpeg
+          description: filet Type
+        principalNo:
+          type: string
+          example: "1"
+          description: Principal No
+        categoryName:
+          type: string
+          example: "Fungding proof"
+          description: category name
+        level:
+          type: string
+          example: "1"
+        entity:
+          type: string
+          example: "Merchant"
+        Mandatory:
+          type: string 
+          example: "Y"
+        imageback:
+            type: string
+            format: binary
+        imageFront:
+            type: string
+            format: binary
+    DocumentOverride:
+      type: object
+      properties:
+        packageId:
+          type: string
+        category:
+          type: string
+        documentId:
+          type: string
+    DocAndPkgRequestParam:
+      type: object
+      properties:
+        appType:
+          type: string
+          description: Application type
+          example: API
+        mccCode:
+          type: string
+          description: Merchant currency code
+          example: "5813"
+        merchantType:
+          type: string
+          description: Merchant Type
+          example: SM
+        acceptanceType:
+          type: string
+          description: Acceptance Type
+          example: POSMOB
+        typeOfBusiness:
+          type: string
+          description: type of business
+          example: SOLPROR
+        international:
+          type: string
+          description: international
+          example: No
+        iciciMerchant:
+          type: string
+          description: ICICI Merchant
+          example: No
+        dcc:
+          type: string
+          description: Dynamic currency code
+          example: Yes
+        fundingCurrency:
+          type: string
+          description: Funding Currency
+          example: NET_AUD
+        boardingType:
+          type: string
+          description: Boarding Type
+          example: NEWMID
+        merchantGrade:
+          type: string
+          description: Merchant Grade
+          example: NA
+        newFundingAc:
+          type: string
+          description: new funding account
+          example: ""
+    Response:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/Status"
+        data:
+          type: object
+    Status:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+        message:
+          type: string
+    EncDecResponse:
+      type: object
+      properties:
+        statusCode:
+          type: string
+          description: status code
+          example: "200"
+        response:
+          type: string
+          description: encrypted  response
+          example: "wT/izrHrPefuqOfVPrqItzSbEkBGF/4TX7zfx8GjIGcmRaamXThWuKIfNcX0aH0PRqrWyYhOHCHbiA82aqp+LwcnIbNwrtzPD1E4z3XDIj3DqbplCrP6Ge6rxi0zzlOVp80UBujaywNCd1nLAJHnpDOnTc4LfJRvK96MdZwjpVUWxADG1nazE6rm2lryJ0wxcSN/SGsN7EWCh1+9JaLBWXmL3lEwsGmKSdkeFDbW4z/Cw6fdz200G2Tre/I+hAJstsffaItyQkHyL+/1R7xe8r9ld0SHFJa3HbvwkHxz7TFv7fwp6kQSj35MhQc7uiuZdcXfQXRBAQA9JnPs8nnhIQA7FYTIuMozE0Cp9JI+spZ2Vvxo4X4TKz9dfVHYxVqp"
+            
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
