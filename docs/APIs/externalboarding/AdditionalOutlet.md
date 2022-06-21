@@ -1,6 +1,6 @@
 # Additional Outlet
 
-This API is used to additional outlet. Merchants needs to add session token received during login API call in the header of this API
+This API is used to additional outlet. Merchant needs to add session token received during login API call in the header of this API
 
 
 ## Endpoint

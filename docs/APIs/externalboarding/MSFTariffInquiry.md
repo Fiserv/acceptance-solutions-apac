@@ -1,6 +1,6 @@
 # MSF Tariff Inquiry
 
-This API is used to msf tariff inquiry. Merchants needs to add session token received during login API call in the header of this API.
+This API is used to msf tariff inquiry. Merchant needs to add session token received during login API call in the header of this API.
 
 
 ## Endpoint
