@@ -5,7 +5,7 @@ This API is used to additional device. Merchants needs to add session token rece
 
 ## Endpoint
 
-POST `/Externalboarding/secure/addtid`
+POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/addtid`
 
 ## Payload Example
 

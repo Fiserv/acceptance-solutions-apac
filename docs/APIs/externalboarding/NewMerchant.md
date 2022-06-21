@@ -5,7 +5,7 @@ This API is used to new merchant. Merchants needs to add session token received 
 
 ## Endpoint
 
-POST `/Externalboarding/secure/newmid`
+POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/newmid`
 
 ## Payload Example
 

@@ -5,7 +5,7 @@ This API is used to create URN. Merchants needs to add session token received du
 
 ## Endpoint
 
-POST `/Externalboarding/secure/create`
+POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/create`
 
 ## Payload Example
 

@@ -5,7 +5,7 @@ This API is used to mid inquiry. Merchants needs to add session token received d
 
 ## Endpoint
 
-GET `/Externalboarding/secure/refmid/{appType}/{refmid}`
+GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/refmid/{appType}/{refmid}`
 
 ## Payload Example
 

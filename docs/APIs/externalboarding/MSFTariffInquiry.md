@@ -5,7 +5,7 @@ This API is used to msf tariff inquiry. Merchants needs to add session token rec
 
 ## Endpoint
 
-GET `/Externalboarding/secure/msf/{msfId}`
+GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/msf/{msfId}`
 
 ## Payload Example
 

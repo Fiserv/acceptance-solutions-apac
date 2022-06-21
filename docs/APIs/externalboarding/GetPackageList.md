@@ -5,7 +5,7 @@ This API is used to get package list. Merchants needs to add session token recei
 
 ## Endpoint
 
-GET `/Externalboarding/secure/packages`
+GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/packages`
 
 ## Payload Example
 

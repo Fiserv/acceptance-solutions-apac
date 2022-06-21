@@ -5,7 +5,7 @@ This API is used to additional outlet. Merchants needs to add session token rece
 
 ## Endpoint
 
-POST `/Externalboarding/secure/addmid`
+POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/addmid`
 
 ## Payload Example
 

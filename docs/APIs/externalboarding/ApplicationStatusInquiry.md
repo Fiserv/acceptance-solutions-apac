@@ -5,7 +5,7 @@ This API is used to application status inquiry. Merchants needs to add session t
 
 ## Endpoint
 
-GET `/Externalboarding/secure/appstatus/{appUrn}`
+GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/appstatus/{appUrn}`
 
 ## Payload Example
 

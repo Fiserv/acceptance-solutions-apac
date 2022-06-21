@@ -5,7 +5,7 @@ This API is used to document upload. Merchants needs to add session token receiv
 
 ## Endpoint
 
-POST `/Externalboarding/secure/document/{appUrn}`
+POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/{appUrn}`
 
 ## Payload Example
 

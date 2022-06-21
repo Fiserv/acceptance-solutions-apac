@@ -5,7 +5,7 @@ This API is used to single mid payfac. Merchants needs to add session token rece
 
 ## Endpoint
 
-POST  `/Externalboarding/secure/newmid`
+POST  `https://www.uat.fdmerchantservices.com/Externalboarding/secure/newmid`
 
 ## Payload Example
 
