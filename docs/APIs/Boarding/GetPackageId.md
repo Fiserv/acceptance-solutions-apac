@@ -4,6 +4,7 @@ This API is used to get individual package. Merchants needs to add session
 token received during login api call in the header of this API.
 
 
+
 ## Endpoint
 
 GET `Externalboarding/secure/packages/{packageId}`
