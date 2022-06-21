@@ -77,7 +77,7 @@ paths:
         "200":
           description: OK
           content:
-            '*/*':
+            application/json:
               schema:
                 type: string
                 description: encrypted string
