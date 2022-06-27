@@ -1,6 +1,7 @@
-# Interapp
+# Inter-Application Integration
 
-Interapp is an integration between two applications present in the same device. E.g. Biller can integrate with payment app and complete the payment transaction.
+Inter-Application integration can facilitate processing of various payment transactions from Fiserv payment terminal.
+E.g. Biller can integrate with payment app and complete the payment transaction.
 
 Financial payment transactions supported by Interapp to biller: Sale, PreAuth Sale, PreAuth Completion, Transaction Status Check, EMI Sale, Void, Settlement, Bharat QR code generation
 
@@ -45,7 +46,7 @@ MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ```
 
-### PreAuth Completition Request
+### PreAuth Completion Request
 ```
 Base24Request request = new Base24Request();
 request.setFunctionCode(Base24Constant.TYPE_PREAUTH_COMPLETIN);
@@ -99,7 +100,7 @@ requestParams.put("base24Request", request.toString());
 MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ```
-### EMI sale Request
+### EMI Sale Request
 ```
 Base24Request request = new Base24Request(); 
 request.setFunctionCode(Base24Constant.TYPE_EMI_SALE);
@@ -121,7 +122,7 @@ requestParams.put("base24Request", request.toString());
 MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ```
-### Transaction status Request
+### Transaction Status Request
 ```
 Base24Request request = new Base24Request(); 
 request.setFunctionCode(Base24Constant.TYPE_TRANS_STATUS);
@@ -140,7 +141,7 @@ requestParams.put("base24Request", request.toString());
 MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ```
-### QR Directly Request
+### QR Direct Request
 ```
 JSONObject requestParams = new JSONObject();
 requestParams.put("transaction_amount",“12000”); 
@@ -165,7 +166,7 @@ requestParams.put("transaction_type","BBPS");
 MSApi.getInstance().doBBPSTransaction(context, 123, requestParams);
 
 ```
-### ICICI Fast tag Sale Request
+### ICICI Fast Tag Sale Request
 ```
 JSONObject requestParams = new JSONObject();
 requestParams.put("transaction_amount", “100”);
@@ -179,29 +180,29 @@ MSApi.getInstance().doFastagTransaction(context, 123, requestParams);
 
 The table below identifies the required properties in the request message
 
-| Variable |     Length     | Mandatory/Optional/Conditional  | Description / Values |
-| -------- | -------------- | -----------------------| ------------------ |
-| `functionCode`	| 2bytes | 00- Digital and Carded both,01-Sale(Sale,DCC),02-Preauth Sale,03- Preauth Completion,04-Refund,05-Void,06-TIP,07-Cash@POS,08-EMI Sale,09-Loyality Earn,10-Loyality Burn,11-Settlement Transaction,12-Transaction status |
-| `source` | 10bytes | O | TILL,Mobile,AVTM,etc |
-| `totalTxnAmount(Auth+ConvFee + GTS )`| 10bytes | M | Total Amount including decimal |
-| `convenienceFee` | 10bytes | O | Convenience Fee including decimal |
-| `CGST` | 10bytes | O | GST Including decimal (GST) |
-| `SGST` | 10bytes | O | GST Including decimal (GST) |
-| `billAmount` | 10bytes | O (Mandotory for QR generation/ Wallet Transactions | Bill amount including decimal |
-| `merchantReferenceNumber(MRN)` | 20bytes | M | Unique merchant number generated on mobile |
-| `EMIReferenceNumber(ERN)` | 8bytes | O(Mandatory for EMI transaction ) | EMI reference number generated on mobile |
-| `consumeNumber` | 20bytes | O | consume number (CRN) |
-| `currencySelection` | 3bytes | O | NA |
-| `userDefinedFields` | 30bytes | O | PAN + UDF |
-| `terminalInvoiceNumber` | 8bytes | O(Mandatory for void Transaction) | Used for Preauth completion & cancelletion |
-| `cardLastFourDigit` | 4bytes | O | Used for preauth completion & cancelletion |
-| `authCode` | 8bytes | O | Used for preauth completion & cancelletion |
-| `emailId` | 50bytes | O | Email ID on which Email needs to be received |
-| `billerId` | 10bytes | O | Biller ID received |
-| `DCC flag` | 1byte | O | DCC conversion flag yes or no |
-| `UDF 1`| 10bytes | O | UDF1 |
-| `UDF 2` | 10bytes | O | UDF2 |
-| `printChargeSlip` | 1byte | O | Y o N ( Default - Y ) |
+| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C )  | Description / Values |
+| -------- | -------- | -------------- | -----------------------| ------------------ |
+| `functionCode` | String	| 2 | 00- Digital and Carded both,01-Sale(Sale,DCC),02-Preauth Sale,03- Preauth Completion,04-Refund,05-Void,06-TIP,07-Cash@POS,08-EMI Sale,09-Loyality Earn,10-Loyality Burn,11-Settlement Transaction,12-Transaction status |
+| `source` | String | 10 | O | TILL,Mobile,AVTM,etc |
+| `totalTxnAmount(Auth+ConvFee + GTS )`| String | 10 | M | Total Amount including decimal |
+| `convenienceFee`| String | 10 | O | Convenience Fee including decimal |
+| `CGST` | String | 10 | O | GST Including decimal (GST) |
+| `SGST` | String  | 10 | O | GST Including decimal (GST) |
+| `billAmount`  | String | 10 | O (Mandotory for QR generation / Wallet Transactions | Bill amount including decimal |
+| `merchantReferenceNumber(MRN)` | String | 20 | M | Unique merchant number generated on mobile |
+| `EMIReferenceNumber(ERN)` | String | 8 | O ( Mandatory for EMI transaction ) | EMI reference number generated on mobile |
+| `consumeNumber` | String | 20 | O | consume number (CRN) |
+| `currencySelection` | String | 3 | O | NA |
+| `userDefinedFields` | String | 30 | O | PAN + UDF |
+| `terminalInvoiceNumber` | String | 8 | O ( Mandatory for void Transaction ) | Used for Preauth completion & cancelletion |
+| `cardLastFourDigit` | String | 4 | O | Used for preauth completion & cancelletion |
+| `authCode` | String | 8 | O | Used for preauth completion & cancelletion |
+| `emailId` | String | 50 | O | Email ID on which Email needs to be received |
+| `billerId` | String | 10 | O | Biller ID received |
+| `DCC flag` | String | 1 | O | DCC conversion flag yes or no |
+| `UDF 1` | String| 10 | O | UDF1 |
+| `UDF 2`  | String| 10 | O | UDF2 |
+| `printChargeSlip` | String | 1 | O | Y o N ( Default - Y ) |
 
 ### Response in Payload
 ```

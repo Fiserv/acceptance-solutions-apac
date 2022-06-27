@@ -1,5 +1,6 @@
-# Interapp
-Interapp is an integration between two applications present in the same device. E.g. Biller can integrate with payment app and complete the payment transaction.
+# Inter-Application Integration
+Inter-Application integration can facilitate processing of various payment transactions from Fiserv payment terminal.
+E.g. Biller can integrate with payment app and complete the payment transaction.
 
 Financial payment transactions supported by Interapp to biller: Sale, Void, Refund, Offline, Adjust, PreAuth, PreAuth Void, PreAuth Complete, PreAuth Complete Void, Settlement.
 
