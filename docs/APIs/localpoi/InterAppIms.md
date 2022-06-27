@@ -180,10 +180,10 @@ MSApi.getInstance().doFastagTransaction(context, 123, requestParams);
 
 The table below identifies the required properties in the request message
 
-| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C )  | Description / Values |
-| -------- | -------- | -------------- | -----------------------| ------------------ |
+| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C )  |     Description / Values      |
+| -------- | -------- | -------------- | -----------------------| ------------------------- |
 | `functionCode` | String	| 2 | 00- Digital and Carded both |
-|  | 	|  | 01-Sale(Sale,DCC) |
+|  | 	|  | 01-Sale( Sale , DCC ) |
 |  | 	|  | 02-Preauth Sale |
 |  | 	|  | 03- Preauth Completion |
 |  | 	|  | 04-Refund |
@@ -191,11 +191,11 @@ The table below identifies the required properties in the request message
 |  | 	|  | 06-TIP |
 |  | 	|  | 07-Cash@POS |
 |  | 	|  | 08-EMI Sale |
-|  | 	|  | 09-Loyality Earn,10-Loyality Burn |
+|  | 	|  | 09-Loyality Earn |
 |  | 	|  | 10-Loyality Burn |
 |  | 	|  | 11-Settlement Transaction |
 |  | 	|  | 12-Transaction status |
-| `source` | String | 10 | O | TILL,Mobile,AVTM,etc |
+| `source` | String | 10 | O | TILL, Mobile, AVTM, etc |
 | `totalTxnAmount(Auth+ConvFee + GTS )`| String | 10 | M | Total Amount including decimal |
 | `convenienceFee`| String | 10 | O | Convenience Fee including decimal |
 | `CGST` | String | 10 | O | GST Including decimal (GST) |
