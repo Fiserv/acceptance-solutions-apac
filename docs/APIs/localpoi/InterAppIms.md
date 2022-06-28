@@ -211,7 +211,7 @@ The table below identifies the required properties in the request message
 | `userDefinedFields` | String | 30 | O | PAN + UDF |
 | `terminalInvoiceNumber` | String | 8 | O ( Mandatory for void Transaction ) | Used for Preauth completion & cancelletion |
 | `cardLastFourDigit` | String | 4 | O | Used for preauth completion & cancelletion |
-| `authCode` | String | 8 | O | Used for preauth completion & cancelletion |
+| `authCode` | String | 8 | O | Used for preauth completion and cancelletion |
 | `emailId` | String | 50 | O | Email ID on which Email needs to be received |
 | `billerId` | String | 10 | O | Biller ID received |
 | `DCC flag` | String | 1 | O | DCC conversion flag yes or no |
@@ -276,7 +276,7 @@ The table below identifies the required properties in the response message
 |`Transaction ID`	|String|	10|	M|	Transaction ID|
 |`Customer name` |	String|	25|	O|	Customer name extracted from Card|
 |`User defined fields`|	String|	30	|O|	custom filed|
-|`Masked Card Number`	|String	|21|	M|	First Six digit & last four digit. In between number should be masked|
+|`Masked Card Number`	|String	|21|	M|	First six digits and last four digits with the numbers in between masked. |
 |`Application Version Number`|	String|	10	|M	|This is terminal application version number|
 |`Date & Time`|	String|	20|	M|	Host Date & Time|
 |`ATID`|	String|	8	|M|	Acquirer TID|
@@ -290,7 +290,7 @@ The table below identifies the required properties in the response message
 |`EMV specific Data`|	String|	256|	O|	EMV data like TC , Application identifier, Application Name, TSI, etc.|
 |`DCC Indicator`	|String|	1|	O|	"DCC  flag  yes or no DCC : Sale , Void value as '1'"|
 |`EMI flag`|	String|	1	|O	|"EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC EMI Sale, EMI Void"|
-|`Pos Entry Mode`	|String|	3|	O|	Magstipe,Chip, Contactless, Manual entry, etc.|
+|`Pos Entry Mode`	|String|	3|	O|	Magstipe, Chip, Contactless, Manual entry, etc.|
 |`Pin Verified`	|String	|3	|O	|"Yes" when PIN was entered & "No" when pin was not prompt|
 |`Auth Code`|	String|	8|	M	|Received from Issuer/host|
 |`Biller Id` |	String	|10|	O	|Biller Id|
