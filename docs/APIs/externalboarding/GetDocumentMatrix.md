@@ -41,7 +41,7 @@ GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/document`
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/document).
 
 ### Request
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C)  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `boardingType` |	*Alphanumeric* |	20 | M | Type of Merchant: NEWMID/ADDMID/ADDTID |
 | `institutionCode` |	*Alphanumeric* |	3 |	M |	The unique value assigned to each channel |

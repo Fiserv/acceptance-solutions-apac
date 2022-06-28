@@ -25,7 +25,7 @@ Path variabe :
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/refmid/{appType}/{refmid}`).
 
 ### Request
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `appType` | *Path variable* | 8 | M | Fixed Value 'API' |
 | `refmid` | *Path variable* | 8 | M | Mid generated for the new application needs to be passed for generating ADDMID & ADDTID |

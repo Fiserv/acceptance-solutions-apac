@@ -37,7 +37,7 @@ GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/packages`
 The table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/packages).
 
 ### Request
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `appType` |	*Alphanumeric* |	8 |	M |	Fixed Value 'API' |
 | `salesId` | *Alphanumeric* | 	70 | M	| User Credential created for each partner | 
@@ -50,7 +50,7 @@ The table contains the mandatory fields required for a successful request. The f
 | `iciciMerchant` | *Alphanumeric* | 20 | O	| Applicable if the merchant is ICICI current bank account holder |
 | `dcc` |	*Alphanumeric* |	3 |	 O | It is applicable for Foreign rate conversion(Y/N) |
 | `fundingCurrency` |	*Alphanumeric* |	8 |	 M | The currency  settled to the merchant NET_INR, NET_USD, NET_AUD etc |
-| `boardingTyp`e | *Alphanumeric* |	20 | M | Type of Merchant: NEWMID/ADDMID/ADDTID |
+| `boardingType` | *Alphanumeric* |	20 | M | Type of Merchant: NEWMID/ADDMID/ADDTID |
 | `merchantGrade` | *Alphanumeric* | 40 | M	| The grade of the merchant decided as per the turnover |
 
 
@@ -348,7 +348,7 @@ The table contains the mandatory fields required for a successful request. The f
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory /Optional / Conditional ( M / O / C) | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `id` | *string* | 20 | M | Identification Number |
 

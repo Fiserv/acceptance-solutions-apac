@@ -23,7 +23,7 @@ Path variable -  packageId : 136
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=Externalboarding/secure/packages/{packageId}).
 
 ### Request
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `packageId` | *Path Variable* |  | M | package id |
 

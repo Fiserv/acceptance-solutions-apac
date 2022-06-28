@@ -12,7 +12,7 @@ POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/{a
 ### Request Payload
 
 ```json
-
+https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/10000745
 
 ```
   
@@ -23,7 +23,7 @@ POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/{a
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/document/{appUrn}).
 
 ### Request
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional  (M / O / C)  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `appURN` |	*Alphanumeric* |	30 | M |	App URN retured as part of Create URN API |	 
 | `docType` |	*Alphanumeric* |	30  |	  |	Document Name of document being uploaded. |  	
