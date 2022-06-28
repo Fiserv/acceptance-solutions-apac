@@ -262,8 +262,8 @@ The table below identifies the required properties in the response message
 |  | 	|  | 18- Tone Tag wallet  |
 |  | 	|  | 19- Noncarded  |
 |`source` | String | 10 | O | TILL, Mobile, AVTM, etc |
-|`TIP amoun`t	|String	|10|O|	Length 10 including decimal |
-|"Total Transaction amount (  Bill  Amount + Convenience Fee +  GST ) |	String|	10|	M	|Length 10 including decimal|
+|`TIP amount`	|String	|10|O|	Length 10 including decimal |
+|`Total Transaction amount (  Bill  Amount + Convenience Fee +  GST )` |	String|	10|	M	|Length 10 including decimal|
 |Fuel  |Discount | Cashback |	String	|10|	O	|Length 10 including decimal|
 |`Convenience Fee`|	String|	10|	O|	Length 10 including decimal|
 |`CGST` |	String	|10	|O|	Length 10 including decimal|
@@ -288,18 +288,18 @@ The table below identifies the required properties in the response message
 |`RRN`|	String|	12	|M	|RRN received from host|
 |`SE`	|String	|10|	O|	Value would be populated incase of Amex txns|
 |`EMV specific Data`|	String|	256|	O|	EMV data like TC , Application identifier, Application Name, TSI, etc.|
-|`DCC Indicator`	|String|	1|	O|	"DCC  flag  yes or no DCC : Sale , Void value as '1'"|
+|`DCC Indicator`	|String|	1|	O|	DCC  flag  yes or no DCC : Sale , Void value as *1*|
 |`EMI flag`|	String|	1	|O	|"EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC EMI Sale, EMI Void"|
 |`Pos Entry Mode`	|String|	3|	O|	Magstipe, Chip, Contactless, Manual entry, etc.|
-|`Pin Verified`	|String	|3	|O	|"Yes" when PIN was entered & "No" when pin was not prompt|
+|`Pin Verified`	|String	|3	|O	|**Yes** when PIN was entered & **No** when pin was not prompt|
 |`Auth Code`|	String|	8|	M	|Received from Issuer/host|
 |`Biller Id` |	String	|10|	O	|Biller Id|
 |`Specific Indicator` |	String|	3|	O|	To be used for BBPS |
 |`Merchant Unique Number`	|String	|20|	O|	Merchant Unique Number|
 |`Terminal Invoice Number`|	String	|20|	O	|Terminal Invoice Number| 
-|`Suppress Print Charge Slip` |	String|	2|	O|“Yes” or “No”  -To suppress chargeslip prints for financial transactions|
+|`Suppress Print Charge Slip` |	String|	2|	O|**Yes** or **No**  -To suppress chargeslip prints for financial transactions|
 |`EMI`|	String|	20|	O|	"EMI details – emi flag is 1/0 |EMI reference number generated is 8 bytesTenure, discount amount, product amount, EMI per month"
-|`Consumer Number`|	String|	20|	M|	"CRN / Consumer number 20 bytes "
+|`Consumer Number`|	String|	20|	M|	CRN / Consumer number 20 bytes 
 |`Card Last four digit`|	String|	4|	O|	Used for pre-auth completion & cancellation transaction
 |`Email ID`	|String	|50	|O|	Email ID on which Email needs to be received 50 bytes optional|
 |`Card Txn mode`|	String	|3|	O|	Txn Mode|
