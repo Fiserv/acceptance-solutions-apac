@@ -1,6 +1,10 @@
 # Application Status Inquiry
 
-This API is used to application status inquiry. Merchant needs to add session token received during login API call in the header of this API.
+This API is used to fetch the latest status of any boarding application for merchants.
+
+## How it works
+1. Merchant needs to use this API by giving the Application URN in request Message.
+2. Merchant has to trigger this API post submit of a particular boarding application.
 
 
 ## Endpoint

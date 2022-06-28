@@ -19,7 +19,7 @@ GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/refmid/{appT
 Path variabe : 
                 example:
                 /ADDLTID/99000154
-                /ADDLMID/99000154
+                /ADDLMID/99000745
 ```
   
 ***Token should be sent as Authorization.***

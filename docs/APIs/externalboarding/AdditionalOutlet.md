@@ -1,6 +1,14 @@
 # Additional Outlet
 
-This API is used to additional outlet. Merchant needs to add session token received during login API call in the header of this API
+This API is used to submit the application details for additional trading location for an existing merchant.
+
+## How it works
+1. Payment Facilitators needs to use this API toI to board their sub-merchants under Payment Facilitator master MID created on Fiserv Platform.
+2. Merchant has to trigger this API post Create URN API. Below APIs can be optionally used to contribute to the data to be submitted 
+   as part of New Partner Application Submit API.
+    - Get Packages
+    - Get Document Matrix
+    - Upload Document
 
 
 ## Endpoint

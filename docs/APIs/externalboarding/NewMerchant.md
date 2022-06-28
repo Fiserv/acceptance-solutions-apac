@@ -1,7 +1,15 @@
 # New Merchant
 
-This API is used to new merchant. Merchant needs to add session token received during login API call in the header of this API.
+This API is used to submit the boarding application for new merchants.
 
+## How it works
+1. Merchant needs to use this API to actually submit the boarding application for the new merchant.
+2. This step is mandatory for boarding.
+3. Merchant has to trigger this API post Create URN API. Below APIs can be optionally used to contribute to the data to be submitted
+   as part  of New Partner Application Submit API.
+    - Get Packages
+    - Get Document Matrix
+    - Upload Document
 
 ## Endpoint
 

@@ -1,7 +1,14 @@
 # Additional Device
 
-This API is used to additional device. Merchant needs to add session token received during login API call in the header of this API.
+This API is used to submit the application details for additional device for an existing merchant.
 
+## How it works
+1. Merchant needs to use this common API for Additional Device for ISOs, ISVs & Payment Facilitators.
+2. Merchant has to trigger this API post Create URN API. Below APIs can be optionally used to contribute to the data to be 
+   submitted as part  of New Partner Application Submit API.
+    - Get Packages
+    - Get Document Matrix
+    - Upload Document
 
 ## Endpoint
 
