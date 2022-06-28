@@ -152,7 +152,7 @@ The table below identifies the required properties in the request message
 | -------- | ------- | ------- |------- | ------------------ | 
 |`Data Type` |	String	 |2 |	M |	Sale |
 | |		 | |	 |	Preauth Sale |
-| |		 | |	 |	 Preauth Completion |
+| |		 | |	 |	Preauth Completion |
 | |		 | |	 |	Void |
 | |		 | |	 |	EMI Sale|
 | |		 | |	 |	Settlement |
@@ -292,7 +292,7 @@ The table below identifies the required properties in the response message
 | -------- | ------- | ------- |------- | ------------------ | 
 |`Data Type` |	String	 |2 |	M |	Sale |
 | |		 | |	 |	Preauth Sale |
-| |		 | |	 |	 Preauth Completion |
+| |		 | |	 |	Preauth Completion |
 | |		 | |	 |	Void |
 | |		 | |	 |	EMI Sale|
 | |		 | |	 |	Settlement |
@@ -308,20 +308,20 @@ The table below identifies the required properties in the response message
 |`Pos Entry Mode`|	String|	3	|O	|Magstipe,Chip, Contactless, Manual entry, etc.|
 |`Card Exp Date`|	String	|4	|O	|Transaction card expiry date|
 |`Merchant ID`|	String|	16	|M|	Merchant ID|
-|`No signature`|	String	|2|	O|	|Y' or 'N'|
+|`No signature`|	String	|2|	O|	|**Y** or **N**|
 |`Pan Number`|	String	|16	|O	|This will identify as Card number|
 |`Reference Number`|String|	20|	M	|This will identify as Reference Number|
-|`Status`|	String	|2	|O|	Status - "A"|
+|`Status`|	String	|2	|O|	Status - **A**|
 |`TC`	|String|	10|	O|	Transaction Number|
 |`Terminal ID`|	String|	8|	M	|Terminal ID|
 |`TVR`|	String|	10|	O|	Terminal Reference|
 |`Txn date`|	Timestamp|	10	|M	|Transaction date|
 |`Txn time`|	Timestamp|	10	|M|	Transaction time|
 |`Txn id`|	String	|10|	M|	Transaction Id|
-|`checksum`|	String|	50|	O	|Checksum for "data" field.Use SHA256 method to calculate “data” field|
+|`checksum`|	String|	50|	O	|Checksum for **data** field.Use SHA256 method to calculate **data** field|
 |`Acquirer Name`|	String	|20	|M|	Acquirer Name|
 |`EMI specific data`	|String|	20|	O	|Interest rate, Processing fee, Tenure, etc.|
-|`Batch Upload`|	String|	2|	O|	Y' or 'N'|
+|`Batch Upload`|	String|	2|	O|**Y** or **N**|
 |`Response Code`	|String	|2	|M|	Host Response code, it has response message|
 |`Response Text`|	String	|20|	M|	Text of response message|
 

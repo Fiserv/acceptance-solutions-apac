@@ -154,7 +154,7 @@ The table below identifies the required properties in the request message
 | `functionCode` | String	| 2 | 01 - Sale (Sale, DCC) |
 |  | 	|  | 02 - Preauth Sale |
 |  | 	|  | 03 - Preauth Completion  |
-|  | 	|  |  05 - Void  |
+|  | 	|  | 05 - Void  |
 |  | 	|  | 08 - EMI Sale  |
 |  | 	|  | 05-Void |
 |  | 	|  | 12 -Settlement Transaction  |
@@ -497,7 +497,7 @@ The table below identifies the required properties in the response message
 | `functionCode` | String	| 2 | 01 - Sale (Sale, DCC) |
 |  | 	|  | 02 - Preauth Sale |
 |  | 	|  | 03 - Preauth Completion  |
-|  | 	|  |  05 - Void  |
+|  | 	|  | 05 - Void  |
 |  | 	|  | 08 - EMI Sale  |
 |  | 	|  | 05-Void |
 |  | 	|  | 12 -Settlement Transaction  |
@@ -539,14 +539,14 @@ The table below identifies the required properties in the response message
 |`Merchant unique number`	|String	|20|O| Merchant unique number |
 | `Terminal Invoice number`|	String|	20|	O|	Terminal Invoice number |
 |`Suppress Print Charge Slip` |	String|	2	|O	|**Yes** or **No**  -To suppress chargeslip prints for financial transactions|
-|`EMI`	|String	|20|	O|	"EMI details – emi flag is 1/0 |EMI reference number generated is 8 bytes|Tenure, discount amount, product amount, EMI per month"|
-|`Consumer Number`|	String|	20	|O|	"CRN / Consumer number 20 bytes"|
+|`EMI`	|String	|20|	O|	EMI details – emi flag is 1/0 EMI reference number generated is 8 bytes|Tenure, discount amount, product amount, EMI per month|
+|`Consumer Number`|	String|	20	|O|	CRN / Consumer number 20 bytes|
 |`Card Last four digit`|	String|	4|	O|	Used for pre-auth completion & cancellation transaction|
 |`Email ID`|	String|	50|	O	|Email ID on which Email needs to be received 50 bytes optional|
 |`Card Txn mode`|	String|	3|	O|	Txn Mode|
 |`Purchase amount` |	String|10|	O	||Purchase amount |
 |`Cash back amount`|	String|	10|	O|	 Transaction cash back amount|
-|`NAC Status` |	String	|3	|O|	"Identify the network status True -> private network False -> public network"|
+|`NAC Status` |	String	|3	|O|	Identify the network status True -> private network False -> public network|
 |`Card Exp Date`|	String	|4	|O|	Transaction card expire date|
 |`DCC Yes/NO flag`| 	String|	10|	O|	DCC Conversion flag  Yes or No & the response converted amount, exchange rate and margin fee|
 

@@ -278,7 +278,7 @@ The below table identifies the required properties in the request message
 | `staffId`  | String | 20	| 	O |	max 20 characters ( opt ) for offline |
 | `rText`  | String  | 20	| 	O | max 20 characters ( opt ) for offline |
 | `showDetail` | Boolean | 5  |	O |	For void and settle |
-| `authCode` |	String	|  8 |	M  | Use for preauth cancel/topUp/comp |
+| `authCode` |	String	|  8 |	M  | Use for preauth cancel/ topUp/ comp |
 | `uid` | String | 8 | O 	| Uniqueid for each transaction |
 | `isPrint` | Boolean | 2 | O 	| Print |
 | `isQfpay` | Boolean  | 4 | O | For sale transaction,use for Qfpay |
