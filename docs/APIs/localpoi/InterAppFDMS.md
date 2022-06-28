@@ -271,12 +271,12 @@ The below table identifies the required properties in the request message
 | `appId`	 | String |  20 | M	| FAMS_BASE24 App ID |
 | `packageName`	| String | 20	 |	M | FAMS_BASE24 App Package Name |
 | `tipAmount`  | String	| 10 |  O |	Transaction Tip Amount for sale |
-| `InvoiceNo`  | String | 6|	M	| 6digitsinvoicenumberforvoidtransaction |
+| `InvoiceNo`  | String | 6|	M	| 6 digits invoice number for void transaction |
 | `type`  |	String | 2 |	M |	Use type to indicate the printdetails |
 | `totalTxnAmount`  | String | 10 | M |	Transaction amount |
 | `acquirerName` | String  | 20 | M	|	Acquirer Name for settlement or print |
-| `staffId`  | String | 20	| 	O |	max20 characters ( opt ) for offline |
-| `rText`  | String  | 20	| 	O | max20 characters ( opt ) for offline |
+| `staffId`  | String | 20	| 	O |	max 20 characters ( opt ) for offline |
+| `rText`  | String  | 20	| 	O | max 20 characters ( opt ) for offline |
 | `showDetail` | Boolean | 5  |	O |	For void and settle |
 | `authCode` |	String	|  8 |	M  | Use for preauth cancel/topUp/comp |
 | `uid` | String | 8 | O 	| Uniqueid for each transaction |
@@ -459,7 +459,7 @@ The below table identifies the required properties in the response message
  |`ATC` |	String	| 2	 |O	 |2 digits EMV Application transaction counter| 
  |`Local Curr Code` |	String	| 3	 |O	 |Local currency code. For Dcc txn|
  |`Cardholder Code` |	String	| 3	 |O	 |Cardholder currency code. For Dcc  txn|
- |`Fx Rate` |	String	| 6	 |O	 |Rate.For Dcc txn |
+ |`Fx Rate` |	String	| 6	 |O	 |Rate For Dcc txn |
  |`Foreign  Amt` |	String	|10	|O|	Cardholder currency Amount.For Dcc txn|
  |`Tenure` |	String	|3 |	O | 	For instalment txn |
  |`Product Code` |	String	|3	|O|	For instalment txn |
@@ -469,13 +469,13 @@ The below table identifies the required properties in the response message
  |`DeviceSN` |	String	|10|	O|	Serial Number|
 | `FlagNac` |	Boolean	|2	|O|	For OPI|
  |`IsMicros` |	Boolean |	2	|O|	Micros solution is enable|
- |`Token`	 | String	|10 |	O |	For OPI,MT token|
+ |`Token`	 | String	|10 |	O |	For OPI, MT token|
  |`SequenceNum` |	String	| 10|	O	|For OPI|
  |`DccFlag` |	Boolean |	2	|O |	If it is Dcc transaction, it is 'True'|
 |`PinVerify` |	Boolean |	2 |	O	|Pin entered, it is 'TRUE'|
 | `ExpDate` |	String	|4 |	O	|Expire Date |
  |`Currency` |	String	| 3	 |O |	Currency code |
- |`Signed` |	Boolean	|5	|O	|If have signature,it is 'TRUE'|
+ |`Signed` |	Boolean	|5	|O	|If have signature, it is 'TRUE'|
  |`SignData` |	String	|5|	O|	The data in receipt|
 
 
