@@ -160,20 +160,20 @@ The table below identifies the required properties in the request message
 |  | 	|  | 12 -Settlement Transaction  |
 |  | 	|  | 11- Transaction status check|
 |`Total Txn Amount (  Auth + ConvFee+ GTS)` |	String	|10|	M|	This transaction involves amount "100.00" |
-|`Tip Amt`|	String|	10|	O|	"This transaction involves 10.00|
+|`Tip Amt`|	String|	10|	O|	"This transaction involves 10.00"|
 |`Detail` |	String|	2|	O|	"To define the respond message in detail format. Y means detail message, N or skip this format means simple format Y"|
 |`ECR Ref`|	String	|10	|O|	ECR reference no. up to 16 digits|
 |`Merchant Reference Number(MRN)`|	String	|20	|M	|Unique merchant number for reconciliation|
-|`Terminal Invoice No`|	String|	20|	O |(Mandatory for void & PreAuth Completion transaction)	Use the terminal Invoice No to indicate the invoice of terminal|
+|`Terminal Invoice No`|	String|	20|	O |  ( Mandatory for void & PreAuth Completion transaction )	Use the terminal Invoice No to indicate the invoice of terminal|
 |`Customer Number`|	String|	20	|O|	To identify this transaction is initiated by respective customer|
 |`User Defined Fields`|	String	|8	|O|	UDF fields|
 |`Pwd` |	String|20|	O	|Void password|
 |`RRN`	|String|	3	|O|	12 digits RRN|
-|`Auth Code`|	String|	8|	O |(Mandatory for Pre Auth Completion transaction)	Approval code of authorization|
+|`Auth Code`|	String|	8|	O |( Mandatory for Pre Auth Completion transaction )	Approval code of authorization|
 |`Print charge slip`|	String|	2	|O	|Y or N (Default - Y ) |
-|`Transaction_type`|	String	|10	|O |(Mandatory for Transaction check status transaction)	Type of transaction|
+|`Transaction_type`|	String	|10	|O | ( Mandatory for Transaction check status transaction )	Type of transaction|
 |`Tenure`	|String|	3|	O (Mandatory for EMI transaction)	The instalment plan of this transaction|
-|`Checksum`	|String	|50	|O|	Checksum for "data" field.Use SHA256 method to calculate “data” field|
+|`Checksum`	|String	|50	|O|	Checksum for "data" field. Use SHA256 method to calculate “data” field|
 
 ### Response in Payload
 

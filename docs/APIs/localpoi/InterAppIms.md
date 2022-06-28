@@ -199,11 +199,11 @@ The table below identifies the required properties in the request message
 |  | 	|  | 18- Tone Tag wallet  |
 |  | 	|  | 19- Noncarded  |
 | `source` | String | 10 | O | TILL, Mobile, AVTM, etc |
-| `totalTxnAmount(Auth+ConvFee + GTS )`| String | 10 | M | Total Amount including decimal |
+| `totalTxnAmount( Auth+ConvFee + GTS )`| String | 10 | M | Total Amount including decimal |
 | `convenienceFee`| String | 10 | O | Convenience Fee including decimal |
 | `CGST` | String | 10 | O | GST Including decimal (GST) |
 | `SGST` | String  | 10 | O | GST Including decimal (GST) |
-| `billAmount`  | String | 10 | O (Mandotory for QR generation / Wallet Transactions | Bill amount including decimal |
+| `billAmount`  | String | 10 | O ( Mandatory for QR generation / Wallet Transactions | Bill amount including decimal |
 | `merchantReferenceNumber(MRN)` | String | 20 | M | Unique merchant number generated on mobile |
 | `EMIReferenceNumber(ERN)` | String | 8 | O ( Mandatory for EMI transaction ) | EMI reference number generated on mobile |
 | `consumeNumber` | String | 20 | O | consume number (CRN) |

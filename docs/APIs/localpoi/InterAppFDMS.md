@@ -275,8 +275,8 @@ The below table identifies the required properties in the request message
 | `type`  |	String | 2 |	M |	Use type to indicate the printdetails |
 | `totalTxnAmount`  | String | 10 | M |	Transaction amount |
 | `acquirerName` | String  | 20 | M	|	Acquirer Name for settlement or print |
-| `staffId`  | String | 20	| 	O |	max20characters(opt) for offline |
-| `rText`  | String  | 20	| 	O | max20characters(opt) for offline |
+| `staffId`  | String | 20	| 	O |	max20 characters ( opt ) for offline |
+| `rText`  | String  | 20	| 	O | max20 characters ( opt ) for offline |
 | `showDetail` | Boolean | 5  |	O |	For void and settle |
 | `authCode` |	String	|  8 |	M  | Use for preauth cancel/topUp/comp |
 | `uid` | String | 8 | O 	| Uniqueid for each transaction |
@@ -457,8 +457,8 @@ The below table identifies the required properties in the response message
 | `TVR` |	String |	10 |	O	 | 10  digits EMV terminal  verification result|
  |`TSI` |	String |	4	| O	 | 4 digits EMV transaction status information|
  |`ATC` |	String	| 2	 |O	 |2 digits EMV Application transaction counter| 
- |`Local Curr Code` |	String	| 3	 |O	 |Local currency code.For Dcc txn|
- |`Cardholder Code` |	String	| 3	 |O	 |Cardholder currency code.For Dcc  txn|
+ |`Local Curr Code` |	String	| 3	 |O	 |Local currency code. For Dcc txn|
+ |`Cardholder Code` |	String	| 3	 |O	 |Cardholder currency code. For Dcc  txn|
  |`Fx Rate` |	String	| 6	 |O	 |Rate.For Dcc txn |
  |`Foreign  Amt` |	String	|10	|O|	Cardholder currency Amount.For Dcc txn|
  |`Tenure` |	String	|3 |	O | 	For instalment txn |
@@ -471,8 +471,8 @@ The below table identifies the required properties in the response message
  |`IsMicros` |	Boolean |	2	|O|	Micros solution is enable|
  |`Token`	 | String	|10 |	O |	For OPI,MT token|
  |`SequenceNum` |	String	| 10|	O	|For OPI|
- |`DccFlag` |	Boolean |	2	|O |	If it is Dcc transaction,it is 'True'|
-|`PinVerify` |	Boolean |	2 |	O	|Pin entered,it is 'TRUE'|
+ |`DccFlag` |	Boolean |	2	|O |	If it is Dcc transaction, it is 'True'|
+|`PinVerify` |	Boolean |	2 |	O	|Pin entered, it is 'TRUE'|
 | `ExpDate` |	String	|4 |	O	|Expire Date |
  |`Currency` |	String	| 3	 |O |	Currency code |
  |`Signed` |	Boolean	|5	|O	|If have signature,it is 'TRUE'|
