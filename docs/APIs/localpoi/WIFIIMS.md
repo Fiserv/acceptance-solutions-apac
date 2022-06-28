@@ -149,7 +149,7 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 ### Request
 The table below identifies the required properties in the request message
 
-| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C )  |     Description / Values      |
+| Variable | Type |     Length     | Mandatory / Optional / Conditional ( M / O / C )  |     Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
 | `functionCode` | String	| 2 | 01 - Sale (Sale, DCC) |
 |  | 	|  | 02 - Preauth Sale |
@@ -549,9 +549,6 @@ The table below identifies the required properties in the response message
 |`NAC Status` |	String	|3	|O|	"Identify the network status True -> private network False -> public network"|
 |`Card Exp Date`|	String	|4	|O|	Transaction card expire date|
 |`DCC Yes/NO flag`| 	String|	10|	O|	DCC Conversion flag  Yes or No & the response converted amount, exchange rate and margin fee|
-
-
-
 
 
 The table below provides the list of error codes and description for this application.

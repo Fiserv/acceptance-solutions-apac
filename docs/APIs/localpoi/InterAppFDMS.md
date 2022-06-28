@@ -265,7 +265,7 @@ boolean ret = transAPI.doTrans(request);
 
 ### Request
 The below table identifies the required properties in the request message
-| Variable |  Type | Length | Mandatory /Optional / Conditional ( M / O / C ) | Description / Values |
+| Variable |  Type | Length | Mandatory / Optional / Conditional ( M / O / C ) | Description / Values |
 | -------- | ------- | ------- |------------------ | ------------------ |
 | `appId`	 | String |  20 | M	| FAMS_BASE24 App ID |
 | `packageName`	| String | 20	 |	M | FAMS_BASE24 App Package Name |
@@ -420,7 +420,7 @@ Log.d("response", "transaction failed");
 ### Response
 The below table identifies the required properties in the response message
 
-| Variable |	Type |	Length |Mandatory / Optional/ Conditional ( M / O / C) | Description / Values |
+| Variable |	Type |	Length | Mandatory / Optional/ Conditional ( M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
 | `App Id` |	String	 | 20 |	M	 | FAMS_BASE24 App ID |
 | `Rsp Msg` |	String	 | 20 |	M	 | Description of the response code |
