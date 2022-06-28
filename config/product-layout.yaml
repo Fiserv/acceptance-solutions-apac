@@ -160,14 +160,20 @@ featuredFeatures:
     bullets: ["LocalPOI"]
     relatedDocs:
       - relatedDoc: 
-        title: Login
-        description: Get Token.
-        link: ./docs/UAM.md
-    relatedAPIs:
-      - relatedAPI: 
-        title: Local POI
-        description: This service is used to get the token.
-        type: "post"        
-        path: "/#"
+        title: Inter - App
+        description:  Interapp - India / Aus
+        link: ./docs/APIs/localpoi/InterAppIms.md
+      - relatedDoc: 
+        title: Static Wi-Fi
+        description: USB / Static Wi-Fi - India / Aus
+        link: ./docs/APIs/localpoi/WIFIIMS.md
+      - relatedDoc: 
+        title: Inter - App
+        description:  Interapp - Rest of APAC
+        link: ./docs/APIs/localpoi/InterAppFDMS.md
+      - relatedDoc: 
+        title:  USB / Static Wi-Fi 
+        description:  USB / Static Wi-Fi - Rest of APAC
+        link: ./docs/APIs/localpoi/WIFIFDMS.md
   
  
