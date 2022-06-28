@@ -32,12 +32,12 @@ The table below contains the mandatory fields required for a successful request.
 
 The table below identifies the required parameters in the request payload.
 
-| Variable | Passed as | Type | Length | Description/Values |
-| -------- | ------- | -- | ------------ | ------------------ |
-| `username` | Basic Authentication | *String* | 15 | User Id / Fiserv Lan ID. |
-| `Password ` | Basic Authentication | *string* | 15 | Password. |
-| `source ` | Query Parameter | *string* | | Source Type like API / TAB |
-| `Ain ` | Query Parameter | *string* |  | Password |
+| Variable |	Type |	Length | Mandatory / Optional / Conditional ( M / O / C) | Description / Values |
+| -------- | ------- | ------- | ------------------ | ------------------ |
+|`Username`|	String|	15|	M|	User Id / Fiserv Lan ID|
+|`Password`|	string|	15|	M|	Password|
+|`Source`|	String |	10|	M|	Source Type like API / TAB|
+|`Ain`|	String	 |16|	M|	Password|
 
 
 ### Successful Response Payload
