@@ -6,8 +6,7 @@ E.g. Biller can integrate with payment app and complete the payment transaction.
 Financial payment transactions supported by Interapp to biller: Sale, PreAuth Sale, PreAuth Completion, Transaction Status Check, EMI Sale, Void, Settlement, Bharat QR code generation
 
 ## How it works
--	In Normal Sale request will show the below options for sale 
--	Digital Transaction (will perform txn in mCommerce application only)
+-	Digital transactions from Fiserv’s proprietary mCommerce application supported by the payment terminal includes :-
     -	Amazon QR
     -	Bharath QR
     -	UPI QR
