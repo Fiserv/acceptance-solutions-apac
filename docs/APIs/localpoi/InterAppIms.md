@@ -187,8 +187,8 @@ The table below identifies the required properties in the request message
 |  | 	|  | 06-TIP |
 |  | 	|  | 07-Cash@POS |
 |  | 	|  | 08-EMI Sale |
-|  | 	|  | 09-Loyality Earn |
-|  | 	|  | 10-Loyality Burn |
+|  | 	|  | 09-Loyality Earned |
+|  | 	|  | 10-Loyality Redeemed |
 |  | 	|  | 11-Settlement Transaction |
 |  | 	|  | 12-Transaction status |
 |  | 	|  | 13 - UPI QR  Generation |
