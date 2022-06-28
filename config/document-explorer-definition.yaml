@@ -100,13 +100,13 @@
           sections:
             - title: India
               sections:
-              - title: Interapp - India / Aus
+              - title: Inter - App
                 link: docs/APIs/localpoi/InterAppIms.md
-              - title: USB & Static Wi-fi - India / Aus
+              - title: USB / Static Wi-Fi
                 link: docs/APIs/localpoi/WIFIIMS.md
             - title: Rest of APAC
               sections:
-              - title: Interapp - Rest of APAC
+              - title: Inter - App
                 link: docs/APIs/localpoi/InterAppFDMS.md
-              - title: USB & Static Wi-fi - Rest of APAC
+              - title: USB / Static Wi-Fi
                 link: docs/APIs/localpoi/WIFIFDMS.md   
