@@ -1,6 +1,11 @@
 # Create URN
 
-This API is used to create URN. Merchant needs to add session token received during login API call in the header of this API.
+This API is used to create a unique reference number (URN) for each new application that is onboarded onto Fiserv platform.
+
+## How it works
+1. Merchant needs to use this unique value for all subsequent API requests where URN is a mandatory request parameter.
+2. Merchant needs to create a URN for application before submitting any application request to Fiserv Boarding Platform.
+3. This step is mandatory for boarding.
 
 
 ## Endpoint

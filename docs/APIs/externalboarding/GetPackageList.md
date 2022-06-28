@@ -1,7 +1,10 @@
 # Get Package List
 
-This API is used to get package list. Merchant needs to add session token received during login API call in the header of this API.
+This API is used to the fetch package details list  and its corresponding parameters based on the filtration criteria provided in the request API.
 
+## How it works
+1. Merchant needs to use this API where in multiple packages are assigned to the partner.
+2. This step is optional for boarding.
 
 ## Endpoint
 

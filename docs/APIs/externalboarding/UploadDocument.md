@@ -1,7 +1,12 @@
 # Document Upload
 
-This API is used to document upload. Merchant needs to add session token received during login API call in the header of this API.
+This API is used to upload documents for merchants.
 
+## How it works
+1. Merchant needs to use this API as a part of Create URN API with application URN generated in the request API to tag the documents to 
+   a particular Application URN.
+2. API would follow the Get Document matrix API and has to be submitted before Application Submit API.
+3. API response will give unique document ids for each document which has to be provided in subsequent application APIs. 
 
 ## Endpoint
 

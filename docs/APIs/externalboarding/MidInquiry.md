@@ -1,6 +1,10 @@
 # Mid Inquiry
 
-This API is used to mid inquiry. Merchant needs to add session token received during login API call in the header of this API.
+This API is used to fetch the details of existing MID which merchants would have boarded in past.
+
+## How it works
+1. Merchant needs to use this API predominantly while boarding Additional Trading Location or Additional Device on an existing MID.
+2. API should be used before submitting Additional Trading Location or Additional Device Application request.
 
 
 ## Endpoint

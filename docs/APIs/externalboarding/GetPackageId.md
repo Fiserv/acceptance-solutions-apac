@@ -1,7 +1,10 @@
 # Get Individual Package
 
-This API is used to get individual package. Merchant needs to add session token received during login API call in the header of this API.
+This API is used to fetch the individual package details and its corresponding parameters based on the filtration criteria provided in the request API.
 
+## How it works
+1. Merchant needs to use this API where in individual package details are to be retrieved by passing the package id in request parameter.
+2. This step is optional for boarding.
 
 ## Endpoint
 

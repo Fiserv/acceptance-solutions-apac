@@ -1,6 +1,12 @@
 # Document Matrix
 
-This API is used to document matrix. Merchant needs to add session token received during login API call in the header of this API
+This API is used to fetch the Document Matrix details using certain criteria sent in request message.
+
+## How it works
+1. Merchant needs to use this API if the merchant documents are submitted to Fiserv for partner Credit Underwriting process.
+2. API has to be used to fetch the document matrix and use subsequent Upload Document API.
+3. API response will contain the possible set of documents which the Partner can provide as part of Funding proof, Partner POI,
+   Partner POA, Other categories, etc. 
 
 
 ## Endpoint
