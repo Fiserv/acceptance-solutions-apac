@@ -23,9 +23,10 @@ Path variable -  packageId : 136
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=Externalboarding/secure/packages/{packageId}).
 
 ### Request
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
-| `packageId` | *Path Variable* |  | M | package id |
+The below table identifies the required properties in the request message
+| Variable |	Type |	Length | Mandatory / Optional / Conditional ( M / O / C) | Description / Values |
+| -------- | ------- | ------- | ------------------ | ------------------ |
+|`Package Id`|	String|	10	| M |	Package id|
 
 
 
@@ -75,12 +76,6 @@ The table below contains the mandatory fields required for a successful request.
                         "applicableForFilter": true
                     },
                     {
-                        "name": "SODEXO",
-                        "value": "Y",
-                        "codeType": "Package VAS",
-                        "applicableForFilter": true
-                    },
-                    {
                         "name": "PAYBACK",
                         "value": "Y",
                         "codeType": "Package VAS",
@@ -88,12 +83,6 @@ The table below contains the mandatory fields required for a successful request.
                     },
                     {
                         "name": "POCKETS WALLET",
-                        "value": "Y",
-                        "codeType": "Package VAS",
-                        "applicableForFilter": true
-                    },
-                    {
-                        "name": "BAJAJ Finserv",
                         "value": "Y",
                         "codeType": "Package VAS",
                         "applicableForFilter": true
