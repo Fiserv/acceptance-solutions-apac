@@ -36,7 +36,7 @@ POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/create`
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/create).
 
 ### Request
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value 'API' |
 | **KeySelection** |	 |	 | |	This is the object |
@@ -154,7 +154,7 @@ The table below contains the mandatory fields required for a successful request.
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C)  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
 

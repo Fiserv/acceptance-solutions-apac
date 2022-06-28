@@ -32,7 +32,7 @@ The table below contains the mandatory fields required for a successful request.
 
 The table below identifies the required parameters in the request payload.
 
-| Variable |	Type |	Length | Mandatory / Optional / Conditional ( M / O / C) | Description / Values |
+| Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
 |`Username`|	String|	15|	M|	User Id / Fiserv Lan ID|
 |`Password`|	string|	15|	M|	Password|

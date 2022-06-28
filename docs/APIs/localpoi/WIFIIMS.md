@@ -149,7 +149,7 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 ### Request
 The table below identifies the required properties in the request message
 
-| Variable | Type |     Length     | Mandatory / Optional / Conditional ( M / O / C )  |     Description / Values      |
+| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
 | `functionCode` | String	| 2 | 01 - Sale (Sale, DCC) |
 |  | 	|  | 02 - Preauth Sale |
@@ -492,7 +492,7 @@ The table below identifies the required properties in the request message
 ### Response
 The table below identifies the required properties in the response message
 
-| Variable | Type |     Length     | Mandatory / Optional / Conditional ( M / O / C )  |     Description / Values      |
+| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
 | `functionCode` | String	| 2 | 01 - Sale (Sale, DCC) |
 |  | 	|  | 02 - Preauth Sale |

@@ -24,7 +24,7 @@ The table below contains the mandatory fields required for a successful request.
 
 ### Request
 The below table identifies the required properties in the request message
-| Variable |	Type |	Length | Mandatory / Optional / Conditional ( M / O / C) | Description / Values |
+| Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
 |`Package Id`|	String|	10	| M |	Package id|
 

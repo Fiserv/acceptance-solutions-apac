@@ -148,7 +148,7 @@ SHA256({"amt":"35900","detail":"Y","ecrRef":"1234567890123456"})
 ### Request
 The table below identifies the required properties in the request message
 
-| Variable |	Type |	Length | Mandatory / Optional / Conditional ( M / O / C ) | Description / Values |
+| Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------- | ------------------ | 
 |`Data Type` |	String	 |2 |	M |	Sale |
 | |		 | |	 |	Preauth Sale |
@@ -288,7 +288,7 @@ checksum":"89672c091ceeb3da18e851d77f02d132a8f52f7efbd02e62bc8662b6faf5293c"
 The table below identifies the required properties in the response message
 *Response (Base24Constant.java)*	
 
-| Variable |	Type |	Length | Mandatory / Optional / Conditional ( M / O / C ) | Description / Values |
+| Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------- | ------------------ | 
 |`Data Type` |	String	 |2 |	M |	Sale |
 | |		 | |	 |	Preauth Sale |
