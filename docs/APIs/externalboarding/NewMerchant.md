@@ -623,7 +623,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Dcc Turnover Per MID`| 	Numeric |	20|	O|	Dcc turnover per mid of the Merchant
 |`Pg Turnover`|	Numeric	|20|	O|	Pg  turnover of the Merchant|
 |`Pg Turnover Per MID`| 	Numeric	|20|	O	|Pg turnover per mid of the Merchant|
-|`Avg EMI Ticket Amt`| 	|Numeric|	20|	O	|Avg emi ticket amt of the Merchant|
+|`Avg EMI Ticket Amt`| Numeric|	20|	O	|Avg emi ticket amt of the Merchant|
 |`Tran VolumeInternet`|	Numeric	|20|	M	|Tran volume internet of the Merchant|
 |`Tran VolumeMoto`|	Numeric	|20	|M|	Tran volume moto of the Merchant|
 |`Tran VolumeinStore`|	Numeric|	20|	M|	Tran volume in store of the Merchant|
@@ -644,6 +644,7 @@ The table below contains the mandatory fields required for a successful request.
 |`ThirdParty Processor`| Flag	|Alphanumeric|	20|	NA|	Thirdparty processor flag of the Merchant|
 |`ThirdParty Processor`| Name	|Alphanumeric	|40	|NA	|Thirdparty processor name of the Merchant|
 |`Small Merchant`|	Alphanumeric|	20|	NA|	Applicable if the merchant is a Small Merchant|
+
 ### Successful Response Payload
 
 ```json
