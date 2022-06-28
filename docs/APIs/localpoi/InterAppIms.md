@@ -12,10 +12,7 @@ Financial payment transactions supported by Interapp to biller: Sale, PreAuth Sa
     -	UPI QR
     -	ICICI Fast Tag 
     -	Card Transaction (navigating to direct card payment application)
-
-### Payload Examples
-
-### Request Payload
+- For a normal Sale request, the supported functionalities are listed below.
 
 ### Sale Request
 ```
