@@ -46,9 +46,11 @@
       link:
       open: true
       sections:
-        - title: Cloud POI
+        - title: Cloud Integration
           link: docs/CloudPOI.md
-        - title: Local POI
+        - title: Local Integration
+          link: docs/LocalPOI.md
+        - title: Merchant Boarding
           link: docs/LocalPOI.md
 
 - sections:
