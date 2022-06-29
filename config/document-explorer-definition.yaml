@@ -98,7 +98,7 @@
               link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
         - title: Local POI
           sections:
-            - title: India
+            - title: India / AU 
               sections:
               - title: Inter - App
                 link: docs/APIs/localpoi/InterAppIms.md
