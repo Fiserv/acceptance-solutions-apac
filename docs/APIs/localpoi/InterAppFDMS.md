@@ -8,9 +8,7 @@ Financial payment transactions supported by Interapp to biller: Sale, Void, Refu
 •	In Normal Sale request will show the below options for sale 
         o	Card Transaction (navigating to direct card payment application)
 
-### Payload Examples
-
-### Request Payload
+### Payload Examples - Request
 
 ### Sale Request
 ```

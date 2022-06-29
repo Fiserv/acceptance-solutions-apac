@@ -20,7 +20,7 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
         - StopBits – 1
         - DataBits – 8 
         - Use The JAVA NIO Channels or Classic Input/Output Streams to read and write data 
-        - Terminal Setup 
+        - System Requirements to setup USB / Static Wi-fi 
         - Download and install the desired MCommerce app (Full Download)
         - Full Download A920 integration kit in your system
         - Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download Login)
@@ -29,15 +29,13 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
         - Connect the desired cable (USB) to PC
         - Trigger transactions from PC application to check the line status
 
-        |  Param1    |  Param2 | Descriptions |  Comment |
-        | ---------- | ------- | ------- | ------------------ |
-        | `dataType` | 	 NA   | Indicate the request data type.| active | 
+        |  Param1    | Descriptions |  Comment |
+        | ---------- |---------------------- | ------------------ |
+        | `dataType` | Indicate the request data type.| active | 
 
         - Terminal will reply a ACK message
-### Payload Examples
 
-### Request Payload
-
+### Payload Examples - Request
 
 ### Sale Request
 ```

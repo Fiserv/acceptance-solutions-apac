@@ -24,7 +24,7 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
     -	POS terminal and PC Client should be connected. Then we send some information from PC to POS terminal by ECR-Bluetooth
     -	User should choose a paired Bluetooth device as our ECR’s target device after
         we select the Type-Bluetooth as our ECR communication type. If the device, we want to choose was not paired, we must pair it at first, then choose the device as our target device
--	Terminal Setup 
+    -	System Requirements to setup USB / Static Wi-fi 
     -	Download and install the desired MCommerce app (Full Download)
     -	Full Download A920 integration kit in your system
     -	Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download & Login)
@@ -33,16 +33,14 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 -	Connect the desired cable (USB) to PC
 - Trigger transactions from PC application to check the line status
 
-|  Param1    |  Param2 | Descriptions |  Comment |
-| ---------- | ------- | ------- | ------------------ |
-| `dataType` | 	 NA   | Indicate the request data type.| active | 
+|  Param1    | Descriptions |  Comment |
+| ---------- | ---------------------------------- | ------------------ |
+| `dataType` | Indicate the request data type.| active | 
 
 
 - Terminal will reply a ACK message
 
-### Payload Examples
-
-### Request Payload
+### Payload Examples - Request
 
 ### Sale Request
 ```json

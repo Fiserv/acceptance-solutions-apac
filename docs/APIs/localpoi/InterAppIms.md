@@ -14,6 +14,8 @@ Financial payment transactions supported by Interapp to biller: Sale, PreAuth Sa
     -	Card Transaction (navigating to direct card payment application)
 - For a normal Sale request, the supported functionalities are listed below.
 
+### Payload Examples - Request
+
 ### Sale Request
 ```
 Base24Request request = new Base24Request(); 
