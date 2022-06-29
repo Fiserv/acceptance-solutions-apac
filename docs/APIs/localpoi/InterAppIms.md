@@ -179,7 +179,7 @@ MSApi.getInstance().doFastagTransaction(context, 123, requestParams);
 The table below identifies the required properties in the request message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
-| -------- | -------- | -------------- | -----------------------| ------------------------- |
+| -------- | -------- | ----- | ------------------------------------------------------| ------------------------- |
 | `functionCode` | String	| 2 | 00 - Digital and Carded both |
 |  | 	|  | 01 - Sale( Sale , DCC ) |
 |  | 	|  | 02 - Preauth Sale |
@@ -242,7 +242,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 The table below identifies the required properties in the response message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
-| -------- | -------- | -------------- | -----------------------| ------------------------- |
+| -------- | ------- | ------- | -------------------------------------------------------| ------------------------- |
 | `functionCode` | String	| 2 | 00 - Digital and Carded both |
 |  | 	|  | 01 - Sale( Sale , DCC ) |
 |  | 	|  | 02 - Preauth Sale |

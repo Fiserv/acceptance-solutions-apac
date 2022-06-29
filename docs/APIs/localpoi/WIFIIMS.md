@@ -510,7 +510,7 @@ The table below identifies the required properties in the response message
 |`Bill amount`|	String|	10|	O	|Length 10 including decimal|
 |`EMI specific data`|	String|	20|	O|	Interest rate,  Processing fee, Tenure,  etc.|
 |`Merchant  Reference  Number(MRN`)|	String|	20	|M	|Merchant  Reference  Number|
-|`Terminal  Invoice  number`|	String|	8|	M	Terminal  Invoice Number|
+|`Terminal  Invoice  number`|	String|	8|	M |	Terminal  Invoice Number|
 |`Currency selection`|	String	|3|	O|	Currency code/currency which been selected|
 |`Transaction ID`	|String|	10	|M|	Transaction ID|
 |`Customer name`|	String|	25|	O|	Customer name extracted from Card|
