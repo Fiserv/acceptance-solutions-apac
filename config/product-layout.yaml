@@ -1,12 +1,12 @@
 header:
   productName: AcceptanceSolutionsAPAC
-  productionDescription: An APAC optimized section providing a one-stop-solution for SMB and enterprise clients, as well as ISO's to get easy and instant access to API's required to integrate with our terminal and eCommerce solutions.<br> Enable secure and reliable offerings with multi-payment acceptance to enrich your clients' omnichannel experience with Fiserv's APIs.<br> Explore intuitive APIs to drive your business with our scalable and comprehensive suite of solutions for your consumers.
-  whoIsItFor: "Made for developers by developers. <br/>\nDevelopers benefit from hassle free integration through seamless sample code sharing and test credential management, in an agile approach."
+  productionDescription: A section dedicated to the APAC region,&nbsp; providing a one-stop-solution for SMB and enterprise clients, as well as ISOs, Payment Facilitators and Partners to get easy and instant access to APIs required to integrate with our terminal and eCommerce solutions.<br/><ul>	<li>Enable secure, reliable and compliant&nbsp; offerings with multi-payment acceptance, to enrich your clients&rsquo; omnichannel experience through Fiserv APIs.</li>	<li>Explore intuitive APIs to drive your business with our scalable and comprehensive suite of solutions for your customers.</li></ul>
+  whoIsItFor: Made for developers by developers. <br/> Developers benefit from hassle free integration through seamless sample code sharing and test credential management, in an agile approach.
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: AcceptanceSolutionsAPAC™
 featuredFeatures:
-  - title: Cloud POI
+  - title: Cloud Based Integration
     description: Fiserv Cloud POI (Point of Integration) is an API (application programming interface) based integration which facilitates to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions.
     tags: ["APAC", "eCommmerce", "API"]
     bullets: ["Cloud POI", "Boarding", "Local POI"]  
@@ -30,7 +30,7 @@ featuredFeatures:
         description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
         type: "post"        
         path: "/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount"
-  - title: Boarding APIs
+  - title: Merchant Onboarding
     description: Partners (ISO/ISV/Payment Facilitator) that are on-boarded as a separate channel onto Fiserv Platform will be able to board your merchants on Fiserv platform by invoking the boarding APIs for this set-up by using assigned credentials. Click here for more details.
     tags: ["APAC", "eCommmerce", "API"]
     bullets: ["Boarding"]
@@ -154,7 +154,7 @@ featuredFeatures:
         type: "post"        
         path: "/Externalboarding/secure/document/{appUrn}"
       
-  - title: Local POI
+  - title: Local Integration
     description: Fiserv Local POI (Point of Integration) is an API (application programming interface) locally based integration which facilitates to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions.
     tags: ["APAC", "eCommmerce", "API"]
     bullets: ["LocalPOI"]
