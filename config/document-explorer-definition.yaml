@@ -42,6 +42,16 @@
       open: true
 
 - sections:
+    - title: Features
+      link:
+      open: true
+      sections:
+        - title: Cloud POI
+          link: docs/CloudPOI.md
+        - title: Local POI
+          link: docs/LocalPOI.md
+
+- sections:
     - title: API Reference
       link:
       open: true
