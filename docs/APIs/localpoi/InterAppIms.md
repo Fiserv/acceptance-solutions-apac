@@ -180,24 +180,24 @@ The table below identifies the required properties in the request message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | ----- | ------------------------------------------------------| ------------------------- |
-| `Function Code` | String	| 2 | 02 - Preauth Sale |
-|  | 	|  | 03 - Preauth Completion |
-|  | 	|  | 04 - Refund |
-|  | 	|  | 05 - Void |
-|  | 	|  | 06 - TIP |
-|  | 	|  | 07 - Cash@POS |
-|  | 	|  | 08 - EMI Sale |
-|  | 	|  | 09 - Loyality Points Earned |
-|  | 	|  | 10 - Loyality Points Redeemed |
-|  | 	|  | 11 - Settlement Transaction |
-|  | 	|  | 12 - Transaction status |
-|  | 	|  | 13 - UPI QR  Generation |
-|  | 	|  | 14 - UPI QR Last Transaction Status |
-|  | 	|  | 15 - Bharat QR  Generation  |
-|  | 	|  | 16 -  Bharat  QR Last Transaction Status  |
-|  | 	|  | 17 - Wallet Google Pay |
-|  | 	|  | 18 - Tone Tag wallet  |
-|  | 	|  | 19 - Noncarded  |
+| `Function Code` | String	| 2  | M | 02 - Preauth Sale |
+|  | 	| | | 03 - Preauth Completion |
+|  | 	|  || 04 - Refund |
+|  | 	|  || 05 - Void |
+|  | 	| | | 06 - TIP |
+|  | 	| | | 07 - Cash@POS |
+|  | 	| | | 08 - EMI Sale |
+|  | 	|  || 09 - Loyality Points Earned |
+|  | 	| | | 10 - Loyality Points Redeemed |
+|  | 	| | | 11 - Settlement Transaction |
+|  | 	| | | 12 - Transaction status |
+|  | 	| | | 13 - UPI QR  Generation |
+|  | 	| | | 14 - UPI QR Last Transaction Status |
+|  | 	| |  | 15 - Bharat QR  Generation  |
+|  | 	| | | 16 -  Bharat  QR Last Transaction Status  |
+|  | 	|  || 17 - Wallet Google Pay |
+|  | 	| | | 18 - Tone Tag wallet  |
+|  | 	|  | | 19 - Noncarded  |
 | `Source` | String | 10 | O | TILL, Mobile, AVTM, etc |
 | `Total Txn Amount( Auth+ConvFee + GTS )`| String | 10 | M | Total Amount including decimal |
 | `Convenience Fee`| String | 10 | O | Convenience Fee including decimal |
@@ -243,32 +243,32 @@ The table below identifies the required properties in the response message
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | ------- | ------- | -------------------------------------------------------| ------------------------- |
 | `Function Code` | String	| 2 | M | 01 - Sale ( Sale , DCC ) |
-|  | 	|  | 02 - Preauth Sale |
-|  | 	|  | 03 - Preauth Completion |
-|  | 	|  | 04 - Refund |
-|  | 	|  | 05 - Void |
-|  | 	|  | 06 - TIP |
-|  | 	|  | 07 - Cash @ POS |
-|  | 	|  | 08 - EMI Sale |
-|  | 	|  | 09 - Loyality Points Earned |
-|  | 	|  | 10 - Loyality Burn |
-|  | 	|  | 11 - Settlement Transaction |
-|  | 	|  | 12 - Transaction status |
-|  | 	|  | 13 - UPI QR  Generation |
-|  | 	|  | 14 - UPI QR Last Transaction Status |
-|  | 	|  | 15 - Bharat QR  Generation  |
-|  | 	|  | 16 - Bharat QR Last Transaction Status  |
-|  | 	|  | 17 - Wallet Google Pay |
-|  | 	|  | 18 - Tone Tag wallet  |
-|  | 	|  | 19 - Noncarded  |
+|  | 	| | | 02 - Preauth Sale |
+|  | 	| | | 03 - Preauth Completion |
+|  | 	| | | 04 - Refund |
+|  | 	| | | 05 - Void |
+|  | 	| | | 06 - TIP |
+|  | 	| | | 07 - Cash @ POS |
+|  | 	| | | 08 - EMI Sale |
+|  | 	|  || 09 - Loyality Points Earned |
+|  | 	| | | 10 - Loyality Burn |
+|  | 	| | | 11 - Settlement Transaction |
+|  | 	| | | 12 - Transaction status |
+|  | 	| | | 13 - UPI QR  Generation |
+|  | 	| | | 14 - UPI QR Last Transaction Status |
+|  | 	| | | 15 - Bharat QR  Generation  |
+|  | 	| | | 16 - Bharat QR Last Transaction Status  |
+|  | 	|  || 17 - Wallet Google Pay |
+|  | 	|  || 18 - Tone Tag wallet  |
+|  | 	|  || 19 - Noncarded  |
 |`Source` | String | 10 | O | TILL, Mobile, AVTM, etc. |
-| TIP amount | String | 10 | 0 | Length 10 including decimal |
+| `TIP amount` | String | 10 | 0 | Length 10 including decimal |
 |`Total Transaction Amount ( Bill + Convenience Fee + GTS )` |	String|	10 | M | Length 10 including decimal |
-Fuel Discount Cashback | String | 10 | O | Length 10 including decimal |
+`Fuel Discount Cashback` | String | 10 | O | Length 10 including decimal |
 |`Convenience Fee`|	String | 10 | O | Length 10 including decimal |
 |`CGST` | String | 10 | O | Length 10 including decimal |
 |`SGST`| String	| 10 | O | Length 10 including decimal |
-|`Bill  Amount`| String | 10 | Length 10 including decimal|
+|`Bill  Amount`| String | 10 | Length  |10 including decimal|
 |`EMI Specific Data`| String | 20 |	O |	Interest rate,  Processing fee, Tenure,  etc.|
 |`Merchant  Reference  Number (MRN)`| String | 20 | M |	Same as request |
 |`Terminal  Invoice  Number`|	String | 8 | M | Terminal Invoice Number |
