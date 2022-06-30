@@ -62,22 +62,11 @@
                   link: docs/Plugins.md
 - sections:
     - title: Features
-      link:
+      link: 
       open: true
       sections:
-        - title: Cloud Integration
+        - title: Cloud Based Integration 
           link: docs/CloudPOI.md
-        - title: Local Integration
-          link: docs/LocalPOI.md
-        - title: Merchant Boarding
-          link: docs/LocalPOI.md
-
-- sections:
-    - title: API Reference
-      link:
-      open: true
-      sections:
-        - title: Cloud POI 
           sections:
             - title: Login
               link: docs/APIs/CloudPOI/Login.md
@@ -99,7 +88,8 @@
               link: docs/APIs/PaymentAPI/TransactionStatusCheck.md
             - title: Settlement Transaction
               link: docs/APIs/PaymentAPI/SettlementTransaction.md
-        - title: Boarding
+        - title: Merchant Onboarding
+          link: doc/MerchantBoarding.md
           sections:
             - title: Login
               link: docs/APIs/externalboarding/Login.md
@@ -127,7 +117,8 @@
               link: docs/APIs/externalboarding/MultiMIDPayFac.md
             - title: Application Status Inquiry
               link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
-        - title: Local POI
+        - title: Local Based Integration
+          link: docs/LocalPOI.md
           sections:
             - title: India / Aus
               sections:
