@@ -203,7 +203,7 @@ The table below identifies the required properties in the request message
 | `Convenience Fee`| String | 10 | O | Convenience Fee including decimal |
 | `CGST` | String | 10 | O | GST Including decimal (GST) |
 | `SGST` | String  | 10 | O | GST Including decimal (GST) |
-| `Bill Amount`  | String | 10 | O ( Mandatory for QR generation / Wallet Transactions | Bill amount including decimal |
+| `Bill Amount`  | String | 10 | O ( Mandatory for QR generation / Wallet Transactions) | Bill amount including decimal |
 | `Merchant Reference Number(MRN)` | String | 20 | M | Unique merchant number for reconcilation |
 | `EMI Reference Number(ERN)` | String | 8 | O ( Mandatory for EMI Transaction ) | EMI reference number generated on mobile |
 | `Consumer Number` | String | 20 | O | Consumer number ( CRN ) |
@@ -262,13 +262,13 @@ The table below identifies the required properties in the response message
 |  | 	|  || 18 - Tone Tag wallet  |
 |  | 	|  || 19 - Noncarded  |
 |`Source` | String | 10 | O | TILL, Mobile, AVTM, etc. |
-| `TIP amount` | String | 10 | 0 | Length 10 including decimal |
+| `TIP amount` | String | 10 | O | Length 10 including decimal |
 |`Total Transaction Amount ( Bill + Convenience Fee + GTS )` |	String|	10 | M | Length 10 including decimal |
 `Fuel Discount Cashback` | String | 10 | O | Length 10 including decimal |
 |`Convenience Fee`|	String | 10 | O | Length 10 including decimal |
 |`CGST` | String | 10 | O | Length 10 including decimal |
 |`SGST`| String	| 10 | O | Length 10 including decimal |
-|`Bill  Amount`| String | 10 | Length  |10 including decimal|
+|`Bill  Amount`| String | 10 | O  |10 including decimal|
 |`EMI Specific Data`| String | 20 |	O |	Interest rate,  Processing fee, Tenure,  etc.|
 |`Merchant  Reference  Number (MRN)`| String | 20 | M |	Same as request |
 |`Terminal  Invoice  Number`|	String | 8 | M | Terminal Invoice Number |
