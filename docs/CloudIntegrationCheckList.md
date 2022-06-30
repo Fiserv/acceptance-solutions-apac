@@ -21,7 +21,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
 <B>Once you have assessed the use cases, discover our APIs here for a further deep dive.</B>
 
 
-![pos5 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg "pos5 logo")
+![pos5 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg "pos5 logo") 
 
 # Cloud Integration Checklist
 
@@ -42,6 +42,32 @@ Handy tips before you begin, we would recommend:
 3. Assess with your <B>in-house network architecture team</B> and align on the connectivity requirements
     - For detailed technical compatibility requirements, do reach out to our integration support team
 4. Check if your appointed point of sale (POS) provider had been certified with Fiserv here.
+
+
+
+![pos6 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg "pos6 logo") 
+
+
+# Step 3: Define
+## Who, What and When?
+<B>Scope out what your business requires</B>
+
+1. Define and finalize your requirements for integration to your point of sale (POS)
+   - Who are the users, and what are their integration requirements to be utilised with point of sale (POS) systems?
+   - What are you trying to achieve from a customer experience, operational and reporting perspective?
+   - When is your intended target launch date?
+2. Decide on the integration approach
+3. Do reach out to your account manager to apply for test terminal(s), with information that will help us assist you better:-
+   - No. of test terminals required
+   - Define which payment modes are required
+   - Plan out when do you target to conduct testing and 
+   - When is your targeted go-live date in production
+
+
+
+
+
+
 
 
 
