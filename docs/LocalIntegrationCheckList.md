@@ -17,9 +17,9 @@ Handy tips for you to kick start your local based integration:
 
    Additionally, these are a few pre-requisites for local integration solution using Fiserv's Android based terminals.
 
-    - The Interface library (MSInterfaceSdk.aar)
-    - Android Studio 3.x
-    - Kitkat or higher versions of Android - API Level 19+
+     - The Interface library (MSInterfaceSdk.aar)
+     - Android Studio 3.x
+     - Kitkat or higher versions of Android - API Level 19+
 
   2) For <B>hospitality-based</B> merchants, if you do require cloud-based integration to Oracle Opera Payment Interface (OPI) to 
    support Oracle Property Management System (PMS).
