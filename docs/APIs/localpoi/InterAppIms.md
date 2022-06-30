@@ -1,12 +1,12 @@
 # Inter-Application Integration
 
-Inter-Application integration can facilitate processing of various payment transactions from Fiserv payment terminal.
-E.g. Biller can integrate with payment app and complete the payment transaction.
+Inter Application Integration provides a seamless integration between the Fiserv payment application and the merchant application locally installed in android-based terminals.
+E.g. A biller can integrate with a payment application and complete the payment transaction.
 
-Financial payment transactions supported by Interapp to biller: Sale, PreAuth Sale, PreAuth Completion, Transaction Status Check, EMI Sale, Void, Settlement, Bharat QR code generation
+Financial payment transactions that are supported by inter application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion, Transaction Status Check, EMI Sale, Void, Settlement and Bharat QR code generation.
 
 ## How it works
--	Digital transactions from Fiserv’s proprietary mCommerce application supported by the payment terminal includes :-
+-	Digital transactions from the Fiserv proprietary mCommerce application supported by the payment terminal includes :-
     -	Amazon QR
     -	Bharath QR
     -	UPI QR
