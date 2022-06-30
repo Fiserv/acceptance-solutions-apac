@@ -25,3 +25,4 @@ As your payment partner, Fiserv provides a suite of services based on integratio
 
 In summary, a quick guide below helps you to kick start your integration journey. 
 
+![pos logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos.jpg "pos logo")
