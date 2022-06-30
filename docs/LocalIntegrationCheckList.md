@@ -1,5 +1,24 @@
 # Local Integration Checklist
 
+### Local Integration Use Cases
+
+Our local integration APIs facilitates to connect with your in-house central or any standalone systems to automate the entire billing to payments transactions.<BR/>
+
+From inventory tracking, reservations, billing and reconciliation applications that your business is using, our local-based API opens many possibilities for your business to cater to your business’ payment eco-system.<BR/>
+
+![Local Integration Checklist logo](/assets/images/lic-1.jpg "Local Integration Checklist logo")
+
+#### Use case considerations on how our Local integration can support your ecosystem:
+
+ - Your current point of sale (POS) system(s) have been implemented on local-based connectivity
+ - Technically your business’ direction for your payment and reporting ecosystem is planned to be on local-based integrations
+ - *If you are a hospitality-based business using Oracle Opera Payment Interface (OPI) to support Oracle Property Management System (PMS) solutions
+    - Enjoy the benefits of enabling tokenized payment transactions to be integrated to Oracle Payment Interface (OPI)
+Optimize your financial management with digitalized receipts that can be viewed and downloaded on Fiserv Business Point (merchant portal)
+
+#### Once you have assessed the use cases, discover our APIs here for a further deep dive.
+
+
 ### Welcome to Fiserv Local integration solution
 
 The local integration acts as an interface / communication layer between the Fiserv terminal application ('Parent application') and the third-party application ('Consumer application').<BR/> 
