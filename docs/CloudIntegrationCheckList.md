@@ -6,6 +6,7 @@ Our cloud-based integration APIs facilitates to connect with your in-house centr
 
 From inventory tracking, reservations, billing and reconciliation applications that your business is using, our cloud-based API opens many possibilities for your business to cater to your business’ payment eco-system.
 
+<BR/>
 
 ![pos4 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos4.jpg "pos4 logo")
 
@@ -20,6 +21,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
 
 <B>Once you have assessed the use cases, discover our APIs here for a further deep dive.</B>
 
+<BR/>
 
 ![pos5 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg "pos5 logo") 
 
@@ -43,7 +45,7 @@ Handy tips before you begin, we would recommend:
     - For detailed technical compatibility requirements, do reach out to our integration support team
 4. Check if your appointed point of sale (POS) provider had been certified with Fiserv here.
 
-
+<BR/>
 
 ![pos6 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg "pos6 logo") 
 
@@ -63,6 +65,7 @@ Handy tips before you begin, we would recommend:
    - Plan out when do you target to conduct testing and 
    - When is your targeted go-live date in production
 
+<BR/>
 
 ![pos7 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos7.jpg "pos7 logo") 
 
@@ -79,6 +82,46 @@ For any clarifications or support required on technical integration, do reach ou
 
 <B>Handy Tips:</B> You may wish to consider discussing early with your team on which test scenarios would be required. 
 The test scenarios are typically based on your daily operational needs. (Eg.which are your customers’ most used payment modes.)
+
+<BR/>
+
+![pos8 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg "pos8 logo") 
+
+
+# Step 5: Test
+## Plan, Test and Review
+<B>A well planned testing provides assurance for a smooth go-live.</B>
+1) Analyse the testing scope and requirements
+2) Draft out the test plan, timelines and test cases with your technology team, external vendors (if applicable), and internal users
+   - Check on any firewalls / IPs that needs to be set-up
+   - Ensure the relevant test keys and / test certificates have been installed, pointing to the sandbox environment
+3) Execute the testing process
+    - For any clarifications or support on testing challenges during integration, do reach out to our integration support teams here.
+4) Test cycle closure upon successful completion
+
+<BR/>
+
+![pos9 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos9.jpg "pos9 logo") 
+
+# Step 6: Activate
+## Deploy & Go-Live
+<B>Live verification and monitoring</B>
+1) Please engage your account manager to ensure your production credentials have been set-up
+2) Apply for production terminals, with these information ready:
+   - No. of terminals required
+   - Define which payment modes are required
+   - Information fields on charge slips / eReceipts
+   - For deployment:
+     - Points of contact for coordinating on-site
+     - Date, time and location(s) for deployment
+   - Conduct live verification
+3) Monitor the performance of the Fiserv payment terminals to your point of sale (POS) systems
+
+For any queries post deployment, do contact our support teams here.
+
+
+
+
 
 
 
