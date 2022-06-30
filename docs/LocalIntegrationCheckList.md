@@ -20,6 +20,7 @@ Optimize your financial management with digitalized receipts that can be viewed 
 
 #### Once you have assessed the use cases, discover our APIs here for a further deep dive.
 
+<BR/>
 
 ### Welcome to Fiserv Local integration solution
 
