@@ -13,7 +13,13 @@ From inventory tracking, reservations, billing and reconciliation applications t
 
  - Your current point of sale (POS) system(s) have been implemented on cloud-based connectivity
  - Cloud connectivity can be supported by your business network architecture from a security and data hosting considerations
- 
+ - Technically your business’ direction for your payment and reporting ecosystem is planned to be on cloud-based integrations
+ - *If you are a hospitality-based business solutions
+   - Enjoy the benefits of enabling tokenized payment transactions to be integrated to your payment interface
+ - Optimize your financial management with digitalized receipts that can be viewed and downloaded on Fiserv Business Point (merchant portal)
+
+<B>Once you have assessed the use cases, discover our APIs here for a further deep dive.</B>
+
 
 
 
