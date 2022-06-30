@@ -13,6 +13,9 @@ Before you begin, both the consumer application and the parent app must be insta
 
 Handy tips for you to kick start your local based integration:
 
+ <B>1) Set up your test account here</B> 
+
+
 
 
 
