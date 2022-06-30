@@ -21,5 +21,40 @@ From inventory tracking, reservations, billing and reconciliation applications t
 <B>Once you have assessed the use cases, discover our APIs here for a further deep dive.</B>
 
 
+![pos5 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg "pos5 logo")
+
+# Cloud Integration Checklist
+
+<B>Welcome to Fiserv Cloud-based integration solution</B><BR/>
+
+Handy tips before you begin, we would recommend:
+
+1. <B>Set up your test account here</B>
+    
+    Channel specific integration credentials will be shared through email which includes: -
+     - Biller ID
+     - User ID
+     - Password
+     - Encryption Key (for security reasons, password will be shared in a separate automated email).
+2. For <B>hospitality-based</B> merchants, if you do require cloud-based integration to your hospitality solution
+     - Please reach out to our support team for an assessment with a through run through of our hospitality integration checklist
+     - Engage your appointed hospitality solutions provider for a technical discussion with our integration support team
+3. Assess with your <B>in-house network architecture team</B> and align on the connectivity requirements
+    - For detailed technical compatibility requirements, do reach out to our integration support team
+4. Check if your appointed point of sale (POS) provider had been certified with Fiserv here.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
