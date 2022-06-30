@@ -6,7 +6,9 @@ Our local integration APIs facilitates to connect with your in-house central or 
 
 From inventory tracking, reservations, billing and reconciliation applications that your business is using, our local-based API opens many possibilities for your business to cater to your business’ payment eco-system.<BR/>
 
-![Local Integration Checklist logo](/assets/images/lic-1.jpg "Local Integration Checklist logo")
+![Local Integration Checklist logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/lic-1.jpg "Local Integration Checklist logo")
+
+
 
 #### Use case considerations on how our Local integration can support your ecosystem:
 
