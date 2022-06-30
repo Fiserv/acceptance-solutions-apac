@@ -1,4 +1,4 @@
-# Local Integration Checklist1
+# Local Integration Checklist
 
 ### Welcome to Fiserv Local integration solution
 
