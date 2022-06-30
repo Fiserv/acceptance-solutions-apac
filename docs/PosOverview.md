@@ -2,15 +2,11 @@
 
 ## Local Integration
 
-Point of sale connects directly with the payment terminal using your local network via Fiserv’s API.
-
-[Read more](./?path=docs/LocalPOI.md)
+Point of sale connects directly with the payment terminal using your local network via Fiserv’s API. [Read more](./?path=docs/LocalPOI.md)
 
 ## Cloud Integration
 
-Point of sale connects the payment terminal using Cloud based integrations with our payment platform via Fiserv APIs.
-
-[Read more](./?path=docs/CloudPOI.md)
+Point of sale connects the payment terminal using Cloud based integrations with our payment platform via Fiserv APIs.[Read more](./path=docs/CloudPOI.md)
 
 ## Standalone Terminals
 For basic payment terminal solutions that do not require any integration, we offer state of the art standalone terminals for your businesses.
