@@ -55,7 +55,7 @@ paths:
     post:
       tags:
       - Cloud Based Integration
-      summary: Refund Amount
+      summary: Payment API
       description: This API is used to send refund transaction request. Merchants needs to add session token received during login api call in the header of this API.
       operationId: nonOpiProcessAmount
       x-group-name: Cloud Based Integration
