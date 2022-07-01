@@ -1071,6 +1071,7 @@ components:
             settlementDetails: null
             walletId: null
     ResponseVoid:
+      value:
         data:
              functionCode: "05"
              source: null
