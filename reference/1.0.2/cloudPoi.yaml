@@ -805,9 +805,6 @@ components:
           [{ param_lit: param1 key, param: ""}, { param_lit: param2 key, param: ""}]
     ResponseSettlementTransacton:
       value:
-        status: 
-          statusCode: 200
-          message: "Success"
         data:
             functionCode: "12"
             source: null
@@ -853,9 +850,6 @@ components:
             walletId: ""
     ResponseSALE:
       value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
             functionCode: "00"
             source: null
@@ -901,9 +895,6 @@ components:
             walletId: "W0"
     ResponseSALEWITHLPM:
       value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
              functionCode: "00"
              source: null
@@ -947,9 +938,6 @@ components:
              walletId: "W0"
     ResponsePreAuthSale:
       value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
            functionCode: "02"
            source: null
@@ -995,9 +983,6 @@ components:
            walletId: ""
     ResponsePreAuthCompletion:
       value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
             functionCode: "03"
             source: null
@@ -1042,9 +1027,6 @@ components:
             walletId: ""
     ResponseRefund:
       value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
             functionCode": "04"
             source: null
@@ -1089,10 +1071,6 @@ components:
             settlementDetails: null
             walletId: null
     ResponseVoid:
-      value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
              functionCode: "05"
              source: null
@@ -1138,9 +1116,6 @@ components:
              walletId: ""
     ResponseEmiSale:
       value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
             functionCode: "08"
             source: null
@@ -1186,9 +1161,6 @@ components:
             walletId: ""
     ResponseTransactionStatusCheck:
       value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
              functionCode: "11"
              source: null
@@ -1234,9 +1206,6 @@ components:
              walletId: ""       
     ResponseDefault:
       value:
-        status: 
-          statusCode: 200
-          message: Success
         data:
             functionCode: "00"
             source: null
@@ -1282,29 +1251,20 @@ components:
             walletId: "W0"
     "401-Premier":
       value:
-        status:
-          statusCode: 401
-          messages: Token not found
+        messages: Token not found
     "300-Premier":
       value:
-        status:
-          statusCode: 300
-          messages: Request Failure
+        messages: Request Failure
     "500-Premier":
       value:
-        status:
-          statusCode: 500
-          messages: Internal Server Error
+        messages: Internal Server Error
     "404-Premier":
       value:
-        status:
-          statusCode: 404
-          messages: Not Found
+        messages: Not Found
     "502-Premier":
       value:
-        status:
-          statusCode: 502
-          messages: Request Timed Out
+        messages: Request Timed Out
+          
     LoginRq:
       value:
         username: "Testuser135"
