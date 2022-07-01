@@ -148,26 +148,30 @@ The table below identifies the required properties in the request message
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------- | ------------------ | 
-|`Data Type` |	String	 |2 |	M |	Sale |
+|`Data Type` | String |2 |	M |	Sale |
 | |		 | |	 |	Preauth Sale |
 | |		 | |	 |	Preauth Completion |
 | |		 | |	 |	Void |
 | |		 | |	 |	EMI Sale|
-| |		 | |	 |	Settlement |
-| |		 | |	 |	Transaction Refund|
-|`Amt` |	String	|10 |	M	 |This transaction involves amount **100.00**|
-|`Detail`|	String	|2|	O	|To define the respond message in detail format. Y means detail message, N or skip this format means simple format **Y**|
-|`ECR Ref`|	String|	2	|O|	ECR reference no. up to 16 digits|
-|`Merchant Reference Number (MRN`)|	String |	10	| O	|Unique merchant number for reconciliation|
-|`Terminal Invoice No`|	String|	20|	M|	Use the terminal Invoice No to indicate the invoice of terminal|
-|`Acq Name`|	String	|20 |	O (Mandatory for void & PreAuth Completion transaction)	 |To identify this transaction is initiated by respective Acquirer|
-|`User Defined Fields`|	String |	20 |	O |	UDF fields |
-|`Pwd` |	String |	8 |	O |	Void password|
-|`RRN`|	String |	20 |	O |	12 digits RRN |
-|`Auth Code`|	String |	3 |	O |	Approval code of authorization |
-|`Print`| charge slip |	String |	8 |	O (Mandatory for Pre Auth Completion transaction)	Y or N ( Default - Y ) |
-|`Tenure`|	String |	2 |	O |	The instalment plan of this transaction |
-|`checksum`|	String	| 10 |	O (Mandatory for Transaction check status transaction)	| Checksum for **data** field.Use SHA256 method to calculate **data** field |
+| |		 | |	 |	Settlement Transaction |
+| |		 | |	 | Refund |
+|`Amt` | String	| 10 | M | This transaction involves amount **100.00** |
+|`Detail`| String |2| O | To define the respond message in detail format. Y means detail message, N or skip this format means simple format **Y** |
+|`ECR Ref`|	String|	2 | O |	ECR reference no. up to 16 digits |
+|`Merchant Reference Number (MRN`)|	String | 10 | O	| Unique merchant number for reconciliation |
+|`Terminal Invoice No`|	String|	20 | M | Use the terminal Invoice No to indicate the invoice of terminal |
+|`Acq Name`| String	|20 | O (Mandatory for void & PreAuth Completion transaction) | To identify this transaction is initiated by respective Acquirer |
+|`User Defined Fields`|	String | 20 | O | UDF fields |
+|`Pwd` | String | 8 | O | Void password |
+|`RRN`|	String | 20 | O | 12 digits RRN |
+|`Auth Code`| String | 3 |	O |	Approval code of authorization |
+|`Print charge slip`| String | 8 | O (Mandatory for Pre Auth Completion transaction)| Y or N ( Default - Y ) |
+|`Tenure`|	String | 2 | O | The instalment plan of this transaction |
+|`checksum`| String	| 10 |	O (Mandatory for Transaction check status transaction)	| Checksum for **data** field.Use SHA256 method to calculate **data** field |
+
+
+
+
 
 ### Response in Payload
 ### Sale Response  
@@ -293,35 +297,35 @@ The table below identifies the required properties in the response message
 | |		 | |	 |	Preauth Completion |
 | |		 | |	 |	Void |
 | |		 | |	 |	EMI Sale|
-| |		 | |	 |	Settlement |
-| |		 | |	 |	Transaction Refund|
-|`Amount`|	String|	10	|M	|Length 10 including decimal|
-|`AID`|	String|	10	|O	|Acquirer ID|
-|`Adj Amt`|	String	|10	|O|	Amount|
-|`Auth Code`|	String|	8|	M|	Auth Code|
-|`ATC`|	String	|12	|O|	Application Counter Value|
-|`Batch Number`|	String|	6|	M|	Terminal Batch Number|
-|`Cardholder Name`|	String|	25	|O	|Name of the cardholder|
-|`Card Type`|	String|	10|	M|	Type of card|
-|`Pos Entry Mode`|	String|	3	|O	|Magstipe,Chip, Contactless, Manual entry, etc.|
-|`Card Exp Date`|	String	|4	|O	|Transaction card expiry date|
-|`Merchant ID`|	String|	16	|M|	Merchant ID|
-|`No signature`|	String	|2|	O|	|**Y** or **N**|
-|`Pan Number`|	String	|16	|O	|This will identify as Card number|
-|`Reference Number`|String|	20|	M	|This will identify as Reference Number|
-|`Status`|	String	|2	|O|	Status - **A**|
-|`TC`	|String|	10|	O|	Transaction Number|
-|`Terminal ID`|	String|	8|	M	|Terminal ID|
-|`TVR`|	String|	10|	O|	Terminal Reference|
-|`Txn date`|	Timestamp|	10	|M	|Transaction date|
-|`Txn time`|	Timestamp|	10	|M|	Transaction time|
-|`Txn id`|	String	|10|	M|	Transaction Id|
-|`checksum`|	String|	50|	O	|Checksum for **data** field.Use SHA256 method to calculate **data** field|
-|`Acquirer Name`|	String	|20	|M|	Acquirer Name|
-|`EMI specific data`	|String|	20|	O	|Interest rate, Processing fee, Tenure, etc.|
-|`Batch Upload`|	String|	2|	O|**Y** or **N**|
-|`Response Code`	|String	|2	|M|	Host Response code, it has response message|
-|`Response Text`|	String	|20|	M|	Text of response message|
+| |		 | |	 |	Settlement Transaction |
+| |		 | |	 |	 Refund|
+|`Amount`| String |	10	|M	| Length 10 including decimal |
+|`AID`|	String|	10	| O	| Acquirer ID |
+|`Adj Amt`|	String	|10	| O | Amount |
+|`Auth Code`| String | 8 | M |	Auth Code|
+|`ATC`|	String	|12	| O| Application Counter Value |
+|`Batch Number`| String | 6 | M | Terminal Batch Number |
+|`Cardholder Name`|	String | 25	| O	| Name of the cardholder |
+|`Card Type`| String | 10 |	M |	Type of card |
+|`Pos Entry Mode`| String |	3 | O | Magstipe,Chip, Contactless, Manual entry, etc.|
+|`Card Exp Date`| String | 4 | O | Transaction card expiry date |
+|`Merchant ID`|	String | 16	| M | Merchant ID |
+|`No signature`| String	| 2 | O | 'Y' or 'N' |
+|`Pan Number`| String | 16 | O | This will identify as Card number|
+|`Reference Number`| String | 20 | M | This will identify as Reference Number |
+|`Status`| String | 2 | O |	Status - 'A' |
+|`TC` | String | 10 | O | Transaction Number |
+|`Terminal ID`|	String | 8 | M | Terminal ID |
+|`TVR`|	String | 10 | O | Terminal Reference |
+|`Txn date`| Timestamp | 10	| M	| Transaction date |
+|`Txn time`| Timestamp | 10	| M | Transaction time |
+|`Txn id`| String | 10 | M | Transaction Id |
+|`checksum`| String | 50 | O | Checksum for 'data' field.Use SHA256 method to calculate "data" field |
+|`Acquirer Name`| String | 20 | M |	Acquirer Name |
+|`EMI specific data` | String |	20 | O | Interest rate, Processing fee, Tenure, etc.|
+|`Batch Upload` | String | 2 | O | 'Y' or 'N' |
+|`Response Code` | String | 2 | M |	Host Response code, it has response message |
+|`Response Text` | String | 20 | M | T
 
 
 The table below provides the list of error codes and description for this application.

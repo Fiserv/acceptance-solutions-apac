@@ -266,25 +266,26 @@ The below table identifies the required properties in the request message
 
 | Variable |  Type | Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------------------ | ------------------ |
-| `appId`	 | String |  20 | M	| FAMS_BASE24 App ID |
-| `packageName`	| String | 20	 |	M | FAMS_BASE24 App Package Name |
-| `tipAmount`  | String	| 10 |  O |	Transaction Tip Amount for sale |
-| `InvoiceNo`  | String | 6|	M	| 6 digits invoice number for void transaction |
-| `type`  |	String | 2 |	M |	Use type to indicate the printdetails |
-| `totalTxnAmount`  | String | 10 | M |	Transaction amount |
-| `acquirerName` | String  | 20 | M	|	Acquirer Name for settlement or print |
-| `staffId`  | String | 20	| 	O |	max 20 characters ( opt ) for offline |
-| `rText`  | String  | 20	| 	O | max 20 characters ( opt ) for offline |
-| `showDetail` | Boolean | 5  |	O |	For void and settle |
-| `authCode` |	String	|  8 |	M  | Use for preauth cancel/ topUp/ comp |
-| `uid` | String | 8 | O 	| Uniqueid for each transaction |
-| `isPrint` | Boolean | 2 | O 	| Print |
-| `isQfpay` | Boolean  | 4 | O | For sale transaction,use for Qfpay |
-| `newTotal` | Long	 |  10 |M	 | New Total for Adjust |
-| `isMicors` | Boolean | 10 | O | For OPI Transaction Source |
-| `deviceId` | String |	 10 | O	 | For OPI Transaction |
-| `grequestId` | String	| 10 | O | For OPI Transaction |
-| `sequenceNum` | String | 20 |	O 	 |For OPI Transaction |
+| `App Id` | String | 20 | M | FAMS_BASE24 App ID |
+| `Package Name` | String | 20 | M | FAMS_BASE24 App Package Name |
+| `Tip Amount` | String | 10 | O | Transaction Tip Amount for sale |
+| `Invoice No` | String | 6 | M | 6 digits invoice number for void transaction |
+| `Type` | String | 2 | M | Use type to indicate the print details |
+| `Total Txn Amount` | String | 10 | M | Transaction amount |
+| `Acquirer Name` | String | 20 | M	| Acquirer Name for settlement or print |
+| `Staff Id` | String | 20 | O | Option for offline |
+| `R Text` | String | 20 | O | Option for offline |
+| `Show Detail` | Boolean | 5 | O | Option for void and settle |
+| `AuthCode` | String | 8 | M | Use for preauth cancel/topUp/completion transaction |
+| `Uid` | String | 8 | O | Unique id for each transaction |
+| `Print` | Boolean | 2 | O | Print |
+| `Qfpay` | Boolean | 4 | O | For sale transaction,use for Qfpay |
+| `New Total` | Long | 10 | M | New Total for Adjust |
+| `Micors` | Boolean | 10 | O | For OPI, Transource |
+| `Device Id` | String | 10 | O	| For OPI Transaction |
+| `Request Id` | String | 10 | O | For OPI Transaction |
+| `Sequence Num` | String | 20 | O |For OPI Transaction ||
+
 
 
 
@@ -417,64 +418,67 @@ Log.d("response", "transaction failed");
 ```
 
 ### Response
+
 The below table identifies the required properties in the response message
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
-| `App Id` |	String	 | 20 |	M	 | FAMS_BASE24 App ID |
-| `Rsp Msg` |	String	 | 20 |	M	 | Description of the response code |
-|`Intrsp Code` |	String |	4 |	O |	Response code |
-| `Issuer Name` |	String	| 20 |	M  | Issuer name |
-|  `Acquirer Name` |	String | 20 | M	| Acquirer name |
-| `Ref  No` |	String | 10 |	M |	Reference No |
-| `Trans Time` |	String |	20 |	M |	Transaction time |
-| `Amount` |	String |	10 |	M |	Transaction amount |
-| `AppCode` |	String |	8 |	M |	 Approval code of the transaction|
-| `Signature`	 | String |	3	 | O |	Signature data |
-| `ReferNo` |	String |	10 |	O |	Reference  No |
-| `TraceNo` |	String |	6 |	O	 |6 digits  traceno|
-| `BatchNo` |	String |	6	 |M	 | 6 digits batch no |
-| `Merchant Name`	| String |	20 |	M |	Merchant name |
-|`Merchant Id` |	String |	8	 |M	  |15 digits Merchant ID |
-| `Card No`	 |String |	16 |	M |	Card  No |
-| `Terminal Id` |	String	 |15 |	M |	8 digits Terminal ID|
-|`Sale Total Amt` |	String |	10 |	O |	Total sale amount |
-| `Sale Total Num` |	String	| 10 |	O	 | Total sale number |
-| `Sale Void Total Amt` |	String |	10	| O	 |Total void sale amount |
-| `Sale Void Total Num` |	String |	10 |	O |	Total void  sale number |
-| `Refund Total Amt` |	String |	10	 | O |	Total refund amount |
-| `Refund Total Num`	 | String |	10 |	O |	Total refund number |
- |`Refund  Void Total Amt` |	String	 | 10	| O |	Total void refund amount|
-| `Refund Void Total Num`	 |String	 | 10	 | O |	 Total void refund number|
-| `SettleMsg` |	String |	2 |	O |	Settlement message |
-| `CardholderName` |	String |	20 |	O |	Cardholder name |
- |`TipAmount` |	String |	10 |	O |	Transaction tip amount|
-| `App` |	String	| 5	 | O |	EMV application label name |
- |`Aid` |	String	| 16 |	O |	16 digits EMV application ID |
-| `TC` |	String |	16	 | O |	16 digits EMV  transaction cryptogram|
-| `TVR` |	String |	10 |	O	 | 10  digits EMV terminal  verification result|
- |`TSI` |	String |	4	| O	 | 4 digits EMV transaction status information|
- |`ATC` |	String	| 2	 |O	 |2 digits EMV Application transaction counter| 
- |`Local Curr Code` |	String	| 3	 |O	 |Local currency code. For Dcc txn|
- |`Cardholder Code` |	String	| 3	 |O	 |Cardholder currency code. For Dcc  txn|
- |`Fx Rate` |	String	| 6	 |O	 |Rate For Dcc txn |
- |`Foreign  Amt` |	String	|10	|O|	Cardholder currency Amount.For Dcc txn|
- |`Tenure` |	String	|3 |	O | 	For instalment txn |
- |`Product Code` |	String	|3	|O|	For instalment txn |
- |`Interest Amt` |	String |	10 |	O	|For instalment txn.For instalment String monthly Amt|
- |`DeviceId` |	String |	10	|O	|For  OPI|
- |`RequestId` |	String	|10	| O |	For OPI|
- |`DeviceSN` |	String	|10|	O|	Serial Number|
-| `FlagNac` |	Boolean	|2	|O|	For OPI|
- |`IsMicros` |	Boolean |	2	|O|	Micros solution is enable|
- |`Token`	 | String	|10 |	O |	For OPI, MT token|
- |`SequenceNum` |	String	| 10|	O	|For OPI|
- |`DccFlag` |	Boolean |	2	|O |	If it is Dcc transaction, it is 'True'|
-|`PinVerify` |	Boolean |	2 |	O	|Pin entered, it is 'TRUE'|
-| `ExpDate` |	String	|4 |	O	|Expire Date |
- |`Currency` |	String	| 3	 |O |	Currency code |
- |`Signed` |	Boolean	|5	|O	|If have signature, it is 'TRUE'|
- |`SignData` |	String	|5|	O|	The data in receipt|
+| `App Id` | String | 20 | M | FAMS_BASE24 App ID |
+| `Rsp Msg` | String | 20 | M | Description of the response code |
+|`Intrsp Code` | String | 4 | O | Response code |
+| `Issuer Name` | String | 20 | M | Issuer name |
+|  `Acquirer Name` | String | 20 | M | Acquirer name |
+| `Ref No` | String | 10 | M | Reference No |
+| `Trans Time` | String | 20 | M | Transaction time |
+| `Amount` | String | 10 | M | Transaction amount |
+| `AppCode` | String | 8 | M | Approval code of the transaction |
+| `Signature` | String | 3 | O | Signature data |
+| `ReferNo` | String | 10 | O |	Reference  No |
+| `TraceNo` | String | 6 | O | 6 digits traceno. |
+| `BatchNo` | String | 6 | M | 6 digits batch no |
+| `Merchant Name` | String | 20 | M | Merchant name |
+| `Merchant Id` | String | 8 | M | 15 digits Merchant ID |
+| `Card No` | String | 16 | M | Card No |
+| `Terminal Id` | String | 15 | M | 8 digits Terminal ID |
+|`Sale Total Amt` | String | 10 | O | Total sale amount |
+| `Sale Total Num` | String | 10 | O | Total sale number |
+| `Sale Void Total Amt` | String | 10 | O | Total void sale amount |
+| `Sale Void Total Num` | String | 10 | O | Total void sale number |
+| `Refund Total Amt` | String | 10 | O | Total refund amount |
+| `Refund Total Num` | String |	10 | O | Total refund number |
+| `Refund Void Total Amt` | String | 10 | O | Total void refund amount |
+| `Refund Void Total Num` | String | 10 | O | Total void refund number |
+| `SettleMsg` | String | 2 | O | Settlement message |
+| `CardholderName` | String | 20 | O | Cardholder name |
+| `TipAmount` | String | 10 | O | Transaction tip amount |
+| `App` | String | 5 | O | EMV application label name |
+| `Aid` | String | 16 | O | 16 digits EMV application ID |
+| `TC` | String | 16 | O | 16 digits EMV  transaction cryptogram |
+| `TVR` | String | 10 | O | 10  digits EMV terminal verification result |
+| `TSI` | String | 4 | O | 4 digits EMV transaction status information|
+| `ATC` | String | 2 | O | 2 digits EMV Application transaction counter | 
+| `Local Curr Code` | String | 3 | O | Local currency code. For Dcc txn|
+| `Cardholder Code` | String | 3 | O |Cardholder currency code. For Dcc  txn |
+| `Fx Rate` | String | 6 | O | Rate. For Dcc txn |
+| `Foreign Amt` | String | 10 | O |	Cardholder currency Amount.For Dcc txn|
+| `Tenure` | String	| 3 | O | For instalment txn |
+| `Product Code` | String | 3 | O |	For instalment txn |
+| `Interest Amt` | String |	10 | O |For instalment txn.For instalment String monthly Amt |
+| `DeviceId` | String |	10 | O | For OPI |
+| `RequestId` |	String | 10 | O | For OPI |
+| `DeviceSN` | String | 10 | O | Serial Number |
+| `FlagNac` | Boolean | 2 | O |	For OPI |
+| `IsMicros` | Boolean | 2 | O | Micros solution is enable |
+| `Token` | String | 10 | O | For OPI, MT token |
+| `SequenceNum` | String | 10 |	O | For OPI |
+| `DccFlag` | Boolean |	2 | O |	If it is Dcc transaction, it is 'True'|
+| `PinVerify` |	Boolean | 2 | O	| Pin entered, it is 'TRUE' |
+| `ExpDate` | String | 4 | O | Expire Date |
+| `Currency` | String | 3 | O |	Currency code |
+| `Signed` | Boolean | 5 | O | If have signature, it is 'TRUE' |
+| `SignData` | String | 5 | O | The data in receipt |
+
+
 
 
 
