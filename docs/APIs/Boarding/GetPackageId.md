@@ -7,7 +7,7 @@ token received during login api call in the header of this API.
 
 ## Endpoint
 
-GET `Externalboarding/secure/packages/{packageId}`
+GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/packages/{packageId}`
 
 ## Payload Example
 

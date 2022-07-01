@@ -6,7 +6,7 @@ token received during login api call in the header of this API.
 
 ## Endpoint
 
-POST `/Externalboarding/secure/newmid`
+POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/newmid`
 
 ## Payload Example
 
