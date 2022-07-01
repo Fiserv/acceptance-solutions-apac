@@ -150,13 +150,13 @@ The table below identifies the required properties in the request message
 | Variable | Type | Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
 | `functionCode` | String | 2 | M | 01 - Sale (Sale, DCC) |
-|  | 	|  | 02 - Preauth Sale |
-|  | 	|  | 03 - Preauth Completion |
-|  | 	|  | 05 - Void |
-|  | 	|  | 08 - EMI Sale |
-|  | 	|  | 05 - Void |
-|  | 	|  | 12 - Settlement Transaction |
-|  | 	|  | 11 - Transaction status check |
+|  | 	| | | 02 - Preauth Sale |
+|  | 	| | | 03 - Preauth Completion |
+|  | 	| | | 05 - Void |
+|  | 	| | | 08 - EMI Sale |
+|  | 	| | | 05 - Void |
+|  | 	| | | 12 - Settlement Transaction |
+|  | 	| | | 11 - Transaction status check |
 | `Total Txn Amount ( Auth + ConvFee+ GTS)` | String | 10 |	M |	This transaction involves amount "100.00" |
 | `Tip Amt` | String | 10 | O | This transaction involves "10.00" | 
 | `Detail` | String | 2 | O | To define the respond message in detail format. Y means detail message, N or skip this format means simple format "Y" |
