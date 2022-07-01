@@ -493,12 +493,12 @@ The table below identifies the required properties in the response message
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
 | `functionCode` | String | 2 | M | 01 - Sale (Sale, DCC) |
-|  | 	|  | 02 - Preauth Sale |
-|  | 	|  | 03 - Preauth Completion |
-|  | 	|  | 05 - Void |
-|  | 	|  | 08 - EMI Sale |
-|  | 	|  | 12 - Settlement Transaction |
-|  | 	|  | 11 - Transaction status check |
+|  | 	| | | 02 - Preauth Sale |
+|  | 	| | | 03 - Preauth Completion |
+|  | 	| | | 05 - Void |
+|  | 	| | | 08 - EMI Sale |
+|  | 	| | | 12 - Settlement Transaction |
+|  | 	| | | 11 - Transaction status check |
 | `Source` | String | 10 | O | TILL,  Mobile,  ATVM,  etc.|
 | `TIP amount` | String | 10 | O | Length 10 including decimal |
 | `Total Transaction amount ( Bill Amount + Convenience Fee + GST )` | String |	10 | M | Length 10 including decimal |
