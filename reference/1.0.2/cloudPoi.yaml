@@ -202,10 +202,7 @@ components:
         message:
           type: string
           description: success message
-          example: Success
-    
-
-        
+          example: Success  
     Response200:
       type: object
       properties:
