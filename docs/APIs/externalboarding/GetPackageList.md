@@ -1,6 +1,6 @@
 # Get Package List
 
-This API is used to the fetch package details list  and its corresponding parameters based on the filtration criteria provided in the request API.
+This API is used to fetch the package details list  and its corresponding parameters based on the filtration criteria provided in the request API.
 
 ## How it works
 1. Merchant needs to use this API where in multiple packages are assigned to the partner.
