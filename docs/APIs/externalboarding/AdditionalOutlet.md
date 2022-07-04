@@ -402,7 +402,6 @@ POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/addmid`
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/addmid).
 
 ### Request
-
 | FieldName | Type     |  Length | Mandatory / Optional / Conditional (M / O / C) | Description |
 | -------- | :-------: | :-----: | :---------------------------------------------:| :---------: |
 |`App URN`|	 *Alphanumeric*  	 | 30 | 	M |	App URN retured as part of Create URN API |
@@ -423,9 +422,7 @@ The table below contains the mandatory fields required for a successful request.
 |**Tax Details**|	 -	 | NA | NA	|	This is the object |
 |`Taxid Type`|	 *Alphanumeric* 	 | 50 | 	M |	"Tax ID Type provided for the merchant. |
 |`Taxid Type`|	 *Alphanumeric* 	 | 50 | 	M |	For India - PAN |
-|`Taxid Type`|	 *Alphanumeric* 	 | 50 | 	M |	"For AU - ABN "" ""Tax ID Type provided for the merchant
-For India: Individual PAN for Individual/Soleprop merchants
- |"
+|`Taxid Type`|	 *Alphanumeric* 	 | 50 | 	M |	"For AU - ABN "" ""Tax ID Type provided for the merchant For India: Individual PAN for Individual/Soleprop merchants "|
 |`Taxid Value`|	 *Alphanumeric* 	 | 100 | 	M |	PAN, ABN number of the Merchant |
 |`Taxid Value`|	 *Alphanumeric* 	 | 100 | 	M |	PAN, ABN number of the Merchant |
 |`Taxid Value`|	 *Alphanumeric* 	 | 100 | 	M |	PAN, ABN number of the Merchant |
@@ -652,6 +649,8 @@ For India: Individual PAN for Individual/Soleprop merchants
 |`ThirdParty Processor Flag`|	 *Alphanumeric* 	 | 20 | 	O |	Thirdparty processor flag of the Merchant |
 |`ThirdParty Processor Name`|	 *Alphanumeric* 	 | 40 | 	O |	Thirdparty processor name of the Merchant |
 |`Small Merchant`|	 *Alphanumeric* 	 | 20 | 	O |	Applicable if the merchant is a Small Merchant |
+
+
 
 ### Successful Response Payload
 
