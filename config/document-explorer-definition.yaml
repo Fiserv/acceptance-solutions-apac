@@ -89,7 +89,7 @@
             - title: Settlement Transaction
               link: docs/APIs/PaymentAPI/SettlementTransaction.md
         - title: Merchant Onboarding
-          link: doc/MerchantBoarding.md
+          link: docs/MerchantBoarding.md
           sections:
             - title: Login
               link: docs/APIs/externalboarding/Login.md
