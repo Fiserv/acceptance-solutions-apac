@@ -49,7 +49,7 @@ The table below contains the mandatory fields required for a successful request.
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C)  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `boardingType` |	*Alphanumeric* |	20 | M | Type of Merchant: NEWMID/ADDMID/ADDTID |
+| `boardingType` |	*Alphanumeric* |	20 | M | Type of Merchant: NEWMID / ADDMID / ADDTID |
 | `institutionCode` |	*Alphanumeric* |	3 |	M |	The unique value assigned to each channel |
 | `appChannel` |	*Alphanumeric* |	|	M	| |
 | `appType` |	*Alphanumeric*  |	8 |	M |	 Fixed Value 'API' |
@@ -61,7 +61,7 @@ The table below contains the mandatory fields required for a successful request.
 | `acceptanceType` |	*Alphanumeric* |	10 |	M |	Static Value: 'ECOM'/ 'POSMOB' |
 | `international` |	*Alphanumeric* |	3 | M |		Applicable if the merchant accepts international transactions |
 | `iciciMerchant` |	 *Alphanumeric* |	20 |	O |	Applicable if the merchant is ICICI current bank account holder|
-| `dcc`	 | *Alphanumeric*	| 3	| O	 | It is applicable for Foreign rate conversion(Y/N) |
+| `dcc`	 | *Alphanumeric*	| 3	| O	 | It is applicable for Foreign rate conversion(Y / N) |
 | `fundingCurrency`	| *Alphanumeric* |	8 |	M |	"The currency is settled to the merchant NET_INR, NET_USD, NET_AUD etc |
 | `newFundingAc` |	*Alphanumeric* |	20 |	O |	Merchant settlement account.|
 
