@@ -11,7 +11,7 @@ Point of sale connects the payment terminal using Cloud based integrations with 
 ## Standalone Terminals
 For basic payment terminal solutions that do not require any integration, we offer state of the art standalone terminals for your businesses.
 
-For more details, please contact us [here](./??path=docs/introduction/contact-us.md).
+For more details, please contact us [here](./?path=docs/introduction/contact-us.md).
 
 ## Which Integration approach should we adopt?
 
