@@ -409,7 +409,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Sales Id`|	 *Alphanumeric* 	 | 70 | 	M |	User Credential created for each partner |
 |`channel Code`|	 *Alphanumeric* 	 | 10 | 	C |	Static Channel Code shared with each partner |
 |`Institution Id`|	 *Numeric* 	 | 10 | 	C |	Institution number assigned to the institution |
-|`Boarding Type`|	 *Alphanumeric* 	 | 20 | 	O |	Type of Merchant: NEWMID/ADDMID/ADDTID |
+|`Boarding Type`|	 *Alphanumeric* 	 | 20 | 	O |	Type of Merchant: NEWMID / ADDMID  ADDTID |
 |`IS_ADD_LOCATION`|	 *Alphanumeric* 	 | 20 | 	O |	Applicable if the merchant wants additional location |
 |`IS_ADD_MID`|	 *Alphanumeric* 	 | 20 | 	O |	Applicable if the merchant wants additional MID |
 |`App Channel`|	 *Alphanumeric* 	 | 20 | 	O |	Application channel |
