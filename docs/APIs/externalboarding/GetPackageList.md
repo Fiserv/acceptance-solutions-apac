@@ -51,9 +51,9 @@ The table contains the mandatory fields required for a successful request. The f
 | `typeOfBusiness` |	*Alphanumeric* |	50 | M | Type of Bussiness means Sole Proprieter, Individual etc |
 | `international`	| *Alphanumeric* | 3 | O | Applicable if the merchant supports international Card Transactions |
 | `iciciMerchant` | *Alphanumeric* | 20 | O	| Applicable if the merchant is ICICI current bank account holder |
-| `dcc` |	*Alphanumeric* |	3 |	 O | It is applicable for Foreign rate conversion(Y / N) |
+| `dcc` |	*Alphanumeric* |	3 |	 O | It is applicable for Foreign rate conversion(Y/N) |
 | `fundingCurrency` |	*Alphanumeric* |	8 |	 M | The currency  settled to the merchant NET_INR, NET_USD, NET_AUD etc |
-| `boardingType` | *Alphanumeric* |	20 | M | Type of Merchant: NEWMID / ADDMID / ADDTID |
+| `boardingType` | *Alphanumeric* |	20 | M | Type of Merchant: NEWMID/ADDMID/ADDTID |
 | `merchantGrade` | *Alphanumeric* | 40 | M	| The grade of the merchant decided as per the turnover |
 
 
@@ -351,7 +351,7 @@ The table contains the mandatory fields required for a successful request. The f
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory / Optional / Conditional ( M / O / C) | Description/Values |
+| Variable | Type | Length |  Mandatory /Optional / Conditional ( M / O / C) | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `id` | *string* | 20 | M | Identification Number |
 

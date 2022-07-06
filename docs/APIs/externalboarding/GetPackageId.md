@@ -1,6 +1,6 @@
 # Get Individual Package
 
-This API is used to fetch the individual package details and its corresponding parameters based on the filter criteria provided in the request API.
+This API is used to fetch the package details list and its corresponding parameters based on the filter criteria provided in the request API.
 
 ## How it works
 1. Merchant needs to use this API where in individual package details are to be retrieved by passing the package id in request parameter.
