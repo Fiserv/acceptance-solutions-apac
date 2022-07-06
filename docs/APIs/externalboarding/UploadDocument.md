@@ -17,6 +17,7 @@ POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/{a
 ### Request Payload
 
 ```json
+
 https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/10000745
 
 ```
