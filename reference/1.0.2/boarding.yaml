@@ -24,6 +24,7 @@ paths:
       operationId: submitapplication
       x-group-name: Boarding
       x-proxy-name: Submit Application
+      x-default-example: New merchant
       parameters:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
