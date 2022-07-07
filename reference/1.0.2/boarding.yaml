@@ -20,7 +20,7 @@ paths:
       tags:
       - Boarding
       summary: New Merchant / Single MID PayFac / Multi  MID PayFac
-      description: New Merchant
+      description: New Merchant / Single MID PayFac / Multi  MID PayFac
       operationId: submitapplication
       x-group-name: Boarding
       x-proxy-name: Submit Application
