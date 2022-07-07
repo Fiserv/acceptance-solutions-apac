@@ -149,29 +149,29 @@ The table below identifies the required properties in the request message
 
 | Variable | Type | Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
-| `functionCode` | String | 2 | M | 01 - Sale (Sale, DCC) |
-|  | 	| | | 02 - Preauth Sale |
-|  | 	| | | 03 - Preauth Completion |
-|  | 	| | | 05 - Void |
-|  | 	| | | 08 - EMI Sale |
-|  | 	| | | 05 - Void |
-|  | 	| | | 12 - Settlement Transaction |
-|  | 	| | | 11 - Transaction status check |
-| `Total Txn Amount ( Auth + ConvFee+ GTS)` | String | 10 |	M |	This transaction involves amount "100.00" |
-| `Tip Amt` | String | 10 | O | This transaction involves "10.00" | 
-| `Detail` | String | 2 | O | To define the respond message in detail format. Y means detail message, N or skip this format means simple format "Y" |
+| `Function Code` | String | 2 | M | 01 - Sale (Sale, DCC) |
+|  | 	|  | 02 - Preauth Sale |
+|  | 	|  | 03 - Preauth Completion |
+|  | 	|  | 05 - Void |
+|  | 	|  | 08 - EMI Sale |
+|  | 	|  | 05 - Void |
+|  | 	|  | 12 - Settlement Transaction |
+|  | 	|  | 11 - Transaction status check |
+| `Total Txn Amount ( Auth + ConvFee+ GST)` | String | 10 |	M |	This transaction involves amount "100.00" |
+| `Tip Amt` | String | 10 | O | This transaction involves amount "10.00" | 
+| `Detail` | String | 2 | O | To define the respond message in detail format. 'Y' means detail message, 'N' means skip this format |
 | `ECR Ref` | String | 10 | O |	ECR reference no. up to 16 digits |
-| `Merchant Reference Number(MRN)` | String	| 20 | M | Unique merchant number for reconciliation|
+| `Merchant Reference Number(MRN)` | String	| 20 | M | Unique merchant number for reconciliation |
 | `Terminal Invoice No` | String | 20 |	O (Mandatory for void & PreAuth Completion transaction)	| Use the terminal Invoice No to indicate the invoice of terminal |
 | `Customer Number` | String | 20 | O |	To identify this transaction is initiated by respective customer |
 | `User Defined Fields` | String | 8 | O | UDF fields |
 | `Pwd` | String | 20 | O | Void password |
 | `RRN` | String | 3 | O | 12 digits RRN |
 | `Auth Code` |	String | 8 | O (Mandatory for Pre Auth Completion transaction) | Approval code of authorization |
-| `Print charge slip` |	String | 2 | O | Y or N (Default - Y ) |
+| `Print charge slip` |	String | 2 | O | Y or N (Default - Y ) | 
 | `Transaction_type` | String | 10 | O (Mandatory for Transaction check status transaction ) | Type of transaction |
 | `Tenure` | String | 3 | O (Mandatory for EMI transaction)	| The instalment plan of this transaction |
-| `Checksum` | String | 50 | O | Checksum for **data** field. Use SHA256 method to calculate **data** field |
+| `Checksum` | String | 50 | O | Checksum for"data" field. Use SHA256 method to calculate "data" field |
 
 ### Response in Payload
 
@@ -492,13 +492,13 @@ The table below identifies the required properties in the response message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
-| `functionCode` | String | 2 | M | 01 - Sale (Sale, DCC) |
-|  | 	| | | 02 - Preauth Sale |
-|  | 	| | | 03 - Preauth Completion |
-|  | 	| | | 05 - Void |
-|  | 	| | | 08 - EMI Sale |
-|  | 	| | | 12 - Settlement Transaction |
-|  | 	| | | 11 - Transaction status check |
+| `Function Code` | String | 2 | M | 01 - Sale (Sale, DCC) |
+|  | 	|  | 02 - Preauth Sale |
+|  | 	|  | 03 - Preauth Completion |
+|  | 	|  | 05 - Void |
+|  | 	|  | 08 - EMI Sale |
+|  | 	|  | 12 - Settlement Transaction |
+|  | 	|  | 11 - Transaction status check |
 | `Source` | String | 10 | O | TILL,  Mobile,  ATVM,  etc.|
 | `TIP amount` | String | 10 | O | Length 10 including decimal |
 | `Total Transaction amount ( Bill Amount + Convenience Fee + GST )` | String |	10 | M | Length 10 including decimal |
@@ -507,48 +507,43 @@ The table below identifies the required properties in the response message
 | `CGST` | String | 10 | O | Length 10 including decimal |
 | `SGST` | String | 10 | O | Length 10 including decimal |
 | `Bill amount` | String | 10 |	O | Length 10 including decimal |
-|`EMI specific data`|	String|	20|	O|	Interest rate,  Processing fee, Tenure,  etc.|
-|`Merchant  Reference  Number(MRN)`|	String|	20	|M	| Same as request |
-|`Terminal  Invoice  number`|	String|	8|	M |	Terminal  Invoice Number|
-|`Currency selection`|	String	|3|	O|	Currency code/currency which been selected|
-|`Transaction ID`	|String|	10	|M|	Same as request |
-|`Customer name`|	String|	25|	O|	Customer name extracted from Card|
-|`User defined fields`|	String|	30|	O| Same as request |
-|`Masked  Card  Number`|	String|	21|	M|	First Six digit & last four digit. In between number should be masked|
-|`Application Version  Number`|	String | 10| M |This is terminal application version number|
-|`Date & Time`|	Timestamp| 20| M |	Host Date & Time|
-|`ATID`| String	|8|	M|	Acquirer TID|
-|`AMID`| String| 15	|M | Acquirer MID|
-|`Acquirer  Name`| String | 20| M | Acquirer Name|
-|`Response Code` | String |	12|	M |	Host Response code, it has response message|
-|`Batch Number`| String| 6 | M | Terminal Batch Number |
-|`Card Type`| String| 10| M |	Type of card |
-|`RRN`|	String | 12	| M| RRN received from host |
-|`SE`|	String | 10	| O |Value would be populated incase of Amex txns|
-|`EMV specific Data`|	String	|256|	O	|EMV data like TC , Application identifier,  Application Name, TSI, etc.|
-|`DCC Indicator` |String |1| O |"EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC EMI Sale, EMI Void"|
-|`EMI flag`| String| 1 | O | "EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC EMI Sale, EMI Void"|
-|`Pos Entry Mode`| String |	3| O |Magstipe,Chip, Contactless, Manual entry, etc.|
-|`Pin Verified`| String|3| O |**Yes** when PIN was entered & **No** when pin was not prompt|
-|`Auth Code`| String | 8 | M | Received from Issuer/host |
-|`Biller Id`| String | 10 | O | Same as request |
-|`Specific Indicator` |	String | 3 | O | To be used for BBPS |
-|`Merchant unique number` | String | 20 | O | Same as request |
-| `Terminal Invoice number`| String | 20 | O | Same as request |
-| `Suppress Print Charge Slip` | String | 2	| O	|**Yes** or **No**  -To suppress chargeslip prints for financial transactions|
-|`EMI`	| String |20| O | EMI details – emi flag is 1/0 EMI reference number generated is 8 bytes Tenure, discount amount, product amount, EMI per month|
-|`Consumer Number`|	String|	20	|O|	CRN / Consumer number 20 bytes|
-|`Card Last four digit`| String | 4 | O | Used for pre-auth completion & cancellation transaction |
-|`Email ID`| String | 50 | O | Email ID on which Email needs to be received 50 bytes optional |
-|`Card Txn mode`| String | 3 |	O|	Txn Mode |
-|`Purchase amount` | String | 10 | O | Purchase amount |
-|`Cash back amount`| String| 10| O | Transaction cash back amount|
-|`NAC Status` |	String	| 3	| O | Identify the network status True -> private network False -> public network|
-|`Card Exp Date`| String | 4 |O| Transaction card expire date |
-|`DCC Yes/NO flag`| String | 10 | O | DCC Conversion flag  Yes or No & the response converted amount, exchange rate and margin fee|
-
-
-
+|`EMI specific data`| String | 20 |	O |	Interest rate,  Processing fee, Tenure,  etc. |
+| `Merchant  Reference  Number(MRN)` | String | 20 | M | Same as request |
+| `Terminal  Invoice  number` |	String | 8 | M | Terminal  Invoice Number |
+| `Currency selection` | String	| 3 | O | Currency code/currency which been selected |
+| `Transaction ID` | String | 10 | M |	Same as request |
+| `Customer name` |	String | 25 | O | Customer name extracted from Card |
+| `User defined fields` | String | 30 |	O | Same as request |
+| `Masked Card Number` | String | 21 | M| First Six digit & last four digit. In between number should be masked |
+| `Application Version Number` | String | 10 | M | This is terminal application version number |
+| `Date & Time` | Timestamp | 20 | M | Host Date & Time |
+| `ATID` | String | 8 |	M |	Acquirer TID |
+| `AMID` | String | 15 | M | Acquirer MID |
+| `Acquirer  Name` | String | 20| M | Acquirer Name |
+| `Response Code` | String | 12| M | Host Response code, it has response message |
+| `Batch Number` | String | 6 | M | Terminal Batch Number |
+| `Card Type` | String | 10 | M | Type of card |
+| `RRN` | String | 12 | M | RRN received from host |
+| `SE` | String | 10 | O | Value would be populated incase of Amex txns|
+| `EMV specific Data` |	String	| 256 |	O | EMV data like TC , Application identifier, Application Name, TSI, etc. |
+| `EMI flag` | String | 1 byte | O | EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC EMI Sale, EMI Void |
+| `Pos Entry Mode` | String | 3 | O | Magstipe,Chip, Contactless, Manual entry, etc. |
+| `Pin Verified` | String | 3 | O | "Yes" when PIN was entered & "No" when pin was not prompted |
+| `Auth Code` | String | 8 | M | Received from Issuer/host |
+| `Biller Id` | String | 10 | O | Same as request |
+| `Specific Indicator` | String | 3 | O | To be used for BBPS |
+| `Merchant unique number` | String | 20 | O | Same as request |
+| `Terminal Invoice number` | String | 20 | O | Same as request |
+| `Suppress Print Charge Slip` | String | 2	| O	| "Yes" or "No"  -To suppress chargeslip prints for financial transactions |
+| `Consumer Number` | String | 20 | O |	CRN / Consumer number 20 bytes |
+| `Card Last four digit` | String | 4 | O | Used for pre-auth completion & cancellation transaction |
+| `Email ID` | String | 50 | O | Email ID on which Email needs to be received 50 bytes optional |
+| `Card Txn mode` | String | 3 | O | Txn Mode |
+| `Purchase amount` | String | 10 | O | Purchase amount |
+| `Cash back amount` | String | 10 | O | Transaction cash back amount |
+| `NAC Status` | String	| 3	| O | Identify the network status True -> private network False -> public network |
+| `Card Exp Date` | String | 4 | O | Transaction card expire date |
+| `DCC Yes/NO flag` | String | 10 | O | DCC Conversion flag Yes or No. Response is converted amount, exchange rate and margin fee |
 
 
 The table below provides the list of error codes and description for this application.

@@ -269,23 +269,22 @@ The below table identifies the required properties in the request message
 | `App Id` | String | 20 | M | FAMS_BASE24 App ID |
 | `Package Name` | String | 20 | M | FAMS_BASE24 App Package Name |
 | `Tip Amount` | String | 10 | O | Transaction Tip Amount for sale |
-| `Invoice No` | String | 6 | M | 6 digits invoice number for void transaction |
+| `Invoice No` | String | 6 | M | 6 digits invoicenumber for void transaction |
 | `Type` | String | 2 | M | Use type to indicate the print details |
 | `Total Txn Amount` | String | 10 | M | Transaction amount |
 | `Acquirer Name` | String | 20 | M	| Acquirer Name for settlement or print |
 | `Staff Id` | String | 20 | O | Option for offline |
 | `R Text` | String | 20 | O | Option for offline |
 | `Show Detail` | Boolean | 5 | O | Option for void and settle |
-| `AuthCode` | String | 8 | M | Use for preauth cancel/topUp/completion transaction |
+| `Auth Code` | String | 8 | M | Use for preauth cancel/ Top Up/ Preauth Completion transaction |
 | `Uid` | String | 8 | O | Unique id for each transaction |
 | `Print` | Boolean | 2 | O | Print |
 | `Qfpay` | Boolean | 4 | O | For sale transaction,use for Qfpay |
 | `New Total` | Long | 10 | M | New Total for Adjust |
-| `Micors` | Boolean | 10 | O | For OPI, Transource |
+| `Micros` | Boolean | 10 | O | For OPI, TranSource |
 | `Device Id` | String | 10 | O	| For OPI Transaction |
 | `Request Id` | String | 10 | O | For OPI Transaction |
-| `Sequence Num` | String | 20 | O |For OPI Transaction ||
-
+| `Sequence Num` | String | 20 | O |For OPI Transaction |
 
 
 
@@ -418,7 +417,6 @@ Log.d("response", "transaction failed");
 ```
 
 ### Response
-
 The below table identifies the required properties in the response message
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
@@ -431,11 +429,11 @@ The below table identifies the required properties in the response message
 | `Ref No` | String | 10 | M | Reference No |
 | `Trans Time` | String | 20 | M | Transaction time |
 | `Amount` | String | 10 | M | Transaction amount |
-| `AppCode` | String | 8 | M | Approval code of the transaction |
+| `App Code` | String | 8 | M | Approval code of the transaction |
 | `Signature` | String | 3 | O | Signature data |
-| `ReferNo` | String | 10 | O |	Reference  No |
-| `TraceNo` | String | 6 | O | 6 digits traceno. |
-| `BatchNo` | String | 6 | M | 6 digits batch no |
+| `Refer No` | String | 10 | O | Reference  No |
+| `Trace No` | String | 6 | O | 6 digits trace number |
+| `Batch No` | String | 6 | M | 6 digits batch number |
 | `Merchant Name` | String | 20 | M | Merchant name |
 | `Merchant Id` | String | 8 | M | 15 digits Merchant ID |
 | `Card No` | String | 16 | M | Card No |
@@ -448,37 +446,35 @@ The below table identifies the required properties in the response message
 | `Refund Total Num` | String |	10 | O | Total refund number |
 | `Refund Void Total Amt` | String | 10 | O | Total void refund amount |
 | `Refund Void Total Num` | String | 10 | O | Total void refund number |
-| `SettleMsg` | String | 2 | O | Settlement message |
-| `CardholderName` | String | 20 | O | Cardholder name |
-| `TipAmount` | String | 10 | O | Transaction tip amount |
+| `Settle Msg` | String | 2 | O | Settlement message |
+| `Cardholder Name` | String | 20 | O | Cardholder name |
+| `Tip Amount` | String | 10 | O | Transaction tip amount |
 | `App` | String | 5 | O | EMV application label name |
 | `Aid` | String | 16 | O | 16 digits EMV application ID |
-| `TC` | String | 16 | O | 16 digits EMV  transaction cryptogram |
+| `TC` | String | 16 | O | 16 digits EMV transaction cryptogram |
 | `TVR` | String | 10 | O | 10  digits EMV terminal verification result |
-| `TSI` | String | 4 | O | 4 digits EMV transaction status information|
+| `TSI` | String | 4 | O | 4 digits EMV transaction status information |
 | `ATC` | String | 2 | O | 2 digits EMV Application transaction counter | 
-| `Local Curr Code` | String | 3 | O | Local currency code. For Dcc txn|
-| `Cardholder Code` | String | 3 | O |Cardholder currency code. For Dcc  txn |
-| `Fx Rate` | String | 6 | O | Rate. For Dcc txn |
-| `Foreign Amt` | String | 10 | O |	Cardholder currency Amount.For Dcc txn|
+| `Local Curr Code` | String | 3 | O | Local currency code.For Dcc txn |
+| `Cardholder Code` | String | 3 | O |Cardholder currency code.For Dcc txn |
+| `Fx Rate` | String | 6 | O | Rate.For Dcc txn |
+| `Foreign Amt` | String | 10 | O |	Cardholder currency Amount.For Dcc txn |
 | `Tenure` | String	| 3 | O | For instalment txn |
 | `Product Code` | String | 3 | O |	For instalment txn |
-| `Interest Amt` | String |	10 | O |For instalment txn.For instalment String monthly Amt |
-| `DeviceId` | String |	10 | O | For OPI |
-| `RequestId` |	String | 10 | O | For OPI |
-| `DeviceSN` | String | 10 | O | Serial Number |
-| `FlagNac` | Boolean | 2 | O |	For OPI |
-| `IsMicros` | Boolean | 2 | O | Micros solution is enable |
+| `Interest Amt` | String |	10 | O | For instalment txn.For instalment String monthly Amt |
+| `Device Id` | String | 10 | O | For OPI |
+| `Request Id` | String | 10 | O | For OPI |
+| `Device SN` |	String | 10 | O | Serial Number |
+| `Flag Nac` | Boolean | 2 | O | For OPI |
+| `Is Micros` | Boolean | 2 | O | To enable Micros solution |
 | `Token` | String | 10 | O | For OPI, MT token |
-| `SequenceNum` | String | 10 |	O | For OPI |
-| `DccFlag` | Boolean |	2 | O |	If it is Dcc transaction, it is 'True'|
-| `PinVerify` |	Boolean | 2 | O	| Pin entered, it is 'TRUE' |
-| `ExpDate` | String | 4 | O | Expire Date |
+| `Sequence Num` | String | 10 | O | For OPI |
+| `Dcc Flag` | Boolean | 2 | O | If it is Dcc transaction,it is 'True' |
+| `Pin Verify` | Boolean | 2 | O | Pin entered,it is 'TRUE' |
+| `Exp Date` | String | 4 | O | Expire Date |
 | `Currency` | String | 3 | O |	Currency code |
-| `Signed` | Boolean | 5 | O | If have signature, it is 'TRUE' |
-| `SignData` | String | 5 | O | The data in receipt |
-
-
+| `Signed` | Boolean | 5 | O | If have signature,it is 'TRUE' |
+| `Sign Data` | String | 5 | O | The data in receipt |
 
 
 

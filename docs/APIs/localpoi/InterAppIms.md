@@ -3,7 +3,7 @@
 Inter Application Integration provides a seamless integration between the Fiserv payment application and the merchant application locally installed in android-based terminals.<BR/> 
 E.g. A biller can integrate with a payment application and complete the payment transaction.
 
-Financial payment transactions that are supported by inter application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion, Transaction Status Check, EMI Sale, Void, Settlement and Bharat QR code generation.
+Financial payment transactions that are supported by inter application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion,  Pre-Authorisation Void,  Pre-Authorisation Completion Void, Void, Refund, Adjust, Settlement and Offline.
 
 ## How it works
 -	Digital transactions from the Fiserv proprietary mCommerce application supported by the payment terminal includes :-
@@ -180,30 +180,30 @@ The table below identifies the required properties in the request message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | ----- | ------------------------------------------------------| ------------------------- |
-| `Function Code` | String	| 2  | M | 02 - Preauth Sale |
-|  | 	| | | 03 - Preauth Completion |
-|  | 	|  || 04 - Refund |
-|  | 	|  || 05 - Void |
-|  | 	| | | 06 - TIP |
-|  | 	| | | 07 - Cash@POS |
-|  | 	| | | 08 - EMI Sale |
-|  | 	|  || 09 - Loyality Points Earned |
-|  | 	| | | 10 - Loyality Points Redeemed |
-|  | 	| | | 11 - Settlement Transaction |
-|  | 	| | | 12 - Transaction status |
-|  | 	| | | 13 - UPI QR  Generation |
-|  | 	| | | 14 - UPI QR Last Transaction Status |
-|  | 	| |  | 15 - Bharat QR  Generation  |
-|  | 	| | | 16 -  Bharat  QR Last Transaction Status  |
-|  | 	|  || 17 - Wallet Google Pay |
-|  | 	| | | 18 - Tone Tag wallet  |
-|  | 	|  | | 19 - Noncarded  |
+| `Function Code` | String	| 2 | 02 - Preauth Sale |
+|  | 	|  | 03 - Preauth Completion |
+|  | 	|  | 04 - Refund |
+|  | 	|  | 05 - Void |
+|  | 	|  | 06 - TIP |
+|  | 	|  | 07 - Cash@POS |
+|  | 	|  | 08 - EMI Sale |
+|  | 	|  | 09 - Loyality Points Earned |
+|  | 	|  | 10 - Loyality Points Redeemed |
+|  | 	|  | 11 - Settlement Transaction |
+|  | 	|  | 12 - Transaction status |
+|  | 	|  | 13 - UPI QR  Generation |
+|  | 	|  | 14 - UPI QR Last Transaction Status |
+|  | 	|  | 15 - Bharat QR  Generation  |
+|  | 	|  | 16 -  Bharat  QR Last Transaction Status  |
+|  | 	|  | 17 - Wallet Google Pay |
+|  | 	|  | 18 - Tone Tag wallet  |
+|  | 	|  | 19 - Noncarded  |
 | `Source` | String | 10 | O | TILL, Mobile, AVTM, etc |
-| `Total Txn Amount( Auth+ConvFee + GTS )`| String | 10 | M | Total Amount including decimal |
+| `Total Txn Amount( Auth+ConvFee + GST )`| String | 10 | M | Total Amount including decimal |
 | `Convenience Fee`| String | 10 | O | Convenience Fee including decimal |
 | `CGST` | String | 10 | O | GST Including decimal (GST) |
 | `SGST` | String  | 10 | O | GST Including decimal (GST) |
-| `Bill Amount`  | String | 10 | O ( Mandatory for QR generation / Wallet Transactions) | Bill amount including decimal |
+| `Bill Amount`  | String | 10 | O ( Mandatory for QR generation / Wallet Transactions | Bill amount including decimal |
 | `Merchant Reference Number(MRN)` | String | 20 | M | Unique merchant number for reconcilation |
 | `EMI Reference Number(ERN)` | String | 8 | O ( Mandatory for EMI Transaction ) | EMI reference number generated on mobile |
 | `Consumer Number` | String | 20 | O | Consumer number ( CRN ) |
@@ -218,7 +218,6 @@ The table below identifies the required properties in the request message
 | `UDF 1` | String | 10 | O | UDF 1 |
 | `UDF 2`  | String | 10 | O | UDF 2 |
 | `Print Charge Slip` | String | 1 | O | Y or N ( Default - Y ) |
-
 
 ### Response in Payload
 ```
@@ -243,32 +242,32 @@ The table below identifies the required properties in the response message
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | ------- | ------- | -------------------------------------------------------| ------------------------- |
 | `Function Code` | String	| 2 | M | 01 - Sale ( Sale , DCC ) |
-|  | 	| | | 02 - Preauth Sale |
-|  | 	| | | 03 - Preauth Completion |
-|  | 	| | | 04 - Refund |
-|  | 	| | | 05 - Void |
-|  | 	| | | 06 - TIP |
-|  | 	| | | 07 - Cash @ POS |
-|  | 	| | | 08 - EMI Sale |
-|  | 	|  || 09 - Loyality Points Earned |
-|  | 	| | | 10 - Loyality Burn |
-|  | 	| | | 11 - Settlement Transaction |
-|  | 	| | | 12 - Transaction status |
-|  | 	| | | 13 - UPI QR  Generation |
-|  | 	| | | 14 - UPI QR Last Transaction Status |
-|  | 	| | | 15 - Bharat QR  Generation  |
-|  | 	| | | 16 - Bharat QR Last Transaction Status  |
-|  | 	|  || 17 - Wallet Google Pay |
-|  | 	|  || 18 - Tone Tag wallet  |
-|  | 	|  || 19 - Noncarded  |
+|  | 	|  | 02 - Preauth Sale |
+|  | 	|  | 03 - Preauth Completion |
+|  | 	|  | 04 - Refund |
+|  | 	|  | 05 - Void |
+|  | 	|  | 06 - TIP |
+|  | 	|  | 07 - Cash @ POS |
+|  | 	|  | 08 - EMI Sale |
+|  | 	|  | 09 - Loyality Points Earned |
+|  | 	|  | 10 - Loyality Burn |
+|  | 	|  | 11 - Settlement Transaction |
+|  | 	|  | 12 - Transaction status |
+|  | 	|  | 13 - UPI QR  Generation |
+|  | 	|  | 14 - UPI QR Last Transaction Status |
+|  | 	|  | 15 - Bharat QR  Generation  |
+|  | 	|  | 16 - Bharat QR Last Transaction Status  |
+|  | 	|  | 17 - Wallet Google Pay |
+|  | 	|  | 18 - Tone Tag wallet  |
+|  | 	|  | 19 - Noncarded  |
 |`Source` | String | 10 | O | TILL, Mobile, AVTM, etc. |
-| `TIP amount` | String | 10 | O | Length 10 including decimal |
-|`Total Transaction Amount ( Bill + Convenience Fee + GTS )` |	String|	10 | M | Length 10 including decimal |
-`Fuel Discount Cashback` | String | 10 | O | Length 10 including decimal |
+| TIP amount | String | 10 | 0 | Length 10 including decimal |
+|`Total Transaction Amount ( Bill + Convenience Fee + GST )` |	String|	10 | M | Length 10 including decimal |
+Fuel Discount Cashback | String | 10 | O | Length 10 including decimal |
 |`Convenience Fee`|	String | 10 | O | Length 10 including decimal |
 |`CGST` | String | 10 | O | Length 10 including decimal |
 |`SGST`| String	| 10 | O | Length 10 including decimal |
-|`Bill  Amount`| String | 10 | O  |10 including decimal|
+|`Bill  Amount`| String | 10 | Length 10 including decimal|
 |`EMI Specific Data`| String | 20 |	O |	Interest rate,  Processing fee, Tenure,  etc.|
 |`Merchant  Reference  Number (MRN)`| String | 20 | M |	Same as request |
 |`Terminal  Invoice  Number`|	String | 8 | M | Terminal Invoice Number |
@@ -307,7 +306,8 @@ The table below identifies the required properties in the response message
 |`Cash Back Amount`| String | 10 | O | Transaction cash back amount|
 |`NAC Status`| String |	3 |	O |	Identify the network status True -> private network False -> public network |
 |` Card Exp Date`| String |	4 |	O | Transaction card expire date |
-|`DCC Yes/NO flag`|	String | 10 | O	| DCC Conversion flag  Yes or No & the response converted amount, exchange rate and margin fee |
+|`DCC Yes/NO flag`|	String | 10 | O	| DCC Conversion flag  Yes or No. Response is converted amount, exchange rate and margin fee |
+
 
 
 The table below provides the list of application's error code and its description.
