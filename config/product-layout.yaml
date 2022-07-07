@@ -14,11 +14,11 @@ featuredFeatures:
       - relatedDoc: 
         title: Login
         description: Get started with Cloud POI with Login API which is used to authenticate the external client with the unique credentials in the set-up.
-        link: ./docs/APIs/CloudPOI/Login.md
+        link: /docs/APIs/CloudPOI/Login.md
       - relatedDoc: 
         title: Payment API
         description: For card not present transactions using Cloud POI.
-        link: ./docs/PaymentAPI.md
+        link: /docs/PaymentAPI.md
     relatedAPIs:
       - relatedAPI: 
         title: Login
@@ -38,55 +38,55 @@ featuredFeatures:
       - relatedDoc: 
         title: Login
         description: Get Token.
-        link: ./docs/APIs/externalboarding/Login.md
+        link: /docs/APIs/externalboarding/Login.md
       - relatedDoc: 
         title: Create URN
         description: Create URN.
-        link: ./docs/APIs/externalboarding/CreateURN.md
+        link: /docs/APIs/externalboarding/CreateURN.md
       - relatedDoc: 
         title: Get Package List
         description: Get Package List.
-        link: ./docs/APIs/externalboarding/GetPackageList.md
+        link: /docs/APIs/externalboarding/GetPackageList.md
       - relatedDoc: 
         title: Get Package ID
         description: Get Package ID
-        link: ./docs/APIs/externalboarding/GetPackageId.md
+        link: /docs/APIs/externalboarding/GetPackageId.md
       - relatedDoc: 
         title: Get Document Matrix
         description: Get Document Matrix
-        link: ./docs/APIs/externalboarding/GetDocumentMatrix.md
+        link: /docs/APIs/externalboarding/GetDocumentMatrix.md
       - relatedDoc: 
         title: Upload Document
         description: Upload Document
-        link: ./docs/APIs/externalboarding/UploadDocument.md
+        link: /docs/APIs/externalboarding/UploadDocument.md
       - relatedDoc: 
         title: MID - Inquiry
         description: MID - Inquiry
-        link: ./docs/APIs/externalboarding/MidInquiry.md
+        link: /docs/APIs/externalboarding/MidInquiry.md
       - relatedDoc: 
         title: SUBMIT - New Merchant
         description: New Merchant
-        link: ./docs/APIs/externalboarding/NewMerchant.md
+        link: /docs/APIs/externalboarding/NewMerchant.md
       - relatedDoc: 
         title: SUBMIT - Additional Outlet
         description: Additional Outlet
-        link: ./docs/APIs/externalboarding/AdditionalOutlet.md
+        link: /docs/APIs/externalboarding/AdditionalOutlet.md
       - relatedDoc: 
         title: SUBMIT - Additional Device
         description: Additional Device
-        link: ./docs/APIs/externalboarding/AdditionalDevice.md
+        link: /docs/APIs/externalboarding/AdditionalDevice.md
       - relatedDoc: 
         title: SUBMIT - Single MID PayFac
         description: Single MID PayFac
-        link: ./docs/APIs/externalboarding/SingleMIDPayFac.md
+        link: /docs/APIs/externalboarding/SingleMIDPayFac.md
       - relatedDoc: 
         title: SUBMIT - Multi MID PayFac
         description: Multi MID PayFac
-        link: ./docs/APIs/externalboarding/MultiMIDPayFac.md
+        link: /docs/APIs/externalboarding/MultiMIDPayFac.md
       - relatedDoc: 
         title: SUBMIT - Application Status Inquiry
         description: Application Status Inquiry
-        link: ./docs/APIs/externalboarding/ApplicationStatusInquiry.md
+        link: /docs/APIs/externalboarding/ApplicationStatusInquiry.md
     relatedAPIs:
       - relatedAPI: 
         title: Login
@@ -162,19 +162,19 @@ featuredFeatures:
       - relatedDoc: 
         title: Inter - App
         description:  Interapp - India / Aus
-        link: ./docs/APIs/localpoi/InterAppIms.md
+        link: /docs/APIs/localpoi/InterAppIms.md
       - relatedDoc: 
         title: Static Wi-Fi
         description: USB / Static Wi-Fi - India / Aus
-        link: ./docs/APIs/localpoi/WIFIIMS.md
+        link: /docs/APIs/localpoi/WIFIIMS.md
       - relatedDoc: 
         title: Inter - App
         description:  Interapp - Rest of APAC
-        link: ./docs/APIs/localpoi/InterAppFDMS.md
+        link: /docs/APIs/localpoi/InterAppFDMS.md
       - relatedDoc: 
         title:  USB / Static Wi-Fi 
         description:  USB / Static Wi-Fi - Rest of APAC
-        link: ./docs/APIs/localpoi/WIFIFDMS.md
+        link: /docs/APIs/localpoi/WIFIFDMS.md
   - title: Cloud Based Integration
     description: Many businesses have multiple systems working in silos. Given the fast-moving transformation in the retail and enterprise segment, a lack of collaboration and process inefficiencies result in the inability to deliver a frictionless on-demand experience, required in today's fast-moving environment.<br />Fiserv Cloud based integration is an Application Programming Interface (API) based integration which facilitates the connection with the retailer&#39;s central or standalone systems, to automate the entire billing to payment transactions. Explore more of our Cloud based integration Payment APIs below.<br /><ul>	<li>Cloud based integration</li>	<li>EMI Sale (Easy Monthly Instalment / Instalment)</li>	<li>Login</li>	<li>PreAuth Sale</li>	<li>PreAuth Completion</li>	<li>Refund</li>	<li>Sale Card</li>	<li>Sale with Local Payment Method</li>	<li>Settlement Transaction</li>	<li>Transaction status Check</li>	<li>Void</li></ul
   - title: Merchant Onboarding
