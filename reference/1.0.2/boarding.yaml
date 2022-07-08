@@ -1360,7 +1360,7 @@ components:
             } ]
           } ],
           "principalDetails" : [ {
-            "principalNo" : "1",
+            "principalNo" : 1,
             "position" : "Owner",
             "title" : "Mr",
             "firstName" : "Lala",
@@ -1417,13 +1417,13 @@ components:
             "creditSalesBusiness" : "0"
           },
           "uboDetails" : [ {
-            "serialNo" : "1",
+            "serialNo" : 1,
             "title" : "Mr",
             "firstName" : "Steve",
             "lastName" : "Smith",
             "middleName" : "DG",
             "dateOfBirth" : "19-04-1987",
-            "shareholderPercentage" : "100",
+            "shareholderPercentage" : 100,
             "nationality" : "Australian",
             "kycDetails" : [ {
               "kycCategory" : "Individual POA 1 KYC",
@@ -1529,7 +1529,7 @@ components:
         ]
         }],
         "principalDetails":[ {
-        "principalNo": "1",
+        "principalNo": 1,
         "position": "Manager",
         "title": "Mr",
         "firstName": "Test principal",
