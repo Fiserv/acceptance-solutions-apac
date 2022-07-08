@@ -72,7 +72,7 @@ paths:
         content:
           application/json:
             schema:
-               $ref: '#/components/schemas/MerchantApplication'
+               $ref: '#/components/schemas/CreateAppRequest'
             examples:
               CreateApp Sample:
                   $ref: "#/components/examples/CreateApp"    
@@ -83,7 +83,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BoardingResponse"
+                $ref: "#/components/schemas/CreateAppResponse"
               examples:
                 CreateApp Sample:
                   $ref: "#/components/examples/CreateApp200"
@@ -156,6 +156,52 @@ components:
               type: integer
               description: timeout limit
               example: 30
+    CreateAppResponse:
+      type: object
+      properties:
+        appURN: 
+          type: string
+    CreateAppRequest:
+      type: object
+      properties:
+       appType: 
+        type: string
+        description: application type
+        example: "API"
+       salesId: 
+        type: string
+        description: salesId
+        example: "ecomuser"
+       channelCode: 
+        type: string
+        description: channel code
+        example: "EAZYAPY_ECOM"
+       institutionId: 
+        type: string
+        description: institution id
+        example: "47"
+       countryCode: 
+        type: string
+        description: county code
+        example: "IND"
+       keySelection:
+        type: object
+        properties:
+          legalName:
+            type: string
+            description: legal name
+            example: "ECOM" 
+       merchantDetails:
+        type: object
+        properties:
+          businessName:
+            type: string
+            description: business name
+            example: "ECOM"
+          legalName:
+            type: string
+            description: legal name
+            example: "ECOM"
     MerchantApplication:
       type: object
       properties:
