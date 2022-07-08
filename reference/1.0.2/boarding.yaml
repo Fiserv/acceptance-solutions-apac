@@ -127,68 +127,8 @@ paths:
                   $ref: "#/components/examples/SingleMIDPayFacResponse"
                 Multi MID PayFac:
                   $ref: "#/components/examples/MultiMIDPayFacResponse" 
-  /boardinggateway/externalboarding/secure/addtid:
-    post:
-      tags:
-      - Boarding
-      summary: Additional Tid
-      description: Additional Tid
-      operationId: additionalTid
-      x-group-name: Boarding
-      x-proxy-name: Additional Tid
-      x-default-example: Add Tid
-      parameters:
-      - {$ref: "#/components/parameters/ApiKeyHeader"}
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/MerchantApplication'
-            examples:
-              Add Tid:
-                $ref: "#/components/examples/ADDTIDReq"
-        required: true
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                  $ref: '#/components/schemas/Response'
-              examples:
-                Add Tid:
-                  $ref: "#/components/examples/ADDTIDRes"                  
-  /boardinggateway/externalboarding/secure/addmid:
-    post:
-      tags:
-      - Boarding
-      summary: Additional Mid
-      description: Additional Mid
-      operationId: additionalMid
-      x-group-name: Boarding
-      x-proxy-name: Additional Mid
-      x-default-example: Add Mid
-      parameters:
-      - {$ref: "#/components/parameters/ApiKeyHeader"}
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/MerchantApplication'
-            examples:
-              Add Mid:
-                $ref: "#/components/examples/ADDMIDReq"
-        required: true
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                  $ref: '#/components/schemas/Response'
-              examples:
-                Add Mid:
-                  $ref: "#/components/examples/ADDMIDRes"  
+                    
+    
       
 components:
   parameters:
