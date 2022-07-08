@@ -55,6 +55,39 @@ paths:
               examples:
                 IMS Sample:
                   $ref: "#/components/examples/LoginRs200"
+  
+  /boardinggateway/externalboarding/secure/create:
+    post:
+      tags:
+      - Boarding
+      summary: Create Application
+      description: Create Application
+      operationId: createapplication
+      x-group-name: Boarding
+      x-proxy-name: Create Application
+      x-default-example: CreateApp Sample
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+               $ref: '#/components/schemas/CreateAppRequest'
+            examples:
+              CreateApp Sample:
+                  $ref: "#/components/examples/CreateApp"    
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateAppResponse"
+              examples:
+                CreateApp Sample:
+                  $ref: "#/components/examples/CreateApp200"
+
   /boardinggateway/externalboarding/secure/newmid:
     post:
       tags:
@@ -93,7 +126,70 @@ paths:
                 Single MID PayFac:
                   $ref: "#/components/examples/SingleMIDPayFacResponse"
                 Multi MID PayFac:
-                  $ref: "#/components/examples/MultiMIDPayFacResponse"     
+                  $ref: "#/components/examples/MultiMIDPayFacResponse" 
+  /boardinggateway/externalboarding/secure/addtid:
+    post:
+      tags:
+      - Boarding
+      summary: Additional Tid
+      description: Additional Tid
+      operationId: additionalTid
+      x-group-name: Boarding
+      x-proxy-name: Additional Tid
+      x-default-example: Add Tid
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MerchantApplication'
+            examples:
+              Add Tid:
+                $ref: "#/components/examples/ADDTIDReq"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/Response'
+              examples:
+                Add Tid:
+                  $ref: "#/components/examples/ADDTIDRes"                  
+  /boardinggateway/externalboarding/secure/addmid:
+    post:
+      tags:
+      - Boarding
+      summary: Additional Mid
+      description: Additional Mid
+      operationId: additionalMid
+      x-group-name: Boarding
+      x-proxy-name: Additional Mid
+      x-default-example: Add Mid
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MerchantApplication'
+            examples:
+              Add Mid:
+                $ref: "#/components/examples/ADDMIDReq"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/Response'
+              examples:
+                Add Mid:
+                  $ref: "#/components/examples/ADDMIDRes"  
+      
 components:
   parameters:
     ApiKeyHeader:
@@ -122,6 +218,98 @@ components:
               type: integer
               description: timeout limit
               example: 30
+    CreateAppResponse:
+      type: object
+      properties:
+        appURN:
+          type: string
+        boardingType:
+          type: string
+        appType:
+          type: string
+        appChannel:
+          type: string
+        institutionId:
+          type: string
+        salesId:
+          type: string
+        status:
+          type: string
+        statusDate:
+          type: string
+        channelCode:
+          type: string
+        osvFlagValue:
+          type: string
+        countryCode:
+          type: string
+        leadId:
+          type: string
+        keySelection:
+          $ref: '#/components/schemas/KeySelection'
+        merchantDetails:
+          $ref: '#/components/schemas/MerchantDetails'
+        tradingLocations:
+          type: array
+          items:
+            $ref: '#/components/schemas/TradingLocation'
+        principalDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrincipalDetails'
+        bankDetails:
+          $ref: '#/components/schemas/BankDetails'
+        businessSummary:
+          $ref: '#/components/schemas/BusinessSummary'
+        uboDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/UBODetails'
+        
+
+
+    
+    CreateAppRequest:
+      type: object
+      properties:
+       appType: 
+        type: string
+        description: application type
+        example: "API"
+       salesId: 
+        type: string
+        description: salesId
+        example: "ecomuser"
+       channelCode: 
+        type: string
+        description: channel code
+        example: "EAZYAPY_ECOM"
+       institutionId: 
+        type: string
+        description: institution id
+        example: "47"
+       countryCode: 
+        type: string
+        description: county code
+        example: "IND"
+       keySelection:
+        type: object
+        properties:
+          legalName:
+            type: string
+            description: legal name
+            example: "ECOM" 
+       merchantDetails:
+        type: object
+        properties:
+          businessName:
+            type: string
+            description: business name
+            example: "ECOM"
+          legalName:
+            type: string
+            description: legal name
+            example: "ECOM"
     MerchantApplication:
       type: object
       properties:
@@ -820,6 +1008,21 @@ components:
           format: int32
         message:
           type: string
+    BoardingResponse:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/BoardingStatus"
+        data:
+          type: object
+    BoardingStatus:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+        message:
+          type: string
     EncDecResponse:
       type: object
       properties:
@@ -832,6 +1035,27 @@ components:
           description: encrypted  response
           example: "wT/izrHrPefuqOfVPrqItzSbEkBGF/4TX7zfx8GjIGcmRaamXThWuKIfNcX0aH0PRqrWyYhOHCHbiA82aqp+LwcnIbNwrtzPD1E4z3XDIj3DqbplCrP6Ge6rxi0zzlOVp80UBujaywNCd1nLAJHnpDOnTc4LfJRvK96MdZwjpVUWxADG1nazE6rm2lryJ0wxcSN/SGsN7EWCh1+9JaLBWXmL3lEwsGmKSdkeFDbW4z/Cw6fdz200G2Tre/I+hAJstsffaItyQkHyL+/1R7xe8r9ld0SHFJa3HbvwkHxz7TFv7fwp6kQSj35MhQc7uiuZdcXfQXRBAQA9JnPs8nnhIQA7FYTIuMozE0Cp9JI+spZ2Vvxo4X4TKz9dfVHYxVqp"
   examples:
+    ADDTIDRes:
+      value:
+        {
+          "status": {
+                "statusCode": 200,
+                "message": "Success"
+            },
+            "isAcvSuccess": null,
+            "data": {
+                "appUrn": "1000000745",
+                "lsg": "51675948",
+                "sgArray": [
+                    {
+                        "subgroupmId": "51672434",
+                        "merchantId": "95515434",
+                        "submerchantId": "00267746",
+                        "terminals": null
+                    }
+                ]
+            }
+        }
     NewMerchantResponse:
       value:
         {
@@ -901,7 +1125,765 @@ components:
               ]
             }
           }
-
+    ADDMIDReq:
+      value:
+        {
+            "appURN": "1000008471",
+            "appType": "Tab",
+            "boardingType": "ADDLMID",
+            "appChannel": "A12",
+            "institutionId": "47",
+            "salesId": "SureshBC",
+            "status": "",
+            "statusDate": "2022-07-02T17:32:28Z",
+            "keySelection": {
+              "mccCode": "5999",
+              "merchantGrade": "EO",
+              "merchantType": "LG",
+              "acceptanceType": "POSMOB",
+              "typeOfBusiness": "SOLPROR",
+              "international": "No",
+              "iciciMerchant": "No",
+              "dcc": "No",
+              "fundingCurrency": "NET_INR",
+              "newFundingAc": "No"
+            },
+            "channelCode": "ISO Channel1",
+            "osvFlagValue": "Y",
+            "cardedUncarded": "Yes",
+            "countryCode": "IND",
+            "leadId": "",
+            "merchantDetails": {
+              "businessName": "Tets",
+              "legalName": "ezetap provisioning testing",
+              "businessType": "Sole Proprietor",
+              "registrationNo": "829282",
+              "dateTrading": "",
+              "dateIncorporated": "25-03-2000",
+              "websiteURL": "",
+              "communicationEmail": "Prerana.kumbhar@firstdata.com",
+              "legalAddress": {
+                "addressLine": "Near central fire briged, Ganj peth",
+                "addressLine2": ",, opposite kamble lane,",
+                "addressLine3": "",
+                "city": "PUN-PUNE",
+                "state": "MAH",
+                "pincode": "411042",
+                "country": "",
+                "phone1": "8358353553",
+                "phone2": "",
+                "contactName": "Test",
+                "mobileNo": "",
+                "email": "prerana.kumbhar@firstdata.com"
+              },
+              "fundingMethod": "NEFT",
+              "clientTariff": "",
+              "postingTariff": "NET_INR",
+              "billingLevel": "01",
+              "gstNo": "27AAOFN4566A1Z6",
+              "isdnFlag": "",
+              "gstMerchantStateCode": "27",
+              "merchantType": "LG",
+              "acceptanceType": "POSMOB",
+              "iciciMerchant": "No",
+              "newFundingAc": "No",
+              "merchantGrade": "EO",
+              "idDocDetails": [
+                {
+                  "entity": "Member",
+                  "idType": "Capture the Merchant Store Photos",
+                  "idValue": "",
+                  "docId": "37ea3324bea6404bbc23a3bf78f4d238",
+                  "categoryName": "LOCATION PHOTOS",
+                  "level": "1",
+                  "mandatory": "Y"
+                },
+                {
+                  "entity": "Member",
+                  "idType": "MITC Document Page 1",
+                  "idValue": "",
+                  "docId": "cad26f43ff4c4956b30b2230727df1d2",
+                  "categoryName": "MITC",
+                  "level": "1",
+                  "mandatory": "Y"
+                },
+                {
+                  "entity": "Member",
+                  "idType": "MITC Document Page 2",
+                  "idValue": "",
+                  "docId": "e28aea1da58c41c6b37c137e379f1ce1",
+                  "categoryName": "MITC",
+                  "level": "2",
+                  "mandatory": "Y"
+                },
+                {
+                  "entity": "Member",
+                  "idType": "socDocument",
+                  "idValue": "",
+                  "docId": "073e4a4c5c9b4311895f0a0527b04dbd",
+                  "categoryName": "SOC",
+                  "level": "1",
+                  "mandatory": "Y"
+                }
+              ],
+              "geoLocation": {
+                "latitude": "12.9403189",
+                "longitude": "77.7303295"
+              },
+              "taxDetails": {
+                "taxidType": "businessPan",
+                "taxidValue": "AAOFN4566A"
+              }
+            },
+            "tradingLocations": [
+              {
+                "locationNo": 1,
+                "tradingName": "jhcjgjcg",
+                "tradingAddress": {
+                  "addressLine": "Near central fire briged, Ganj peth",
+                  "addressLine2": ",, opposite kamble lane,",
+                  "addressLine3": "",
+                  "city": "PUN-PUNE",
+                  "state": "MAH",
+                  "pincode": "411042",
+                  "country": "",
+                  "phone1": "8358353553",
+                  "phone2": "",
+                  "contactName": "Test",
+                  "mobileNo": "",
+                  "email": "prerana.kumbhar@firstdata.com"
+                },
+                "packageId": 1771,
+                "packageName": "Add Indi Base Merchant - Add MID",
+                "packageDescription": "Add Indi Base Merchant - Add MID",
+                "memberType": "POS",
+                "tariff": null,
+                "amexTariff": "Amex Miscellane",
+                "merchantGrade": "EO",
+                "acqProfile": "International",
+                "msfProfile": null,
+                "mid": "470000099000154",
+                "leadsubgroupmid": "470000056000250",
+                "subgroupmid": "470000056000251",
+                "otpEnabled": false,
+                "feePlans": [
+                  {
+                    "serviceName": "Cashback",
+                    "feePlan": "0075"
+                  },
+                  {
+                    "serviceName": "UPI",
+                    "feePlan": "Y"
+                  },
+                  {
+                    "serviceName": "BHARATQR",
+                    "feePlan": "Y"
+                  },
+                  {
+                    "serviceName": "TONETAG POD",
+                    "feePlan": "Y"
+                  },
+                  {
+                    "serviceName": "Charge Slip Type",
+                    "feePlan": "P"
+                  },
+                  {
+                    "serviceName": "Debit plus pin",
+                    "feePlan": "Y"
+                  },
+                  {
+                    "serviceName": "BILLING SOLUTION",
+                    "feePlan": "Intuition"
+                  },
+                  {
+                    "serviceName": "Razor Netbanking",
+                    "feePlan": "Y"
+                  },
+                  {
+                    "serviceName": "Instant Settlement",
+                    "feePlan": "1"
+                  },
+                  {
+                    "serviceName": "Integrator_PMS solution",
+                    "feePlan": "MICROS PMS"
+                  },
+                  {
+                    "serviceName": "Auto Settlement Time",
+                    "feePlan": "Y"
+                  },
+                  {
+                    "serviceName": "Chargeslip Table ID",
+                    "feePlan": "TableCh"
+                  },
+                  {
+                    "serviceName": "Ocean UI User Group",
+                    "feePlan": "GroupCh"
+                  },
+                  {
+                    "serviceName": "Theme ID",
+                    "feePlan": "ThemeCh"
+                  }
+                ],
+                "autoSettlementTime": null,
+                "cpvGroupId": "",
+                "regionalcpvGroupid": null,
+                "commerceConnectReferenceMID": null,
+                "terminals": [
+                  {
+                    "terminalType": "APOS",
+                    "terminalModel": "APOS",
+                    "batteryFlag": "N",
+                    "count": 1,
+                    "currencyCode": null,
+                    "templateId": null,
+                    "socScheme": null,
+                    "services": [
+                      {
+                        "serviceName": "AMEX",
+                        "serviceValue": "N"
+                      },
+                      {
+                        "serviceName": "DCC",
+                        "serviceValue": "Y"
+                      }
+                    ],
+                    "withBiller": "Yes",
+                    "billingSolProvider": "Intuition",
+                    "preferedDate": "03-07-2022",
+                    "preferedTime": "15:09",
+                    "discount": "0",
+                    "tdrPlan": null,
+                    "userInstruction1": "",
+                    "userInstruction2": "",
+                    "cpvGroupId": null
+                  }
+                ],
+                "amcFee": null,
+                "cardedUncarded": "Uncarded",
+                "altmerchCode": null,
+                "sameLocation": "false"
+              }
+            ],
+            "principalDetails": [
+              {
+                "principalNo": 1,
+                "position": "Owner",
+                "title": "Mr",
+                "firstName": "Manan",
+                "lastName": "Gupta",
+                "middleName": "",
+                "gender": "",
+                "dateOfBirth": "04-05-1985",
+                "nationality": "INDIAN",
+                "principalAddress": {
+                  "addressLine": "Keshavnagar",
+                  "addressLine2": "",
+                  "addressLine3": "",
+                  "city": "PUN-PUNE",
+                  "state": "MAH",
+                  "pincode": "411036",
+                  "country": "India",
+                  "phone1": "9426855672",
+                  "phone2": "",
+                  "contactName": "Manan",
+                  "mobileNo": "",
+                  "email": null
+                },
+                "idDocDetails": [],
+                "kycDetails": [
+                  {
+                    "kycCategory": "Individual POA1 KYC",
+                    "identityType": "aadhaar",
+                    "identityValue": "000000006746",
+                    "identitymetaName1": null,
+                    "identitymetaValue1": null
+                  },
+                  {
+                    "kycCategory": "Individual POI1 KYC",
+                    "identityType": "individualPan",
+                    "identityValue": "ABCDE1234F",
+                    "identitymetaName1": null,
+                    "identitymetaValue1": null
+                  }
+                ]
+              },
+              {
+                "principalNo": 2,
+                "position": "Owner",
+                "title": "Mr",
+                "firstName": "Manan",
+                "lastName": "Gupta",
+                "middleName": "",
+                "gender": "",
+                "dateOfBirth": "04-05-1985",
+                "nationality": "INDIAN",
+                "principalAddress": {
+                  "addressLine": "Keshavnagar",
+                  "addressLine2": "",
+                  "addressLine3": "",
+                  "city": "PUN-PUNE",
+                  "state": "MAH",
+                  "pincode": "411036",
+                  "country": "India",
+                  "phone1": "9426855672",
+                  "phone2": "",
+                  "contactName": "Manan",
+                  "mobileNo": "",
+                  "email": null
+                },
+                "idDocDetails": [],
+                "kycDetails": [
+                  {
+                    "kycCategory": "Individual POA2 KYC",
+                    "identityType": "aadhaar",
+                    "identityValue": "000000007546",
+                    "identitymetaName1": null,
+                    "identitymetaValue1": null
+                  },
+                  {
+                    "kycCategory": "Individual POI2 KYC",
+                    "identityType": "individualPan",
+                    "identityValue": "ABCDE1234F",
+                    "identitymetaName1": null,
+                    "identitymetaValue1": null
+                  }
+                ]
+              }
+            ],
+            "bankDetails": {
+              "fundingAccountDetails": null,
+              "collectionAccountDetails": null,
+              "uwAccountDetails": {
+                "accountNo": "12231000013575757",
+                "accountName": "test",
+                "ifsc": "JANA0000012",
+                "bankName": "JANASEVA SAHAKARI BANK LIMITED",
+                "branch": "CAMP",
+                "currency": "INR",
+                "accType": "Savings"
+              }
+            },
+            "businessSummary": {
+              "briefSummary": "test",
+              "mccCode": "5999",
+              "mccDescription": "Miscellaneous and Specialty Retail Stores",
+              "totalTurnover": "0",
+              "totalTurnoverPerMID": "0",
+              "dccTurnoverPerMID": "0",
+              "pgTurnover": "25",
+              "pgTurnoverPerMID": "5",
+              "cardTurnover": "2525",
+              "avgTicketAmt": "25",
+              "avgEMITicketAmt": "0",
+              "tranVolumeInternet": "0",
+              "tranVolumeMoto": "0",
+              "tranVolumeInStore": "100",
+              "deliveryDays0": "100",
+              "deliveryDays7": "0",
+              "deliveryDays14": "0",
+              "deliveryDays30": "0",
+              "deliveryDaysOver30": "0",
+              "tranTypeMagStrip": "0",
+              "tranTypeChip": "100",
+              "tranTypeKeyed": "0",
+              "creditSalesConsumer": "0",
+              "creditSalesBusiness": "100",
+              "firsReport": "Not Required",
+              "recurringTranFlag": "No",
+              "refundPolicy": "",
+              "cardRefundDays": "",
+              "thirdPartyProcessorFlag": "No",
+              "thirdPartyProcessorName": "",
+              "smallMerchant": "Y"
+            },
+            "uboDetails": []
+          }
+    ADDMIDRes:
+      value:
+        {
+          "status": {
+              "statusCode": 200,
+              "message": "Success"
+          },
+          "isAcvSuccess": null,
+          "data": {
+              "appUrn": "1000008469",
+              "lsg": "51675948",
+              "sgArray": [
+                  {
+                      "subgroupmId": "51672434",
+                      "merchantId": "95515434",
+                      "submerchantId": "00267746",
+                      "terminals": null
+                  }
+              ]
+          }
+      }
+    ADDTIDReq:
+      value:
+        {
+          "appURN": "1000000745",
+          "appType": "Tab",
+          "boardingType": "ADDLTID",
+          "appChannel": "A12",
+          "institutionId": "47",
+          "salesId": "SureshBC",
+          "status": "",
+          "statusDate": "2022-07-02T17:32:28Z",
+          "keySelection": {
+            "mccCode": "5999",
+            "merchantGrade": "EO",
+            "merchantType": "LG",
+            "acceptanceType": "POSMOB",
+            "typeOfBusiness": "SOLPROR",
+            "international": "No",
+            "iciciMerchant": "No",
+            "dcc": "No",
+            "fundingCurrency": "NET_INR",
+            "newFundingAc": ""
+          },
+          "channelCode": "ISO Channel1",
+          "osvFlagValue": null,
+          "cardedUncarded": "No",
+          "countryCode": "IND",
+          "leadId": "",
+          "merchantDetails": {
+            "businessName": "",
+            "legalName": "ezetap provisioning testing",
+            "businessType": "Sole Proprietor",
+            "registrationNo": "",
+            "dateTrading": "",
+            "dateIncorporated": "",
+            "websiteURL": "",
+            "communicationEmail": "Prerana.kumbhar@firstdata.com",
+            "legalAddress": {
+              "addressLine": "Near central fire briged, Ganj peth",
+              "addressLine2": ",, opposite kamble lane,",
+              "addressLine3": null,
+              "city": "PUN-PUNE",
+              "state": "MAH",
+              "pincode": "411042",
+              "country": "",
+              "phone1": "8358353553",
+              "phone2": "",
+              "contactName": "Test",
+              "mobileNo": "",
+              "email": null
+            },
+            "fundingMethod": "NEFT",
+            "clientTariff": "",
+            "postingTariff": "NET_INR",
+            "billingLevel": "01",
+            "gstNo": "27AAOFN4566A1Z6",
+            "isdnFlag": "",
+            "gstMerchantStateCode": "",
+            "merchantType": "LG",
+            "acceptanceType": "POSMOB",
+            "iciciMerchant": "No",
+            "newFundingAc": null,
+            "merchantGrade": "EO",
+            "idDocDetails": [
+              {
+                "entity": "Member",
+                "idType": "Capture the Merchant Store Photos",
+                "idValue": "",
+                "docId": "dbab41ff030c49dc9cdc562f8e640e21",
+                "categoryName": "LOCATION PHOTOS",
+                "level": "1",
+                "mandatory": "Y"
+              },
+              {
+                "entity": "Member",
+                "idType": "MITC Document Page 1",
+                "idValue": "",
+                "docId": "7771684880c3440a8d69ebe936c8178e",
+                "categoryName": "MITC",
+                "level": "1",
+                "mandatory": "Y"
+              },
+              {
+                "entity": "Member",
+                "idType": "MITC Document Page 2",
+                "idValue": "",
+                "docId": "85a0203e2ba84e3ebfc4158665862f00",
+                "categoryName": "MITC",
+                "level": "2",
+                "mandatory": "Y"
+              },
+              {
+                "entity": "Member",
+                "idType": "socDocument",
+                "idValue": "",
+                "docId": "b00d608f1cf14bd8bfc80fc32e9e2284",
+                "categoryName": "SOC",
+                "level": "1",
+                "mandatory": "Y"
+              }
+            ],
+            "geoLocation": {
+              "latitude": "12.9403189",
+              "longitude": "77.7303295"
+            },
+            "taxDetails": {
+              "taxidType": "businessPan",
+              "taxidValue": null
+            }
+          },
+          "tradingLocations": [
+            {
+              "locationNo": 1,
+              "tradingName": "ezetap provisioning te",
+              "tradingAddress": {
+                "addressLine": "Near central fire briged, Ganj peth",
+                "addressLine2": ",, opposite kamble lane,",
+                "addressLine3": null,
+                "city": "PUN-PUNE",
+                "state": "MAH",
+                "pincode": "411042",
+                "country": "",
+                "phone1": "8358353553",
+                "phone2": "",
+                "contactName": "Test",
+                "mobileNo": "",
+                "email": null
+              },
+              "packageId": 1056,
+              "packageName": "Industry Type Additional TID Normal GPRS with fuel",
+              "packageDescription": "Industry Type Additional TID Normal GPRS with fuel",
+              "memberType": "POS",
+              "tariff": "RetailP185LM",
+              "amexTariff": "Amex Miscellane",
+              "merchantGrade": "EO",
+              "acqProfile": "Domestic",
+              "msfProfile": "C120P185COR220IC000INC260D090",
+              "mid": "470000099000154",
+              "leadsubgroupmid": "470000056000250",
+              "subgroupmid": "470000056000251",
+              "otpEnabled": true,
+              "feePlans": [
+                {
+                  "serviceName": "UPI",
+                  "feePlan": "Y"
+                },
+                {
+                  "serviceName": "BHARATQR",
+                  "feePlan": "Y"
+                },
+                {
+                  "serviceName": "Email / SMS Invoicing",
+                  "feePlan": "Y"
+                },
+                {
+                  "serviceName": "BBPS",
+                  "feePlan": "ICICI-2015"
+                },
+                {
+                  "serviceName": "AEPS",
+                  "feePlan": "4-1001"
+                },
+                {
+                  "serviceName": "MicroATM SARVATRA",
+                  "feePlan": "1101"
+                },
+                {
+                  "serviceName": "FDConnect",
+                  "feePlan": "Y"
+                },
+                {
+                  "serviceName": "UPICashWithdraw",
+                  "feePlan": "U-9003"
+                },
+                {
+                  "serviceName": "Mobikwik",
+                  "feePlan": "1001"
+                },
+                {
+                  "serviceName": "AmazonPay",
+                  "feePlan": "Amazon1"
+                },
+                {
+                  "serviceName": "Chargeslip Table ID",
+                  "feePlan": "TableCh"
+                },
+                {
+                  "serviceName": "Ocean UI User Group",
+                  "feePlan": "GroupCh"
+                },
+                {
+                  "serviceName": "Theme ID",
+                  "feePlan": "ThemeCh"
+                }
+              ],
+              "autoSettlementTime": null,
+              "cpvGroupId": "",
+              "regionalcpvGroupid": null,
+              "commerceConnectReferenceMID": null,
+              "terminals": [
+                {
+                  "terminalType": "GPRS",
+                  "terminalModel": "Verifone Vx680 (W BC) GPRS GSM",
+                  "batteryFlag": "Y",
+                  "count": 1,
+                  "currencyCode": null,
+                  "templateId": null,
+                  "socScheme": null,
+                  "services": [
+                    {
+                      "serviceName": "AMEX",
+                      "serviceValue": "N"
+                    }
+                  ],
+                  "withBiller": null,
+                  "billingSolProvider": null,
+                  "preferedDate": "03-07-2022",
+                  "preferedTime": "12:27",
+                  "discount": "0",
+                  "tdrPlan": null,
+                  "userInstruction1": "",
+                  "userInstruction2": "",
+                  "cpvGroupId": null
+                }
+              ],
+              "amcFee": null,
+              "cardedUncarded": "Uncarded",
+              "altmerchCode": null,
+              "sameLocation": null
+            }
+          ],
+          "principalDetails": [
+            {
+              "principalNo": 1,
+              "position": "Owner",
+              "title": "Mr",
+              "firstName": "Manan",
+              "lastName": "Gupta",
+              "middleName": "",
+              "gender": "",
+              "dateOfBirth": "04/05/1985",
+              "nationality": null,
+              "principalAddress": {
+                "addressLine": "Keshavnagar",
+                "addressLine2": null,
+                "addressLine3": null,
+                "city": "PUN-PUNE",
+                "state": "MAH",
+                "pincode": "411036",
+                "country": "",
+                "phone1": "9426855672",
+                "phone2": "",
+                "contactName": "Manan",
+                "mobileNo": "",
+                "email": null
+              },
+              "idDocDetails": [],
+              "kycDetails": [
+                {
+                  "kycCategory": "Individual POA1 KYC",
+                  "identityType": "",
+                  "identityValue": "",
+                  "identitymetaName1": null,
+                  "identitymetaValue1": null
+                },
+                {
+                  "kycCategory": "Individual POI1 KYC",
+                  "identityType": "individualPan",
+                  "identityValue": "ABCDE1234F",
+                  "identitymetaName1": null,
+                  "identitymetaValue1": null
+                }
+              ]
+            },
+            {
+              "principalNo": 2,
+              "position": "Owner",
+              "title": "Mr",
+              "firstName": "Manan",
+              "lastName": "Gupta",
+              "middleName": "",
+              "gender": "",
+              "dateOfBirth": "04/05/1985",
+              "nationality": null,
+              "principalAddress": {
+                "addressLine": "Keshavnagar",
+                "addressLine2": null,
+                "addressLine3": null,
+                "city": "PUN-PUNE",
+                "state": "MAH",
+                "pincode": "411036",
+                "country": "",
+                "phone1": "9426855672",
+                "phone2": "",
+                "contactName": "Manan",
+                "mobileNo": "",
+                "email": null
+              },
+              "idDocDetails": [],
+              "kycDetails": [
+                {
+                  "kycCategory": "Individual POA2 KYC",
+                  "identityType": "",
+                  "identityValue": "",
+                  "identitymetaName1": null,
+                  "identitymetaValue1": null
+                },
+                {
+                  "kycCategory": "Individual POI2 KYC",
+                  "identityType": "individualPan",
+                  "identityValue": "ABCDE1234F",
+                  "identitymetaName1": null,
+                  "identitymetaValue1": null
+                }
+              ]
+            }
+          ],
+          "bankDetails": {
+            "fundingAccountDetails": null,
+            "collectionAccountDetails": null,
+            "uwAccountDetails": {
+              "accountNo": "12231000013575757",
+              "accountName": "test",
+              "ifsc": "JANA0000012",
+              "bankName": "JANASEVA SAHAKARI BANK LIMITED",
+              "branch": "CAMP",
+              "currency": "INR",
+              "accType": null
+            }
+          },
+          "businessSummary": {
+            "briefSummary": "",
+            "mccCode": "5999",
+            "mccDescription": "Miscellaneous and Specialty Retail Stores",
+            "totalTurnover": "",
+            "totalTurnoverPerMID": "",
+            "dccTurnoverPerMID": "",
+            "pgTurnover": "",
+            "pgTurnoverPerMID": "",
+            "cardTurnover": "",
+            "avgTicketAmt": "",
+            "avgEMITicketAmt": "",
+            "tranVolumeInternet": "",
+            "tranVolumeMoto": "",
+            "tranVolumeInStore": "",
+            "deliveryDays0": "",
+            "deliveryDays7": "",
+            "deliveryDays14": "",
+            "deliveryDays30": "",
+            "deliveryDaysOver30": "",
+            "tranTypeMagStrip": "",
+            "tranTypeChip": "",
+            "tranTypeKeyed": "",
+            "creditSalesConsumer": "",
+            "creditSalesBusiness": "",
+            "firsReport": "",
+            "recurringTranFlag": "",
+            "refundPolicy": "",
+            "cardRefundDays": "",
+            "thirdPartyProcessorFlag": "",
+            "thirdPartyProcessorName": "",
+            "smallMerchant": "Y"
+          },
+          "uboDetails": []
+        }
     NewMerchant:
       value:
         {
@@ -1599,6 +2581,114 @@ components:
           "authToken": "eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.Lb1bHTkIf39A3aZjPQlovMegOPquGZQxNZHMMmBkodKYFgEKkSoocQ.ouWgCX3kAAt3yxFTLsZjQw.hEkAaKujQuNj7_3L2WjtKyY2pf-lRv5ARTMNq1-YQWGnSDWswEsxba6BY4n8gifp07eKdw7c9cYtGWcnZ1FCRJaKJqHAn8dn55xOjYEYFv8JRCZI4KHjAPIgkHhKZrxuKFw8hPRkzFx5ANC4MMetTizAlgKx8f0JUvhSF1qVzhBMwHUqw4seG2D7fDCMlNujLGWRJrU_Dz9BIW7yWMKkN8kXho7A3lC7QeMR7k1_NJb7aEQ_m8hO0Cb9tP9Sc2ivSjMg4yGtOvo3WAegbfsahJsfknYODV5Pj0jignTIcx7SLNfjUMMzFOVuv7dSRaQl52xYCAu0zxrWBnF3QmaZROejY55Fm3gBHKChPP2q1gcsDLX9vBW_TgpKD7sLOh_ltjDUNCJPCjujGZJfRDdW5IurGcNpif075zEdSvydENwV_5KJj1bPjOFPENWDJEhvCQbQsNmMES6qYeSouS2epl6X6UoFcCoIrVK9geyOdOJPtYK5kwDdkGCmJPlnc6OfPgjdVMqep1KwYkQOzqVrnnihP1wj7Ei-W94UvS6fVGvB2nR55fJz-Ztoy7zez7HV6D0HETcPDaA_gz8fsHuHZc4KhDwTrB452iWjAB-Eed93AtKGVUPuty2VPfis_tt4QqWMQMqNQeOGRoViSgmeixnZmYhz9z3tkF-bFAc_DSB_WvPlnxzcYRxSB7q4LYgDImJETHJDi_OSPreqoaneCTjTJoeXOOTtj7qHEj99N47UeXOIvK3W1UFta7pjcpDFbbir2zrpVvyhHtuOEtbDJXxqiUDbuc80HfpsgsBwtnbZWavJg7ABUea165EkLjdgqHFvV2da2FCV3Qq6v2pS5hufLNfpw9yOAD-czZrLeH5DaRMcHhEDkYDlYhQmcwKwsPA-rHgqFGYNLZWyWFIZH0VEPsCsoY74ptJ93uKthtgiHszfNsX7Qm8J5q25W6-QhbHdfY0WRdiK3U3Ym2H_8vK-Vgk1CKZX_NwqZWfcyCdDjtMB6x3EkOUqNYS-OsXpFrH-v9WareSrlFkgbNIY5LD4TdTu8wuid7-V8XQ1q54B4VPXCAt3q9Pcevt3RnpDzsDVS-1kkoGq4N8aj3TwAugB91PaqvhROWWEEwdRbNhugKbKRHtVW9oyDAkmVKjJx8hkFLkFMWbCeeyipuZH-MhhZBVIX0DabEHX7IJMvVOAiR9rtAgfUmJ5VrTud52dao1pMPnOt7xgWxocG3KHBbNIwk9_ub0kutLQ4P0eaFGIluqhfnJYz1nTzM_EU4CIKpI-LVcknWuNMmHbJlsvcFlsYTH-P74uJVz-UziKEMMqrmYeH--dZwEwLTD7Z5rnS8HPD1GDt8FhySXLjrKDCGeBG2dgo4HD3DNCRjDnONU.hk_0ZUHha82WP7NVj9EzOQ",
           "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZmlzZXJ2LmNvbSIsImF1ZCI6IkZpc2VydiBHQlMiLCJUWVBFIjoiUkVGUkVTSCIsImV4cCI6MTY0NTg3MjcwMCwianRpIjoiaDlaWnR5cUJESWZKSmFFU2JrTi1vdyIsImlhdCI6MTY0NTY5OTkwMCwibmJmIjoxNjQ1Njk5NjAwLCJ2ZXJzaW9uIjoiMS4wIiwic3ViIjoicHJlcmFuYWF1cyJ9.GMFTfttx9ClDBViB8OshCJBMtEfSDisi_O75nYRUgd4",
           "ttl": 30
+        }
+    CreateApp200:
+      value:
+        {
+          "appURN": "1000007936",
+          "appType": "API",
+          "boardingType": "",
+          "appChannel": "",
+          "institutionId": "21",
+          "salesId": "preranaaus",
+          "status ": "Saved",
+          "statusDate": "",
+          "keySelection": {
+            "mccCode": "",
+            "merchantGrade": "",
+            "merchantType": "",
+            "acceptanceType": "",
+            "typeOfBusiness": "",
+            "international": "",
+            "iciciMerchant": "",
+            "dcc": "",
+            "fundingCurrency": "",
+            "newFundingAc": ""
+          },
+          "channelCode": "TestAUS",
+          "osvFlagValue": "",
+          "countryCode": "IND",
+          "leadId": "",
+          "merchantDetails": {
+            "businessName": "PAYFAC",
+            "legalName": "PAYFAC",
+            "businessType": "",
+            "registrationNo": "",
+            "dateTrading": "",
+            "dateIncorporated": "",
+            "websiteURL": "",
+            "communicationEmail": "",
+
+            "fundingMethod": "",
+            "clientTariff": "",
+            "postingTariff": "",
+            "billingLevel": "",
+            "gstNo": "",
+            "isdnFlag": "",
+            "gstMerchantStateCode": "",
+            "merchantType": "",
+            "acceptanceType": "",
+            "iciciMerchant": "",
+            "newFundingAc": "",
+            "merchantGrade": "",
+            "idDocDetails": [],
+            "geoLocation": {},
+            "taxDetails": ""
+          },
+          "tradingLocations": [],
+          "principalDetails": [],
+          "bankDetails": {},
+          "businessSummary": {
+            "briefSummary": "",
+            "mccCode": "",
+            "mccDescription": "",
+            "totalTurnover": "",
+            "totalTurnoverPerMID": "",
+            "dccTurnoverPerMID": "",
+            "pgTurnover": "",
+            "pgTurnoverPerMID": "",
+            "cardTurnover": "",
+            "avgTicketAmt": "",
+            "avgEMITicketAmt": "",
+            "tranVolumeInternet": "",
+            "tranVolumeMoto": "",
+            "tranVolumeInStore": "",
+            "deliveryDays0": "",
+            "deliveryDays7": "",
+            "deliveryDays14": "",
+            "deliveryDays30": "",
+            "deliveryDaysOver30": "",
+            "tranTypeMagStrip": "",
+            "tranTypeChip": "",
+            "tranTypeKeyed": "",
+            "creditSalesConsumer": "",
+            "creditSalesBusiness": "",
+            "firsReport": "",
+            "recurringTranFlag": "",
+            "refundPolicy": "",
+            "cardRefundDays": "",
+            "thirdPartyProcessorFlag": "",
+            "thirdPartyProcessorName": "",
+            "smallMerchant": ""
+          },
+          "uboDetails": []
+        }
+
+    CreateApp:
+      value:
+        {
+          "appType": "API",
+          "salesId": "ecomuser",
+          "channelCode": "EAZYAPY_ECOM",
+          "keySelection": {
+            "boardingType": "NEWMID"
+          },
+          "merchantDetails": {
+            "businessName": "ECOM",
+            "legalName": "ECOM"
+          },
+          "institutionId": "47",
+          "countryCode": "IND"
         }       
   securitySchemes:
     ApiKeyAuth:
