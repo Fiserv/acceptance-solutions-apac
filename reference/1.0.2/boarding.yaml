@@ -159,8 +159,54 @@ components:
     CreateAppResponse:
       type: object
       properties:
-        appURN: 
+        appURN:
           type: string
+        boardingType:
+          type: string
+        appType:
+          type: string
+        appChannel:
+          type: string
+        institutionId:
+          type: string
+        salesId:
+          type: string
+        status:
+          type: string
+        statusDate:
+          type: string
+        channelCode:
+          type: string
+        osvFlagValue:
+          type: string
+        countryCode:
+          type: string
+        leadId:
+          type: string
+        keySelection:
+          $ref: '#/components/schemas/KeySelection'
+        merchantDetails:
+          $ref: '#/components/schemas/MerchantDetails'
+        tradingLocations:
+          type: array
+          items:
+            $ref: '#/components/schemas/TradingLocation'
+        principalDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrincipalDetails'
+        bankDetails:
+          $ref: '#/components/schemas/BankDetails'
+        businessSummary:
+          $ref: '#/components/schemas/BusinessSummary'
+        uboDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/UBODetails'
+        
+
+
+    
     CreateAppRequest:
       type: object
       properties:
@@ -1700,91 +1746,91 @@ components:
         {
           "appURN": "1000007936",
           "appType": "API",
-          "boardingType": null,
-          "appChannel": null,
+          "boardingType": "",
+          "appChannel": "",
           "institutionId": "21",
           "salesId": "preranaaus",
           "status ": "Saved",
-          "statusDate": null,
+          "statusDate": "",
           "keySelection": {
-            "mccCode": null,
-            "merchantGrade": null,
-            "merchantType": null,
-            "acceptanceType": null,
-            "typeOfBusiness": null,
-            "international": null,
-            "iciciMerchant": null,
-            "dcc": null,
-            "fundingCurrency": null,
-            "newFundingAc": null
+            "mccCode": "",
+            "merchantGrade": "",
+            "merchantType": "",
+            "acceptanceType": "",
+            "typeOfBusiness": "",
+            "international": "",
+            "iciciMerchant": "",
+            "dcc": "",
+            "fundingCurrency": "",
+            "newFundingAc": ""
           },
           "channelCode": "TestAUS",
-          "osvFlagValue": null,
+          "osvFlagValue": "",
           "countryCode": "IND",
-          "leadId": null,
+          "leadId": "",
           "merchantDetails": {
             "businessName": "PAYFAC",
             "legalName": "PAYFAC",
-            "businessType": null,
-            "registrationNo": null,
-            "dateTrading": null,
-            "dateIncorporated": null,
-            "websiteURL": null,
-            "communicationEmail": null,
-            "legalAddress": null,
-            "fundingMethod": null,
-            "clientTariff": null,
-            "postingTariff": null,
-            "billingLevel": null,
-            "gstNo": null,
-            "isdnFlag": null,
-            "gstMerchantStateCode": null,
-            "merchantType": null,
-            "acceptanceType": null,
-            "iciciMerchant": null,
-            "newFundingAc": null,
-            "merchantGrade": null,
-            "idDocDetails": null,
-            "geoLocation": null,
-            "taxDetails": null
+            "businessType": "",
+            "registrationNo": "",
+            "dateTrading": "",
+            "dateIncorporated": "",
+            "websiteURL": "",
+            "communicationEmail": "",
+
+            "fundingMethod": "",
+            "clientTariff": "",
+            "postingTariff": "",
+            "billingLevel": "",
+            "gstNo": "",
+            "isdnFlag": "",
+            "gstMerchantStateCode": "",
+            "merchantType": "",
+            "acceptanceType": "",
+            "iciciMerchant": "",
+            "newFundingAc": "",
+            "merchantGrade": "",
+            "idDocDetails": [],
+            "geoLocation": {},
+            "taxDetails": ""
           },
-          "tradingLocations": null,
-          "principalDetails": null,
-          "bankDetails": null,
+          "tradingLocations": [],
+          "principalDetails": [],
+          "bankDetails": {},
           "businessSummary": {
-            "briefSummary": null,
-            "mccCode": null,
-            "mccDescription": null,
-            "totalTurnover": null,
-            "totalTurnoverPerMID": null,
-            "dccTurnoverPerMID": null,
-            "pgTurnover": null,
-            "pgTurnoverPerMID": null,
-            "cardTurnover": null,
-            "avgTicketAmt": null,
-            "avgEMITicketAmt": null,
-            "tranVolumeInternet": null,
-            "tranVolumeMoto": null,
-            "tranVolumeInStore": null,
-            "deliveryDays0": null,
-            "deliveryDays7": null,
-            "deliveryDays14": null,
-            "deliveryDays30": null,
-            "deliveryDaysOver30": null,
-            "tranTypeMagStrip": null,
-            "tranTypeChip": null,
-            "tranTypeKeyed": null,
-            "creditSalesConsumer": null,
-            "creditSalesBusiness": null,
-            "firsReport": null,
-            "recurringTranFlag": null,
-            "refundPolicy": null,
-            "cardRefundDays": null,
-            "thirdPartyProcessorFlag": null,
-            "thirdPartyProcessorName": null,
-            "smallMerchant": null
+            "briefSummary": "",
+            "mccCode": "",
+            "mccDescription": "",
+            "totalTurnover": "",
+            "totalTurnoverPerMID": "",
+            "dccTurnoverPerMID": "",
+            "pgTurnover": "",
+            "pgTurnoverPerMID": "",
+            "cardTurnover": "",
+            "avgTicketAmt": "",
+            "avgEMITicketAmt": "",
+            "tranVolumeInternet": "",
+            "tranVolumeMoto": "",
+            "tranVolumeInStore": "",
+            "deliveryDays0": "",
+            "deliveryDays7": "",
+            "deliveryDays14": "",
+            "deliveryDays30": "",
+            "deliveryDaysOver30": "",
+            "tranTypeMagStrip": "",
+            "tranTypeChip": "",
+            "tranTypeKeyed": "",
+            "creditSalesConsumer": "",
+            "creditSalesBusiness": "",
+            "firsReport": "",
+            "recurringTranFlag": "",
+            "refundPolicy": "",
+            "cardRefundDays": "",
+            "thirdPartyProcessorFlag": "",
+            "thirdPartyProcessorName": "",
+            "smallMerchant": ""
           },
-          "uboDetails": null
+          "uboDetails": []
         }
 
     CreateApp:
