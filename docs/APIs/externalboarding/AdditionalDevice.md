@@ -400,17 +400,17 @@ The table below contains the mandatory fields required for a successful request.
 |`Sales Id`|*Alphanumeric*|70|M|User Credential created for each partner|
 |`channel Code`|*Alphanumeric*|10|C|Static Channel Code shared with each partner|
 |`Institution Id`|*Numeric*|10|C|Institution number assigned to the institution|
-|`Boarding Type`|*Alphanumeric*|20|O|Type of Merchant: NEWMID/ADDMID/ADDTID|
+|`Boarding Type`|*Alphanumeric*|20|O|Type of Merchant: NEWMID / ADDMID / ADDTID|
 |`IS_ADD_LOCATION`|*Alphanumeric*|20|O|Applicable if the merchant wants additional location|
 |`IS_ADD_MID`|*Alphanumeric*|20|O|Applicable if the merchant wants additional MID|
 |`App Channel`|*Alphanumeric*|20|O|Application channel|
 |`Osv Flag Value`|*Alphanumeric*|1|O|Original Sent & Verified flag. Applicable for entities where documents are uploaded. For entities not uploading documents, keep this field as blank.|
-|`Merchant Details`|*-*|NA|NA|This is the object|
+|**Merchant Details**|*-*|NA|NA|This is the object|
 |`Business Name`|*Alphanumeric*|22|M|Trade Name of the Merchant|
 |`Legal Name`|*Alphanumeric*|35|M|Legal Name of the Merchant|
 |`Business Type`|*Alphanumeric*|50|M|Type of Business of the Merchant|
 |`Registration No`|*Alphanumeric*|100|M|Registration number of the Merchant|
-|`Tax Details`|*-*|NA|NA|This is the object|
+|**Tax Details**|*-*|NA|NA|This is the object|
 |`Taxid Type`|*Alphanumeric*|50|M|"Tax ID Type provided for the merchant.|
 |`Taxid Type`|*Alphanumeric*|50|M|For India - PAN|
 |`Taxid Type`|*Alphanumeric*|50|M|For AU - ABN "" ""Tax ID Type provided for the merchant For India: Individual PAN for Individual/Soleprop merchants"|
@@ -427,7 +427,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Acceptance Type`|*Alphanumeric*|10|M|Static Value - 'POSMOB' for POS merchant Static Value: ''ECOM'' for ECOM merchant|
 |`ICICI Merchant`|*Alphanumeric*|20|M|Applicable if the merchant has ICICI account|
 |`New Funding Ac`|*Alphanumeric*|20|M|Applicable if the merchant wants the new settlement account|
-|`Legal Address`|*-*|NA|NA|This is the object|
+|**Legal Address**|*-*|NA|NA|This is the object|
 |`Address Line`|*Alphanumeric*|35|M|Address of the Merchant|
 |`Address Line2`|*Alphanumeric*|35|O|Address of the Merchant|
 |`Address Line3`|*Alphanumeric*|35|O|Address of the Merchant|
@@ -442,7 +442,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Gst No`|*Alphanumeric*|100|C|Mandatory for Large merchants|
 |`Gst Merchant State Code`|*Alphanumeric*|40|O|Mandatory for Large Partners|
 |`Isdn Flag`|*Alphanumeric*|20|C|Isdn Flag|
-|`Id Doc Details`|*-*|NA|NA|ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application. All documents uploaded under ""categoryInd"": ""E"" has to be included under merchantDetails.idDocDetails|
+|**Id Doc Details**|*-*|NA|NA|ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application. All documents uploaded under ""categoryInd"": ""E"" has to be included under merchantDetails.idDocDetails|
 |`Entity`|*Alphanumeric*|20|C|Static Value - 'Member'|
 |`Id Type`|*Alphanumeric*|20|C|Value of docType received as response of uploaded document|
 |`Id Value`|*Alphanumeric*|20|C|NA|
@@ -455,13 +455,13 @@ The table below contains the mandatory fields required for a successful request.
 |`Doc Id`|*Alphanumeric*|20|C|Value of docID received as response of uploaded document|
 |`Category Name`|*Alphanumeric*|20|C|Value of categoryName received as response of uploaded document|
 |`Level`|*Numeric*|20|C|Value of level received as response of uploaded document|
-|`Geo Location`|*-*|NA|NA|This is the object|
+|**Geo Location**|*-*|NA|NA|This is the object|
 |`Latitude`|*Numeric*|20|O|Lattitude of the Merchant|
 |`Longitude`|*Numeric*|20|O|Longitude of the Merchant|
 |`Trading Locations`|*-*|NA|NA|"This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application.|
 |`Location No`|*Numeric*|2|M|Trading location number of the Merchant|
 |`Trading Name`|*Alphanumeric*|22|M|Trade Name of the Merchant|
-|`Trading Address`|*-*|NA|NA|This is the object|
+|**Trading Address**|*-*|NA|NA|This is the object|
 |`Address Line`|*Alphanumeric*|35|M|Address of the Merchant|
 |`Address Line2`|*Alphanumeric*|35|O|Address of the Merchant|
 |`Address Line3`|*Alphanumeric*|35|O|Address of the Merchant|
@@ -478,7 +478,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Cpv GroupId`|*Alphanumeric*|50|O|Cpv groupid of the Merchant|
 |`Regional cpv Groupid`|*Alphanumeric*|50|O|Regional cpv groupid of the Merchant|
 |`Commerce Connect Reference MID`|*Alphanumeric*|8|O|Commerce connect reference mid of the Merchant|
-|`Terminals`|*-*|NA|NA|This is the object|
+|**Terminals**|*-*|NA|NA|This is the object|
 |`Count`|*Numeric*|2|M|Count of terminals for the Merchant|
 |`prefered Date`|*Numeric*|8|M|YYYYMMDD|
 |`prefered Time`|*Numeric*|6|M|HHMMSS|
@@ -505,7 +505,7 @@ The table below contains the mandatory fields required for a successful request.
 |`MID`|*Numeric*|15|C|This is the reference Member MID which needs to be given in case of ADD MID/ ADD TID.|
 |`Parent mid`|*Numeric*|15|C|This is the SG (parent MID) of the reference MID which needs to be given in case of ADD MID & ADD TID|
 |`Otp Enabled`|*Alphanumeric*|10|O|Otp enabled for the merchant|
-|`Principal Details`|*-*|NA|NA|This section is used to capture details of Principal Owner for the said merchant. The same section can be repeated for multiple Principal Owners. We can have upto maximum of 2 Principal Owners per merchant|
+|**Principal Details**|*-*|NA|NA|This section is used to capture details of Principal Owner for the said merchant. The same section can be repeated for multiple Principal Owners. We can have upto maximum of 2 Principal Owners per merchant|
 |`Principal No`|*Alphanumeric*|2|M|Principal number of the Merchant|
 |`Position`|*Alphanumeric*|20|M|Position of the Merchant|
 |`Title`|*Alphanumeric*|20|M|Title of the Merchant|
@@ -514,8 +514,8 @@ The table below contains the mandatory fields required for a successful request.
 |`Middle Name`|*Alphanumeric*|25|O|Middle Name of the Oerchant|
 |`Gender`|*Alphanumeric*|10|M|Gender of the Merchant|
 |`Ddate Of Birth`|*Numeric*|8|M|YYYYMMDD|
-|`KYC Details`|*-*|NA|NA|This is the object|
-|`KYC Category`|*-*|NA|NA|POI/POA of the Merchant|
+|**KYC Details**|*-*|NA|NA|This is the object|
+|**KYC Category**|*-*|NA|NA|POI/POA of the Merchant|
 |`Identity Type`|*Alphanumeric*|50|M|Type of KYC Document submitted|
 |`Identity Type`|*Alphanumeric*|50|M|For India - PAN/AADHAR|
 |`Identity Type`|*Alphanumeric*|50|M|For ASEAN - Passport/Driving Licence/HKID or SGID or MYID|
@@ -524,7 +524,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Identity metaName1`|*Alphanumeric*|100|C|Additional information pertaning to the KYC docuements submitted. For AU - Driving License State Code|
 |`Identity metaValue1`|*Alphanumeric*|100|C|Additional information pertaning to the KYC docuements submitted. For AU - Value Driving License State Code|
 |`Nationality`|*Alphanumeric*|35|M|Nationality of the Merchant|
-|`Principal Address`|*-*|NA|NA|This is the object|
+|**Principal Address**|*-*|NA|NA|This is the object|
 |`Address Line`|*Alphanumeric*|35|M|Address  line of the Merchant|
 |`Address Line2`|*Alphanumeric*|35|O|Address Line2 of the Merchant|
 |`Address Line3`|*Alphanumeric*|35|O|Address Line3 of the Merchant|
@@ -564,7 +564,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Identity metaName1`|*Alphanumeric*|100|C|For AU - Driving License State Code|
 |`Identity metaValue1`|*Alphanumeric*|100|C|Additional information pertaning to the KYC docuements submitted|
 |`Identity metaValue1`|*Alphanumeric*|100|C|For AU - Value Driving License State Code"|
-|`Ubo Address`|*-*|NA|NA|This is the object|
+|**Ubo Address**|*-*|NA|NA|This is the object|
 |`Address Line`|*Alphanumeric*|35|C|Address  of the Ultimate Benefeciary Owner|
 |`Address Line2`|*Alphanumeric*|35|O|Address Line2 Ultimate Benefeciary Owner|
 |`Address Line3`|*Alphanumeric*|35|O|Address Line3 Ultimate Benefeciary Owner|
@@ -575,7 +575,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Mobile No`|*Numeric*|15|C|Mobile number of Ultimate Benefeciary Owner|
 |`Phone 1`|*Numeric*|15|O|phone 1 of the Ultimate Benefeciary Owner|
 |`Contact Name`|*Alphanumeric*|35|C|Contact Name of Ultimate Benefeciary Owner|
-|`Bank Details`|*-*|NA|NA|This tag will contain the Bank account details of Partner/PayFac which needs to be configured at Fiserv End|
+|**Bank Details**|*-*|NA|NA|This tag will contain the Bank account details of Partner/PayFac which needs to be configured at Fiserv End|
 |`UW account details`|*-*|NA|NA|UW Account details are primarily the actual merchant account which will be used while underwriting the merchant|
 |`Account No`|*Numeric*|100|M|Account number of the Merchant|
 |`Account Name`|*Alphanumeric*|35|M|Account name of the Merchant|
@@ -585,7 +585,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Branch`|*Alphanumeric*|500|O|Branch of the Merchant|
 |`Bank Address`|*Alphanumeric*|500|M|Bank address of the Merchant|
 |`Acc Type`|*Alphanumeric*|30|M|Acc Type of the Merchant|
-|`Funding accountdetails`|*-*|NA|NA|Funding account will the details of account to which Fiserv will process the funding on daily basis|
+|**Funding accountdetails**|*-*|NA|NA|Funding account will the details of account to which Fiserv will process the funding on daily basis|
 |`Account No`|*Numeric*|100|C|If different form UW details|
 |`Account Name`|*Alphanumeric*|35|C|Account number of the Merchant|
 |`Ifsc`|*Alphanumeric*|15|C|Ifsc of the Merchant|
@@ -594,7 +594,7 @@ The table below contains the mandatory fields required for a successful request.
 |`Branch`|*Alphanumeric*|500|O|Branch of the Merchant|
 |`Bank Address`|*Alphanumeric*|500|C|Bank address of the Merchant|
 |`Acc Type`|*Alphanumeric*|30|C|Account Type of the Merchant|
-|`Collection accountdetails`|*-*|NA|NA|This section will have details of account which needs to be used for collection of charges. This account may or may not be the same as UW account/Funding account|
+|**Collection accountdetails**|*-*|NA|NA|This section will have details of account which needs to be used for collection of charges. This account may or may not be the same as UW account/Funding account|
 |`Account No`|*Numeric*|100|C|If different form UW details|
 |`Account Name`|*Alphanumeric*|35|C|Account name of the Merchant|
 |`Ifsc`|*Alphanumeric*|15|C|Ifsc of the Merchant|
@@ -603,11 +603,11 @@ The table below contains the mandatory fields required for a successful request.
 |`Branch`|*Alphanumeric*|500|O|Branch of the Merchant|
 |`Bank Address`|*Alphanumeric*|500|C|Bank address of the Merchant|
 |`Acc Type`|*Alphanumeric*|30|C|Acc type of the Merchant|
-|`Sub merchantDetails`|*-*|NA|NA|This object is not applicable for ISO. This section is used to capture the sub Partner Details of the merchant|
+|**Sub merchantDetails**|*-*|NA|NA|This object is not applicable for ISO. This section is used to capture the sub Partner Details of the merchant|
 |`Sub merchantID`|*Numeric*|15|C|"This is an optional field which the Single MID PayFacs can use to pass their own MID to Fiserv.|
 |`Sub merchantID`|*Numeric*|15|C|This field will be mandatory if the Channel level parameter for Payfac Provided SMID is set to Y.|
 |`Sub merchantID`|*Numeric*|15|C|If the same is set to 'N', Boarding backend will generate its own MID for the merchant"|
-|`Business Summary`|*-*|NA|NA|This section is used to capture the summary of the merchant|
+|**Business Summary**|*-*|NA|NA|This section is used to capture the summary of the merchant|
 |`Brief Summary`|*Alphanumeric*|100|M|Brief summary of the Merchant|
 |`Salessr Number`|*Alphanumeric*|100|O|Sales number of the Merchant|
 |`MCC Code`|*Numeric*|20|M|MCC  number of the Merchant|

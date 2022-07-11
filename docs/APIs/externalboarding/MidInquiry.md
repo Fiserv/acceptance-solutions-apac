@@ -60,7 +60,7 @@ The table below contains the mandatory fields required for a successful request.
     "registrationNo": null,
     "dateIncorporated": null,
     "websiteURL": null,
-    "communicationEmail": prerana.kumbhar@Fiserv.com,
+    "communicationEmail": "prerana.kumbhar@Fiserv.com",
     "legalAddress": {
       "addressLine": "Near central fire briged, Ganj peth,, opposite kamble lane, ",
       "addressLine2": null,
