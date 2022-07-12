@@ -42,19 +42,20 @@ The table contains the mandatory fields required for a successful request. The f
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `appType` |	*Alphanumeric* |	8 |	M |	Fixed Value **API** |
-| `salesId` | *Alphanumeric* | 	70 | M	| User Credential created for each partner | 
-| `channelCode` |	*Alphanumeric* |	10 | M |	Static Channel Code shared with each partner
-| `mccCode` |	*Numeric* | 20 |	M |	Unique value assigned for each industry |
-| `merchantType` | *Alphanumeric* |	20 | M | Type of Merchant whether Small or Large Merchant |
-| `acceptanceType` |	*Alphanumeric* |	10	| M	 | Static Value: 'ECOM' /  'POSMOB' |
-| `typeOfBusiness` |	*Alphanumeric* |	50 | M | Type of Bussiness means Sole Proprieter, Individual etc |
-| `international`	| *Alphanumeric* | 3 | O | Applicable if the merchant supports international Card Transactions |
-| `iciciMerchant` | *Alphanumeric* | 20 | O	| Applicable if the merchant is ICICI current bank account holder |
-| `dcc` |	*Alphanumeric* |	3 |	 O | It is applicable for Foreign rate conversion(Y / N) |
-| `fundingCurrency` |	*Alphanumeric* |	8 |	 M | The currency  settled to the merchant NET_INR, NET_USD, NET_AUD etc |
-| `boardingType` | *Alphanumeric* |	20 | M | Type of Merchant: New MID / Add MID / Add TID |
-| `merchantGrade` | *Alphanumeric* | 40 | M	| The grade of the merchant decided as per the turnover |
+|`appType`|Alphanumeric|8|M|Fixed Value **API**|
+|`salesId`|Alphanumeric|70|M|User Credential created for each partner|
+|`channelCode`|Alphanumeric|10|M|Static Channel Code shared with each partner|
+|`mccCode`|Numeric|20|M|Unique value assigned for each industry|
+|`merchantType`|Alphanumeric|20|M|Type of Merchant whether Small or Large Merchant|
+|`acceptanceType`|Alphanumeric|10|M|Static Value: 'ECOM' / 'POSMOB'|
+|`typeOfBusiness`|Alphanumeric|50|M|Type of Bussiness means Sole Proprieter, Individual etc|
+|`international`|Alphanumeric|3|O|Applicable if the merchant supports international Card Transactions|
+|`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder|
+|`dcc`|Alphanumeric|3|O|It is applicable for Foreign rate conversion(Y / N)|
+|`fundingCurrency`|Alphanumeric|8|M|The currency settled to the merchant NET_INR, NET_USD, NET_AUD etc|
+|`boardingType`|Alphanumeric|20|M|Type of Merchant: New MID / Add MID / Add TID|
+|`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover|
+
 
 
 ### Successful Response Payload
@@ -353,7 +354,7 @@ The table contains the mandatory fields required for a successful request. The f
 ### Response
 | Variable | Type | Length |  Mandatory /Optional / Conditional ( M / O / C) | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `id` | *string* | 20 | M | Identification Number |
+| `Id` | String | 20 | M | Identification Number |
 
 
 

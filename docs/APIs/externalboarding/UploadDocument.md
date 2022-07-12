@@ -31,14 +31,14 @@ The table below contains the mandatory fields required for a successful request.
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional  (M / O / C)  | Description/Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
-| `appURN` |	*Alphanumeric* |	30 | M |	App URN retured as part of Create URN API |	 
-| `docType` |	*Alphanumeric* |	30  |	 M |	Document Name of document being uploaded. |  	
-| `fileType` |	*Alphanumeric*  |	10	| M |	The type of the file that is uploaded	 |
-| `principalNo` |	*Alphanumeric* |	2 |	M	| If there are 2 Principal Owners for which the documents are uploaded, first set will have value as 1 and the second set will have value as 2.If there are multiple set of UBO for which documents are uploaded, each set will have its respective number in sequential manner. |	
-| `Image Front` |	*file* | NA	|	M |	Front copy of the documentIf document has single part, same has to be uploaded aspart of file1. |
-| `Image Back` |	*file* | NA	|	O |	Back copy of the document. If document has single part, file2 remains blank	|
-| `categoryName` |	*Alphanumeric* |	30|	M |	Category of document being uploaded. This can be refered from tag categoryName in Get Document Matrix API	|
-| `level` |	*Alphanumeric* |	2 |	M |	Level of document being uploaded. This can be refered from tag level in Get Document Matrix API	|
+|`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API|
+|`docType`|Alphanumeric|30||Document Name of document being uploaded. |
+|`fileType`|Alphanumeric|10|M|The type of the file that is uploaded|
+|`principalNo`|Alphanumeric|2|M|If there are 2 Principal Owners for which the documents are uploaded, first set will have value as 1 and the second set will have value as 2.If there are multiple set of UBO for which documents are uploaded, each set will have its respective number in sequential manner.|
+|`imageFront`|File|-|M|Front copy of the document. If document has single part, same has to be uploaded as part of file 1. |
+|`imageBack`|File|-|O|Back copy of the document. If document has single part, file 2 remains blank|
+|`categoryName`|Alphanumeric|30|M|Category of document being uploaded. This can be refered from tag categoryName in Get Document Matrix API|
+|`level`|Alphanumeric|2|M|Level of document being uploaded. This can be referred from tag level in Get Document Matrix API|
 
 
 ### Successful Response Payload
