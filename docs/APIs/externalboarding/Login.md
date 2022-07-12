@@ -34,10 +34,10 @@ The table below identifies the required parameters in the request payload.
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
-|`Username`|	String|	15|	M|	User Id / Fiserv Lan ID|
-|`Password`|	string|	15|	M|	Password|
-|`Source`|	String |	10|	M|	Source Type like API / TAB|
-|`Ain`|	String	 |16|	M|	AIN|
+|`username`|	String|	15|	M|	User Id / Fiserv Lan ID |
+|`password`|	String|	15|	M|	Password |
+|`source`|	String |	10|	M|	Source Type like API / TAB |
+|`ain`|	String	 |16|	M|	This is a query parameter which should be keyed as a part of request|
 
 
 ### Successful Response Payload
