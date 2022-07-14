@@ -1056,28 +1056,42 @@ components:
                 ]
             }
         }
+    # NewMerchantResponse:
+    #   value:
+    #     {
+    #       "status": {
+    #         "statusCode": 200,
+    #         "message": "Success"
+    #       },
+    #       "data": {
+    #         "appurn": "Application URN",
+    #         "leadsubgroupmid": "Lead Sub Group MID",
+    #         "SGArray": [
+    #           {
+    #             "subgroupmId": "Sub Group MID",
+    #             "merchantId": "Member MID",
+    #             "submerchantId": "Submerchant ID",
+    #             "terminals": [
+    #               "Terminal ID 1"
+    #             ]
+    #           }
+    #         ]
+    #       }
+    #     }
     NewMerchantResponse:
       value:
-        {
-          "status": {
-            "statusCode": 200,
-            "message": "Success"
-          },
-          "data": {
-            "appurn": "Application URN",
-            "leadsubgroupmid": "Lead Sub Group MID",
-            "SGArray": [
-              {
-                "subgroupmId": "Sub Group MID",
-                "merchantId": "Member MID",
-                "submerchantId": "Submerchant ID",
-                "terminals": [
-                  "Terminal ID 1"
-                ]
-              }
-            ]
-          }
-        }
+        Status:
+          StatusCode: "200"
+          message: Success
+        data:
+          appurn: "Application URN"
+          leadsubgroupmid: "Lead Sub Group MID"
+          SGArray:
+            subgroupmId: "Sub Group MID"
+            merchantId: "Member MID"
+            submerchantId": "Submerchant ID"
+            terminals:
+              Terminal ID: "Terminal ID1"
     SingleMIDPayFacResponse:
       value:
         {
