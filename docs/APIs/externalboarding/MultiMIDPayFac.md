@@ -175,247 +175,250 @@ The table below contains the mandatory fields required for a successful request.
 ### Request
 | Field Name |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
-|`App URN`|	Alphanumeric|	30|	M|	App URN retured as part of Create URN API|
-|`App Type`|	Alphanumeric|	8|	M|	Fixed Value 'API'|
-|`Sales Id`|	Alphanumeric|	70|	O|	User Credential created for each partner|
-|`channel Code`|	Alphanumeric|	10|	O|	Static Channel Code shared with each partner|
-|`Institution Id`|	Numeric	|10|	O|	Institution number assigned to the institution|
-|`Boarding Type`|	Alphanumeric|	20|	NA |	Type of Merchant: NEWMID / ADDMID  /ADDTID|
-|`IS_ADD_LOCATION`|	Alphanumeric|	20|	NA |	Applicable if the merchant wants additional location|
-|`IS_ADD_MID`|	Alphanumeric|	20|	NA	|Applicable if the merchant wants additional MID|
-|`App Channel`|	Alphanumeric|	20	|NA|Application channel|
-|`Osv Flag Value`|	Alphanumeric|	1|	NA |	Original Sent & Verified flag. Applicable for entities where documents are uploaded. For entities not uploading documents, keep this field as blank.|
-| **MerchantDetails** | - | - |  - | This is the object |
-|`Business Name`|	Alphanumeric	|22|	M	|Trade Name of the Merchant|
-|`Legal Name`|	Alphanumeric |	35	 |M	|Legal Name of the Merchant|
-|`Business Type`|	Alphanumeric|	50	|M|	Type of Business of the Merchant|
-|`Registration No`|	Alphanumeric|	100	|O	|Registration number of the Merchant
- **Tax Details** | - | - |  - | This is the object |
- |`Taxid Type`|	Alphanumeric	|50	|M|	"Tax ID Type provided for the merchant.|
-|`Taxid Type`|	Alphanumeric|	50|	M|	For India - PAN|
-|`Taxid Type`|	Alphanumeric|	50	|M|	For AU - ABN **Tax ID Type provided for the merchant For India: Individual PAN for Individual/Soleprop merchants**|
-|`Taxid Value`|	Alphanumeric|	100	|M|	PAN, ABN number of the Merchant
-|`Taxid Value`|	Alphanumeric|	100|	M|	PAN, ABN number of the Merchant|
-|`Taxid Value`|	Alphanumeric|	100|	M|	PAN, ABN number of the Merchant|
-|`Taxid Value`|	Alphanumeric|	100|	M|	PAN, ABN number of the Merchant|
-|`Taxid Value`|	Alphanumeric|	100|	M|	PAN, ABN number of the Merchant|
-|`Taxid Value`|	Alphanumeric|	100|	M|	PAN, ABN number of the Merchant|
-|`Date Incorporated`|	Numeric	|8	|O|	YYYYMMDD|
-|`Website URL`|	Alphanumeric|	100	|C|	Eligible for ECOM Merchant|
-|`Communication Email`|	Alphanumeric|	60|	O|	Communication Email of the Merchant|
-|`Merchant Type`|	Alphanumeric|	20|	O|	Whether it is small merchant or Large merchant|
-|`Acceptance Type`|	Alphanumeric|	10|	M|	"Static Value - 'POSMOB' for POS merchant Static Value: ''ECOM'' for ECOM merchant"|
-|`ICICI Merchant`|	Alphanumeric|	20|	NA|	Applicable if the merchant has ICICI account|
-|`New Funding Ac`|	Alphanumeric|	20|	NA|	Applicable if the merchant wants the new settlement account|
-| **Legal Address** | - | - |  - | This is the object |
- |`Address Line`|	Alphanumeric|	35|	M|	Address of the Merchant|
-|`Address Line2`|	Alphanumeric|	35|	M	|Address of the Merchant|
-|`Address Line3`|	Alphanumeric|	35	|M	|Address of the Merchant|
-|`City`|	Alphanumeric|	25|	M|	City of the Merchant|
-|`State`|	Alphanumeric|	25|	M|	State of the Merchant|
-|`Pin code`|	Alphanumeric|	8	|M	|Pincode of the Merchant|
-|`Country`|	Alphanumeric|	25|	M	|Country of the Merchant|
-|`Mobile No`|	Numeric|	15|	O|	Mobile number of the Merchant|
-|`Phone1`|	Numeric	|15|	O	|Phone number of the Merchant|
-|`Email`	| AlphaNumeric|	30	|O|	Email of the Merchant|
-|`Contact Name`|	Alphanumeric|	35|	O|	Contact Name of the Merchant|
-|`Gst No`|	Alphanumeric|	100	|NA	|Mandatory for Large merchants|
-|`Gst Merchant State Code`| 	Alphanumeric|	40	|NA|	Mandatory for Large Partners|
-|`Isdn Flag`|	Alphanumeric	|20|	NA|	Isdn Flag|
-|**Id Doc Details**|- | - |  - |		ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application. All documents uploaded under **categoryInd: E** has to be included under merchantDetails.idDocDetails|
-|`Entity`|	Alphanumeric|	20|	NA|	Static Value - 'Member'|
-|`Id Type`|	Alphanumeric|	20|	NA |	Value of docType received as response of uploaded document|
-|`Id Value`|	Alphanumeric|	20|	NA|	
-|`Doc Id`|	Alphanumeric|	20|	NA|	Value of docID received as response of uploaded document|
-|`Category Name`|	Alphanumeric|	20	|NA|	Value of categoryName received as response of uploaded document|
-|`Level`|	Numeric|	20|	NA |	Value of level received as response of uploaded document|
-|`Entity`|	Alphanumeric|	20|	NA |	Static Value - 'Member'|
-|`Id Type`|	Alphanumeric|	20|	NA |	Value of docType received as response of uploaded document|
-|`Id Value`|	Alphanumeric|	20|	NA	 |Id Value|
-|`Doc Id`|	Alphanumeric|	20|	NA|	Value of docID received as response of uploaded document|
-|`Category Name`|	Alphanumeric|	20|	NA |	Value of categoryName received as response of uploaded document|
-|`Level`|	Numeric|	20|	NA|	Value of level received as response of uploaded document|
-| **Geo Location** | - | - |  - | This is the object |
-|`Latitude`|	Numeric|	20|	O|	Lattitude of the Merchant
-|`Longitude`|	Numeric|	20|	O	|Longitude of the Merchant
-| **Trading Locations** |	- | - |  - |	"This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application.|
-|`Location No`|	Numeric|2|	M	|Trading location number of the Merchant|
-|`Trading Name`|	Alphanumeric|	22|	M	|Trade Name of the Merchant|
-|Trading Locations|		- | - |  - |	"This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application.|
-|`Location No`|	Numeric|2|	M	|Trading location number of the Merchant|
-|`Trading Name`|	Alphanumeric|	22|	M	|Trade Name of the Merchant|
-| **Trading Address** | - | - |  - | This is the object |
-|`Address Line`|	Alphanumeric|	35|	M|	Address of the Merchant|
-|`Address Line2`|	Alphanumeric|	35|	M|	Address of the Merchant|
-|`Address Line3`|	Alphanumeric|	35|	M|	Address of the Merchant|
-|`City`|	Alphanumeric|	25|	M|	City of the Merchant|
-|`State`|	Alphanumeric|	25|	M	|State of the Merchant|
-|`Pincode`|	Alphanumeric|	8	|M	|Pincode of the Merchant|
-|`Country`|	Alphanumeric|	25|	M|	Country of the Merchant|
-|`Mobile NO`|oNumeric	|15|	O	|Mobile number of the Merchant|
-|`Phone1`|	Numeric	|15|	O|	phone1 of the Merchant|
-|`Email`|	Numeric	|30|	O	|Email of the Merchant|
-|`ContactName`|	Alphanumeric|	35|	O|	Contact name of the Merchant|
-|`Package Id`|	Numeric|	10	|M|	Package number assigned to the Merchant|
-|`AutoSettlement`| Time	Numeric	|6|NA|	HHMMSS|
-|`Cpv GroupId`|	Alphanumeric	|50|NA	|Cpv groupid of the Merchant|
-|`Regional cpv Groupid`|	Alphanumeric|	50	|NA|	Regional cpv groupid of the Merchant|
-|`Commerce Connect Reference MID`|	Alphanumeric	|8|	NA|	Commerce connect reference mid of the Merchant|
-| **Terminals** | - | - |  - | This is the object |
-|`Count`|	Numeric	|2	|O|	Count of terminals for the Merchant|
-|`prefered Date`|	Numeric|	8|	O|	YYYYMMDD|
-|`prefered Time`|	Numeric	|6|	O	|HHMMSS|
-|`Discount`|	Numeric	|3	|NA|	Discount of the Merchant|
-|`User Instruction1`|	Alphanumeric|	100|	NA|	User Instruction1 of the Merchant|
-|`User Instruction2`|	Alphanumeric|	100|	NA|	User Instruction2 of the Merchant|
-| **Surcharge Amount** | - | - |  - | This object not applicable for ISO. Surcharge values currently selected by Partner on MVSI in AU |
-|`Visa Base`|	Numeric|	11|	NA	|For AU Only|
-|`Visa Percent`|	Numeric|	11|	NA	|For AU Only|
-|`Mc  Base`|	Numeric	|11|	NA	|For AU Only|
-|`Mc  Percent`|	Numeric|	11|	NA	|For AU Only|
-|`Upi Base`|	Numeric	|11|	NA|	|For AU Only|
-|`Upi Percent`|	Numeric|	11	|NA	|For AU Only|
-|`Eftpos Base`|	Numeric|	11|	NA	|For AU Only|
-|`Eftpos Percent`|	Numeric|	11	|NA	|For AU Only|
-|`Amex Base`|	Numeric	|11	| NA	|For AU Only|
-|`Amex Percent`|	Numeric|	11 |	NA	|For AU Only|
-|`Jcb Base`|	Numeric	|11|	NA	|For AU Only|
-|`Jcb Percent`|	Numeric|	11	|NA	|For AU Only|
-|`Diners Base`|	Numeric	|11	|NA	|For AU Only|
-|`Diners Percent`|	Numeric|	11|NA	|For AU Only|
-|`Alt merchCode`|	Alphanumeric	|20	|NA	|This is an optional field which has to be populated only if there is merchant MID or Dealer Code has to be captured at MID Level|
-|`Same Location`|	Alphanumeric	|1	|NA	|This flag has to be set to 'Y' if Partner wants multiple MIDs at the same location|
-|`MID`|	Numeric|	15|	NA	|This is the reference Member MID which needs to be given in case of ADD MID/ ADD TID.|
-|`Parent mid`|	Numeric	|15	|NA	|This is the SG (parent MID) of the reference MID which needs to be given in case of ADD MID & ADD TID|
-|`Otp Enabled`|	Alphanumeric	|10|	NA|	Otp enabled for the merchant|
- **Principal Details** | - | - |  - | This section is used to capture details of Principal Owner for the said merchant. The same section can be repeated for multiple Principal Owners. We can have upto maximum of 2 Principal Owners per merchant |
- |`Principal No`|	Alphanumeric|	2|	M|	Principal number of the Merchant|
-|`Position`|	Alphanumeric|	20	|O|	Position of the Merchant|
-|`Title`|	Alphanumeric|	20	|O|	Title of the Merchant|
-|`First Name`|	Alphanumeric	|25	|M|	First Name mf the Merchant|
-|`Last Name	`|Alphanumeric|	25|	M|	Last Name of the Merchant|
-|`Middle Name`|	Alphanumeric|	25|	O|	Middle Name of the Oerchant|
-|`Gender`|	Alphanumeric|	10	|O	|Gender of the Merchant|
-|`date Of Birth`|	Numeric|	8|	M|	YYYYMMDD|
-| **KYC Details** | - | - |  - | This is the object |
-|*KYC Details* | - | - |  - | POI/POA of the Merchant |
-|`Identity Type`|	Alphanumeric|	50	|O	|Type of KYC Document submitted|
-|`Identity Type`|	Alphanumeric|	50	|O|	For India - PAN/AADHAR|
-|`Identity Type`|	Alphanumeric|	50	|O|	For ASEAN - Passport/Driving Licence/HKID or SGID or MYID|
-|`Identity Type`|	Alphanumeric|	50	|O|	For AU - Passport/Driving Licence|
-|`Identity Value`|	Alphanumeric|	100	|O|	Value of the Kyc Document submitted|
-|`Identity metaName1`|	Alphanumeric|	100|	O	|Additional information pertaning to the KYC docuements submitted. For AU - Driving License State Code|
-|`Identity metaValue1`|	Alphanumeric |	100	|O|	Additional information pertaning to the KYC docuements submitted. For AU - Value Driving License State Code|
-|`Nationality`|	Alphanumeric	|35|	O|	Nationality of the Merchant|
-|`Identity metaName1`|	Alphanumeric|	100|	NA|	Additional information pertaning to the KYC docuements submitted for UBO|
-|`Identity metaName1`|	Alphanumeric|	100	|NA|	For AU - Driving License State Code|
-|`Identity metaValue1`|	Alphanumeric|	100|	NA|	Additional information pertaning to the KYC docuements submitted|
-|`Identity metaValue1`|	Alphanumeric|	100|	NA|	For AU - Value Driving License State Code|
-| **Principal Address** | - | - |  - | This is the object |
-|`Address Line`|	Alphanumeric|	35|M|	Address  line of the Merchant|
-|`Address Line2`|	Alphanumeric|	35|	M|	Address Line2 of the Merchant|
-|`Address Line3`|	Alphanumeric|	35|	M|	Address Line3 of the Merchant|
-|`City`|	Alphanumeric|	25|	M	|City of the Merchant|
-|`State`|	Alphanumeric|	25|	M|	State of the Merchant|
-|`Pincode`|	Alphanumeric|	8|	M|	Pincode of the Merchant|
-|`Country`|	Alphanumeric|	25|	M|	Country of the Merchant|
-|`MobileNo`|	Numeric|	15|	O|	Mobile number of the Merchant|
-|`Phone 1`|	Numeric|	15|	M|	phone 1 of the Merchant|
-|`Contact Name`|	Alphanumeric|	35|	O|	Contact name of the Merchant|
-| `Id DocDetailss` | - | - |  NA | ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application |
-| `Id DocDetails` | - | - |  NA | All documents uploaded under ""categoryInd"": ""P"" has to be included under principalDetails.idDocDetails |
-|`Level`|	Alphanumeric|	2|	NA	|Value of level received as response of uploaded document|
-|`Mandatory`|	Alphanumeric|	10|	NA	|Mandatory of the Merchant|
-|`Entity`|	Alphanumeric|	20|	NA|	Static Value - 'Member'|
-|`Id Type`|	Alphanumeric|	20|	NA|	Value of docType received as response of uploaded document|
-|`Id Value`|	Alphanumeric|	20|	NA|	Id value|
-|`Doc Id`|	-|-|-|NA	|Value of docID received as response of uploaded document|
-|`CategoryName` |	Alphanumeric|	30	|NA	|Value of categoryName received as response of uploaded document|
-| **Ubo Details** | - | - |  - | This section is used to capture details of Ultimate Benefeciary Owner for the said merchant. The same section can be repeated for multiple UBOs. We can have upto maximum of 5 UBOs per merchant |
-|`Serial No`|	Numeric|	2|	C|	Serial number of the Ultimate Benefeciary Owner|
-|`Title`|	Alphanumeric|	20|	C	|Title of the Ultimate Benefeciary Owner|
-|`First Name`|	Alphanumeric|	25	|C	|First name of the Ultimate Benefeciary Owner|
-|`Last Name`|	Alphanumeric|	25|	C	|Last name of the Ultimate Benefeciary Owner|
-|`Middle Name`|	Alphanumeric|	25|	C	|Middle name of the Ultimate Benefeciary Owner|
-|`Date Of Birth`|	Numeric	|10|	C|	Format - YYYYMMDD|
-|`Shareholder Percentage`|	Numeric	|8|	C|	Shareholder percentage the Ultimate Benefeciary Owner|
-|`Nationality`|	Alphanumeric|	35|	C|	Nationality of the Ultimate Benefeciary Owner|
-| **Ubo Address** | - | - |  - | This is the object |
-|`Address Line`|	Alphanumeric|	35	|C|	Address  of the Ultimate Benefeciary Owner|
-|`Address Line2`|	Alphanumeric|	35	|C|	Address Line2 Ultimate Benefeciary Owner|
-|`Address Line3`|	Alphanumeric|	35|	C	|Address Line3 Ultimate Benefeciary Owner
-|`City`|	Alphanumeric|	25|	C	|City of the Ultimate Benefeciary Owner|
-|`State`|	Alphanumeric|	25	|C	|State of the Ultimate Benefeciary Owner|
-|`Pincode`|	Alphanumeric|	8|	C|	Pincode of the Ultimate Benefeciary Owner|
-|`Country`|	Alphanumeric|	25|	C|	Country of the Ultimate Benefeciary Owner|
-|`Mobile No`|	Numeric|	15|	C|	Mobile number of Ultimate Benefeciary Owner|
-|`Phone 1`|	Numeric	|15|	C|	phone 1 of the Ultimate Benefeciary Owner|
-|`Contact Name`|	Alphanumeric|	35|	C|	Contact Name of Ultimate Benefeciary Owner|
-| **Bank Details** | - | - |  - | This tag will contain the Bank account details of Partner/PayFac which needs to be configured at Fiserv End |
-| **UW account details** | - | - |  - | UW Account details are primarily the actual merchant account which will be used while underwriting the merchant |
-|`Account No`|	Numeric|	100|NA	|Account number of the Merchant|
-|`Account Name`|	Alphanumeric|	35|	NA|	Account name of the Merchant|
-|`Ifsc`|	Alphanumeric|	15|	NA|	Ifsc of the Merchant|
-|`Bank Name`|	Alphanumeric|	80|	NA	|Bank name of the Merchant|
-|`Currency`|	Alphanumeric|	3|	NA	|Currency of the Merchant|
-|`Branch`|	Alphanumeric|	500|	NA|	Branch of the Merchant|
-|`Bank Address`|	Alphanumeric|	500|	NA|	Bank address of the Merchant|
-|`Acc Type`|	Alphanumeric|	30	|NA	|Acc Type of the Merchant|
-| **Funding accountdetails** | - | - |  - | Funding account will the details of account to which Fiserv will process the funding on daily basis |
-|`Account No`|	Numeric|	100	|NA	|If different form UW details|
-|`Account Name`|	Alphanumeric|	35|	NA|	Account number of the Merchant|
-|`Ifsc`|	Alphanumeric|	15|	NA|	Ifsc of the Merchant|
-|`Bank Name`|	Alphanumeric	|80	|NA|	Bank Name of the Cerchant|
-|`Currency`|	Alphanumeric|	3|	NA	|Currency of the Merchant|
-|`Branch`|	Alphanumeric|	500	|NA	|Branch of the Merchant|
-|`Bank Address`|	Alphanumeric|	500|	NA|	Bank address of the Merchant|
-|`Acc Type`|	Alphanumeric|	30|	NA	|Account Type of the Merchant|
-| **Collection accountdetails** | - | - |  - | This section will have details of account which needs to be used for collection of charges. This account may or may not be the same as UW account/Funding account |
-|`Account No`|	Numeric|	100|	NA|	If different form UW details|
-|`Account Name`|	Alphanumeric|	35|	NA|	Account name of the Merchant|
-|`Ifsc`|	Alphanumeric|	15|	NA|	Ifsc of the Merchant|
-|`Bank Name`|	Alphanumeric|	80|	NA|	Bank Name of the Cerchant|
-|`Currency`|	Alphanumeric|	3|	NA	|Currency of the Merchant|
-|`Branch`|	Alphanumeric|	500|	NA|	Branch of the Merchant|
-|`Bank Address`|	Alphanumeric	|500|	NA|	Bank address of the Merchant|
-|`Acc Type`|	Alphanumeric|	30|	NA|	Acc type of the Merchant|
- **Sub merchantDetails** | - | - |  - | This object is not applicable for ISO. This section is used to capture the sub Partner Details of the merchant |
-|`Sub merchantID`|	Numeric	|15	|NA|	"This is an optional field which the Single MID PayFacs can use to pass their own MID to Fiserv.|
-|`Sub merchantID`|	Numeric	|15	|NA	|This field will be mandatory if the Channel level parameter for Payfac Provided SMID is set to Y.|
-|`Sub merchantID`|	Numeric	|15	|NA|	If the same is set to 'N', Boarding backend will generate its own MID for the merchant"|
-| **Business Summary** | - | - |  - | This section is used to capture the summary of the merchant |
-|`Brief Summary`|	Alphanumeric|	100|	O|	Brief summary of the Merchant|
-|`Salessr Number`|	Alphanumeric|	100|	O|	Sales number of the Merchant|
-|`MCC Code`|	Numeric	|20	|M	|MCC  number of the Merchant|
-|`MCC Description`|	Alphanumeric|	200|	O|	MCC  description of the Merchant|
-|`Total Turnover`|	Numeric|	20	|O|	Total  turnover number of the Merchant|
-|`Total Turnover Per MID`|	Numeric	|20	|O	|Total turnover per mid of the Merchant|
-|`Card Turnover`|	Numeric|	20	|O	|Card turnover of the Merchant|
-|`Avg Ticket Amt`| 	Numeric|	20|	O|	Avg ticket amt of the Merchant|
-|`Dcc Turnover Per MID`| 	Numeric |	20|	O|	Dcc turnover per mid of the Merchant
-|`Pg Turnover`|	Numeric	|20|	O|	Pg  turnover of the Merchant|
-|`Pg Turnover Per MID`| 	Numeric	|20|	O	|Pg turnover per mid of the Merchant|
-|`Avg EMI Ticket Amt`| Numeric|	20|	O	|Avg emi ticket amt of the Merchant|
-|`Tran VolumeInternet`|	Numeric	|20|	M	|Tran volume internet of the Merchant|
-|`Tran VolumeMoto`|	Numeric	|20	|M|	Tran volume moto of the Merchant|
-|`Tran VolumeinStore`|	Numeric|	20|	M|	Tran volume in store of the Merchant|
-|`Delivery Days0`|	Numeric|	20|	M|	Delivery Days0 of the Merchant|
-|`Delivery Days7`|	Numeric|	20|	M|	Delivery Days7 of the Merchant|
-|`Delivery Days14`|	Numeric|	20|	M|	Delivery Days14 of the Merchant|
-|`Delivery Days30`|	Numeric|	20|	M|	Delivery Days30 of the Merchant|
-|`Delivery Days Over30`|	Numeric|	20	|M|	Delivery Days Over30 of the Merchant|
-|`Tran TypeMagStrip`|	Numeric|	20|	O|	Tran type magstripe of the Merchant|
-|`Tran Type Chip`|	Numeric|	20|	O	|Tran type chip of the Merchant|
-|`Tran Type Keyed`|	Numeric|	20|O	|Tran type keyed of the Merchant|
-|`Credit SalesConsumer`|	Numeric	|20|	M|	Credit salesconsumer of the Merchant|
-|`Credit SalesBusiness`|	Numeric|	20|	M	|Credit salesbusiness of the Merchant|
-|`First Report`|	Alphanumeric|	20|	NA	|First report of the Merchant|
-|`Recurring Tran Flag`|	Alphanumeric|	20|	NA|	Recurring tran flag of the Merchant|
-|`Refund Policy`|	Alphanumeric|	20|	NA|	Refund policy of the Merchant|
-|`Card Refund Days`|	Alphanumeric|	20|	NA|	Card refund days of the Merchant|
-|`ThirdParty Processor`| Flag	|Alphanumeric|	20|	NA|	Thirdparty processor flag of the Merchant|
-|`ThirdParty Processor`| Name	|Alphanumeric	|40	|NA	|Thirdparty processor name of the Merchant|
-|`Small Merchant`|	Alphanumeric|	20|	NA|	Applicable if the merchant is a Small Merchant|
+|`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API|
+|`appType`|Alphanumeric|8|M|Fixed Value 'API'|
+|`salesId`|Alphanumeric|70|O|User Credential created for each partner|
+|`channelCode`|Alphanumeric|10|O|Static Channel Code shared with each partner|
+|`institutionId`|Numeric|10|O|Institution number assigned to the institution|
+|`boardingType`|Alphanumeric|20|NA|Type of Merchant: New MID / Add MID / Add TID|
+|`IS_ADD_LOCATION`|Alphanumeric|20|NA|Applicable if the merchant wants additional location|
+|`IS_ADD_MID`|Alphanumeric|20|NA|Applicable if the merchant wants additional MID|
+|`appChannel`|Alphanumeric|20|NA|Application channel|
+|`osvFlagValue`|Alphanumeric|1|NA|Original Sent & Verified flag. Applicable for entities where documents are uploaded. For entities not uploading documents, keep this field as blank.|
+|**merchantDetails**|-|||This is the object|
+|`businessName`|Alphanumeric|22|M|Trade Name of the Merchant|
+|`legalName`|Alphanumeric|35|M|Legal Name of the Merchant|
+|`businessType`|Alphanumeric|50|M|Type of Business of the Merchant|
+|`registrationNo`|Alphanumeric|100|O|Registration number of the Merchant|
+|**taxDetails**|-|||This is the object|
+|`taxidType`|Alphanumeric|50|M|Tax ID Type provided for the merchant|
+|`taxidType`|Alphanumeric|50|M|For India - PAN|
+|`taxidType`|Alphanumeric|50|M|For AU - ABN "" ""Tax ID Type provided for the merchant For India: Individual PAN for Individual/Soleprop merchants|
+|`taxidValue`|Alphanumeric|100|M|PAN, ABN number of the Merchant|
+|`dateIncorporated`|Alphanumeric|100|M|PAN, ABN number of the Merchant|
+|`websiteURL`|Alphanumeric|100|M|PAN, ABN number of the Merchant|
+|`communicationEmail`|Alphanumeric|100|M|PAN, ABN number of the Merchant|
+|`merchantType`|Alphanumeric|100|M|PAN, ABN number of the Merchant|
+|`acceptanceType`|Alphanumeric|100|M|PAN, ABN number of the Merchant|
+|`iciciMerchant`|Numeric|8|M|YYYYMMDD|
+|`newFundingAc`|Alphanumeric|100|NA|Eligible for ECOM Merchant|
+|**legalAddress**|Alphanumeric|60|M|Communication Email of the Merchant|
+|`addressLine`|Alphanumeric|20|M|Whether it is small merchant or Large merchant|
+"|`addressLine2`|Alphanumeric|10|M|Static Value - 'POSMOB' for POS merchant Static Value: ''ECOM'' for ECOM merchant|"
+|`addressLine3`|Alphanumeric|20|M|Applicable if the merchant has ICICI account|
+|`city`|Alphanumeric|20|M|Applicable if the merchant wants the new settlement account|
+|`state`|-|||This is the object|
+|`pincode`|Alphanumeric|35|M|Address of the Merchant|
+|`country`|Alphanumeric|35|O|Address of the Merchant|
+|`mobileNo`|Alphanumeric|35|O|Address of the Merchant|
+|`phone1`|Alphanumeric|25|M|City of the Merchant|
+|`email`|Alphanumeric|25|M|State of the Merchant|
+|`contactName`|Alphanumeric|8|M|Pincode of the Merchant|
+|`gstNo`|Alphanumeric|25|M|Country of the Merchant|
+|`gstMerchantStateCode`|Numeric|15|M|Mobile number of the Merchant|
+|`isdnFlag`|Numeric|15|O|Phone number of the Merchant|
+|**idDocDetails**|Numeric|30|O|Email of the Merchant|
+|`entity`|Alphanumeric|35|M|Contact Name of the Merchant|
+|`idType`|Alphanumeric|100|M|Mandatory for Large merchants|
+|`idValue`|Alphanumeric|40|O|Mandatory for Large Partners|
+|`docId`|Alphanumeric|20|NA|Isdn Flag|
+|`categoryName`|-|||ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application. All documents uploaded under ""categoryInd"": ""E"" has to be included under merchantDetails.idDocDetails|
+|`level`|Alphanumeric|20|NA|Static Value - 'Member'|
+|`entity`|Alphanumeric|20|NA|Value of docType received as response of uploaded document|
+|`idType`|Alphanumeric|20|NA||
+|`idValue`|Alphanumeric|20|NA|Value of docID received as response of uploaded document|
+|`docId`|Alphanumeric|20|NA|Value of categoryName received as response of uploaded document|
+|`categoryName`|Numeric|20|NA|Value of level received as response of uploaded document|
+|`level`|Alphanumeric|20|NA|Static Value - 'Member'|
+|**geoLocation**|Alphanumeric|20|NA|Value of docType received as response of uploaded document|
+|`latitude`|Alphanumeric|20|NA|Id Value|
+|`longitude`|Alphanumeric|20|NA|Value of docID received as response of uploaded document|
+|**tradingLocations**|Alphanumeric|20|NA|Value of categoryName received as response of uploaded document|
+|`locationNo`|Numeric|20|NA|Value of level received as response of uploaded document|
+|`tradingName`|-|||This is the object|
+|**tradingAddress**|Numeric|20|NA|Lattitude of the Merchant|
+|`addressLine`|Numeric|20|NA|Longitude of the Merchant|
+|`addressLine2`|-|||"This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application.|
+|`addressLine3`|Numeric|2|M|Trading location number of the Merchant|
+|`city`|Alphanumeric|22|M|Trade Name of the Merchant|
+|`state`|-|||This is the object|
+|`pincode`|Alphanumeric|35|M|Address of the Merchant|
+|`country`|Alphanumeric|35|O|Address of the Merchant|
+|`mobileNo`|Alphanumeric|35|O|Address of the Merchant|
+|`phone1`|Alphanumeric|25|M|City of the Merchant|
+|`email`|Alphanumeric|25|M|State of the Merchant|
+|`ontactName`|Alphanumeric|8|M|Pincode of the Merchant|
+|`packageId`|Alphanumeric|25|M|Country of the Merchant|
+|`autoSettlementTime`|Numeric|15|M|Mobile number of the Merchant|
+|`cpvGroupId`|Numeric|15|O|phone1 of the Merchant|
+|`regionalcpvGroupid`|Numeric|30|NA|Email of the Merchant|
+|`commerceConnectReferenceMID`|Alphanumeric|35|M|Contact name of the Merchant|
+|**terminals**|Numeric|10|M|Package number assigned to the Merchant|
+|`count`|Numeric|6|NA|HHMMSS|
+|`preferedDate`|Alphanumeric|50|NA|Cpv groupid of the Merchant|
+|`preferedTime`|Alphanumeric|50|NA|Regional cpv groupid of the Merchant|
+|`discount`|Alphanumeric|8|NA|Commerce connect reference mid of the Merchant|
+|`userInstruction1`|-|||This is the object|
+|`userInstruction2`|Numeric|2|M|Count of terminals for the Merchant|
+|**surchargeAmount**|Numeric|8|O|YYYYMMDD|
+|`visaBase`|Numeric|6|O|HHMMSS|
+|`visaPercent`|Numeric|3|NA|Discount of the Merchant|
+|`mcBase`|Alphanumeric|100|NA|User Instruction1 of the Merchant|
+|`mcPercent`|Alphanumeric|100|NA|User Instruction2 of the Merchant|
+|`upiBase`|-|||This object not applicable for ISO. Surcharge values currently selected by Partner on MVSI in AU|
+|`upiPercent`|Numeric|11|NA|For AU Only|
+|`eftposBase`|Numeric|11|NA|For AU Only|
+|`eftposPercent`|Numeric|11|NA|For AU Only|
+|`amexBase`|Numeric|11|NA|For AU Only|
+|`amexPercent`|Numeric|11|NA|For AU Only|
+|`jcbBase`|Numeric|11|NA|For AU Only|
+|`jcbPercent`|Numeric|11|NA|For AU Only|
+|`dinersBase`|Numeric|11|NA|For AU Only|
+|`dinersPercent`|Numeric|11|NA|For AU Only|
+|`altmerchCode`|Numeric|11|NA|For AU Only|
+|`sameLocation`|Numeric|11|NA|For AU Only|
+|`mID`|Numeric|11|NA|For AU Only|
+|`parentmid`|Numeric|11|NA|For AU Only|
+|`otpEnabled`|Numeric|11|NA|For AU Only|
+|**principalDetails**|Alphanumeric|20|NA|This is an optional field which has to be populated only if there is merchant MID or Dealer Code has to be captured at MID Level|
+|`principalNo`|Alphanumeric|1|M|This flag has to be set to 'Y' if Partner wants multiple MIDs at the same location|
+|`position`|Numeric|15|NA|This is the reference Member MID which needs to be given in case of ADD MID / ADD TID.|
+|`title`|Numeric|15|NA|This is the SG (parent MID) of the reference MID which needs to be given in case of ADD MID & ADD TID|
+|`firstName`|Alphanumeric|10|NA|Otp enabled for the merchant|
+|`lastName`|-|||This section is used to capture details of Principal Owner for the said merchant. The same section can be repeated for multiple Principal Owners. We can have upto maximum of 2 Principal Owners per merchant|
+|`middleName`|Alphanumeric|2|M|Principal number of the Merchant|
+|`gender`|Alphanumeric|20|M|Position of the Merchant|
+|`ddateOfBirth`|Alphanumeric|20|M|Title of the Merchant|
+|**KYCDetails**|Alphanumeric|25|M|First Name mf the Merchant|
+|`kYCCategory`|Alphanumeric|25|M|Last Name of the Merchant|
+|`identityType`|Alphanumeric|25|O|Middle Name of the Oerchant|
+|`identityType`|Alphanumeric|10|M|Gender of the Merchant|
+|`identityType`|Numeric|8|M|YYYYMMDD|
+|`identityType`|-|||This is the object|
+|`identityValue`|-|||POI / POA of the Merchant|
+|`identitymetaName1`|Alphanumeric|50|M|Type of KYC Document submitted|
+|`identitymetaValue1`|Alphanumeric|50|M|For India - PAN / AADHAR|
+|`nationality`|Alphanumeric|50|M|For ASEAN - Passport / Driving Licence / HKID or SGID or MYID|
+|**principalAddress**|Alphanumeric|50|M|For AU - Passport/Driving Licence|
+|`addressLine`|Alphanumeric|100|M|Value of the Kyc Document submitted|
+|`addressLine2`|Alphanumeric|100|NA|Additional information pertaning to the KYC docuements submitted. For AU - Driving License State Code|
+|`addressLine3`|Alphanumeric|100|NA|Additional information pertaning to the KYC docuements submitted. For AU - Value Driving License State Code|
+|`city`|Alphanumeric|35|O|Nationality of the Merchant|
+|`state`|-|||This is the object|
+|`pincode`|Alphanumeric|35|M|Address  line of the Merchant|
+|`country`|Alphanumeric|35|O|Address Line2 of the Merchant|
+|`mobileNo`|Alphanumeric|35|O|Address Line3 of the Merchant|
+|`phone 1`|Alphanumeric|25|M|City of the Merchant|
+|`contactName`|Alphanumeric|25|M|State of the Merchant|
+|`idDocDetails`|Alphanumeric|8|M|Pincode of the Merchant|
+|`idDocDetails`|Alphanumeric|25|M|Country of the Merchant|
+|`level`|Numeric|15|M|Mobile number of the Merchant|
+|`mandatory`|Numeric|15|O|phone 1 of the Merchant|
+|`entity`|Alphanumeric|35|M|Contact name of the Merchant|
+|`idType`|-||NA|ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application|
+|`idValue`|-||NA|All documents uploaded under ""categoryInd"": ""P"" has to be included under principalDetails.idDocDetails|
+|`docId`|Alphanumeric|2|NA|Value of level received as response of uploaded document|
+|`categoryName`|Alphanumeric|10|NA|Mandatory of the Merchant|
+|**uboDetails**|Alphanumeric|20|NA|Static Value - 'Member'|
+|`serialNo`|Alphanumeric|20|NA|Value of docType received as response of uploaded document|
+|`title`|Alphanumeric|20|NA|Id value|
+|`firstName`|-||NA|Value of docID received as response of uploaded document|
+|`lastName`|Alphanumeric|30|NA|Value of categoryName received as response of uploaded document|
+|`middleName`|-|||This section is used to capture details of Ultimate Benefeciary Owner for the said merchant. The same section can be repeated for multiple UBOs. We can have upto maximum of 5 UBOs per merchant.|
+|`dateOfBirth`|Numeric|2|NA|Serial number of the Ultimate Benefeciary Owner|
+|`shareholderPercentage`|Alphanumeric|20|NA|Title of the Ultimate Benefeciary Owner|
+|`nationality`|Alphanumeric|25|NA|First name of the Ultimate Benefeciary Owner|
+|**kycDetails**|Alphanumeric|25|NA|Last name of the Ultimate Benefeciary Owner|
+|**kycCategory**|Alphanumeric|25|NA|Middle name of the Ultimate Benefeciary Owner|
+|`identityType`|Numeric|10|NA|Format - YYYYMMDD|
+|`identityType`|Numeric|8|NA|Shareholder percentage the Ultimate Benefeciary Owner|
+|`identityType`|Alphanumeric|35|NA|Nationality of the Ultimate Benefeciary Owner|
+|`identityType`|-|||This is the object|
+|`identityValue`|-|||POI / POA of the Ultimate Benefeciary Owner|
+|`identitymetaName1`|Alphanumeric|50|NA|Type of KYC Document submitted for UBO|
+|`identitymetaName1`|Alphanumeric|50|NA|For India - PAN / AADHAR|
+|`identitymetaValue1`|Alphanumeric|50|NA|For ASEAN - Passport / Driving Licence / HKID or SGID or MYID|
+|`identitymetaValue1`|Alphanumeric|50|NA|For AU - Passport / Driving Licence|
+|**uboAddress**|Alphanumeric|100|NA|Value of the Kyc Document submitted|
+|`addressLine`|Alphanumeric|100|NA|Additional information pertaning to the KYC docuements submitted for UBO|
+|`addressLine2`|Alphanumeric|100|NA|For AU - Driving License State Code|
+|`addressLine3`|Alphanumeric|100|NA|Additional information pertaning to the KYC docuements submitted|
+|`city`|Alphanumeric|100|NA|For AU - Value Driving License State Code"|
+|`state`|-|||This is the object|
+|`pincode`|Alphanumeric|35|NA|Address  of the Ultimate Benefeciary Owner|
+|`country`|Alphanumeric|35|NA|Address Line2 Ultimate Benefeciary Owner|
+|`mobileNo`|Alphanumeric|35|NA|Address Line3 Ultimate Benefeciary Owner|
+|`phone1`|Alphanumeric|25|NA|City of the Ultimate Benefeciary Owner|
+|`contactName`|Alphanumeric|25|NA|State of the Ultimate Benefeciary Owner|
+|**bankDetails**|Alphanumeric|8|NA|Pincode of the Ultimate Benefeciary Owner|
+|**uwaccountdetails**|Alphanumeric|25|NA|Country of the Ultimate Benefeciary Owner|
+|`accountNo`|Numeric|15|NA|Mobile number of Ultimate Benefeciary Owner|
+|`accountName`|Numeric|15|NA|phone 1 of the Ultimate Benefeciary Owner|
+|`ifsc`|Alphanumeric|35|NA|Contact Name of Ultimate Benefeciary Owner|
+|`bankName`|-|||This tag will contain the Bank account details of Partner/PayFac which needs to be configured at Fiserv End|
+|`currency`|-|||UW Account details are primarily the actual merchant account which will be used while underwriting the merchant|
+|`branch`|Numeric|100|NA|Account number of the Merchant|
+|`bankAddress`|Alphanumeric|35|NA|Account name of the Merchant|
+|`accType`|Alphanumeric|15|NA|Ifsc of the Merchant|
+|**fundingaccountdetails**|Alphanumeric|80|NA|Bank name of the Merchant|
+|`accountNo`|Alphanumeric|3|NA|Currency of the Merchant|
+|`accountName`|Alphanumeric|500|NA|Branch of the Merchant|
+|`ifsc`|Alphanumeric|500|NA|Bank address of the Merchant|
+|`bankName`|Alphanumeric|30|NA|Acc Type of the Merchant|
+|`currency`|-|||Funding account will the details of account to which Fiserv will process the funding on daily basis|
+|`branch`|Numeric|100|NA|If different form UW details|
+|`bankAddress`|Alphanumeric|35|NA|Account number of the Merchant|
+|`accType`|Alphanumeric|15|NA|Ifsc of the Merchant|
+|**collectionaccountdetails**|Alphanumeric|80|NA|Bank Name of the Cerchant|
+|`accountNo`|Alphanumeric|3|NA|Currency of the Merchant|
+|`accountName`|Alphanumeric|500|NA|Branch of the Merchant|
+|`ifsc`|Alphanumeric|500|NA|Bank address of the Merchant|
+|`bankName`|Alphanumeric|30|NA|Account Type of the Merchant|
+|`currency`|-|||This section will have details of account which needs to be used for collection of charges. This account may or may not be the same as UW account/Funding account|
+|`branch`|Numeric|100|NA|If different form UW details|
+|`bankAddress`|Alphanumeric|35|NA|Account name of the Merchant|
+|`accType`|Alphanumeric|15|NA|Ifsc of the Merchant|
+|**submerchantDetails**|Alphanumeric|80|NA|Bank Name of the Cerchant|
+|`submerchantID`|Alphanumeric|3|NA|Currency of the Merchant|
+|`submerchantID`|Alphanumeric|500|NA|Branch of the Merchant|
+|`submerchantID`|Alphanumeric|500|NA|Bank address of the Merchant|
+|**businessSummary**|Alphanumeric|30|NA|Acc type of the Merchant|
+|`briefSummary`|-|||This object is not applicable for ISO. This section is used to capture the sub Partner Details of the merchant|
+|`salessrNumber`|Numeric|15|NA|"This is an optional field which the Single MID PayFacs can use to pass their own MID to Fiserv.|
+|`mCCCode`|Numeric|15|NA|This field will be mandatory if the Channel level parameter for Payfac Provided SMID is set to Y.|
+|`mCCDescription`|Numeric|15|NA|If the same is set to 'N', Boarding backend will generate its own MID for the merchant"|
+|`totalTurnover`|-|||This section is used to capture the summary of the merchant|
+|`totalTurnoverPerMID`|Alphanumeric|100|M|Brief summary of the Merchant|
+|`cardTurnover`|Alphanumeric|100|NA|Sales number of the Merchant|
+|`avgTicketAmt`|Numeric|20|M|MCC  number of the Merchant|
+|`dccTurnoverPerMID`|Alphanumeric|200|M|MCC  description of the Merchant|
+|`pgTurnover`|Numeric|20|M|Total  turnover number of the Merchant|
+|`pgTurnoverPerMID`|Numeric|20|M|Total turnover per mid of the Merchant|
+|`avgEMITicketAmt`|Numeric|20|O|Card turnover of the Merchant|
+|`tranVolumeInternet`|Numeric|20|M|Avg ticket amt of the Merchant|
+|`tranVolumeMoto`|Numeric|20|M|Dcc turnover per mid of the Merchant|
+|`tranVolumeinStore`|Numeric|20|O|Pg  turnover of the Merchant|
+|`deliveryDays0`|Numeric|20|O|Pg turnover per mid of the Merchant|
+|`deliveryDays7`|Numeric|20|O|Avg emi ticket amt of the Merchant|
+|`deliveryDays14`|Numeric|20|O|Tran volume internet of the Merchant|
+|`deliveryDays30`|Numeric|20|O|Tran volume moto of the Merchant|
+|`deliveryDaysOver30`|Numeric|20|M|Tran volume in store of the Merchant|
+|`tranTypeMagStrip`|Numeric|20|M|Delivery Days0 of the Merchant|
+|`tranTypeChip`|Numeric|20|M|Delivery Days7 of the Merchant|
+|`tranTypeKeyed`|Numeric|20|M|Delivery Days14 of the Merchant|
+|`creditSalesConsumer`|Numeric|20|M|Delivery Days30 of the Merchant|
+|`creditSalesBusiness`|Numeric|20|M|Delivery Days Over30 of the Merchant|
+|`firstReport`|Numeric|20|M|Tran type magstripe of the Merchant|
+|`recurringTranFlag`|Numeric|20|M|Tran type chip of the Merchant|
+|`refundPolicy`|Numeric|20|M|Tran type keyed of the Merchant|
+|`cardRefundDays`|Numeric|20|M|Credit salesconsumer of the Merchant|
+|`thirdPartyProcessorFlag`|Numeric|20|M|Credit salesbusiness of the Merchant|
+|`thirdPartyProcessorName`|Alphanumeric|20|NA|First report of the Merchant|
+|`smallMerchant`|Alphanumeric|20|NA|Recurring tran flag of the Merchant|
+|`Refund Policy`|Alphanumeric|20|NA|Refund policy of the Merchant|
+|`Card Refund Days`|Alphanumeric|20|NA|Card refund days of the Merchant|
+|`ThirdParty Processor Flag`|Alphanumeric|20|NA|Thirdparty processor flag of the Merchant|
+|`ThirdParty Processor Name`|Alphanumeric|40|NA|Thirdparty processor name of the Merchant|
 
 
 ### Successful Response Payload
