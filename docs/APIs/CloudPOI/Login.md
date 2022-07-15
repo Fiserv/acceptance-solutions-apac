@@ -79,8 +79,5 @@ The table below provides the list of error codes and description for this applic
 | --------  | ------------------ |
 |`200`| Request executed |   
 |`300`| Request failure |
-|`401`| Authentication failed |
-|`402` | Bad Credential |
 |`404`|  Not found |  
-|`400`| Generic Error |
-|`500`|Internal Server Error|
+|`500`| Internal Server Error |
