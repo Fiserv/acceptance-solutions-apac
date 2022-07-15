@@ -42,10 +42,10 @@ The table below contains the mandatory fields required for a successful request.
 
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 | `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value **API** |
 | **KeySelection** |	 |	 | |	This is the object |
-| `boardingType` | *Alphanumeric* |	20 |	M |	Type of Merchant: NEWMID / ADDMID / ADDTID |
+| `boardingType` | *Alphanumeric* |	20 |	M |	Type of merchant: NEWMID / ADDMID / ADDTID |
 | **MerchantDetails** | |	 |  |	This is the object |
 | `businessName` |	*Alphanumeric* |	64 | M | Trade Name of the Merchant |
 | `legalName` |	*Alphanumeric* |	64	| M	 | Legal Name of the Merchant |
