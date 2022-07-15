@@ -44,16 +44,16 @@ The table contains the mandatory fields required for a successful request. The f
 | -------- | :-------: | :--: | :------------: | ------------------ |
 |`appType`|Alphanumeric|8|M|Fixed Value **API**|
 |`salesId`|Alphanumeric|70|M|User Credential created for each partner|
-|`channelCode`|Alphanumeric|10|M|Static Channel Code shared with each partner|
+|`channelCode`|Alphanumeric|10|M|Static channel code shared with each partner|
 |`mccCode`|Numeric|20|M|Unique value assigned for each industry|
-|`merchantType`|Alphanumeric|20|M|Type of Merchant whether Small or Large Merchant|
+|`merchantType`|Alphanumeric|20|M|Type of merchant whether Small or Large Merchant|
 |`acceptanceType`|Alphanumeric|10|M|Static Value: 'ECOM' / 'POSMOB'|
-|`typeOfBusiness`|Alphanumeric|50|M|Type of Bussiness means Sole Proprieter, Individual etc|
+|`typeOfBusiness`|Alphanumeric|50|M|Type of bussiness means Sole Proprieter, Individual etc|
 |`international`|Alphanumeric|3|O|Applicable if the merchant supports international Card Transactions|
 |`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder|
-|`dcc`|Alphanumeric|3|O|It is applicable for Foreign rate conversion(Y / N)|
+|`dcc`|Alphanumeric|3|O|It is applicable for foreign rate conversion(Y / N)|
 |`fundingCurrency`|Alphanumeric|8|M|The currency settled to the merchant NET_INR, NET_USD, NET_AUD etc|
-|`boardingType`|Alphanumeric|20|M|Type of Merchant: New MID / Add MID / Add TID|
+|`boardingType`|Alphanumeric|20|M|Type of merchant: New MID / Add MID / Add TID|
 |`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover|
 
 
