@@ -4,3 +4,5 @@ From hospitality to retail, the Fiserv Local Integration APIs  enables cashiersâ
 
 # Who is it for
 Hospitality industry, F&B industry, self-service kiosks retailers who wish to integrate reservations, bookings and payments to their central payment systems.
+
+Fiserv Local integration API caters to merchants who decided to have your payment systems connected via LAN or direct cable connections.
