@@ -21,6 +21,7 @@ paths:
       x-proxy-name: User Login
       x-default-example: IMS Sample
       parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
       - name: ain
         in: query
         required: true
@@ -54,11 +55,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Response200'
+                $ref: '#/components/schemas/CreateAppResponse'
               examples:
                 "401":
-                  $ref: '#/components/examples/Login401'
-        
+                  $ref: '#/components/examples/CreateApp401'
   /boardinggateway/externalboarding/secure/create:
     post:
       tags:
@@ -121,13 +121,17 @@ components:
             authToken:
               type: string
               description:  auth token
+              example: "eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.Lb1bHTkIf39A3aZjPQlovMegOPquGZQxNZHMMmBkodKYFgEKkSoocQ.ouWgCX3kAAt3yxFTLsZjQw.hEkAaKujQuNj7_3L2WjtKyY2pf-lRv5ARTMNq1-YQWGnSDWswEsxba6BY4n8gifp07eKdw7c9cYtGWcnZ1FCRJaKJqHAn8dn55xOjYEYFv8JRCZI4KHjAPIgkHhKZrxuKFw8hPRkzFx5ANC4MMetTizAlgKx8f0JUvhSF1qVzhBMwHUqw4seG2D7fDCMlNujLGWRJrU_Dz9BIW7yWMKkN8kXho7A3lC7QeMR7k1_NJb7aEQ_m8hO0Cb9tP9Sc2ivSjMg4yGtOvo3WAegbfsahJsfknYODV5Pj0jignTIcx7SLNfjUMMzFOVuv7dSRaQl52xYCAu0zxrWBnF3QmaZROejY55Fm3gBHKChPP2q1gcsDLX9vBW_TgpKD7sLOh_ltjDUNCJPCjujGZJfRDdW5IurGcNpif075zEdSvydENwV_5KJj1bPjOFPENWDJEhvCQbQsNmMES6qYeSouS2epl6X6UoFcCoIrVK9geyOdOJPtYK5kwDdkGCmJPlnc6OfPgjdVMqep1KwYkQOzqVrnnihP1wj7Ei-W94UvS6fVGvB2nR55fJz-Ztoy7zez7HV6D0HETcPDaA_gz8fsHuHZc4KhDwTrB452iWjAB-Eed93AtKGVUPuty2VPfis_tt4QqWMQMqNQeOGRoViSgmeixnZmYhz9z3tkF-bFAc_DSB_WvPlnxzcYRxSB7q4LYgDImJETHJDi_OSPreqoaneCTjTJoeXOOTtj7qHEj99N47UeXOIvK3W1UFta7pjcpDFbbir2zrpVvyhHtuOEtbDJXxqiUDbuc80HfpsgsBwtnbZWavJg7ABUea165EkLjdgqHFvV2da2FCV3Qq6v2pS5hufLNfpw9yOAD-czZrLeH5DaRMcHhEDkYDlYhQmcwKwsPA-rHgqFGYNLZWyWFIZH0VEPsCsoY74ptJ93uKthtgiHszfNsX7Qm8J5q25W6-QhbHdfY0WRdiK3U3Ym2H_8vK-Vgk1CKZX_NwqZWfcyCdDjtMB6x3EkOUqNYS-OsXpFrH-v9WareSrlFkgbNIY5LD4TdTu8wuid7-V8XQ1q54B4VPXCAt3q9Pcevt3RnpDzsDVS-1kkoGq4N8aj3TwAugB91PaqvhROWWEEwdRbNhugKbKRHtVW9oyDAkmVKjJx8hkFLkFMWbCeeyipuZH-MhhZBVIX0DabEHX7IJMvVOAiR9rtAgfUmJ5VrTud52dao1pMPnOt7xgWxocG3KHBbNIwk9_ub0kutLQ4P0eaFGIluqhfnJYz1nTzM_EU4CIKpI-LVcknWuNMmHbJlsvcFlsYTH-P74uJVz-UziKEMMqrmYeH--dZwEwLTD7Z5rnS8HPD1GDt8FhySXLjrKDCGeBG2dgo4HD3DNCRjDnONU.hk_0ZUHha82WP7NVj9EzOQ"
             refreshToken:
               type: string
               description: refresh token
+              example: "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZmlzZXJ2LmNvbSIsImF1ZCI6IkZpc2VydiBHQlMiLCJUWVBFIjoiUkVGUkVTSCIsImV4cCI6MTY0NTg3MjcwMCwianRpIjoiaDlaWnR5cUJESWZKSmFFU2JrTi1vdyIsImlhdCI6MTY0NTY5OTkwMCwibmJmIjoxNjQ1Njk5NjAwLCJ2ZXJzaW9uIjoiMS4wIiwic3ViIjoicHJlcmFuYWF1cyJ9.GMFTfttx9ClDBViB8OshCJBMtEfSDisi_O75nYRUgd4"
             ttl:
               type: integer
               description: timeout limit
               example: 30
+              
+          
     CreateAppResponse:
       type: object
       properties:
@@ -2513,7 +2517,11 @@ components:
         {
           "authToken": "eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.Lb1bHTkIf39A3aZjPQlovMegOPquGZQxNZHMMmBkodKYFgEKkSoocQ.ouWgCX3kAAt3yxFTLsZjQw.hEkAaKujQuNj7_3L2WjtKyY2pf-lRv5ARTMNq1-YQWGnSDWswEsxba6BY4n8gifp07eKdw7c9cYtGWcnZ1FCRJaKJqHAn8dn55xOjYEYFv8JRCZI4KHjAPIgkHhKZrxuKFw8hPRkzFx5ANC4MMetTizAlgKx8f0JUvhSF1qVzhBMwHUqw4seG2D7fDCMlNujLGWRJrU_Dz9BIW7yWMKkN8kXho7A3lC7QeMR7k1_NJb7aEQ_m8hO0Cb9tP9Sc2ivSjMg4yGtOvo3WAegbfsahJsfknYODV5Pj0jignTIcx7SLNfjUMMzFOVuv7dSRaQl52xYCAu0zxrWBnF3QmaZROejY55Fm3gBHKChPP2q1gcsDLX9vBW_TgpKD7sLOh_ltjDUNCJPCjujGZJfRDdW5IurGcNpif075zEdSvydENwV_5KJj1bPjOFPENWDJEhvCQbQsNmMES6qYeSouS2epl6X6UoFcCoIrVK9geyOdOJPtYK5kwDdkGCmJPlnc6OfPgjdVMqep1KwYkQOzqVrnnihP1wj7Ei-W94UvS6fVGvB2nR55fJz-Ztoy7zez7HV6D0HETcPDaA_gz8fsHuHZc4KhDwTrB452iWjAB-Eed93AtKGVUPuty2VPfis_tt4QqWMQMqNQeOGRoViSgmeixnZmYhz9z3tkF-bFAc_DSB_WvPlnxzcYRxSB7q4LYgDImJETHJDi_OSPreqoaneCTjTJoeXOOTtj7qHEj99N47UeXOIvK3W1UFta7pjcpDFbbir2zrpVvyhHtuOEtbDJXxqiUDbuc80HfpsgsBwtnbZWavJg7ABUea165EkLjdgqHFvV2da2FCV3Qq6v2pS5hufLNfpw9yOAD-czZrLeH5DaRMcHhEDkYDlYhQmcwKwsPA-rHgqFGYNLZWyWFIZH0VEPsCsoY74ptJ93uKthtgiHszfNsX7Qm8J5q25W6-QhbHdfY0WRdiK3U3Ym2H_8vK-Vgk1CKZX_NwqZWfcyCdDjtMB6x3EkOUqNYS-OsXpFrH-v9WareSrlFkgbNIY5LD4TdTu8wuid7-V8XQ1q54B4VPXCAt3q9Pcevt3RnpDzsDVS-1kkoGq4N8aj3TwAugB91PaqvhROWWEEwdRbNhugKbKRHtVW9oyDAkmVKjJx8hkFLkFMWbCeeyipuZH-MhhZBVIX0DabEHX7IJMvVOAiR9rtAgfUmJ5VrTud52dao1pMPnOt7xgWxocG3KHBbNIwk9_ub0kutLQ4P0eaFGIluqhfnJYz1nTzM_EU4CIKpI-LVcknWuNMmHbJlsvcFlsYTH-P74uJVz-UziKEMMqrmYeH--dZwEwLTD7Z5rnS8HPD1GDt8FhySXLjrKDCGeBG2dgo4HD3DNCRjDnONU.hk_0ZUHha82WP7NVj9EzOQ",
           "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZmlzZXJ2LmNvbSIsImF1ZCI6IkZpc2VydiBHQlMiLCJUWVBFIjoiUkVGUkVTSCIsImV4cCI6MTY0NTg3MjcwMCwianRpIjoiaDlaWnR5cUJESWZKSmFFU2JrTi1vdyIsImlhdCI6MTY0NTY5OTkwMCwibmJmIjoxNjQ1Njk5NjAwLCJ2ZXJzaW9uIjoiMS4wIiwic3ViIjoicHJlcmFuYWF1cyJ9.GMFTfttx9ClDBViB8OshCJBMtEfSDisi_O75nYRUgd4",
-          "ttl": 30
+          "ttl": 30,
+          "Status": {
+            "StatusCode": "0",
+            "StatusDesc": "Success"
+          }
         }
     CreateApp200:
       value:
@@ -2627,16 +2635,7 @@ components:
           },
           "institutionId": "47",
           "countryCode": "IND"
-        }  
-    "Login401":
-      value:
-        Status:
-          StatusCode: "1740"
-          StatusDesc: Authentication Failed
-          Severity: Error
-          SvcProviderName: Premier
-          ServerStatusCode: "401"
-          ServerStatusDesc: Unauthorized     
+        }       
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
