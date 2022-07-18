@@ -40,7 +40,7 @@ GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/packages`
 The table contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/packages).
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 |`appType`|Alphanumeric|8|M|Fixed Value **API**|
 |`salesId`|Alphanumeric|70|M|User Credential created for each partner|
