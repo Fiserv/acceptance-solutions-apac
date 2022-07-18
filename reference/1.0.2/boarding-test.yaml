@@ -61,6 +61,7 @@ paths:
               examples:
                 "401":
                   $ref: '#/components/examples/Response401'
+                  
   /boardinggateway/externalboarding/secure/create:
     post:
       tags:
@@ -101,6 +102,12 @@ paths:
               examples:
                 "401":
                   $ref: '#/components/examples/Response401'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateAppResponse'
   
   
       
