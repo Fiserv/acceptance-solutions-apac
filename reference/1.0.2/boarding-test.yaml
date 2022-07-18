@@ -8,7 +8,9 @@ info:
 servers:
 - url: https://www.uat.fdmerchantservices.com
   description: UAT URL
-
+tags:
+- name: Boarding
+  description: REST API for Boarding
 paths:
   /boardinggateway/externalboarding/partner/login:
     get:
@@ -98,8 +100,55 @@ paths:
                 $ref: '#/components/schemas/CreateAppResponse'
               examples:
                 "401":
+                  $ref: '#/components/examples/Response401'
+  /boardinggateway/externalboarding/secure/newmid:
+    post:
+      tags:
+      - Boarding
+      summary: New Merchant / Single MID PayFac / Multi  MID PayFac
+      description: New Merchant / Single MID PayFac / Multi  MID PayFac
+      operationId: submitapplication
+      x-group-name: Boarding
+      x-proxy-name: Submit Application
+      x-default-example: New merchant
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+               $ref: '#/components/schemas/MerchantApplication'
+            examples:
+              New merchant:
+                $ref: "#/components/examples/NewMerchant"
+              Single MID PayFac:
+                 $ref: "#/components/examples/SingleMIDPayFac"
+              Multi MID PayFac:
+                 $ref: "#/components/examples/MultiMIDPayFac"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/Response'
+              examples:
+                New merchant:
+                  $ref: "#/components/examples/NewMerchantResponse"
+                Single MID PayFac:
+                  $ref: "#/components/examples/SingleMIDPayFacResponse"
+                Multi MID PayFac:
+                  $ref: "#/components/examples/MultiMIDPayFacResponse" 
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+              examples:
+                "401":
                   $ref: '#/components/examples/CreateApp401'
-
   
       
 components:
@@ -1015,6 +1064,15 @@ components:
           SvcProviderName: Premier
           ServerStatusCode: "401"
           ServerStatusDesc: Unauthorized
+    Response401:
+      value:
+        Status:
+          StatusCode: "1740"
+          StatusDesc: Authentication Failed
+          Severity: Error
+          SvcProviderName: Premier
+          ServerStatusCode: "401"
+          ServerStatusDesc: Unauthorized  
     SingleMIDPayFacResponse:
       value:
         {
