@@ -51,7 +51,7 @@ The table contains the mandatory fields required for a successful request. The f
 |`typeOfBusiness`|Alphanumeric|50|M|Type of bussiness means Sole Proprieter, Individual etc|
 |`international`|Alphanumeric|3|O|Applicable if the merchant supports international Card Transactions|
 |`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder|
-|`dcc`|Alphanumeric|3|O|It is applicable for foreign rate conversion(Y / N)|
+|`dcc`|Alphanumeric|3|O|If enable for foreign rate conversion value return Y/N.|
 |`fundingCurrency`|Alphanumeric|8|M|The currency settled to the merchant NET_INR, NET_USD, NET_AUD etc|
 |`boardingType`|Alphanumeric|20|M|Type of merchant: New MID / Add MID / Add TID|
 |`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover|
