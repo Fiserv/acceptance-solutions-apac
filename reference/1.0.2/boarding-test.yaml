@@ -52,7 +52,7 @@ paths:
               examples:
                 IMS Sample:
                   $ref: "#/components/examples/LoginRs200"
-        "401":
+        default:
           description: Unauthorized
           content:
             application/json:
