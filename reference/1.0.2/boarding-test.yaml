@@ -24,9 +24,24 @@ paths:
       x-default-example: IMS Sample
       parameters:
       - {$ref: "#/components/parameters/ApiKeyHeader"}
-      - {$ref: "#/components/parameters/ainInfo"}
-      - {$ref: "#/components/parameters/sourceInfo"}
-
+      - name: ain
+        in: query
+        required: true
+        description: instituiion id
+        schema:
+          type: string
+        examples:
+          IMS Sample:
+            value: "4700000"
+      - name: source
+        in: query
+        required: true
+        description: SOURCE TYPE i.e API , TAB etc ..
+        schema:
+          type: string
+        examples:
+          IMS Sample:
+            value: "API"  
       responses:
         "200":
           description: Success
@@ -103,6 +118,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CreateAppResponse'
+  
+  
+      
 components:
   parameters:
     ApiKeyHeader:
@@ -111,21 +129,6 @@ components:
       in: header
       required: true
       description: never expiring token for all apis
-  
-    ainInfo:
-      name: ain
-      schema: {type: string, example: '4700000'}
-      in: query
-      required: true
-      description: instituiion id
-
-    sourceInfo:
-      name: source
-      schema: {type: string, example: 'API'}
-      in: query
-      required: true
-      description: Source Type i.e API , TAB etc ..
-
 
   schemas:
     Response200:
