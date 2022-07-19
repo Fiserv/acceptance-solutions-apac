@@ -103,9 +103,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CreateAppResponse'
-  
-  
-      
 components:
   parameters:
     ApiKeyHeader:
