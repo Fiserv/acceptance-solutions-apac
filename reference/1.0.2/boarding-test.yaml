@@ -36,7 +36,7 @@ paths:
       - name: source
         in: query
         required: true
-        description: SOURCE TYPE i.e API , TAB etc ..
+        description: Source Type i.e API , TAB etc ..
         schema:
           type: string
         examples:
