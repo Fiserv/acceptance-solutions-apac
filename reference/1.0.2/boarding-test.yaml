@@ -44,7 +44,7 @@ paths:
             value: "API"  
       responses:
         "200":
-          description: OK
+          description: Success
           content:
             application/json:
               schema:
@@ -52,7 +52,7 @@ paths:
               examples:
                 IMS Sample:
                   $ref: "#/components/examples/LoginRs200"
-        default:
+        "401":
           description: Unauthorized
           content:
             application/json:
@@ -61,6 +61,16 @@ paths:
               examples:
                 "401":
                   $ref: '#/components/examples/Response401'
+
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response200'
+              examples:
+                "200":
+                  $ref: '#/components/examples/LoginRs200'
                   
   /boardinggateway/externalboarding/secure/create:
     post:
@@ -142,7 +152,7 @@ components:
             Status:
               type: string
               description: status of the response
-              example: 200
+              example: "200"
             
               
           
