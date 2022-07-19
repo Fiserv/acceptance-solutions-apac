@@ -26,7 +26,7 @@ paths:
       - {$ref: "#/components/parameters/ApiKeyHeader"}
       - {$ref: "#/components/parameters/ainInfo"}
       - {$ref: "#/components/parameters/sourceInfo"}
-      
+
       responses:
         "200":
           description: Success
@@ -127,7 +127,7 @@ components:
       schema: {type: string, example: 'API'}
       in: query
       required: true
-      description: SOURCE TYPE i.e API , TAB etc ..
+      description: Source Type i.e API , TAB etc ..
 
 
   schemas:
