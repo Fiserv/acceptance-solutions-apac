@@ -19,7 +19,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
    - Enjoy the benefits of enabling tokenized payment transactions to be integrated to your payment interface
  - Optimize your financial management with digitalized receipts that can be viewed and downloaded on Fiserv Business Point (merchant portal)
 
-<B>Once you have assessed the use cases, discover our APIs here for a further deep dive.</B>
+<B>Once you have assessed the use cases, discover our APIs [here](./?path=docs/CloudPOI.md&branch=develop) for a further deep dive. </B>
 
 <BR/>
 
@@ -31,7 +31,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
 
 Handy tips before you begin, we would recommend:
 
-1. <B>Set up your test account here</B>
+1. <B>Set up your test account [here](./?path=docs/introduction/contact-us.md&branch=develop)</B>
     
     Channel specific integration credentials will be shared through email which includes: -
      - Biller ID
@@ -43,7 +43,7 @@ Handy tips before you begin, we would recommend:
      - Engage your appointed hospitality solutions provider for a technical discussion with our integration support team
 3. Assess with your <B>in-house network architecture team</B> and align on the connectivity requirements
     - For detailed technical compatibility requirements, do reach out to our integration support team
-4. Check if your appointed point of sale (POS) provider had been certified with Fiserv here.
+4. Check if your appointed point of sale (POS) provider had been certified with Fiserv [here](./?path=docs/CloudPOI.md&branch=develop).
 
 <BR/>
 
@@ -74,10 +74,10 @@ Handy tips before you begin, we would recommend:
 <B>Integrate and communicate</B>
 1. Identify key points of contact from your various stakeholders.
 2. Plan with your technology department / external vendor on the timelines.
-3. Review Fiserv API documents here. Explore the sample request and response APIs provided in the sandbox.
+3. Review Fiserv API documents [here]( ./?path=docs/CloudPOI.md&branch=develop). Explore the sample request and response APIs provided in the sandbox.
 4. Kick start your integration development with our APIs.
 
-For any clarifications or support required on technical integration, do reach out to our integration support teams here.
+For any clarifications or support required on technical integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
 
 
 <B>Handy Tips:</B> You may wish to consider discussing early with your team on which test scenarios would be required. 
@@ -96,7 +96,7 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
    - Check on any firewalls / IPs that needs to be set-up
    - Ensure the relevant test keys and / test certificates have been installed, pointing to the sandbox environment
 3) Execute the testing process
-    - For any clarifications or support on testing challenges during integration, do reach out to our integration support teams here.
+    - For any clarifications or support on testing challenges during integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
 4) Test cycle closure upon successful completion
 
 <BR/>
@@ -117,32 +117,4 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
    - Conduct live verification
 3) Monitor the performance of the Fiserv payment terminals to your point of sale (POS) systems
 
-For any queries post deployment, do contact our support teams here.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+For any queries post deployment, do contact our support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
