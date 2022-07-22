@@ -146,28 +146,33 @@ SHA256({"amt":"35900","detail":"Y","ecrRef":"1234567890123456"})
 ### Request
 The table below identifies the required properties in the request message
 
-| Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
-| -------- | ------- | ------- |------- | (------------------ | 
-| `Data Type` | String |2 |	M |	01 - Sale (Sale, DCC) |
-| |		 | |	 | 02 - Preauth Sale |
-| |		 | |	 | 03 - Preauth Completion |
-| |		 | |	 | 04 - Refund |
-| |		 | |	 | 05 - Void |
-| |		 | |	 | 06 - EMI Sale |
-| |		 | |	 | 07 - Settlement Transaction |
-| `Amt` | String | 10 | M | This transaction involves amount "100.00" |
-| `Detail` | String | 2 | O | To define the respond message in detail format. Y means detail message, N or skip this format |
-| `ECR Ref` | String | 2 | O | ECR reference no. up to 16 digits |
-| `Merchant Reference Number (MRN`) | String | 10 | O | Unique merchant number for reconciliation |
-| `Terminal Invoice No` | String | 20 | M | Use the terminal Invoice No to indicate the invoice of terminal |
-| `Acq Name` | String | 20 | O (Mandatory for void & PreAuth Completion transaction) | To identify this transaction is initiated by respective Acquirer |
-| `User Defined Fields` | String | 20 | O | UDF fields |
-| `Pwd` | String | 8 | O | Void password |
-| `RRN` | String | 20 | O | 12 digits RRN |
-| `Auth Code` | String | 3 | O | Approval code of authorization |
-| `Print charge slip` | String | 8 | O (Mandatory for Pre Auth Completion transaction) | Y or N ( Default - Y ) |
-| `Tenure` |	String | 2 | O | The instalment plan of this transaction |
-| `checksum` | String | 10 | O (Mandatory for Transaction check status transaction)	| Checksum for "data" field.Use SHA256 method to calculate "data" field |
+| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
+| -------- | -------- | -------------- | -----------------------| ------------------------- |
+|`dataType`|String|2|M|01 - Sale (Sale, DCC) 
+| | | | | 02 - Preauth Sale |
+| | | | | 03 - Preauth Completion |
+| | | | | 04 - Refund |
+| | | | | 05 - Void | 
+| | | | | 08 - EMI Sale |
+| | | | | 12 - Settlement Transaction|
+|`amt`|String|10|M|This transaction involves amount "100.00"|
+|`detail`|String|2|O|To define the respond message in detail format. 
+| | | | | 'Y' means detail message, 'N' means skip this format|
+|`ecrRef`|String|2|O|ECR reference no. up to 16 digits|
+|`merchantReferenceNumber(MRN)`|String|10|O|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
+|`terminalInvoiceNumber`|String|20|M|Use the terminal Invoice No to indicate the invoice of terminal|
+|`acqName`|String|20|O|To identify this transaction is initiated by respective Acquirer (Mandatory for void & PreAuth Completion transaction)|
+|`userDefinedFields`|String|20|O|UDF fields|
+|`pwd `|String|8|O|Void password|
+|`rrn`|String|20|O|12 digits RRN|
+|`authCode`|String|3|O|Approval code of authorization|
+|`printChargeslip`|String|8|O |Y or N ( Default - Y )  (Mandatory for Pre Auth Completion transaction)|
+|`emi`|String|20|O|EMI details – emi flag is 1/0 
+EMI reference number generated is 8 bytes
+Tenure, discount amount, product amount, EMI per month|
+|`checksum`|String|10|O (Mandatory for Transaction check status transaction)|Checksum for "data" field.Use SHA256 method to calculate “data” field|
+
+
 
 ### Response in Payload
 ### Sale Response  
@@ -288,58 +293,104 @@ The table below identifies the required properties in the response message
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------- | ------------------ | 
-| `Data Type` | String | 2 | M | 01 - Sale (Sale, DCC) |
-| |		 | |	 | 02 - Preauth Sale |
-| |		 | |	 | 03 - Preauth Completion |
-| |		 | |	 | 04 - Refund |
-| |		 | |	 | 05 - Void |
-| |		 | |	 | 06 - EMI Sale |
-| |		 | |	 | 07 - Settlement Transaction |
-| `Amount` | String | 10 | M | Length 10 including decimal |
-| `AID` | String | 10 | O | Acquirer ID |
-| `Adj Amt` | String | 10 | O | Amount |
-| `Auth Code` | String | 8 | M | Auth Code |
-| `ATC` | String | 12 | O | Application Counter Value |
-| `Batch Number` | String | 6 | M | Terminal Batch Number |
-| `Cardholder Name` | String | 25 | O | Name of the cardholder |
-| `Card Type` | String | 10 | M | Type of card |
-| `Pos Entry Mode` | String | 3 | O | Magstipe,Chip, Contactless, Manual entry, etc. |
-| `Card Exp Date` | String | 4 | O | Transaction card expiry date |
-| `Merchant ID` | String | 16 | M | Merchant ID |
-| `No signature` | String | 2 | O | 'Y' or 'N' |
-| `Pan Number` | String | 16 | O | This will identify as Card number |
-| `Reference Number` | String | 20 | M | This will identify as Reference Number |
-| `Status` | String | 2 | O | Status - "A" |
-| `TC` | String | 10 | O | Transaction Number |
-| `Terminal ID` | String | 8 | M | Terminal ID |
-| `TVR` | String | 10 | O | Terminal Reference |
-| `Txn date` | Timestamp | 10 | M | Transaction date |
-| `Txn time` | Timestamp | 10 | M | Transaction time |
-| `Txn id` | String | 10 | M | Transaction Id |
-| `checksum` | String | 50 | O | Checksum for "data" field.Use SHA256 method to calculate "data" field |
-| `Acquirer Name` | String | 20 | M | Acquirer Name |
-| `EMI specific data` | String | 20 | O | Interest rate, Processing fee, Tenure, etc. |
-| `Batch Upload` | String | 2 | O | 'Y' or 'N' |
-| `Response Code` | String | 2 | M | Host Response code, it has response message |
-| `Response Text` | String | 20 | M | Text of response message |
+|`dataType`|String|2|M|01 - Sale (Sale, DCC) |
+| | | | | 02 - Preauth Sale |
+| | | | | 03 - Preauth Completion | 
+| | | | | 04 - Refund |
+| | | | | 05 - Void  |
+| | | | | 08 - EMI Sale | 
+| | | | | 12 - Settlement Transaction|
+|`amt`|String|10|M|Length 10 including decimal|
+|`aid`|String|10|O|Acquirer ID|
+|`adj Amt`|String|10|O|Adjustment Amount|
+|`authCode`|String|8|M|Auth Code|
+|`atc`|String|12|O|Application Counter Value|
+|`batchNumber`|String|6|M|Terminal Batch Number|
+|`cardholderName`|String|25|O|Name of the cardholder|
+|`cardType`|String|10|M|Type of card|
+|`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
+|`cardExpDate`|String|4|O|Transaction card expiry date|
+|`merchantID`|String|16|M|Merchant ID|
+|`signature`|String|2|O|Y' or 'N'|
+|`panNumber`|String|16|O|This will identify as Card number|
+|`referenceNumber`|String|20|M|This will identify as Reference Number|
+|`status`|String|2|O|Status - "A"|
+|`tc`|String|10|O|Transaction Number|
+|`terminalID`|String|8|M|Terminal ID|
+|`tvr`|String|10|O|Terminal Reference|
+|`txndate`|Timestamp|10|M|Transaction date|
+|`txntime`|Timestamp|10|M|Transaction time|
+|`txnid`|String|10|M|Transaction Id|
+|`checksum`|String|50|O|Checksum for "data" field.Use SHA256 method to calculate “data” field|
+|`acquirerName`|String|20|M|Acquirer Name|
+|`emi`|String|20|O|EMI details – emi flag is 1/0 
+| | | | |EMI reference number generated is 8 bytes
+| | | | |Tenure, discount amount, product amount, EMI per month|
+|`batchUpload`|String|2|O|Y' or 'N'|
+|`responseCode`|String|2|M|Host Response code, it has response message|
+|`responseText`|String|20|M|Text of response message|
 
 
 The table below provides the list of error codes and description for this application.
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`-1` |	The equipment is busy |
-|`-2` |	Please reactivate GP Merchant |
-|`-3` |	Unknown path |
-|`-4` |	Amount error |
-|`-5` |	Unknown trading channels |
-|`-6` |	Exchange currency inconsistency |
-|`-7` |	Inconsistent Business Number and Terminal Number |
-|`0` |	Successful trade |
-|`1` |	Transaction failure |
-|`2` |	Order number duplication |
-|`3` |	Please reactivate GP Merchant |
-|`4` |	Unopened FPS transaction |
-|`5` |	Exchange currencies not supported |
-|`6` |	Error in transaction amount |
-|`7` |	Unsupported transaction types |
-|`8` |	Error inquiring order |
+|`00`|Approved or completed successfully|
+|`01`|Refer to card issuer, Cardholder to contact Issuing Bank|
+|`02`|Refer to card issuer, special condition|
+|`03`| Invalid merchant|
+|`04`|Pick-up card |
+|`05`|Do not honour|
+|`06`|Error|
+|`07`|Pick-up card, special condition|
+|`08`| Honour with identification|
+|`09`|Request in progress|
+|`10`|Approved, partial|
+|`11`|Approved, VIP|
+|`12`|Invalid transaction|
+|`13`|Invalid amount|
+|`14`|Invalid card number|
+|`15`|No such issuer|
+|`19`|Re - enter transaction|
+|`20`|Invalid response|
+|`21`|Card Not Initialized|
+|`22`|Suspected malfunction |
+|`25`| Unable to locate Original Transaction|
+|`30`|Format Error|
+|`31`|Bank not supported|
+|`32`|Expired card, pick-up|
+|`33`|Suspected fraud, pick-up|
+|`34`|Fraud|
+|`36`|Restricted card, pick-up|
+|`38`|PIN tries exceeded|
+|`39`|No credit account|
+|`40`|Function not supported|
+|`41`|Lost card|
+|`42`|No universal account|
+|`43`|Stolen card|
+|`45`|Fallback not allowed|
+|`51`|Not sufficient funds|
+|`52`|No check account|
+|`53`|No savings account|
+|`54`|Expired card|
+|`55`|Incorrect PIN|
+|`56`|No card record|
+|`57`|Transaction not permitted to cardholder|
+|`58`|Transaction not permitted to terminal|
+|`59`|Suspected fraud|
+|`61`|Exceeds withdrawal limit|
+|`62`|Restricted card|
+|`63`|Security violation|
+|`64`|Original amount incorrect|
+|`65`|Exceeds withdrawal frequency|
+|`68`|Issuer Response Timed-out|
+|`75`|PIN tries exceeded|
+|`77`|Intervene, bank approval required|
+|`78`|Intervene, bank approval required|
+|`85`|Not declined|
+|`90`|Cut-off in progress|
+|`91`|Issuer or switch inoperative|
+|`92`|Routing Error|
+|`94`|Duplicate Transaction|
+|`95`|Reconcile error|
+|`96`|System Error|
+|`99`|PIN Block error|

@@ -490,60 +490,63 @@ The table below provides the list of application's error code and its descriptio
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`0`|	SUCC |
-|`1`|	ERR_TIMEOUT |
-|`2`|	ERR_CONNECT |
-|`3`|	ERR_SEND |
-|`4`|	ERR_RECV |
-|`5`|	ERR_PACK |
-|`6`|	ERR_UNPACK |
-|`7`|	ERR_PACKET |
-|`8`|	ERR_MAC |
-|`9`|	ERR_PROC_CODE |
-|`10`|	ERR_MSG |
-|`11`|	ERR_TRANS_AMT |
-|`12`|	ERR_TRACE_NO |
-|`13`|	ERR_TERM_ID |
-|`14`|	ERR_MERCH_ID |
-|`15`|	ERR_NO_TRANS |
-|`16`|	ERR_NO_ORIG_TRANS |
-|`17`|	ERR_HAS_VOIDED |
-|`18`|	ERR_VOID_UNSUPPORTED |
-|`19`|	ERR_COMM_CHANNEL |
-|`20`|	ERR_HOST_REJECT |
-|`21`|	ERR_ABORTED |
-|`22`|	ERR_USER_CANCEL |
-|`23`|	ERR_NEED_SETTLE_NOW |
-|`24`|	ERR_NEED_SETTLE_LATER |
-|`25`|	ERR_NO_FREE_SPACE |
-|`26`|	ERR_NOT_SUPPORT_TRANS |
-|`27`|	ERR_CARD_NO |
-|`28`|	ERR_PASSWORD |
-|`29`|	ERR_PARAM |
-|`31`|	ERR_BATCH_UP_NOT_COMPLETED |
-|`33`|	ERR_AMOUNT |
-|`34`|	ERR_CARD_DENIED |
-|`36`|	ERR_ADJUST_UNSUPPORTED 
-|`37`|	ERR_CARD_UNSUPPORTED |
-|`38`|	ERR_CARD_EXPIRED |
-|`39`|	ERR_CARD_INVALID |
-|`40`|	ERR_UNSUPPORTED_FUNC |
-|`47`|	ERR_NO_MATCH_ACQUIRER |
-|`48`|	ERR_ADJUST_LIMIT |
-|`49`|	ERR_NO_INSTALLMNET_DATA |
-|`50`|	ERR_INVALID_QR_CODE |
-|`51`|	ERR_MOTO_PREAUTH_COMP_UNSUPPORTED |
-|`52`|	ERR_PRINT |
-|`54`|	ERR_ABORTED_DISPLAY |
-|`55`|	ERR_DECLINED |
-|`59`|	CLSS_USE_CONTACT |
-|`60`|	ERR_NO_RECORD |
-|`66`|	ERR_UNEXPECTED |
-|`204`|	ERR_REPEATED_UID |
-
-
-
-
-
-
-
+|`00`|Approved or completed successfully|
+|`01`|Refer to card issuer Cardholder|
+|`02`|Refer to card issuer, special condition|
+|`03`| Invalid merchant|
+|`04`|Pick-up card if not hostile keep the card|
+|`05`|Do not honour Cardholder to contact Issuing bank|
+|`06`|Error|
+|`07`|Pick-up card, special condition|
+|`08`| Honour with identification|
+|`09`|Request in progress|
+|`10`|Approved, partial|
+|`11`|Approved, VIP|
+|`12`|Invalid transaction|
+|`13`|Invalid amount|
+|`14`|Invalid card number|
+|`15`|No such issuer|
+|`19`|Re - enter transaction|
+|`20`|Invalid response|
+|`21`|Card Not Initialized|
+|`22`|Suspected malfunction|
+|`25`| Unable to locate Original Transaction|
+|`30`|Format Error|
+|`31`|Bank not supported|
+|`32`|Expired card, pick-up|
+|`33`|Suspected fraud, pick-up|
+|`34`|Fraud|
+|`36`|Restricted card, pick-up|
+|`38`|PIN tries exceeded|
+|`39`|No credit account|
+|`40`|Function not supported|
+|`41`|Lost card|
+|`42`|No universal account|
+|`43`|Stolen card|
+|`45`|Fallback not allowed|
+|`51`|Not sufficient funds|
+|`52`|No check account|
+|`53`|No savings account|
+|`54`|Expired card|
+|`55`|Incorrect PIN|
+|`56`|No card record|
+|`57`|Transaction not permitted to cardholder|
+|`58`|Transaction not permitted to terminal|
+|`59`|Suspected fraud|
+|`61`|Exceeds withdrawal limit|
+|`62`|Restricted card|
+|`63`|Security violation|
+|`64`|Original amount incorrect|
+|`65`|Exceeds withdrawal frequency|
+|`68`|Issuer Response Timed-out|
+|`75`|PIN tries exceeded|
+|`77`|Intervene, bank approval required|
+|`78`|Intervene, bank approval required|
+|`85`|Not declined|
+|`90`|Cut-off in progress|
+|`91`|Issuer or switch inoperative|
+|`92`|Routing Error|
+|`94`|Duplicate Transaction|
+|`95`|Reconcile error|
+|`96`|System Error|
+|`99`|PIN Block error|

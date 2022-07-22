@@ -573,19 +573,20 @@ The table below identifies the required properties in the response message
 The table below provides the list of error codes and description for this application.
 | ErrorCode |  Description / Values |
 | --------  | ------------------ |
-| -1 |	The equipment is busy |
-| -2 |	Please reactivate GP Merchant |
-| -3 |	Unknown path |
-| -4 |	Amount error |
-| -5 |	Unknown trading channels |
-| -6 |	Exchange currency inconsistency |
-| -7 |	Inconsistent Business Number and Terminal Number |
-| 0	| Successful trade |
-| 1	 | Transaction failure |
-| 2	 | Order number duplication |
-| 3	| Please reactivate GP Merchant |
-| 4	| Unopened FPS transaction |
-| 5	| Exchange currencies not supported |
-| 6	| Error in transaction amount |
-| 7	| Unsupported transaction types |
-| 8	| Error inquiring order |
+|`00`|Approved Balances|
+|`01`|Place Call|
+|`02`|Over Floor Limit|
+|`03`|Merchant Not on File|
+|`12`|Invalid Transaction|
+|`14`|Invalid Account|
+|`19`|Retry Transaction|
+|`25`|CAF Not Found|
+|`30`|Invalid msg format|
+|`31`|Card Not Supported|
+|`41`|Lost or Stolen Card|
+|`43`|CAF Status 3, stolen card|
+|`51`|Pin Tries Exceeded|
+|`54`|Expired Card|
+|`55`|Incorrect Pin|
+|`58`|Transaction not allowed|
+|`91`|Auth Timed out|

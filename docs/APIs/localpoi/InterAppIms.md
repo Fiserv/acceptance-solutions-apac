@@ -1,12 +1,13 @@
 # Inter-Application Integration
 
-Inter Application Integration provides a seamless integration between the Fiserv payment application and the merchant application locally installed in android-based terminals.<BR/> 
+Inter Application Integration provides a seamless integration between the Fiserv payment application and the merchant application locally installed in android-based terminals.
 E.g. A biller can integrate with a payment application and complete the payment transaction.
 
-Financial payment transactions that are supported by inter application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion,  Pre-Authorisation Void,  Pre-Authorisation Completion Void, Void, Refund, Adjust, Settlement and Offline.
+Financial payment transactions that are supported by inter application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion, Transaction Status Check, EMI Sale, Void, Settlement and Bharat QR code generation.
+
 
 ## How it works
--	Digital transactions from the Fiserv proprietary mCommerce application supported by the payment terminal includes :-
+-	Digital transactions from the Fiserv's proprietary mCommerce application supported by the payment terminal includes :-
     -	Amazon QR
     -	Bharath QR
     -	UPI QR
@@ -180,44 +181,43 @@ The table below identifies the required properties in the request message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | ----- | ------------------------------------------------------| ------------------------- |
-| `Function Code` | String	| 2 | 02 - Preauth Sale |
-|  | 	|  | 03 - Preauth Completion |
-|  | 	|  | 04 - Refund |
-|  | 	|  | 05 - Void |
-|  | 	|  | 06 - TIP |
-|  | 	|  | 07 - Cash@POS |
-|  | 	|  | 08 - EMI Sale |
-|  | 	|  | 09 - Loyality Points Earned |
-|  | 	|  | 10 - Loyality Points Redeemed |
-|  | 	|  | 11 - Settlement Transaction |
-|  | 	|  | 12 - Transaction status |
-|  | 	|  | 13 - UPI QR  Generation |
-|  | 	|  | 14 - UPI QR Last Transaction Status |
-|  | 	|  | 15 - Bharat QR  Generation  |
-|  | 	|  | 16 -  Bharat  QR Last Transaction Status  |
-|  | 	|  | 17 - Wallet Google Pay |
-|  | 	|  | 18 - Tone Tag wallet  |
-|  | 	|  | 19 - Noncarded  |
-| `Source` | String | 10 | O | TILL, Mobile, AVTM, etc |
-| `Total Txn Amount( Auth+ConvFee + GST )`| String | 10 | M | Total Amount including decimal |
-| `Convenience Fee`| String | 10 | O | Convenience Fee including decimal |
-| `CGST` | String | 10 | O | GST Including decimal (GST) |
-| `SGST` | String  | 10 | O | GST Including decimal (GST) |
-| `Bill Amount`  | String | 10 | O ( Mandatory for QR generation / Wallet Transactions | Bill amount including decimal |
-| `Merchant Reference Number(MRN)` | String | 20 | M | Unique merchant number for reconcilation |
-| `EMI Reference Number(ERN)` | String | 8 | O ( Mandatory for EMI Transaction ) | EMI reference number generated on mobile |
-| `Consumer Number` | String | 20 | O | Consumer number ( CRN ) |
-| `Currency Selection` | String | 3 | O | Currency |
-| `User Defined Fields` | String | 30 | O | PAN + UDF |
-| `Terminal Invoice Number` | String | 8 | O ( Mandatory for Void Transaction ) | Used for Preauth completion & cancellation transaction |
-| `Card Last Four Digit` | String | 4 | O | Used for Preauth completion & cancellation transaction |
-| `Auth Code` | String | 8 | O | Used for Preauth completion and cancellation transaction |
-| `Email ID` | String | 50 | O | Email ID on which Email needs to be received |
-| `Biller ID` | String | 10 | O | Biller ID received |
-| `DCC flag` | String | 1 | O | DCC Conversion flag Yes or No |
-| `UDF 1` | String | 10 | O | UDF 1 |
-| `UDF 2`  | String | 10 | O | UDF 2 |
+|`functionCode`|String|2| M|01 - Sale ( Sale, DCC ) |
 | `Print Charge Slip` | String | 1 | O | Y or N ( Default - Y ) |
+| | | | | 02 - Preauth Sale |
+| | | | | 03 - Preauth Completion |
+| | | | | 04 - Refund |
+| | | | | 05 - Void |
+| | | | | 06 - TIP | 
+| | | | | 07 - Cash @ POS |
+| | | | | 08 - EMI Sale |
+| | | | | 11- Settlement Transaction |
+| | | | | 12- Transaction status |
+| | | | | 13 - UPI QR  Generation | 
+| | | | | 14- UPI QR Last Transaction Status |
+| | | | | 15 - Bharat QR  Generation |
+| | | | | 16-  Bharat  QR Last Transaction Status |
+| | | | | 17- Wallet Google Pay |
+| | | | | 18- Tone Tag wallet |
+| | | | | 19- Noncarded |
+|`source`|String|10|O|APOS, Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine)|
+|`totalTxnAmount (  Auth + ConvFee+ GST) `|String|10|M|Total Amount including decimal|
+|`convenienceFee `|String|10|O|Convenience  Fee including decimal|
+|`cGST`|String|10|O|GST Including decimal ( GST )|
+|`sGST`|String|10|O|GST Including decimal ( GST )|
+|`billAmount`|String|10|O |Bill  amount  including decimal  (Mandatory for QR generation / Wallet Transactions)|
+|`merchantReferenceNumber(MRN)`|String|14|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
+|`emiReferenceNumber(ERN)`|String|8|O |EMI reference number generated on mobile (Mandatory for EMI Transaction)|
+|`consumerNumber`|String|20|O|Consumer number ( CRN ) - Value to be populated in statement in session id|
+|`currencySelection`|String|3|O|Currency|
+|`userDefinedFields`|String|30|O|CRN + UDF - Value to be populated in statement in session id|
+|`terminalInvoiceNumber`|String|8|O |Used for Preauth completion & cancellation transaction (Mandatory for Void transaction)|
+|`cardLastFourDigit`|String|4|O|Used for Preauth completion & cancellation transaction|
+|`authCode`|String|8|O|Used for Preauth completion & cancellation transaction|
+|`emailID`|String|50|O|Email ID on which email needs to be received|
+|`billerID`|String|10|O|Biller ID received |
+|`dCCFlag `|String|1|O|DCC Conversion flag  Yes or No  |
+|`printChargeslip`|String|1|O|Y or N ( Default - Y ) |
+
 
 ### Response in Payload
 ```
@@ -241,126 +241,87 @@ The table below identifies the required properties in the response message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | ------- | ------- | -------------------------------------------------------| ------------------------- |
-| `Function Code` | String	| 2 | M | 01 - Sale ( Sale , DCC ) |
-|  | 	|  | 02 - Preauth Sale |
-|  | 	|  | 03 - Preauth Completion |
-|  | 	|  | 04 - Refund |
-|  | 	|  | 05 - Void |
-|  | 	|  | 06 - TIP |
-|  | 	|  | 07 - Cash @ POS |
-|  | 	|  | 08 - EMI Sale |
-|  | 	|  | 09 - Loyality Points Earned |
-|  | 	|  | 10 - Loyality Burn |
-|  | 	|  | 11 - Settlement Transaction |
-|  | 	|  | 12 - Transaction status |
-|  | 	|  | 13 - UPI QR  Generation |
-|  | 	|  | 14 - UPI QR Last Transaction Status |
-|  | 	|  | 15 - Bharat QR  Generation  |
-|  | 	|  | 16 - Bharat QR Last Transaction Status  |
-|  | 	|  | 17 - Wallet Google Pay |
-|  | 	|  | 18 - Tone Tag wallet  |
-|  | 	|  | 19 - Noncarded  |
-|`Source` | String | 10 | O | TILL, Mobile, AVTM, etc. |
-| TIP amount | String | 10 | 0 | Length 10 including decimal |
-|`Total Transaction Amount ( Bill + Convenience Fee + GST )` |	String|	10 | M | Length 10 including decimal |
-Fuel Discount Cashback | String | 10 | O | Length 10 including decimal |
-|`Convenience Fee`|	String | 10 | O | Length 10 including decimal |
-|`CGST` | String | 10 | O | Length 10 including decimal |
-|`SGST`| String	| 10 | O | Length 10 including decimal |
-|`Bill  Amount`| String | 10 | Length 10 including decimal|
-|`EMI Specific Data`| String | 20 |	O |	Interest rate,  Processing fee, Tenure,  etc.|
-|`Merchant  Reference  Number (MRN)`| String | 20 | M |	Same as request |
-|`Terminal  Invoice  Number`|	String | 8 | M | Terminal Invoice Number |
-|`Currency Selection`| String | 3 | O | Currency code/currency which been selected |
-|`Transaction ID`| String |	10 | M | Same as request |
-|`Customer Name`| String |	25 | O | Customer name extracted from Card |
-|`User Defined Fields`|	String | 30	| O | Same as request |
-|`Masked Card Number`| String | 21 | M | First six digits & last four digits. In between number should be masked |
-|`Application Version Number`| String |	10 | M | This is terminal application version number |
-|`Date & Time`|	String | 20 | M | Host Date & Time |
-|`ATID`| String | 8	| M | Acquirer TID |
-|`AMID`| String | 15 | M | Acquirer MID |
-|`Acquirer Name`| String | 20 |	M | Acquirer Name |
-|`Response code`| String | 12 |	M |	Host Response code, it has response message |
-|`Batch Number`| String | 6 | M | Terminal Batch Number |
-|`Card Type`| String | 10 |	M |	Type of card |
-|`RRN`|	String | 12	| M	| RRN received from host |
-|`SE`| String | 10 | O | Value would be populated incase of Amex txns |
-|`EMV Specific Data`| String | 256 | O | EMV data like TC , Application identifier, Application Name, TSI, etc.|
-|`DCC Indicator` | String |	1 |	O |	DCC  flag  yes or no DCC : Sale , Void value as '1' |
-|`EMI flag`| String | 1	| O	| EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC EMI Sale, EMI Void |
-|`Pos Entry Mode`| String |	3 |	O |	Magstipe, Chip, Contactless, Manual entry, etc.|
-|`Pin Verified`| String	| 3	| O	| "Yes" when PIN was entered & "No" when pin was not prompt |
-|`Auth Code`| String | 8 | M | Received from Issuer/host |
-|`Biller Id`| String | 10 | O | Same as request |
-|`Specific Indicator`| String |	3 |	O |	To be used for BBPS |
-|`Merchant Unique Number`| String | 20 | O | Same as request |
-|`Terminal Invoice Number`|	String | 20 | O	| Same as request | 
-|`Suppress Print Charge Slip`| String |	2 |	O | "Yes" or "No" -To suppress chargeslip prints for financial transactions |
-|`EMI`|	String | 20 | O | EMI details – emi flag is 1/0 EMI reference number generated is 8 bytes Tenure, discount amount, product amount, EMI per month |
-|`Consumer Number`|	String | 20 | M | CRN / Consumer number 20 bytes |
-|`Card Last Four Digit`| String | 4 | O | Used for pre-auth completion & cancellation transaction|
-|`Email ID`| String	| 50 | O | Email ID on which Email needs to be received 50 bytes optional |
-|`Card Txn Mode`| String | 3 | O | Txn Mode |
-|`Purchase Amount`|	String | 10 | O | Purchase amount | 
-|`Cash Back Amount`| String | 10 | O | Transaction cash back amount|
-|`NAC Status`| String |	3 |	O |	Identify the network status True -> private network False -> public network |
-|` Card Exp Date`| String |	4 |	O | Transaction card expire date |
-|`DCC Yes/NO flag`|	String | 10 | O	| DCC Conversion flag  Yes or No. Response is converted amount, exchange rate and margin fee |
-
+|`functionCode`|String|2|M|01 - Sale ( Sale, DCC )|
+| | | | | 02 - Preauth Sale |
+| | | | | 03 - Preauth Completion |
+| | | | | 04 - Refund |
+| | | | | 05 - Void |
+| | | | | 06 - TIP | 
+| | | | | 07 - Cash @ POS |
+| | | | | 08 - EMI Sale |
+| | | | | 11- Settlement Transaction |
+| | | | | 12- Transaction status |
+| | | | | 13 - UPI QR  Generation |
+| | | | | 14-  UPI QR Last Transaction Status |
+| | | | | 15 - Bharat QR  Generation |
+| | | | | 16-  Bharat  QR Last Transaction Status 
+| | | | | 17- Wallet Google Pay |
+| | | | | 18- Tone Tag wallet |
+| | | | | 19- Noncarded |
+|`source`|String|10|O|APOS, Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine)|
+|`tipAmount`|String|10|O|Tip Amount entered during the transaction|
+|`totalTxnAmount (  Auth + ConvFee+ GST) `|String|10|M|Total Amount including decimal|
+|`fuelDiscountCashback `|String|10|O|Fuel discount cashback amount during the transaction|
+|`convenienceFee `|String|10|O|Convenience  Fee including decimal|
+|`cGST`|String|10|O|GST Including decimal ( GST )|
+|`sGST`|String|10|O|GST Including decimal ( GST )|
+|`billAmount`|String|10|O|Bill  amount  including decimal|
+|`merchantReferenceNumber(MRN)`|String|20|M|Same as request|
+|`terminalInvoiceNumber`|String|8|M|Terminal Invoice Number|
+|`currencySelection`|String|3|O|Currency code/currency which been selected|
+|`transactioID`|String|10|M|Same as request|
+|`customerName`|String|25|O|Customer name extracted from Card|
+|`userDefinedFields`|String|30|O|Same as request|
+|`maskedCardNumber`|String|21|M|First Six digit & last four digit. In between number should be masked|
+|`applicationVersionNumber`|String|10|M|This is terminal application version number|
+|`date & Time`|Timestamp|20|M|Host Date & Time|
+|`aTID`|String|8|M|Acquirer TID|
+|`aMID`|String|15|M|Acquirer MID|
+|`acquirerName`|String|20|M|Acquirer Name|
+|`responseCode`|String|12|M|Host Response code, it has response message|
+|`batchNumber`|String|6|M|Terminal Batch Number|
+|`cardType`|String|10|M|Type of card|
+|`rrn`|String|12|M|RRN received from host|
+|`se`|String|10|O|Value would be populated incase of Amex txns|
+|`emv`|String|256|O|EMV data like TC , Application identifier, Application Name, TSI, etc.|
+|`emiFlag`|String|1|O|EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC .EMI Sale, EMI Void|
+|`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
+|`pinVerified`|String|3|O|"Yes" when PIN was entered & "No" when pin was not prompt|
+|`authCode`|String|8|M|Received from Issuer/host|
+|`billerID`|String|10|O|Same as request|
+|`SspecificIndicator `|String|3|O|To be used for BBPS |
+|`merchantUniqueNumber`|String|20|O|Same as request |
+|`suppressPrintChargeslip `|String|2|O|“Yes” or “No”  -To suppress chargeslip prints for financial transactions|
+|`emi`|String|20|O|EMI details – emi flag is 1/0  .EMI reference number generated is 8 bytes.Tenure, discount amount, product amount, EMI per month|
+|`consumerNumber`|String|20|M|Consumer number ( CRN ) - Value to be populated in statement in session id|
+|`cardLastFourDigit`|String|4|O|Used for pre-auth completion & cancellation transaction|
+|`emailID`|String|50|O|Email ID on which Email needs to be received 50 bytes optional|
+|`cardTxnMode`|String|3|O|Txn Mode|
+|`purchaseAmount `|String|10|O|Purchase amount |
+|`cashBackAmount`|String|10|O| Transaction cash back amount|
+|`nacStatus `|String|3|O|Identify the network status .True-> private network .False -> public network|
+|`cardExpDate`|String|4|O|Transaction card expire date|
+|`dccFlag`|String|1|O|DCC Conversion flag  Yes or No. Response is converted amount, exchange rate and margin fee|
 
 
 The table below provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`0`|	SUCCESS |
-|`1`|	ERR_TIMEOUT |
-|`2`|	ERR_CONNECT |
-|`3`|	ERR_SEND |
-|`4`|	ERR_RECV |
-|`5`|	ERR_PACK |
-|`6`|	ERR_UNPACK |
-|`7`|	ERR_PACKET |
-|`8`|	ERR_MAC |
-|`9`|	ERR_PROC_CODE |
-|`10`|	ERR_MSG |
-|`11`|	ERR_TRANS_AMT |
-|`12`|	ERR_TRACE_NO |
-|`13`|	ERR_TERM_ID |
-|`14`|	ERR_MERCH_ID |
-|`15`|	ERR_NO_TRANS |
-|`16`|	ERR_NO_ORIG_TRANS |
-|`17`|	ERR_HAS_VOIDED |
-|`18`|	ERR_VOID_UNSUPPORTED |
-|`19`|	ERR_COMM_CHANNEL |
-|`20`|	ERR_HOST_REJECT |
-|`21`|	ERR_ABORTED |
-|`22`|	ERR_USER_CANCEL |
-|`23`|	ERR_NEED_SETTLE_NOW |
-|`24`|	ERR_NEED_SETTLE_LATER |
-|`25`|	ERR_NO_FREE_SPACE |
-|`26`|	ERR_NOT_SUPPORT_TRANS |
-|`27`|	ERR_CARD_NO |
-|`28`|	ERR_PASSWORD |
-|`29`|	ERR_PARAM |
-|`31`|	ERR_BATCH_UP_NOT_COMPLETED |
-|`33`|	ERR_AMOUNT |
-|`34`|	ERR_CARD_DENIED |
-|`36`|	ERR_ADJUST_UNSUPPORTED 
-|`37`|	ERR_CARD_UNSUPPORTED |
-|`38`|	ERR_CARD_EXPIRED |
-|`39`|	ERR_CARD_INVALID |
-|`40`|	ERR_UNSUPPORTED_FUNC |
-|`47`|	ERR_NO_MATCH_ACQUIRER |
-|`48`|	ERR_ADJUST_LIMIT |
-|`49`|	ERR_NO_INSTALLMNET_DATA |
-|`50`|	ERR_INVALID_QR_CODE |
-|`51`|	ERR_MOTO_PREAUTH_COMP_UNSUPPORTED |
-|`52`|	ERR_PRINT |
-|`54`|	ERR_ABORTED_DISPLAY |
-|`55`|	ERR_DECLINED |
-|`59`|	CLSS_USE_CONTACT |
-|`60`|	ERR_NO_RECORD |
-|`66`|	ERR_UNEXPECTED |
-|`204`|	ERR_REPEATED_UID |
+|`00`|Approved Balances|
+|`01`|Place Call|
+|`02`|Over Floor Limit|
+|`03`|Merchant Not on File|
+|`12`|Invalid Transaction|
+|`14`|Invalid Account|
+|`19`|Retry Transaction|
+|`25`|CAF Not Found|
+|`30`|Invalid msg format|
+|`31`|Card Not Supported|
+|`41`|Lost or Stolen Card|
+|`43`|CAF Status 3, stolen card|
+|`51`|Pin Tries Exceeded|
+|`54`|Expired Card|
+|`55`|Incorrect Pin|
+|`58`|Transaction not allowed|
+|`91`|Auth Timed out|
