@@ -182,7 +182,6 @@ The table below identifies the required properties in the request message
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | ----- | ------------------------------------------------------| ------------------------- |
 |`functionCode`|String|2| M|01 - Sale ( Sale, DCC ) |
-| `Print Charge Slip` | String | 1 | O | Y or N ( Default - Y ) |
 | | | | | 02 - Preauth Sale |
 | | | | | 03 - Preauth Completion |
 | | | | | 04 - Refund |
