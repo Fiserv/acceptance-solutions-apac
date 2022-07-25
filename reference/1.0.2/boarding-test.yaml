@@ -28,11 +28,19 @@ paths:
         in: query
         required: true
         description: instituiion id
-        schema:
-          type: string
-        examples:
-          IMS Sample:
-            value: "4700000"
+        # schema:
+        #   type: string
+        content:
+            application/json:
+              schema:
+                type: string
+              examples:
+                IMS Sample:
+                  value: "4700000"
+          
+        # examples:
+        #   IMS Sample:
+        #     value: "4700000"
       # - name: source
       #   in: query
       #   required: true
