@@ -22,38 +22,29 @@ paths:
       x-group-name:  Boarding
       x-proxy-name: User Login
       x-default-example: IMS Sample
-      # parameters:
-      # - $ref: "#/components/parameters/ApiKeyHeader"
-      # - name: ain
-      #   in: query
-      #   required: true
-      #   description: instituiion id
-      #   schema:
-      #     type: string
-      #   examples:
-      #     IMS Sample:
-      #       value: "4700000"
-      # - name: source
-      #   in: query
-      #   required: true
-      #   description: Source Type i.e API , TAB etc ..
-      #   schema:
-      #     type: string
-      #   examples:
-      #     IMS Sample:
-      #       value: "API"  
       parameters:
-      - in: query
-        name: limit
+      - $ref: "#/components/parameters/ApiKeyHeader"
+      - name: ain
+        in: query
+        required: true
+        description: instituiion id
         schema:
-          type: integer
-          maximum: 50
-        examples:       # Multiple examples
-          zero:         # Distinct name
-            value: 0 
-          max: # Distinct name
-            value: 50
-
+          type: string
+        examples:
+          IMS Sample1:
+            value: "4700000"
+          IMS Sample2:
+            value: "test"
+      - name: source
+        in: query
+        required: true
+        description: Source Type i.e API , TAB etc ..
+        schema:
+          type: string
+        examples:
+          IMS Sample:
+            value: "API"  
+      
       responses:
         "200":
           description: Success
