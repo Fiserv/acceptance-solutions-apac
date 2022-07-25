@@ -45,8 +45,11 @@ paths:
       #     IMS Sample:
       #       value: "API"  
       parameters:
+      - $ref: '#/components/parameters/ApiKeyHeader'
       - in: query
-        name: status
+        name: ain
+        required: true
+        description: institution id
         schema:
           type: string
       
