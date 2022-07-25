@@ -50,11 +50,10 @@ paths:
           maximum: 50
         examples:       # Multiple examples
           zero:         # Distinct name
-            value: 0    # Example value
-            summary: A sample limit value  # Optional description
+            value: 0 
           max: # Distinct name
-            value: 50   # Example value
-            summary: A sample limit value  # Opti
+            value: 50
+
       responses:
         "200":
           description: Success
