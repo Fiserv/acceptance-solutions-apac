@@ -33,15 +33,15 @@ paths:
         examples:
           IMS Sample:
             value: "4700000"
-      - name: source
-        in: query
-        required: true
-        description: Source Type i.e API , TAB etc ..
-        schema:
-          type: string
-        examples:
-          IMS Sample:
-            value: "API"  
+      # - name: source
+      #   in: query
+      #   required: true
+      #   description: Source Type i.e API , TAB etc ..
+      #   schema:
+      #     type: string
+      #   examples:
+      #     IMS Sample:
+      #       value: "API"  
       responses:
         "200":
           description: Success
