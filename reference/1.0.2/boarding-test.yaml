@@ -31,10 +31,8 @@ paths:
         schema:
           type: string
         examples:
-          IMS Sample1:
+          IMS Sample:
             value: "4700000"
-          IMS Sample2:
-            value: "test"
       - name: source
         in: query
         required: true
