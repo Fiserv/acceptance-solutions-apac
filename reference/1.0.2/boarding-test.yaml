@@ -23,15 +23,13 @@ paths:
       x-proxy-name: User Login
       x-default-example: IMS Sample
       # parameters:
-      # - {$ref: "#/components/parameters/ApiKeyHeader"}
+      # - $ref: "#/components/parameters/ApiKeyHeader"
       # - name: ain
       #   in: query
       #   required: true
       #   description: instituiion id
       #   schema:
       #     type: string
-        
-          
       #   examples:
       #     IMS Sample:
       #       value: "4700000"
@@ -45,17 +43,18 @@ paths:
       #     IMS Sample:
       #       value: "API"  
       parameters:
-      - $ref: '#/components/parameters/ApiKeyHeader'
       - in: query
-        name: ain
-        required: true
-        description: institution id
+        name: limit
         schema:
-          type: string
-      
-        example: 
-          IMS Sample:
-            value: "4700000"
+          type: integer
+          maximum: 50
+        examples:       # Multiple examples
+          zero:         # Distinct name
+            value: 0    # Example value
+            summary: A sample limit value  # Optional description
+          max: # Distinct name
+            value: 50   # Example value
+            summary: A sample limit value  # Opti
       responses:
         "200":
           description: Success
