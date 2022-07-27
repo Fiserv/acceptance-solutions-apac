@@ -1,6 +1,6 @@
 # Get Individual Package
 
-This API is used to fetch the package details list and its corresponding parameters based on the filter criteria provided in the request API.
+This API is used to fetch the package details and its corresponding parameters based on the filter criteria provided in the request API.
 
 ## How it works
 1. Merchant needs to use this API where in individual package details are to be retrieved by passing the package id in request parameter.
@@ -297,7 +297,7 @@ The table below provides the list of application's error code and its descriptio
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
-|`103`| Data Not Found.Please contact Application Support Team |
+|`103`| Data Not Found. Please contact Application Support Team |
 |`105`| Given RM details not found |  
 |`200`| Success |
 |`400`| Terminal not in Proper Status |

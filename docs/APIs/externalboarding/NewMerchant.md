@@ -409,14 +409,14 @@ POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/newmid`
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/newmid``).
 
 ### Request
-| Field Name |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
-| -------- | ------- | ------- | ------------------ | ------------------ |
-|`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API|
+| Field Name | Type | Length | Mandatory / Optional / Conditional (M / O / C ) | Description/Values | 
+| -------- | :-------: | :--: | :------------: | :--: | 
+ |`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API|
 |`appType`|Alphanumeric|8|M|Fixed Value 'API'|
 |`salesId`|Alphanumeric|70|M|User Credential created for each partner|
 |`channelCode`|Alphanumeric|10|M|Static Channel Code shared with each partner|
 |`institutionId`|Numeric|10|M|Institution number assigned to the institution|
-|`boardingType`|Alphanumeric|20|M|Type of Merchant: New MID / Add MID / Add TID|
+|`boardingType`|Alphanumeric|20|M|Type of Merchant: New MID/Add MID/Add TID|
 |`IS_ADD_LOCATION`|Alphanumeric|20|M|Applicable if the merchant wants additional location|
 |`IS_ADD_MID`|Alphanumeric|20|M|Applicable if the merchant wants additional MID|
 |`appChannel`|Alphanumeric|20|M|Application channel|
@@ -427,13 +427,19 @@ The table below contains the mandatory fields required for a successful request.
 |`businessType`|Alphanumeric|50|M|Type of Business of the Merchant|
 |`registrationNo`|Alphanumeric|100|M|Registration number of the Merchant|
 |**taxDetails**|-|||This is the object|
-|`taxidType`|Alphanumeric|50|M|Tax ID Type provided for the merchant.For India - PAN For AU - ABN |
-|`taxidValue`|Alphanumeric|50|M|Tax ID Value provided for the merchant.For India:Individual PAN for Individual/Soleprop merchantsCorporate PAN for other type pf merchantsFor AU:ABN Value|
+|`taxidType`|Alphanumeric|50|M|Tax ID Type provided for the merchant.
+| | | | | For India - PAN |
+| | | | | For AU - ABN |
+|`taxidValue`|Alphanumeric|50|M|Tax ID Value provided for the merchant.
+| | | | | For India - Individual PAN for Individual/Soleprop merchants|
+| | | | | Corporate PAN for other type pf merchants
+| | | | | For AU - ABN Value|
 |`dateIncorporated`|Numeric|8|M|YYYYMMDD|
 |`websiteURL`|Alphanumeric|100|M|Eligible for ECOM Merchant|
 |`communicationEmail`|Alphanumeric|60|M|Communication Email of the Merchant|
 |`merchantType`|Alphanumeric|20|M|Whether it is small merchant or Large merchant|
-|`acceptanceType`|Alphanumeric|10|M|Static Value - 'POSMOB' for POS merchant Static Value: ''ECOM'' for ECOM merchant|
+|`acceptanceType`|Alphanumeric|10|M|Static Value - ''POSMOB'' for POS merchant|
+| | | | | Static Value - ''ECOM'' for ECOM merchant|
 |`iciciMerchant`|Alphanumeric|20|M|Applicable if the merchant has ICICI account|
 |`newFundingAc`|Alphanumeric|20|NA|Applicable if the merchant wants the new settlement account|
 |**legalAddress**|-|||This is the object|
@@ -451,10 +457,10 @@ The table below contains the mandatory fields required for a successful request.
 |`gstNo`|Alphanumeric|100|NA|Mandatory for Large merchants|
 |`gstMerchantStateCode`|Alphanumeric|40|NA|Mandatory for Large Partners|
 |`isdnFlag`|Alphanumeric|20|M|Isdn Flag|
-|**idDocDetails**|-|||ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application. All documents uploaded under ""categoryInd"": ""E"" has to be included under merchantDetails.idDocDetails|
+|**idDocDetails**|-|||ID Doc Details section is a conditional tag and should be mandatory for a user uploding documents in an application. All documents uploaded under "categoryInd": "E" has to be included under merchantDetails - idDocDetails|
 |`entity`|Alphanumeric|20|M|Static Value - 'Member'|
 |`idType`|Alphanumeric|20|M|Value of docType received as response of uploaded document|
-|`idValue`|Alphanumeric|20|M||
+|`idValue`|Alphanumeric|20|M|Id Value|
 |`docId`|Alphanumeric|20|M|Value of docID received as response of uploaded document|
 |`categoryName`|Alphanumeric|20|M|Value of categoryName received as response of uploaded document|
 |`level`|Numeric|20|M|Value of level received as response of uploaded document|
@@ -465,9 +471,9 @@ The table below contains the mandatory fields required for a successful request.
 |`categoryName`|Alphanumeric|20|M|Value of categoryName received as response of uploaded document|
 |`level`|Numeric|20|M|Value of level received as response of uploaded document|
 |**geoLocation**|-|||This is the object|
-|`latitude`|Numeric|20|M|Lattitude of the Merchant|
+|`latitude`|Numeric|20|M|Latitude of the Merchant|
 |`longitude`|Numeric|20|M|Longitude of the Merchant|
-|**tradingLocations**|-|||"This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application.|
+|**tradingLocations**|-|||This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application.|
 |`locationNo`|Numeric|2|M|Trading location number of the Merchant|
 |`tradingName`|Alphanumeric|22|M|Trade Name of the Merchant|
 |**tradingAddress**|-|||This is the object|
@@ -487,14 +493,14 @@ The table below contains the mandatory fields required for a successful request.
 |`cpvGroupId`|Alphanumeric|50|NA|Cpv groupid of the Merchant|
 |`regionalcpvGroupid`|Alphanumeric|50|O|Regional cpv groupid of the Merchant|
 |`commerceConnectReferenceMID`|Alphanumeric|8|O|Commerce connect reference mid of the Merchant|
-|**terminals**|-|||This is the object|
+|`terminals`|-|||This is the object|
 |`count`|Numeric|2|M|Count of terminals for the Merchant|
 |`preferedDate`|Numeric|8|M|YYYYMMDD|
 |`preferedTime`|Numeric|6|M|HHMMSS|
 |`discount`|Numeric|3|M|Discount of the Merchant|
 |`userInstruction1`|Alphanumeric|100|O|User Instruction1 of the Merchant|
 |`userInstruction2`|Alphanumeric|100|O|User Instruction2 of the Merchant|
-|**surchargeAmount**|-|||This object not applicable for ISO. Surcharge values currently selected by Partner on MVSI in AU|
+|**surchargeAmount***|-|||This object is not applicable for ISO. Surcharge values currently selected by Partner on MVSI in AU|
 |`visaBase`|Numeric|11|NA|For AU Only|
 |`visaPercent`|Numeric|11|NA|For AU Only|
 |`mcBase`|Numeric|11|NA|For AU Only|
@@ -524,11 +530,14 @@ The table below contains the mandatory fields required for a successful request.
 |`gender`|Alphanumeric|10|M|Gender of the Merchant|
 |`dateOfBirth`|Numeric|8|M|YYYYMMDD|
 |**kycDetails**|-|||This is the object|
-|**kycCategory**||||POI/POA of the Merchant|
-|`identityType`|Alphanumeric|50|M|Type of KYC Document submitted.For India- PAN/AADHAR For ASEAN - Passport / Driving Licence / HKID or SGID or MYID For AU - Passport/Driving Licence|
+|`kycCategory`||||POI/POA of the Merchant|
+|`identityType`|Alphanumeric|50|M|Type of KYC Document submitted.
+| | | | | For India - PAN/AADHAR|
+| | | |  |For ASEAN - Passport/Driving Licence/HKID or SGID or MYID |
+| | | | |For AU - Passport/Driving Licence|
 |`identityValue`|Alphanumeric|50|M|Value of the Kyc Document submitted|
-|`identitymetaName1`|Alphanumeric|100|NA|Additional information pertaning to the KYC docuements submitted. For AU - Driving License State Code|
-|`identitymetaValue1`|Alphanumeric|100|NA|Additional information pertaning to the KYC docuements submitted. For AU - Value Driving License State Code|
+|`identitymetaName1`|Alphanumeric|100|NA|Additional information pertaning to the KYC documents submitted. For AU - Driving License State Code|
+|`identitymetaValue1`|Alphanumeric|100|NA|Additional information pertaning to the KYC documents submitted. For AU - Value Driving License State Code|
 |`nationality`|Alphanumeric|35|M|Nationality of the Merchant|
 |**principalAddress**|-|||This is the object|
 |`addressLine`|Alphanumeric|35|M|Address  line of the Merchant|
@@ -541,8 +550,7 @@ The table below contains the mandatory fields required for a successful request.
 |`mobileNo`|Numeric|15|M|Mobile number of the Merchant|
 |`phone1`|Numeric|15|M|phone 1 of the Merchant|
 |`contactName`|Alphanumeric|35|M|Contact name of the Merchant|
-|**idDocDetails**|-||C|""ID Doc Details section is a conditional tag and has to be mandatorily present if the user is uploding documents for a particular application.|
-|`idDocDetails`|-||C|All documents uploaded under ""categoryInd"": ""P"" has to be included under principalDetails.idDocDetails"|
+|**idDocDetails**|-||C|ID Doc Details section is a conditional tag and should be mandatory for a user uploding documents in an application. All documents uploaded under "categoryInd": "P" has to be included under principalDetails - idDocDetails|
 |`level`|Alphanumeric|2|M|Value of level received as response of uploaded document|
 |`mandatory`|Alphanumeric|10|M|Mandatory of the Merchant|
 |`entity`|Alphanumeric|20|M|Static Value - 'Member'|
@@ -561,10 +569,15 @@ The table below contains the mandatory fields required for a successful request.
 |`nationality`|Alphanumeric|35|M|Nationality of the Ultimate Benefeciary Owner|
 |**kycDetails**|-|||This is the object|
 |`kycCategory`|-||M|POI/POA of the Ultimate Benefeciary Owner|
-|`identityType`|Alphanumeric|50|M|Type of KYC Document submitted for UBO.For India - PAN/AADHAR For ASEAN - Passport/Driving Licence/HKID or SGID or MYID For AU - Passport/Driving Licence|"
+|`identityType`|Alphanumeric|50|M|Type of KYC Document submitted for UBO.
+| | | | |For India - PAN/AADHAR |
+| | | | |For ASEAN - Passport/Driving Licence/HKID or SGID or MYID |
+| | | | |For AU - Passport/Driving Licence|
 |`identityValue`|Alphanumeric|50|M|Value of the Kyc Document submitted|
-|`identitymetaName1`|Alphanumeric|50|M|Additional information pertaning to the KYC docuements submitted for UBO.For AU - Driving License State Code|
-|`identitymetaValue1`|Alphanumeric|50|M|Additional information pertaning to the KYC docuements submitted.For AU - Value Driving License State Code|"
+|`identitymetaName1`|Alphanumeric|50|M|Additional information pertaning to the KYC documents submitted for UBO.
+| | | | |For AU - Driving License State Code|
+|`identitymetaValue1`|Alphanumeric|50|M|Additional information pertaning to the KYC documents submitted.
+| | | | |For AU - Value Driving License State Code|
 |**uboAddress**|-|||This is the object|
 |`addressLine`|Alphanumeric|35|M|Address  of the Ultimate Benefeciary Owner|
 |`addressLine2`|Alphanumeric|35|O|Address Line2 Ultimate Benefeciary Owner|
@@ -586,8 +599,8 @@ The table below contains the mandatory fields required for a successful request.
 |`branch`|Alphanumeric|500|M|Branch of the Merchant|
 |`bankAddress`|Alphanumeric|500|O|Bank address of the Merchant|
 |`accType`|Alphanumeric|30|M|Acc Type of the Merchant|
-|**fundingaccountdetails**|-|||Funding account will the details of account to which Fiserv will process the funding on daily basis|
-|`accountNo`|Numeric|100|NA|If different form UW details|
+|**fundingaccountdetails**|-|||Funding account will have the details of account to which Fiserv will process the funding on daily basis|
+|`accountNo`|Numeric|100|NA|If different from UW details|
 |`accountName`|Alphanumeric|35|NA|Account number of the Merchant|
 |`ifsc`|Alphanumeric|15|NA|Ifsc of the Merchant|
 |`bankName`|Alphanumeric|80|NA|Bank Name of the Cerchant|
@@ -595,7 +608,7 @@ The table below contains the mandatory fields required for a successful request.
 |`branch`|Alphanumeric|500|NA|Branch of the Merchant|
 |`bankAddress`|Alphanumeric|500|NA|Bank address of the Merchant|
 |`accType`|Alphanumeric|30|NA|Account Type of the Merchant|
-|**collectionaccountdetails**|-|||This section will have details of account which needs to be used for collection of charges. This account may or may not be the same as UW account/Funding account|
+|`collectionaccountdetails`|-|||This section will have details of account which needs to be used for collection of charges. This account may or may not be the same as UW account/Funding account|
 |`accountNo`|Numeric|100|NA|If different form UW details|
 |`accountName`|Alphanumeric|35|NA|Account name of the Merchant|
 |`ifsc`|Alphanumeric|15|NA|Ifsc of the Merchant|
@@ -605,9 +618,9 @@ The table below contains the mandatory fields required for a successful request.
 |`bankAddress`|Alphanumeric|500|NA|Bank address of the Merchant|
 |`accType`|Alphanumeric|30|NA|Acc type of the Merchant|
 |**submerchantDetails**|-|||This object is not applicable for ISO. This section is used to capture the sub Partner Details of the merchant|
-|`submerchantID`|Numeric|15|NA|"This is an optional field which the Single MID PayFacs can use to pass their own MID to Fiserv.|
-|`submerchantID`|Numeric|15|NA|This field will be mandatory if the Channel level parameter for Payfac Provided SMID is set to Y.|
-|`submerchantID`|Numeric|15|NA|If the same is set to 'N', Boarding backend will generate its own MID for the merchant"|
+|`submerchantID`|Numeric|15|NA|This is an optional field where the Single MID PayFacs can use to pass their own MID to Fiserv.|
+|`submerchantID`|Numeric|15|NA|This field will be mandatory if the Channel level parameter for Payfac provided SMID is set to Y.|
+|`submerchantID`|Numeric|15|NA|If the same is set to 'N', boarding backend will generate its own MID for the merchant|
 |**businessSummary**|-|||This section is used to capture the summary of the merchant|
 |`briefSummary`|Alphanumeric|100|M|Brief summary of the Merchant|
 |`salessrNumber`|Alphanumeric|100|O|Sales number of the Merchant|
@@ -632,8 +645,8 @@ The table below contains the mandatory fields required for a successful request.
 |`tranTypeMagStrip`|Numeric|20|M|Tran type magstripe of the Merchant|
 |`tranTypeChip`|Numeric|20|M|Tran type chip of the Merchant|
 |`tranTypeKeyed`|Numeric|20|M|Tran type keyed of the Merchant|
-|`creditSalesConsumer`|Numeric|20|M|Credit salesconsumer of the Merchant|
-|`creditSalesBusiness`|Numeric|20|M|Credit salesbusiness of the Merchant|
+|`creditSalesConsumer`|Numeric|20|M|Credit sales consumer of the Merchant|
+|`creditSalesBusiness`|Numeric|20|M|Credit sales business of the Merchant|
 |`firsReport`|Alphanumeric|20|NA|First report of the Merchant|
 |`recurringTranFlag`|Alphanumeric|20|NA|Recurring tran flag of the Merchant|
 |`refundPolicy`|Alphanumeric|20|NA|Refund policy of the Merchant|

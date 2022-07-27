@@ -27,9 +27,9 @@ Path Variable - appUrn : 1000007294
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/appstatus/{appUrn}).
 
 ### Request
-| Variable | Type | Length |  Mandatory /Optional /Conditional (M / O / C)  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
-| `appURN` | *path Variable* | 30 | M | App URN retured as part of Create URN API |
+| Field Name |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
+| -------- | ------- | ------- | ------------------ | ------------------ |
+| `appURN` | Alphanumeric | 30 | M | App URN retured as part of Create URN API |
 
 ### Successful Response Payload
 

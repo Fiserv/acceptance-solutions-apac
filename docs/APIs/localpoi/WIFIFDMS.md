@@ -168,8 +168,8 @@ The table below identifies the required properties in the request message
 |`authCode`|String|3|O|Approval code of authorization|
 |`printChargeslip`|String|8|O |Y or N ( Default - Y )  (Mandatory for Pre Auth Completion transaction)|
 |`emi`|String|20|O|EMI details – emi flag is 1/0 
-EMI reference number generated is 8 bytes
-Tenure, discount amount, product amount, EMI per month|
+| | | | | EMI reference number generated is 8 bytes |
+| | | | |Tenure, discount amount, product amount, EMI per month|
 |`checksum`|String|10|O (Mandatory for Transaction check status transaction)|Checksum for "data" field.Use SHA256 method to calculate “data” field|
 
 
@@ -394,3 +394,4 @@ The table below provides the list of error codes and description for this applic
 |`95`|Reconcile error|
 |`96`|System Error|
 |`99`|PIN Block error|
+

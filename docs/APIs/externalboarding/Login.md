@@ -7,7 +7,7 @@ This API authenticates the external client with the unique credentials shared wi
 ## How it works
 
 1. Merchants need to initiates a Login request to fetch a session token before submitting any APIs to Fiserv backend system.
-2. If the merchant tries to use the token beyond the session token’s expiry period, Fiserv backend system will return with an error response.
+2. If merchant tries to use the token beyond the session token’s expiry period, Fiserv backend system will return with an error response. 
 3. The merchant will then need to initiate another login request to request for a fresh token, in order to submit any of the Boarding APIs.
 4. This is a Mandatory API that has to be triggered first to create a session token.
 
