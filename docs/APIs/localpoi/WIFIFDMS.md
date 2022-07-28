@@ -155,11 +155,11 @@ The table below identifies the required properties in the request message
 | | | | | 05 - Void | 
 | | | | | 08 - EMI Sale |
 | | | | | 12 - Settlement Transaction|
-|`amt`|String|10|M|This transaction involves amount "100.00"|
+|`amt`|String|10|M|Transaction amount in decimals - "100.00"|
 |`detail`|String|2|O|To define the respond message in detail format. 
 | | | | | 'Y' means detail message, 'N' means skip this format|
 |`ecrRef`|String|2|O|ECR reference no. up to 16 digits|
-|`merchantReferenceNumber(MRN)`|String|10|O|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
+|`merchantReferenceNumber`|String|10|O|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
 |`terminalInvoiceNumber`|String|20|M|Use the terminal Invoice No to indicate the invoice of terminal|
 |`acqName`|String|20|O|To identify this transaction is initiated by respective Acquirer (Mandatory for void & PreAuth Completion transaction)|
 |`userDefinedFields`|String|20|O|UDF fields|
@@ -332,66 +332,65 @@ The table below identifies the required properties in the response message
 
 
 The table below provides the list of error codes and description for this application.
-| ErrorCode |  Description/Values |
-| --------  | ------------------ |
-|`00`|Approved or completed successfully|
-|`01`|Refer to card issuer, Cardholder to contact Issuing Bank|
-|`02`|Refer to card issuer, special condition|
-|`03`| Invalid merchant|
-|`04`|Pick-up card |
-|`05`|Do not honour|
-|`06`|Error|
-|`07`|Pick-up card, special condition|
-|`08`| Honour with identification|
-|`09`|Request in progress|
-|`10`|Approved, partial|
-|`11`|Approved, VIP|
-|`12`|Invalid transaction|
-|`13`|Invalid amount|
-|`14`|Invalid card number|
-|`15`|No such issuer|
-|`19`|Re - enter transaction|
-|`20`|Invalid response|
-|`21`|Card Not Initialized|
-|`22`|Suspected malfunction |
-|`25`| Unable to locate Original Transaction|
-|`30`|Format Error|
-|`31`|Bank not supported|
-|`32`|Expired card, pick-up|
-|`33`|Suspected fraud, pick-up|
-|`34`|Fraud|
-|`36`|Restricted card, pick-up|
-|`38`|PIN tries exceeded|
-|`39`|No credit account|
-|`40`|Function not supported|
-|`41`|Lost card|
-|`42`|No universal account|
-|`43`|Stolen card|
-|`45`|Fallback not allowed|
-|`51`|Not sufficient funds|
-|`52`|No check account|
-|`53`|No savings account|
-|`54`|Expired card|
-|`55`|Incorrect PIN|
-|`56`|No card record|
-|`57`|Transaction not permitted to cardholder|
-|`58`|Transaction not permitted to terminal|
-|`59`|Suspected fraud|
-|`61`|Exceeds withdrawal limit|
-|`62`|Restricted card|
-|`63`|Security violation|
-|`64`|Original amount incorrect|
-|`65`|Exceeds withdrawal frequency|
-|`68`|Issuer Response Timed-out|
-|`75`|PIN tries exceeded|
-|`77`|Intervene, bank approval required|
-|`78`|Intervene, bank approval required|
-|`85`|Not declined|
-|`90`|Cut-off in progress|
-|`91`|Issuer or switch inoperative|
-|`92`|Routing Error|
-|`94`|Duplicate Transaction|
-|`95`|Reconcile error|
-|`96`|System Error|
-|`99`|PIN Block error|
-
+| ErrorCode |  Description/Values | Comments |
+| --------  | ------------------ | ---------- |
+|`00`|Approved or completed successfully|Merchant should go ahead with reciept generation|
+|`01`|Refer to card issuer, Cardholder to contact Issuing Bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`02`|Refer to card issuer, special condition|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`03`| Invalid merchant|Contact Customer Support / Business Manager|
+|`04`|Pick-up card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`05`|Do not honour, Cardholder to contact Issuing bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`06`|Error|Contact Customer Support / Business Manager|
+|`07`|Pick-up card, special condition|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`08`| Honour with identification|Merchant should Confirm cardholder ID/verification|
+|`09`|Request in progress|Merchant should Wait for transaction completion|
+|`10`|Approved, partial|Contact Customer Support / Business Manager|
+|`11`|Approved, VIP|Contact Customer Support / Business Manager|
+|`12`|Invalid transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`13`|Invalid amount|Merchant should key valid amount|
+|`14`|Invalid card number|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`15`|No such issuer|Contact Customer Support / Business Manager|
+|`19`|Re - enter transaction|Contact Customer Support / Business Manager|
+|`20`|Invalid response|Contact Customer Support / Business Manager|
+|`21`|Card Not Initialized|Issuer Decline. Card is not activated (for CUP)|
+|`22`|Suspected malfunction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|"
+|`25`| Unable to locate Original Transaction|Contact Customer Support / Business Manager|
+|`30`|Format Error|Contact Customer Support / Business Manager|
+|`31`|Bank not supported|Contact Customer Support / Business Manager|
+|`32`|Expired card, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`33`|Suspected fraud, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`34`|Fraud|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`36`|Restricted card, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`38`|PIN tries exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`39`|No credit account|Issuer Decline. No money/Debit card (Visa only)|
+|`40`|Function not supported|Contact Customer Support / Business Manager|
+|`41`|Lost card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`42`|No universal account|Small bank not international (Only JCB)|
+|`43`|Stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`45`|Fallback not allowed|Contact Customer Support / Business Manager|
+|`51`|Not sufficient funds|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`52`|No check account|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`53`|No savings account|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`54`|Expired card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`55`|Incorrect PIN|Issuer Decline. Merchant should advise cardholder to key correct pin for transaction|
+|`56`|No card record|Bank is offline / Retry later(Only for JCB)|
+|`57`|Transaction not permitted to cardholder|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`58`|Transaction not permitted to terminal|Contact Customer Support / Business Manager|
+|`59`|Suspected fraud|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`61`|Exceeds withdrawal limit|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`62`|Restricted card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`63`|Security violation|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`64`|Original amount incorrect|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`65`|Exceeds withdrawal frequency|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`68`|Issuer Response Timed-out|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`75`|PIN tries exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`77`|Intervene, bank approval required|Visa, MC and JCB has different meaning. But overall, it is decline.|
+|`78`|Intervene, bank approval required|Visa, MC and JCB has different meaning. But overall, it is decline.|
+|`85`|Not declined|AVS with zero amount|
+|`90`|Cut-off in progress|Contact Customer Support / Business Manager|
+|`91`|Issuer or switch inoperative|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`92`|Routing Error|Contact Customer Support / Business Manager|
+|`94`|Duplicate Transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`95`|Reconcile error|Contact Customer Support / Business Manager|
+|`96`|System Error|Contact Customer Support / Business Manager|
+|`99`|PIN Block error|Issuer Decline. Merchant should advise cardholder to use different card for transaction|

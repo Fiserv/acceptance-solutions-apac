@@ -166,12 +166,12 @@ The table below identifies the required properties in the request message
 | | | | | 17- Wallet Google Pay |
 | | | | | 18- Tone Tag wallet |
 | | | | | 19- Noncarded |
-|`totalTxnAmount (  Auth + ConvFee+ GST) `|String|10|M|This transaction involves amount "100.00"|
-|`tipAmount`|String|10|O|This transaction involves "10.00"|
-|`detail`|String|2|O|To define the respond message in detail format.|
-|||||'Y' means detail message, 'N' means skip this format|
+|`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals-"100.00"|
+|`tipAmount`|String|10|O|Transaction which involves tip amount in decimals-"10.00"|
+|`detail`|String|2|O|To define the respond message in detail format. |
+| | | | |'Y' means detail message, 'N' means skip this format|
 |`ecrRef`|String|16|O|ECR reference number generated in transaction|
-|`merchantReferenceNumber(MRN)`|String|20|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
+|`merchantReferenceNumber`|String|20|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
 |`terminalInvoiceNumber`|String|20|O |Use the terminal Invoice No to indicate the invoice of terminal (Mandatory for void & PreAuth Completion transaction)|
 |`customerNumber`|String|20|O|To identify this transaction is initiated by respective customer|
 |`userDefinedFields`|String|8|O|UDF fields|
@@ -571,22 +571,22 @@ The table below identifies the required properties in the response message
 
 
 The table below provides the list of error codes and description for this application.
-| ErrorCode |  Description / Values |
-| --------  | ------------------ |
-|`00`|Approved Balances|
-|`01`|Place Call|
-|`02`|Over Floor Limit|
-|`03`|Merchant Not on File|
-|`12`|Invalid Transaction|
-|`14`|Invalid Account|
-|`19`|Retry Transaction|
-|`25`|CAF Not Found|
-|`30`|Invalid msg format|
-|`31`|Card Not Supported|
-|`41`|Lost or Stolen Card|
-|`43`|CAF Status 3, stolen card|
-|`51`|Pin Tries Exceeded|
-|`54`|Expired Card|
-|`55`|Incorrect Pin|
-|`58`|Transaction not allowed|
-|`91`|Auth Timed out|
+| ErrorCode |  Description / Values | Comments |
+| --------  | ------------------ | -------------|
+|`00`|Approved Balances|Merchant should go ahead with reciept generation|
+|`01`|Place Call|Contact Customer Support / Business Manager|
+|`02`|Over Floor Limit|Contact Customer Support / Business Manager|
+|`03`|Merchant Not on File|Contact Customer Support / Business Manager|
+|`12`|Invalid Transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`14`|Invalid Account|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`19`|Retry Transaction|Contact Customer Support / Business Manager|
+|`25`|CAF Not Found|Contact Customer Support / Business Manager|
+|`30`|Invalid msg format|Contact Customer Support / Business Manager|
+|`31`|Card Not Supported|Contact Customer Support / Business Manager|
+|`41`|Lost or Stolen Card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`43`|CAF Status 3, stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`51`|Pin Tries Exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`54`|Expired Card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`55`|Incorrect Pin|Issuer Decline. Merchant should advise cardholder to key correct pin for transaction|
+|`58`|Transaction not allowed|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`91`|Auth Timed out|Contact Customer Support / Business Manager|

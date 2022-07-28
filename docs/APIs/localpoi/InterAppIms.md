@@ -199,13 +199,13 @@ The table below identifies the required properties in the request message
 | | | | | 18- Tone Tag wallet |
 | | | | | 19- Noncarded |
 |`source`|String|10|O|APOS, Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine)|
-|`totalTxnAmount (  Auth + ConvFee+ GST) `|String|10|M|Total Amount including decimal|
+|`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00"|
 |`convenienceFee `|String|10|O|Convenience  Fee including decimal|
 |`cGST`|String|10|O|GST Including decimal ( GST )|
 |`sGST`|String|10|O|GST Including decimal ( GST )|
 |`billAmount`|String|10|O |Bill  amount  including decimal  (Mandatory for QR generation / Wallet Transactions)|
-|`merchantReferenceNumber(MRN)`|String|14|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
-|`emiReferenceNumber(ERN)`|String|8|O |EMI reference number generated on mobile (Mandatory for EMI Transaction)|
+|`merchantReferenceNumber`|String|14|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
+|`emiReferenceNumber`|String|8|O |EMI reference number generated on mobile (Mandatory for EMI Transaction)|
 |`consumerNumber`|String|20|O|Consumer number ( CRN ) - Value to be populated in statement in session id|
 |`currencySelection`|String|3|O|Currency|
 |`userDefinedFields`|String|30|O|CRN + UDF - Value to be populated in statement in session id|
@@ -259,13 +259,13 @@ The table below identifies the required properties in the response message
 | | | | | 19- Noncarded |
 |`source`|String|10|O|APOS, Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine)|
 |`tipAmount`|String|10|O|Tip Amount entered during the transaction|
-|`totalTxnAmount (  Auth + ConvFee+ GST) `|String|10|M|Total Amount including decimal|
+|`totalTxnAmount `|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals|
 |`fuelDiscountCashback `|String|10|O|Fuel discount cashback amount during the transaction|
 |`convenienceFee `|String|10|O|Convenience  Fee including decimal|
 |`cGST`|String|10|O|GST Including decimal ( GST )|
 |`sGST`|String|10|O|GST Including decimal ( GST )|
 |`billAmount`|String|10|O|Bill  amount  including decimal|
-|`merchantReferenceNumber(MRN)`|String|20|M|Same as request|
+|`merchantReferenceNumber`|String|20|M|Same as request|
 |`terminalInvoiceNumber`|String|8|M|Terminal Invoice Number|
 |`currencySelection`|String|3|O|Currency code/currency which been selected|
 |`transactioID`|String|10|M|Same as request|
@@ -305,22 +305,22 @@ The table below identifies the required properties in the response message
 
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values |
-| --------  | ------------------ |
-|`00`|Approved Balances|
-|`01`|Place Call|
-|`02`|Over Floor Limit|
-|`03`|Merchant Not on File|
-|`12`|Invalid Transaction|
-|`14`|Invalid Account|
-|`19`|Retry Transaction|
-|`25`|CAF Not Found|
-|`30`|Invalid msg format|
-|`31`|Card Not Supported|
-|`41`|Lost or Stolen Card|
-|`43`|CAF Status 3, stolen card|
-|`51`|Pin Tries Exceeded|
-|`54`|Expired Card|
-|`55`|Incorrect Pin|
-|`58`|Transaction not allowed|
-|`91`|Auth Timed out|
+| ErrorCode |  Description/Values | Comments |
+| --------  | ------------------ | ----------- |
+|`00`|Approved Balances|Merchant should go ahead with reciept generation|
+|`01`|Place Call|Contact Customer Support / Business Manager|
+|`02`|Over Floor Limit|Contact Customer Support / Business Manager|
+|`03`|Merchant Not on File|Contact Customer Support / Business Manager|
+|`12`|Invalid Transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`14`|Invalid Account|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`19`|Retry Transaction|Contact Customer Support / Business Manager|
+|`25`|CAF Not Found|Contact Customer Support / Business Manager|
+|`30`|Invalid msg format|Contact Customer Support / Business Manager|
+|`31`|Card Not Supported|Contact Customer Support / Business Manager|
+|`41`|Lost or Stolen Card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`43`|CAF Status 3, stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`51`|Pin Tries Exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`54`|Expired Card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`55`|Incorrect Pin|Issuer Decline. Merchant should advise cardholder to key correct pin for transaction|
+|`58`|Transaction not allowed|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`91`|Auth Timed out|Contact Customer Support / Business Manager|
