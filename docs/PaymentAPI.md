@@ -1,20 +1,24 @@
-### Trasaction Management ###
+### Cloud Based Integration - Payment API ###
 
-Retail is all about selling goods and services to the end-consumer - it's everywhere and is a vital part of our everyday life. And with the availability of mobile and internet connectivity, the concept of retailing has become increasingly popular. All these developments have led to the rapid expansion of the retail business domain.In today’s digital transaction expansion all end-consumers prefer to use credit/debit card at most available places to pay the bills.Most of the retailers has a central system to manage the stock and billing process. But the digital payments transactions are initiated separately on the POS devices with cashiers’ manual interventions, which makes it time consuming and lead to erroneous billing as the amounts are input manually.Fiserv Cloud POI is API (application programming interface) based integration which facilitate to connect with retailer’s central or any standalone systems to automate the entire billing to payments transactions. 
+Many businesses have multiple systems working in silos. Given the fast-moving transformation in the retail and enterprise segment, a lack of collaboration and process inefficiencies result in the inability to deliver a frictionless on-demand experience, required in today’s fast-moving environment.
+Fiserv Cloud based integration is an Application Programming Interface (API) based integration which facilitates the connection with the retailer's central or standalone systems, to automate the entire billing to payment transactions. Explore more of our Cloud based integration Payment APIs below.
 
-Please click on the below link to explore the specific API of interest
+
+- [Cloud based integration](./?path=docs/APIs/PaymentAPI/Cloudbasedintegration.md)
 
 - [EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
 
-- [PreAuth Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
+- [Login](./?path=docs/APIs/PaymentAPI/Login.md)
 
 - [PreAuth Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
+
+- [PreAuth Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
 
 - [Refund](./?path=docs/APIs/PaymentAPI/Refund.md)
 
 - [Sale Card](./?path=docs/APIs/PaymentAPI/SaleCard.md)
 
-- [Sale Local Payment Method](./?path=docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md)
+- [Sale with Local Payment Method](./?path=docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md)
 
 - [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
