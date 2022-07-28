@@ -156,7 +156,7 @@ The table below identifies the required properties in the request message
 | | | | | 08 - EMI Sale |
 | | | | | 12 - Settlement Transaction|
 |`amt`|String|10|M|Transaction amount in decimals - "100.00"|
-|`detail`|String|2|O|To define the respond message in detail format. 
+|`detail`|String|2|O|To define the response message in detail format. 
 | | | | | 'Y' means detail message, 'N' means skip this format|
 |`ecrRef`|String|2|O|ECR reference no. up to 16 digits|
 |`merchantReferenceNumber`|String|10|O|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
@@ -300,9 +300,9 @@ The table below identifies the required properties in the response message
 | | | | | 05 - Void  |
 | | | | | 08 - EMI Sale | 
 | | | | | 12 - Settlement Transaction|
-|`amt`|String|10|M|Length 10 including decimal|
+|`amt`|String|10|M|Transaction amount in decimals - "100.00"|
 |`aid`|String|10|O|Acquirer ID|
-|`adj Amt`|String|10|O|Adjustment Amount|
+|`adjAmt`|String|10|O|Adjustment Amount|
 |`authCode`|String|8|M|Auth Code|
 |`atc`|String|12|O|Application Counter Value|
 |`batchNumber`|String|6|M|Terminal Batch Number|

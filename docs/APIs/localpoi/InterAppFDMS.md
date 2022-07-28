@@ -275,7 +275,7 @@ The table below identifies the required properties in the request message
 | | | | | 1- Current summary batch |
 | | | | |2- Current detail |
 | | | | | 3- Last settlement |
-|`totalTxnAmount`|String|10|M|Transaction amount|
+|`totalTxnAmount`|String|10|M|Total Amount in decimals - "100.00"|
 |`acquirerName`|String|20|M|Acquirer Name for settlement or print|
 |`staffId`|String|20|O|Option for offline transaction|
 |`rText`|String|20|O|Option for offline transaction|
@@ -488,7 +488,7 @@ The below table identifies the required properties in the response message
 
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values | Comments |
+| ErrorCode |  Description / Values | Comments |
 | --------  | ------------------ | ---------- |
 |`00`|Approved or completed successfully|Merchant should go ahead with reciept generation|
 |`01`|Refer to card issuer, Cardholder to contact Issuing Bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction|

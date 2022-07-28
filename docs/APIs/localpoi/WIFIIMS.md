@@ -168,7 +168,7 @@ The table below identifies the required properties in the request message
 | | | | | 19- Noncarded |
 |`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals-"100.00"|
 |`tipAmount`|String|10|O|Transaction which involves tip amount in decimals-"10.00"|
-|`detail`|String|2|O|To define the respond message in detail format. |
+|`detail`|String|2|O|To define the response message in detail format. |
 | | | | |'Y' means detail message, 'N' means skip this format|
 |`ecrRef`|String|16|O|ECR reference number generated in transaction|
 |`merchantReferenceNumber`|String|20|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
@@ -522,14 +522,13 @@ The table below identifies the required properties in the response message
 | | | | | 17- Wallet Google Pay |
 | | | | | 18- Tone Tag wallet |
 | | | | | 19- Noncarded |
-|`source`|String|10|O|Tip Amount entered during the transaction|
-|`tipAmount`|String|10|M|Total Amount including decimal|
-|`totalTxnAmount (  Auth + ConvFee+ GST) `|String|10|O|Convenience  Fee including decimal|
+|`tipAmount`|String|10|M|Tip Amount entered during the transaction |
+|`totalTxnAmount`|String|10|O|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00"|
 |`convenienceFee `|String|10|O|Convenience  Fee including decimal|
 |`cGST`|String|10|O|GST Including decimal ( GST )|
 |`sGST`|String|10|O|GST Including decimal ( GST )|
-|`billAmount`|String|10|O|Bill  amount  including decimal|
-|`merchantReferenceNumber(MRN)`|String|20|M|Same as request|
+|`billAmount`|String|10|O|Bill amount including decimal|
+|`merchantReferenceNumber`|String|20|M|Same as request|
 |`terminalInvoiceNumber`|String|8|M|Terminal Invoice Number|
 |`currencySelection`|String|3|O|Currency code/currency which been selected|
 |`transactioID`|String|10|M|Same as request|
