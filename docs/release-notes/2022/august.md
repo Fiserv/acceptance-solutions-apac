@@ -2,7 +2,7 @@
 
 ## v1.0.0 
 
-### August 15, 2022
+### 2022
 
 #### *What's New*
 - Initial release for Acceptance Solutions - APAC.
