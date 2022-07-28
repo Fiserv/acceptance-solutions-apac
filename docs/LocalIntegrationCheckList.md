@@ -88,10 +88,14 @@ Handy tips for you to kick start your local based integration:
 ## Break the big plan into small steps
 <B>Integrate and communicate</B>
 
-1) Review Fiserv API documents [here](./?path=docs/LocalPOI.md&branch=develop).
+1. Identify key points of contact from your various stakeholders.
+2. Plan with your technology department / external vendor on the timelines.
+3. Review Fiserv API documents [here](./?path=docs/LocalPOI.md&branch=develop).Explore the sample request and response APIs provided in the sandbox.
+4. Kick start your integration development with our APIs.
 
 For any clarifications or support required on technical integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
 
+Handy Tips: You may wish to consider discussing early with your team on which test scenarios would be required. The test scenarios are typically based on your daily operational needs. (Eg.which are your customers’ most used payment modes.)
 
 
 ![pos8 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg "pos8 logo") 
@@ -100,13 +104,34 @@ For any clarifications or support required on technical integration, do reach ou
 # Step 5: Test
 ## Plan, Test and Review
 
-For any clarifications or support on testing challenges during integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
+<B>A well planned testing provides assurance for a smooth go-live.</B>
 
+1) Analyse the testing scope and requirements
+2) Draft out the test plan, timelines and test cases with your technology team, external vendors (if applicable), and internal users
+   - Check on any firewalls / IPs that needs to be set-up
+   - Ensure the relevant test keys and / test certificates have been installed, pointing to the sandbox environment
+3) Execute the testing process
+    - For any clarifications or support on testing challenges during integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
+4) Test cycle closure upon successful completion
+
+<BR/>
 
 ![pos9 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos9.jpg "pos9 logo") 
 
 # Step 6: Activate
 ## Deploy & Go-Live
 
+<B>Live verification and monitoring</B>
+
+1) Please engage your account manager to ensure your production credentials have been set-up
+2) Apply for production terminals, with these information ready:
+   - No. of terminals required
+   - Define which payment modes are required
+   - Information fields on charge slips / eReceipts
+   - For deployment:
+     - Points of contact for coordinating on-site
+     - Date, time and location(s) for deployment
+   - Conduct live verification
+3) Monitor the performance of the Fiserv payment terminals to your point of sale (POS) systems
 
 For any queries post deployment, do contact our support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).

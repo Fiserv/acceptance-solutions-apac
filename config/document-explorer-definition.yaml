@@ -122,13 +122,13 @@
           sections:
             - title: India / AU
               sections:
-              - title: Inter-Application
+              - title: Inter-Application Integration
                 link: docs/APIs/localpoi/InterAppIms.md
               - title: USB / Static Wi-Fi
                 link: docs/APIs/localpoi/WIFIIMS.md
             - title: Rest of APAC
               sections:
-              - title: Inter-Application
+              - title: Inter-Application Integration
                 link: docs/APIs/localpoi/InterAppFDMS.md
               - title: USB / Static Wi-Fi
                 link: docs/APIs/localpoi/WIFIFDMS.md   
