@@ -64,6 +64,20 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Application Status Inquiry](./?path=/docs/APIs/externalboarding/ApplicationStatusInquiry.md)
 
+#  Local POI
+
+## India / AU
+
+- [Inter-Application Integration](./?path=/docs/APIs/localpoi/InterAppIms.md)
+
+- [USB / Static Wi-Fi](./?path=/docs/APIs/localpoi/WIFIIMS.md)
+
+## Rest of APAC 
+
+- [Inter-Application Integration](./?path=/docs/APIs/localpoi/InterAppFDMS.md)
+
+- [USB / Static Wi-Fi](./?path=/docs/APIs/localpoi/WIFIFDMS.md)
+
 ---
 
 ## Access Merchant Solution APIs
