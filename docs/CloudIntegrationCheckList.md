@@ -1,6 +1,8 @@
+# Cloud Integration 
+
 ![pos3 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg "pos3 logo")
 
-# Cloud Integration Use Cases
+### Cloud Integration Use Cases
 
 Our cloud-based integration APIs facilitates to connect with your in-house central or any standalone systems to automate the entire billing to payments transactions
 
@@ -14,7 +16,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
 
  - Your current point of sale (POS) system(s) have been implemented on cloud-based connectivity
  - Cloud connectivity can be supported by your business network architecture from a security and data hosting considerations
- - Technically your business’ direction for your payment and reporting ecosystem is planned to be on cloud-based integrations
+ - Technically your business direction for your payment and reporting ecosystem is planned to be on cloud-based integrations
  - *If you are a hospitality-based business solutions
    - Enjoy the benefits of enabling tokenized payment transactions to be integrated to your payment interface
  - Optimize your financial management with digitalized receipts that can be viewed and downloaded on Fiserv Business Point (merchant portal)
@@ -52,6 +54,7 @@ Handy tips before you begin, we would recommend:
 
 # Step 3: Define
 ## Who, What and When?
+
 <B>Scope out what your business requires</B>
 
 1. Define and finalize your requirements for integration to your point of sale (POS)
@@ -71,7 +74,9 @@ Handy tips before you begin, we would recommend:
 
 # Step 4: Integrate
 ## Break the big plan into small steps
+
 <B>Integrate and communicate</B>
+
 1. Identify key points of contact from your various stakeholders.
 2. Plan with your technology department / external vendor on the timelines.
 3. Review Fiserv API documents [here]( ./?path=docs/CloudPOI.md&branch=develop). Explore the sample request and response APIs provided in the sandbox.
@@ -90,14 +95,16 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
 
 # Step 5: Test
 ## Plan, Test and Review
+
 <B>A well planned testing provides assurance for a smooth go-live.</B>
-1) Analyse the testing scope and requirements
-2) Draft out the test plan, timelines and test cases with your technology team, external vendors (if applicable), and internal users
+
+1. Analyse the testing scope and requirements
+2. Draft out the test plan, timelines and test cases with your technology team, external vendors (if applicable), and internal users
    - Check on any firewalls / IPs that needs to be set-up
    - Ensure the relevant test keys and / test certificates have been installed, pointing to the sandbox environment
-3) Execute the testing process
+3. Execute the testing process
     - For any clarifications or support on testing challenges during integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
-4) Test cycle closure upon successful completion
+4. Test cycle closure upon successful completion
 
 <BR/>
 
@@ -105,9 +112,11 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
 
 # Step 6: Activate
 ## Deploy & Go-Live
+
 <B>Live verification and monitoring</B>
-1) Please engage your account manager to ensure your production credentials have been set-up
-2) Apply for production terminals, with these information ready:
+
+1. Please engage your account manager to ensure your production credentials have been set-up
+2. Apply for production terminals, with these information ready:
    - No. of terminals required
    - Define which payment modes are required
    - Information fields on charge slips / eReceipts
@@ -115,6 +124,6 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
      - Points of contact for coordinating on-site
      - Date, time and location(s) for deployment
    - Conduct live verification
-3) Monitor the performance of the Fiserv payment terminals to your point of sale (POS) systems
+3. Monitor the performance of the Fiserv payment terminals to your point of sale (POS) systems
 
 For any queries post deployment, do contact our support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).

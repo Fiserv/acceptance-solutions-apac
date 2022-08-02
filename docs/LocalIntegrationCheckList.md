@@ -2,7 +2,7 @@
 
 ![pos3 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg "pos3 logo")
 
-### Local Integration Use Cases
+### Local Integration Use Cases 
 
 Our local integration APIs facilitates to connect with your in-house central or any standalone systems to automate the entire billing to payments transactions.<BR/>
 
@@ -15,9 +15,9 @@ From inventory tracking, reservations, billing and reconciliation applications t
 #### Use case considerations on how our Local integration can support your ecosystem:
 
  - Your current point of sale (POS) system(s) have been implemented on local-based connectivity
- - Technically your business’ direction for your payment and reporting ecosystem is planned to be on local-based integrations
+ - Technically your business direction for your payment and reporting ecosystem is planned to be on local-based integrations
  - *If you are a hospitality-based business using Oracle Opera Payment Interface (OPI) to support Oracle Property Management System (PMS) solutions
-    - Enjoy the benefits of enabling tokenized payment transactions to be integrated to Oracle Payment Interface (OPI)
+ - Enjoy the benefits of enabling tokenized payment transactions to be integrated to Oracle Payment Interface (OPI)
 Optimize your financial management with digitalized receipts that can be viewed and downloaded on Fiserv Business Point (merchant portal)
 
 <B>Once you have assessed the use cases, discover our APIs [here](./?path=docs/LocalPOI.md&branch=develop) for a further deep dive.</B>
@@ -41,7 +41,7 @@ Before you begin, both the consumer application and the parent app must be insta
 
 Handy tips for you to kick start your local based integration:
 
-1) <B>Set up your test account [here](./?path=docs/introduction/contact-us.md&branch=develop)</B>
+1. <B>Set up your test account [here](./?path=docs/introduction/contact-us.md&branch=develop)</B>
 
  Additionally, these are a few pre-requisites for local integration solution using Fiserv's Android based terminals.
 
@@ -49,23 +49,24 @@ Handy tips for you to kick start your local based integration:
  - Android Studio 3.x
  - Kitkat or higher versions of Android - API Level 19+
 
-2) For <B>hospitality-based</B> merchants, if you do require cloud-based integration to Oracle Opera Payment Interface (OPI) to 
+2. For <B>hospitality-based</B> merchants, if you do require cloud-based integration to Oracle Opera Payment Interface (OPI) to 
    support Oracle Property Management System (PMS).
 
    - Please reach out to our support team for an assessment with a through run through of OPI checklist
    - Engage your appointed Oracle OPI solutions provider for a technical discussion with our integration support team
 
-3) Assess with your in-house network architecture team and align on the connectivity requirements
+3. Assess with your in-house network architecture team and align on the connectivity requirements
 
    - For detailed technical compatibility requirements, do reach out to our integration support team
 
-4) Check if your appointed point of sale (POS) provider had been certified with Fiserv [here](./?path=docs/LocalPOI.md&branch=develop).
+4. Check if your appointed point of sale (POS) provider had been certified with Fiserv [here](./?path=docs/LocalPOI.md&branch=develop).
 
 
 ![pos6 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg "pos6 logo") 
 
 # Step 3: Define
 ## Who, What and When?
+
 <B>Scope out what your business requires</B>
 
 1. Define and finalize your requirements for integration to your point of sale (POS)
@@ -84,8 +85,8 @@ Handy tips for you to kick start your local based integration:
 ![pos7 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos7.jpg "pos7 logo") 
 
 # Step 4: Integrate
-
 ## Break the big plan into small steps
+
 <B>Integrate and communicate</B>
 
 1. Identify key points of contact from your various stakeholders.
@@ -106,13 +107,13 @@ Handy Tips: You may wish to consider discussing early with your team on which te
 
 <B>A well planned testing provides assurance for a smooth go-live.</B>
 
-1) Analyse the testing scope and requirements
-2) Draft out the test plan, timelines and test cases with your technology team, external vendors (if applicable), and internal users
+1. Analyse the testing scope and requirements
+2. Draft out the test plan, timelines and test cases with your technology team, external vendors (if applicable), and internal users
    - Check on any firewalls / IPs that needs to be set-up
    - Ensure the relevant test keys and / test certificates have been installed, pointing to the sandbox environment
-3) Execute the testing process
+3. Execute the testing process
     - For any clarifications or support on testing challenges during integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
-4) Test cycle closure upon successful completion
+4. Test cycle closure upon successful completion
 
 <BR/>
 
@@ -123,8 +124,8 @@ Handy Tips: You may wish to consider discussing early with your team on which te
 
 <B>Live verification and monitoring</B>
 
-1) Please engage your account manager to ensure your production credentials have been set-up
-2) Apply for production terminals, with these information ready:
+1. Please engage your account manager to ensure your production credentials have been set-up
+2. Apply for production terminals, with these information ready:
    - No. of terminals required
    - Define which payment modes are required
    - Information fields on charge slips / eReceipts
@@ -132,6 +133,6 @@ Handy Tips: You may wish to consider discussing early with your team on which te
      - Points of contact for coordinating on-site
      - Date, time and location(s) for deployment
    - Conduct live verification
-3) Monitor the performance of the Fiserv payment terminals to your point of sale (POS) systems
+3. Monitor the performance of the Fiserv payment terminals to your point of sale (POS) systems
 
 For any queries post deployment, do contact our support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
