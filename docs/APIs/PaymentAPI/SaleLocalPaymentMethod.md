@@ -1,6 +1,6 @@
 # Sale with Local Payment Method
 
-This API is used to send a sale request for card transactions. Merchants needs to add the session token received during Login  API call in the header field of this API.
+This API is used to send a sale request for card transactions. Merchants will be required to add the session token received during Login  API call in the header field of this API.
 
 ## Endpoint
 
@@ -84,7 +84,7 @@ The below table identifies the required json properties in the request message.
 | `merchantRefNumber` | *string* | 14 | M (BOCM – 50) | Unique number for each transaction. Inquiry transaction should have same MRN of original txn |
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
-| `convFee` | *string* | 10 | C (To be sent if fee is charged) | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
+| `convFee` | *string* | 10 | C (to be sent if fee is charged) | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
 | `cgst` | *string* | 10 | C (if CGST is included in the total amount)  | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
 | `igst` | *string* | 10 | C (if IGST is included in the total amount) | State GST Including decimal (E.g. 10.00 for $10 igst) |
 | `sgst` | *string* | 10 | C (if SGST is included in the total amount)  | State GST Including decimal (E.g. 100.00 for $10 sgst) |
@@ -94,13 +94,13 @@ The below table identifies the required json properties in the request message.
 | `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time |
 | `tranDate` | *Date* | DDMMYYYY | C  |Original transaction date |
 | `tranTime` | *Timestamp* | HHMMSS | C | Original transaction time |
-| `cardLastNumber` | *string* | 04 | C (if included pre auth Completion)  | Last 4 digits of Card Number  |
-| `cardBin` | *string* | 06 | C (if included refund) | First 6 digits of the Card, used in the original (sale) transaction |
+| `cardLastNumber` | *string* | 04 | C (if Pre-auth completion is included)  | Last 4 digits of Card Number  |
+| `cardBin` | *string* | 06 | C (if Refund is included) | First 6 digits of the Card, used in the original (sale) transaction |
 | `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature |
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value) |
 | `tranType` | *string* | 50 | O | Transaction Description |
-| `rrn` | *string* | 20 | C (It is applicable for Refund and optional for Inquiry txn) | Must pass the same value received in original transaction response |
-| `emiTenure` | *string* | 02 | C (if included EMI transactions) | EMI duration |
+| `rrn` | *string* | 20 | C (this is applicable for Refund, but optional for Inquiry transaction) | Must pass the same value received in original transaction response |
+| `emiTenure` | *string* | 02 | C (if EMI transactions are included) | EMI duration |
 | `paramList` | *array* | NA | O | Biller can pass any additional details if required in arrary format "paramList": [{"param_lit": "param1 key","param": "23"}] |
 | `udf1` | *string* | 100 | O | User Defined Field |
 | `udf2` | *string* | 100 | O | User Defined Field |
@@ -167,17 +167,17 @@ The below table identifies the required json properties in the request message.
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C)  | Description/Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
-| `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table) |
+| `transactionId` | *string* | 20 | M | Unique ID (Biller transaction details) |
 | `functionCode` | *string* | 02 | M | Same as request |
 | `invoiceNumber` | *string* | 20 | O | Terminal Invoice Number |
 | `cardLastNumber` | *string* | 4 | C (if required for Pre-auth) | Last 4 Digits of Card Number |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts, tip) including decimal (E.g. 57.00 for $57 sale) |
 | `tipAmount` | *string* | 10 | C (if Tip is included) | Tip Amount including decimal (E.g. 7.00 for $7 tip)|
 | `merchantRefNumber` | *string* | 14 | M | Merchant Reference Number |
-| `customerRefNumber` | *string* | 20 | 0 | Custmer Reference Number |
+| `customerRefNumber` | *string* | 20 | 0 | Customer’s Reference Number |
 | `respCode` | *string* | 05 | M | 200 / 300 / actual switch response |
 | `response` | *string* | 20 | M | SUCCESS / FAILURE |
 | `respMsg` | *string* | 20 | O | Error Message |
@@ -198,18 +198,18 @@ The below table identifies the required json properties in the request message.
 | `cardNumber` | *string* | 19 | O | Card Number |
 | `expDate` | *string* | 4 | O |  |
 | `posEntryMode` | *string* | 10 | M | MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC |
-| `walletType` | *string* | 10 | C  | Type of wallet used such as UPI, Amazon Pay LPM name |
+| `walletType` | *string* | 10 | C  | Type of wallet used such as UPI, Amazon Pay etc. |
 | `primaryId` | *string* | 20 | C | Reference Number of the QR Request |
-| `custId` | *string* | 35 | O | Customer identifier,Vehicle number for fasttag VPA for UPI QR |
+| `custId` | *string* | 35 | O | Customer’s Identifier, Vehicle Number for Fast Tag VPA for UPI QR |
 | `walletId` | *string* | 05 | O | Unique wallet ID associated with each wallet |
 | `Source` | *string* | 20 | O | Transaction Initiated source |
-| `customerMobile` | *string* | 20 | O | Customer Mobile Number |
-| `customerName` | *string* | 20 | O | Cardholder Name |
+| `customerMobile` | *string* | 20 | O | Customer’s Mobile Number |
+| `customerName` | *string* | 20 | O | Cardholder’s Name |
 | `cardType` | *string* | 5 | O | Card Type |
-| `offlineFlag` | *string* | 01 | O | offline flag |
-| `tranDate` | *date* | DDMMYYYY | O | transaction date |
-| `tranTime` | *string* | HHMMS | O | transaction time |
-| `settlementDetails` | *string* | 2000 | O | set settlement Details |
+| `offlineFlag` | *string* | 01 | O | Offline Flag |
+| `tranDate` | *date* | DDMMYYYY | O | Transaction Date |
+| `tranTime` | *string* | HHMMS | O | Transaction Time |
+| `settlementDetails` | *string* | 2000 | O | Set settlement Details |
 
 
 The table below provides the list of error codes and description for this application.

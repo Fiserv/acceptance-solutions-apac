@@ -1,6 +1,6 @@
 # Pre Auth Sale
 
-This API is used to send preAuth transaction request. Merchants needs to add session 
+This API is used to send preAuth transaction request. Merchants will be required to add session 
 token received during login API call in the header of this API. 
 
 
@@ -83,9 +83,9 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `terminalId` | *string* | 07 | M | Terminal ID |
 | `billerId` | *string* | 03 | M | Biller ID provided by Fiserv |
 | `merchantRefNumber` | *string* | 14 | M (BOCM – 50) | Unique number for each transaction. Inquiry transaction should have same MRN of original txn |
-| `customerRefNumber` | *string* | 20 | O | Consumer Number |
+| `customerRefNumber` | *string* | 20 | O | Customer’s Reference Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
-| `convFee` | *string* | 10 | C (To be sent if fee is charged) | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
+| `convFee` | *string* | 10 | C (to be sent if fee is charged) | Convenience Fee including decimal (E.g. 5.00 for $5 fee) |
 | `cgst` | *string* | 10 | C (if CGST is included in the total amount)  | Central GST Including decimal (E.g. 10.00 for $10 cgst) |
 | `igst` | *string* | 10 | C (if IGST is included in the total amount) | State GST Including decimal (E.g. 10.00 for $10 igst) |
 | `sgst` | *string* | 10 | C (if SGST is included in the total amount)  | State GST Including decimal (E.g. 100.00 for $10 sgst) |
@@ -95,13 +95,13 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time |
 | `tranDate` | *Date* | DDMMYYYY | C  |Original transaction date |
 | `tranTime` | *Timestamp* | HHMMSS | C | Original transaction time |
-| `cardLastNumber` | *string* | 04 | C (if included pre auth Completion)  | Last 4 digits of Card Number  |
-| `cardBin` | *string* | 06 | C (if included refund) | First 6 digits of the Card, used in the original (sale) transaction |
+| `cardLastNumber` | *string* | 04 | C (if Pre-auth completion is included)  | Last 4 digits of Card Number  |
+| `cardBin` | *string* | 06 | C (if Refund is included) | First 6 digits of the Card, used in the original (sale) transaction |
 | `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature |
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value) |
 | `tranType` | *string* | 50 | O | Transaction Description |
-| `rrn` | *string* | 20 | C (It is applicable for Refund and optional for Inquiry txn) | Must pass the same value received in original transaction response |
-| `emiTenure` | *string* | 02 | C (if included EMI transactions) | EMI duration |
+| `rrn` | *string* | 20 | C (this is applicable for Refund, but optional for Inquiry transaction) | Must pass the same value received in original transaction response |
+| `emiTenure` | *string* | 02 | C (if EMI transactions are included) | EMI duration |
 | `paramList` | *array* | NA | O | Biller can pass any additional details if required in arrary format "paramList": [{"param_lit": "param1 key","param": "23"}] |
 | `udf1` | *string* | 100 | O | User Defined Field |
 | `udf2` | *string* | 100 | O | User Defined Field |

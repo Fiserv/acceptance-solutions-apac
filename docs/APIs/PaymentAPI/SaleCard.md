@@ -1,6 +1,6 @@
 # Sale Card
 
-This API is used to send sale card transaction request. Merchants needs to add session 
+This API is used to send sale card transaction request. Merchants will be required to add session 
 token received during login API call in the header of this API.
 
 
@@ -178,7 +178,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts, tip) including decimal (E.g. 57.00 for $57 sale) |
 | `tipAmount` | *string* | 10 | C (if Tip is included) | Tip Amount including decimal (E.g. 7.00 for $7 tip)|
 | `merchantRefNumber` | *string* | 14 | M | Merchant Reference Number |
-| `customerRefNumber` | *string* | 20 | 0 | Custmer Reference Number |
+| `customerRefNumber` | *string* | 20 | 0 | Customer’s Reference Number |
 | `respCode` | *string* | 05 | M | 200 / 300 / actual switch response |
 | `response` | *string* | 20 | M | SUCCESS / FAILURE |
 | `respMsg` | *string* | 20 | O | Error Message |
@@ -199,18 +199,18 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `cardNumber` | *string* | 19 | O | Card Number |
 | `expDate` | *string* | 4 | O |  |
 | `posEntryMode` | *string* | 10 | M | MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC |
-| `walletType` | *string* | 10 | C  | Type of wallet used such as UPI, Amazon Pay LPM name |
+| `walletType` | *string* | 10 | C  | Type of wallet used such as UPI, Amazon Pay etc. |
 | `primaryId` | *string* | 20 | C | Reference Number of the QR Request |
 | `custId` | *string* | 35 | O | Customer identifier,Vehicle number for fasttag VPA for UPI QR |
 | `walletId` | *string* | 05 | O | Unique wallet ID associated with each wallet |
 | `Source` | *string* | 20 | O | Transaction Initiated source |
-| `customerMobile` | *string* | 20 | O | Customer Mobile Number |
-| `customerName` | *string* | 20 | O | Cardholder Name |
+| `customerMobile` | *string* | 20 | O | Customer’s Mobile Number |
+| `customerName` | *string* | 20 | O | Cardholder’s Name |
 | `cardType` | *string* | 5 | O | Card Type |
-| `offlineFlag` | *string* | 01 | O | offline flag |
-| `tranDate` | *date* | DDMMYYYY | O | transaction date |
-| `tranTime` | *string* | HHMMS | O | transaction time |
-| `settlementDetails` | *string* | 2000 | O | set settlement Details |
+| `offlineFlag` | *string* | 01 | O | Offline Flag |
+| `tranDate` | *date* | DDMMYYYY | O | Transaction Fate |
+| `tranTime` | *string* | HHMMS | O | Transaction Time |
+| `settlementDetails` | *string* | 2000 | O | Set settlement Details |
 
 
 The table below provides the list of error codes and description for this application.

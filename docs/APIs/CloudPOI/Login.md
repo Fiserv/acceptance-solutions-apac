@@ -12,9 +12,9 @@ Login API authenticates merchants’ unique credentials, with a response that
 
 ## How it works
 
-1. Merchants need to initiates a Login request to fetch a session token before submitting any APIs to Fiserv backend system.
+1. Merchants need to initiate a Login request to fetch a session token before submitting any APIs to Fiserv backend system.
 2. Each session token is active for a specific amount of time provided in ttl (time to live) field in the response message.
-3. If the merchant tries to use the token beyond the expiry, Fiserv backend system will return with an error response.
+3. If the merchant tries to use the token beyond beyond the session token’s expiry period, Fiserv backend system will return with an error response.
 4. The merchant will then need to initiate another login request to request for a fresh token, in order to submit any creation of new user request.
 
 
@@ -43,8 +43,8 @@ The table below identifies the required parameters in the request payload.
 
 | Variable | Passed as | Type | Length | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-| `username` | Json Property | *string* | 15 | User ID |
-| `Password ` | Json Property | *string* | 15 | Password |
+| `username` | JSON Property | *string* | 15 | User ID |
+| `Password ` | JSON Property | *string* | 15 | Password |
 
 ### Successful Response in Payload
 
@@ -75,9 +75,10 @@ The table below identifies the required parameters in the request payload.
 
 The table below provides the list of error codes and description for this application.
 
-| Error Code |  Description / Values |
-| --------  | ------------------ |
-|`200`| Request executed |   
-|`300`| Request failure |
-|`404`|  Not found |  
-|`500`| Internal Server Error |
+
+|  Error Code | Description / Values | Comments | 
+| -------- | ------- | -- |
+| `200` | Request executed |  Request is successfully processed. Merchant should use the generated token and proceed with Payment API transaction Initiation  | 
+| `300 ` |   Request failure |  Redirection error. Merchant should validate and retry with new request | 
+| `404` |  Not found |   Server cannot find the requested resource. Contact Customer Support / Business Manager  | 
+| `500 ` |   Internal Server Error |  Server Error. Contact Customer Support / Business Manager | 
