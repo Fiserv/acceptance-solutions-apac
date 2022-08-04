@@ -12,13 +12,13 @@ From inventory tracking, reservations, billing and reconciliation applications t
 
 
 
-#### Use case considerations on how our Local integration can support your ecosystem:
+<B> Use case considerations on how our Local integration can support your ecosystem: </B>
 
  - Your current point of sale (POS) system(s) have been implemented on local-based connectivity
  - Technically your business direction for your payment and reporting ecosystem is planned to be on local-based integrations
  - *If you are a hospitality-based business using Oracle Opera Payment Interface (OPI) to support Oracle Property Management System (PMS) solutions
- - Enjoy the benefits of enabling tokenized payment transactions to be integrated to Oracle Payment Interface (OPI)
-Optimize your financial management with digitalized receipts that can be viewed and downloaded on Fiserv Business Point (merchant portal)
+   - Enjoy the benefits of enabling tokenized payment transactions to be integrated to Oracle Payment Interface (OPI)
+ - Optimize your financial management with digitalized receipts that can be viewed and downloaded on Fiserv Business Point (merchant portal)
 
 <B>Once you have assessed the use cases, discover our APIs [here](./?path=docs/LocalPOI.md&branch=develop) for a further deep dive.</B>
 
@@ -39,23 +39,22 @@ Before you begin, both the consumer application and the parent app must be insta
  - The Parent application completes the transaction and communicates back the result to the Fiserv Interface library.
  - The Fiserv Interface in turn communicates back the result to the Consumer application.
 
-Handy tips for you to kick start your local based integration:
+  Handy tips for you to kick start your local based integration:
 
 1. <B>Set up your test account [here](./?path=docs/introduction/contact-us.md&branch=develop)</B>
 
- Additionally, these are a few pre-requisites for local integration solution using Fiserv's Android based terminals.
+2. Additionally, these are a few <b>pre-requisites</b> for local integration solution using Fiserv's Android based terminals.
 
- - The Interface library (MSInterfaceSdk.aar)
- - Android Studio 3.x
- - Kitkat or higher versions of Android - API Level 19+
+    - The Interface library (MSInterfaceSdk.aar) 
+    - Android Studio 3.x
+    - Kitkat or higher versions of Android - API Level 19+
 
-2. For <B>hospitality-based</B> merchants, if you do require cloud-based integration to Oracle Opera Payment Interface (OPI) to 
-   support Oracle Property Management System (PMS).
+2. For <B>hospitality-based</B> merchants, if you do require cloud-based integration to Oracle Opera Payment Interface (OPI) to support Oracle Property Management System (PMS).
 
    - Please reach out to our support team for an assessment with a through run through of OPI checklist
    - Engage your appointed Oracle OPI solutions provider for a technical discussion with our integration support team
 
-3. Assess with your in-house network architecture team and align on the connectivity requirements
+3. Assess with your <b>in-house network architecture team </b> and align on the connectivity requirements
 
    - For detailed technical compatibility requirements, do reach out to our integration support team
 
@@ -92,11 +91,11 @@ Handy tips for you to kick start your local based integration:
 1. Identify key points of contact from your various stakeholders.
 2. Plan with your technology department / external vendor on the timelines.
 3. Review Fiserv API documents [here](./?path=docs/LocalPOI.md&branch=develop).Explore the sample request and response APIs provided in the sandbox.
-4. Kick start your integration development with our APIs.
+4. <b>Kick start your integration development with our APIs.</b>
 
 For any clarifications or support required on technical integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
 
-Handy Tips: You may wish to consider discussing early with your team on which test scenarios would be required. The test scenarios are typically based on your daily operational needs. (Eg.which are your customers’ most used payment modes.)
+<div style="background-color:grey;"><b>Handy Tips</b>: You may wish to consider discussing early with your team on which test scenarios would be required. The test scenarios are typically based on your daily operational needs. (Eg.which are your customers’ most used payment modes.)</div>
 
 
 ![pos8 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg "pos8 logo") 
@@ -109,11 +108,12 @@ Handy Tips: You may wish to consider discussing early with your team on which te
 
 1. Analyse the testing scope and requirements
 2. Draft out the test plan, timelines and test cases with your technology team, external vendors (if applicable), and internal users
+3. Align with Fiserv on your testing plans
    - Check on any firewalls / IPs that needs to be set-up
    - Ensure the relevant test keys and / test certificates have been installed, pointing to the sandbox environment
-3. Execute the testing process
+4. Execute the testing process
     - For any clarifications or support on testing challenges during integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
-4. Test cycle closure upon successful completion
+5. Test cycle closure upon successful completion
 
 <BR/>
 

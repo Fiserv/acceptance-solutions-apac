@@ -9,7 +9,7 @@ For APAC related integration, our dedicated support teams would be available to 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width:200%;
+  width:370%;
 }
 
 td, th {
@@ -29,9 +29,6 @@ table tr:last-child {
   border: 0;
 }
 
-h1 {
-  border-bottom: solid white;
-}
 </style>
 </head>
 <body>
@@ -51,9 +48,9 @@ h1 {
 
   <tr>
     <td>India</td>
-    <td> POS <br><br> Gateway <br><br>POS (premium) </td>
+    <td> POS <br><br>Gateway <br><br>POS (premium) </td>
     <td>1800-266-6545<br>1800-102-1671<br>1800-102-1673<br>1800-266-6546<br>1800-102-1672 </td>
-    <td>merchantcare@icicims.com <br> <br>imspremiumservice@icicims.com</td>
+    <td>merchantcare@icicims.com <br> <br><br><br>imspremiumservice@icicims.com</td>
     <td>pghelpdesk@fiserv.com</td>
     <td>24/7 support<br><br>24/7 support</td>
     <td>1800-266-6545<br>1800-102-1671<br>1800-102-1673</td>
@@ -124,4 +121,3 @@ h1 {
 
 </body>
 </html>
-

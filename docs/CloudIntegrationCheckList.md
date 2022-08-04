@@ -80,13 +80,13 @@ Handy tips before you begin, we would recommend:
 1. Identify key points of contact from your various stakeholders.
 2. Plan with your technology department / external vendor on the timelines.
 3. Review Fiserv API documents [here]( ./?path=docs/CloudPOI.md&branch=develop). Explore the sample request and response APIs provided in the sandbox.
-4. Kick start your integration development with our APIs.
+4. <B> Kick start your integration development with our APIs. </B>
 
 For any clarifications or support required on technical integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
 
 
-<B>Handy Tips:</B> You may wish to consider discussing early with your team on which test scenarios would be required. 
-The test scenarios are typically based on your daily operational needs. (Eg.which are your customers’ most used payment modes.)
+<div style="background-color:grey;"> <B>Handy Tips:</B> You may wish to consider discussing early with your team on which test scenarios would be required. 
+The test scenarios are typically based on your daily operational needs. (Eg.which are your customers’ most used payment modes.) </div>
 
 <BR/>
 
@@ -100,9 +100,10 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
 
 1. Analyse the testing scope and requirements
 2. Draft out the test plan, timelines and test cases with your technology team, external vendors (if applicable), and internal users
+3. Align with Fiserv on your testing plans
    - Check on any firewalls / IPs that needs to be set-up
    - Ensure the relevant test keys and / test certificates have been installed, pointing to the sandbox environment
-3. Execute the testing process
+4. Execute the testing process
     - For any clarifications or support on testing challenges during integration, do reach out to our integration support teams [here](./?path=docs/introduction/contact-us.md&branch=develop).
 4. Test cycle closure upon successful completion
 
