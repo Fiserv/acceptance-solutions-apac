@@ -9,7 +9,7 @@ For APAC related integration, our dedicated support teams would be available to 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width:200%;
+  width:100%;
 }
 
 td, th {
@@ -50,8 +50,8 @@ div.b {
 <body>
 
 
-
-<table  style="width:200%">
+<div style="overflow-x:auto;">
+<table  style="width:250%">
 
   <tr >
     <th style="width:0.5%"> Region</th>
@@ -130,7 +130,8 @@ div.b {
    
 
   </tr>
-</table>
+</table> 
 
 </body>
 </html>
+
