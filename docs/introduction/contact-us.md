@@ -51,15 +51,15 @@ div.b {
 
 
 <div style="overflow-x:auto;">
-<table  style="width:250%">
+<table  style="width:300%">
 
-  <tr >
+  <tr>
     <th style="width:0.5%"> Region</th>
-    <th  style="width:0.5%">Gateway -<br> Online / Digital POS - <br>Point of Sale (Terminals)</th>inals) Support Team </th>
-    <th style="width:1%">Fiserv Gateway Support
-    <th style="width:0.5%"> Merchant Integration<br> Support Contact </th>
+    <th  style="width:0.5%">Gateway -<br> Online / Digital POS - <br>Point of Sale (Terminals)</th>
+    <th style="width:1.5%"> Merchant Integration<br> Support Contact </th> 
     <th style="width:0.5%">Point of Sale (Terminals)<br> Support Team</th>
-    <th style="width:1%">Operational Hours <br> (Merchant Support) </th>
+     <th style="width:1%">Fiserv Gateway Support Team </th>
+     <th style="width:1%">Operational Hours <br> (Merchant Support) </th>
     <th style="width:0.5%">Sales Enquiry Contact</th>
   </tr>
 
@@ -72,6 +72,7 @@ div.b {
     <td><br><br><br><br>24/7 support<hr><br><br><br><br><br><br>24/7 support</td>
     <td>1800-266-6545<br>1800-102-1671<hr><br><br>1800-102-1673<hr></td>
  </tr>
+ 
   <tr>
    <td>Australia</td>
    <td> POS/Gateway</td>
@@ -129,7 +130,7 @@ div.b {
    <td> </td>
    
 
-  </tr>
+  </tr> 
 </table> 
 
 </body>
