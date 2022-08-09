@@ -14,7 +14,7 @@ Login API authenticates merchants’ unique credentials, with a response that
 
 1. Merchants need to initiate a Login request to fetch a session token before submitting any APIs to Fiserv backend system.
 2. Each session token is active for a specific amount of time provided in ttl (time to live) field in the response message.
-3. If the merchant tries to use the token beyond beyond the session token’s expiry period, Fiserv backend system will return with an error response.
+3. If the merchant tries to use the token beyond the session token’s expiry period, Fiserv backend system will return with an error response.
 4. The merchant will then need to initiate another login request to request for a fresh token, in order to submit any creation of new user request.
 
 

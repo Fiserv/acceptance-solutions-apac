@@ -160,7 +160,7 @@ The table below contains the mandatory fields required for a successful request.
 
 ### Response
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C)  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
 
 

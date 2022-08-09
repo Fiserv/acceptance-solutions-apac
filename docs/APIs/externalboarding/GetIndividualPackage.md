@@ -24,7 +24,7 @@ The table below contains the mandatory fields required for a successful request.
 
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 | `packageId` | *Path Variable* |  | M | package id |
 
 

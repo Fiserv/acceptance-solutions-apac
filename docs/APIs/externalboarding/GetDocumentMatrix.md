@@ -48,7 +48,7 @@ The table below contains the mandatory fields required for a successful request.
 
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C)  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 |`boardingType`|Alphanumeric|20|M|Type of Merchant: New MID / Add MID / Add TID|
 |`institutionCode`|Alphanumeric|3|M|The unique value assigned to each channel|
 |`appChannel`|Alphanumeric|20|M|Application Channel|

@@ -30,7 +30,7 @@ The table below contains the mandatory fields required for a successful request.
 
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional  (M / O / C)  | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 |`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API|
 |`docType`|Alphanumeric|30||Document Name of document being uploaded. |
 |`fileType`|Alphanumeric|10|M|The type of the file that is uploaded|

@@ -41,7 +41,7 @@ The table contains the mandatory fields required for a successful request. The f
 
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description / Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 |`appType`|Alphanumeric|8|M|Fixed Value **API**|
 |`salesId`|Alphanumeric|70|M|User Credential created for each partner|
 |`channelCode`|Alphanumeric|10|M|Static channel code shared with each partner|
@@ -353,7 +353,7 @@ The table contains the mandatory fields required for a successful request. The f
 
 ### Response
 | Variable | Type | Length |  Mandatory /Optional / Conditional ( M / O / C) | Description/Values |
-| -------- | :-------: | :--: | :------------: | ------------------ |
+| -------- | ------- | -- | ------------ | ------------------ |
 | `Id` | String | 20 | M | Identification Number |
 
 

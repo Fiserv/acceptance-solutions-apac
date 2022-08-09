@@ -394,7 +394,7 @@ The table below contains the mandatory fields required for a successful request.
 
 ### Request
 | Field Name | Type | Length | Mandatory / Optional / Conditional (M / O / C ) | Description/Values | 
-| -------- | :-------: | :--: | :------------: | :--: | 
+| -------- | ------- | -- | ------------ | -- | 
 |`appURN`| Alphanumeric | 30 | M | App URN retured as part of Create URN API | 
 |`appType`| Alphanumeric | 8 | M | Fixed Value 'API' | 
 |`salesId`| Alphanumeric | 70 | M | User Credential created for each partner | 
@@ -416,7 +416,7 @@ The table below contains the mandatory fields required for a successful request.
 | | | | |For AU - ABN  | 
 |`taxidValue`| Alphanumeric | 50 | M | Tax ID Value provided for the merchant.
 | | | | | For India - Individual PAN for Individual/Soleprop merchants.|
-| | | | | Corporate PAN for other type pf merchants |
+| | | | | Corporate PAN for other type of merchants |
 | | | | |For AU - ABN Value | 
 |`dateIncorporated`| Alphanumeric | 50 | M | YYYYMMDD | 
 |`websiteURL`| Alphanumeric | 100 | M | Eligible for ECOM Merchant | 
@@ -519,7 +519,7 @@ The table below contains the mandatory fields required for a successful request.
 | | | | |For India - PAN/AADHAR |
 | | | | | For ASEAN - Passport/Driving Licence/HKID or SGID or MYID |
 | | | | |For AU - Passport/Driving Licence |
-|`identityValue`| Alphanumeric | 25 | M | Value of the Kyc Document submitted | 
+|`identityValue`| Alphanumeric | 25 | M | Value of the KYC Document submitted | 
 |`identitymetaName1`| Alphanumeric | 25 | O | Additional information pertaning to the KYC documents submitted. For AU - Driving License State Code | 
 |`identitymetaValue1`| Alphanumeric | 10 | M | Additional information pertaning to the KYC documents submitted. For AU - Value Driving License State Code | 
 |`nationality`| Numeric | 8 | M | Nationality of the Merchant | 
@@ -557,7 +557,7 @@ The table below contains the mandatory fields required for a successful request.
 | | | | | For India - PAN/AADHAR |
 | | | | | For ASEAN - Passport/Driving Licence/HKID or SGID or MYID |
 | | | | | For AU - Passport/Driving Licence | 
-|`identityValue`| Alphanumeric | 20 | C | Value of the Kyc Document submitted | 
+|`identityValue`| Alphanumeric | 20 | C | Value of the KYC Document submitted | 
 |`identitymetaName1`| Alphanumeric | 25 | C | Additional information pertaning to the KYC documents submitted for UBO.|
 | | | | | For AU - Driving License State Code | 
 |`identitymetaValue1`| Alphanumeric | 25 | C | Additional information pertaning to the KYC docuements submitted.|
@@ -585,7 +585,7 @@ The table below contains the mandatory fields required for a successful request.
 |`accType`| Alphanumeric | 25 | C | Acc Type of the Merchant | 
 |**fundingaccountdetails**| Alphanumeric | 8 | C | Funding account will have the details of account to which Fiserv will process the funding on daily basis | 
 |`accountNo`| Alphanumeric | 25 | C | If different form UW details | 
-|`accountName`| Numeric | 15 | C | Account number of the Merchant | 
+|`accountName`| Numeric | 15 | C | Account name of the Merchant | 
 |`ifsc`| Numeric | 15 | O | Ifsc of the Merchant | 
 |`bankName`| Alphanumeric | 35 | C | Bank Name of the Cerchant | 
 |`currency`| - |  |  | Currency of the Merchant | 

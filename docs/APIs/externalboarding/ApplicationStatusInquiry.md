@@ -4,7 +4,7 @@ This API is used to fetch the latest status of any boarding application for merc
 
 ## How it works
 1. Merchant needs to use this API by keying the Application URN in request Message.
-2. Merchant has to trigger this API post submit of a particular boarding application.
+2. Merchant has to trigger this API post submitting a particular boarding application.
 
 
 ## Endpoint
