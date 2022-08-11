@@ -175,9 +175,9 @@ featuredFeatures:
         title:  USB / Static Wi-Fi 
         description:  USB / Static Wi-Fi - Rest of APAC
         link: /docs/APIs/localpoi/WIFIFDMS.md
-  - title: Cloud Based Integration
-    description: Many businesses have multiple systems working in silos. Given the fast-moving transformation in the retail and enterprise segment, a lack of collaboration and process inefficiencies result in the inability to deliver a frictionless on-demand experience, required in today's fast-moving environment.<br />Fiserv Cloud based integration is an Application Programming Interface (API) based integration which facilitates the connection with the retailer&#39;s central or standalone systems, to automate the entire billing to payment transactions. Explore more of our Cloud based integration Payment APIs below.<br /><ul>	<li>Cloud based integration</li>	<li>EMI Sale (Easy Monthly Instalment / Instalment)</li>	<li>Login</li>	<li>PreAuth Sale</li>	<li>PreAuth Completion</li>	<li>Refund</li>	<li>Sale Card</li>	<li>Sale with Local Payment Method</li>	<li>Settlement Transaction</li>	<li>Transaction status Check</li>	<li>Void</li></ul
+  - title: <B>Cloud Based Integration</B>
+    description: Fiserv Cloud based integration is an Application Programming Interface (API) based integration which facilitates the connection with the retailer's central or  standalone systems, in order to automate the entire billing to payment transactions.
+  - title: <B>Local Integration</B>
+    description: Fiserv Local integration is an Application Programming Interface (API) based local integration which facilitates the connection with the retailer's central or  standalone systems, to automate the entire billing to payment transactions.
   - title: Merchant Onboarding
-    description: Partners (ISOs / ISVs / Payment Facilitators) that are onboarded as a separate channel will be able to board their merchants onto the Fiserv platform by invoking the merchant boarding APIs by using assigned credentials. Click here for more details.
-  - title: Local Integration
-    description: Fiserv Local integration is an Application Programming Interface (API) based local integration which facilitates the connection with the retailer's central or standalone systems, in order to automate the entire billing to payment transactions.
+    description: Partners (ISO / ISV / Payment Facilitator) that are on-boarded as a separate channel will be able to onboard their merchants onto the Fiserv platform by invoking the merchant onboarding APIs by using assigned credentials. 
