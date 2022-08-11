@@ -176,10 +176,14 @@ featuredFeatures:
         description:  USB / Static Wi-Fi - Rest of APAC
         link: /docs/APIs/localpoi/WIFIFDMS.md
   - title: Point of Sale / Card Present
-    description: In-person or Card Present (CP) transactions are initiated when a customer physically presents their payment source at the time of the transaction. Transaction types include manual entry, track data, and EMV.<BR/>A card present (CP) transaction is one in which the customer physically interacts with the payment device or tapping a mobile device with the card loaded to a digital wallet.
+    description: In-person or Card Present (CP) transactions are initiated when a customer physically presents their payment source at the time of the transaction. Transaction types include manual entry, track data, and EMV.A card present (CP) transaction is one in which the customer physically interacts with the payment device or tapping a mobile device with the card loaded to a digital wallet.
+  - title: Online / Card Not Present / CNP
+    description: Card-Not-Present transaction (CNP) and mail order / telephone order (MOTO) are payment card transactions where the cardholder is not physically present when the card payment is done at the point of transaction.Common payment types are made via online or in-app payments. This includes mail-order / telephone order (MOTO) transactions as well, which takes place when a merchant accepts payments virtually with their customers’ consent using the card details provided over the phone, mail or email request.
+  - title: API References
+    description: For ISOs / ISVs / TSP partners to support your onboarding process to enable your sub-merchants. Our APIs provide a simplified approach to automate and improve the onboarding operational processes.
   - title: Cloud Based Integration
     description: Fiserv Cloud based integration is an Application Programming Interface (API) based integration which facilitates the connection with the retailer's central or  standalone systems, in order to automate the entire billing to payment transactions.
   - title: Local Integration
     description: Fiserv Local integration is an Application Programming Interface (API) based local integration which facilitates the connection with the retailer's central or  standalone systems, to automate the entire billing to payment transactions.
   - title: Merchant Onboarding
-    description: Partners (ISO / ISV / Payment Facilitator) that are <b>on-boarded</b> as a separate channel will be able to onboard their merchants onto the Fiserv platform by invoking the merchant onboarding APIs by using assigned credentials. 
+    description: Partners (ISO / ISV / Payment Facilitator) that are on-boarded as a separate channel will be able to onboard their merchants onto the Fiserv platform by invoking the merchant onboarding APIs by using assigned credentials. 
