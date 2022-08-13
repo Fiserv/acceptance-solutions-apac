@@ -12,90 +12,17 @@ servers:
 security:
 - ApiKeyAuth: [] 
 tags:
-- name: Boarding
+- name: Test
   description: REST API for Boarding
 paths:
-  /boardinggateway/externalboarding/partner/login:
-    get:
-      tags:
-      - Boarding
-      summary: User Login
-      description: User Login
-      operationId: getAuthJWTToken
-      x-group-name:  Boarding
-      x-proxy-name: User Login
-      x-default-example: IMS Sample
-      parameters:
-      - {$ref: "#/components/parameters/ApiKeyHeader"}
-      - name: ain
-        in: query
-        required: true
-        description: instituiion id
-        schema:
-          type: string
-        examples:
-          IMS Sample:
-            value: "4700000"
-      - name: source
-        in: query
-        required: true
-        description: SOURCE TYPE i.e API , TAB etc ..
-        schema:
-          type: string
-        examples:
-          IMS Sample:
-            value: "API"  
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Response200"
-              examples:
-                IMS Sample:
-                  $ref: "#/components/examples/LoginRs200"
-  
-  /boardinggateway/externalboarding/secure/create:
+   /boardinggateway/externalboarding/secure/newmid:
     post:
       tags:
-      - Boarding
-      summary: Create Application
-      description: Create Application
-      operationId: createapplication
-      x-group-name: Boarding
-      x-proxy-name: Create Application
-      x-default-example: CreateApp Sample
-      parameters:
-        - {$ref: "#/components/parameters/ApiKeyHeader"}
-      requestBody:
-        content:
-          application/json:
-            schema:
-               $ref: '#/components/schemas/CreateAppRequest'
-            examples:
-              CreateApp Sample:
-                  $ref: "#/components/examples/CreateApp"    
-        required: true
-      responses:
-        "200":
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/CreateAppResponse"
-              examples:
-                CreateApp Sample:
-                  $ref: "#/components/examples/CreateApp200"
-
-  /boardinggateway/externalboarding/secure/newmid:
-    post:
-      tags:
-      - Boarding
+      - Test
       summary: New Merchant / Single MID PayFac / Multi  MID PayFac
       description: New Merchant / Single MID PayFac / Multi  MID PayFac
       operationId: submitapplication
-      x-group-name: Boarding
+      x-group-name: Test
       x-proxy-name: Submit Application
       x-default-example: New merchant
       parameters:
@@ -127,68 +54,6 @@ paths:
                   $ref: "#/components/examples/SingleMIDPayFacResponse"
                 Multi MID PayFac:
                   $ref: "#/components/examples/MultiMIDPayFacResponse" 
-  /boardinggateway/externalboarding/secure/addtid:
-    post:
-      tags:
-      - Boarding
-      summary: Additional Tid
-      description: Additional Tid
-      operationId: additionalTid
-      x-group-name: Boarding
-      x-proxy-name: Additional Tid
-      x-default-example: Add Tid
-      parameters:
-      - {$ref: "#/components/parameters/ApiKeyHeader"}
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/MerchantApplication'
-            examples:
-              Add Tid:
-                $ref: "#/components/examples/ADDTIDReq"
-        required: true
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                  $ref: '#/components/schemas/Response'
-              examples:
-                Add Tid:
-                  $ref: "#/components/examples/ADDTIDRes"                  
-  /boardinggateway/externalboarding/secure/addmid:
-    post:
-      tags:
-      - Boarding
-      summary: Additional Mid
-      description: Additional Mid
-      operationId: additionalMid
-      x-group-name: Boarding
-      x-proxy-name: Additional Mid
-      x-default-example: Add Mid
-      parameters:
-      - {$ref: "#/components/parameters/ApiKeyHeader"}
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/MerchantApplication'
-            examples:
-              Add Mid:
-                $ref: "#/components/examples/ADDMIDReq"
-        required: true
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                  $ref: '#/components/schemas/Response'
-              examples:
-                Add Mid:
-                  $ref: "#/components/examples/ADDMIDRes"  
       
 components:
   parameters:
