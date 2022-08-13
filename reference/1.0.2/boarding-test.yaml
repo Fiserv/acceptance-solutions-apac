@@ -168,6 +168,15 @@ paths:
               examples:
                 "401":
                   $ref: '#/components/examples/Response401'
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+              examples:
+                "200":
+                  $ref: '#/components/examples/MultiMIDPayFacResponse'
 components:
   parameters:
     ApiKeyHeader:
