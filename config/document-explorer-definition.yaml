@@ -49,17 +49,7 @@
               link: docs/CloudIntegrationCheckList.md
             - title: Local Integration CheckList
               link: docs/LocalIntegrationCheckList.md
-        - title: Online / Digial Integration
-          sections:
-            - title: Overview
-              link: docs/OnlineOverview.md
-            - title: Fiserv Gateway CheckList
-              link: docs/FiservGatewayCheckList.md
-              sections:
-                - title: SDKs
-                  link: docs/SDKs.md
-                - title: Plugins
-                  link: docs/Plugins.md
+
 - sections:
     - title: Features
       link: 

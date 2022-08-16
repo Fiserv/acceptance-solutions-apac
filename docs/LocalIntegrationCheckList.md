@@ -1,4 +1,4 @@
-# Local Integration 
+# Local Integration Checklist
 
 ![pos3 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg "pos3 logo")
 
