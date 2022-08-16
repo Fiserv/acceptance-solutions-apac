@@ -1,6 +1,6 @@
-# Sale Card
+# Sale With Cards
 
-This API is used to send sale card transaction request. Merchants will be required to add session 
+This API is used to send card sale transaction request. Merchants will be required to add session 
 token received during login API call in the header of this API.
 
 

@@ -62,7 +62,7 @@
               link: docs/APIs/CloudPOI/Login.md
             - title: Sale with Local Payment Method
               link: docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md
-            - title: Sale Card
+            - title: Sale With Cards
               link: docs/APIs/PaymentAPI/SaleCard.md
             - title: PreAuth Sale
               link: docs/APIs/PaymentAPI/PreAuthSale.md
