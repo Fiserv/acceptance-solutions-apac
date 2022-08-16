@@ -1,6 +1,6 @@
-# Pre Auth Sale
+# Pre-Authorization Sale
 
-This API is used to send preAuth transaction request. Merchants will be required to add session 
+This API is used to send pre-authorization transaction request. Merchants will be required to add session 
 token received during login API call in the header of this API. 
 
 

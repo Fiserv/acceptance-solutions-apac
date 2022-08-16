@@ -64,7 +64,7 @@
               link: docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md
             - title: Sale With Cards
               link: docs/APIs/PaymentAPI/SaleCard.md
-            - title: PreAuth Sale
+            - title: Pre-Authorization Sale
               link: docs/APIs/PaymentAPI/PreAuthSale.md
             - title: PreAuth Completion
               link: docs/APIs/PaymentAPI/PreAuthCompletion.md
