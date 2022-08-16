@@ -214,7 +214,7 @@ The below table identifies the required json properties in the request message.
 
 The table below provides the list of error codes and description for this application.
 
-| ErrorCode |  Description/Values | Comments |
+| Error Code |  Description / Values | Comments |
 | --------  | ---------------------- |----------|
 | `200`| Success | Request is successfully processed. Merchant should go ahead with receipt generation|
 | `300`| Request Failure | Redirection error. Merchant should validate and retry with new request|
