@@ -45,9 +45,9 @@
           sections:
             - title: Overview
               link: docs/PosOverview.md
-            - title: Cloud Integration CheckList
+            - title: Cloud Integration Checklist
               link: docs/CloudIntegrationCheckList.md
-            - title: Local Integration CheckList
+            - title: Local Integration Checklist
               link: docs/LocalIntegrationCheckList.md
 
 - sections:
