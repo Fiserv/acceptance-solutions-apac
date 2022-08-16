@@ -171,7 +171,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional  | Description/Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
 | `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table) |
