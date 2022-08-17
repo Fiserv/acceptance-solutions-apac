@@ -24,25 +24,9 @@ paths:
       x-default-example: IMS Sample
       parameters:
       - $ref: "#/components/parameters/ApiKeyHeader"
-      - name: ain
-        in: query
-        required: true
-        description: instituiion id
-        schema:
-          type: string
-        examples:
-          IMS Sample:
-            value: "4700000"
-      - name: source
-        in: query
-        required: true
-        description: Source Type i.e API , TAB etc ..
-        schema:
-          type: string
-        examples:
-          IMS Sample:
-            value: "API"  
-      
+      - $ref: "#/components/parameters/Institution"
+      - $ref: "#/components/parameters/Source"
+          
       responses:
         "200":
           description: Success
@@ -176,6 +160,19 @@ components:
       in: path
       required: true
       schema: {type: string, example: '1000000745'}
+      description: Application URN
+    Institution:
+      name: ain
+      in: query
+      required: true
+      schema: {type: string, example: '4700000'}
+      description:  Institution IDs for FDMS, IMS and ANZ
+    Source:
+      name: source
+      in: query
+      required: true
+      schema: {type: string, example: 'API'}
+      description:  Source Type - API , TAB etc..
           
 
   schemas:
