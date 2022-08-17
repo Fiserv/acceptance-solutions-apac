@@ -2,13 +2,13 @@
 tags: [APAC, Enterprise, Online, Integration, Getting-started, SMB, Card-present, Card-not-present, Digital, Features, POS, Cloud, Local-payment-methods]
 ---
 
-# Getting Started with APAC Merchant Solutions 
+# Getting Started with APAC Acceptance Solutions 
 
-APAC Merchant Solutions a one-stop-solution for SMB and enterprise clients, as well as ISO’s to get easy and instant access to API’s required to integrate with our terminal and eCommerce solutions.
+APAC Acceptance Solutions a one-stop-solution for SMB and enterprise clients, as well as ISO’s to get easy and instant access to API’s required to integrate with our terminal and eCommerce solutions.
 
 From payments to onboarding, eCommerce or Point-of-Sale integrations, enjoy the benefits of hassle free integration through seamless sample code sharing, quick access sandbox environment, test credential management. 
 
-APAC Merchant Solution extends a multitude of payment options to support your payment needs, including debit cards, credit cards and digital payments like Apple Pay, and Google Pay, as well as local payment methods.
+APAC Acceptance Solution extends a multitude of payment options to support your payment needs, including debit cards, credit cards and digital payments like Apple Pay, and Google Pay, as well as local payment methods.
 
 Our services include; tokenization, 3-D Secure, creating and managing recurring payments, instalments, setting up standing instructions, EMV and contactless payments, secure hosted Payment Pages, Payment URLs, and more.
 
@@ -20,15 +20,15 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Sale Card](./?path=docs/APIs/PaymentAPI/SaleCard.md)
 
-- [PreAuth Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
+- [Pre Authorization Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
 
-- [PreAuth Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
+- [Pre Authorization Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
 
 - [Refund](./?path=docs/APIs/PaymentAPI/Refund.md)
 
 - [Void](./?path=docs/APIs/PaymentAPI/Void.md)
 
-- [EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
+- [Installment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
 
 - [Transaction status Check](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
 
