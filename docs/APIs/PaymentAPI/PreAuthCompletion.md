@@ -87,7 +87,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
 | `convFee` | *string* | 10 | C | Convenience Fee including decimal (E.g. 5.00 for $5 fee). To be sent if fee is charged |
 | `cgst` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 cgst).If CGST is included in the total amount |
-| `igst` | *string* | 10 | C | State GST Including decimal (E.g. 10.00 for $10 igst).If IGST is included in the total amount |
+| `igst` | *string* | 10 | C | GST Including decimal (E.g. 10.00 for $10 igst).If IGST is included in the total amount |
 | `sgst` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 sgst).If SGST is included in the total amount |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal (E.g. 57.00 for $57 sale). |
 | `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value) |
