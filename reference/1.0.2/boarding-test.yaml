@@ -72,7 +72,59 @@ paths:
               examples:
                 "200":
                   $ref: '#/components/examples/LoginRs200'
-                  
+
+
+  /Externalboarding/secure/appstatus/{appUrn}:
+    get:
+      tags:
+      - Boarding
+      summary: Application Status
+      operationId: getAppStatus
+      description: Application Status
+      x-group-name:  Boarding
+      x-proxy-name: getAppStatus
+      x-default-example: AppStatus Sample
+      parameters:
+      - name: appUrn
+        in: path
+        required: true
+        schema:
+          type: string
+        examples:
+          AppStatus Sample:
+            value: "1000000745"
+
+      responses:
+
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AppResponse200"
+              examples:
+                IMS Sample:
+                  $ref: "#/components/examples/AppStatusResponse200"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateAppResponse'
+              examples:
+                "401":
+                  $ref: '#/components/examples/Response401'
+
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppResponse200'
+              examples:
+                "200":
+                  $ref: '#/components/examples/AppStatusResponse200'
+
   /boardinggateway/externalboarding/secure/create:
     post:
       tags:
@@ -129,6 +181,149 @@ components:
       description: never expiring token for all apis
 
   schemas:
+    AppResponse200:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            appURN:
+              type: string
+              description:  app URN
+              example: "1000007294"
+        appType:
+                type: string
+                description:  app Type
+                example: "NEW"
+        appChannel:
+                type: string
+                description:  app Channel
+                example: "TAB"
+        institutionId:
+                type: string
+                description:  institution Id
+                example: "47"
+        salesId:
+                type: string
+                description:  sales Id
+                example: "SureshBC"
+        status:
+                type: string
+                description:  "status"
+                example: "" 
+        statusDate:
+                type: string
+                description:  "status Date"
+                example: ""
+        reason:
+                type: string
+                description:  "reason"
+                example: ""
+        businessName:
+                type: string
+                description:  "business Name"
+                example: "test"
+        legalName:
+                type: string
+                description:  "legal Name"
+                example: "test"
+        businessType:
+                type: string
+                description: "businessType"
+                example: "Sole Proprietor"
+        submittedDate:
+                type: integer
+                description:  "submitted Date"
+                example: 1643977173000
+        createdDate:
+                type: string
+                description:  "created Date"
+                example: ""
+        lastUpdatedDate:
+                type: string
+                description:  "last Updated Date"
+                example: ""
+        countofBacktoSales:
+                type: string
+                description:  "count of Back to Sales"
+                example: "0"
+        mccCode:
+                type: string
+                description:  "mccCode"
+                example: "5813"
+        merchantGrade:
+                type: string
+                description:  "merchant Grade"
+                example: "EA"
+        merchantType:
+                type: string
+                description:  "merchant Type"
+                example: ""
+        acceptanceType:
+                type: string
+                description:  "acceptance Type"
+                example: "POSMOB"
+        typeOfBusiness:
+                type: string
+                description: "type Of Business"
+                example: "Sole Proprietor"
+        international:
+                type: string
+                description: "international"
+                example: ""
+        iciciMerchant:
+                type: string
+                description:  "iciciMerchant"
+                example: "No"
+        dcc:
+                type: string
+                description:  "dcc"
+                example: ""
+        fundingCurrency:
+                type: string
+                description:  "funding Currency"
+                example: ""
+        channelCode:
+                type: string
+                description:  "channel Code"
+                example: ""
+        boardingType:
+                type: string
+                description:  "boarding Type"
+                example: ""
+        newFundingAc:
+                type: string
+                description:  "new Funding Ac"
+                example: ""
+        institutionCode:
+                type: string
+                description:  "institution Code"
+                example: ""
+        terminalId:
+                type: string
+                description:  "terminal Id"
+                example: "33917151"
+        mid:
+                type: string
+                description: "mid"
+                example: "96000842"
+        atsJobSheet:
+                type: string
+                description:  "atsJobSheet"
+                example: ""
+        preInstall:
+                type: string
+                description:  "pre Install"
+                example: "false"
+        bcInstall:
+                type: string
+                description:  "bcInstall"
+                example: "false"
+        selfInstallStatus:
+                type: string
+                description:  "selfInstallStatus"
+                example: "Initiate self install"
+
     Response200:
       type: object
       properties:
@@ -2648,6 +2843,44 @@ components:
             "StatusDesc": "Success"
           }
           
+        }
+    AppStatusResponse200:
+      value:
+        {
+          "appURN": "1000000745",
+          "appType": "NEW",
+          "appChannel": "TAB",
+          "institutionId": "47",
+          "salesId": "SureshBC",
+          "status": "",
+          "statusDate": "",
+          "reason": "",
+          "businessName": "test",
+          "legalName": "test",
+          "businessType": "Sole Proprietor",
+          "submittedDate": 1643977173000,
+          "createdDate": "",
+          "lastUpdatedDate": "",
+          "countofBacktoSales": "0",
+          "mccCode": "5813",
+          "merchantGrade": "EA",
+          "merchantType": "",
+          "acceptanceType": "POSMOB",
+          "typeOfBusiness": "Sole Proprietor",
+          "international": "",
+          "iciciMerchant": "No",
+          "dcc": "",
+          "fundingCurrency": "",
+          "channelCode": "",
+          "boardingType": "",
+          "newFundingAc": "",
+          "institutionCode": "",
+          "terminalId": "33917151",
+          "mid": "96000842",
+          "atsJobSheet": "",
+          "preInstall": "false",
+          "bcInstall": "false",
+          "selfInstallStatus": "Initiate self install"
         }
 
     CreateApp:
