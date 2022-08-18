@@ -185,7 +185,7 @@ components:
             appURN:
               type: string
               description:  app URN
-              example: "1000007294"
+              example: "1000000745"
         appType:
                 type: string
                 description:  app Type
