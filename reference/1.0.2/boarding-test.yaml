@@ -295,6 +295,48 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CreateAppResponse'
+
+  /boardinggateway/externalboarding/secure/packages:
+    get:
+      tags:
+      - Boarding
+      summary: Get Package List
+      description: Get Package List
+      operationId: getPackageList
+      x-group-name: Boarding
+      x-proxy-name: Get Package List
+      x-default-example: GetPackageList Sample
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - {$ref: "#/components/parameters/DocAndPkgRequestParam"}
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+              examples:
+                GetPackageList Sample:
+                  $ref: "#/components/examples/DocAndPkgRequestParamRes"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateAppResponse'
+              examples:
+                "401":
+                  $ref: '#/components/examples/Response401'
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+              examples:
+                "200":
+                 $ref: '#/components/examples/DocAndPkgRequestParamRes'
 components:
   parameters:
     ApiKeyHeader:
@@ -303,6 +345,12 @@ components:
       in: header
       required: true
       description: never expiring token for all apis
+    DocAndPkgRequestParam:
+      name: RequestParam
+      in: query
+      required: true
+      schema: {type: string, example: '{  "appType": "API",  "mccCode": "5813",  "merchantType": "SM",  "acceptanceType": "POSMOB",  "typeOfBusiness": "SOLPROR",  "international": "No",  "iciciMerchant": "No",  "dcc": "Yes",  "fundingCurrency": "NET_AUD",  "boardingType": "NEWMID",  "merchantGrade": "NA",  "newFundingAc": ""}'}
+      description: DocAndPkgRequestParam
     AppURNInfo:
       name: appUrn
       in: path
@@ -3044,6 +3092,29 @@ components:
           "bcInstall": "false",
           "selfInstallStatus": "Initiate self install"
         }
+
+    DocAndPkgRequestParamReq:
+      value:
+        {
+          "appType": "API",
+          "mccCode": "5813",
+          "merchantType": "SM",
+          "acceptanceType": "POSMOB",
+          "typeOfBusiness": "SOLPROR",
+          "international": "No",
+          "iciciMerchant": "No",
+          "dcc": "Yes",
+          "fundingCurrency": "NET_AUD",
+          "boardingType": "NEWMID",
+          "merchantGrade": "NA",
+          "newFundingAc": ""
+        }
+
+    DocAndPkgRequestParamRes:
+      value:
+       {
+         "status":"OK"
+       }
 
     CreateApp:
       value:
