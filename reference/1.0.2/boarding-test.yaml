@@ -57,8 +57,109 @@ paths:
                 "200":
                   $ref: '#/components/examples/LoginRs200'
 
+  /boardinggateway/externalboarding/secure/newmid:
+    post:
+      tags:
+      - Boarding
+      summary: New Merchant
+      description: New Merchant
+      operationId: submitapplication
+      x-group-name: Boarding
+      x-proxy-name: Submit Application
+      x-default-example: New merchant
+      parameters:
+        - {$ref: "#/components/parameters/ApiKeyHeader"}
+      requestBody:
+        content:
+          application/json:
+            schema:
+               $ref: '#/components/schemas/MerchantApplication'
+            examples:
+              New merchant:
+                $ref: "#/components/examples/NewMerchant"
+              Single MID PayFac:
+                 $ref: "#/components/examples/SingleMIDPayFac"
+              Multi MID PayFac:
+                 $ref: "#/components/examples/MultiMIDPayFac"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/Response'
+              examples:
+                New merchant:
+                  $ref: "#/components/examples/NewMerchantResponse"
+                Single MID PayFac:
+                  $ref: "#/components/examples/SingleMIDPayFacResponse"
+                Multi MID PayFac:
+                  $ref: "#/components/examples/MultiMIDPayFacResponse"   
 
-  /Externalboarding/secure/appstatus/{appUrn}:
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+              examples:
+                "401":
+                  $ref: '#/components/examples/Response401'
+
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response200'
+              examples:
+                "200":
+                  $ref: '#/components/examples/NewMerchantResponse'
+  /boardinggateway/externalboarding/secure/packages/{packageId}:
+    get:
+      tags:
+      - Boarding
+      summary: Get Package ID
+      description: Get Package ID
+      operationId: getPackageById
+      x-group-name: Boarding
+      x-proxy-name: Get Package ID
+      x-default-example: Sample GetPackageID
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - {$ref: "#/components/parameters/PackageID"}
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AppResponse200"
+              examples:
+                Sample GetPackageID:
+                  $ref: "#/components/examples/GetPackageIDResponse"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateAppResponse'
+              examples:
+                "401":
+                  $ref: '#/components/examples/Response401'
+
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppResponse200'
+              examples:
+                "200":
+                  $ref: '#/components/examples/GetPackageIDResponse'
+
+  /boardinggateway/Externalboarding/secure/appstatus/{appUrn}:
     get:
       tags:
       - Boarding
@@ -232,6 +333,13 @@ components:
       required: true
       schema: {type: string, example: '99000154'}
       description:  MID
+    PackageID:
+      name: packageId
+      in: path
+      required: true
+      schema: {type: string, example: '745'}
+      description:  Get Package ID
+    
           
 
   schemas:
@@ -3319,10 +3427,262 @@ components:
         "uboDetails": []
       }
 
-    MerchantAppResponseMID:
+    GetPackageIDResponse:
       value:
        {
-       } 
+          "status": "{\"statusCode\": \"200\", \"message\": \"Success\"}",
+            "data": {
+                "id": "136",
+                "name": "TID LG EmergingP090LM existing prod",
+                "desc": "LG Sole properitor exsting prod with PC Additional TID",
+                "shrtName": "",
+                "level": "",
+                "image": "",
+                "cnrInd": "",
+                "acceptanceType": "POSMOB",
+                "isInternational": "No",
+                "isDCC": "No",
+                "msfTariff": "EmergingP090LM",
+                "fundingCurrency": "NET_INR",
+                "preferential": "N",
+                "otpEnabled": true,
+                "sbPackageDesc": "",
+                "sbInstrumentsDesc": "",
+                "sbVASDesc": "",
+                "sbTerminalTypeDesc": "",
+                "sbPricingDesc": "",
+                "attributes": [
+                    {
+                        "category": "Package VAS",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "UPI",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "EMI Profile",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "SODEXO",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "PAYBACK",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "POCKETS WALLET",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "BAJAJ Finserv",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "BHARATQR",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "Google Pay",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "Email / SMS Invoicing",
+                                "value": "Y",
+                                "codeType": "Package VAS",
+                                "applicableForFilter": true
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Funding Currency",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "NET_INR",
+                                "value": "NET_INR",
+                                "codeType": "Funding Currency",
+                                "applicableForFilter": false
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Package Acceptance",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "POSMOB",
+                                "value": "Y",
+                                "codeType": "Package Acceptance",
+                                "applicableForFilter": false
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Additional Parameters",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "Charge Slip Type",
+                                "value": "Physical Chargeslip",
+                                "codeType": "Additional Parameters",
+                                "applicableForFilter": false
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Terminal Type",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "Normal WIFI",
+                                "value": "Y",
+                                "codeType": "Terminal Type",
+                                "applicableForFilter": true
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Package Schemes",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "Master",
+                                "value": "Y",
+                                "codeType": "Package Schemes",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "Rupay",
+                                "value": "Y",
+                                "codeType": "Package Schemes",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "DND",
+                                "value": "Y",
+                                "codeType": "Package Schemes",
+                                "applicableForFilter": false
+                            },
+                            {
+                                "name": "AMEX",
+                                "value": "N",
+                                "codeType": "Package Schemes",
+                                "applicableForFilter": false
+                            },
+                            {
+                                "name": "CUP",
+                                "value": "Y",
+                                "codeType": "Package Schemes",
+                                "applicableForFilter": false
+                            },
+                            {
+                                "name": "VISA",
+                                "value": "Y",
+                                "codeType": "Package Schemes",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "Maestro",
+                                "value": "Y",
+                                "codeType": "Package Schemes",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "JCB",
+                                "value": "Y",
+                                "codeType": "Package Schemes",
+                                "applicableForFilter": false
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Package Tariffs",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "Cash at POS Tariff",
+                                "value": "",
+                                "codeType": "Package Tariffs",
+                                "applicableForFilter": false
+                            },
+                            {
+                                "name": "MSF Tariff",
+                                "value": "EmergingP090LM",
+                                "codeType": "Package Tariffs",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "SOC Tariff",
+                                "value": "2500 1st Month GPRS Rental 300",
+                                "codeType": "Package Tariffs",
+                                "applicableForFilter": true
+                            },
+                            {
+                                "name": "MDR",
+                                "value": "C090P090COR090IC000INC260D090",
+                                "codeType": "Package Tariffs",
+                                "applicableForFilter": false
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Additional Terminal Info",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "ATS Remarks",
+                                "value": "New",
+                                "codeType": "Additional Terminal Info",
+                                "applicableForFilter": false
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Package Card Types",
+                        "displayName": "",
+                        "attributeList": [
+                            {
+                                "name": "DEBIT",
+                                "value": "Y",
+                                "codeType": "Package Card Types",
+                                "applicableForFilter": false
+                            },
+                            {
+                                "name": "PREPAID",
+                                "value": "Y",
+                                "codeType": "Package Card Types",
+                                "applicableForFilter": false
+                            },
+                            {
+                                "name": "CREDIT",
+                                "value": "Y",
+                                "codeType": "Package Card Types",
+                                "applicableForFilter": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        } 
     MerchantAppResponseTID:
       value:
        {
