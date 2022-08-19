@@ -337,6 +337,57 @@ paths:
               examples:
                 "200":
                  $ref: '#/components/examples/DocAndPkgRequestParamRes'
+  /boardinggateway/externalboarding/secure/document/{appUrn}:
+    post:
+      tags:
+      - Boarding
+      summary: Document Upload
+      description: Document Upload
+      operationId: uploadMerchantDocument
+      x-group-name: Boarding
+      x-proxy-name: Document Upload
+      parameters:
+      - {$ref: "#/components/parameters/ApiKeyHeader"}
+      - {$ref: "#/components/parameters/AppURNInfo"}
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MerchantDocumentUploadRequest'
+      responses:
+        "200":
+          description: OK
+          content:
+             application/json:
+              schema:
+                type: object
+                description: upload document response
+                example:
+                  {
+                    "status": {
+                      "statusCode": 200,
+                      "message": "Success"
+                    },
+                    "data": {
+                      "merchantDocument": {
+                        "appURN": "8000110311",
+                        "docId": "88173d0b16f14c7c9c920d0e16cb90e6",
+                        "docType": "cheque",
+                        "fileType": ".jpeg",
+                        "principalNo": 0,
+                        "locationNo": 0,
+                        "categoryName": "Funding Proof",
+                        "level": "1",
+                        "mandatory": "Y",
+                        "entity": "Merchant"
+                      },
+                      "autoregResponse": {
+                        "number": "658205602030",
+                        "bankName": "ICICI BANK",
+                        "ifsc": "GAUT0MOBILE"
+                      }
+                    }
+                  }
 components:
   parameters:
     ApiKeyHeader:
@@ -3113,7 +3164,7 @@ components:
     DocAndPkgRequestParamRes:
       value:
        {
-         "status":"OK"
+         "code":"OK"
        }
 
     CreateApp:
