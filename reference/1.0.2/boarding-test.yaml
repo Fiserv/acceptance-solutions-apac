@@ -1922,36 +1922,33 @@ paths:
         "200":
           description: OK
           content:
-             application/json:
+            application/json:
               schema:
-                type: object
-                description: upload document response
-                example:
-                  {
-                    "status": {
-                      "statusCode": 200,
-                      "message": "Success"
-                    },
-                    "data": {
-                      "merchantDocument": {
-                        "appURN": "8000110311",
-                        "docId": "88173d0b16f14c7c9c920d0e16cb90e6",
-                        "docType": "cheque",
-                        "fileType": ".jpeg",
-                        "principalNo": 0,
-                        "locationNo": 0,
-                        "categoryName": "Funding Proof",
-                        "level": "1",
-                        "mandatory": "Y",
-                        "entity": "Merchant"
-                      },
-                      "autoregResponse": {
-                        "number": "658205602030",
-                        "bankName": "ICICI BANK",
-                        "ifsc": "GAUT0MOBILE"
-                      }
-                    }
-                  }
+                  $ref: '#/components/schemas/Response'
+              examples:
+                 Sample addMid:
+                  $ref: "#/components/examples/DocUploadRes"  
+
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+              examples:
+                "401":
+                  $ref: '#/components/examples/Response401'
+
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+              examples:
+                "200":
+                  $ref: '#/components/examples/DocUploadRes'
+                  
   /boardinggateway/externalboarding/secure/addmid:
     post:
       tags:
@@ -3563,6 +3560,33 @@ components:
               "smallMerchant": "Y"
             },
             "uboDetails": []
+          }
+    DocUploadRes:
+      value:
+        {
+            "Status": {
+              "statusCode": "200",
+              "message": "Success"
+            },
+            "data": {
+              "merchantDocument": {
+              "appURN": "8000110311",
+              "docId": "88173d0b16f14c7c9c920d0e16cb90e6",
+              "docType": "cheque",
+              "fileType": ".jpeg",
+              "principalNo": 0,
+              "locationNo": 0,
+              "categoryName": "Funding Proof",
+              "level": "1",
+              "mandatory": "Y",
+              "entity": "Merchant"
+              },
+              "autoregResponse": {
+              "number": "658205602030",
+              "bankName": "ICICI BANK",
+              "ifsc": "GAUT0MOBILE"
+              }
+            }
           }
     ADDMIDRes:
       value:
