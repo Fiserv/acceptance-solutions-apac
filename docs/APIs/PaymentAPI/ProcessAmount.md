@@ -75,12 +75,11 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `terminalId` | *string* | 07 | M | Terminal ID |
 | `billerId` | *string* | 03 | M | Biller ID provided by Fiserv |
 | `merchantRefNumber` | *string* | 14 | M | Unique number for each transaction. Inquiry transaction should have same MRN of original txn.For BOCM pass the value as (50 bytes) |
-
 | `customerRefNumber` | *string* | 20 | O | Consumer Number |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
 | `convFee` | *string* | 10 | C | Convenience Fee including decimal (E.g. 5.00 for $5 fee). To be sent if fee is charged |
 | `cgst` | *string* | 10 | C| Central GST Including decimal (E.g. 10.00 for $10 cgst).If CGST is included in the total amount |
-| `igst` | *string* | 10 | C | State GST Including decimal (E.g. 10.00 for $10 igst).If IGST is included in the total amount |
+| `igst` | *string* | 10 | C | GST Including decimal (E.g. 10.00 for $10 igst).If IGST is included in the total amount |
 | `sgst` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 sgst).If SGST is included in the total amount |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal (E.g. 57.00 for $57 sale). |
 | `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value) |
@@ -161,7 +160,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory / Optional / Conditional  | Description / Values |
+| Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C)  | Description/Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
 | `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table) |
