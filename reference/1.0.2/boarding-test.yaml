@@ -2379,378 +2379,17 @@ paths:
       operationId: submitAdditionalTidApplication
       x-group-name: Boarding
       x-proxy-name: Additional Device
+      x-default-example: Sample Add TID
       parameters:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
       requestBody:
         content:
           application/json:
             schema:
-              type: object
-              description: add tid
-              example:
-                {
-                  "appURN": "1000008465",
-                  "appType": "Tab",
-                  "boardingType": "ADDLTID",
-                  "appChannel": "A12",
-                  "institutionId": "47",
-                  "salesId": "SureshBC",
-                  "status": null,
-                  "statusDate": null,
-                  "keySelection": {
-                    "mccCode": "5999",
-                    "merchantGrade": "EO",
-                    "merchantType": "LG",
-                    "acceptanceType": "POSMOB",
-                    "typeOfBusiness": "SOLPROR",
-                    "international": "No",
-                    "iciciMerchant": "No",
-                    "dcc": "No",
-                    "fundingCurrency": "NET_INR",
-                    "newFundingAc": null
-                  },
-                  "channelCode": "ISO Channel1",
-                  "osvFlagValue": null,
-                  "cardedUncarded": "No",
-                  "countryCode": "IND",
-                  "leadId": null,
-                  "merchantDetails": {
-                    "businessName": null,
-                    "legalName": "ezetap provisioning testing",
-                    "businessType": "Sole Proprietor",
-                    "registrationNo": null,
-                    "dateTrading": null,
-                    "dateIncorporated": null,
-                    "websiteURL": null,
-                    "communicationEmail": "Prerana.kumbhar@firstdata.com",
-                    "legalAddress": {
-                      "addressLine": "Near central fire briged, Ganj peth",
-                      "addressLine2": ",, opposite kamble lane,",
-                      "addressLine3": null,
-                      "city": "PUN-PUNE",
-                      "state": "MAH",
-                      "pincode": "411042",
-                      "country": null,
-                      "phone1": "8358353553",
-                      "phone2": null,
-                      "contactName": "Test",
-                      "mobileNo": null,
-                      "email": null
-                    },
-                    "fundingMethod": "NEFT",
-                    "clientTariff": null,
-                    "postingTariff": "NET_INR",
-                    "billingLevel": "01",
-                    "gstNo": "27AAOFN4566A1Z6",
-                    "isdnFlag": null,
-                    "gstMerchantStateCode": null,
-                    "merchantType": "LG",
-                    "acceptanceType": "POSMOB",
-                    "iciciMerchant": "No",
-                    "newFundingAc": null,
-                    "merchantGrade": "EO",
-                    "idDocDetails": [
-                      {
-                        "entity": "Member",
-                        "idType": "Capture the Merchant Store Photos",
-                        "idValue": "",
-                        "docId": "dbab41ff030c49dc9cdc562f8e640e21",
-                        "categoryName": "LOCATION PHOTOS",
-                        "level": "1",
-                        "mandatory": "Y"
-                      },
-                      {
-                        "entity": "Member",
-                        "idType": "MITC Document Page 1",
-                        "idValue": "",
-                        "docId": "7771684880c3440a8d69ebe936c8178e",
-                        "categoryName": "MITC",
-                        "level": "1",
-                        "mandatory": "Y"
-                      },
-                      {
-                        "entity": "Member",
-                        "idType": "MITC Document Page 2",
-                        "idValue": "",
-                        "docId": "85a0203e2ba84e3ebfc4158665862f00",
-                        "categoryName": "MITC",
-                        "level": "2",
-                        "mandatory": "Y"
-                      },
-                      {
-                        "entity": "Member",
-                        "idType": "socDocument",
-                        "idValue": "",
-                        "docId": "b00d608f1cf14bd8bfc80fc32e9e2284",
-                        "categoryName": "SOC",
-                        "level": "1",
-                        "mandatory": "Y"
-                      }
-                    ],
-                    "geoLocation": {
-                      "latitude": "12.9403189",
-                      "longitude": "77.7303295"
-                    },
-                    "taxDetails": {
-                      "taxidType": "businessPan",
-                      "taxidValue": null
-                    }
-                  },
-                  "tradingLocations": [
-                    {
-                      "locationNo": 1,
-                      "tradingName": "ezetap provisioning te",
-                      "tradingAddress": {
-                        "addressLine": "Near central fire briged, Ganj peth",
-                        "addressLine2": ",, opposite kamble lane,",
-                        "addressLine3": null,
-                        "city": "PUN-PUNE",
-                        "state": "MAH",
-                        "pincode": "411042",
-                        "country": null,
-                        "phone1": "8358353553",
-                        "phone2": "",
-                        "contactName": "Test",
-                        "mobileNo": null,
-                        "email": null
-                      },
-                      "packageId": 1056,
-                      "packageName": "Industry Type Additional TID Normal GPRS with fuel",
-                      "packageDescription": "Industry Type Additional TID Normal GPRS with fuel",
-                      "memberType": "POS",
-                      "tariff": "RetailP185LM",
-                      "amexTariff": "Amex Miscellane",
-                      "merchantGrade": "EO",
-                      "acqProfile": "Domestic",
-                      "msfProfile": "C120P185COR220IC000INC260D090",
-                      "mid": "470000099000154",
-                      "leadsubgroupmid": "470000056000250",
-                      "subgroupmid": "470000056000251",
-                      "otpEnabled": true,
-                      "feePlans": [
-                        {
-                          "serviceName": "UPI",
-                          "feePlan": "Y"
-                        },
-                        {
-                          "serviceName": "BHARATQR",
-                          "feePlan": "Y"
-                        },
-                        {
-                          "serviceName": "Email / SMS Invoicing",
-                          "feePlan": "Y"
-                        },
-                        {
-                          "serviceName": "BBPS",
-                          "feePlan": "ICICI-2015"
-                        },
-                        {
-                          "serviceName": "AEPS",
-                          "feePlan": "4-1001"
-                        },
-                        {
-                          "serviceName": "MicroATM SARVATRA",
-                          "feePlan": "1101"
-                        },
-                        {
-                          "serviceName": "FDConnect",
-                          "feePlan": "Y"
-                        },
-                        {
-                          "serviceName": "UPICashWithdraw",
-                          "feePlan": "U-9003"
-                        },
-                        {
-                          "serviceName": "Mobikwik",
-                          "feePlan": "1001"
-                        },
-                        {
-                          "serviceName": "AmazonPay",
-                          "feePlan": "Amazon1"
-                        },
-                        {
-                          "serviceName": "Chargeslip Table ID",
-                          "feePlan": "TableCh"
-                        },
-                        {
-                          "serviceName": "Ocean UI User Group",
-                          "feePlan": "GroupCh"
-                        },
-                        {
-                          "serviceName": "Theme ID",
-                          "feePlan": "ThemeCh"
-                        }
-                      ],
-                      "autoSettlementTime": null,
-                      "cpvGroupId": "",
-                      "regionalcpvGroupid": null,
-                      "commerceConnectReferenceMID": null,
-                      "terminals": [
-                        {
-                          "terminalType": "GPRS",
-                          "terminalModel": "Verifone Vx680 (W BC) GPRS GSM",
-                          "batteryFlag": "Y",
-                          "count": 1,
-                          "currencyCode": null,
-                          "templateId": null,
-                          "socScheme": null,
-                          "services": [
-                            {
-                              "serviceName": "AMEX",
-                              "serviceValue": "N"
-                            }
-                          ],
-                          "withBiller": null,
-                          "billingSolProvider": null,
-                          "preferedDate": "03-07-2022",
-                          "preferedTime": "12:27",
-                          "discount": "0",
-                          "tdrPlan": null,
-                          "userInstruction1": "",
-                          "userInstruction2": "",
-                          "cpvGroupId": null
-                        }
-                      ],
-                      "amcFee": null,
-                      "cardedUncarded": "Uncarded",
-                      "altmerchCode": null,
-                      "sameLocation": null
-                    }
-                  ],
-                  "principalDetails": [
-                    {
-                      "principalNo": 1,
-                      "position": "Owner",
-                      "title": "Mr",
-                      "firstName": "Manan",
-                      "lastName": "Gupta",
-                      "middleName": null,
-                      "gender": null,
-                      "dateOfBirth": "04/05/1985",
-                      "nationality": null,
-                      "principalAddress": {
-                        "addressLine": "Keshavnagar",
-                        "addressLine2": null,
-                        "addressLine3": null,
-                        "city": "PUN-PUNE",
-                        "state": "MAH",
-                        "pincode": "411036",
-                        "country": null,
-                        "phone1": "9426855672",
-                        "phone2": null,
-                        "contactName": "Manan",
-                        "mobileNo": null,
-                        "email": null
-                      },
-                      "idDocDetails": null,
-                      "kycDetails": [
-                        {
-                          "kycCategory": "Individual POA1 KYC",
-                          "identityType": "",
-                          "identityValue": "",
-                          "identitymetaName1": null,
-                          "identitymetaValue1": null
-                        },
-                        {
-                          "kycCategory": "Individual POI1 KYC",
-                          "identityType": "individualPan",
-                          "identityValue": "ABCDE1234F",
-                          "identitymetaName1": null,
-                          "identitymetaValue1": null
-                        }
-                      ]
-                    },
-                    {
-                      "principalNo": 2,
-                      "position": "Owner",
-                      "title": "Mr",
-                      "firstName": "Manan",
-                      "lastName": "Gupta",
-                      "middleName": null,
-                      "gender": null,
-                      "dateOfBirth": "04/05/1985",
-                      "nationality": null,
-                      "principalAddress": {
-                        "addressLine": "Keshavnagar",
-                        "addressLine2": null,
-                        "addressLine3": null,
-                        "city": "PUN-PUNE",
-                        "state": "MAH",
-                        "pincode": "411036",
-                        "country": null,
-                        "phone1": "9426855672",
-                        "phone2": null,
-                        "contactName": "Manan",
-                        "mobileNo": null,
-                        "email": null
-                      },
-                      "idDocDetails": null,
-                      "kycDetails": [
-                        {
-                          "kycCategory": "Individual POA2 KYC",
-                          "identityType": "",
-                          "identityValue": "",
-                          "identitymetaName1": null,
-                          "identitymetaValue1": null
-                        },
-                        {
-                          "kycCategory": "Individual POI2 KYC",
-                          "identityType": "individualPan",
-                          "identityValue": "ABCDE1234F",
-                          "identitymetaName1": null,
-                          "identitymetaValue1": null
-                        }
-                      ]
-                    }
-                  ],
-                  "bankDetails": {
-                    "fundingAccountDetails": null,
-                    "collectionAccountDetails": null,
-                    "uwAccountDetails": {
-                      "accountNo": "12231000013575757",
-                      "accountName": "test",
-                      "ifsc": "JANA0000012",
-                      "bankName": "JANASEVA SAHAKARI BANK LIMITED",
-                      "branch": "CAMP",
-                      "currency": "INR",
-                      "accType": null
-                    }
-                  },
-                  "businessSummary": {
-                    "briefSummary": null,
-                    "mccCode": "5999",
-                    "mccDescription": "Miscellaneous and Specialty Retail Stores",
-                    "totalTurnover": null,
-                    "totalTurnoverPerMID": null,
-                    "dccTurnoverPerMID": null,
-                    "pgTurnover": null,
-                    "pgTurnoverPerMID": null,
-                    "cardTurnover": null,
-                    "avgTicketAmt": null,
-                    "avgEMITicketAmt": null,
-                    "tranVolumeInternet": null,
-                    "tranVolumeMoto": null,
-                    "tranVolumeInStore": null,
-                    "deliveryDays0": null,
-                    "deliveryDays7": null,
-                    "deliveryDays14": null,
-                    "deliveryDays30": null,
-                    "deliveryDaysOver30": null,
-                    "tranTypeMagStrip": null,
-                    "tranTypeChip": null,
-                    "tranTypeKeyed": null,
-                    "creditSalesConsumer": null,
-                    "creditSalesBusiness": null,
-                    "firsReport": null,
-                    "recurringTranFlag": null,
-                    "refundPolicy": null,
-                    "cardRefundDays": null,
-                    "thirdPartyProcessorFlag": null,
-                    "thirdPartyProcessorName": null,
-                    "smallMerchant": "Y"
-                  },
-                  "uboDetails": null
-                }
+               $ref: '#/components/schemas/MerchantApplication'
+            examples:
+              Sample Add TID:
+                $ref: "#/components/examples/ADDTIDReq"
         required: true
       responses:
         "200":
@@ -2758,28 +2397,31 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                description: add tid response
-                example:
-                  {
-                    "status": {
-                        "statusCode": 200,
-                        "message": "Success"
-                    },
-                    "isAcvSuccess": null,
-                    "data": {
-                        "appUrn": "1000008469",
-                        "lsg": "51675948",
-                        "sgArray": [
-                            {
-                                "subgroupmId": "51672434",
-                                "merchantId": "95515434",
-                                "submerchantId": "00267746",
-                                "terminals": null
-                            }
-                        ]
-                    }
-                }
+                  $ref: '#/components/schemas/Response'
+              examples:
+                Sample Add TID:
+                  $ref: "#/components/examples/ADDTIDRes"
+
+
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+              examples:
+                "401":
+                  $ref: '#/components/examples/Response401'
+
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response200'
+              examples:
+                "200":
+                  $ref: '#/components/examples/ADDTIDRes'       
 components:
   parameters:
     ApiKeyHeader:
@@ -3822,11 +3464,8 @@ components:
     ADDTIDRes:
       value:
         {
-          "status": {
-                "statusCode": 200,
-                "message": "Success"
-            },
-            "isAcvSuccess": null,
+          "Status": { "statusCode": "200", "message": "Success"},
+            "isAcvSuccess": "",
             "data": {
                 "appUrn": "1000000745",
                 "lsg": "51675948",
@@ -3835,33 +3474,12 @@ components:
                         "subgroupmId": "51672434",
                         "merchantId": "95515434",
                         "submerchantId": "00267746",
-                        "terminals": null
+                        "terminals": ""
                     }
                 ]
             }
         }
-    # NewMerchantResponse:
-    #   value:
-    #     {
-    #       "status": {
-    #         "statusCode": 200,
-    #         "message": "Success"
-    #       },
-    #       "data": {
-    #         "appurn": "Application URN",
-    #         "leadsubgroupmid": "Lead Sub Group MID",
-    #         "SGArray": [
-    #           {
-    #             "subgroupmId": "Sub Group MID",
-    #             "merchantId": "Member MID",
-    #             "submerchantId": "Submerchant ID",
-    #             "terminals": [
-    #               "Terminal ID 1"
-    #             ]
-    #           }
-    #         ]
-    #       }
-    #     }
+   
     NewMerchantResponse:
       value:
         Status:
@@ -4358,7 +3976,7 @@ components:
             "newFundingAc": ""
           },
           "channelCode": "ISO Channel1",
-          "osvFlagValue": null,
+          "osvFlagValue": "",
           "cardedUncarded": "No",
           "countryCode": "IND",
           "leadId": "",
@@ -4374,7 +3992,7 @@ components:
             "legalAddress": {
               "addressLine": "Near central fire briged, Ganj peth",
               "addressLine2": ",, opposite kamble lane,",
-              "addressLine3": null,
+              "addressLine3": "",
               "city": "PUN-PUNE",
               "state": "MAH",
               "pincode": "411042",
@@ -4383,7 +4001,7 @@ components:
               "phone2": "",
               "contactName": "Test",
               "mobileNo": "",
-              "email": null
+              "email": ""
             },
             "fundingMethod": "NEFT",
             "clientTariff": "",
@@ -4395,7 +4013,7 @@ components:
             "merchantType": "LG",
             "acceptanceType": "POSMOB",
             "iciciMerchant": "No",
-            "newFundingAc": null,
+            "newFundingAc": "",
             "merchantGrade": "EO",
             "idDocDetails": [
               {
@@ -4441,7 +4059,7 @@ components:
             },
             "taxDetails": {
               "taxidType": "businessPan",
-              "taxidValue": null
+              "taxidValue": ""
             }
           },
           "tradingLocations": [
@@ -4451,7 +4069,7 @@ components:
               "tradingAddress": {
                 "addressLine": "Near central fire briged, Ganj peth",
                 "addressLine2": ",, opposite kamble lane,",
-                "addressLine3": null,
+                "addressLine3": "",
                 "city": "PUN-PUNE",
                 "state": "MAH",
                 "pincode": "411042",
@@ -4460,7 +4078,7 @@ components:
                 "phone2": "",
                 "contactName": "Test",
                 "mobileNo": "",
-                "email": null
+                "email": ""
               },
               "packageId": 1056,
               "packageName": "Industry Type Additional TID Normal GPRS with fuel",
@@ -4529,40 +4147,40 @@ components:
                   "feePlan": "ThemeCh"
                 }
               ],
-              "autoSettlementTime": null,
+              "autoSettlementTime": "",
               "cpvGroupId": "",
-              "regionalcpvGroupid": null,
-              "commerceConnectReferenceMID": null,
+              "regionalcpvGroupid": "",
+              "commerceConnectReferenceMID": "",
               "terminals": [
                 {
                   "terminalType": "GPRS",
                   "terminalModel": "Verifone Vx680 (W BC) GPRS GSM",
                   "batteryFlag": "Y",
                   "count": 1,
-                  "currencyCode": null,
-                  "templateId": null,
-                  "socScheme": null,
+                  "currencyCode": "",
+                  "templateId": "",
+                  "socScheme": "",
                   "services": [
                     {
                       "serviceName": "AMEX",
                       "serviceValue": "N"
                     }
                   ],
-                  "withBiller": null,
-                  "billingSolProvider": null,
+                  "withBiller": "",
+                  "billingSolProvider": "",
                   "preferedDate": "03-07-2022",
                   "preferedTime": "12:27",
                   "discount": "0",
-                  "tdrPlan": null,
+                  "tdrPlan": "",
                   "userInstruction1": "",
                   "userInstruction2": "",
-                  "cpvGroupId": null
+                  "cpvGroupId": ""
                 }
               ],
-              "amcFee": null,
+              "amcFee": "",
               "cardedUncarded": "Uncarded",
-              "altmerchCode": null,
-              "sameLocation": null
+              "altmerchCode": "",
+              "sameLocation": ""
             }
           ],
           "principalDetails": [
@@ -4575,11 +4193,11 @@ components:
               "middleName": "",
               "gender": "",
               "dateOfBirth": "04/05/1985",
-              "nationality": null,
+              "nationality": "",
               "principalAddress": {
                 "addressLine": "Keshavnagar",
-                "addressLine2": null,
-                "addressLine3": null,
+                "addressLine2": "",
+                "addressLine3": "",
                 "city": "PUN-PUNE",
                 "state": "MAH",
                 "pincode": "411036",
@@ -4588,7 +4206,7 @@ components:
                 "phone2": "",
                 "contactName": "Manan",
                 "mobileNo": "",
-                "email": null
+                "email": ""
               },
               "idDocDetails": [],
               "kycDetails": [
@@ -4596,15 +4214,15 @@ components:
                   "kycCategory": "Individual POA1 KYC",
                   "identityType": "",
                   "identityValue": "",
-                  "identitymetaName1": null,
-                  "identitymetaValue1": null
+                  "identitymetaName1": "",
+                  "identitymetaValue1": ""
                 },
                 {
                   "kycCategory": "Individual POI1 KYC",
                   "identityType": "individualPan",
                   "identityValue": "ABCDE1234F",
-                  "identitymetaName1": null,
-                  "identitymetaValue1": null
+                  "identitymetaName1": "",
+                  "identitymetaValue1": ""
                 }
               ]
             },
@@ -4617,11 +4235,11 @@ components:
               "middleName": "",
               "gender": "",
               "dateOfBirth": "04/05/1985",
-              "nationality": null,
+              "nationality": "",
               "principalAddress": {
                 "addressLine": "Keshavnagar",
-                "addressLine2": null,
-                "addressLine3": null,
+                "addressLine2": "",
+                "addressLine3": "",
                 "city": "PUN-PUNE",
                 "state": "MAH",
                 "pincode": "411036",
@@ -4630,7 +4248,7 @@ components:
                 "phone2": "",
                 "contactName": "Manan",
                 "mobileNo": "",
-                "email": null
+                "email": ""
               },
               "idDocDetails": [],
               "kycDetails": [
@@ -4638,22 +4256,22 @@ components:
                   "kycCategory": "Individual POA2 KYC",
                   "identityType": "",
                   "identityValue": "",
-                  "identitymetaName1": null,
-                  "identitymetaValue1": null
+                  "identitymetaName1": "",
+                  "identitymetaValue1": ""
                 },
                 {
                   "kycCategory": "Individual POI2 KYC",
                   "identityType": "individualPan",
                   "identityValue": "ABCDE1234F",
-                  "identitymetaName1": null,
-                  "identitymetaValue1": null
+                  "identitymetaName1": "",
+                  "identitymetaValue1": ""
                 }
               ]
             }
           ],
           "bankDetails": {
-            "fundingAccountDetails": null,
-            "collectionAccountDetails": null,
+            "fundingAccountDetails": "",
+            "collectionAccountDetails": "",
             "uwAccountDetails": {
               "accountNo": "12231000013575757",
               "accountName": "test",
@@ -4661,7 +4279,7 @@ components:
               "bankName": "JANASEVA SAHAKARI BANK LIMITED",
               "branch": "CAMP",
               "currency": "INR",
-              "accType": null
+              "accType": ""
             }
           },
           "businessSummary": {
@@ -4699,6 +4317,7 @@ components:
           },
           "uboDetails": []
         }
+   
     NewMerchant:
       value:
         {
