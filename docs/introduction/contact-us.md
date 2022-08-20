@@ -4,135 +4,113 @@ For APAC related integration, our dedicated support teams would be available to 
 
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width:100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-table, th, td {
-  border: 1px solid black;
-}
-p.solid {border-style: solid;}
-
-table tr {
-  border-bottom: 1px solid black;
-}
-table tr:last-child {
-  border: 0;
-}
-
-div.b {
-  position: absolute;
-  top: 0;
-  border: 3px solid blue;
-} 
-
- tr.border-bottom td {
-        border-bottom: 1pt solid #ff000d;
-      }
-
-
-
-</style>
-</head>
 <body>
 
-
-<div style="overflow-x:auto;">
-<table  style="width:300%">
+<table  border=1>
 
   <tr>
-    <th style="width:0.5%"> Region</th>
-    <th  style="width:0.5%">Gateway -<br> Online / Digital POS - <br>Point of Sale (Terminals)</th>
-    <th style="width:1.5%"> Merchant Integration<br> Support Contact </th> 
-    <th style="width:0.5%">Point of Sale (Terminals)<br> Support Team</th>
-     <th style="width:1%">Fiserv Gateway Support Team </th>
-     <th style="width:1%">Operational Hours <br> (Merchant Support) </th>
-    <th style="width:0.5%">Sales Enquiry Contact</th>
+    <th> Region</th>
+    <th>Gateway Online / Digital POS Point of Sale (Terminals)</th>
+    <th>Merchant Integration Support Contact </th> 
+    <th>Merchant Integration Support Contact email </th>
+    <th>Fiserv Gateway Support Team </th>
   </tr>
 
   <tr>
-    <td>India</td>
-   <td><br><br><br><br><br> POS<hr> <br><br><br>Gateway <hr><br><br>POS (premium) </td> 
-   <td><br><br><br><br>1800-266-6545<br>1800-102-1671<hr><br><br>1800-102-1673<hr><br><br>1800-266-6546<br>1800-102-1672 </td>
-    <td><br><br><br><br><br>merchantcare@icicims.com<hr> <br><br><br><br><br><br><br>imspremiumservice@icicims.com</td>
-    <td><br><br><br><br>pghelpdesk@fiserv.com<hr></td>
-    <td><br><br><br><br>24/7 support<hr><br><br><br><br><br><br>24/7 support</td>
-    <td>1800-266-6545<br>1800-102-1671<hr><br><br>1800-102-1673<hr></td>
+  <td rowspan="5">India</td>
+   <td rowspan="2"> POS </td> 
+   <td> 1800-266-6545 </td>
+   <td rowspan="2"> merchantcare@icicims.com </td>
+   <td rowspan="3"> 24/7 support </td>
  </tr>
  
-  <tr>
-   <td>Australia</td>
-   <td> POS/Gateway</td>
-   <td> 1800-243-444</td>
-   <td>merchantservicesau@fiserv.com</td>
-   <td>ausgatewaysupport@fiserv.com</td>
-   <td>POS Support: 24/7 <br>Online Support: 19/7 Support </td>
-   <td>merchantservicesAU@fiserv.com</td>
-  </tr>
-  <tr>
-    <td>Singapore</td>
-    <td><br><br>POS<hr><br>Gateway</td>
-    <td>+65 6622 1888<hr></td>
-    <td><br>merchantservices@fiserv.com</td>
-    <td><br><br><br>firstdatagateway@fiserv.com</td>
-    <td>Local Time: 9am – 11pm</td>
-    <td rowspan =5>merchantservices@fiserv.com</td>
-
+ <tr>
+   <td> 1800-102-1671 </td>
  </tr>
 
-  <tr>
-     <td>Malaysia</td>
-      <td><br><br>POS<hr> <br>Gateway</td>
-      <td>+603 6207 4888<hr></td>
-      <td><br>merchantservices@fiserv.com</td>
-      <td><br><br><br>firstdatagateway@fiserv.com</td>
-      <td>Local Time: 9am – 11pm</td>
-  </tr>
+ <tr>
+  <td> Gateway</td>
+  <td> 1800-102-1673 <td>
+ </tr>
 
-  <tr>
-   <td>Hong Kong</td>
-   <td><br><br>POS<hr><br> Gateway</td>
-   <td>+852 3071 5008<hr></td>
-   <td><br>merchantservices@fiserv.com</td>
-   <td><br><br><br>firstdatagateway@fiserv.com</td>
-   <td>Local Time: 9am – 11pm</td>
-  </tr>
+ <tr>
+ <td rowspan="2"> POS (premium) <td>1800-102-1672</td>
+ <td rowspan="2"> imspremiumservice@icicims.com </td>
+ <td  rowspan="2"> 24/7 support </td>
+ </tr> 
+<tr>
+<td> 1800-102-1672 </td>
+</tr>
 
-  <tr>
-   <td>China</td>
-   <td> POS/Gateway</td>
-   <td>  </td>
-   <td>merchantservices@fiserv.com</td>
-   <td>firstdatagateway@fiserv.com</td>
-   <td>Local Time: 9am – 11pm</td>
-  
-  </tr>
+<tr>
+  <td  rowspan="2"> Australia </td>
+  <td  rowspan="2" > POS / Gateway </td>
+  <td  rowspan="2"> 1800-243-444 </td>
+  <td  rowspan="2"> merchantservicesau@fiserv.com </td>
+  <td> POS Support: 24/7 </td>
+</tr>
 
-  <tr>
-   <td>others</td>
-   <td> POS/Gateway</td>
-   <td> </td>
-   <td>merchantservices@fiserv.com</td>
-   <td>firstdatagateway@fiserv.com</td>
-   <td> </td>
-   
+<tr>
+  <td> Online Support: 19/7 Support </td>
+</tr> 
 
-  </tr> 
+
+<tr>
+  <td  rowspan="2"> Singapore </td>
+  <td> POS </td>
+  <td> +65 6622 1888 </td>
+  <td  rowspan="2">merchantservices@fiserv.com </td>
+  <td rowspan="2"> Local Time: 9am – 11pm </td>
+</tr>
+
+<tr>
+  <td>Gateway </td>
+</tr> 
+
+<tr>
+  <td  rowspan="2"> Malaysia </td>
+  <td> POS </td>
+  <td> +603 6207 4888 </td>
+  <td  rowspan="2"> merchantservices@fiserv.com </td>
+  <td rowspan="2"> Local Time: 9am – 11pm </td>
+</tr>
+
+<tr>
+  <td>Gateway </td>
+</tr> 
+
+
+<tr>
+  <td  rowspan="2"> Hong Kong </td>
+  <td> POS </td>
+  <td> +852 3071 5008 </td>
+  <td  rowspan="2"> merchantservices@fiserv.com </td>
+  <td rowspan="2"> Local Time: 9am – 11pm </td>
+</tr>
+
+<tr>
+  <td>Gateway </td>
+</tr> 
+
+
+<tr>
+  <td> China </td>
+  <td> POS / Gateway </td>
+  <td> </td>
+  <td> merchantservices@fiserv.com </td>
+  <td> Local Time: 9am – 11pm </td>
+</tr>
+
+<tr>
+  <td> Others </td>
+  <td> POS / Gateway </td>
+  <td> </td>
+  <td> merchantservices@fiserv.com </td>
+  <td> </td>
+</tr>
+
+
 </table> 
-
 </body>
 </html>
 
