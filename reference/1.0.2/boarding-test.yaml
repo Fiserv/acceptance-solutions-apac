@@ -9,17 +9,17 @@ servers:
 - url: https://www.uat.fdmerchantservices.com
   description: UAT URL
 tags:
-- name: Boarding
+- name: Merchant Onboarding
   description: REST API for Boarding
 paths:
   /boardinggateway/externalboarding/partner/login:
     get:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: User Login
       description: User Login
       operationId: getAuthJWTToken
-      x-group-name:  Boarding
+      x-group-name:  Merchant Onboarding
       x-proxy-name: User Login
       x-default-example: IMS Sample
       parameters:
@@ -60,11 +60,11 @@ paths:
   /boardinggateway/externalboarding/secure/newmid:
     post:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: New Merchant
       description: New Merchant
       operationId: submitapplication
-      x-group-name: Boarding
+      x-group-name: Merchant Onboarding
       x-proxy-name: Submit Application
       x-default-example: New merchant
       parameters:
@@ -119,11 +119,11 @@ paths:
   /boardinggateway/externalboarding/secure/packages/{packageId}:
     get:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: Get Package ID
       description: Get Package ID
       operationId: getPackageById
-      x-group-name: Boarding
+      x-group-name: Merchant Onboarding
       x-proxy-name: Get Package ID
       x-default-example: Sample GetPackageID
       parameters:
@@ -162,11 +162,11 @@ paths:
   /boardinggateway/Externalboarding/secure/appstatus/{appUrn}:
     get:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: Application Status
       operationId: getAppStatus
       description: Application Status
-      x-group-name:  Boarding
+      x-group-name:  Merchant Onboarding
       x-proxy-name: Get App Status
       x-default-example: AppStatus Sample
       parameters:
@@ -205,11 +205,11 @@ paths:
   /boardinggateway/externalboarding/secure/document:
     get:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: document Matrix 
       description: Get Document List
       operationId: getDocumentList
-      x-group-name: Boarding
+      x-group-name: Merchant Onboarding
       x-proxy-name: Get Document List
       parameters:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
@@ -247,11 +247,11 @@ paths:
   /Externalboarding/secure/refmid/{appType}/{referenceMID}:
     get:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: Inquiry MID
       operationId: refForAdditionalMID
       description:  Additional MID / TID
-      x-group-name:  Boarding
+      x-group-name:  Merchant Onboarding
       x-proxy-name: ADD MID / TID
       x-default-example: refMid Sample
       parameters:
@@ -294,11 +294,11 @@ paths:
   /boardinggateway/externalboarding/secure/create:
     post:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: Create Application
       description: Create Application
       operationId: createapplication
-      x-group-name: Boarding
+      x-group-name: Merchant Onboarding
       x-proxy-name: Create Application
       x-default-example: CreateApp Sample
       parameters:
@@ -341,11 +341,11 @@ paths:
   /boardinggateway/externalboarding/secure/packages:
     get:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: Get Package List
       description: Get Package List
       operationId: getPackageList
-      x-group-name: Boarding
+      x-group-name: Merchant Onboarding
       x-proxy-name: Get Package List
       x-default-example: GetPackageList Sample
       parameters:
@@ -382,11 +382,11 @@ paths:
   /boardinggateway/externalboarding/secure/document/{appUrn}:
     post:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: Document Upload
       description: Document Upload
       operationId: uploadMerchantDocument
-      x-group-name: Boarding
+      x-group-name: Merchant Onboarding
       x-proxy-name: Document Upload
       x-default-example: upload Sample
       parameters:
@@ -431,11 +431,11 @@ paths:
   /boardinggateway/externalboarding/secure/addmid:
     post:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: Additional Outlet
       description: Additional Merchant
       operationId: submitAdditionalMidApplication
-      x-group-name: Boarding
+      x-group-name: Merchant Onboarding
       x-proxy-name: Additional Outlet
       x-default-example: Sample addMid
       parameters:
@@ -482,11 +482,11 @@ paths:
   /boardinggateway/externalboarding/secure/addtid:
     post:
       tags:
-      - Boarding
+      - Merchant Onboarding
       summary: Additional Device
       description: Additional Terminal
       operationId: submitAdditionalTidApplication
-      x-group-name: Boarding
+      x-group-name: Merchant Onboarding
       x-proxy-name: Additional Device
       x-default-example: Sample Add TID
       parameters:
@@ -3152,7 +3152,7 @@ components:
           "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZmlzZXJ2LmNvbSIsImF1ZCI6IkZpc2VydiBHQlMiLCJUWVBFIjoiUkVGUkVTSCIsImV4cCI6MTY0NTg3MjcwMCwianRpIjoiaDlaWnR5cUJESWZKSmFFU2JrTi1vdyIsImlhdCI6MTY0NTY5OTkwMCwibmJmIjoxNjQ1Njk5NjAwLCJ2ZXJzaW9uIjoiMS4wIiwic3ViIjoicHJlcmFuYWF1cyJ9.GMFTfttx9ClDBViB8OshCJBMtEfSDisi_O75nYRUgd4",
           "ttl": 30,
           "Status": {
-            "StatusCode": "0",
+            "StatusCode": "200",
             "StatusDesc": "Success"
           }
         }
@@ -3311,9 +3311,287 @@ components:
     DocAndPkgRequestParamRes:
       value:
        {
-         "code":"OK"
-       }
+      
+       example: [
 
+        {
+          "id": "15001",
+          "name": "Test Package AU 1_NEWMID",
+          "desc": "NAB Test Package",
+          "shrtName": "",
+          "level": "",
+          "image": "",
+          "cnrInd": "",
+          "acceptanceType": "POSMOB",
+          "isInternational": "No",
+          "isDCC": "Yes",
+          "msfTariff": "Tiered I/C",
+          "fundingCurrency": "NET_AUD",
+          "preferential": "N",
+          "otpEnabled": true,
+          "sbPackageDesc": "",
+          "sbInstrumentsDesc": "",
+          "sbVASDesc": "",
+          "sbTerminalTypeDesc": "",
+          "sbPricingDesc": "",
+          "attributes": [
+              {
+                  "category": "Package VAS",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "Charge Slip Type",
+                          "value": "E",
+                          "codeType": "Package VAS",
+                          "applicableForFilter": true
+                      },
+                      {
+                          "name": "FDConnect",
+                          "value": "Y",
+                          "codeType": "Package VAS",
+                          "applicableForFilter": true
+                      },
+                      {
+                          "name": "Project Call Type",
+                          "value": "ISO",
+                          "codeType": "Package VAS",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "MVV Indicator",
+                          "value": "Y",
+                          "codeType": "Package VAS",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Email / SMS Invoicing",
+                          "value": "Y",
+                          "codeType": "Package VAS",
+                          "applicableForFilter": true
+                      }
+                  ]
+              },
+              {
+                  "category": "Additional Peripherals",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "Peripharal2",
+                          "value": "Peripheral 2",
+                          "codeType": "Additional Peripherals",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Peripharal4",
+                          "value": "Peripheral 4",
+                          "codeType": "Additional Peripherals",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Peripharal3",
+                          "value": "Peripheral 3",
+                          "codeType": "Additional Peripherals",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Peripharal5",
+                          "value": "Peripheral 5",
+                          "codeType": "Additional Peripherals",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Peripharal1",
+                          "value": "Peripheral 1",
+                          "codeType": "Additional Peripherals",
+                          "applicableForFilter": false
+                      }
+                  ]
+              },
+              {
+                  "category": "Package Currency Acceptance",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "DCC",
+                          "value": "Y",
+                          "codeType": "Package Currency Acceptance",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "DCC PARTNER",
+                          "value": "openFxFuture",
+                          "codeType": "Package Currency Acceptance",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "International",
+                          "value": "N",
+                          "codeType": "Package Currency Acceptance",
+                          "applicableForFilter": false
+                      }
+                  ]
+              },
+              {
+                  "category": "Package Acceptance",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "POSMOB",
+                          "value": "Y",
+                          "codeType": "Package Acceptance",
+                          "applicableForFilter": false
+                      }
+                  ]
+              },
+              {
+                  "category": "Package Info",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "KET MERCHANT TAGING",
+                          "value": "Key Merchant Tagging",
+                          "codeType": "Package Info",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Package ID",
+                          "value": "477",
+                          "codeType": "Package Info",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Package Level",
+                          "value": "NEWMID",
+                          "codeType": "Package Info",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Package Name",
+                          "value": "Test Package AU 1",
+                          "codeType": "Package Info",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Number of Terminals",
+                          "value": "10",
+                          "codeType": "Package Info",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Package Description",
+                          "value": "NAB Test Package",
+                          "codeType": "Package Info",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "Preferrential?",
+                          "value": "Y",
+                          "codeType": "Package Info",
+                          "applicableForFilter": false
+                      }
+                  ]
+              },
+              {
+                  "category": "Package Schemes",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "Master",
+                          "value": "Y",
+                          "codeType": "Package Schemes",
+                          "applicableForFilter": true
+                      },
+                      {
+                          "name": "AMEX",
+                          "value": "Y",
+                          "codeType": "Package Schemes",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "DND",
+                          "value": "Y",
+                          "codeType": "Package Schemes",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "VISA",
+                          "value": "Y",
+                          "codeType": "Package Schemes",
+                          "applicableForFilter": true
+                      },
+                      {
+                          "name": "CUP",
+                          "value": "Y",
+                          "codeType": "Package Schemes",
+                          "applicableForFilter": false
+                      }
+                  ]
+              },
+              {
+                  "category": "Package Tariffs",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "MDR",
+                          "value": "Visa@2%,MC@1%,CUP@2% & EFTPOS@1.5%",
+                          "codeType": "Package Tariffs",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "MSF Tariff",
+                          "value": "Tiered I/C",
+                          "codeType": "Package Tariffs",
+                          "applicableForFilter": true
+                      }
+                  ]
+              },
+              {
+                  "category": "Additional Terminal Info",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "Terminal Instruction 2",
+                          "value": "Terminal Instruction3",
+                          "codeType": "Additional Terminal Info",
+                          "applicableForFilter": false
+                      }
+                  ]
+              },
+              {
+                  "category": "Package Card Types",
+                  "displayName": "",
+                  "attributeList": [
+                      {
+                          "name": "DEBIT",
+                          "value": "Y",
+                          "codeType": "Package Card Types",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "PREPAID",
+                          "value": "Y",
+                          "codeType": "Package Card Types",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "CREDIT",
+                          "value": "Y",
+                          "codeType": "Package Card Types",
+                          "applicableForFilter": false
+                      },
+                      {
+                          "name": "OFFUS",
+                          "value": "Y",
+                          "codeType": "Package Card Types",
+                          "applicableForFilter": false
+                      }
+                  ]
+              }
+          ]
+      }
+
+       ]
+       }
     CreateApp:
       value:
         {
