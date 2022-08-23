@@ -1,12 +1,18 @@
-# Point of Sale (POS) Terminals / Card not Present
+# Point of Sale (POS) Terminals / Card Present
 
-## Local Integration
 
-Point of sale connects directly with the payment terminal using your local network via Fiserv’s API [Read more](./?path=docs/LocalPOI.md).
+In-person or Card Present (CP) transactions are initiated when a customer physically presents their payment source at the time of the transaction. Transaction types include manual entry, track data, and EMV.
 
-## Cloud Integration
+A card present (CP) transaction is one in which the customer physically interacts with the payment device or tapping a mobile device with the card loaded to a digital wallet.
 
-Point of sale connects the payment terminal using Cloud based integrations with our payment platform via Fiserv APIs [Read more](./path=docs/CloudPOI.md).
+
+## Local Based Integration
+
+Point of sale connects directly with the payment terminal using your local network via Fiserv’s API. Find out [more](./?path=docs/LocalPOI.md).
+
+## Cloud Based Integration
+
+Point of sale connects the payment terminal using Cloud based integrations with our payment platform via Fiserv APIs. Find out [more](./path=docs/CloudPOI.md).
 
 ## Standalone Terminals
 For basic payment terminal solutions that do not require any integration, we offer state of the art standalone terminals for your businesses.

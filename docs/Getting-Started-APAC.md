@@ -14,7 +14,7 @@ Our services include; tokenization, 3-D Secure, creating and managing recurring 
 
 Browse our catalogue and integrate with our APIs to enrich your clients' digital experiences.
 
-# Cloud POI
+# Cloud Based Integration
 
 - [Login](./?path=/docs/APIs/CloudPOI/Login.md)
 
@@ -36,7 +36,7 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
-#  Boarding
+#  Merchant Onboarding
 
 - [Login](./?path=/docs/APIs/externalboarding/Login.md)
 
@@ -58,21 +58,21 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [SUBMIT - Additional Device](./?path=/docs/APIs/externalboarding/AdditionalDevice.md)
 
-- [SUBMIT - Single MID PayFac](./?path=/docs/APIs/externalboarding/SingleMIDPayFac.md)
+- [SUBMIT - Single MID Payfac](./?path=/docs/APIs/externalboarding/SingleMIDPayFac.md)
 
-- [SUBMIT - Multi MID PayFac](./?path=/docs/APIs/externalboarding/MultiMIDPayFac.md)
+- [SUBMIT - Multi MID Payfac](./?path=/docs/APIs/externalboarding/MultiMIDPayFac.md)
 
 - [Application Status Inquiry](./?path=/docs/APIs/externalboarding/ApplicationStatusInquiry.md)
 
-#  Local POI
+#  Local Integration
 
-## India / AU
+## India / Australia
 
 - [Inter-Application Integration](./?path=/docs/APIs/localpoi/InterAppIms.md)
 
 - [USB / Static Wi-Fi](./?path=/docs/APIs/localpoi/WIFIIMS.md)
 
-## Rest of APAC 
+## Rest of APAC  
 
 - [Inter-Application Integration](./?path=/docs/APIs/localpoi/InterAppFDMS.md)
 
