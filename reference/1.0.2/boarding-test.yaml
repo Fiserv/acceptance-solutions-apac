@@ -3311,8 +3311,8 @@ components:
     DocAndPkgRequestParamRes:
       value:
        {
-      
-       example: [
+       "Status": { "statusCode": "200", "message": "Success"},
+       data: [
 
         {
           "id": "15001",
