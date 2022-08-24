@@ -6,7 +6,7 @@ For APAC related integration, our dedicated support teams would be available to 
 <html id="top">
 <body>
 
-<table border="2" width="200%">
+<table border="2" width="220%">
 
   <tr>
     <th width="20%"> <b>Region</b></th>
