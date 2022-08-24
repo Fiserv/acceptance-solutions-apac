@@ -64,7 +64,7 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Application Status Inquiry](./?path=/docs/APIs/externalboarding/ApplicationStatusInquiry.md)
 
-#  Local Integration
+#  Local Based Integration
 
 ## India / Australia
 
