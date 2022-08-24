@@ -62,21 +62,21 @@
               link: docs/APIs/CloudPOI/Login.md
             - title: Sale with Local Payment Method
               link: docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md
-            - title: Sale With Cards
+            - title: Sale with Cards
               link: docs/APIs/PaymentAPI/SaleCard.md
             - title: Pre-Authorization Sale
               link: docs/APIs/PaymentAPI/PreAuthSale.md
-            - title: PreAuth Completion
+            - title: Pre-Authorization Completion
               link: docs/APIs/PaymentAPI/PreAuthCompletion.md
             - title: Refund
               link: docs/APIs/PaymentAPI/Refund.md
             - title: Void
               link: docs/APIs/PaymentAPI/Void.md
-            - title: EMI Sale
+            - title: Instalment / EMI Sale
               link: docs/APIs/PaymentAPI/EMISale.md
-            - title: Transaction status Check
+            - title: Transaction Inquiry
               link: docs/APIs/PaymentAPI/TransactionStatusCheck.md
-            - title: Settlement Transaction
+            - title: Settlement
               link: docs/APIs/PaymentAPI/SettlementTransaction.md
         - title: Merchant Onboarding
           link: docs/MerchantBoarding.md
@@ -101,9 +101,9 @@
               link: docs/APIs/externalboarding/AdditionalOutlet.md
             - title: SUBMIT - Additional Device
               link: docs/APIs/externalboarding/AdditionalDevice.md
-            - title: SUBMIT - Single MID PayFac
+            - title: SUBMIT - Single MID Payfac
               link: docs/APIs/externalboarding/SingleMIDPayFac.md
-            - title: SUBMIT - Multi MID PayFac
+            - title: SUBMIT - Multi MID Payfac
               link: docs/APIs/externalboarding/MultiMIDPayFac.md
             - title: Application Status Inquiry
               link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
