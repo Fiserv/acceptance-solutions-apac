@@ -6,7 +6,7 @@ For APAC related integration, our dedicated support teams would be available to 
 <html id="top">
 <body>
 
-<table border="2" width="220%">
+<table  width="230%">
 
   <tr>
     <th width="20%"> <b>Region</b></th>
@@ -104,6 +104,7 @@ imspremiumservice@icicims.com</a> <br>
   <br>
   <br>
    <a href="#top">Back to top</a>
+   </td>
   <td><b>Queries Point-of-Sale / Digital / Online Support</b><br>
 •  Integration Support: POS : <a href="mailto:merchantservices@fiserv.com">merchantservices@fiserv.com</a><br>
 •  Integration Support: Digital / Online : <a href="mailto:firstdatagateway@fiserv.com">firstdatagateway@fiserv.com</a><br>

@@ -1,6 +1,7 @@
-# Pre Auth Completion
+# Pre-Authorization Completion
 
-This API is used to send pre auth completion transaction request. Merchants will be required to add session token received during login API call in the header of this API.
+
+This API is used to send pre-authorization completion transaction request. Merchants will be required to add session token received during login API call in the header of this API.
 
 
 ## Endpoint
@@ -66,11 +67,11 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 - Identifies the required json properties in the request message.
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description / Values |
-| -------- | ------- | -- | ------------ | ------------------ |
+| Variable | Type | Length |  Mandatory / Optional / Conditional <br> (M / O / C) | Description / Values |
+| -------- | ------- | -- | ----------------------------------------------------- | ------------------ |
 | `merchantId` | *string* | 15 | M | Merchant ID assigned. |
 | `ain` | *string* | 07 | M | Acquirer institution number. |
-| `functionCode` | *string* | 02 | M | Examples: |
+| `functionCode` | *string* | 02 | M | E.g. |
 |  |  |  |  | 00 = Sale  - Digital and Card. |
 |  |  |  |  | 01 = Sale - Card. |
 |  |  |  |  | 02 = Preauth. |
@@ -167,8 +168,8 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ```
 
 ### Response
-| Variable | Type | Length |   Mandatory / Optional / Conditional (M / O / C)  | Description /Values |
-| -------- | ------- | -- | ------------ | ------------------ |
+| Variable | Type | Length |   Mandatory / Optional / Conditional <br> (M / O / C)  | Description /Values |
+| -------- | ------- | -- | ------------------------------------------------------- | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID. |
 | `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table). |
 | `functionCode` | *string* | 02 | M | Same as request. |
@@ -184,17 +185,17 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `authCode` | *string* | 06 | C  | Received from Issuer Host. |
 | `rrn` | *string* | 20 | C | Received from Issuer Host. |
 | `cardBin` | *string* | 06 | O | Card Bin. |
-| `dccIndicator` | *string* | 01 | M | 0 – Non DCC, 1 – DCC.  |
+| `dccIndicator` | *string* | 01 | M | 0 = Non DCC Transaction, 1 = DCC Transaction. |
 | `billingCurrency` | *string* | 03 | C | DCC currency code. |
 | `billingAmount` | *string* | 19 | C | DCC amount. |
 | `dccExchangeRate` | *string* | 20 | M | Currency exchange rate. |
 | `amexSeNumber` | *string* | 10 | C | Applicable for AMEX transaction. |
-| `emiFlag` | *string* | 01 | M | 0 – Non-EMI 1 - EMI. |
-| `emiTenure` | *string* | 02 | C | Applicable for EMI transaction. |
-| `emiInterestRate` | *string* | 10 | C | Applicable for EMI transaction. |
-| `emiProcessingFee` | *string* | 10 | C | Applicable for EMI transaction. |
-| `emiDiscAmt` | *string* | 10 | C | Applicable for EMI transaction. |
-| `emiPerMonth` | *string* | 10 | C | Applicable for EMI transaction. |
+| `emiFlag` | *string* | 01 | M | 0 = Non-EMI 1 = EMI. |
+| `emiTenure` | *string* | 02 | C | Instalment / EMI duration. If Instalment / EMI transactions are included. |
+| `emiInterestRate` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
+| `emiProcessingFee` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
+| `emiDiscAmt` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
+| `emiPerMonth` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
 | `cardNumber` | *string* | 19 | O | Card Number. |
 | `expDate` | *string* | 4 | O | Expiry date of the card. |
 | `posEntryMode` | *string* | 10 | M | MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC. |
@@ -214,13 +215,12 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 
 The table below provides the list of error codes and description for this application.
 
-| Error Code |  Description / Values | Comments |
-| --------  | ---------------------- |----------|
-| `200`| Success | Request is successfully processed. Merchant should go ahead with receipt . |
+|  Error Code   |  Description/Values    | Comments |
+|  -----------  | ---------------------- |----------|
+| `200`| Success | Request is successfully processed. Merchant should go ahead with receipt generation. |
 | `300`| Request Failure | Redirection error. Merchant should validate and retry with new request. |
-| `401`| Token not valid or Token not passed at all | User authentication error. Merchant should key a valid token during the transaction. |
+| `401`| Token not valid or Token had not passed at all | User authentication error. Merchant should key a valid token during the transaction. |
  | `404`| Not Found | Server cannot find the requested resource. Contact Customer Support / Business Manager. |
-| `500`| Internal Server Error | Server error. Contact Customer Support / Business Manager. | 
-| `502`| Request Timed Out | Server got an invalid response while working as a gateway to get the response needed to handle the request. Merchant should retry with new request. |
+| `502`| Request Timed Out | Server received an invalid gateway response Merchant should retry with new request. |
 
 

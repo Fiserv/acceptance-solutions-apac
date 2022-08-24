@@ -66,11 +66,11 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 - Identifies the required json properties in the request message.
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
+| Variable | Type | Length |  Mandatory / Optional/ Conditional <br>(M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 15 | M | Merchant ID assigned. |
 | `ain` | *string* | 07 | M | Acquirer institution number. |
-| `functionCode` | *string* | 02 | M | Examples: |
+| `functionCode` | *string* | 02 | M | E.g. |
 |  |  |  |  | 00 = Sale  - Digital and Card. |
 |  |  |  |  | 01 = Sale - Card.|
 |  |  |  |  | 02 = Pre-Authorization. |
@@ -101,7 +101,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value). |
 | `tranType` | *string* | 50 | O | Transaction Description. |
 | `rrn` | *string* | 20 | C | The same value received in the original transaction response needs to be submitted across. |
-| `emiTenure` | *string* | 02 | C  | Installment/ EMI duration. If installment/ EMI transactions are included. |
+| `emiTenure` | *string* | 02 | C  | Instalment/ EMI duration. If Instalment/ EMI transactions are included. |
 | `paramList` | *array* | NA | O | Biller can pass any additional details if required in array format "paramList": [{"param_lit": "param1 key","param": "23"}]. |
 | `udf1` | *string* | 100 | O | User Defined Field. |
 | `udf2` | *string* | 100 | O | User Defined Field. |
@@ -169,7 +169,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C)  | Description /Values |
+| Variable | Type | Length |  Mandatory / Optional/ Conditional <br> (M / O / C)  | Description /Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID. |
 | `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table). |
@@ -192,11 +192,11 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `dccExchangeRate` | *string* | 20 | M | Currency exchange rate. |
 | `amexSeNumber` | *string* | 10 | C | Applicable for AMEX transaction. |
 | `emiFlag` | *string* | 01 | M | g. |
-| `emiTenure` | *string* | 02 | C | Installment / EMI duration. If Installment / EMI transactions are included. |
-| `emiInterestRate` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
-| `emiProcessingFee` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
-| `emiDiscAmt` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
-| `emiPerMonth` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
+| `emiTenure` | *string* | 02 | C | Instalment / EMI duration. If Instalment / EMI transactions are included. |
+| `emiInterestRate` | *string* | 10 | C | Applicable for Instalment / EMI transaction. |
+| `emiProcessingFee` | *string* | 10 | C | Applicable for Instalment / EMI transaction. |
+| `emiDiscAmt` | *string* | 10 | C | Applicable for Instalment / EMI transaction. |
+| `emiPerMonth` | *string* | 10 | C | Applicable for Instalment / EMI transaction. |
 | `cardNumber` | *string* | 19 | O | Card Number. |
 | `expDate` | *string* | 4 | O | Expiry date of the card. |
 | `posEntryMode` | *string* | 10 | M | MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC. |
@@ -216,7 +216,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 
 The table below provides the list of error codes and description for this application.
 
-| ErrorCode |  Description/Values | Comments |
+| Error Code |  Description/Values | Comments |
 | --------  | ---------------------- |----------|
 | `200`| Success | Request is successfully processed. Merchant should go ahead with receipt generation. |
 | `300`| Request Failure | Redirection error. Merchant should validate and retry with new request. |

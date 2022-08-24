@@ -69,11 +69,11 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 - Identifies the required json properties in the request message.
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
+| Variable | Type | Length |  Mandatory / Optional/ Conditional <br> (M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 15 | M | Merchant ID assigned. |
 | `ain` | *string* | 07 | M | Acquirer institution number. |
-| `functionCode` | *string* | 02 | M | Examples: |
+| `functionCode` | *string* | 02 | M | E.g. |
 |  |  |  |  | 00 = Sale  - Digital and Card. |
 |  |  |  |  | 01 = Sale - Card. |
 |  |  |  |  | 02 = Pre-Authorization. |
@@ -170,7 +170,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory / Optional/ Conditional (M / O / C)  | Description / Values |
+| Variable | Type | Length |  Mandatory / Optional/ Conditional <br> (M / O / C)  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID. |
 | `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table). |
@@ -179,7 +179,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `cardLastNumber` | *string* | 4 | C | Last 4 Digits of Card Number. To be included for PreAuth completion transaction. |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts, tip) including decimal (E.g. 57.00 for $57 sale). |
 | `tipAmount` | *string* | 10 | C | Last 4 Digits of Card Number. To be included for PreAuth completion transaction. |
-| `merchantRefNumber` | *string* | 14 | M | Unique number for each transaction. Inquiry transaction should have same MRN of original transaction. For BOCM pass the value as (50 bytes). |
+| `merchantRefNumber` | *string* | 14 | M | Merchant Reference Number. |
 | `customerRefNumber` | *string* | 20 | 0 | Custmer Reference Number. |
 | `respCode` | *string* | 05 | M | 200 / 300 / actual switch response. |
 | `response` | *string* | 20 | M | SUCCESS / FAILURE. |
@@ -193,11 +193,11 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `dccExchangeRate` | *string* | 20 | M | Currency exchange rate. |
 | `amexSeNumber` | *string* | 10 | C | Applicable for AMEX transaction. |
 | `emiFlag` | *string* | 01 | M | 0 = Non-EMI 1 = EMI. |
-| `emiTenure` | *string* | 02 | C | Installment / EMI duration. If Installment / EMI transactions are included. |
-| `emiInterestRate` | *string* | 10 | C | Applicable for Installment/EMI transaction. |
-| `emiProcessingFee` | *string* | 10 | C | Applicable for Installment/EMI transaction. |
-| `emiDiscAmt` | *string* | 10 | C | Applicable for Installment/EMI transaction. |
-| `emiPerMonth` | *string* | 10 | C | Applicable for Installment/EMI transaction. |
+| `emiTenure` | *string* | 02 | C | Instalment / EMI duration. If Instalment / EMI transactions are included. |
+| `emiInterestRate` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
+| `emiProcessingFee` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
+| `emiDiscAmt` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
+| `emiPerMonth` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
 | `cardNumber` | *string* | 19 | O | Card Number. |
 | `expDate` | *string* | 4 | O | Expiry date of the card. |
 | `posEntryMode` | *string* | 10 | M | MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC. |

@@ -7,22 +7,22 @@ Fiserv Cloud based integration is an Application Programming Interface (API) bas
 
 - [Cloud based integration](./?path=docs/APIs/PaymentAPI/Cloudbasedintegration.md)
 
-- [EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
+- [Instalment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
 
 - [Login](./?path=docs/APIs/PaymentAPI/Login.md)
 
-- [PreAuth Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
+- [Pre-Authorization Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
 
-- [PreAuth Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
+- [Pre-Authorization Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
 
 - [Refund](./?path=docs/APIs/PaymentAPI/Refund.md)
 
-- [Sale Card](./?path=docs/APIs/PaymentAPI/SaleCard.md)
+- [Sale with Cards](./?path=docs/APIs/PaymentAPI/SaleCard.md)
 
 - [Sale with Local Payment Method](./?path=docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md)
 
-- [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
+- [Settlement](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
-- [Transaction Status Check](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
+- [Transaction Inquiry](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
 
 - [Void](./?path=docs/APIs/PaymentAPI/Void.md)

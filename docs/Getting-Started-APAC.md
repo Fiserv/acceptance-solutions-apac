@@ -18,23 +18,23 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Login](./?path=/docs/APIs/CloudPOI/Login.md)
 
-- [Sale Card](./?path=docs/APIs/PaymentAPI/SaleCard.md)
+- [Sale with Cards](./?path=docs/APIs/PaymentAPI/SaleCard.md)
 
-- [Pre Authorization Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
+- [Pre-Authorization Sale](./?path=docs/APIs/PaymentAPI/PreAuthSale.md)
 
-- [Pre Authorization Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
+- [Pre-Authorization Completion](./?path=docs/APIs/PaymentAPI/PreAuthCompletion.md)
 
 - [Refund](./?path=docs/APIs/PaymentAPI/Refund.md)
 
 - [Void](./?path=docs/APIs/PaymentAPI/Void.md)
 
-- [Installment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
+- [Instalment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
 
-- [Transaction status Check](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
+- [Transaction Inquiry](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
 
 - [Sale with Local Payment Method](./?path=docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md)
 
-- [Settlement Transaction](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
+- [Settlement](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
 #  Merchant Onboarding
 
