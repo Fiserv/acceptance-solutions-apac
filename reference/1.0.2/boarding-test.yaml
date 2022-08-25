@@ -850,8 +850,12 @@ components:
       properties:
         appURN:
           type: string
+          example: 1000008465
+          description: App URN retured as part of Create URN API
         appType:
           type: string
+          example: Tab
+          description: Fixed Value <B><I>API</I></B>
         appChannel:
           type: string
         institutionId:
