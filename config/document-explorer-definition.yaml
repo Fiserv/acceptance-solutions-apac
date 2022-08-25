@@ -33,7 +33,7 @@
       link:
       open: true
       sections:
-        - title: Contact US
+        - title: Contact Us
           link: docs/introduction/contact-us.md
 
 - sections:
