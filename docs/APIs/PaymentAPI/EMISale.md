@@ -92,7 +92,8 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 - Identifies the required json properties in the request message.
 
 ### Request
-| Variable | Type | Length | Mandatory / Optional / Conditional <br>(M / O / C) | Description / Values |
+
+| Variable | Type | Length | Mandatory /Optional /Conditional <br>(M / O / C) | Description /Values |
 | -------- | ------- | -- | ----------------------------------------------- | ------------------ |
 | `merchantId` | *string* | 15 | M | Merchant ID assigned. |
 | `ain` | *string* | 07 | M | Acquirer institution number. |
@@ -193,8 +194,8 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ```
 
 ### Response
-| Variable | Type | Length |  Mandatory / Optional / Conditional <br>(M / O / C)  | Description/Values |
-| -------- | ------- | -- | ----------------------------------------------------- | ------------------ |
+| Variable | Type | Length | Mandatory / Optional /Conditional <br>(M / O / C) | Description /Values |
+| -------- | ------- | -- | ----------------------------------------------- | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID. |
 | `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table). |
 | `functionCode` | *string* | 02 | M | Same as request. |
@@ -240,7 +241,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 
 The table below provides the list of error codes and description for this application.
 
-|  Error Code   |  Description/Values    | Comments |
+|  Error Code   |  Description /Values    | Comments |
 |  -----------  | ---------------------- |----------|
 | `200`| Success | Request is successfully processed. Merchant should go ahead with receipt generation. |
 | `300`| Request Failure | Redirection error. Merchant should validate and retry with new request. |
