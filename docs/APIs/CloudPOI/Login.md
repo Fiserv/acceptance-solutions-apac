@@ -43,8 +43,8 @@ The table below identifies the required parameters in the request payload.
 
 | Variable | Passed as | Type | Length | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-| `username` | JSON Property | *string* | 15 | User ID |
-| `Password ` | JSON Property | *string* | 15 | Password |
+| `username` | JSON Property | *string* | 15 | User ID. |
+| `Password ` | JSON Property | *string* | 15 | Password. |
 
 ### Successful Response in Payload
 
@@ -78,7 +78,7 @@ The table below provides the list of error codes and description for this applic
 
 |  Error Code | Description / Values | Comments | 
 | -------- | ------- | -- |
-| `200` | Request executed |  Request is successfully processed. Merchant should use the generated token and proceed with Payment API transaction Initiation  | 
-| `300 ` |   Request failure |  Redirection error. Merchant should validate and retry with new request | 
-| `404` |  Not found |   Server cannot find the requested resource. Contact Customer Support / Business Manager  | 
-| `500 ` |   Internal Server Error |  Server Error. Contact Customer Support / Business Manager | 
+| `200` | Request executed. |  Request is successfully processed. Merchant should use the generated token and proceed with Payment API transaction Initiation.  | 
+| `300 ` |   Request failure. |  Redirection error. Merchant should validate and retry with new request. | 
+| `404` |  Not found. |   Server cannot find the requested resource. Contact Customer Support / Business Manager.  | 
+| `500 ` |   Internal Server Error. |  Server Error. Contact Customer Support / Business Manager. | 
