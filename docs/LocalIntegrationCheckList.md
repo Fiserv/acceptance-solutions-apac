@@ -1,18 +1,18 @@
-# Local Integration Checklist
+# Local Based Integration Checklist
 
 ![pos3 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg "pos3 logo")
 
-### Local Integration Use Cases 
+### Local Based Integration Use Cases 
 
 Our local integration APIs facilitates to connect with your in-house central or any standalone systems to automate the entire billing to payments transactions.<BR/>
 
 From inventory tracking, reservations, billing and reconciliation applications that your business is using, our local-based API opens many possibilities for your business to cater to your business’ payment eco-system.<BR/>
 
-![Local Integration Checklist logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/lic-1.jpg "Local Integration Checklist logo")
+![Local Based Integration Checklist logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/lic-1.jpg "Local Based Integration Checklist logo")
 
 
 
-<B> Use case considerations on how our Local integration can support your ecosystem: </B>
+<B> Use case considerations on how our local based integration can support your ecosystem: </B>
 
  - Your current point of sale (POS) system(s) have been implemented on local-based connectivity
  - Technically your business direction for your payment and reporting ecosystem is planned to be on local-based integrations
@@ -28,7 +28,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
 ![pos5 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg "pos5 logo") 
 
 
-### Welcome to Fiserv Local integration solution
+### Welcome to Fiserv Local Based integration solution
 
 The local integration acts as an interface / communication layer between the Fiserv terminal application ('Parent application') and the third-party application ('Consumer application').<BR/> 
 

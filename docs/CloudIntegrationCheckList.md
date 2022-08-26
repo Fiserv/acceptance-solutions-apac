@@ -1,8 +1,8 @@
-# Cloud Integration Checklist
+# Cloud Based Integration Checklist
 
 ![pos3 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg "pos3 logo")
 
-### Cloud Integration Use Cases
+### Cloud Based Integration Use Cases
 
 Our cloud-based integration APIs facilitates to connect with your in-house central or any standalone systems to automate the entire billing to payments transactions
 
@@ -27,9 +27,9 @@ From inventory tracking, reservations, billing and reconciliation applications t
 
 ![pos5 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg "pos5 logo") 
 
-# Cloud Integration Checklist
+# Cloud Based Integration Checklist
 
-<B>Welcome to Fiserv Cloud-based integration solution</B><BR/>
+<B>Welcome to Fiserv Cloud Based Integration solution</B><BR/>
 
 Handy tips before you begin, we would recommend:
 

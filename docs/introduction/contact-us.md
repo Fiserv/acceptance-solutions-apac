@@ -6,11 +6,14 @@ For APAC related integration, our dedicated support teams would be available to 
 <html id="top">
 <body>
 
-<table  width="230%">
 
-  <tr>
+
+
+<table  width="270%">
+
+  <tr style="height: 36px;">
     <th width="20%"> <b>Region</b></th>
-    <th width="120%"><b>Contact Us</b></th>
+    <th width="100%"><b>Contact Us</b></th>
   </tr>
 
   <tr>
@@ -36,7 +39,7 @@ For APAC related integration, our dedicated support teams would be available to 
 •  Operational hours: 24/7 support<br>
 •  Sales Enquiries Contact: 1800-266-6545 / 1800-102-1671 </td> 
   
- </tr>
+</tr>
  
  <tr>
    <td><b> POS (premium) </b><br>
@@ -55,7 +58,7 @@ imspremiumservice@icicims.com</a> <br>
 </td>
  </tr>
 
-<tr>
+<tr style="height: 36px;">
   <td> Australia 
   <br>
   <br>
@@ -73,26 +76,22 @@ imspremiumservice@icicims.com</a> <br>
 •  Operational hours: Digital / Online Support: 19/7 support<br>
 •  Sales Enquiries Contact: <a href="mailto: merchantservicesAU@fiserv.com">merchantservicesAU@fiserv.com</a>
  </td>
-</tr>
-
-<tr>
-  <td>Singapore
-    <br>
+</tr >
+<tr style="height: 36px;">
+ <td>Singapore
   <br>
   <br>
   <br>
   <br>
   <br>
-    <a href="#top">Back to top</a>
-  </td>
-  <td> <b>Queries Point-of-Sale / Digital / Online Support</b><br>
+  <a href="#top">Back to top</a> </td>
+  <td><b> Queries Point-of-Sale / Digital / Online Support</b><br>
 •  Integration Support: POS : <a href="mailto:merchantservices@fiserv.com">merchantservices@fiserv.com</a><br>
 •  Integration Support: Digital / Online : <a href="mailto:firstdatagateway@fiserv.com">firstdatagateway@fiserv.com</a><br>
 •  Contact: +65 6622 1888<br>
 •  Operational hours: Local Time: 9am – 11pm<br>
 •  Sales Enquiries Contact: <a href="mailto:merchantservices@fiserv.com">merchantservices@fiserv.com</a><br>
  </td>
-  
 </tr>
 
 <tr>
@@ -102,10 +101,9 @@ imspremiumservice@icicims.com</a> <br>
   <br>
   <br>
   <br>
-  <br>
    <a href="#top">Back to top</a>
    </td>
-  <td><b>Queries Point-of-Sale / Digital / Online Support</b><br>
+  <td> <b>Queries Point-of-Sale / Digital / Online Support</b><br>
 •  Integration Support: POS : <a href="mailto:merchantservices@fiserv.com">merchantservices@fiserv.com</a><br>
 •  Integration Support: Digital / Online : <a href="mailto:firstdatagateway@fiserv.com">firstdatagateway@fiserv.com</a><br>
 •  Contact: +603 6207 4888<br>
@@ -116,7 +114,6 @@ imspremiumservice@icicims.com</a> <br>
 
 <tr>
   <td> Hong Kong
-  <br>
   <br>
   <br>
   <br>
@@ -133,13 +130,8 @@ imspremiumservice@icicims.com</a> <br>
  </td>
 </tr>
 
-
-
-
 <tr>
   <td> China
-  <br>
-  <br>
   <br>
   <br>
   <br>
@@ -152,8 +144,7 @@ imspremiumservice@icicims.com</a> <br>
 •  Operational hours: Local Time: 9am – 11pm<br>
 •  Sales Enquiries Contact: <a href="mailto:merchantservices@fiserv.com">merchantservices@fiserv.com</a>
  </td>
- 
-</tr>
+ </tr>
 
 <tr>
   <td> Others
@@ -169,11 +160,9 @@ imspremiumservice@icicims.com</a> <br>
 •  Operational hours: Local Time: 9am – 11pm<br>
 •  Sales Enquiries Contact:  <a href="mailto:merchantservices@fiserv.com">merchantservices@fiserv.com</a>
  </td>
-  
-</tr>
+  </tr>
 
 
 </table> 
 </body>
 </html>
-
