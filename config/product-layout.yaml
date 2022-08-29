@@ -13,11 +13,11 @@ featuredFeatures:
     relatedDocs:
       - relatedDoc: 
         title: Login
-        description: Get started with Cloud POI with Login API which is used to authenticate the external client with the unique credentials in the set-up.
+        description: Get started with Cloud Based Integration with Login API which is used to authenticate the external client with the unique credentials in the set-up.
         link: /docs/APIs/CloudPOI/Login.md
       - relatedDoc: 
         title: Payment API
-        description: For card not present transactions using Cloud POI.
+        description: For payment related APIs such as Sale, Pre-Authorization, Refund, Void, Installment (EMI) Payments etc. using our card not present Cloud Based Integration solution.
         link: /docs/PaymentAPI.md
     relatedAPIs:
       - relatedAPI: 
