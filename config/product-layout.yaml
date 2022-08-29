@@ -22,12 +22,12 @@ featuredFeatures:
     relatedAPIs:
       - relatedAPI: 
         title: Login
-        description: This service is used to get the token.
+        description: A mandatory API required to authenticate your unique credentials, and includes a session token.
         type: "post"        
         path: "/boardinggateway/boarding/auth/signin"
       - relatedAPI: 
         title: Payment API
-        description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
+        description: APIs used to originate a financial transaction like a Sale, Pre-Authorization, Refund, Void, Installment (EMI) Payments and more.
         type: "post"        
         path: "/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount"
   - title: Merchant Onboarding
