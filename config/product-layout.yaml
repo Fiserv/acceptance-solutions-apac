@@ -30,27 +30,6 @@ featuredFeatures:
         description: This API is  based integration which facilitate to connect with retailer's central or any standalone systems to automate the entire billing to payments transactions..
         type: "post"        
         path: "/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount"
-  - title: Local Integration
-    description: Fiserv Local integration is an Application Programming Interface (API) based local integration which facilitates the connection with the retailer's central or  standalone systems, to automate the entire billing to payment transactions.
-    tags: ["APAC", "eCommmerce", "API"]
-    bullets: ["LocalPOI"]
-    relatedDocs:
-      - relatedDoc: 
-        title: Inter - App
-        description:  Interapp - India / Aus
-        link: /docs/APIs/localpoi/InterAppIms.md
-      - relatedDoc: 
-        title: Static Wi-Fi
-        description: USB / Static Wi-Fi - India / Aus
-        link: /docs/APIs/localpoi/WIFIIMS.md
-      - relatedDoc: 
-        title: Inter - App
-        description:  Interapp - Rest of APAC
-        link: /docs/APIs/localpoi/InterAppFDMS.md
-      - relatedDoc: 
-        title:  USB / Static Wi-Fi 
-        description:  USB / Static Wi-Fi - Rest of APAC
-        link: /docs/APIs/localpoi/WIFIFDMS.md
   - title: Merchant Onboarding
     description: Partners (ISO / ISV / Payment Facilitator) that are on-boarded as a separate channel will be able to onboard their merchants onto the Fiserv platform by invoking the merchant onboarding APIs by using assigned credentials.
     tags: ["APAC", "eCommmerce", "API"]
@@ -174,6 +153,27 @@ featuredFeatures:
         description: Upload Document
         type: "post"        
         path: "/Externalboarding/secure/document/{appUrn}"
+  - title: Local Integration
+    description: Fiserv Local integration is an Application Programming Interface (API) based local integration which facilitates the connection with the retailer's central or  standalone systems, to automate the entire billing to payment transactions.
+    tags: ["APAC", "eCommmerce", "API"]
+    bullets: ["LocalPOI"]
+    relatedDocs:
+      - relatedDoc: 
+        title: Inter - App
+        description:  Interapp - India / Aus
+        link: /docs/APIs/localpoi/InterAppIms.md
+      - relatedDoc: 
+        title: Static Wi-Fi
+        description: USB / Static Wi-Fi - India / Aus
+        link: /docs/APIs/localpoi/WIFIIMS.md
+      - relatedDoc: 
+        title: Inter - App
+        description:  Interapp - Rest of APAC
+        link: /docs/APIs/localpoi/InterAppFDMS.md
+      - relatedDoc: 
+        title:  USB / Static Wi-Fi 
+        description:  USB / Static Wi-Fi - Rest of APAC
+        link: /docs/APIs/localpoi/WIFIFDMS.md
   - title: Point of Sale / Card Present
     description: In-person or Card Present (CP) transactions are initiated when a customer physically presents their payment source at the time of the transaction. Transaction types include manual entry, track data, and EMV.A card present (CP) transaction is one in which the customer physically interacts with the payment device or tapping a mobile device with the card loaded to a digital wallet.
   - title: Online / Card Not Present / CNP
