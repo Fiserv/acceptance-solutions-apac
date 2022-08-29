@@ -1,7 +1,7 @@
 header:
   productName: AcceptanceSolutionsAPAC
   productionDescription: A section dedicated to the APAC region,&nbsp; providing a one-stop-solution for SMB and enterprise clients, as well as ISOs, Payment Facilitators and Partners to get easy and instant access to APIs required to integrate with our terminal and eCommerce solutions.<br/><ul>	<li>Enable secure, reliable and compliant&nbsp; offerings with multi-payment acceptance, to enrich your clients&rsquo; omnichannel experience through Fiserv APIs.</li>	<li>Explore intuitive APIs to drive your business with our scalable and comprehensive suite of solutions for your customers.</li></ul>
-  whoIsItFor: Made for developers by developers. <br/> Developers benefit from hassle free integration through seamless sample code sharing and test credential management, in an agile approach.
+  whoIsItFor: Made for developers by developers. Developers benefit from hassle free integration through seamless sample code sharing and test credential management, in an agile approach.
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: AcceptanceSolutionsAPAC™
