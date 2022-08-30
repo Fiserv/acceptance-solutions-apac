@@ -51,6 +51,34 @@ paths:
               examples:
                 Login Sample:
                   $ref: "#/components/examples/LoginRs402"
+        '300':
+          description:  "Request failure"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response402"
+              examples:
+                Login Sample:
+                  $ref: "#/components/examples/LoginRs300"
+        '404':
+          description:  "Not found"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response402"
+              examples:
+                Login Sample:
+                  $ref: "#/components/examples/LoginRs404"
+        '500':
+          description:  "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response402"
+              examples:
+                Login Sample:
+                  $ref: "#/components/examples/LoginRs500"
+
   /boardinggateway/cloudpoidp/PosPush/nonOpiProcessAmount:
     post:
       tags:
@@ -1268,11 +1296,57 @@ components:
         username: "Testuser135"
         password: "Test@1234"
     LoginRs200:
+      description: Request is successfully processed. Merchant should use the generated token and proceed with Payment API transaction Initiation.
       value:
-        data:
-          userName: "Testuser135"
-          token: "Wl3iTXZWZVrhoqNIiFPNwLBYe32NyTvh"
+        {
+          "status": {
+            "statusCode": "200",
+            "message": "Success"
+          },
+          "data": {
+            "token": "Wl3iTXZWZVrhoqNIiFPNwLBYe32NyTvh",
+            "userName": "Testuser135"
+          }
+        }
+
     LoginRs402:
+      description: "Invalid Credentials."
       value:
-        message: "Unauthorized"
+        {
+          "status": {
+            "statusCode": "402",
+            "message": "Bad Credential"
+          },
+          "data": {}
+        }
+    LoginRs300:
+      description: "Redirection error. Merchant should validate and retry with new request."
+      value:
+       {
+          "status": {
+            "statusCode": "300",
+            "message": "Request failure"
+          },
+          "data": {}
+        }
+    LoginRs404:
+      description: "Server cannot find the requested resource. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "404",
+            "message": "Not found"
+          },
+          "data": {}
+        }
+    LoginRs500:
+      description: "Server Error. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "500",
+            "message": "Not found"
+          },
+          "data": {}
+        }
   

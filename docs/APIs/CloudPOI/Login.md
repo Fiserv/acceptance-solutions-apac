@@ -79,6 +79,7 @@ The table below provides the list of error codes and description for this applic
 |  Error Code | Description / Values | Comments | 
 | -------- | ------- | -- |
 | `200` | Request executed. |  Request is successfully processed. Merchant should use the generated token and proceed with Payment API transaction Initiation.  | 
-| `300 ` |   Request failure. |  Redirection error. Merchant should validate and retry with new request. | 
+| `300` |   Request failure. |  Redirection error. Merchant should validate and retry with new request. |
+| `402` |   Bad Credential. |  Invalid Credentials. | 
 | `404` |  Not found. |   Server cannot find the requested resource. Contact Customer Support / Business Manager.  | 
 | `500 ` |   Internal Server Error. |  Server Error. Contact Customer Support / Business Manager. | 
