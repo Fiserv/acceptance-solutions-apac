@@ -90,67 +90,67 @@ featuredFeatures:
     relatedAPIs:
       - relatedAPI: 
         title: Login
-        description: This service is used to get the token.
+        description: TA mandatory API which authenticates unique credentials shared with partner. This field is required in the header of each subsequent API.
         type: "post"        
         path: "/Externalboarding/partner/login"
       - relatedAPI: 
-        title: Additional Device
-        description: Additional Device.
+        title: Submit Additional Device
+        description: API for submission of additional device request for an existing merchant.
         type: "post"        
         path: "/Externalboarding/secure/addtid"
       - relatedAPI: 
-        title: Additional Outlet
-        description: AdditionalOutlet
+        title: Submit Additional Outlet
+        description: API for submission of boarding application for additional trading outlet / location.
         type: "post"        
         path: "/Externalboarding/secure/addmid"
       - relatedAPI: 
-        title: Application Status Inquiry
-        description: Application Status Inquiry
+        title: Application Status Enquiry
+        description: Used to find out on latest status of any merchant boarding application that is in progress.
         type: "get"        
         path: "/Externalboarding/secure/appstatus/{appUrn}"
       - relatedAPI: 
         title: Create URN
-        description: Create URN
+        description: API to create a unique reference number (URN) for each new application.
         type: "post"        
         path: "/Externalboarding/secure/create"
       - relatedAPI: 
         title: Get Document Matrix
-        description: GetDocumentMatrix
+        description: For partners who utilise Fiserv Partner Credit Underwriting process.
         type: "get"        
         path: "/Externalboarding/secure/document"
       - relatedAPI: 
         title: Get Package ID
-        description: Get Package ID
+        description: To fetch individual package details in a request API.
         type: "get"        
         path: "/Externalboarding/secure/packages/{packageId}"
       - relatedAPI: 
         title: Get Package List
-        description: Get Package List
+        description: An optional API to fetch package details for merchants using multiple packages.
         type: "get"        
         path: "/Externalboarding/secure/packages/"
       - relatedAPI: 
         title: Mid Inquiry
-        description: MidInquiry
+        description: API to fetch details of existing Merchant IDs (MIDs).
         type: "get"        
         path: "/Externalboarding/secure/refmid/{appType}/{refmid}"
       - relatedAPI: 
-        title: Multi MID PayFac
-        description: Multi MID PayFac
+        title: Submit Multiple MID Payfac
+        description: API for submission of application for new multiple MID Payfac merchants.
         type: "post"        
         path: "/Externalboarding/secure/newmid"
       - relatedAPI: 
-        title: New Merchant
-        description: New Merchant
+        title: Submit New Merchant
+        description: API that support submission of boarding applications for new merchants.
         type: "post"        
         path: "/Externalboarding/secure/newmid"
       - relatedAPI: 
-        title: Single MID PayFac
-        description: Single MID PayFac
+        title: Submit Single MID Payfac
+        description: API for submission of application for new single MID Payfac merchants.
         type: "post"        
         path: "/Externalboarding/secure/newmid"
       - relatedAPI: 
         title: Upload Document
-        description: Upload Document
+        description: Used as part of Create URN API to tag documents to a particular Application URN.
         type: "post"        
         path: "/Externalboarding/secure/document/{appUrn}"
   - title: Local Based Integration
