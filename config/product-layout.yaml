@@ -159,20 +159,20 @@ featuredFeatures:
     bullets: ["LocalPOI"]
     relatedDocs:
       - relatedDoc: 
-        title: Inter - App
-        description:  Interapp - India / Aus
+        title: Inter-Application - India / Australia
+        description:  Documentation captures how merchants can integrate Fiserv payment application and  merchant application locally installed in android based terminals.
         link: /docs/APIs/localpoi/InterAppIms.md
       - relatedDoc: 
-        title: Static Wi-Fi
-        description: USB / Static Wi-Fi - India / Aus
+        title: Static Wi-Fi - India / Australia 
+        description: Documentation captures integration between system to android based terminal via USB / Static Wifi connectivity.
         link: /docs/APIs/localpoi/WIFIIMS.md
       - relatedDoc: 
-        title: Inter - App
-        description:  Interapp - Rest of APAC
+        title: Inter-Application - rest of APAC
+        description:  Documentation captures how merchants can integrate Fiserv payment application and  merchant application locally installed in android based terminals.
         link: /docs/APIs/localpoi/InterAppFDMS.md
       - relatedDoc: 
-        title:  USB / Static Wi-Fi 
-        description:  USB / Static Wi-Fi - Rest of APAC
+        title:  Static Wi-Fi - rest of APAC 
+        description:  Documentation captures integration between system to android based terminal via USB / Static Wi-Fi connectivity.
         link: /docs/APIs/localpoi/WIFIFDMS.md
   - title: Point of Sale / Card Present
     description: In-person or Card Present (CP) transactions are initiated when a customer physically presents their payment source at the time of the transaction. Transaction types include manual entry, track data, and EMV.A card present (CP) transaction is one in which the customer physically interacts with the payment device or tapping a mobile device with the card loaded to a digital wallet.
