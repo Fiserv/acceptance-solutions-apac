@@ -153,7 +153,7 @@ featuredFeatures:
         description: Upload Document
         type: "post"        
         path: "/Externalboarding/secure/document/{appUrn}"
-  - title: Local Integration
+  - title: Local Based Integration
     description: Fiserv Local integration is an Application Programming Interface (API) based local integration which facilitates the connection with the retailer's central or  standalone systems, to automate the entire billing to payment transactions.
     tags: ["APAC", "eCommmerce", "API"]
     bullets: ["LocalPOI"]
