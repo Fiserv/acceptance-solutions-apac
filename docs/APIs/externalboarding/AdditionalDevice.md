@@ -12,7 +12,7 @@ This API is used to submit the application details for additional device for an 
 
 ## Endpoint
 
-POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/addtid`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/addtid`
 
 ## Payload Example
 

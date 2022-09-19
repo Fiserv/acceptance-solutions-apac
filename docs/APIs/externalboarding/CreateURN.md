@@ -10,7 +10,7 @@ This API is used to create a unique reference number (URN) for each new applicat
 
 ## Endpoint
 
-POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/create`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/create`
 
 ## Payload Example
 

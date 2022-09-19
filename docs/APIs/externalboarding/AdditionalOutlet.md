@@ -13,7 +13,7 @@ This API is used to submit the application details for additional trading locati
 
 ## Endpoint
 
-POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/addmid`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/addmid`
 
 ## Payload Example
 

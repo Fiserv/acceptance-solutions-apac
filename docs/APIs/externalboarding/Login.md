@@ -13,7 +13,7 @@ This API authenticates the external client with the unique credentials shared wi
 
 ## Endpoint
 
-`https://www.uat.fdmerchantservices.com/Externalboarding/partner/login`
+`https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/partner/login`
 
 ## Payload Example
 

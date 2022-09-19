@@ -8,7 +8,7 @@ This API is used to fetch the package details list and its corresponding paramet
 
 ## Endpoint
 
-GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/packages`
+GET `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/packages`
 
 ## Payload Example
 

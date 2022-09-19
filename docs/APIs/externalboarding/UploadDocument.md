@@ -10,7 +10,7 @@ This API is used to upload documents for merchants.
 
 ## Endpoint
 
-POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/{appUrn}`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/document/{appUrn}`
 
 ## Payload Example
 
@@ -18,7 +18,7 @@ POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/{a
 
 ```json
 
-https://www.uat.fdmerchantservices.com/Externalboarding/secure/document/10000745
+https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/document/10000745
 
 ```
   

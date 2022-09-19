@@ -5,7 +5,7 @@ This API is used to get individual package. Merchant needs to add session token 
 
 ## Endpoint
 
-GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/packages/136`
+GET `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/packages/136`
 
 ## Payload Example
 

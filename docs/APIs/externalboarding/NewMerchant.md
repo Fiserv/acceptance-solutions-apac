@@ -13,7 +13,7 @@ This API is used to submit the boarding application for new merchants.
 
 ## Endpoint
 
-POST `https://www.uat.fdmerchantservices.com/Externalboarding/secure/newmid`
+POST `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/newmid`
 
 ## Payload Example
 

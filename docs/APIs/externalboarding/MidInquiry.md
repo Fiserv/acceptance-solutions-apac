@@ -9,7 +9,7 @@ This API is used to fetch the details of existing MID which merchants would have
 
 ## Endpoint
 
-GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/refmid/{appType}/{refmid}`
+GET `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/refmid/{appType}/{refmid}`
 
 ## Payload Example
 

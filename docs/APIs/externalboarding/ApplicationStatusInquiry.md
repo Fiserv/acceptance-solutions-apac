@@ -9,7 +9,7 @@ This API is used to fetch the latest status of any boarding application for merc
 
 ## Endpoint
 
-GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/appstatus/{appUrn}`
+GET `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/appstatus/{appUrn}`
 
 ## Payload Example
 

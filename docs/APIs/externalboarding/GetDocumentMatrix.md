@@ -11,7 +11,7 @@ This API is used to fetch the Document Matrix details using certain criteria sen
 
 ## Endpoint
 
-GET `https://www.uat.fdmerchantservices.com/Externalboarding/secure/document`
+GET `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/document`
 
 ## Payload Example
 
