@@ -57,7 +57,7 @@ paths:
                 "200":
                   $ref: '#/components/examples/LoginRs200'
 
-  /externalboarding/secure/newmid:
+  /boardinggateway/externalboarding/secure/newmid:
     post:
       tags:
       - Merchant Onboarding
@@ -116,7 +116,7 @@ paths:
               examples:
                 "200":
                   $ref: '#/components/examples/NewMerchantResponse'
-  /externalboarding/secure/packages/{packageId}:
+  /boardinggateway/externalboarding/secure/packages/{packageId}:
     get:
       tags:
       - Merchant Onboarding
@@ -159,7 +159,7 @@ paths:
                 "200":
                   $ref: '#/components/examples/GetPackageIDResponse'
   
-  /Externalboarding/secure/appstatus/{appUrn}:
+  /boardinggateway/Externalboarding/secure/appstatus/{appUrn}:
     get:
       tags:
       - Merchant Onboarding
@@ -202,7 +202,7 @@ paths:
                 "200":
                   $ref: '#/components/examples/AppStatusResponse200'
 
-  /externalboarding/secure/document:
+  /boardinggateway/externalboarding/secure/document:
     get:
       tags:
       - Merchant Onboarding
@@ -244,7 +244,7 @@ paths:
                 "200":
                   $ref: '#/components/examples/DocumentListResponse'
                   
-  /Externalboarding/secure/refmid/{appType}/{referenceMID}:
+  /boardinggateway/Externalboarding/secure/refmid/{appType}/{referenceMID}:
     get:
       tags:
       - Merchant Onboarding
@@ -291,7 +291,7 @@ paths:
                   $ref: '#/components/examples/MerchantAppResponse'
 
 
-  /externalboarding/secure/create:
+  /boardinggateway/externalboarding/secure/create:
     post:
       tags:
       - Merchant Onboarding
@@ -338,7 +338,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/CreateAppResponse'
 
-  /externalboarding/secure/packages:
+  /boardinggateway/externalboarding/secure/packages:
     get:
       tags:
       - Merchant Onboarding
@@ -379,7 +379,7 @@ paths:
               examples:
                 "200":
                  $ref: '#/components/examples/DocAndPkgRequestParamRes'
-  /externalboarding/secure/document/{appUrn}:
+  /boardinggateway/externalboarding/secure/document/{appUrn}:
     post:
       tags:
       - Merchant Onboarding
@@ -428,7 +428,7 @@ paths:
                 "200":
                   $ref: '#/components/examples/DocUploadRes'
                   
-  /externalboarding/secure/addmid:
+  /boardinggateway/externalboarding/secure/addmid:
     post:
       tags:
       - Merchant Onboarding
@@ -479,7 +479,7 @@ paths:
               examples:
                 "200":
                   $ref: '#/components/examples/ADDMIDRes'
-  /externalboarding/secure/addtid:
+  /boardinggateway/externalboarding/secure/addtid:
     post:
       tags:
       - Merchant Onboarding

@@ -24,12 +24,12 @@ featuredFeatures:
         title: Login
         description: A mandatory API required to authenticate your unique credentials, and includes a session token.
         type: "post"        
-        path: "/boardinggateway/boarding/auth/signin"
+        path: "/boardinggateway/boarding/auth/signin&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Payment API
         description: APIs used to originate a financial transaction like a Sale, Pre-Authorization, Refund, Void, Installment (EMI) Payments and more.
         type: "post"        
-        path: "/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount"
+        path: "/boardinggateway/cloudpoi/PosPush/nonOpiProcessAmount&branch=develop&version=1.0.2"
   - title: Merchant Onboarding
     description: Partners (ISO / ISV / Payment Facilitator) that are on-boarded as a separate channel will be able to onboard their merchants onto the Fiserv platform by invoking the merchant onboarding APIs by using assigned credentials.
     tags: ["APAC", "eCommmerce", "API"]
@@ -92,67 +92,67 @@ featuredFeatures:
         title: Login
         description: TA mandatory API which authenticates unique credentials shared with partner. This field is required in the header of each subsequent API.
         type: "post"        
-        path: "/Externalboarding/partner/login"
+        path: "/boardinggateway/Externalboarding/partner/login&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Submit Additional Device
         description: API for submission of additional device request for an existing merchant.
         type: "post"        
-        path: "/Externalboarding/secure/addtid"
+        path: "/boardinggateway/Externalboarding/secure/addtid&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Submit Additional Outlet
         description: API for submission of boarding application for additional trading outlet / location.
         type: "post"        
-        path: "/Externalboarding/secure/addmid"
+        path: "/boardinggateway/Externalboarding/secure/addmid&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Application Status Enquiry
         description: Used to find out on latest status of any merchant boarding application that is in progress.
         type: "get"        
-        path: "/Externalboarding/secure/appstatus/{appUrn}"
+        path: "/boardinggateway/Externalboarding/secure/appstatus/{appUrn}&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Create URN
         description: API to create a unique reference number (URN) for each new application.
         type: "post"        
-        path: "/Externalboarding/secure/create"
+        path: "/boardinggateway/Externalboarding/secure/create&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Get Document Matrix
         description: For partners who utilise Fiserv Partner Credit Underwriting process.
         type: "get"        
-        path: "/Externalboarding/secure/document"
+        path: "/boardinggateway/Externalboarding/secure/document&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Get Package ID
         description: To fetch individual package details in a request API.
         type: "get"        
-        path: "/Externalboarding/secure/packages/{packageId}"
+        path: "/boardinggateway/Externalboarding/secure/packages/{packageId}&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Get Package List
         description: An optional API to fetch package details for merchants using multiple packages.
         type: "get"        
-        path: "/Externalboarding/secure/packages/"
+        path: "/boardinggateway/Externalboarding/secure/packages&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Mid Inquiry
         description: API to fetch details of existing Merchant IDs (MIDs).
         type: "get"        
-        path: "/Externalboarding/secure/refmid/{appType}/{refmid}"
+        path: "/boardinggateway/Externalboarding/secure/refmid/{appType}/{refmid}&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Submit Multiple MID Payfac
         description: API for submission of application for new multiple MID Payfac merchants.
         type: "post"        
-        path: "/Externalboarding/secure/newmid"
+        path: "/boardinggateway/Externalboarding/secure/newmid&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Submit New Merchant
         description: API that support submission of boarding applications for new merchants.
         type: "post"        
-        path: "/Externalboarding/secure/newmid"
+        path: "/boardinggateway/Externalboarding/secure/newmid&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Submit Single MID Payfac
         description: API for submission of application for new single MID Payfac merchants.
         type: "post"        
-        path: "/Externalboarding/secure/newmid"
+        path: "/boardinggateway/Externalboarding/secure/newmid&branch=develop&version=1.0.2"
       - relatedAPI: 
         title: Upload Document
         description: Used as part of Create URN API to tag documents to a particular Application URN.
         type: "post"        
-        path: "/Externalboarding/secure/document/{appUrn}"
+        path: "/boardinggateway/Externalboarding/secure/document/{appUrn}&branch=develop&version=1.0.2"
   - title: Local Based Integration
     description: Fiserv Local integration is an Application Programming Interface (API) based local integration which facilitates the connection with the retailer's central or  standalone systems, to automate the entire billing to payment transactions.
     tags: ["APAC", "eCommmerce", "API"]
