@@ -12,7 +12,7 @@ tags:
 - name: Merchant Onboarding
   description: REST API for Boarding
 paths:
-  /externalboarding/partner/login:
+  /boardinggateway/externalboarding/partner/login:
     get:
       tags:
       - Merchant Onboarding
