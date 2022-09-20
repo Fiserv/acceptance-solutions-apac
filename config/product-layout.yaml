@@ -37,55 +37,55 @@ featuredFeatures:
     relatedDocs:
       - relatedDoc: 
         title: Login
-        description: Get Token.
+        description: A mandatory API which authenticates unique credentials shared with partner. This field is required on the header of each subsequent API.
         link: /docs/APIs/externalboarding/Login.md
       - relatedDoc: 
         title: Create URN
-        description: Create URN.
+        description: API to create a unique reference number(URN) for each new application.
         link: /docs/APIs/externalboarding/CreateURN.md
       - relatedDoc: 
         title: Get Package List
-        description: Get Package List.
+        description: An optional API to fetch package details for merchants using multiple packages.
         link: /docs/APIs/externalboarding/GetPackageList.md
       - relatedDoc: 
         title: Get Package ID
-        description: Get Package ID
+        description: To fetch individual package details in a request API.
         link: /docs/APIs/externalboarding/GetPackageId.md
       - relatedDoc: 
         title: Get Document Matrix
-        description: Get Document Matrix
+        description:  For partners who utilise Fiserv Partner Credit Underwriting process.
         link: /docs/APIs/externalboarding/GetDocumentMatrix.md
       - relatedDoc: 
         title: Upload Document
-        description: Upload Document
+        description: Used as part of Create URN API to tag documents to a particular Application URN.
         link: /docs/APIs/externalboarding/UploadDocument.md
       - relatedDoc: 
         title: MID - Inquiry
-        description: MID - Inquiry
+        description: API to fetch details of existing Merchant IDs(MIDS).
         link: /docs/APIs/externalboarding/MidInquiry.md
       - relatedDoc: 
         title: SUBMIT - New Merchant
-        description: New Merchant
+        description: API that support submission of boarding applications for new merchants.
         link: /docs/APIs/externalboarding/NewMerchant.md
       - relatedDoc: 
         title: SUBMIT - Additional Outlet
-        description: Additional Outlet
+        description: API for submission of boarding application for additional trading outlet/location.
         link: /docs/APIs/externalboarding/AdditionalOutlet.md
       - relatedDoc: 
         title: SUBMIT - Additional Device
-        description: Additional Device
+        description: API for submission of additional device request for an existing merchant.
         link: /docs/APIs/externalboarding/AdditionalDevice.md
       - relatedDoc: 
         title: SUBMIT - Single MID PayFac
-        description: Single MID PayFac
+        description: API for submission of application for new single MID Payfac merchants.
         link: /docs/APIs/externalboarding/SingleMIDPayFac.md
       - relatedDoc: 
         title: SUBMIT - Multi MID PayFac
-        description: Multi MID PayFac
+        description: API for submission of application for new multiple MID Payfac merchants.
         link: /docs/APIs/externalboarding/MultiMIDPayFac.md
       - relatedDoc: 
         title: SUBMIT - Application Status Inquiry
-        description: Application Status Inquiry
+        description: Used to find out on latest status of any merchant boarding application that is in progress.
         link: /docs/APIs/externalboarding/ApplicationStatusInquiry.md
     relatedAPIs:
       - relatedAPI: 
