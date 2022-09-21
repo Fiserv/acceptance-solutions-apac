@@ -22,7 +22,6 @@ The main configuration file for everything.
 
 DO NOT modify the structure.
 
-
 DO update the sections that are needed.  Look for "REPLACE ME". You can then replace the text for that field.
 
 
