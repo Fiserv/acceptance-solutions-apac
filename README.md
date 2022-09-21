@@ -2,7 +2,6 @@
 
 This repo contains the content for tenants of Developer Studio.
 
-
 ## Directory structure
 
 - /docs : All markdown files are to be placed in this directory
