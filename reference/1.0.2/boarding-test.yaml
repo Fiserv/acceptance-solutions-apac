@@ -21,7 +21,7 @@ paths:
       operationId: getAuthJWTToken
       x-group-name:  Merchant Onboarding
       x-proxy-name: User Login
-      x-default-example: IMS Sample
+      x-default-example: Login Sample
       parameters:
       - $ref: "#/components/parameters/ApiKeyHeader"
       - $ref: "#/components/parameters/Institution"
@@ -33,29 +33,46 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response200"
+                $ref: "#/components/schemas/Response"
               examples:
-                IMS Sample:
+                Login Sample:
                   $ref: "#/components/examples/LoginRs200"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateAppResponse'
+                $ref: '#/components/schemas/Response'
               examples:
-                "401":
+                Login Sample:
                   $ref: '#/components/examples/Response401'
-
-        default:
-          description: Success
+        '300':
+          description:  "Request failure"
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Response200'
+                $ref: "#/components/schemas/Response"
               examples:
-                "200":
-                  $ref: '#/components/examples/LoginRs200'
+                Login Sample:
+                  $ref: "#/components/examples/LoginRs300"
+        '404':
+          description:  "Not found"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+              examples:
+                Login Sample:
+                  $ref: "#/components/examples/LoginRs404"
+        '500':
+          description:  "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+              examples:
+                Login Sample:
+                  $ref: "#/components/examples/LoginRs500"
 
   /boardinggateway/externalboarding/secure/newmid:
     post:
@@ -585,6 +602,7 @@ components:
           
 
   schemas:
+    
     AppResponse200:
       type: object
       properties:
@@ -1660,7 +1678,7 @@ components:
           SvcProviderName: Premier
           ServerStatusCode: "401"
           ServerStatusDesc: Unauthorized
-    Response401:
+    "Response401":
       value:
         Status:
           StatusCode: "1740"
@@ -5816,6 +5834,46 @@ components:
                       ]
                     }
                   }  
+    LoginRs402:
+      description: "Invalid Credentials."
+      value:
+        {
+          "status": {
+            "statusCode": "402",
+            "message": "Bad Credential"
+          },
+          "data": {}
+        }
+    LoginRs300:
+      description: "Redirection error. Merchant should validate and retry with new request."
+      value:
+       {
+          "status": {
+            "statusCode": "300",
+            "message": "Request failure"
+          },
+          "data": {}
+        }
+    LoginRs404:
+      description: "Server cannot find the requested resource. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "404",
+            "message": "Not found"
+          },
+          "data": {}
+        }
+    LoginRs500:
+      description: "Server Error. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "500",
+            "message": "Not found"
+          },
+          "data": {}
+        }              
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
