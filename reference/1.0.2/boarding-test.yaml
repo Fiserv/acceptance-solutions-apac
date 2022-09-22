@@ -35,45 +35,45 @@ paths:
               schema:
                 $ref: "#/components/schemas/Response"
               examples:
-                Login Sample:
+                "200":
                   $ref: "#/components/examples/LoginRs200"
         "401":
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
               examples:
-                Login Sample:
-                  $ref: '#/components/examples/Response401'
+                 "401":
+                  $ref: '#/components/examples/LoginRs401'
         '300':
           description:  "Request failure"
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/Response"
               examples:
-                Login Sample:
+                '300':
                   $ref: "#/components/examples/LoginRs300"
         '404':
           description:  "Not found"
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/Response"
               examples:
-                Login Sample:
+                '404':
                   $ref: "#/components/examples/LoginRs404"
         '500':
           description:  "Internal Server Error"
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/Response"
               examples:
-                Login Sample:
+                '500':
                   $ref: "#/components/examples/LoginRs500"
-
+        default:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response200'
+              examples:
+                "200":
+                  $ref: '#/components/examples/LoginRs200'
   /boardinggateway/externalboarding/secure/newmid:
     post:
       tags:
@@ -1671,21 +1671,19 @@ components:
               Terminal ID: "Terminal ID1"
     "CreateApp401":
       value:
-        Status:
-          StatusCode: "1740"
-          StatusDesc: Authentication Failed
-          Severity: Error
-          SvcProviderName: Premier
-          ServerStatusCode: "401"
-          ServerStatusDesc: Unauthorized
+          {
+            "status": {
+              "statusCode": "401",
+              "message": "Unauthorized"
+            },
+            "data": {}
+          }
     "Response401":
       value:
         Status:
-          StatusCode: "1740"
-          StatusDesc: Authentication Failed
-          Severity: Error
-          ServerStatusCode: "401"
-          ServerStatusDesc: Unauthorized  
+          statusCode: "401"
+          message: Unauthorized
+        "data": {}
     SingleMIDPayFacResponse:
       value:
         {
@@ -5851,6 +5849,16 @@ components:
           "status": {
             "statusCode": "300",
             "message": "Request failure"
+          },
+          "data": {}
+        }
+    LoginRs401:
+      description: "Redirection error. Merchant should validate and retry with new request."
+      value:
+       {
+          "status": {
+            "statusCode": "401",
+            "message": "Unauthorized"
           },
           "data": {}
         }
