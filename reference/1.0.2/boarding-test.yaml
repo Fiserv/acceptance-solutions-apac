@@ -296,6 +296,27 @@ paths:
               examples:
                 "401":
                   $ref: '#/components/examples/Response401'
+        '400':
+          description:  "Generic Error"
+          content:
+            application/json:
+              examples:
+                '400':
+                  $ref: "#/components/examples/LoginRs400"
+        '403':
+          description:  "Forbidden"
+          content:
+            application/json:
+              examples:
+                '403':
+                  $ref: "#/components/examples/LoginRs403"
+        '500':
+          description:  "Internal Server Error"
+          content:
+            application/json:
+              examples:
+                '500':
+                  $ref: "#/components/examples/LoginRes500"
 
         default:
           description: Success
@@ -5852,6 +5873,16 @@ components:
           },
           "data": {}
         }
+    LoginRs400:
+      description: "Redirection error. Merchant should validate and retry with new request."
+      value:
+       {
+          "status": {
+            "statusCode": "400",
+            "message": "Generic Error"
+          },
+          "data": {}
+        }
     LoginRs401:
       description: "Redirection error. Merchant should validate and retry with new request."
       value:
@@ -5881,7 +5912,27 @@ components:
             "message": "Not found"
           },
           "data": {}
-        }              
+        }
+    LoginRs403:
+      description: "Server cannot find the requested resource. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "400",
+            "message": "Forbidden"
+          },
+          "data": {}
+        }
+    LoginRes500:
+      description: "Server Error. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "500",
+            "message": "Not Found"
+          },
+          "data": {}
+        }               
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
