@@ -1,13 +1,186 @@
 # Inter-Application Integration
-Inter Application Integration provides a seamless integration between the Fiserv payment application and the merchant application locally installed in android-based terminals.
+Inter-application Integration provides a seamless integration between the Fiserv payment application and the merchant application locally installed in android-based terminals.
 E.g. A biller can integrate with a payment application and complete the payment transaction.
 
-Financial payment transactions that are supported by inter application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion,  Pre-Authorisation Void,  Pre-Authorisation Completion Void, Void, Refund, Adjust, Settlement and Offline.
+Financial payment transactions that are supported by inter-application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion, Transaction Status Check,Installment/EMI Sale, Void, Settlement and Bharat QR code generation.
 
 ## How it works
 For a normal Sale request, the supported functionalities are listed below. 
 
 - Card Transaction (navigating to direct card payment application) 
+
+For digital transactions, the supported functionalities are listed below.
+
+<table border="2">
+  <tr>
+    <th>Value Added Services</th>
+    <th width="100"> Rest of APAC (SG, HK, MY) </th>
+     </tr>
+    <tr>
+    <td>WeChat</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Alipay</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>FPS</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>GrabPay</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>CUP QR (UnionPay QR)</td>
+    <td align="center">.</td>
+    </tr>
+    </table>
+
+  For a normal Sale request, the supported functionalities are listed below.
+    
+    
+ <table border="2">
+    <tr>
+    <th>Transactions Supported</th>
+    <th> Rest of APAC (SG, HK, MY)  </th>
+     </tr>
+    <tr>
+    <td>Pre-Authorization Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Pre-Authorization Sale cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Pre-Authorization Sale completion</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Pre-Authorization Sale completion / cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Void</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Offline Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Tip Adjustment</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Refund</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Pre-Authorization Sale completion offline</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Installment / EMI</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Installment Sale Cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>MOTO Pre-Authorization</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>MOTO Pre-Authorization Cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>MOTO Pre-Authorization completion</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>MOTO Pre-Authorization Completion / Cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>MOTO Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>MOTO Sale Cancellation </td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>MOTO Refund</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Void Refund</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Cash Advance / Cash withdrawal</td>
+    <td></td>
+    </tr>
+    <tr>   
+    <td>Cash Only</td>
+    <td></td>
+    </tr>
+    <tr>   
+    <td>Purchase with Cashback</td>
+    <td></td>
+    </tr>
+    <tr>   
+    <td>Settlement / Batch Upload</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>DCC (Dynamic Currency Conversion)</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Pre-Authorization Top-Up (Incremental Auth)</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Balance Inquiry</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Settlement report / Detail report</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Reprint</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Reprint Total</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>View History</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Get Transaction Record</td>
+    <td align="center">.</td>
+    </tr>
+    </tr>
+    </table>
+   
+
+
+
+ 
 
 ### Payload Examples - Request
 

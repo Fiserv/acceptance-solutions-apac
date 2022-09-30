@@ -1,58 +1,213 @@
 # USB / Static Wi-fi 
 
-USB / Static Wi-fi is an integration between system to APOS device. E.g., Biller can integrate with payment app and complete the payment transaction.
+USB / Static Wi-fi is an integration between system to APOS(Android Point of Sale) device. E.g., Biller / retailer can integrate with payment application and complete the payment transaction.
 
-Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, PreAuth Sale, PreAuth Completion, Transaction Status Check, EMI Sale, Void, Settlement, Bharat QR code generation.
+Financial payment transactions supported by USB / Static Wi-fi to biller / retailer: Sale, Pre-Authorization Sale, Pre-Authorization Completion, Transaction Status Check, Installment/EMI Sale, Void, Settlement, Bharat QR code generation.
 
 ## How it works
-- System Requirements to setup USB / Static Wi-fi
-    - OS: Windows 8 and above
-    - Cable: Micro USB Data Cable for RS232 Serial communication.
-    - Wi-Fi: Same Wi-Fi connectivity for Socket communication for Both PAX and Integrating APPs
-    - JDK Version: JDK 1.8.0 version or above (64 bit or 32 bit)
-    - Other Libs: (Available in Windows as javax.mail.jar)
-    - Use any serial lib for java that should support window platform
-    - Get a list of available port name and select comm port no
-    - Open VSP (Virtual Serial Port ) 
-    -  PAX Use the following detail for serial communication 
-        - BaudRate – 9600 
-        - Partity – NONE 
-        - StopBits – 1
-        - DataBits – 8 
-        - Use The JAVA NIO Channels or Classic Input/Output Streams to read and write data 
-        - System Requirements to setup USB / Static Wi-fi 
-        - Download and install the desired MCommerce app (Full Download)
-        - Full Download A920 integration kit in your system
-        - Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download Login)
-        - Go to ECR Preference settings menu enable ECR option and select the ECR type as USB
-        - Connect ECR and the terminal by RS232
-        - Connect the desired cable (USB) to PC
-        - Trigger transactions from PC application to check the line status
 
-        |  Param1    | Descriptions |  Comment |
-        | ---------- |---------------------- | ------------------ |
-        | `dataType` | Indicate the request data type.| active | 
+System Requirements to setup USB / Static Wi-fi
 
-        - Terminal will reply a ACK message
+	. OS: Windows 8 and above
+	. Cable: Micro USB Data Cable for RS232 Serial communication.
+	. Wi-Fi: Same Wi-Fi connectivity for Socket communication for Both PAX and Integrating APPs
+	.JDK Version: JDK 1.8.0 version or above (64 bit or 32 bit)
+	.Other Libs: (Available in Windows as javax.mail.jar)
+	.Use any serial lib for java that should support window platform
+	.Get a list of available port name and select comm port no
+	.Open VSP (Virtual Serial Port )
+	.PAX Use the following detail for serial communication
+	    .BaudRate – 9600
+	    .Partity – NONE
+        .StopBits – 1
+	    .DataBits – 8
+	    .Use The JAVA NIO Channels or Classic Input/Output  Streams to read and write data
+	    .System Requirements to setup USB / Static Wi-fi
+	    .Download and install the desired MCommerce app (Full Download)
+	    .Full Download A920 integration kit in your system
+	    .Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download Login)
+	    .Go to ECR Preference settings menu enable ECR option and select the ECR type as USB
+        .Connect ECR and the terminal by RS232
+	    .Connect the desired cable (USB) to PC
+	    .Trigger transactions from PC application to check the line status
+
+
+   For digital transactions, the supported functionalities are listed below.
+
+   <table border="2">
+  <tr>
+    <th>Value Added Services</th>
+    <th>India</th>
+    <th>Australia</th>
+  </tr>
+  <tr>
+    <td>BBPS (Bharat Bill Pay)</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>UPI QR</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Bharat QR</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>FASTag</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+     <tr>
+    <td>MobiKwik</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+
+
+For card transactions, the supported functionalities are listed below.
+
+<table border="2">
+  <tr>
+    <th>Transactions Supported</th>
+    <th>India</th>
+    <th>Australia</th>
+  </tr>
+  <tr>
+    <td>Pre-Authorization Sale</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+   <tr>
+    <td>Pre-Authorization Sale cancellation</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+   <tr>
+    <td>Pre-Authorization Sale completion</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+   <tr>
+    <td>Pre-Authorization Sale completion cancellation</td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Sale</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Void </td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Offline Sale</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Tip Adjustment</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Refund</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Pre-Authorization completion Offline</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Installment / EMI Sale</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Installment Sale Cancellation</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Void Refund</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Cash Advance / Cash withdrawal</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Cash Only</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Purchase with Cashback</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Settlement / Batch Upload</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>DCC
+(Dynamic Currency Conversion)
+</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Pre-Authorization Top-Up (Incremental Auth)</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+   <tr>
+    <td>Balance Inquiry</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Settlement report / Detail report</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  
+
+|  Param1    | Descriptions  |  Comment |
+| ---------- |---------------------- | ------------------ |
+| `dataType` | Indicate the request data type.| active |  a ACK message
 
 ### Payload Examples - Request
+dTransale",
 
+        - Terminal will reply
+    "base24Request": {
+        "functionCode
 ### Sale Request
 ```
 {
-    "workflow": "CardTransaction",
-    "transaction_type": "sale",
-    "base24Request": {
-        "functionCode": "01",
+    "workflow": "Car": s"
         "customerNum": "20000",
-        "suppressPrintChargeSlips": "n",
-        "userDefinedFields": "40000",
-        "totalTxnAmount": "300",
+        "suppressPrintCha"01",Slips": "n",
+        "userDefinedFieldrge: "40000",
+        "totalTxnAmouction",
+    "transaction_type": "sant": "300",
         "mrn": "RS1113"
     }
 }
 ```
-### PreAuth Sale Request
+### Pre-Authorization Request
 ```json
 {
     "workflow": "CardTransaction",
@@ -83,14 +238,14 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
     }
 }
 ```
-### PreAuth Completion Request
+### Pre-Authorization Completion Request
 ```json
-{
-    "workflow": "CardTransaction",
-    "transaction_type": "Pre-auth comp",
+{",
     "base24Request": {
         "functionCode": "03",
         "customerNum": "20000",
+        "workflow": "CardTransaction",
+        "transaction_type": "Pre-auth comp
         "cardLastFourDigit": "0010",
         "suppressPrintChargeSlips": "n",
         "userDefinedFields": "40000",
@@ -101,7 +256,7 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
     }
 }
 ```
-### EMI Request
+### Installment / EMI Request
 ```json
 {
     "workflow": "CardTransaction",
@@ -119,7 +274,7 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 ```
 
 
-### Transaction Status check Request
+### Transaction Status Enquiry
 
 ```json
 {
@@ -147,25 +302,25 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 ### Request
 The table below identifies the required properties in the request message
 
-| Variable | Type | Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
+| Variable | Type | Length | Mandatory / Optional /Conditional (M / O / C) | Description / Values |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
-|`functionCode`|String|2|M|01 - Sale ( Sale, DCC )|
-| | | | | 02 - Preauth Sale|
-| | | | | 03 - Preauth Completion|
-| | | | | 04 - Refund |
-| | | | | 05 - Void |
-| | | | | 06 - TIP |
-| | | | | 07 - Cash @ POS |
-| | | | | 08 - EMI Sale |
-| | | | | 11- Settlement Transaction |
-| | | | | 12- Transaction status |
-| | | | | 13 - UPI QR  Generation |
-| | | | | 14-  UPI QR Last Transaction Status | 
-| | | | | 15 - Bharat QR  Generation |
-| | | | | 16-  Bharat  QR Last Transaction Status | 
-| | | | | 17- Wallet Google Pay |
-| | | | | 18- Tone Tag wallet |
-| | | | | 19- Noncarded |
+|`functionCode`|String|2|M|01 = Sale ( Sale, DCC ) |
+| | | | | 02 = Pre-Authorization |
+| | | | | 03 = Pre-Authorization Completion|
+| | | | | 04 = Refund |
+| | | | | 05 = Void |
+| | | | | 06 = TIP |
+| | | | | 07 = Cash @ POS |
+| | | | | 08 = Instalment/ EMI Sale |
+| | | | | 11 = Settlement Transaction |
+| | | | | 12 = Transaction status |
+| | | | | 13 = UPI QR  Generation |
+| | | | | 14 = UPI QR Last Transaction Status | 
+| | | | | 15 = Bharat QR  Generation |
+| | | | | 16 = Bharat  QR Last Transaction Status | 
+| | | | | 17 = Google Pay Wallet |
+| | | | | 18 = Tone Tag wallet |
+| | | | | 19 = Non-Carded Transactions |
 |`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals-"100.00"|
 |`tipAmount`|String|10|O|Transaction which involves tip amount in decimals-"10.00"|
 |`detail`|String|2|O|To define the response message in detail format. |
@@ -173,16 +328,26 @@ The table below identifies the required properties in the request message
 |`ecrRef`|String|16|O|ECR reference number generated in transaction|
 |`merchantReferenceNumber`|String|20|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
 |`terminalInvoiceNumber`|String|20|O |Use the terminal Invoice No to indicate the invoice of terminal (Mandatory for void & PreAuth Completion transaction)|
+|`CGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount |
+|`IGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If IGST is included in the total amount |
+|`SGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If SGST is included in the total amount |
 |`customerNumber`|String|20|O|To identify this transaction is initiated by respective customer|
 |`userDefinedFields`|String|8|O|UDF fields|
 |`pwd `|String|20|O|Void password|
 |`rrn`|String|3|O|12 digits RRN|
-|`authCode`|String|8|O |Approval code of authorization (Mandatory for Pre Auth Completion transaction)|
-|`printChargeslip`|String|2|O|Y or N (Default - Y ) |
+|`authCode`|String|8|O|Used for Pre-authorization completion & cancellation transaction.|
+|`dccFlag`|String|1|O|DCC Conversion flag - Yes or No. 
+Response contains converted amount, exchange rate and margin fee.|
+|`printChargeslip`|String|2|O|To enable charge slip printing - Y or N 
+( Default mode = Y )|
+|`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable.|
 |`transactionType`|String|10|O |Type of transaction|
 |`emi`|String|3|O | EMI details – emi flag is 1/0 
 | | | | | EMI reference number generated is 8 bytes |
 | | | |  |Tenure, discount amount, product amount, EMI per month (Mandatory for EMI transaction)|
+|`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC) transactions such as: - Installment / EMI Sale - Installment / EMI Void Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI) 1 = EMI (Installment / EMI|
+|`cardLastFourDigit`|String|4|O|Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction.||`consumerNumber`|String|20|M|Consumer number ( CRN )
+The value that is populated in statement of the session ID.|
 |`checksum`|String|50|O|Checksum for "data" field.Use SHA256 method to calculate “data” field|
 
 
@@ -315,16 +480,16 @@ The table below identifies the required properties in the request message
         "mrn": "888888",
         "pinVerified": "0",
         "posEntryMode": "INSERT",
-        "responseCode": "Transaction Success",
-        "rrn": "000000000002",
-        "singFree": "1",
-        "source": "TILL",
-        "suppressPrintChargeSlips": "n",
+        "responseCode": "Transacti,
         "terminalInvoiceNo": "2",
         "totalTxnAmount": "40000",
         "transactionCurrency": "INR",
         "transactionMode": "Card",
-        "userDefinedFields": "50000"
+        "userDefinedFields": "50000"on Success",
+        "rrn": "000000000002",
+        "singFree": "1",
+        "source": "TILL",
+        "suppressPrintChargeSlips": "n"
     },
     "status": "Transaction Success"
 }
@@ -505,37 +670,39 @@ The table below identifies the required properties in the response message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
-|`functionCode`|String|2|M|01 - Sale ( Sale, DCC )|
-| | | | | 02 - Preauth Sale |
-| | | | | 03 - Preauth Completion |
-| | | | | 04 - Refund |
-| | | | | 05 - Void |
-| | | | | 06 - TIP |
-| | | | | 07 - Cash @ POS |
-| | | | | 08 - EMI Sale |
-| | | | | 11- Settlement Transaction |
-| | | | | 12- Transaction status |
-| | | | | 13 - UPI QR  Generation |
-| | | | | 14-  UPI QR Last Transaction Status | 
-| | | | | 15 - Bharat QR  Generation  |
-| | | | | 16-  Bharat  QR Last Transaction Status | 
-| | | | | 17- Wallet Google Pay |
-| | | | | 18- Tone Tag wallet |
-| | | | | 19- Noncarded |
+|`functionCode`|String|2|M|01 = Sale ( Sale, DCC )|
+| | | | | 02 = Pre-Authorization |
+| | | | | 03 = Pre-Authorization Completion |
+| | | | | 04 = Refund |
+| | | | | 05 = Void |
+| | | | | 06 = TIP |
+| | | | | 07 = Cash @ POS |
+| | | | | 08 = Instalment/ EMI Sale |
+| | | | | 11 = Settlement Transaction |
+| | | | | 12 = Transaction status |
+| | | | | 13 = UPI QR  Generation |
+| | | | | 14 =  UPI QR Last Transaction Status | 
+| | | | | 15 = Bharat QR  Generation  |
+| | | | | 16 =  Bharat  QR Last Transaction Status | 
+| | | | | 17 = Google  Wallet |
+| | | | | 18 = Tone Tag wallet |
+| | | | | 19 = Non-carded Transaction |
 |`tipAmount`|String|10|M|Tip Amount entered during the transaction |
 |`totalTxnAmount`|String|10|O|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00"|
 |`convenienceFee `|String|10|O|Convenience  Fee including decimal|
-|`cGST`|String|10|O|GST Including decimal ( GST )|
-|`sGST`|String|10|O|GST Including decimal ( GST )|
+|`cGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount.|
+|`sGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If SGST is included in the total amount.|
+|`iGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If IGST is included in the total amount.|
 |`billAmount`|String|10|O|Bill amount including decimal|
 |`merchantReferenceNumber`|String|20|M|Same as request|
 |`terminalInvoiceNumber`|String|8|M|Terminal Invoice Number|
-|`currencySelection`|String|3|O|Currency code/currency which been selected|
+|`currencySelection`|String|3|O|Currency code / currency that had been selected|
 |`transactioID`|String|10|M|Same as request|
 |`customerName`|String|25|O|Customer name extracted from Card|
 |`userDefinedFields`|String|30|O|Same as request|
-|`maskedCardNumber`|String|21|M|First Six digit & last four digit. In between number should be masked|
-|`applicationVersionNumber`|String|10|M|This is terminal application version number|
+|`maskedCardNumber`|String|21|M|First 6 digits and last 4 digits.
+The numbers in between should be masked|
+|`applicationVersionNumber`|String|10|M|Version number of terminal application used.|
 |`date & Time`|Timestamp|20|M|Host Date & Time|
 |`aTID`|String|8|M|Acquirer TID|
 |`aMID`|String|15|M|Acquirer MID|
@@ -546,46 +713,48 @@ The table below identifies the required properties in the response message
 |`rrn`|String|12|M|RRN received from host|
 |`se`|String|10|O|Value would be populated incase of Amex txns|
 |`emv`|String|256|O|EMV data like TC , Application identifier, Application Name, TSI, etc.|
-|`emiFlag`|String|1|O|EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC .EMI Sale, EMI Void|
+|`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC) transactions such as: - Installment / EMI Sale - Installment / EMI Void Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI) 1 = EMI (Installment / EMI|
 |`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
 |`pinVerified`|String|3|O|"Yes" when PIN was entered & "No" when pin was not prompt|
-|`authCode`|String|8|M|Received from Issuer/host|
+|`authCode`|String|8|M|Authorization code received from Issuer / host.|
 |`billerID`|String|10|O|Same as request|
 |`specificIndicator `|String|3|O|To be used for BBPS |
 |`merchantUniqueNumber`|String|20|O|Same as request |
 |`suppressPrintChargeslip `|String|2|O|“Yes” or “No”  -To suppress chargeslip prints for financial transactions|
 |`emi`|String|20|O|EMI details – emi flag is 1/0  EMI reference number generated is 8 bytes Tenure, discount amount, product amount, EMI per month|
-|`consumerNumber`|String|20|M|Consumer number ( CRN ) - Value to be populated in statement in session id|
-|`cardLastFourDigit`|String|4|O|Used for pre-auth completion & cancellation transaction|
-|`emailID`|String|50|O|Email ID on which Email needs to be received 50 bytes optional|
-|`cardTxnMode`|String|3|O|Txn Mode|
+|`consumerNumber`|String|20|M|Consumer number ( CRN )
+The value that is populated in statement of the session ID.|
+|`cardLastFourDigit`|String|4|O|Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction.|
+|`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable.|
+|`cardTxnMode`|String|3|O|Transaction Mode|
 |`purchaseAmount `|String|10|O|Purchase amount |
-|`cashBackAmount`|String|10|O| Transaction cash back amount|
-|`nacStatus `|String|3|O|Identify the network status |
-| | | | |True -> private network|
-| | | | | False -> public network|
-|`cardExpDate`|String|4|O|Transaction card expire date|
-|`dccFlag`|String|1|O|DCC Conversion flag  Yes or No. Response is converted amount, exchange rate and margin fee|
+|`cashBackAmount`|String|10|O| Transaction cashback amount|
+|`nacStatus `|String|3|O|Identifies the network status |
+| | | | |True = private network|
+| | | | | False = public network|
+|`cardExpDate`|String|4|O|Expiry date of the card used for transaction.|
+|`dccFlag`|String|1|O|DCC Conversion flag - Yes or No. 
+Response contains converted amount, exchange rate and margin fee.|
 
 
 
 The table below provides the list of error codes and description for this application.
 | ErrorCode |  Description / Values | Comments |
 | --------  | ------------------ | -------------|
-|`00`|Approved Balances|Merchant should go ahead with reciept generation|
-|`01`|Place Call|Contact Customer Support / Business Manager|
-|`02`|Over Floor Limit|Contact Customer Support / Business Manager|
-|`03`|Merchant Not on File|Contact Customer Support / Business Manager|
-|`12`|Invalid Transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`14`|Invalid Account|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`19`|Retry Transaction|Contact Customer Support / Business Manager|
-|`25`|CAF Not Found|Contact Customer Support / Business Manager|
-|`30`|Invalid msg format|Contact Customer Support / Business Manager|
-|`31`|Card Not Supported|Contact Customer Support / Business Manager|
-|`41`|Lost or Stolen Card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`43`|CAF Status 3, stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`51`|Pin Tries Exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`54`|Expired Card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`55`|Incorrect Pin|Issuer Decline. Merchant should advise cardholder to key correct pin for transaction|
-|`58`|Transaction not allowed|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`91`|Auth Timed out|Contact Customer Support / Business Manager|
+|`00`|Balance is approved|Merchant should go ahead with reciept generation.|
+|`01`|Place Call|Contact Customer Support / Business Manager.|
+|`02`|Over Floor Limit|Contact Customer Support / Business Manager.|
+|`03`|Merchant Not on File|Contact Customer Support / Business Manager.|
+|`12`|Invalid Transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`14`|Invalid Account|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`19`|Retry Transaction|Contact Customer Support / Business Manager.|
+|`25`|CAF Not Found|Contact Customer Support / Business Manager.|
+|`30`|Invalid msg format|Contact Customer Support / Business Manager.|
+|`31`|Card Not Supported| Contact Customer Support / Business Manager.|
+|`41`|Lost or Stolen Card|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
+|`43`|CAF Status 3, stolen card|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
+|`51`|Pin Tries Exceeded|Issuer declined the transaction. The number of tries using PIN had exceeded. Merchant should advise cardholder to use a different card for the transaction.|
+|`54`|Expired Card|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
+|`55`|Incrrect Pin|Issuer declined the transaction. Merchant should advise cardholder to retry with the correct PIN.|
+|`58`|Transaction not allowed|Issuer declined the transaction. Merchant should advise cardholder to use a different card for transaction.|
+|`91`|Authorization Request timed out|Contact Customer Support / Business Manager.|

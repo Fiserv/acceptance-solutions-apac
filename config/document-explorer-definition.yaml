@@ -110,7 +110,7 @@
         - title: Local Based Integration
           link: docs/LocalPOI.md
           sections:
-            - title: India / AU
+            - title: India / Australia
               sections:
               - title: Inter-Application Integration
                 link: docs/APIs/localpoi/InterAppIms.md
