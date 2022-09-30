@@ -21,7 +21,7 @@ paths:
       operationId: getAuthJWTToken
       x-group-name:  Merchant Onboarding
       x-proxy-name: User Login
-      x-default-example: IMS Sample
+      x-default-example: Login Sample
       parameters:
       - $ref: "#/components/parameters/ApiKeyHeader"
       - $ref: "#/components/parameters/Institution"
@@ -33,20 +33,38 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response200"
+                $ref: "#/components/schemas/Response"
               examples:
-                IMS Sample:
+                "200":
                   $ref: "#/components/examples/LoginRs200"
         "401":
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/CreateAppResponse'
               examples:
-                "401":
-                  $ref: '#/components/examples/Response401'
-
+                 "401":
+                  $ref: '#/components/examples/LoginRs401'
+        '300':
+          description:  "Request failure"
+          content:
+            application/json:
+              examples:
+                '300':
+                  $ref: "#/components/examples/LoginRs300"
+        '404':
+          description:  "Not found"
+          content:
+            application/json:
+              examples:
+                '404':
+                  $ref: "#/components/examples/LoginRs404"
+        '500':
+          description:  "Internal Server Error"
+          content:
+            application/json:
+              examples:
+                '500':
+                  $ref: "#/components/examples/LoginRs500"
         default:
           description: Success
           content:
@@ -56,7 +74,6 @@ paths:
               examples:
                 "200":
                   $ref: '#/components/examples/LoginRs200'
-
   /boardinggateway/externalboarding/secure/newmid:
     post:
       tags:
@@ -279,6 +296,27 @@ paths:
               examples:
                 "401":
                   $ref: '#/components/examples/Response401'
+        '400':
+          description:  "Generic Error"
+          content:
+            application/json:
+              examples:
+                '400':
+                  $ref: "#/components/examples/LoginRs400"
+        '403':
+          description:  "Forbidden"
+          content:
+            application/json:
+              examples:
+                '403':
+                  $ref: "#/components/examples/LoginRs403"
+        '500':
+          description:  "Internal Server Error"
+          content:
+            application/json:
+              examples:
+                '500':
+                  $ref: "#/components/examples/LoginRes500"
 
         default:
           description: Success
@@ -469,6 +507,50 @@ paths:
               examples:
                 "401":
                   $ref: '#/components/examples/Response401'
+        "100":
+          description: Invalid Request
+          content:
+            application/json:
+              examples:
+                "100":
+                  $ref: '#/components/examples/Mid100'
+        "103":
+          description: Data Not Found.Please contact Application Support Team 
+          content:
+            application/json:
+              examples:
+                "103":
+                  $ref: '#/components/examples/Mid103'
+        "302":
+          description: IOException 
+          content:
+            application/json:
+              examples:
+                "302":
+                  $ref: '#/components/examples/Mid302'
+        "404":
+          description: Not Found 
+          content:
+            application/json:
+              examples:
+                "404":
+                  $ref: '#/components/examples/Mid404'
+        "500":
+          description: Internal Error.Please contact Application Support Team  
+          content:
+            application/json:
+              examples:
+                "500":
+                  $ref: '#/components/examples/Mid500'
+        "505":
+          description: Internal Error.Please contact Application Support Team  
+          content:
+            application/json:
+              examples:
+                "505":
+                  $ref: '#/components/examples/Mid505'
+        
+        
 
         default:
           description: Success
@@ -521,6 +603,48 @@ paths:
               examples:
                 "401":
                   $ref: '#/components/examples/Response401'
+        "100":
+          description: Invalid Request
+          content:
+            application/json:
+              examples:
+                "100":
+                  $ref: '#/components/examples/Mid100'
+        "103":
+          description: Data Not Found.Please contact Application Support Team 
+          content:
+            application/json:
+              examples:
+                "103":
+                  $ref: '#/components/examples/Mid103'
+        "302":
+          description: IOException 
+          content:
+            application/json:
+              examples:
+                "302":
+                  $ref: '#/components/examples/Mid302'
+        "404":
+          description: Not Found 
+          content:
+            application/json:
+              examples:
+                "404":
+                  $ref: '#/components/examples/Mid404'
+        "500":
+          description: Internal Error.Please contact Application Support Team  
+          content:
+            application/json:
+              examples:
+                "500":
+                  $ref: '#/components/examples/Mid500'
+        "505":
+          description: Internal Error.Please contact Application Support Team  
+          content:
+            application/json:
+              examples:
+                "505":
+                  $ref: '#/components/examples/Mid505'
 
         default:
           description: Success
@@ -585,6 +709,7 @@ components:
           
 
   schemas:
+    
     AppResponse200:
       type: object
       properties:
@@ -1653,21 +1778,19 @@ components:
               Terminal ID: "Terminal ID1"
     "CreateApp401":
       value:
-        Status:
-          StatusCode: "1740"
-          StatusDesc: Authentication Failed
-          Severity: Error
-          SvcProviderName: Premier
-          ServerStatusCode: "401"
-          ServerStatusDesc: Unauthorized
-    Response401:
+          {
+            "status": {
+              "statusCode": "401",
+              "message": "Unauthorized"
+            },
+            "data": {}
+          }
+    "Response401":
       value:
         Status:
-          StatusCode: "1740"
-          StatusDesc: Authentication Failed
-          Severity: Error
-          ServerStatusCode: "401"
-          ServerStatusDesc: Unauthorized  
+          statusCode: "401"
+          message: Unauthorized
+        "data": {}
     SingleMIDPayFacResponse:
       value:
         {
@@ -5816,6 +5939,304 @@ components:
                       ]
                     }
                   }  
+    LoginRs402:
+      description: "Invalid Credentials."
+      value:
+        {
+          "status": {
+            "statusCode": "402",
+            "message": "Bad Credential"
+          },
+          "data": {}
+        }
+    LoginRs300:
+      description: "Redirection error. Merchant should validate and retry with new request."
+      value:
+       {
+          "status": {
+            "statusCode": "300",
+            "message": "Request failure"
+          },
+          "data": {}
+        }
+    LoginRs400:
+      description: "Redirection error. Merchant should validate and retry with new request."
+      value:
+       {
+          "status": {
+            "statusCode": "400",
+            "message": "Generic Error"
+          },
+          "data": {}
+        }
+    LoginRs401:
+      description: "Redirection error. Merchant should validate and retry with new request."
+      value:
+       {
+          "status": {
+            "statusCode": "401",
+            "message": "Unauthorized"
+          },
+          "data": {}
+        }
+    LoginRs404:
+      description: "Server cannot find the requested resource. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "404",
+            "message": "Not found"
+          },
+          "data": {}
+        }
+    LoginRs500:
+      description: "Server Error. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "500",
+            "message": "Not found"
+          },
+          "data": {}
+        }
+    LoginRs403:
+      description: "Server cannot find the requested resource. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "400",
+            "message": "Forbidden"
+          },
+          "data": {}
+        }
+    LoginRes500:
+      description: "Server Error. Contact Customer Support / Business Manager."
+      value:
+       {
+          "status": {
+            "statusCode": "500",
+            "message": "Not Found"
+          },
+          "data": {}
+        } 
+    Mid401:
+      value:
+       {
+          "status": {
+            "statusCode": "401",
+            "message": "Unauthorized"
+          },
+          "data": {}
+        }
+    Mid100:
+      value:
+       {
+          "status": {
+            "statusCode": "100",
+            "message": "Invalid Request"
+          },
+          "data": {}
+        }
+    Mid103:
+      value:
+       {
+          "status": {
+            "statusCode": "103",
+            "message": "Data Not Found.Please contact Application Support Team "
+          },
+          "data": {}
+        } 
+    Mid302:
+      value:
+       {
+          "status": {
+            "statusCode": "302",
+            "message": "IOException"
+          },
+          "data": {}
+        }
+    Mid404:
+      value:
+       {
+          "status": {
+            "statusCode": "404",
+            "message": "Not Found"
+          },
+          "data": {}
+        } 
+    Mid500:
+      value:
+       {
+          "status": {
+            "statusCode": "500",
+            "message": "Internal Error.Please contact Application Support Team"
+          },
+          "data": {}
+        }
+    Mid505:
+      value:
+       {
+          "status": {
+            "statusCode": "505",
+            "message": "Internal Error.Please contact Application Support Team"
+          },
+          "data": {}
+        } 
+    Mid708:
+      value:
+       {
+          "status": {
+            "statusCode": "708",
+            "message": "AppURN already submitted"
+          },
+          "data": {}
+        } 
+    Mid902:
+      value:
+       {
+          "status": {
+            "statusCode": "902",
+            "message": "AppURN is mandatory"
+          },
+          "data": {}
+        } 
+    Mid903:
+      value:
+       {
+          "status": {
+            "statusCode": "903",
+            "message": "Application already Submitted"
+          },
+          "data": {}
+        } 
+    Mid909:
+      value:
+       {
+          "status": {
+            "statusCode": "909",
+            "message": "Given Merchant Hierarchy Cannot handle via TAB. Please contact Application Support Team "
+          },
+          "data": {}
+        }
+    Mid908:
+      value:
+       {
+          "status": {
+            "statusCode": "908",
+            "message": "App URN not matching"
+          },
+          "data": {}
+        }
+   
+    Mid905:
+      value:
+       {
+          "status": {
+            "statusCode": "905",
+            "message": "Json Parse Error"
+          },
+          "data": {}
+        } 
+    Mid907:
+      value:
+       {
+          "status": {
+            "statusCode": "907",
+            "message": "Comments are empty"
+          },
+          "data": {}
+        }
+    Mid906:
+      value:
+       {
+          "status": {
+            "statusCode": "906",
+            "message": "Json Mapping Error"
+          },
+          "data": {}
+        } 
+    Mid904:
+      value:
+       {
+          "status": {
+            "statusCode": "904",
+            "message": "Json Processing Error"
+          },
+          "data": {}
+        } 
+    Mid910:
+      value:
+       {
+          "status": {
+            "statusCode": "910",
+            "message": "Given Merchant Id Doesnt qualify for Add Outlet. Please contact Application Support Team"
+          },
+          "data": {}
+        } 
+    Mid911:
+      value:
+       {
+          "status": {
+            "statusCode": "911",
+            "message": "Given Merchant Super MID is InActive. Please contact Application Support Team"
+          },
+          "data": {}
+        }
+    Mid912:
+      value:
+       {
+          "status": {
+            "statusCode": "912",
+            "message": "One of MID in hierarchy is InActive. Please contact Application Support Team"
+          },
+          "data": {}
+        }
+    Mid917:
+      value:
+       {
+          "status": {
+            "statusCode": "917",
+            "message": "No Services avaiable for Ref MID. Please contact Application Support Team"
+          },
+          "data": {}
+       }
+    Mid916:
+      value:
+       {
+          "status": {
+            "statusCode": "916",
+            "message": "All Adress Types are not available for Ref MID.Please contact Application Suport Team"
+          },
+          "data": {}
+        } 
+    Mid915:
+      value:
+       {
+          "status": {
+            "statusCode": "915",
+            "message": "Business Rule Exception"
+          },
+          "data": {}
+        } 
+    Mid913:
+      value:
+       {
+          "status": {
+            "statusCode": "913",
+            "message": "Please use member level Mid.Please contact Application Support Team"
+          },
+          "data": {}
+        }
+    Mid914:
+      value:
+       {
+          "status": {
+            "statusCode": "914",
+            "message": "Ref MID should be 8 digits"
+          },
+          "data": {}
+        }
+
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

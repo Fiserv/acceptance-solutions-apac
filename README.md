@@ -2,7 +2,6 @@
 
 This repo contains the content for tenants of Developer Studio.
 
-
 ## Directory structure
 
 - /docs : All markdown files are to be placed in this directory
@@ -12,7 +11,6 @@ This repo contains the content for tenants of Developer Studio.
 - /config/product_layout.yaml : Yaml spec for product layout page
 - /reference/api-[document.version].yaml : Tenant APIs in OpenAPI 3.0 Spec
 - .docignore : Companion file to the ded file.  Use this to hide markdown files from showing up in the doc explorer and from being indexed & searchable
-
 
 ## Setup a new tenant
 
