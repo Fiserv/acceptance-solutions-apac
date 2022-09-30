@@ -34,7 +34,7 @@ System Requirements to setup USB / Static Wi-fi
 
    For digital transactions, the supported functionalities are listed below.
 
-   <table border="2">
+   <table border="1">
   <tr>
     <th>Value Added Services</th>
     <th>India</th>
@@ -69,7 +69,7 @@ System Requirements to setup USB / Static Wi-fi
 
 For card transactions, the supported functionalities are listed below.
 
-<table border="2">
+<table border="1">
   <tr>
     <th>Transactions Supported</th>
     <th>India</th>
@@ -304,51 +304,52 @@ The table below identifies the required properties in the request message
 
 | Variable | Type | Length | Mandatory / Optional /Conditional (M / O / C) | Description / Values |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
-|`functionCode`|String|2|M|01 = Sale ( Sale, DCC ) |
-| | | | | 02 = Pre-Authorization |
-| | | | | 03 = Pre-Authorization Completion|
-| | | | | 04 = Refund |
-| | | | | 05 = Void |
-| | | | | 06 = TIP |
-| | | | | 07 = Cash @ POS |
-| | | | | 08 = Instalment/ EMI Sale |
-| | | | | 11 = Settlement Transaction |
-| | | | | 12 = Transaction status |
-| | | | | 13 = UPI QR  Generation |
-| | | | | 14 = UPI QR Last Transaction Status | 
-| | | | | 15 = Bharat QR  Generation |
-| | | | | 16 = Bharat  QR Last Transaction Status | 
-| | | | | 17 = Google Pay Wallet |
-| | | | | 18 = Tone Tag wallet |
+|`functionCode`|String|2|M|01 = Sale ( Sale, DCC ). |
+| | | | | 02 = Pre-Authorization. |
+| | | | | 03 = Pre-Authorization Completion.|
+| | | | | 04 = Refund. |
+| | | | | 05 = Void. |
+| | | | | 06 = TIP. |
+| | | | | 07 = Cash @ POS. |
+| | | | | 08 = Instalment/ EMI Sale. |
+| | | | | 11 = Settlement Transaction. |
+| | | | | 12 = Transaction status. |
+| | | | | 13 = UPI QR  Generation. |
+| | | | | 14 = UPI QR Last Transaction Status. | 
+| | | | | 15 = Bharat QR  Generation.|
+| | | | | 16 = Bharat  QR Last Transaction Status. | 
+| | | | | 17 = Google Pay Wallet. |
+| | | | | 18 = Tone Tag wallet. |
 | | | | | 19 = Non-Carded Transactions |
-|`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals-"100.00"|
-|`tipAmount`|String|10|O|Transaction which involves tip amount in decimals-"10.00"|
+|`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
+|`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals-"100.00".|
+|`tipAmount`|String|10|O|Transaction which involves tip amount in decimals-"10.00".|
 |`detail`|String|2|O|To define the response message in detail format. |
 | | | | |'Y' means detail message, 'N' means skip this format|
-|`ecrRef`|String|16|O|ECR reference number generated in transaction|
-|`merchantReferenceNumber`|String|20|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
-|`terminalInvoiceNumber`|String|20|O |Use the terminal Invoice No to indicate the invoice of terminal (Mandatory for void & PreAuth Completion transaction)|
-|`CGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount |
-|`IGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If IGST is included in the total amount |
-|`SGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If SGST is included in the total amount |
-|`customerNumber`|String|20|O|To identify this transaction is initiated by respective customer|
-|`userDefinedFields`|String|8|O|UDF fields|
-|`pwd `|String|20|O|Void password|
-|`rrn`|String|3|O|12 digits RRN|
+|`ecrRef`|String|16|O|ECR reference number generated in transaction.|
+|`merchantReferenceNumber`|String|20|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number.|
+|`terminalInvoiceNumber`|String|20|O |Use the terminal Invoice No to indicate the invoice of terminal (Mandatory for void & PreAuth Completion transaction).|
+|`CGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount .|
+|`IGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If IGST is included in the total amount. |
+|`SGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If SGST is included in the total amount. |
+|`customerNumber`|String|20|O|To identify this transaction is initiated by respective customer.|
+|`userDefinedFields`|String|8|O|UDF fields.|
+|`pwd `|String|20|O|Void password.|
+|`rrn`|String|3|O|12 digits RRN.|
 |`authCode`|String|8|O|Used for Pre-authorization completion & cancellation transaction.|
 |`dccFlag`|String|1|O|DCC Conversion flag - Yes or No. 
 Response contains converted amount, exchange rate and margin fee.|
-|`printChargeslip`|String|2|O|To enable charge slip printing - Y or N 
-( Default mode = Y )|
+|`printChargeslip`|String|2|O|To enable charge slip printing - Y or N ( Default mode = Y ).|
 |`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable.|
-|`transactionType`|String|10|O |Type of transaction|
+|`transactionType`|String|10|O |Type of transaction.|
 |`emi`|String|3|O | EMI details – emi flag is 1/0 
 | | | | | EMI reference number generated is 8 bytes |
 | | | |  |Tenure, discount amount, product amount, EMI per month (Mandatory for EMI transaction)|
-|`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC) transactions such as: - Installment / EMI Sale - Installment / EMI Void Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI) 1 = EMI (Installment / EMI|
-|`cardLastFourDigit`|String|4|O|Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction.||`consumerNumber`|String|20|M|Consumer number ( CRN )
+|`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC)<br> transactions such as:<br> - Installment / EMI Sale <br>- Installment / EMI Void <br>Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI)<br> 1 = EMI (Installment / EMI)|
+|`cardLastFourDigit`|String|4|O|Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction.|
+|`consumerNumber`|String|20|M|Consumer number ( CRN )
 The value that is populated in statement of the session ID.|
-|`checksum`|String|50|O|Checksum for "data" field.Use SHA256 method to calculate “data” field|
+|`checksum`|String|50|O|Checksum for "data" field.Use SHA256 method to calculate “data” field.|
 
 
 ### Response in Payload
@@ -668,70 +669,70 @@ The value that is populated in statement of the session ID.|
 ### Response
 The table below identifies the required properties in the response message
 
-| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
+| Variable | Type |  Length  | Mandatory / Optional / Conditional (M / O / C)  |  Description / Values  |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
-|`functionCode`|String|2|M|01 = Sale ( Sale, DCC )|
-| | | | | 02 = Pre-Authorization |
-| | | | | 03 = Pre-Authorization Completion |
-| | | | | 04 = Refund |
-| | | | | 05 = Void |
-| | | | | 06 = TIP |
-| | | | | 07 = Cash @ POS |
-| | | | | 08 = Instalment/ EMI Sale |
-| | | | | 11 = Settlement Transaction |
-| | | | | 12 = Transaction status |
-| | | | | 13 = UPI QR  Generation |
-| | | | | 14 =  UPI QR Last Transaction Status | 
-| | | | | 15 = Bharat QR  Generation  |
-| | | | | 16 =  Bharat  QR Last Transaction Status | 
-| | | | | 17 = Google  Wallet |
-| | | | | 18 = Tone Tag wallet |
+|`functionCode`|String|2|M|01 = Sale ( Sale, DCC ).|
+| | | | | 02 = Pre-Authorization. |
+| | | | | 03 = Pre-Authorization Completion. |
+| | | | | 04 = Refund .|
+| | | | | 05 = Void. |
+| | | | | 06 = TIP. |
+| | | | | 07 = Cash @ POS. |
+| | | | | 08 = Instalment/ EMI Sale. |
+| | | | | 11 = Settlement Transaction. |
+| | | | | 12 = Transaction status. |
+| | | | | 13 = UPI QR  Generation. |
+| | | | | 14 =  UPI QR Last Transaction Status. | 
+| | | | | 15 = Bharat QR  Generation.|
+| | | | | 16 =  Bharat  QR Last Transaction Status. | 
+| | | | | 17 = Google  Wallet. |
+| | | | | 18 = Tone Tag wallet. |
 | | | | | 19 = Non-carded Transaction |
-|`tipAmount`|String|10|M|Tip Amount entered during the transaction |
-|`totalTxnAmount`|String|10|O|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00"|
-|`convenienceFee `|String|10|O|Convenience  Fee including decimal|
+|`source`|String|10|O|APOS(Android Point of Sale), Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine).|
+|`tipAmount`|String|10|M|Tip Amount entered during the transaction. |
+|`totalTxnAmount`|String|10|O|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00".|
+|`convenienceFee `|String|10|O|Convenience  Fee including decimal.|
 |`cGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount.|
 |`sGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If SGST is included in the total amount.|
 |`iGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If IGST is included in the total amount.|
-|`billAmount`|String|10|O|Bill amount including decimal|
-|`merchantReferenceNumber`|String|20|M|Same as request|
-|`terminalInvoiceNumber`|String|8|M|Terminal Invoice Number|
-|`currencySelection`|String|3|O|Currency code / currency that had been selected|
-|`transactioID`|String|10|M|Same as request|
-|`customerName`|String|25|O|Customer name extracted from Card|
-|`userDefinedFields`|String|30|O|Same as request|
+|`billAmount`|String|10|O|Bill amount including decimal.|
+|`merchantReferenceNumber`|String|20|M|Same as request.|
+|`terminalInvoiceNumber`|String|8|M|Terminal Invoice Number.|
+|`currencySelection`|String|3|O|Currency code / currency that had been selected.|
+|`transactioID`|String|10|M|Same as request.|
+|`customerName`|String|25|O|Customer name extracted from Card.|
+|`userDefinedFields`|String|30|O|Same as request.|
 |`maskedCardNumber`|String|21|M|First 6 digits and last 4 digits.
-The numbers in between should be masked|
+The numbers in between should be masked.|
 |`applicationVersionNumber`|String|10|M|Version number of terminal application used.|
-|`date & Time`|Timestamp|20|M|Host Date & Time|
-|`aTID`|String|8|M|Acquirer TID|
-|`aMID`|String|15|M|Acquirer MID|
-|`acquirerName`|String|20|M|Acquirer Name|
-|`responseCode`|String|12|M|Host Response code, it has response message|
-|`batchNumber`|String|6|M|Terminal Batch Number|
-|`cardType`|String|10|M|Type of card|
-|`rrn`|String|12|M|RRN received from host|
-|`se`|String|10|O|Value would be populated incase of Amex txns|
+|`date & Time`|Timestamp|20|M|Host Date & Time.|
+|`aTID`|String|8|M|Acquirer TID.|
+|`aMID`|String|15|M|Acquirer MID.|
+|`acquirerName`|String|20|M|Acquirer Name.|
+|`responseCode`|String|12|M|Host Response code, it has response message.|
+|`batchNumber`|String|6|M|Terminal Batch Number.|
+|`cardType`|String|10|M|Type of card.|
+|`rrn`|String|12|M|RRN received from host.|
+|`se`|String|10|O|Value would be populated incase of Amex txns.|
 |`emv`|String|256|O|EMV data like TC , Application identifier, Application Name, TSI, etc.|
-|`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC) transactions such as: - Installment / EMI Sale - Installment / EMI Void Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI) 1 = EMI (Installment / EMI|
+|`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC) transactions such as: - Installment / EMI Sale - Installment / EMI Void Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI) 1 = EMI (Installment / EMI.|
 |`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
-|`pinVerified`|String|3|O|"Yes" when PIN was entered & "No" when pin was not prompt|
-|`authCode`|String|8|M|Authorization code received from Issuer / host.|
-|`billerID`|String|10|O|Same as request|
-|`specificIndicator `|String|3|O|To be used for BBPS |
-|`merchantUniqueNumber`|String|20|O|Same as request |
-|`suppressPrintChargeslip `|String|2|O|“Yes” or “No”  -To suppress chargeslip prints for financial transactions|
-|`emi`|String|20|O|EMI details – emi flag is 1/0  EMI reference number generated is 8 bytes Tenure, discount amount, product amount, EMI per month|
+|`pinVerified`|String|3|O|"Yes" when PIN was entered & "No" when pin was not prompt.|
+|`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
+|`billerID`|String|10|O|Same as request.|
+|`specificIndicator `|String|3|O|To be used for BBPS. |
+|`merchantUniqueNumber`|String|20|O|Same as request. |
+|`suppressPrintChargeslip `|String|2|O|“Yes” or “No”  -To suppress chargeslip prints for financial transactions.|
+|`emi`|String|20|O|EMI details – emi flag is 1/0  EMI reference number generated is 8 bytes Tenure, discount amount, product amount, EMI per month.|
 |`consumerNumber`|String|20|M|Consumer number ( CRN )
 The value that is populated in statement of the session ID.|
 |`cardLastFourDigit`|String|4|O|Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction.|
 |`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable.|
-|`cardTxnMode`|String|3|O|Transaction Mode|
-|`purchaseAmount `|String|10|O|Purchase amount |
-|`cashBackAmount`|String|10|O| Transaction cashback amount|
-|`nacStatus `|String|3|O|Identifies the network status |
-| | | | |True = private network|
-| | | | | False = public network|
+|`cardTxnMode`|String|3|O|Transaction Mode.|
+|`purchaseAmount `|String|10|O|Purchase amount .|
+|`cashBackAmount`|String|10|O| Transaction cashback amount.|
+|`nacStatus `|String|3|O|Identifies the network status <br>
+True = private network <br> False = public network.|
 |`cardExpDate`|String|4|O|Expiry date of the card used for transaction.|
 |`dccFlag`|String|1|O|DCC Conversion flag - Yes or No. 
 Response contains converted amount, exchange rate and margin fee.|
