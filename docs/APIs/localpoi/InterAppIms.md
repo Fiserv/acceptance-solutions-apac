@@ -1,19 +1,162 @@
 # Inter-Application Integration
 
-Inter Application Integration provides a seamless integration between the Fiserv payment application and the merchant application locally installed in android-based terminals.
+Inter-application Integration provides a seamless integration between the Fiserv payment application and the merchant application locally installed in android-based terminals.
 E.g. A biller can integrate with a payment application and complete the payment transaction.
 
-Financial payment transactions that are supported by inter application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion, Transaction Status Check, EMI Sale, Void, Settlement and Bharat QR code generation.
+Financial payment transactions that are supported by inter-application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion, Transaction Status Check,Installment/EMI Sale, Void, Settlement and Bharat QR code generation.
 
 
-## How it works
--	Digital transactions from the Fiserv's proprietary mCommerce application supported by the payment terminal includes :-
-    -	Amazon QR
-    -	Bharath QR
-    -	UPI QR
-    -	ICICI Fast Tag 
-    -	Card Transaction (navigating to direct card payment application)
-- For a normal Sale request, the supported functionalities are listed below.
+
+
+<table border="2">
+  <tr>
+    <th>Value Added Services</th>
+    <th>India</th>
+    <th>Australia</th>
+  </tr>
+  <tr>
+    <td>BBPS (Bharat Bill Pay)</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>UPI QR</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Bharat QR</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>FASTag</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+     <tr>
+    <td>MobiKwik</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+
+For card transactions, the supported functionalities are listed below.
+
+  <table border="2">
+  <tr>
+    <th>Transactions Supported</th>
+    <th>India</th>
+    <th>Australia</th>
+  </tr>
+  <tr>
+    <td>Pre-Authorization Sale</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+   <tr>
+    <td>Pre-Authorization Sale cancellation</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+   <tr>
+    <td>Pre-Authorization Sale completion</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+   <tr>
+    <td>Pre-Authorization Sale completion cancellation</td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Sale</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Void </td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Offline Sale</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Tip Adjustment</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Refund</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Pre-Authorization completion Offline</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Installment / EMI Sale</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Installment Sale Cancellation</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Void Refund</td>
+    <td></td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Cash Advance / Cash withdrawal</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Cash Only</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Purchase with Cashback</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>Settlement / Batch Upload</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  <tr>
+    <td>DCC
+(Dynamic Currency Conversion)
+</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Pre-Authorization Top-Up (Incremental Auth)</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+   <tr>
+    <td>Balance Inquiry</td>
+    <td align="center">.</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Settlement report / Detail report</td>
+    <td align="center">.</td>
+    <td align="center">.</td>
+  </tr>
+  
+- Primary supported functionalities include:-
 
 ### Payload Examples - Request
 
@@ -34,7 +177,7 @@ MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ``` 
 
-### PreAuth Sale Request
+### Pre-Authorisation Sale Request
 ```
 Base24Request request = new Base24Request();
 request.setFunctionCode(Base24Constant.TYPE_PREAUTH_SALE);
@@ -45,7 +188,7 @@ MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ```
 
-### PreAuth Completion Request
+### Pre-Authorisation Completion Request
 ```
 Base24Request request = new Base24Request();
 request.setFunctionCode(Base24Constant.TYPE_PREAUTH_COMPLETIN);
@@ -90,7 +233,7 @@ requestParams.put("base24Request", request.toString());
 MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ```
-### Cash & POS Request
+### Cash & Point of Sale Request
 ```
 Base24Request request = new Base24Request();
 request.setFunctionCode(Base24Constant.TYPE_CASH); 
@@ -99,7 +242,7 @@ requestParams.put("base24Request", request.toString());
 MSApi.getInstance().doPayment(context, 123, requestParams);
 
 ```
-### EMI Sale Request
+### Installment/ EMI Sale Request
 ```
 Base24Request request = new Base24Request(); 
 request.setFunctionCode(Base24Constant.TYPE_EMI_SALE);
@@ -158,14 +301,14 @@ requestParams.put("transaction_type",“vpa”);
 MSApi.getInstance().doUpiTransaction(context,123, requestParams);
 
 ```
-### BBPS Sale Request
+### Bharat Bill Pay (BBPS) Sale Request
 ```
 JSONObject requestParams = new JSONObject();
 requestParams.put("transaction_type","BBPS"); 
 MSApi.getInstance().doBBPSTransaction(context, 123, requestParams);
 
 ```
-### ICICI Fast Tag Sale Request
+### ICICI FASTag Sale Request
 ```
 JSONObject requestParams = new JSONObject();
 requestParams.put("transaction_amount", “100”);
@@ -181,41 +324,42 @@ The table below identifies the required properties in the request message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | ----- | ------------------------------------------------------| ------------------------- |
-|`functionCode`|String|2| M|01 - Sale ( Sale, DCC ) |
-| | | | | 02 - Preauth Sale |
-| | | | | 03 - Preauth Completion |
-| | | | | 04 - Refund |
-| | | | | 05 - Void |
-| | | | | 06 - TIP | 
-| | | | | 07 - Cash @ POS |
-| | | | | 08 - EMI Sale |
-| | | | | 11- Settlement Transaction |
-| | | | | 12- Transaction status |
-| | | | | 13 - UPI QR  Generation | 
-| | | | | 14- UPI QR Last Transaction Status |
-| | | | | 15 - Bharat QR  Generation |
-| | | | | 16-  Bharat  QR Last Transaction Status |
-| | | | | 17- Wallet Google Pay |
-| | | | | 18- Tone Tag wallet |
-| | | | | 19- Noncarded |
-|`source`|String|10|O|APOS, Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine)|
+|`functionCode`|String|2| M|01 = Sale ( Sale, DCC ) |
+| | | | | 02 = Pre-Authorization |
+| | | | | 03 = Pre-Authorization Completion |
+| | | | | 04 = Refund |
+| | | | | 05 = Void |
+| | | | | 06 = TIP | 
+| | | | | 07 = Cash @ POS |
+| | | | | 08 = Instalment/EMI Sale |
+| | | | | 11 = Settlement Transaction |
+| | | | | 12 = Transaction status |
+| | | | | 13 = UPI QR  Generation | 
+| | | | | 14 = UPI QR Last Transaction Status |
+| | | | | 15 = Bharat QR  Generation |
+| | | | | 16 = Bharat  QR Last Transaction Status |
+| | | | | 17 = Google Pay Wallet |
+| | | | | 18 = Tone Tag Wallet |
+| | | | | 19 = Non-carded Transactions |
+|`source`|String|10|O|APOS (Android Point of Sale), Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine)|
 |`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00"|
 |`convenienceFee `|String|10|O|Convenience  Fee including decimal|
-|`cGST`|String|10|O|GST Including decimal ( GST )|
-|`sGST`|String|10|O|GST Including decimal ( GST )|
+|`CGST`|String|10|O| Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST included in the total amount.|
+|`IGST`|String|10|O| Central GST Including decimal (E.g. 10.00 for $10 IGST). If IGST included in the total amount.|
+|`SGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 SGST). If SGST included in the total amount
 |`billAmount`|String|10|O |Bill  amount  including decimal  (Mandatory for QR generation / Wallet Transactions)|
 |`merchantReferenceNumber`|String|14|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
 |`emiReferenceNumber`|String|8|O |EMI reference number generated on mobile (Mandatory for EMI Transaction)|
 |`consumerNumber`|String|20|O|Consumer number ( CRN ) - Value to be populated in statement in session id|
-|`currencySelection`|String|3|O|Currency|
-|`userDefinedFields`|String|30|O|CRN + UDF - Value to be populated in statement in session id|
-|`terminalInvoiceNumber`|String|8|O |Used for Preauth completion & cancellation transaction (Mandatory for Void transaction)|
-|`cardLastFourDigit`|String|4|O|Used for Preauth completion & cancellation transaction|
-|`authCode`|String|8|O|Used for Preauth completion & cancellation transaction|
+|`currencySelection`|String|3|O|Currency code / currency that had been selected|
+|`userDefinedFields`|String|30|O|CRN + UDF - Value to be populated in statement in session ID|
+|`terminalInvoiceNumber`|String|8|O |Used for Pre-authorization completion & cancellation transaction (Mandatory field for Void transaction)|
+|`cardLastFourDigit`|String|4|O|Used for Pre-authorization completion & cancellation transaction.|
+|`authCode`|String|8|O|Used for Pre-authorization completion & cancellation transaction.|
 |`emailID`|String|50|O|Email ID on which email needs to be received|
 |`billerID`|String|10|O|Biller ID received |
-|`dCCFlag `|String|1|O|DCC Conversion flag  Yes or No  |
-|`printChargeslip`|String|1|O|Y or N ( Default - Y ) |
+|`dCCFlag `|String|1|O|DCC Conversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee. |
+|`printChargeslip`|String|1|O| To enable charge slip printing - Y or N ( Default mode = Y )|
 
 
 ### Response in Payload
@@ -239,24 +383,24 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 The table below identifies the required properties in the response message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
-| -------- | ------- | ------- | -------------------------------------------------------| ------------------------- |
-|`functionCode`|String|2|M|01 - Sale ( Sale, DCC )|
-| | | | | 02 - Preauth Sale |
-| | | | | 03 - Preauth Completion |
-| | | | | 04 - Refund |
-| | | | | 05 - Void |
-| | | | | 06 - TIP | 
-| | | | | 07 - Cash @ POS |
-| | | | | 08 - EMI Sale |
-| | | | | 11- Settlement Transaction |
-| | | | | 12- Transaction status |
-| | | | | 13 - UPI QR  Generation |
-| | | | | 14-  UPI QR Last Transaction Status |
-| | | | | 15 - Bharat QR  Generation |
-| | | | | 16-  Bharat  QR Last Transaction Status 
-| | | | | 17- Wallet Google Pay |
-| | | | | 18- Tone Tag wallet |
-| | | | | 19- Noncarded |
+| -------- | ------- | ------- | -------------------------------------------------------| ------------------------- 
+|`functionCode`|String|2| M|01 = Sale ( Sale, DCC ) |
+| | | | | 02 = Pre-Authorization |
+| | | | | 03 = Pre-Authorization Completion |
+| | | | | 04 = Refund |
+| | | | | 05 = Void |
+| | | | | 06 = TIP | 
+| | | | | 07 = Cash @ POS |
+| | | | | 08 = Instalment/EMI Sale |
+| | | | | 11 = Settlement Transaction |
+| | | | | 12 = Transaction status |
+| | | | | 13 = UPI QR  Generation | 
+| | | | | 14 = UPI QR Last Transaction Status |
+| | | | | 15 = Bharat QR  Generation |
+| | | | | 16 = Bharat  QR Last Transaction Status|
+| | | | | 17 = Google Pay Wallet |
+| | | | | 18 = Tone Tag Wallet |
+| | | | | 19 = Non-carded Transactions |
 |`source`|String|10|O|APOS, Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine)|
 |`tipAmount`|String|10|O|Tip Amount entered during the transaction|
 |`totalTxnAmount `|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals|
@@ -266,46 +410,46 @@ The table below identifies the required properties in the response message
 |`sGST`|String|10|O|GST Including decimal ( GST )|
 |`billAmount`|String|10|O|Bill  amount  including decimal|
 |`merchantReferenceNumber`|String|20|M|Same as request|
-|`terminalInvoiceNumber`|String|8|M|Terminal Invoice Number|
+|`terminalInvoiceNumber`|String|8|M|Used for Pre-authorization completion & cancellation transaction (Mandatory field for Void transaction)|
 |`currencySelection`|String|3|O|Currency code/currency which been selected|
 |`transactioID`|String|10|M|Same as request|
 |`customerName`|String|25|O|Customer name extracted from Card|
 |`userDefinedFields`|String|30|O|Same as request|
-|`maskedCardNumber`|String|21|M|First Six digit & last four digit. In between number should be masked|
-|`applicationVersionNumber`|String|10|M|This is terminal application version number|
+|`maskedCardNumber`|String|21|M|First Six digit and last four digit. The numbers in between should be masked|
+|`applicationVersionNumber`|String|10|M|Version number of terminal application used.|
 |`date & Time`|Timestamp|20|M|Host Date & Time|
-|`aTID`|String|8|M|Acquirer TID|
-|`aMID`|String|15|M|Acquirer MID|
+|`aTID`|String|8|M|Acquirer TID (Terminal ID)|
+|`aMID`|String|15|M|Acquirer MID (Merchant ID)|
 |`acquirerName`|String|20|M|Acquirer Name|
 |`responseCode`|String|12|M|Host Response code, it has response message|
 |`batchNumber`|String|6|M|Terminal Batch Number|
 |`cardType`|String|10|M|Type of card|
 |`rrn`|String|12|M|RRN received from host|
-|`se`|String|10|O|Value would be populated incase of Amex txns|
+|`se`|String|10|O|Value would be populated incase of Amex transactions|
 |`emv`|String|256|O|EMV data like TC , Application identifier, Application Name, TSI, etc.|
-|`emiFlag`|String|1|O|EMI  flag  yes or no,  YES :1 , NO : 0 To be sent in OTC .EMI Sale, EMI Void|
+|`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC) transactions such as: - Installment / EMI Sale - Installment / EMI Void Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI) 1 = EMI (Installment / EMI)|
 |`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
-|`pinVerified`|String|3|O|"Yes" when PIN was entered & "No" when pin was not prompt|
+|`pinVerified`|String|3|O|Yes= when PIN was entered No = when pin was not prompted|
 |`authCode`|String|8|M|Received from Issuer/host|
 |`billerID`|String|10|O|Same as request|
-|`SspecificIndicator `|String|3|O|To be used for BBPS |
+|`SspecificIndicator `|String|3|O|To be used for BBPS (Bharat Bill Payment System)|
 |`merchantUniqueNumber`|String|20|O|Same as request |
-|`suppressPrintChargeslip `|String|2|O|“Yes” or “No”  -To suppress chargeslip prints for financial transactions|
-|`emi`|String|20|O|EMI details – emi flag is 1/0  .EMI reference number generated is 8 bytes.Tenure, discount amount, product amount, EMI per month|
-|`consumerNumber`|String|20|M|Consumer number ( CRN ) - Value to be populated in statement in session id|
-|`cardLastFourDigit`|String|4|O|Used for pre-auth completion & cancellation transaction|
-|`emailID`|String|50|O|Email ID on which Email needs to be received 50 bytes optional|
-|`cardTxnMode`|String|3|O|Txn Mode|
+|`suppressPrintChargeslip `|String|2|O|To suppress charge slip printing for financial transactions, to be set as “Yes” or “No”.|
+|`emi`|String|20|O|Installment / EMI details - Installment / EMI flag is 1/0 . - Installment / EMI reference number generated is 8 bytes. - Tenure, discount amount, product amount, Installment / EMI amount per month.|
+|`consumerNumber`|String|20|M|Consumer number ( CRN ) The value that is populated in statement of the session ID.|
+|`cardLastFourDigit`|String|4|O|Last 4 digits of Card Number. Used for Pre-Authorization completion and cancellation.|
+|`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable. |
+|`cardTxnMode`|String|3|O|Transaction Mode|
 |`purchaseAmount `|String|10|O|Purchase amount |
 |`cashBackAmount`|String|10|O| Transaction cash back amount|
-|`nacStatus `|String|3|O|Identify the network status .True-> private network .False -> public network|
+|`nacStatus `|String|3|O|Identifies the network status True = private network False = public network|
 |`cardExpDate`|String|4|O|Transaction card expire date|
-|`dccFlag`|String|1|O|DCC Conversion flag  Yes or No. Response is converted amount, exchange rate and margin fee|
+|`dccFlag`|String|1|O|DCC Conversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee.|
 
 
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values | Comments |
+| Error Code |  Description / Values | Comments |
 | --------  | ------------------ | ----------- |
 |`00`|Approved Balances|Merchant should go ahead with reciept generation|
 |`01`|Place Call|Contact Customer Support / Business Manager|
@@ -323,4 +467,4 @@ The table below provides the list of application's error code and its descriptio
 |`54`|Expired Card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
 |`55`|Incorrect Pin|Issuer Decline. Merchant should advise cardholder to key correct pin for transaction|
 |`58`|Transaction not allowed|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`91`|Auth Timed out|Contact Customer Support / Business Manager|
+|`91`|Authorization Attempt Timed out|Contact Customer Support / Business Manager|

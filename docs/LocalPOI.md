@@ -11,9 +11,9 @@ Hospitality industry, F&B industry, self-service kiosks retailers who wish to in
 Fiserv Local integration API caters to merchants who decided to have your payment systems connected via LAN or direct cable connections.
 
 
-## Certified Fiserv Terminals for Local Based Integration
+## Certified Point of Sale Fiserv Terminals 
 
-Terminal models certified with Fiserv for Local Based Integration :
+List of certified terminals for Fiserv Local Based Integration :
    -  India : Inter-Application Integration - PAX A920 / A910,   Verifone X990
    -  India : USB / Static Wi-fi - PAX A920 / A910
    -  Australia & Rest of APAC : Inter-Application Integration - PAX A920 

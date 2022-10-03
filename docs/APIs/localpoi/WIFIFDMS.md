@@ -33,6 +33,160 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 -	Connect the desired cable (USB) to PC
 - Trigger transactions from PC application to check the line status
 
+For digital transactions, the supported functionalities are listed below.
+<table border="2">
+  <tr>
+    <th> Value Added Services</th>
+    <th width=100> Rest of APAC (SG, HK, MY) </th>
+     </tr>
+    <tr>
+    <td>WeChat</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Alipay</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>FPS</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>GrabPay</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>CUP QR (UnionPay QR)</td>
+    <td align="center">.</td>
+    </tr>
+    </table>
+
+  For a normal Sale request, the supported functionalities are listed below.
+    
+    
+ <table border="2">
+    <tr>
+    <th>Transactions Supported</th>
+    <th> Rest of APAC
+        (SG, HK, MY)  </th>
+     </tr>
+    <tr>
+    <td>Pre-Authorization Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Pre-Authorization Sale cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Pre-Authorization Sale completion</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Pre-Authorization Sale completion cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Void</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Offline Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Tip Adjustment</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Refund</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Pre-Authorization  completion offline</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Installment / EMI Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>Installment Sale Cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>MOTO Pre-Authorization</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>MOTO Pre-Authorization Cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>
+    <td>MOTO Pre-Authorization completion</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>MOTO PreAuthorization Completion Cancellation</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>MOTO Sale</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>MOTO Sale Cancellation </td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>MOTO Refund</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Void Refund</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Cash Advance / Cash withdrawal</td>
+    <td></td>
+    </tr>
+    <tr>   
+    <td>Cash Only</td>
+    <td></td>
+    </tr>
+    <tr>   
+    <td>Purchase with Cashback</td>
+    <td></td>
+    </tr>
+    <tr>   
+    <td>Settlement / Batch Upload</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>DCC</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Pre-Authorization Top-Up (Incremental Auth)</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Balance Inquiry</td>
+    <td align="center">.</td>
+    </tr>
+    <tr>   
+    <td>Settlement report / Detail report</td>
+    <td align="center">.</td>
+    </tr>
+    </tr>
+    </table>
+   
+
+
 |  Param1    | Descriptions |  Comment |
 | ---------- | ---------------------------------- | ------------------ |
 | `dataType` | Indicate the request data type.| active | 
