@@ -11,10 +11,10 @@ For a normal Sale request, the supported functionalities are listed below.
 
 For digital transactions, the supported functionalities are listed below.
 
-<table border="2">
+<table width="120%" border="1">
   <tr>
     <th>Value Added Services</th>
-    <th width="100"> Rest of APAC (SG, HK, MY) </th>
+    <th> Rest of APAC <br>(SG, HK, MY) </th>
      </tr>
     <tr>
     <td>WeChat</td>
@@ -41,7 +41,7 @@ For digital transactions, the supported functionalities are listed below.
   For a normal Sale request, the supported functionalities are listed below.
     
     
- <table border="2">
+ <table border="1">
     <tr>
     <th>Transactions Supported</th>
     <th> Rest of APAC (SG, HK, MY)  </th>
