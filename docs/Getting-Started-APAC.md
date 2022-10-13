@@ -4,13 +4,13 @@ tags: [APAC, Enterprise, Online, Integration, Getting-started, SMB, Card-present
 
 # Getting Started with APAC Acceptance Solutions 
 
-APAC Acceptance Solutions a one-stop-solution for SMB and enterprise clients, as well as ISO’s to get easy and instant access to API’s required to integrate with our terminal and eCommerce solutions.
+APAC Acceptance Solutions a one-stop-solution for SMB and enterprise clients, as well as ISO’s to get easy and instant access to API’s required to integrate with our terminal and eCommerce solutions.D Secus sample code sharing, quick access sandbox environment, test credential management. 
 
-From payments to onboarding, eCommerce or Point-of-Sale integrations, enjoy the benefits of hassle free integration through seamless sample code sharing, quick access sandbox environment, test credential management. 
+APAC Acceptance Solution extends a multitude of payment options to support your payment needs, including debit cards, credit cards and dire, creating and managing recurring payments, instalments, setting up standing instr
 
-APAC Acceptance Solution extends a multitude of payment options to support your payment needs, including debit cards, credit cards and digital payments like Apple Pay, and Google Pay, as well as local payment methods.
+From payments to onboarding, eCommerce or Point-of-Sale integrations, enjoy the benefits of hassle free integration through seamlesgital payments like Apple Pay, and Google Pay, as well as local payment methods.
 
-Our services include; tokenization, 3-D Secure, creating and managing recurring payments, instalments, setting up standing instructions, EMV and contactless payments, secure hosted Payment Pages, Payment URLs, and more.
+Our services include; tokenization, 3-uctions, EMV and contactless payments, secure hosted Payment Pages, Payment URLs, and more.
 
 Browse our catalogue and integrate with our APIs to enrich your clients' digital experiences.
 
@@ -28,7 +28,7 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Void](./?path=docs/APIs/PaymentAPI/Void.md)
 
-- [Instalment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
+- [Installment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
 
 - [Transaction Inquiry](./?path=docs/APIs/PaymentAPI/TransactionStatusCheck.md)
 
