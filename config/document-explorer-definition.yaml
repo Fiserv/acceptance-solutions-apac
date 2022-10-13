@@ -30,12 +30,11 @@
 
 - sections:
     - title: Introduction
-      link: https://dev-developerstudio.fiserv.com/product/AcceptanceSolutionsAPAC
+      link: docs/product-layout.yaml
       open: true
       sections:
         - title: Contact Us
-          link: docs/introduction/contact-us.md
-
+          link: docs/introduction/contact-us
 - sections:
     - title: Getting Started
       link: docs/Getting-Started-APAC.md
