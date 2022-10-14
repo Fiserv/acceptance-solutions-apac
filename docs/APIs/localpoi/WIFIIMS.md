@@ -34,7 +34,7 @@ System Requirements to setup USB / Static Wi-fi
 
    For digital transactions, the supported functionalities are listed below.
 
-   <table border="1">
+   <table border="0">
   <tr>
     <th>Value Added Services</th>
     <th>India</th>
@@ -69,7 +69,7 @@ System Requirements to setup USB / Static Wi-fi
 
 For card transactions, the supported functionalities are listed below.
 
-<table border="1">
+<table border="0">
   <tr>
     <th>Transactions Supported</th>
     <th>India</th>

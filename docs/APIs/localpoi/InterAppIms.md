@@ -8,7 +8,7 @@ Financial payment transactions that are supported by inter-application to biller
 
 
 
-<table width="130%"border="1">
+<table width="130%"border="0">
   <tr>
     <th>Value Added Services</th>
     <th>India</th>
@@ -43,7 +43,7 @@ Financial payment transactions that are supported by inter-application to biller
 
 For card transactions, the supported functionalities are listed below.
 
-  <table width="120%" border="1">
+  <table width="120%" border="0">
   <tr>
     <th>Transactions Supported</th>
     <th>India</th>

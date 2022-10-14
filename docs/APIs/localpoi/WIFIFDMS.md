@@ -34,7 +34,7 @@ Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, 
 - Trigger transactions from PC application to check the line status
 
 For digital transactions, the supported functionalities are listed below.
-<table width="120%" border="1">
+<table width="120%" border="0">
   <tr>
     <th> Value Added Services </th>
     <th> Rest of APAC <br>(SG, HK, MY) </th>
@@ -64,7 +64,7 @@ For digital transactions, the supported functionalities are listed below.
   For a normal Sale request, the supported functionalities are listed below.
     
     
- <table width="130%" border="1">
+ <table width="130%" border="0">
     <tr>
     <th>Transactions Supported</th>
     <th> Rest of APAC <br>(SG, HK, MY) </th>
