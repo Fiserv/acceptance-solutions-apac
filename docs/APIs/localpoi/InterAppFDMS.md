@@ -11,30 +11,30 @@ For a normal Sale request, the supported functionalities are listed below.
 
 For digital transactions, the supported functionalities are listed below.
 
-<table width="120%" border="0">
+<table border="0">
   <tr>
     <th>Value Added Services</th>
     <th> Rest of APAC <br>(SG, HK, MY) </th>
      </tr>
     <tr>
     <td>WeChat</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Alipay</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>FPS</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>GrabPay</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>CUP QR (UnionPay QR)</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     </table>
 
@@ -48,131 +48,131 @@ For digital transactions, the supported functionalities are listed below.
      </tr>
     <tr>
     <td>Pre-Authorization Sale</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Pre-Authorization Sale cancellation</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Pre-Authorization Sale completion</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Pre-Authorization Sale completion / cancellation</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Sale</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Void</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Offline Sale</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Tip Adjustment</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Refund</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Pre-Authorization Sale completion offline</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Installment / EMI</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Installment Sale Cancellation</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>MOTO Pre-Authorization</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>MOTO Pre-Authorization Cancellation</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>MOTO Pre-Authorization completion</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>MOTO Pre-Authorization Completion / Cancellation</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>MOTO Sale</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>MOTO Sale Cancellation </td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>MOTO Refund</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Void Refund</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Cash Advance / Cash withdrawal</td>
-    <td></td>
+    <td align="center"></td>
     </tr>
     <tr>   
-    <td>Cash Only</td>
-    <td></td>
+    <td > Cash Only</td>
+    <td align="center"></td>
     </tr>
     <tr>   
     <td>Purchase with Cashback</td>
-    <td></td>
+    <td  align="center"></td>
     </tr>
     <tr>   
     <td>Settlement / Batch Upload</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>DCC (Dynamic Currency Conversion)</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Pre-Authorization Top-Up (Incremental Auth)</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Balance Inquiry</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Settlement report / Detail report</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Reprint</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Reprint Total</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>View History</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Get Transaction Record</td>
-    <td align="center">.</td>
+    <td align="center">&#10004;</td>
     </tr>
     </tr>
     </table>
@@ -426,7 +426,7 @@ boolean ret = transAPI.doTrans(request);
 ```
 ### Installment Request
 ```
-InstalmentMsg.Request request = new InstalmentMsg.Request(); 
+InstallmentMsg.Request request = new InstallmentMsg.Request(); 
 request.setAppId("com.pax.fdms.base24"); 
 request.setPackageName("com.pax.fdms.base24"); 
 request.setTotalTxnAmount(10000); 
@@ -440,31 +440,31 @@ The table below identifies the required properties in the request message
 
 | Variable |  Type | Length | Mandatory / Optional / Conditional <br> (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------------------ | ------------------ |
-|` appId`|String|20|M|FAMS_BASE24 App ID|
-|`packageName`|String|20|M|FAMS_BASE24 App Package Name|
-|`tipAmount`|String|10|O|Transaction Tip Amount for sale|
-|`InvoiceNo`|String|6|M|6 digits invoicenumber for voiding a transaction|
+|` appId`|String|20|M|FAMS_BASE24 App ID.|
+|`packageName`|String|20|M|FAMS_BASE24 App Package Name.|
+|`tipAmount`|String|10|O|Transaction Tip Amount for sale.|
+|`InvoiceNo`|String|6|M|6 digits invoicenumber for voiding a transaction.|
 |`type`|String|2|M|Use type to indicate the print details
-| | | | | 1- Current summary batch |
-| | | | |2- Current detail |
-| | | | | 3- Last settlement |
-|`totalTxnAmount`|String|10|M|Total Amount in decimals - "100.00"|
-|`acquirerName`|String|20|M|Acquirer Name for settlement or print|
-|`staffId`|String|20|O|Optional field in an offline transaction|
-|`rText`|String|20|O|Optional field in an offline transaction|
-|`showDetail`|Boolean|5|O|Optional field for Void transaction and settlement|
+| | | | | 1- Current summary batch. |
+| | | | |2- Current detail. |
+| | | | | 3- Last settlement. |
+|`totalTxnAmount`|String|10|M|Total Amount in decimals - "100.00".|
+|`acquirerName`|String|20|M|Acquirer Name for settlement or print.|
+|`staffId`|String|20|O|Optional field in an offline transaction.|
+|`rText`|String|20|O|Optional field in an offline transaction.|
+|`showDetail`|Boolean|5|O|Optional field for Void transaction and settlement.|
 |`authCode`|String|8|M| Mandatory field for 
 | | | | | . Pre-Authorization Cancellation, or |
 | | | | | . Top-up transaction, or | 
-| | | | | . Pre-Authorization Completion transaction| 
-|`uid`|String|8|O|Unique ID or each transaction|
-|`isPrint`|Boolean|2|O|To enable charge slip printing - Y or N|
+| | | | | . Pre-Authorization Completion transaction.| 
+|`uid`|String|8|O|Unique ID or each transaction.|
+|`isPrint`|Boolean|2|O|To enable charge slip printing - Y or N.|
 |`isQfpay`|Boolean|4|O|For sale transaction for transactions through Qfpay supported applications.|
-|`newTotal`|Long|10|M|Updated total for the Adjustment Amount|
-|`isMicors`|Boolean|10|O|Micros enabled – an optional field for Oracle Payment Interface (OPI) applicable transactions|
-|`DeviceId`|String|10|O|Device ID – an optional field for Oracle Payment Interface (OPI) applicable transactions |
-|`requestId`|String|10|O|Request ID – an optional field for Oracle Payment Interface (OPI) applicable transactions |
-|`sequenceNum`|String|20|O|Sequence Number – an optional field for Oracle Payment Interface (OPI) applicable transactions|
+|`newTotal`|Long|10|M|Updated total for the Adjustment Amount.|
+|`isMicors`|Boolean|10|O|Micros enabled – an optional field for Oracle Payment Interface (OPI) applicable transactions.|
+|`DeviceId`|String|10|O|Device ID – an optional field for Oracle Payment Interface (OPI) applicable transactions. |
+|`requestId`|String|10|O|Request ID – an optional field for Oracle Payment Interface (OPI) applicable transactions. |
+|`sequenceNum`|String|20|O|Sequence Number – an optional field for Oracle Payment Interface (OPI) applicable transactions.|
 
 
 
@@ -559,9 +559,9 @@ Log.d("response", "transaction failed");
 
 ```
 
-### Instalment Response
+### Installment Response
 ```
-InstalmentMsg.Response response = (InstalmentMsg.Response)
+InstallmentMsg.Response response = (InstallmentMsg.Response)
 transAPI.onResult(requestCode, resultCode, data);
 if (resultCode == RESULT_OK && response != null) {
 if (response.getRspCode() == 0) {
@@ -619,7 +619,7 @@ The below table identifies the required properties in the response message
 |`saleTotal Amt`|String|10|O|Total sale amount.|
 |`saleTotalNum`|String|10|O|Total sale number.|
 |`saleVoidTotalAmt`|String|10|O|Total void sale amount.|
-|`saleVoidTotalNum`|String|10|O|Total void  sale number|
+|`saleVoidTotalNum`|String|10|O|Total void  sale number.|
 |`refundTotal Amt`|String|10|O|Total refund amount.|
 |`refundTotalNum`|String|10|O|Total refund number.|
 |`refundVoidTotalAmt`|String|10|O|Total void refund amount.|
@@ -653,8 +653,7 @@ The below table identifies the required properties in the response message
 |`isMicros`|Boolean|2|O|Micros enabled – an optional field for Oracle Payment Interface (OPI) applicable transactions. |
 |`token`|String|10|O|Micros Token value – an optional field for Oracle Payment Interface (OPI) applicable transactions.|
 |`sequenceNum`|String|10|O|Sequence Number – an optional field for Oracle Payment Interface (OPI) applicable transactions.|
-|`dccFlag`|Boolean|2|O|DCC Conversion flag - Yes or No. 
-Response contains converted amount, exchange rate and margin fee.|
+|`dccFlag`|Boolean|2|O|DCC Conversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee.|
 |`pinVerify`|Boolean|2|O|PIN will be validated when value is set = ‘True’.|
 |`expDate`|String|4|O|Expiry Date.|
 |`currency`|String|3|O|Currency code / currency that had been selected.|
@@ -670,7 +669,7 @@ The table below provides the list of application's error code and its descriptio
 |`01`|Cardholder to contact Issuing Bank|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`02`|Special condition, cardholder to contact Issuing Bank|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`03`| Invalid merchant|Contact Customer Support / Business Manager.|
-|`04`|Pick-up card|Issuer Declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction|
+|`04`|Pick-up card|Issuer Declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`05`|Do not honour, cardholder to contact Issuing bank|Issuer declined the transaction.Merchant should advise cardholder to use a different valid card for the transaction.|
 |`06`|Error|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`07`|Pick-up card, special condition|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
@@ -683,41 +682,41 @@ The table below provides the list of application's error code and its descriptio
 |`14`|Invalid account|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`15`|No such issuer|Cannot verify PIN; for example, no PVV Contact Customer Support / Business Manager.|
 |`19`|Re-enter transaction|Contact Customer Support / Business Manager.|
-|`20`|Invalid response|Contact Customer Support / Business Manager|
-|`21`|Card not Initialized|Issuer declined the transaction.For CUP transaction – this means the card had not been activated.Merchant should advise cardholder to use a different card for the transaction.|
+|`20`|Invalid response|Contact Customer Support / Business Manager.|
+|`21`|Card not Initialized|Issuer declined the transaction.For CUP transaction – this means the card had not been activated. Merchant should advise cardholder to use a different card for the transaction.|
 |`22`|Suspected malfunction|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
 |`25`| Unable to locate the original transaction|Contact Customer Support / Business Manager.|
 |`30`|Invalid message format|Invalid message format received. Contact Customer Support / Business Manager.|
 |`31`|Bank not supported|Merchant should advisent should advise cardholder to use a different card for the transaction.|
 |`32`|Expired card, pick-up|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
-|`33`|Suspected fraud, pick-up|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
-|`34`|Fraud|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
+|`33`|Suspected fraud, pick-up|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
+|`34`|Fraud|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`36`|Restricted card, pick-up|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
-|`38`|PIN tries exceeded|Issuer Decline. Merchants cardholder to use a different card for the transaction.Contact Customer Support
+|`38`|PIN tries exceeded|Issuer Decline. Merchants cardholder to use a different card for the transaction. Contact Customer Support|
 |`39`|No credit account|Issuer Decline. Merchant should advise cardholder to use a different card for the transaction. |
 |`40`|Function not supported|Requested function is not supported. Contact Customer Support / Business Manager.|
 |`41`|Lost card,pick up|Lost card, contact Customer Support / Business Manager.|
 |`42`|No universal account|Credit account does not exist at the issuing bank. Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
-|`43`|Stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`43`|Stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`45`|Fallback not allowed|Contact Customer Support / Business Manager|
-|`51`|Insufficient funds|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
-|`52`|No checking account|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
-|`53`|No savings account|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`54`|Expired card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`55`|Incorrect PIN|Issuer declined the transaction.Merchant should advise cardholder to retry with the correct PIN.|
+|`51`|Insufficient funds|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
+|`52`|No checking account|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
+|`53`|No savings account|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`54`|Expired card|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`55`|Incorrect PIN|Issuer declined the transaction. Merchant should advise cardholder to retry with the correct PIN.|
 |`56`|No card record|(Applicable for JCB transactions only) Bank offline please retry later or use another card.|
-|`57`|Transaction not permitted to cardholder|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
-|`58`|Transaction not permitted to terminal|Contact Customer Support / Business Manager|
-|`59`|Suspected Fraud|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
+|`57`|Transaction not permitted to cardholder|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
+|`58`|Transaction not permitted to terminal|Contact Customer Support / Business Manager.|
+|`59`|Suspected Fraud|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`61`|Exceed withdrawal account limit|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
-|`62`|Restricted card|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
-|`63`|Security violation|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
+|`62`|Restricted card|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
+|`63`|Security violation|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`64`|Original amount incorrect|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`65`|Exceeds withdrawal frequency limit|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`68`|Response received too late, reversal (unsupported)|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`75`|Allowable number of PIN tries exceeded|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
-|`77`|Bank approval required|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.(Decline reasons may vary for different schemes)|
-|`78`|Bank approval required|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.(Decline reasons may vary for different schemes)|
+|`77`|Bank approval required|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction. (Decline reasons may vary for different schemes)|
+|`78`|Bank approval required|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction. (Decline reasons may vary for different schemes)|
 |`85`|Transaction not declined|Issuer has no reason to decline the transaction (Account Verification).|
 |`90`|Cut-off in progress|Contact Customer Support / Business Manager.|
 |`91`|Issuer or switch inoperative|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
@@ -725,4 +724,4 @@ The table below provides the list of application's error code and its descriptio
 |`94`|Duplicate Transaction|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`95`|Reconcile error|Contact Customer Support / Business Manager.|
 |`96`|System Error|Contact Customer Support / Business Manager.|
-|`99`|PIN Block error|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`99`|PIN Block error|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
