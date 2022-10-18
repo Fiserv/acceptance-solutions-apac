@@ -1,153 +1,165 @@
 # USB / Static Wi-fi
 
+<html>
+<head>
+<style>
+body {
+  background-color: transparent;
+}
+</style>
+
 USB / Static Wi-fi is an integration between system to APOS device. E.g., Biller can integrate with payment app and complete the payment transaction.
 
 Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, PreAuth Sale, PreAuth Completion, Transaction Status Check, EMI Sale, Void, Settlement, Bharat QR code generation.
 
 ## How it works
--	System Requirements to setup USB / Static Wi-fi
-    -	OS: Windows 8 and above
-    -	Cable: Micro USB Data Cable for RS232 Serial communication.
-    -	Wi-Fi: Same Wi-Fi connectivity for Socket communication for Both PAX and Integrating APPs
-    -	JDK Version: JDK 1.8.0 version or above (64 bit or 32 bit)
-    -	Other Libs: (Available in Windows as javax.mail.jar)
-    -	Use any serial lib for java that should support window platform
-    -	Get a list of available port name and select comm port no
-    -	Open VSP (Virtual Serial Port ) 
-    -	PAX Use the following detail for serial communication 
-        -	BaudRate – 9600 
-        -	Partity – NONE 
-        -	StopBits – 1 
-        -	DataBits – 8
-    -	Use The JAVA NIO Channels or Classic Input/Output Streams to read and write data 
--	Bluetooth Setup 
-    -	POS terminal and PC Client should be connected. Then we send some information from PC to POS terminal by ECR-Bluetooth
-    -	User should choose a paired Bluetooth device as our ECR’s target device after
-        we select the Type-Bluetooth as our ECR communication type. If the device, we want to choose was not paired, we must pair it at first, then choose the device as our target device
-    -	System Requirements to setup USB / Static Wi-fi 
-    -	Download and install the desired MCommerce app (Full Download)
-    -	Full Download A920 integration kit in your system
-    -	Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download & Login)
-    -	Go to ECR Preference settings menu enable ECR option and select the ECR type as USB
-    -	Connect ECR and the terminal by RS232
--	Connect the desired cable (USB) to PC
-- Trigger transactions from PC application to check the line status
+System Requirements to setup USB / Static Wi-fi
+
+<body>
+        .  OS: Windows 8 and above <br>
+        	Cable: Micro USB Data Cable for RS232 Serial communication.<br>
+        .	Wi-Fi: Same Wi-Fi connectivity for Socket communication for Both PAX and Integrating APPs<br>
+        .	JDK Version: JDK 1.8.0 version or above (64 bit or 32 bit)<br>
+        .	Other Libs: (Available in Windows as javax.mail.jar)<br>
+        .	Use any serial lib for java that should support window platform<br>
+        .	Get a list of available port name and select comm port no<br>
+        .	Open VSP (Virtual Serial Port ) <br>
+        .	PAX Use the following detail for serial communication <br>
+                .	BaudRate – 9600 <br>
+                .	Partity – NONE <br>
+                .	StopBits – 1 <br>
+                .	DataBits – 8 <br>
+                .	Use The JAVA NIO Channels or Classic Input/Output Streams to read and write data 
+                .	Bluetooth Setup <br>
+                .	POS terminal and PC Client should be connected. Then we send some information from PC   to POS terminal by ECR-Bluetooth <br>
+                .	User should choose a paired Bluetooth device as our ECR’s target device after
+                    we select the Type-Bluetooth as our ECR communication type. If the device, we want to choose was not paired, we must pair it at first, then choose the device as our target device<br>
+                .	System Requirements to setup USB / Static Wi-fi <br>
+                .	Download and install the desired MCommerce app (Full Download)<br>
+                .	Full Download A920 integration kit in your system<br>
+                .	Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download &     Login)<br>
+                .	Go to ECR Preference settings menu enable ECR option and select the ECR type as USB<br>
+                .	Connect ECR and the terminal by RS232<br>
+                .	Connect the desired cable (USB) to PC<br>
+                .   Trigger transactions from PC application to check the line status<br>
 
 For digital transactions, the supported functionalities are listed below.
-<table width="120%" border="0">
+
+</body>
+<table border="0">
   <tr>
     <th> Value Added Services </th>
     <th> Rest of APAC <br>(SG, HK, MY) </th>
      </tr>
     <tr>
     <td>WeChat</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Alipay</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>FPS</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>GrabPay</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>CUP QR (UnionPay QR)</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     </table>
 
   For a normal Sale request, the supported functionalities are listed below.
     
     
- <table width="130%" border="0">
+ <table border="0">
     <tr>
     <th>Transactions Supported</th>
     <th> Rest of APAC <br>(SG, HK, MY) </th>
      </tr>
     <tr>
     <td>Pre-Authorization Sale</td>
-    <td align="center">.</td>
-    </tr>
+     <td align="center">&#10004;</td>
+     </tr>
     <tr>
     <td>Pre-Authorization Sale cancellation</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Pre-Authorization Sale completion</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Pre-Authorization Sale completion cancellation</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Sale</td>
-    <td align="center">.</td>
-    </tr>
+     <td align="center">&#10004;</td>
+     </tr>
     <tr>
     <td>Void</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Offline Sale</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Tip Adjustment</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Refund</td>
-    <td align="center">.</td>
-    </tr>
+     <td align="center">&#10004;</td>
+   </tr>
     <tr>
     <td>Pre-Authorization  completion offline</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Installment / EMI Sale</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>Installment Sale Cancellation</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>MOTO Pre-Authorization</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>MOTO Pre-Authorization Cancellation</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>
     <td>MOTO Pre-Authorization completion</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>MOTO PreAuthorization Completion Cancellation</td>
-    <td align="center">.</td>
-    </tr>
+     <td align="center">&#10004;</td>
+     </tr>
     <tr>   
     <td>MOTO Sale</td>
-    <td align="center">.</td>
-    </tr>
+     <td align="center">&#10004;</td>
+     </tr>
     <tr>   
     <td>MOTO Sale Cancellation </td>
-    <td align="center">.</td>
-    </tr>
+     <td align="center">&#10004;</td>
+     </tr>
     <tr>   
     <td>MOTO Refund</td>
-    <td align="center">.</td>
-    </tr>
+     <td align="center">&#10004;</td>
+     </tr>
     <tr>   
     <td>Void Refund</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Cash Advance / Cash withdrawal</td>
@@ -163,23 +175,23 @@ For digital transactions, the supported functionalities are listed below.
     </tr>
     <tr>   
     <td>Settlement / Batch Upload</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>DCC</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Pre-Authorization Top-Up (Incremental Auth)</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     <tr>   
     <td>Balance Inquiry</td>
-    <td align="center">.</td>
-    </tr>
+     <td align="center">&#10004;</td>
+     </tr>
     <tr>   
     <td>Settlement report / Detail report</td>
-    <td align="center">.</td>
+     <td align="center">&#10004;</td>
     </tr>
     </tr>
     </table>
@@ -301,29 +313,29 @@ The table below identifies the required properties in the request message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
-|`dataType`|String|2|M|01 - Sale (Sale, DCC) 
-| | | | | 02 - Preauth Sale |
-| | | | | 03 - Preauth Completion |
+|`dataType`|String|2|M|01 - Sale (Sale, DCC). 
+| | | | | 02 - Pre-Authorization Sale. |
+| | | | | 03 - Pre-Authorization Completion. |
 | | | | | 04 - Refund |
 | | | | | 05 - Void | 
-| | | | | 08 - EMI Sale |
-| | | | | 12 - Settlement Transaction|
-|`amt`|String|10|M|Transaction amount in decimals - "100.00"|
+| | | | | 08 - EMI Sale. |
+| | | | | 12 - Settlement Transaction. |
+|`amt`|String|10|M|Transaction amount in decimals - "100.00".|
 |`detail`|String|2|O|To define the response message in detail format. 
-| | | | | 'Y' means detail message, 'N' means skip this format|
-|`ecrRef`|String|2|O|ECR reference no. up to 16 digits|
-|`merchantReferenceNumber`|String|10|O|Unique merchant number for reconcilation - Value to be populated in statement in FT Number|
-|`terminalInvoiceNumber`|String|20|M|Use the terminal Invoice No to indicate the invoice of terminal|
-|`acqName`|String|20|O|To identify this transaction is initiated by respective Acquirer (Mandatory for void & PreAuth Completion transaction)|
-|`userDefinedFields`|String|20|O|UDF fields|
-|`pwd `|String|8|O|Void password|
-|`rrn`|String|20|O|12 digits RRN|
-|`authCode`|String|3|O|Approval code of authorization|
-|`printChargeslip`|String|8|O |Y or N ( Default - Y )  (Mandatory for Pre Auth Completion transaction)|
+| | | | | 'Y' means detail message, 'N' means skip this format.|
+|`ecrRef`|String|2|O|ECR reference no. up to 16 digits.|
+|`merchantReferenceNumber`|String|10|O|Unique merchant number for reconcilation - Value to be populated in statement in FT Number.|
+|`terminalInvoiceNumber`|String|20|M|Use the terminal Invoice No to indicate the invoice of terminal.|
+|`acqName`|String|20|O|To identify this transaction is initiated by respective Acquirer (Mandatory for void & PreAuth Completion transaction).|
+|`userDefinedFields`|String|20|O|UDF fields.|
+|`pwd `|String|8|O|Void password.|
+|`rrn`|String|20|O|12 digits RRN.|
+|`authCode`|String|3|O|Approval code of authorization.|
+|`printChargeslip`|String|8|O |Y or N ( Default - Y )  (Mandatory for Pre Auth Completion transaction).|
 |`emi`|String|20|O|EMI details – emi flag is 1/0 
 | | | | | EMI reference number generated is 8 bytes |
-| | | | |Tenure, discount amount, product amount, EMI per month|
-|`checksum`|String|10|O (Mandatory for Transaction check status transaction)|Checksum for "data" field.Use SHA256 method to calculate “data” field|
+| | | | |Tenure, discount amount, product amount, EMI per month.|
+|`checksum`|String|10|O (Mandatory for Transaction check status transaction)|Checksum for "data" field. Use SHA256 method to calculate “data” field.|
 
 
 
@@ -446,104 +458,104 @@ The table below identifies the required properties in the response message
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------- | ------------------ | 
-|`dataType`|String|2|M|01 - Sale (Sale, DCC) |
-| | | | | 02 - Preauth Sale |
-| | | | | 03 - Preauth Completion | 
+|`dataType`|String|2|M|01 - Sale (Sale, DCC). |
+| | | | | 02 - Pre-Authorization Sale. |
+| | | | | 03 - Pre-Authorization Completion. | 
 | | | | | 04 - Refund |
 | | | | | 05 - Void  |
-| | | | | 08 - EMI Sale | 
-| | | | | 12 - Settlement Transaction|
-|`amt`|String|10|M|Transaction amount in decimals - "100.00"|
-|`aid`|String|10|O|Acquirer ID|
-|`adjAmt`|String|10|O|Adjustment Amount|
-|`authCode`|String|8|M|Auth Code|
-|`atc`|String|12|O|Application Counter Value|
-|`batchNumber`|String|6|M|Terminal Batch Number|
-|`cardholderName`|String|25|O|Name of the cardholder|
-|`cardType`|String|10|M|Type of card|
+| | | | | 08 - EMI Sale. | 
+| | | | | 12 - Settlement Transaction.|
+|`amt`|String|10|M|Transaction amount in decimals - "100.00".|
+|`aid`|String|10|O|Acquirer ID.|
+|`adjAmt`|String|10|O|Adjustment Amount.|
+|`authCode`|String|8|M|Auth Code.|
+|`atc`|String|12|O|Application Counter Value.|
+|`batchNumber`|String|6|M|Terminal Batch Number.|
+|`cardholderName`|String|25|O|Name of the cardholder.|
+|`cardType`|String|10|M|Type of card.|
 |`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
-|`cardExpDate`|String|4|O|Transaction card expiry date|
-|`merchantID`|String|16|M|Merchant ID|
-|`signature`|String|2|O|Y' or 'N'|
-|`panNumber`|String|16|O|This will identify as Card number|
-|`referenceNumber`|String|20|M|This will identify as Reference Number|
-|`status`|String|2|O|Status - "A"|
-|`tc`|String|10|O|Transaction Number|
-|`terminalID`|String|8|M|Terminal ID|
-|`tvr`|String|10|O|Terminal Reference|
-|`txndate`|Timestamp|10|M|Transaction date|
-|`txntime`|Timestamp|10|M|Transaction time|
-|`txnid`|String|10|M|Transaction Id|
-|`checksum`|String|50|O|Checksum for "data" field.Use SHA256 method to calculate “data” field|
-|`acquirerName`|String|20|M|Acquirer Name|
+|`cardExpDate`|String|4|O|Transaction card expiry date.|
+|`merchantID`|String|16|M|Merchant ID.|
+|`signature`|String|2|O|Y' or 'N'.|
+|`panNumber`|String|16|O|This will identify as Card number.|
+|`referenceNumber`|String|20|M|This will identify as Reference Number.|
+|`status`|String|2|O|Status - "A".|
+|`tc`|String|10|O|Transaction Number.|
+|`terminalID`|String|8|M|Terminal ID.|
+|`tvr`|String|10|O|Terminal Reference.|
+|`txndate`|Timestamp|10|M|Transaction date.|
+|`txntime`|Timestamp|10|M|Transaction time.|
+|`txnid`|String|10|M|Transaction Id.|
+|`checksum`|String|50|O|Checksum for "data" field.Use SHA256 method to calculate “data” field.|
+|`acquirerName`|String|20|M|Acquirer Name.|
 |`emi`|String|20|O|EMI details – emi flag is 1/0 
 | | | | |EMI reference number generated is 8 bytes
-| | | | |Tenure, discount amount, product amount, EMI per month|
-|`batchUpload`|String|2|O|Y' or 'N'|
-|`responseCode`|String|2|M|Host Response code, it has response message|
-|`responseText`|String|20|M|Text of response message|
+| | | | |Tenure, discount amount, product amount, EMI per month.|
+|`batchUpload`|String|2|O|Y' or 'N'.|
+|`responseCode`|String|2|M|Host Response code, it has response message.|
+|`responseText`|String|20|M|Text of response message.|
 
 
 The table below provides the list of error codes and description for this application.
 | ErrorCode |  Description/Values | Comments |
 | --------  | ------------------ | ---------- |
-|`00`|Approved or completed successfully|Merchant should go ahead with reciept generation|
-|`01`|Refer to card issuer, Cardholder to contact Issuing Bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`02`|Refer to card issuer, special condition|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`03`| Invalid merchant|Contact Customer Support / Business Manager|
-|`04`|Pick-up card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`05`|Do not honour, Cardholder to contact Issuing bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`06`|Error|Contact Customer Support / Business Manager|
-|`07`|Pick-up card, special condition|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`08`| Honour with identification|Merchant should Confirm cardholder ID/verification|
-|`09`|Request in progress|Merchant should Wait for transaction completion|
-|`10`|Approved, partial|Contact Customer Support / Business Manager|
-|`11`|Approved, VIP|Contact Customer Support / Business Manager|
-|`12`|Invalid transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`13`|Invalid amount|Merchant should key valid amount|
-|`14`|Invalid card number|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`15`|No such issuer|Contact Customer Support / Business Manager|
-|`19`|Re - enter transaction|Contact Customer Support / Business Manager|
-|`20`|Invalid response|Contact Customer Support / Business Manager|
-|`21`|Card Not Initialized|Issuer Decline. Card is not activated (for CUP)|
-|`22`|Suspected malfunction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|"
-|`25`| Unable to locate Original Transaction|Contact Customer Support / Business Manager|
-|`30`|Format Error|Contact Customer Support / Business Manager|
-|`31`|Bank not supported|Contact Customer Support / Business Manager|
-|`32`|Expired card, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`33`|Suspected fraud, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`34`|Fraud|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`36`|Restricted card, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`38`|PIN tries exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`39`|No credit account|Issuer Decline. No money/Debit card (Visa only)|
-|`40`|Function not supported|Contact Customer Support / Business Manager|
-|`41`|Lost card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`42`|No universal account|Small bank not international (Only JCB)|
-|`43`|Stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`45`|Fallback not allowed|Contact Customer Support / Business Manager|
-|`51`|Not sufficient funds|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`52`|No check account|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`53`|No savings account|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`54`|Expired card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`55`|Incorrect PIN|Issuer Decline. Merchant should advise cardholder to key correct pin for transaction|
-|`56`|No card record|Bank is offline / Retry later(Only for JCB)|
-|`57`|Transaction not permitted to cardholder|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`58`|Transaction not permitted to terminal|Contact Customer Support / Business Manager|
-|`59`|Suspected fraud|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`00`|Approved or completed successfully|Merchant should go ahead with reciept generation.|
+|`01`|Refer to card issuer, Cardholder to contact Issuing Bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`02`|Refer to card issuer, special condition|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`03`| Invalid merchant|Contact Customer Support / Business Manager.|
+|`04`|Pick-up card|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`05`|Do not honour, Cardholder to contact Issuing bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`06`|Error|Contact Customer Support / Business Manager.|
+|`07`|Pick-up card, special condition|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`08`| Honour with identification|Merchant should Confirm cardholder ID/verification.|
+|`09`|Request in progress|Merchant should Wait for transaction completion.|
+|`10`|Approved, partial|Contact Customer Support / Business Manager.|
+|`11`|Approved, VIP|Contact Customer Support / Business Manager.|
+|`12`|Invalid transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`13`|Invalid amount|Merchant should key valid amount.|
+|`14`|Invalid card number|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`15`|No such issuer|Contact Customer Support / Business Manager.|
+|`19`|Re - enter transaction|Contact Customer Support / Business Manager.|
+|`20`|Invalid response|Contact Customer Support / Business Manager.|
+|`21`|Card Not Initialized|Issuer Decline. Card is not activated (for CUP).|
+|`22`|Suspected malfunction|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|"
+|`25`| Unable to locate Original Transaction|Contact Customer Support / Business Manager.|
+|`30`|Format Error|Contact Customer Support / Business Manager.|
+|`31`|Bank not supported|Contact Customer Support / Business Manager.|
+|`32`|Expired card, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`33`|Suspected fraud, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`34`|Fraud|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`36`|Restricted card, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`38`|PIN tries exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`39`|No credit account|Issuer Decline. No money/Debit card (Visa only).|
+|`40`|Function not supported|Contact Customer Support / Business Manager.|
+|`41`|Lost card|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`42`|No universal account|Small bank not international (Only JCB).|
+|`43`|Stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`45`|Fallback not allowed|Contact Customer Support / Business Manager.|
+|`51`|Not sufficient funds|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`52`|No check account|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`53`|No savings account|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`54`|Expired card|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`55`|Incorrect PIN|Issuer Decline. Merchant should advise cardholder to key correct pin for transaction.|
+|`56`|No card record|Bank is offline / Retry later(Only for JCB).|
+|`57`|Transaction not permitted to cardholder|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`58`|Transaction not permitted to terminal|Contact Customer Support / Business Manager.|
+|`59`|Suspected fraud|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`61`|Exceeds withdrawal limit|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`62`|Restricted card|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`63`|Security violation|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`64`|Original amount incorrect|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`65`|Exceeds withdrawal frequency|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`68`|Issuer Response Timed-out|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`75`|PIN tries exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`62`|Restricted card|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`63`|Security violation|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`64`|Original amount incorrect|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`65`|Exceeds withdrawal frequency|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`68`|Issuer Response Timed-out|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`75`|PIN tries exceeded|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`77`|Intervene, bank approval required|Visa, MC and JCB has different meaning. But overall, it is decline.|
 |`78`|Intervene, bank approval required|Visa, MC and JCB has different meaning. But overall, it is decline.|
-|`85`|Not declined|AVS with zero amount|
-|`90`|Cut-off in progress|Contact Customer Support / Business Manager|
-|`91`|Issuer or switch inoperative|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`92`|Routing Error|Contact Customer Support / Business Manager|
-|`94`|Duplicate Transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
-|`95`|Reconcile error|Contact Customer Support / Business Manager|
-|`96`|System Error|Contact Customer Support / Business Manager|
-|`99`|PIN Block error|Issuer Decline. Merchant should advise cardholder to use different card for transaction|
+|`85`|Not declined|AVS with zero amount.|
+|`90`|Cut-off in progress|Contact Customer Support / Business Manager.|
+|`91`|Issuer or switch inoperative|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`92`|Routing Error|Contact Customer Support / Business Manager.|
+|`94`|Duplicate Transaction|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
+|`95`|Reconcile error|Contact Customer Support / Business Manager.|
+|`96`|System Error|Contact Customer Support / Business Manager.|
+|`99`|PIN Block error|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
