@@ -1,0 +1,130 @@
+################################################################################
+# Copyrights © 2021-2022 Fiserv, Inc. or its affiliates. 
+# Fiserv is a trademark of Fiserv, Inc., 
+# registered or used in the United States and foreign countries, 
+# and may or may not be registered in your country.  
+# All trademarks, service marks, 
+# and trade names referenced in this 
+# material are the property of their 
+# respective owners. This work, including its contents 
+# and programming, is confidential and its use 
+# is strictly limited. This work is furnished only 
+# for use by duly authorized licensees of Fiserv, Inc. 
+# or its affiliates, and their designated agents 
+# or employees responsible for installation or 
+# operation of the products. Any other use, 
+# duplication, or dissemination without the 
+# prior written consent of Fiserv, Inc. 
+# or its affiliates is strictly prohibited. 
+# Except as specified by the agreement under 
+# which the materials are furnished, Fiserv, Inc. 
+# and its affiliates do not accept any liabilities 
+# with respect to the information contained herein 
+# and are not responsible for any direct, indirect, 
+# special, consequential or exemplary damages 
+# resulting from the use of this information. 
+# No warranties, either express or implied, 
+# are granted or extended by this work or 
+# the delivery of this work
+################################################################################
+
+- sections:
+    - title: Introduction
+      link: docs/product-layout.yaml
+      open: true
+      sections:
+        - title: Contact Us
+          link: docs/introduction/contact-us
+# - sections:
+#     - title: Getting Started
+#       link: docs/Getting-Started-APAC.md
+#       open: true
+#       sections:
+#         - title: Point of Sale Integration
+#           sections:
+#             - title: Overview
+#               link: docs/PosOverview.md
+#             - title: Cloud Based Integration Checklist
+#               link: docs/CloudIntegrationCheckList.md
+#             - title: Local Based Integration Checklist
+#               link: docs/LocalIntegrationCheckList.md
+
+# - sections:
+#     - title: Features
+#       link: 
+#       open: true
+#       sections:
+#         - title: Cloud Based Integration 
+#           link: docs/CloudPOI.md
+#           sections:
+#             - title: Login
+#               link: docs/APIs/CloudPOI/Login.md
+#             - title: Sale with Local Payment Method
+#               link: docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md
+#             - title: Sale with Cards
+#               link: docs/APIs/PaymentAPI/SaleCard.md
+#             - title: Pre-Authorization Sale
+#               link: docs/APIs/PaymentAPI/PreAuthSale.md
+#             - title: Pre-Authorization Completion
+#               link: docs/APIs/PaymentAPI/PreAuthCompletion.md
+#             - title: Refund
+#               link: docs/APIs/PaymentAPI/Refund.md
+#             - title: Void
+#               link: docs/APIs/PaymentAPI/Void.md
+#             - title: Instalment / EMI Sale
+#               link: docs/APIs/PaymentAPI/EMISale.md
+#             - title: Transaction Inquiry
+#               link: docs/APIs/PaymentAPI/TransactionStatusCheck.md
+#             - title: Settlement
+#               link: docs/APIs/PaymentAPI/SettlementTransaction.md
+#         - title: Merchant Onboarding
+#           link: docs/MerchantBoarding.md
+#           sections:
+#             - title: Login
+#               link: docs/APIs/externalboarding/Login.md
+#             - title: Create URN
+#               link: docs/APIs/externalboarding/CreateURN.md
+#             - title: Get Package List
+#               link: docs/APIs/externalboarding/GetPackageList.md
+#             - title: Get Package ID
+#               link: docs/APIs/externalboarding/GetPackageId.md
+#             - title: Get Document Matrix
+#               link: docs/APIs/externalboarding/GetDocumentMatrix.md
+#             - title: Upload Document
+#               link: docs/APIs/externalboarding/UploadDocument.md
+#             - title: MID - Inquiry
+#               link: docs/APIs/externalboarding/MidInquiry.md
+#             - title: SUBMIT - New Merchant
+#               link: docs/APIs/externalboarding/NewMerchant.md
+#             - title: SUBMIT - Additional Outlet
+#               link: docs/APIs/externalboarding/AdditionalOutlet.md
+#             - title: SUBMIT - Additional Device
+#               link: docs/APIs/externalboarding/AdditionalDevice.md
+#             - title: SUBMIT - Single MID Payfac
+#               link: docs/APIs/externalboarding/SingleMIDPayFac.md
+#             - title: SUBMIT - Multi MID Payfac
+#               link: docs/APIs/externalboarding/MultiMIDPayFac.md
+#             - title: Application Status Inquiry
+#               link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
+#         - title: Local Based Integration
+#           link: docs/LocalPOI.md
+#           sections:
+#             - title: India / Australia
+#               sections:
+#               - title: Inter-Application Integration
+#                 link: docs/APIs/localpoi/InterAppIms.md
+#               - title: USB / Static Wi-Fi
+#                 link: docs/APIs/localpoi/WIFIIMS.md
+#             - title: Rest of APAC
+#               sections:
+#               - title: Inter-Application Integration
+#                 link: docs/APIs/localpoi/InterAppFDMS.md
+#               - title: USB / Static Wi-Fi
+#                 link: docs/APIs/localpoi/WIFIFDMS.md   
+# - sections:
+#     - title: Release Notes
+#       link: docs/release-notes/2022/august.md
+#       open: true
+#       sections:
+#         - title: 2022
+#           link: docs/release-notes/2022/august.md
