@@ -115,7 +115,7 @@
               - title: USB / Static Wi-Fi
                 link: docs/APIs/localpoi/WIFIFDMS.md   
 - sections:
-    - title: Release Notes1
+    - title: Release Notes
       link: docs/release-notes/2022/august.md
       open: true
       sections:
