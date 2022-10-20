@@ -114,10 +114,10 @@
                 link: docs/APIs/localpoi/InterAppFDMS.md
               - title: USB / Static Wi-Fi
                 link: docs/APIs/localpoi/WIFIFDMS.md   
-# - sections:
-#     - title: Release Notes
-#       link: docs/release-notes/2022/august.md
-#       open: true
-#       sections:
-#         - title: 2022
-#           link: docs/release-notes/2022/august.md
+- sections:
+    - title: Release Notes
+      link: docs/release-notes/2022/august.md
+      open: true
+      sections:
+        - title: 2022
+          link: docs/release-notes/2022/august.md
