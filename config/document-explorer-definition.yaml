@@ -42,82 +42,82 @@
             - title: Local Based Integration Checklist
               link: docs/LocalIntegrationCheckList.md
 
-# - sections:
-#     - title: Features
-#       link: 
-#       open: true
-#       sections:
-#         - title: Cloud Based Integration 
-#           link: docs/CloudPOI.md
-#           sections:
-#             - title: Login
-#               link: docs/APIs/CloudPOI/Login.md
-#             - title: Sale with Local Payment Method
-#               link: docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md
-#             - title: Sale with Cards
-#               link: docs/APIs/PaymentAPI/SaleCard.md
-#             - title: Pre-Authorization Sale
-#               link: docs/APIs/PaymentAPI/PreAuthSale.md
-#             - title: Pre-Authorization Completion
-#               link: docs/APIs/PaymentAPI/PreAuthCompletion.md
-#             - title: Refund
-#               link: docs/APIs/PaymentAPI/Refund.md
-#             - title: Void
-#               link: docs/APIs/PaymentAPI/Void.md
-#             - title: Instalment / EMI Sale
-#               link: docs/APIs/PaymentAPI/EMISale.md
-#             - title: Transaction Inquiry
-#               link: docs/APIs/PaymentAPI/TransactionStatusCheck.md
-#             - title: Settlement
-#               link: docs/APIs/PaymentAPI/SettlementTransaction.md
-#         - title: Merchant Onboarding
-#           link: docs/MerchantBoarding.md
-#           sections:
-#             - title: Login
-#               link: docs/APIs/externalboarding/Login.md
-#             - title: Create URN
-#               link: docs/APIs/externalboarding/CreateURN.md
-#             - title: Get Package List
-#               link: docs/APIs/externalboarding/GetPackageList.md
-#             - title: Get Package ID
-#               link: docs/APIs/externalboarding/GetPackageId.md
-#             - title: Get Document Matrix
-#               link: docs/APIs/externalboarding/GetDocumentMatrix.md
-#             - title: Upload Document
-#               link: docs/APIs/externalboarding/UploadDocument.md
-#             - title: MID - Inquiry
-#               link: docs/APIs/externalboarding/MidInquiry.md
-#             - title: SUBMIT - New Merchant
-#               link: docs/APIs/externalboarding/NewMerchant.md
-#             - title: SUBMIT - Additional Outlet
-#               link: docs/APIs/externalboarding/AdditionalOutlet.md
-#             - title: SUBMIT - Additional Device
-#               link: docs/APIs/externalboarding/AdditionalDevice.md
-#             - title: SUBMIT - Single MID Payfac
-#               link: docs/APIs/externalboarding/SingleMIDPayFac.md
-#             - title: SUBMIT - Multi MID Payfac
-#               link: docs/APIs/externalboarding/MultiMIDPayFac.md
-#             - title: Application Status Inquiry
-#               link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
-#         - title: Local Based Integration
-#           link: docs/LocalPOI.md
-#           sections:
-#             - title: India / Australia
-#               sections:
-#               - title: Inter-Application Integration
-#                 link: docs/APIs/localpoi/InterAppIms.md
-#               - title: USB / Static Wi-Fi
-#                 link: docs/APIs/localpoi/WIFIIMS.md
-#             - title: Rest of APAC
-#               sections:
-#               - title: Inter-Application Integration
-#                 link: docs/APIs/localpoi/InterAppFDMS.md
-#               - title: USB / Static Wi-Fi
-#                 link: docs/APIs/localpoi/WIFIFDMS.md   
-# - sections:
-#     - title: Release Notes
-#       link: docs/release-notes/2022/august.md
-#       open: true
-#       sections:
-#         - title: 2022
-#           link: docs/release-notes/2022/august.md
+- sections:
+    - title: Features
+      link: 
+      open: true
+      sections:
+        - title: Cloud Based Integration 
+          link: docs/CloudPOI.md
+          sections:
+            - title: Login
+              link: docs/APIs/CloudPOI/Login.md
+            - title: Sale with Local Payment Method
+              link: docs/APIs/PaymentAPI/SaleLocalPaymentMethod.md
+            - title: Sale with Cards
+              link: docs/APIs/PaymentAPI/SaleCard.md
+            - title: Pre-Authorization Sale
+              link: docs/APIs/PaymentAPI/PreAuthSale.md
+            - title: Pre-Authorization Completion
+              link: docs/APIs/PaymentAPI/PreAuthCompletion.md
+            - title: Refund
+              link: docs/APIs/PaymentAPI/Refund.md
+            - title: Void
+              link: docs/APIs/PaymentAPI/Void.md
+            - title: Instalment / EMI Sale
+              link: docs/APIs/PaymentAPI/EMISale.md
+            - title: Transaction Inquiry
+              link: docs/APIs/PaymentAPI/TransactionStatusCheck.md
+            - title: Settlement
+              link: docs/APIs/PaymentAPI/SettlementTransaction.md
+        - title: Merchant Onboarding
+          link: docs/MerchantBoarding.md
+          sections:
+            - title: Login
+              link: docs/APIs/externalboarding/Login.md
+            - title: Create URN
+              link: docs/APIs/externalboarding/CreateURN.md
+            - title: Get Package List
+              link: docs/APIs/externalboarding/GetPackageList.md
+            - title: Get Package ID
+              link: docs/APIs/externalboarding/GetPackageId.md
+            - title: Get Document Matrix
+              link: docs/APIs/externalboarding/GetDocumentMatrix.md
+            - title: Upload Document
+              link: docs/APIs/externalboarding/UploadDocument.md
+            - title: MID - Inquiry
+              link: docs/APIs/externalboarding/MidInquiry.md
+            - title: SUBMIT - New Merchant
+              link: docs/APIs/externalboarding/NewMerchant.md
+            - title: SUBMIT - Additional Outlet
+              link: docs/APIs/externalboarding/AdditionalOutlet.md
+            - title: SUBMIT - Additional Device
+              link: docs/APIs/externalboarding/AdditionalDevice.md
+            - title: SUBMIT - Single MID Payfac
+              link: docs/APIs/externalboarding/SingleMIDPayFac.md
+            - title: SUBMIT - Multi MID Payfac
+              link: docs/APIs/externalboarding/MultiMIDPayFac.md
+            - title: Application Status Inquiry
+              link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
+        - title: Local Based Integration
+          link: docs/LocalPOI.md
+          sections:
+            - title: India / Australia
+              sections:
+              - title: Inter-Application Integration
+                link: docs/APIs/localpoi/InterAppIms.md
+              - title: USB / Static Wi-Fi
+                link: docs/APIs/localpoi/WIFIIMS.md
+            - title: Rest of APAC
+              sections:
+              - title: Inter-Application Integration
+                link: docs/APIs/localpoi/InterAppFDMS.md
+              - title: USB / Static Wi-Fi
+                link: docs/APIs/localpoi/WIFIFDMS.md   
+- sections:
+    - title: Release Notes
+      link: docs/release-notes/2022/august.md
+      open: true
+      sections:
+        - title: 2022
+          link: docs/release-notes/2022/august.md
