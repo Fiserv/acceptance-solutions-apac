@@ -24,32 +24,6 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
   "convFee": "50",
   "cgst": "76",
   "igst": "84",
-  "sgst": "72",# Emi Sale Transaction
-
-This API is used to send emi sale transaction request. Merchants will be required to add session 
-token received during login API call in the header of this API,
-
-
-## Endpoint
-
-POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/nonOpiProcessAmount`
-
-## Payload Example
-
-### Request Payload
-
-```json
-{
-  "ain": "4700000",
-  "functionCode": "08",
-  "merchantId": "470000095241203",
-  "terminalId": "33533344",
-  "customerRefNumber": "1051104367",
-  "merchantRefNumber": "Guru526",
-  "billerId": "809",
-  "convFee": "50",
-  "cgst": "76",
-  "igst": "84",
   "sgst": "72",
   "totalAmount": "250",
   "tranCurrency": "849",
@@ -71,13 +45,13 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
     {
       "param_lit": "param1 key",
       "param": ""
-    }, ""
+    }, 
+    {
+      "param_lit": "param 2 key",
+      "param": ""
     }
   ]
 }
-    {
-      "param_lit": "param 2 key",
-      "param":
 
 ```
   
@@ -110,7 +84,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `terminalId` | *string* | 07 | M | Terminal ID. |
 | `billerId` | *string* | 03 | M | Biller ID provided by Fiserv. |
 | `merchantRefNumber` | *string* | 14 | M | Unique number for each transaction. Inquiry transaction should have same MRN of original txn.For BOCM pass the value as (50 bytes). |
-| `customerRefNumber` | *string* | 20 | O | Customer's Reference Number. |
+| `customerRefNumber` | *string* | 20 | O | Customer's Reference Number.|
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry txn. |
 | `convFee` | *string* | 10 | C | Convenience Fee including decimal (E.g. 5.00 for $5 fee). To be sent if fee is charged. |
 | `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST).If CGST is included in the total amount. |
