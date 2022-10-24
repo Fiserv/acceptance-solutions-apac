@@ -74,13 +74,13 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `functionCode` | *string* | 02 | M | E.g. |
 |  |  |  |  | 00 = Sale  - Digital and Card.|
 |  |  |  |  | 01 = Sale - Card.|
-|  |  |  |  | 02 = Preauth.|
+|  |  |  |  | 02 = Preauth|
 |  |  |  |  | 03 = Preauth Completion.|
-|  |  |  |  | 04 = Refund.|
-|  |  |  |  | 12 = Settlement.|
-|  |  |  |  | 11 = Transaction Status Check (Inquiry)|
-|  |  |  |  | 05 = Void.|
-|  |  |  |  | 04 = Refund.|
+|  |  |  |  | 04 = Refund |
+|  |  |  |  | 12 = Settlement|
+|  |  |  |  | 11 = Transaction Status Check (Inquiry).|
+|  |  |  |  | 05 = Void|
+|  |  |  |  | 04 = Refund|
 | `terminalId` | *string* | 07 | M | Terminal ID. |
 | `billerId` | *string* | 03 | M | Biller ID provided by Fiserv. |
 | `merchantRefNumber` | *string* | 14 | M | Unique number for each transaction. Inquiry transaction should have same MRN of original txn.For BOCM pass the value as (50 bytes). |
