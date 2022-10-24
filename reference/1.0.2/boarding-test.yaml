@@ -189,71 +189,17 @@ paths:
       parameters:
       - $ref: "#/components/parameters/ApiKeyHeader"
       - $ref: "#/components/parameters/AppURNInfo"
-      responses:
-        "100":
-          description: Invalid Request
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AppResponse100"
-              examples:
-                AppStatus Sample:
-                  $ref: "#/components/examples/AppStatusResponse100"
-        "103":
-          description: Data Not Found.Please contact Application Support Team.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AppResponse103"
-              examples:
-                AppStatus Sample:
-                  $ref: "#/components/examples/AppStatusResponse103"
-        "200":
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AppResponse200"
-              examples:
-                AppStatus Sample:
-                  $ref: "#/components/examples/AppStatusResponse200"
-        "400":
-          description: Generic Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AppResponse400"
-              examples:
-                AppStatus Sample:
-                  $ref: "#/components/examples/AppStatusResponse400"
-        "401":
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CreateAppResponse'
-              examples:
-                "401":
-                  $ref: '#/components/examples/Response401'
-        "500":
-          description: Internal Error.Please contact Application Support Team
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AppResponse500"
-              examples:
-                AppStatus Sample:
-                   $ref: "#/components/examples/AppStatusResponse500"
-
-        default:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AppResponse200"
-              examples:
-                AppStatus Sample:
-                  $ref: "#/components/examples/AppStatusResponse200"
+      responses:  
+          default:
+            description: Success
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/AppResponse200"
+                examples:
+                  AppStatus Sample:
+                    $ref: "#/components/examples/AppStatusResponse200"
+   
 
   /boardinggateway/externalboarding/secure/document:
     get:
@@ -285,12 +231,12 @@ paths:
                 $ref: '#/components/schemas/Response'
               examples:
                 "401":
-                  $ref: '#/components/examples/Response401'
-
-        default:
           description: Success
           content:
-            application/json:
+            application/js
+                  $ref: '#/components/examples/Response401'
+
+        default:on:
               schema:
                 $ref: '#/components/schemas/Response'
               examples:
