@@ -355,18 +355,18 @@ The table below identifies the required properties in the request message
 |`consumerNumber`|String|20|O|Consumer number ( CRN ) - Value to be populated in statement in session id.|
 |`currencySelection`|String|3|O|Currency code / currency that had been selected.|
 |`userDefinedFields`|String|30|O|CRN + UDF - Value to be populated in statement in session ID.|
-|`terminalInvoiceNumber`|String|8|O |Used for Pre-authorization completion & cancellation transaction (Mandatory field for Void transaction).|
+|`terminalInvoiceNumber`|String|8|O |Used for Pre-authorization completion & cancellation transaction (Mandatory field for VConversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee. |
+|`se`|String|10|O|Value would be populated incase of Amex transactions.|
+|`printChargeslip`|String|1|Ooid transaction).|
 |`cardLastFourDigit`|String|4|O|Used for Pre-authorization completion & cancellation transaction.|
-|`maskedCardNumber`|String|21|M|First Six digit and last four digit. The numbers in between should be masked.|
+|`maskedCardNumber`|String|21|M|Firstor Pre-authorization completion & cancellation transaction.|
+|`emailID`|String|50|O|Email ID  6 digit and last 4 digit. The numbers in between should be masked.|
 |`applicationVersionNumber`|String|10|M|Version number of terminal application used.|
 |`aTID`|String|8|M|Acquirer TID (Terminal ID).|
 |`aMID`|String|15|M|Acquirer MID (Merchant ID).|
-|`authCode`|String|8|O|Used for Pre-authorization completion & cancellation transaction.|
-|`emailID`|String|50|O|Email ID on which email needs to be received.|
+|`authCode`|String|8|O|Used fon which email needs to be received.|
 |`billerID`|String|10|O|Biller ID received. |
-|`dccFlag `|String|1|O|DCC Conversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee. |
-|`se`|String|10|O|Value would be populated incase of Amex transactions.|
-|`printChargeslip`|String|1|O|Print Chargeslip - Y or N  ( Default mode is Y ).|
+|`dccFlag `|String|1|O|DCC |Print Chargeslip - Y or N  ( Default mode is Y ).|
 
 
 ### Response in Payload
@@ -394,9 +394,9 @@ The table below identifies the required properties in the response message
 |`functionCode`|String|2| M|01 = Sale ( Sale, DCC ).|
 | | | | | 02 = Pre-Authorization. |
 | | | | | 03 = Pre-Authorization Completion. |
-| | | | | 04 = Refund. |
-| | | | | 05 = Void. |
-| | | | | 06 = TIP. | 
+| | | | | 04 = Refund |
+| | | | | 05 = Void |
+| | | | | 06 = TIP | 
 | | | | | 07 = Cash @ POS. |
 | | | | | 08 = Installment/EMI Sale. |
 | | | | | 11 = Settlement Transaction. |
@@ -449,7 +449,7 @@ The table below identifies the required properties in the response message
 |`cardTxnMode`|String|3|O|Transaction Mode.|
 |`purchaseAmount `|String|10|O|Purchase amount.|
 |`cashBackAmount`|String|10|O| Transaction cash back amount.|
-|`nacStatus `|String|3|O|Identifies the network status True = private network False = public network.|
+|`nacStatus `|String|3|O|Identifies the network status <br> - True = private network <br> - False = public network.|
 |`cardExpDate`|String|4|O|Transaction card expire date.|
 |`dccFlag`|String|1|O|DCC Conversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee.|
 |`printChargeslip`|String|1|O| To enable charge slip printing - Y or N ( Default mode = Y ).|
