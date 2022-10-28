@@ -329,9 +329,9 @@ The table below identifies the required properties in the request message
 |`acqName`|String|20|O|To identify this transaction is initiated by respective Acquirer (Mandatory for void & PreAuth Completion transaction).|
 |`userDefinedFields`|String|20|O|UDF fields.|
 |`pwd `|String|8|O|Void password.|
-|`rrn`|String|20|O|12 digits RRN.|
-|`authCode`|String|3|O|Approval code of authorization.|
-|`printChargeslip`|String|8|O |Y or N ( Default - Y )  (Mandatory for Pre Auth Completion transaction).|
+|`rrn`|String|12|M|The same value received in the original transaction response needs to be submitted across.|
+|`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
+|`printChargeslip`|String|1|O| To enable charge slip printing - Y or N ( Default mode = Y ).|
 |`emi`|String|20|O|EMI details – emi flag is 1/0 
 | | | | | EMI reference number generated is 8 bytes |
 | | | | |Tenure, discount amount, product amount, EMI per month.|
