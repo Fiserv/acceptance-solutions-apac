@@ -231,12 +231,11 @@ paths:
                 $ref: '#/components/schemas/Response'
               examples:
                 "401":
-          description: Success
-          content:
-            application/js
                   $ref: '#/components/examples/Response401'
-
-        default:on:
+        default:
+           description: Success
+           content:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Response'
               examples:
