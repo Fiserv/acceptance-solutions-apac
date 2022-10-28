@@ -65,28 +65,28 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `functionCode` | *string* | 02 | M | E.g. |
 |  |  |  |  | 00 = Sale  - Digital and Card. |
 |  |  |  |  | 01 = Sale - Card. |
-|  |  |  |  | 02 = Preauth. |
+|  |  |  |  | 02 = Preauth |
 |  |  |  |  | 03 = Preauth Completion. |
-|  |  |  |  | 04 = Refund.|
-|  |  |  |  | 12 = Settlement. |
+|  |  |  |  | 04 = Refund|
+|  |  |  |  | 12 = Settlement |
 |  |  |  |  | 11 = Transaction Status Check (Inquiry). |
-|  |  |  |  | 05 = Void. |
-|  |  |  |  | 04 = Refund. |
+|  |  |  |  | 05 = Void |
+|  |  |  |  | 04 = Refund |
 | `terminalId` | *string* | 07 | M | Terminal ID. |
 | `billerId` | *string* | 03 | M | Biller ID provided by Fiserv. |
 | `merchantRefNumber` | *string* | 14 | M | Unique number for each transaction. Inquiry transaction should have same MRN of original txn.For BOCM pass the value as (50 bytes). |
 | `customerRefNumber` | *string* | 20 | O | Consumer Number. |
 | `authAmount` | *string* | 19 | M | Bill Amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry transaction. |
 | `convFee` | *string* | 10 | C | Convenience Fee including decimal (E.g. 5.00 for $5 fee). To be sent if fee is charged. |
-| `cgst` | *string* | 10 | C| Central GST Including decimal (E.g. 10.00 for $10 cgst).If CGST is included in the total amount. |
-| `igst` | *string* | 10 | C | GST Including decimal (E.g. 10.00 for $10 igst).If IGST is included in the total amount. |
-| `sgst` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 sgst).If SGST is included in the total amount. |
+| `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST).If CGST is included in the total amount. |
+| `IGST` | *string* | 10 | C | Integrated GST Including decimal (E.g. 10.00 for $10 IGST).If IGST is included in the total amount. |
+| `SGST` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 SGST).If SGST is included in the total amount. |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal (E.g. 57.00 for $57 sale). |
 | `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value). |
 | `reqDate` | *Date* | DDMMYYYY | M | Transaction initiated date. |
 | `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time. |
 | `tranDate` | *Date* | DDMMYYYY | C  |Original transaction date. |
-| `tranTime` | *Timestamp* | HHMMSS | C | Original transaction time. |
+| `tranTime` | *Timestamp* | HHMMSS | C | Transaction Time. |
 | `cardLastNumber` | *string* | 04 | C | Last 4 digits of Card Number. To be included for Pre-auth completion transaction. |
 | `cardBin` | *string* | 06 | C | First 6 digits of the Card, used in the original (sale) transaction.To be included for Refund transaction. |
 | `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature. |
@@ -182,12 +182,12 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `billingAmount` | *string* | 19 | C | DCC amount. |
 | `dccExchangeRate` | *string* | 20 | M | Currency exchange rate. |
 | `amexSeNumber` | *string* | 10 | C | Applicable for AMEX transaction. |
-| `emiFlag` | *string* | 01 | M | 0 = Non-EMI 1 = EMI. |
-| `emiTenure` | *string* | 02 | C | Instalment / EMI duration. If Instalment / EMI transactions are included. |
-| `emiInterestRate` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
-| `emiProcessingFee` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
-| `emiDiscAmt` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
-| `emiPerMonth` | *string* | 10 | C | Applicable for Instalment/EMI transaction. |
+| `emiFlag` | *string* | 01 | M | 0 = Non-EMI (Non-Installment) 1 = EMI (Installment). |
+| `emiTenure` | *string* | 02 | C | Installment / EMI duration. If Installment / EMI transactions are included. |
+| `emiInterestRate` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
+| `emiProcessingFee` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
+| `emiDiscAmt` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
+| `emiPerMonth` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
 | `cardNumber` | *string* | 19 | O | Card Number. |
 | `expDate` | *string* | 4 | O | Expiry date of the card. |
 | `posEntryMode` | *string* | 10 | M | MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC. |
@@ -201,7 +201,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `cardType` | *string* | 5 | O | Card Type. |
 | `offlineFlag` | *string* | 01 | O | offline flag. |
 | `tranDate` | *date* | DDMMYYYY | O | transaction date. |
-| `tranTime` | *string* | HHMMS | O | transaction time. |
+| `tranTime` | *string* | HHMMSS | O | Transaction Time. |
 | `settlementDetails` | *string* | 2000 | O | set settlement Details. |
 
 
