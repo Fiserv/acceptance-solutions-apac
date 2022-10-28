@@ -333,13 +333,13 @@ The table below identifies the required properties in the request message
 |`ecrRef`|String|16|O|ECR reference number generated in transaction.|
 |`merchantReferenceNumber`|String|20|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number.|
 |`terminalInvoiceNumber`|String|20|O |Use the terminal Invoice No to indicate the invoice of terminal (Mandatory for void & PreAuth Completion transaction).|
-|`CGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount .|
-|`IGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If IGST is included in the total amount. |
-|`SGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If SGST is included in the total amount. |
+| `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST).If CGST is included in the total amount. |
+| `IGST` | *string* | 10 | C | Integrated GST Including decimal (E.g. 10.00 for $10 IGST).If IGST is included in the total amount. |
+| `SGST` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 SGST).If SGST is included in the total amount. |
 |`customerNumber`|String|20|O|To identify this transaction is initiated by respective customer.|
 |`userDefinedFields`|String|8|O|UDF fields.|
 |`pwd `|String|20|O|Void password.|
-|`rrn`|String|3|O|12 digits RRN.|
+|`rrn`|String|12|M|The same value received in the original transaction response needs to be submitted across.|
 |`authCode`|String|8|O|Used for Pre-authorization completion & cancellation transaction.|
 |`dccFlag`|String|1|O|DCC Conversion flag - Yes or No.Response contains converted amount, exchange rate and margin fee.|
 |`printChargeslip`|String|2|O|To enable charge slip printing - Y or N ( Default mode = Y ).|
@@ -694,9 +694,9 @@ The table below identifies the required properties in the response message
 |`tipAmount`|String|10|M|Tip Amount entered during the transaction. |
 |`totalTxnAmount`|String|10|O|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00".|
 |`convenienceFee `|String|10|O|Convenience  Fee including decimal.|
-|`cGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount.|
-|`sGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If SGST is included in the total amount.|
-|`iGST`|String|10|O|Central GST Including decimal (E.g. 10.00 for $10 CGST). If IGST is included in the total amount.|
+| `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST).If CGST is included in the total amount. |
+| `IGST` | *string* | 10 | C | Integrated GST Including decimal (E.g. 10.00 for $10 IGST).If IGST is included in the total amount. |
+| `SGST` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 SGST).If SGST is included in the total amount. |
 |`billAmount`|String|10|O|Bill amount including decimal.|
 |`merchantReferenceNumber`|String|20|M|Same as request.|
 |`terminalInvoiceNumber`|String|8|M|Terminal Invoice Number.|
