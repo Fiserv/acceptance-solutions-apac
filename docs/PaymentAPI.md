@@ -7,7 +7,7 @@ Fiserv Cloud based integration is an Application Programming Interface (API) bas
 
 - [Cloud based integration](./?path=docs/APIs/PaymentAPI/Cloudbasedintegration.md)
 
-- [Instalment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
+- [Installment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
 
 - [Login](./?path=docs/APIs/PaymentAPI/Login.md)
 
