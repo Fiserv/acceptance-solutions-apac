@@ -345,10 +345,9 @@ The table below identifies the required properties in the request message
 | | | | | 19 = Non-carded Transactions. |
 |`source`|String|10|O|APOS (Android Point of Sale), Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine).|
 |`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00".|
-|`convenienceFee `|String|10|O|Convenience  Fee including decimal.|
-|`CGST`|String|10|O| Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST included in the total amount.|
-|`IGST`|String|10|O| Integrated GST Including decimal (E.g. 10.00 for $10 IGST). If IGST included in the total amount.|
-|`SGST`|String|10|O| State GST Including decimal (E.g. 10.00 for $10 SGST). If SGST included in the total amount.|
+| `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST).If CGST is included in the total amount. |
+| `IGST` | *string* | 10 | C | Integrated GST Including decimal (E.g. 10.00 for $10 IGST).If IGST is included in the total amount. |
+| `SGST` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 SGST).If SGST is included in the total amount. |
 |`billAmount`|String|10|O |Bill  amount  including decimal  (Mandatory for QR generation / Wallet Transactions).|
 |`merchantReferenceNumber`|String|14|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number.|
 |`emiReferenceNumber`|String|8|O |EMI reference number generated on mobile (Mandatory for EMI Transaction).|
@@ -357,16 +356,16 @@ The table below identifies the required properties in the request message
 |`userDefinedFields`|String|30|O|CRN + UDF - Value to be populated in statement in session ID.|
 |`terminalInvoiceNumber`|String|8|O |Used for Pre-authorization completion & cancellation transaction (Mandatory field for VConversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee. |
 |`se`|String|10|O|Value would be populated incase of Amex transactions.|
-|`printChargeslip`|String|1|Ooid transaction).|
-|`cardLastFourDigit`|String|4|O|Used for Pre-authorization completion & cancellation transaction.|
-|`maskedCardNumber`|String|21|M|Firstor Pre-authorization completion & cancellation transaction.|
-|`emailID`|String|50|O|Email ID  6 digit and last 4 digit. The numbers in between should be masked.|
+|`printChargeslip`|String|1|O| To enable charge slip printing - Y or N ( Default mode = Y ).|
+|`cardLastFourDigit`|String|4|O| Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction. |
+|`maskedCardNumber`|String|21|M|First 6 digit and last 4 digit. The numbers in between should be masked.|
+|`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable.
 |`applicationVersionNumber`|String|10|M|Version number of terminal application used.|
 |`aTID`|String|8|M|Acquirer TID (Terminal ID).|
 |`aMID`|String|15|M|Acquirer MID (Merchant ID).|
-|`authCode`|String|8|O|Used fon which email needs to be received.|
+|`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
 |`billerID`|String|10|O|Biller ID received. |
-|`dccFlag `|String|1|O|DCC |Print Chargeslip - Y or N  ( Default mode is Y ).|
+|`dccFlag`|String|1|O| DCC Conversion flag - Y or N.|
 
 
 ### Response in Payload
@@ -431,27 +430,27 @@ The table below identifies the required properties in the response message
 |`responseCode`|String|12|M|Host Response code, it has response message.|
 |`batchNumber`|String|6|M|Terminal Batch Number.|
 |`cardType`|String|10|M|Type of card.|
-|`rrn`|String|12|M|RRN received from host.|
+|`rrn`|String|12|M|The same value received in the original transaction response needs to be submitted across.|
 |`se`|String|10|O|Value would be populated incase of Amex transactions.|
 |`emv`|String|256|O|EMV data like TC , Application identifier, Application Name, TSI, etc.|
 |`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC)<br> transactions such as:<br> - Installment / EMI Sale <br>- Installment / EMI Void <br>Flag is defined as:<br>0 = Non-EMI (Non-installment / Non-EMI)<br> 1 = EMI (Installment / EMI).|
 |`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
 |`pinVerified`|String|3|O|Yes= when PIN was entered <br> No = when pin was not prompted.|
 |`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
-|`billerID`|String|10|O|Same as request.|
+|`billerID`|String|10|O|Biller ID received.|
 |`SspecificIndicator `|String|3|O|To be used for BBPS (Bharat Bill Payment System).|
 |`merchantUniqueNumber`|String|20|O|Same as request. |
 |`suppressPrintChargeslip `|String|2|O|To suppress charge slip printing for financial transactions, to be set as “Yes” or “No”.|
 |`emi`|String|20|O|Installment / EMI details<br> - Installment / EMI flag is 1/0 .<br> - Installment / EMI reference number<br> generated is 8 bytes.<br> - Tenure, discount amount, product amount,<br> Installment / EMI amount per month.|
 |`consumerNumber`|String|20|M|Consumer number ( CRN ) The value that is populated in statement of the session ID.|
-|`cardLastFourDigit`|String|4|O|Used for Pre-Authorization completion and cancellation.|
+|`cardLastFourDigit`|String|4|O| Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction. |
 |`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable. |
 |`cardTxnMode`|String|3|O|Transaction Mode.|
 |`purchaseAmount `|String|10|O|Purchase amount.|
 |`cashBackAmount`|String|10|O| Transaction cash back amount.|
 |`nacStatus `|String|3|O|Identifies the network status <br> - True = private network <br> - False = public network.|
 |`cardExpDate`|String|4|O|Transaction card expire date.|
-|`dccFlag`|String|1|O|DCC Conversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee.|
+|`dccFlag`|String|1|O| DCC Conversion flag - Y or N.|
 |`printChargeslip`|String|1|O| To enable charge slip printing - Y or N ( Default mode = Y ).|
 
 
