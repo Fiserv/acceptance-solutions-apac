@@ -18,9 +18,7 @@ System Requirements to setup USB / Static Wi-fi
  <li> Get a list of available port name and select comm port no </li>
  <li> Open VSP (Virtual Serial Port ) </li>
  <li> PAX Use the following detail for serial communication </li>
- </ul>
- 	<ul>   
-            <li> BaudRate – 9600 </li>
+<li> BaudRate – 9600 </li>
             <li> Partity – NONE </li>
             <li> StopBits – 1 </li>
             <li> DataBits – 8 </li>
@@ -32,8 +30,9 @@ System Requirements to setup USB / Static Wi-fi
             <li> Go to ECR Preference settings menu enable ECR option and select the ECR type as USB </li>
             <li> Connect ECR and the terminal by RS232 </li>
             <li> Connect the desired cable (USB) to PC </li>
-            <li> Trigger transactions from PC application to check the line status </li>
-	 </ul>
+            <li> Trigger transactions from PC application to check the line status
+            </li>
+          </ul>
 
 
    For digital transactions, the supported functionalities are listed below.
