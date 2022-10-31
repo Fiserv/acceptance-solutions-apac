@@ -17,8 +17,8 @@ System Requirements to setup USB / Static Wi-fi
  <li> Use any serial lib for java that should support window platform </li>
  <li> Get a list of available port name and select comm port no </li>
  <li> Open VSP (Virtual Serial Port ) </li>
- <li> PAX Use the following detail for serial communication 
- 
+ <li> PAX Use the following detail for serial communication </li>
+ </ul>
  	<ul>   
             <li> BaudRate – 9600 </li>
             <li> Partity – NONE </li>
@@ -34,8 +34,6 @@ System Requirements to setup USB / Static Wi-fi
             <li> Connect the desired cable (USB) to PC </li>
             <li> Trigger transactions from PC application to check the line status </li>
 	 </ul>
-	</li>
-</ul>
 
 
    For digital transactions, the supported functionalities are listed below.
