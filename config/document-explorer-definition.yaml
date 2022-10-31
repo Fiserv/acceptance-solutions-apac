@@ -63,7 +63,7 @@
               link: docs/APIs/PaymentAPI/Refund.md
             - title: Void
               link: docs/APIs/PaymentAPI/Void.md
-            - title: Instalment / EMI Sale
+            - title: Installment / EMI Sale
               link: docs/APIs/PaymentAPI/EMISale.md
             - title: Transaction Inquiry
               link: docs/APIs/PaymentAPI/TransactionStatusCheck.md
