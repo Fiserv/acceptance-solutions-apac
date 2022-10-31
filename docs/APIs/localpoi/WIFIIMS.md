@@ -19,7 +19,7 @@ System Requirements to setup USB / Static Wi-fi
  <li> Open VSP (Virtual Serial Port ) </li>
  <li> PAX Use the following detail for serial communication </li>
  </ul>
-    <ul> 
+    <ul>   
             <li> BaudRate – 9600 </li>
             <li> Partity – NONE </li>
             <li> StopBits – 1 </li>
@@ -244,12 +244,12 @@ dTransale",
 ```
 ### Pre-Authorization Completion Request
 ```json
-{",
+{
     "base24Request": {
         "functionCode": "03",
         "customerNum": "20000",
         "workflow": "CardTransaction",
-        "transaction_type": "Pre-auth comp
+        "transaction_type": "Pre-auth comp",
         "cardLastFourDigit": "0010",
         "suppressPrintChargeSlips": "n",
         "userDefinedFields": "40000",
@@ -483,12 +483,12 @@ The table below identifies the required properties in the request message
         "mrn": "888888",
         "pinVerified": "0",
         "posEntryMode": "INSERT",
-        "responseCode": "Transacti,
+        "responseCode": "Transaction Success",
         "terminalInvoiceNo": "2",
         "totalTxnAmount": "40000",
         "transactionCurrency": "INR",
         "transactionMode": "Card",
-        "userDefinedFields": "50000"on Success",
+        "userDefinedFields": "50000", 
         "rrn": "000000000002",
         "singFree": "1",
         "source": "TILL",
