@@ -32,9 +32,8 @@ System Requirements to setup USB / Static Wi-fi
             <li> Go to ECR Preference settings menu enable ECR option and select the ECR type as USB </li>
             <li> Connect ECR and the terminal by RS232 </li>
             <li> Connect the desired cable (USB) to PC </li>
-            <li> Trigger transactions from PC application to check the line status
-            </li>
-          </ul>
+            <li> Trigger transactions from PC application to check the line status </li>
+    </ul>
 
 
    For digital transactions, the supported functionalities are listed below.
