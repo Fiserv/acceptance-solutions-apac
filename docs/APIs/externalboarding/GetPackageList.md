@@ -351,14 +351,6 @@ The table contains the mandatory fields required for a successful request. The f
 }
 ```
 
-### Response
-| Variable | Type | Length |  Mandatory /Optional / Conditional ( M / O / C) | Description/Values |
-| -------- | ------- | -- | ------------ | ------------------ |
-| `Id` | String | 20 | M | Identification Number |
-
-
-
-
 The table below provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
