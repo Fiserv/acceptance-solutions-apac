@@ -158,15 +158,8 @@ The table below contains the mandatory fields required for a successful request.
 }
 ```
 
-### Response
-| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C)  | Description/Values |
-| -------- | ------- | -- | ------------ | ------------------ |
-| `merchantId` | *string* | 20 | M | Merchant ID |
 
-
-
-
-THe table below provides the list of application's error code and its description.
+The table below provides the list of application's error code and its description.
 
 | ErrorCode |  Description/Values |
 | --------  | ------------------ |
