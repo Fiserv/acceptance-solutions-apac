@@ -48,13 +48,6 @@ The table below contains the mandatory fields required for a successful request.
 }
 ```
 
-### Response
-| Variable | Type | Length |  Mandatory/Optional/Conditional  | Description/Values |
-| -------- | ------- | -- | ------------ | ------------------ |
-
-
-
-
 
 The table below provides the list of application's error code and its description.
 
