@@ -140,37 +140,37 @@ featuredFeatures:
         type: "post"        
         path: "/Externalboarding/secure/document/{appUrn}"
       - relatedAPI: 
-        title: Mid Inquiry
+        title: MID - Inquiry
         description: API to fetch details of existing Merchant IDs (MIDs).
         type: "get"        
         path: "/Externalboarding/secure/refmid/{appType}/{refmid}"
       - relatedAPI: 
-        title: Submit New Merchant
+        title: SUBMIT - New Merchant
         description: API that support submission of boarding applications for new merchants.
         type: "post"        
         path: "/Externalboarding/secure/newmid"
       - relatedAPI: 
-        title: Submit Additional Outlet
+        title: SUBMIT - Additional Outlet
         description: API for submission of boarding application for additional trading outlet / location.
         type: "post"        
         path: "/Externalboarding/secure/addmid"
       - relatedAPI: 
-        title: Submit Additional Device
+        title: SUBMIT - Additional Device
         description: API for submission of additional device request for an existing merchant.
         type: "post"        
         path: "/Externalboarding/secure/addtid"
       - relatedAPI: 
-        title: Submit Single MID Payfac
+        title: SUBMIT - Single MID Payfac
         description: API for submission of application for new single MID Payfac merchants.
         type: "post"        
         path: "/Externalboarding/secure/newmid"
       - relatedAPI: 
-        title: Submit Multiple MID Payfac
+        title: SUBMIT - Multiple MID Payfac
         description: API for submission of application for new multiple MID Payfac merchants.
         type: "post"        
         path: "/Externalboarding/secure/newmid"
       - relatedAPI: 
-        title: Application Status Enquiry
+        title: SUBMIT - Application Status Enquiry
         description: Used to find out on latest status of any merchant boarding application that is in progress.
         type: "get"        
         path: "/Externalboarding/secure/appstatus/{appUrn}"
