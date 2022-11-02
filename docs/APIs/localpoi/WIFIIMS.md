@@ -725,7 +725,7 @@ The table below identifies the required properties in the response message
 |`consumerNumber`|String|20|M|Consumer number ( CRN )The value that is populated in statement of the session ID.|
 |`cardLastFourDigit`|String|4|O|Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction.|
 |`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable.|
-|`cardTxnMode`|Strin|O| Transaction cashback amount.|
+|`cardTxnMode`|String|10|O| Transaction cashback amount.|
 |`nacStatus `|String|3|O|Identifies the network status <br> - True = private network <br> - False = public network.|g|3|O|Transaction Mode.|
 |`purchaseAmount `|String|10|O|Purchase amount .|
 |`cashBackAmount`|String|10|O|Transaction cashback amount.|
