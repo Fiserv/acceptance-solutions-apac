@@ -165,7 +165,7 @@ featuredFeatures:
         type: "post"        
         path: "/Externalboarding/secure/newmid"
       - relatedAPI: 
-        title: SUBMIT - Multiple MID Payfac
+        title: SUBMIT - Multi MID Payfac
         description: API for submission of application for new multiple MID Payfac merchants.
         type: "post"        
         path: "/Externalboarding/secure/newmid"
