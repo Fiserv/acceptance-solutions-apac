@@ -150,15 +150,15 @@ featuredFeatures:
         type: "post"        
         path: "/Externalboarding/secure/newmid"
       - relatedAPI: 
-        title: Submit Additional Device
-        description: API for submission of additional device request for an existing merchant.
-        type: "post"        
-        path: "/Externalboarding/secure/addtid"
-      - relatedAPI: 
         title: Submit Additional Outlet
         description: API for submission of boarding application for additional trading outlet / location.
         type: "post"        
         path: "/Externalboarding/secure/addmid"
+      - relatedAPI: 
+        title: Submit Additional Device
+        description: API for submission of additional device request for an existing merchant.
+        type: "post"        
+        path: "/Externalboarding/secure/addtid"
       - relatedAPI: 
         title: Submit Single MID Payfac
         description: API for submission of application for new single MID Payfac merchants.
