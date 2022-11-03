@@ -13,35 +13,32 @@ USB / Static Wi-fi is an integration between system to APOS device. E.g., Biller
 Financial payment transactions supported by USB / Static Wi-fi to biller: Sale, PreAuth Sale, PreAuth Completion, Transaction Status Check, EMI Sale, Void, Settlement, Bharat QR code generation.
 
 ## How it works
+
 System Requirements to setup USB / Static Wi-fi
 
-<body>
-        .  OS: Windows 8 and above <br>
-        	Cable: Micro USB Data Cable for RS232 Serial communication.<br>
-        .	Wi-Fi: Same Wi-Fi connectivity for Socket communication for Both PAX and Integrating APPs<br>
-        .	JDK Version: JDK 1.8.0 version or above (64 bit or 32 bit)<br>
-        .	Other Libs: (Available in Windows as javax.mail.jar)<br>
-        .	Use any serial lib for java that should support window platform<br>
-        .	Get a list of available port name and select comm port no<br>
-        .	Open VSP (Virtual Serial Port ) <br>
-        .	PAX Use the following detail for serial communication <br>
-                .	BaudRate – 9600 <br>
-                .	Partity – NONE <br>
-                .	StopBits – 1 <br>
-                .	DataBits – 8 <br>
-                .	Use The JAVA NIO Channels or Classic Input/Output Streams to read and write data 
-                .	Bluetooth Setup <br>
-                .	POS terminal and PC Client should be connected. Then we send some information from PC   to POS terminal by ECR-Bluetooth <br>
-                .	User should choose a paired Bluetooth device as our ECR’s target device after
-                    we select the Type-Bluetooth as our ECR communication type. If the device, we want to choose was not paired, we must pair it at first, then choose the device as our target device<br>
-                .	System Requirements to setup USB / Static Wi-fi <br>
-                .	Download and install the desired MCommerce app (Full Download)<br>
-                .	Full Download A920 integration kit in your system<br>
-                .	Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download &     Login)<br>
-                .	Go to ECR Preference settings menu enable ECR option and select the ECR type as USB<br>
-                .	Connect ECR and the terminal by RS232<br>
-                .	Connect the desired cable (USB) to PC<br>
-                .   Trigger transactions from PC application to check the line status<br>
+ - OS: Windows 8 and above
+	 Cable: Micro USB Data Cable for RS232 Serial communication. 
+ - Wi-Fi: Same Wi-Fi connectivity  for Socket communication for Both PAX and Integrating APPs 
+ - JDK Version: JDK 1.8.0 version or above (64 bit or 32 bit) 
+ - Other Libs: (Available in Windows as javax.mail.jar) 
+ - Use any serial lib for java that should support window platform 
+ - Get a list of available port name and select comm port no 
+ - Open VSP (Virtual Serial Port ) 
+ - PAX Use the following detail for serial communication 
+   -  BaudRate – 9600 
+   - Partity – NONE 
+   - StopBits – 1 
+   - DataBits – 8 
+   - Use The JAVA NIO Channels or Classic Input/Output  Streams to read and write data 
+   - System Requirements to setup USB / Static Wi-fi 
+   - Download and install the desired MCommerce app (Full Download) 
+   - Full Download A920 integration kit in your system 
+   - Perform Standard Initialization steps. (Key Injection, Initialization, TMK Download Login) 
+   - Go to ECR Preference settings menu enable ECR option and select the ECR type as USB 
+   - Connect ECR and the terminal by RS232 
+   - Connect the desired cable (USB) to PC 
+   - Trigger transactions from PC application to check the line status
+            
 
 For digital transactions, the supported functionalities are listed below.
 
@@ -335,7 +332,7 @@ The table below identifies the required properties in the request message
 |`emi`|String|20|O|EMI details – emi flag is 1/0 
 | | | | | EMI reference number generated is 8 bytes |
 | | | | |Tenure, discount amount, product amount, EMI per month.|
-|`checksum`|String|10|O (Mandatory for Transaction check status transaction)|Checksum for "data" field. Use SHA256 method to calculate “data” field.|
+|`checksum`|String|10|O |Checksum for "data" field. Use SHA256 method to calculate “data” field (Mandatory for Transaction check status transaction).|
 
 
 
