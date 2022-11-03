@@ -3,7 +3,7 @@
 <html>
 <body>
 
-<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg " width="1000">
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg " width="1185">
 
 
 </body>
@@ -32,7 +32,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
 
 <BR/>
 
-<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg " width="1000">
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg " width="1185">
 
 
 # Cloud Based Integration Checklist
@@ -57,7 +57,7 @@ Handy tips before you begin, we would recommend:
 
 <BR/>
 
-<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg " width="1000">
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg " width="1185">
 
 
 # Step 3: Define
@@ -69,7 +69,7 @@ Handy tips before you begin, we would recommend:
    - Who are the users, and what are their integration requirements to be utilised with point of sale (POS) systems?
    - What are you trying to achieve from a customer experience, operational and reporting perspective?
    - When is your intended target launch date?
-2. Decide on the integration approach
+2. Decide on the integration approac
 3. Do reach out to your account manager to apply for test terminal(s), with information that will help us assist you better:-
    - No. of test terminals required
    - Define which payment modes are required
@@ -78,7 +78,7 @@ Handy tips before you begin, we would recommend:
 
 <BR/>
 
-<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos7.jpg " width="1000">
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos7.jpg " width="1185">
 
 # Step 4: Integrate
 ## Break the big plan into small steps
@@ -98,7 +98,7 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
 
 <BR/>
 
-<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg " width="1000">
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg " width="1185">
 
 
 # Step 5: Test
@@ -117,7 +117,7 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
 
 <BR/>
 
-<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos9.jpg " width="1000">
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos9.jpg " width="1185">
 
 # Step 6: Activate
 ## Deploy & Go-Live
