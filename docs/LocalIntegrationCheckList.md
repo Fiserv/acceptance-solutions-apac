@@ -1,6 +1,6 @@
 # Local Based Integration Checklist
 
-![pos3 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg "pos3 logo")
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg " width="1185">
 
 ### Local Based Integration Use Cases 
 
@@ -25,7 +25,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
 <BR/>
 
 
-![pos5 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg "pos5 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg " width="1185">
 
 
 ### Welcome to Fiserv Local Based integration solution
@@ -61,7 +61,7 @@ Before you begin, both the consumer application and the parent app must be insta
 4. Check if your appointed point of sale (POS) provider had been certified with Fiserv [here](./?path=docs/LocalPOI.md&branch=develop).
 
 
-![pos6 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg "pos6 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg " width="1185">
 
 # Step 3: Define
 ## Who, What and When?
@@ -81,7 +81,7 @@ Before you begin, both the consumer application and the parent app must be insta
 
 <BR/>
 
-![pos7 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos7.jpg "pos7 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos7.jpg " width="1185">
 
 # Step 4: Integrate
 ## Break the big plan into small steps
@@ -98,7 +98,7 @@ For any clarifications or support required on technical integration, do reach ou
 <div style="background-color:grey;"><b>Handy Tips</b>: You may wish to consider discussing early with your team on which test scenarios would be required. The test scenarios are typically based on your daily operational needs. (Eg.which are your customers’ most used payment modes.)</div>
 
 
-![pos8 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg "pos8 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg " width="1185">
 
 
 # Step 5: Test
@@ -117,7 +117,7 @@ For any clarifications or support required on technical integration, do reach ou
 
 <BR/>
 
-![pos9 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos9.jpg "pos9 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos9.jpg " width="1185">
 
 # Step 6: Activate
 ## Deploy & Go-Live
