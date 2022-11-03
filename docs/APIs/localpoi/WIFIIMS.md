@@ -188,23 +188,22 @@ For card transactions, the supported functionalities are listed below.
 | ---------- |---------------------- | ------------------ |
 | `dataType` | Indicate the request data type.| active |  a ACK message
 
+- Terminal will reply a ACK message.
+
 ### Payload Examples - Request
 
-dTransale",
-
-        - Terminal will reply
-    "base24Request": {
-        "functionCode
 ### Sale Request
-```
+```json
 {
-    "workflow": "Car": s"
-        "customerNum": "20000",
-        "suppressPrintCha"01",Slips": "n",
-        "userDefinedFieldrge: "40000",
-        "totalTxnAmouction",
-    "transaction_type": "sant": "300",
-        "mrn": "RS1113"
+   "workflow": "CardTransaction",
+    "transaction_type": "sale",
+    "base24Request": {
+      "functionCode": "01",
+      "customerNum": "20000",
+      "suppressPrintChargeSlips": "n",
+      "userDefinedFields": "40000",
+      "totalTxnAmount": "300",
+      "mrn": "RS1113"
     }
 }
 ```
@@ -214,12 +213,12 @@ dTransale",
     "workflow": "CardTransaction",
     "transaction_type": "preAuth",
     "base24Request": {
-        "functionCode": "02",
-        "customerNum": "20000",
-        "suppressPrintChargeSlips": "n",
-        "userDefinedFields": "40000",
-        "totalTxnAmount": "20000",
-        "mrn": "34343434"
+      "functionCode": "02",
+      "customerNum": "20000",
+      "suppressPrintChargeSlips": "n",
+      "userDefinedFields": "40000",
+      "totalTxnAmount": "20000",
+      "mrn": "34343434"
     }
 }
 ```
@@ -229,32 +228,32 @@ dTransale",
     "workflow": "CardTransaction",
     "transaction_type": "void",
     "base24Request": {
-        "functionCode": "05",
-        "customerNum": "20000",
-        "suppressPrintChargeSlips": "n",
-        "userDefinedFields": "40000",
-        "terminalInvoiceNo": "000038",
-        "totalTxnAmount": "",
-        "mrn": "34343434"
+      "functionCode": "05",
+      "customerNum": "20000",
+      "suppressPrintChargeSlips": "n",
+      "userDefinedFields": "40000",
+      "terminalInvoiceNo": "000038",
+      "totalTxnAmount": "",
+      "mrn": "34343434"
     }
 }
 ```
 ### Pre-Authorization Completion Request
 ```json
 {
-    "base24Request": {
-        "functionCode": "03",
-        "customerNum": "20000",
-        "workflow": "CardTransaction",
-        "transaction_type": "Pre-auth comp",
-        "cardLastFourDigit": "0010",
-        "suppressPrintChargeSlips": "n",
-        "userDefinedFields": "40000",
-        "authCode": "000038",
-        "terminalInvoiceNo": "000038",
-        "totalTxnAmount": "20000",
-        "mrn": "34343434"
-    }
+  "base24Request": {
+    "functionCode": "03",
+    "customerNum": "20000",
+    "workflow": "CardTransaction",
+    "transaction_type": "Pre-auth comp",
+    "cardLastFourDigit": "0010",
+    "suppressPrintChargeSlips": "n",
+    "userDefinedFields": "40000",
+    "authCode": "000038",
+    "terminalInvoiceNo": "000038",
+    "totalTxnAmount": "20000",
+    "mrn": "34343434"
+  }
 }
 ```
 ### Installment / EMI Request
@@ -282,9 +281,9 @@ dTransale",
     "workflow": "CardTransaction",
     "transaction_type": "transaction enquiry",
     "base24Request": {
-        "functionCode": "11",
-        "terminalInvoiceNo": "000088",
-        "mrn": "1231412"
+     "functionCode": "11",
+     "terminalInvoiceNo": "000088",
+     "mrn": "1231412"
     }
 }
 ```
@@ -295,8 +294,8 @@ dTransale",
     "workflow": "CardTransaction",
     "transaction_type": "Settelment",
     "base24Request": {
-        "functionCode": "12",
-        "suppressPrintChargeSlips": "n"
+      "functionCode": "12",
+      "suppressPrintChargeSlips": "n"
     }
 }
 ```
