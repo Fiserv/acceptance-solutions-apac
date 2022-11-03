@@ -74,7 +74,7 @@ imspremiumservice@icicims.com</a> <br>
 •  Contact: 1800-243-444<br>
 •  Operational hours: POS Support: 24/7 support<br>
 •  Operational hours: Digital / Online Support: 19/7 support<br>
-•  Sales Enquiries Contact: <a href="mailto: merchantservicesAU@fiserv.com">merchantservicesAU@fiserv.com</a>
+•  Sales Enquiries Contact: 1800-243-444
  </td>
 </tr >
 <tr style="height: 36px;">
