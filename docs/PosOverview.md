@@ -32,5 +32,5 @@ In summary, a quick guide below helps you to kick start your integration journey
 
 ## Getting Started
 
-![pos2 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos2.jpg "pos2 logo")
+![pos2 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos2.gif "pos2 logo")
 
