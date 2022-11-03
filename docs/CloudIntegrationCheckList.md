@@ -1,6 +1,13 @@
 # Cloud Based Integration Checklist
+<!DOCTYPE html>
+<html>
+<body>
 
-![pos3 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg "pos3 logo")
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg " width="1000">
+
+
+</body>
+</html>
 
 ### Cloud Based Integration Use Cases
 
@@ -25,7 +32,8 @@ From inventory tracking, reservations, billing and reconciliation applications t
 
 <BR/>
 
-![pos5 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg "pos5 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg " width="1000">
+
 
 # Cloud Based Integration Checklist
 
@@ -49,7 +57,7 @@ Handy tips before you begin, we would recommend:
 
 <BR/>
 
-![pos6 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg "pos6 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos6.jpg " width="1000">
 
 
 # Step 3: Define
@@ -70,7 +78,7 @@ Handy tips before you begin, we would recommend:
 
 <BR/>
 
-![pos7 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos7.jpg "pos7 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos7.jpg " width="1000">
 
 # Step 4: Integrate
 ## Break the big plan into small steps
@@ -90,7 +98,7 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
 
 <BR/>
 
-![pos8 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg "pos8 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos8.jpg " width="1000">
 
 
 # Step 5: Test
@@ -109,7 +117,7 @@ The test scenarios are typically based on your daily operational needs. (Eg.whic
 
 <BR/>
 
-![pos9 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos9.jpg "pos9 logo") 
+<img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos9.jpg " width="1000">
 
 # Step 6: Activate
 ## Deploy & Go-Live
