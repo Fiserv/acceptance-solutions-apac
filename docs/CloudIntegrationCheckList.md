@@ -15,9 +15,9 @@ Our cloud-based integration APIs facilitates to connect with your in-house centr
 
 From inventory tracking, reservations, billing and reconciliation applications that your business is using, our cloud-based API opens many possibilities for your business to cater to your business’ payment eco-system.
 
-<BR/>
+<BR/> <br>
 
-![pos4 logo](https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos4.jpg "pos4 logo")
+
 
 #### Use case considerations on how our Cloud integration can support your ecosystem:
 
