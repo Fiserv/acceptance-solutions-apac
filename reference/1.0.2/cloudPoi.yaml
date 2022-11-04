@@ -140,22 +140,19 @@ paths:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status300"
-              
         "500":
           description: Internal Server Error
           content:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status500"
-             
         "502":
           description: Request Timed Out
           content:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status502"
-              
-        "404":
+         "404":
           description: Not Found
           content:
             application/json:
