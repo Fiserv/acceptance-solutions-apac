@@ -39,45 +39,31 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Response200"
-              examples:
-                Login Sample:
-                  $ref: "#/components/examples/LoginRs200"
         '402':
           description:  "Unauthorized"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Response402"
-              examples:
-                Login Sample:
-                  $ref: "#/components/examples/LoginRs402"
         '300':
           description:  "Request failure"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response402"
-              examples:
-                Login Sample:
-                  $ref: "#/components/examples/LoginRs300"
+                $ref: "#/components/schemas/Response300"
         '404':
           description:  "Not found"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response402"
-              examples:
-                Login Sample:
-                  $ref: "#/components/examples/LoginRs404"
+                $ref: "#/components/schemas/Response404"
         '500':
           description:  "Internal Server Error"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response402"
-              examples:
-                Login Sample:
-                  $ref: "#/components/examples/LoginRs500"
+                $ref: "#/components/schemas/Response500"
+              
 
   /boardinggateway/cloudpoidp/PosPush/nonOpiProcessAmount:
     post:
@@ -148,45 +134,34 @@ paths:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status401"
-              examples:
-                "401":
-                  $ref: '#/components/examples/401-Premier'
         "300":
           description: Request Failure
           content:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status300"
-              examples:
-                "300":
-                  $ref: '#/components/examples/300-Premier'
+              
         "500":
           description: Internal Server Error
           content:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status500"
-              examples:
-                "500":
-                  $ref: '#/components/examples/500-Premier'
+             
         "502":
           description: Request Timed Out
           content:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status502"
-              examples:
-                "502":
-                  $ref: '#/components/examples/502-Premier'
+              
         "404":
           description: Not Found
           content:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status404"
-              examples:
-                "404":
-                  $ref: '#/components/examples/404-Premier'
+           
 components:
   parameters:
     ApiKeyHeader:
