@@ -152,12 +152,12 @@ paths:
             application/json:
               schema:
                  $ref: "#/components/schemas/Status502"
-         "404":
-          description: Not Found
-          content:
-            application/json:
-              schema:
-                 $ref: "#/components/schemas/Status404"
+        "404":
+            description: Not Found
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Status404"
            
 components:
   parameters:
@@ -438,49 +438,69 @@ components:
       properties:
         statusCode:
           type: integer
-          format: int32
-          example: 300
           description:  status code
+          example: "300"
         message:
           type: string
-          description: Request Failure
-          example: Request Failure
+          description: "Request Failure"
+          example: "Request Failure"
+    Response300:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/Status300"
     Status404:
       type: object
       properties:
         statusCode:
           type: integer
           format: int32
-          example: 404
-          description:  status code
+          description: status code
+          example: "404"
         message:
           type: string
-          description: Not Found
-          example: Not Found
+          description: "Not Found"
+          example: "Not Found"
+    Response404:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/Status404"
+     
     Status500:
       type: object
       properties:
         statusCode:
           type: integer
           format: int32
-          example: 500
-          description:  status code
+          description: status code
+          example: "500"
         message:
           type: string
-          description: Internal Server Error
-          example: Internal Server Error
+          description: "Internal Server Error"
+          example: "Internal Server Error"
+    Response500:
+        type: object
+        properties:
+         status:
+          $ref: "#/components/schemas/Status500"
     Status502:
       type: object
       properties:
         statusCode:
           type: integer
           format: int32
-          example: 502
           description:  status code
+          example: "502"
         message:
           type: string
-          description: Request Timed Out
-          example: Request Timed Out
+          description: "Request Timed Out"
+          example: "Request Timed Out"
+    Response502:
+        type: object
+        properties:
+         status:
+          $ref: "#/components/schemas/Status502"
     Status1:
       type: object
       properties:
