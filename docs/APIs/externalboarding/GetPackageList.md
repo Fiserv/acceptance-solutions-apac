@@ -42,19 +42,19 @@ The table contains the mandatory fields required for a successful request. The f
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-|`appType`|Alphanumeric|8|M|Fixed Value **API**|
-|`salesId`|Alphanumeric|70|M|User Credential created for each partner|
-|`channelCode`|Alphanumeric|10|M|Static channel code shared with each partner|
-|`mccCode`|Numeric|20|M|Unique value assigned for each industry|
-|`merchantType`|Alphanumeric|20|M|Type of merchant whether Small or Large Merchant|
+|`appType`|Alphanumeric|8|M|Fixed Value API.|
+|`salesId`|Alphanumeric|70|M|User Credential created for each partner.|
+|`channelCode`|Alphanumeric|10|M|Static channel code shared with each partner.|
+|`mccCode`|Numeric|20|M|Unique value assigned for each industry.|
+|`merchantType`|Alphanumeric|20|M|Type of merchant whether Small or Large Merchant.|
 |`acceptanceType`|Alphanumeric|10|M|Static Value: 'ECOM' / 'POSMOB'|
-|`typeOfBusiness`|Alphanumeric|50|M|Type of bussiness means Sole Proprieter, Individual etc|
-|`international`|Alphanumeric|3|O|Applicable if the merchant supports international Card Transactions|
-|`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder|
+|`typeOfBusiness`|Alphanumeric|50|M|Type of bussiness means Sole Proprieter, Individual etc.|
+|`international`|Alphanumeric|3|O|Applicable if the merchant supports international Card Transactions.|
+|`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder.|
 |`dcc`|Alphanumeric|3|O|If enable for foreign rate conversion value return Y / N.|
 |`fundingCurrency`|Alphanumeric|8|M|The currency settled to the merchant NET_INR, NET_USD, NET_AUD etc|
 |`boardingType`|Alphanumeric|20|M|Type of merchant: New MID / Add MID / Add TID|
-|`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover|
+|`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover.|
 
 
 
@@ -353,21 +353,21 @@ The table contains the mandatory fields required for a successful request. The f
 
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
-|`103`| Data Not Found.Please contact Application Support Team |
-|`105`| Given RM details not found |
+|`103`| Data Not Found. Please contact Application Support Team |
+|`105`| Given RM details not found. |
 |`200`| Success |
-|`400`| Termial not in proper Status |
+|`400`| Termial not in proper Status. |
 |`401`| Unauthorized |
 |`405`| HttpClientError Exception |
-|`700`| No record found for given AppURN and Sales Id |
+|`700`| No record found for given AppURN and Sales Id. |
 |`900`| Invalid AppURN |
-|`901`| AppURN Not Match |
-|`902`| AppURN is mandatory |
-|`903`| Application already Submitted |
+|`901`| AppURN Not Match. |
+|`902`| AppURN is mandatory. |
+|`903`| Application already Submitted. |
 |`904`| Json Processing Error |
 |`905`| Json Parse Error |
 |`906`| Json Mapping Error |
-|`907`| Comments are empty |
-|`908`| App URN not matching |
+|`907`| Comments are empty. |
+|`908`| App URN not matching. |
