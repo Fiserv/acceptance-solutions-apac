@@ -105,7 +105,7 @@ featuredFeatures:
         description: API for submission of application for new multiple MID Payfac merchants.
         link: /docs/APIs/externalboarding/MultiMIDPayFac.md
       - relatedDoc: 
-        title: SUBMIT - Application Status Inquiry
+        title: Application Status Inquiry
         description: Used to find out on latest status of any merchant boarding application that is in progress.
         link: /docs/APIs/externalboarding/ApplicationStatusInquiry.md
     relatedAPIs:
@@ -170,7 +170,7 @@ featuredFeatures:
         type: "post"        
         path: "/boardinggateway/Externalboarding/secure/newmid"
       - relatedAPI: 
-        title: SUBMIT - Application Status Enquiry
+        title: Application Status Enquiry
         description: Used to find out on latest status of any merchant boarding application that is in progress.
         type: "get"        
         path: "/boardinggateway/Externalboarding/secure/appstatus/{appUrn}"
