@@ -29,7 +29,7 @@ The table below contains the mandatory fields required for a successful request.
 ### Request
 | Field Name |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
-| `appURN` | Alphanumeric | 30 | M | App URN retured as part of Create URN API |
+| `appURN` | Alphanumeric | 30 | M | App URN retured as part of Create URN API. |
 
 ### Successful Response Payload
 
@@ -84,12 +84,13 @@ The table below contains the mandatory fields required for a successful request.
 ```
 
 The table below provides the list of application's error code and its description.
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
 |`100`| Invalid Request |
-|`103`| Data Not Found.Please contact Application Support Team |  
+|`103`| Data Not Found. Please contact Application Support Team. |  
 |`200`| Success |
 |`400`| Generic Error |
 |`401`| Unauthorized |
-|`500`| Internal Error. Please contact Application Support Team |  
+|`500`| Internal Error. Please contact Application Support Team. |  
 
+ 
