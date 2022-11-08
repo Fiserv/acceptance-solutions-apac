@@ -117,7 +117,7 @@
                 link: docs/APIs/localpoi/InterAppIms.md
               - title: USB / Static Wi-Fi
                 link: docs/APIs/localpoi/WIFIIMS.md
-            - title: Rest of APAC
+            - title: SG / HK / MY
               sections:
               - title: Inter-Application Integration
                 link: docs/APIs/localpoi/InterAppFDMS.md
