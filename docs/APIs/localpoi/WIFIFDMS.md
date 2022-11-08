@@ -308,7 +308,7 @@ SHA256({"amt":"35900","detail":"Y","ecrRef":"1234567890123456"})
 ### Request
 The table below identifies the required properties in the request message
 
-| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
+| Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  | Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
 |`dataType`|String|2|M|01 - Sale (Sale, DCC). 
 | | | | | 02 - Pre-Authorization Sale. |
@@ -482,7 +482,7 @@ The table below identifies the required properties in the response message
 |`tvr`|String|10|O|Terminal Reference.|
 |`txndate`|Timestamp|10|M|Transaction date.|
 |`txntime`|Timestamp|10|M|Transaction time.|
-|`txnid`|String|10|M|Transaction Id.|
+|`txnid`|String|10|M|Transaction ID.|
 |`checksum`|String|50|O|Checksum for "data" field.Use SHA256 method to calculate “data” field.|
 |`acquirerName`|String|20|M|Acquirer Name.|
 |`emi`|String|20|O|EMI details – emi flag is 1/0 
@@ -494,7 +494,7 @@ The table below identifies the required properties in the response message
 
 
 The table below provides the list of error codes and description for this application.
-| ErrorCode |  Description/Values | Comments |
+| Error Code |  Description / Values | Comments |
 | --------  | ------------------ | ---------- |
 |`00`|Approved or completed successfully|Merchant should go ahead with reciept generation.|
 |`01`|Refer to card issuer, Cardholder to contact Issuing Bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
