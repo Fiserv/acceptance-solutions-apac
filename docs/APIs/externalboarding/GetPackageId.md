@@ -30,7 +30,7 @@ The table below contains the mandatory fields required for a successful request.
 The below table identifies the required properties in the request message
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
-|`packageId`|	String|	10	| M |	Package Id|
+|`packageId`|	String|	10	| M |	Package ID|
 
 
 
@@ -296,21 +296,21 @@ The below table identifies the required properties in the request message
 ```
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
-|`103`| Data Not Found. Please contact Application Support Team |
-|`105`| Given RM details not found |  
+|`103`| Data Not Found. Please contact Application Support Team. |
+|`105`| Given RM details not found. |  
 |`200`| Success |
-|`400`| Terminal not in Proper Status |
+|`400`| Terminal not in Proper Status. |
 |`401`| Unauthorized |
 |`405`| HttpClientErrorException |  
-|`700`| No record found for given AppURN and Sales Id |
+|`700`| No record found for given AppURN and Sales Id. |
 |`900`|  Invalid AppURN |  
-|`901`| AppURN Not Match |
-|`902`| AppURN is Mandatory |
-|`903`| Application already Submitted |  
+|`901`| AppURN Not Match. |
+|`902`| AppURN is Mandatory. |
+|`903`| Application already Submitted. |  
 |`904`| Json Processing Error |
 |`905`|  Json Parse Error |  
 |`906`| Json Mapping Error |
-|`907`| Comments are empty |
-|`908`| App URN not matching |
+|`907`| Comments are empty. |
+|`908`| App URN not matching. |
