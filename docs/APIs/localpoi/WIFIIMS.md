@@ -33,8 +33,7 @@ System Requirements to setup USB / Static Wi-fi
             
           
 
-
-   For digital transactions, the supported functionalities are listed below.
+For digital transactions, the supported functionalities are listed below.
 
    <table border="0">
   <tr>
@@ -67,6 +66,8 @@ System Requirements to setup USB / Static Wi-fi
      <td align="center">&#10004;</td>
   <td></td>
   </tr>
+</table>
+
 
 
 For card transactions, the supported functionalities are listed below.
@@ -734,7 +735,7 @@ The table below identifies the required properties in the response message
 
 
 The table below provides the list of error codes and description for this application.
-| ErrorCode |  Description / Values | Comments |
+| Error Code |  Description / Values | Comments |
 | --------  | ------------------ | -------------|
 |`00`|Balance is approved|Merchant should go ahead with reciept generation.|
 |`01`|Place Call|Contact Customer Support / Business Manager.|
