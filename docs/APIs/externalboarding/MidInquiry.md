@@ -33,7 +33,7 @@ The table below contains the mandatory fields required for a successful request.
 | Variable | Type      | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
 | -------- | ----------- | -- | ------------ | ------------------ |
 |`appType`|Alphanumeric|8|M|Fixed Value **API**|
-|`refMid`|Numeric|8|M|MID generated for the new application needs to be passed for generating Add MID & Add TID|
+|`refMid`|Numeric|8|M|MID generated for the new application needs to be passed for generating Add MID & Add TID.|
 
 
 
@@ -294,7 +294,7 @@ The table below contains the mandatory fields required for a successful request.
 
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |  
 |`200`| Success |
 |`400`| Generic Error |
