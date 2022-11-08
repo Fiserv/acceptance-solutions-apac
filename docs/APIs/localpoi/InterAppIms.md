@@ -326,14 +326,14 @@ The table below identifies the required properties in the request message
 
 | Variable | Type | Length | Mandatory / Optional / Conditional (M / O / C)  | Description / Values |
 | -------- | -------- | ----- | ------------------------------------------------------| ------------------------- |
-|`functionCode`|String|2| M|01 = Sale ( Sale, DCC ). |
-| | | | | 02 = Pre-Authorization. |
-| | | | | 03 = Pre-Authorization Completion. |
+|`functionCode`|String|2| M|01 = Sale ( Sale, DCC ) |
+| | | | | 02 = Pre-Authorization |
+| | | | | 03 = Pre-Authorization Completion |
 | | | | | 04 = Refund |
 | | | | | 05 = Void |
 | | | | | 06 = TIP | 
-| | | | | 07 = Cash @ POS. |
-| | | | | 08 = Installment/EMI Sale. |
+| | | | | 07 = Cash @ POS |
+| | | | | 08 = Installment/EMI Sale |
 | | | | | 11 = Settlement Transaction. |
 | | | | | 12 = Transaction status. |
 | | | | | 13 = UPI QR  Generation. | 
@@ -345,9 +345,9 @@ The table below identifies the required properties in the request message
 | | | | | 19 = Non-carded Transactions. |
 |`source`|String|10|O|APOS (Android Point of Sale), Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine).|
 |`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00".|
-| `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST).If CGST is included in the total amount. |
-| `IGST` | *string* | 10 | C | Integrated GST Including decimal (E.g. 10.00 for $10 IGST).If IGST is included in the total amount. |
-| `SGST` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 SGST).If SGST is included in the total amount. |
+| `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount. |
+| `IGST` | *string* | 10 | C | Integrated GST Including decimal (E.g. 10.00 for $10 IGST). If IGST is included in the total amount. |
+| `SGST` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 SGST). If SGST is included in the total amount. |
 |`billAmount`|String|10|O |Bill  amount  including decimal  (Mandatory for QR generation / Wallet Transactions).|
 |`merchantReferenceNumber`|String|14|M|Unique merchant number for reconcilation - Value to be populated in statement in FT Number.|
 |`emiReferenceNumber`|String|8|O |EMI reference number generated on mobile (Mandatory for EMI Transaction).|
