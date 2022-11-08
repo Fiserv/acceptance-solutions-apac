@@ -25,7 +25,7 @@ Path variabe :
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/msf/{msfId}`).
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional / Conditional  (M / O / C)  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional  (M / O / C)  | Description / Values |
 | -------- | :-------: | :--: | :------------: | ------------------ |
 | `msfId` | *Path variable* | 10 |  | Application Type |
 
@@ -51,7 +51,7 @@ The table below contains the mandatory fields required for a successful request.
 
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
 |`401` |Token not found|  
 |`200` |Success|
