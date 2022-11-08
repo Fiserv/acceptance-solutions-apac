@@ -23,9 +23,9 @@ Path variable -  packageId : 136
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=Externalboarding/secure/packages/{packageId}).
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional / Conditional  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-| `packageId` | *Path Variable* |  | M | package id |
+| `packageId` | *Path Variable* |  | M | package ID |
 
 
 
@@ -303,9 +303,9 @@ The table below contains the mandatory fields required for a successful request.
 ```
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
-|`401` |Token not found|  
+|`401` |Token not found. |  
 |`200` |Success|
 |`300` |Request Failure|
 |`500` |Internal Server Error|
