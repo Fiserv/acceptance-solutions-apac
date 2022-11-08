@@ -41,16 +41,16 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/se
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=post&path=/Externalboarding/secure/create).
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value **API** |
-| **KeySelection** |	 |	 | |	This is the object |
+| **KeySelection** |	 |	 | |	This is the object. |
 | `boardingType` | *Alphanumeric* |	20 |	M |	Type of merchant: NEWMID / ADDMID / ADDTID |
-| **MerchantDetails** | |	 |  |	This is the object |
-| `businessName` |	*Alphanumeric* |	64 | M | Trade Name of the Merchant |
-| `legalName` |	*Alphanumeric* |	64	| M	 | Legal Name of the Merchant |
-| `institutionId` |	*Numeric* |	10 | O | Institution number assigned to the institution |
-| `countryCode` |	*Numeric* |	10 | O	| Country code where the institution belongs  |
+| **MerchantDetails** | |	 |  |	This is the object. |
+| `businessName` |	*Alphanumeric* |	64 | M | Trade Name of the Merchant. |
+| `legalName` |	*Alphanumeric* |	64	| M	 | Legal Name of the Merchant. |
+| `institutionId` |	*Numeric* |	10 | O | Institution number assigned to the institution. |
+| `countryCode` |	*Numeric* |	10 | O	| Country code where the institution belongs.  |
 
 
 ### Successful Response Payload
@@ -161,10 +161,10 @@ The table below contains the mandatory fields required for a successful request.
 
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
-|`200`| Token not found | 
+|`200`| Token not found. | 
 |`401`| Unauthorized | 
 |`100`| Invalid Request | 
-|`702`| Unable to create merchant | 
-|`500`| Internal Error, Please contact application support team | 
+|`702`| Unable to create merchant. | 
+|`500`| Internal Error, Please contact application support team. | 
