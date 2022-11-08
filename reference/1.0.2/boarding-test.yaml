@@ -16,11 +16,11 @@ paths:
     get:
       tags:
       - Merchant Onboarding
-      summary: User Login
+      summary: Login
       description: In Merchant Onboarding API specifications for partners’ user login.
       operationId: getAuthJWTToken
       x-group-name:  Merchant Onboarding
-      x-proxy-name: User Login
+      x-proxy-name: Login
       x-default-example: Login Sample
       parameters:
       - $ref: "#/components/parameters/ApiKeyHeader"
@@ -78,11 +78,11 @@ paths:
     post:
       tags:
       - Merchant Onboarding
-      summary: New Merchant
+      summary: SUBMIT - New Merchant
       description: In Merchant Onboarding For merchant onboarding applications for new merchants / Single MID Payfac / Multi MID Payfacs.
-      operationId: submitapplication
+      operationId: SUBMIT - New Merchant
       x-group-name: Merchant Onboarding
-      x-proxy-name: Submit Application
+      x-proxy-name: SUBMIT - New Merchant
       x-default-example: New merchant
       parameters:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
@@ -180,11 +180,11 @@ paths:
     get:
       tags:
       - Merchant Onboarding
-      summary: Application Status
-      operationId: getAppStatus
+      summary: Application Status Inquiry
+      operationId: Application Status Inquiry
       description: In Merchant Onboarding Fetch the latest status of any onboarding application for merchants.
       x-group-name:  Merchant Onboarding
-      x-proxy-name: Get App Status
+      x-proxy-name: Application Status Inquiry
       x-default-example: AppStatus Sample
       parameters:
       - $ref: "#/components/parameters/ApiKeyHeader"
@@ -205,11 +205,11 @@ paths:
     get:
       tags:
       - Merchant Onboarding
-      summary: document Matrix 
+      summary: Get Document Matrix 
       description: In Merchant Onboarding Merchant documents list submitted to Fiserv for partner Credit Underwriting process.
-      operationId: getDocumentList
+      operationId: Get Document Matrix
       x-group-name: Merchant Onboarding
-      x-proxy-name: Get Document List
+      x-proxy-name: Get Document Matrix
       parameters:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
         - {$ref: "#/components/parameters/DocAndPkgRequestParam"}
@@ -246,11 +246,11 @@ paths:
     get:
       tags:
       - Merchant Onboarding
-      summary: Inquiry MID
+      summary: MID - Inquiry
       operationId: refForAdditionalMID
       description: In Merchant Onboarding Submit the application details for additional MID / TID for an existing merchant.
       x-group-name:  Merchant Onboarding
-      x-proxy-name: ADD MID / TID
+      x-proxy-name: MID - Inquiry
       x-default-example: refMid Sample
       parameters:
       - $ref: "#/components/parameters/ApiKeyHeader"
@@ -314,11 +314,11 @@ paths:
     post:
       tags:
       - Merchant Onboarding
-      summary: Create Application
+      summary: Create URN
       description: In Merchant Onboarding Documents for creating merchant onboarding application.
-      operationId: createapplication
+      operationId: Create URN
       x-group-name: Merchant Onboarding
-      x-proxy-name: Create Application
+      x-proxy-name: Create URN
       x-default-example: CreateApp Sample
       parameters:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
@@ -402,11 +402,11 @@ paths:
     post:
       tags:
       - Merchant Onboarding
-      summary: Document Upload
+      summary: Upload Document 
       description: In Merchant Onboarding Upload documents for merchant in subsequent onboarding application.
       operationId: uploadMerchantDocument
       x-group-name: Merchant Onboarding
-      x-proxy-name: Document Upload
+      x-proxy-name: Upload Document
       x-default-example: upload Sample
       parameters:
       - {$ref: "#/components/parameters/ApiKeyHeader"}
@@ -451,11 +451,11 @@ paths:
     post:
       tags:
       - Merchant Onboarding
-      summary: Additional Outlet
+      summary: SUBMIT - Additional Outlet
       description: In Merchant Onboarding Submit the application details for additional Outlet for an existing merchant.
       operationId: submitAdditionalMidApplication
       x-group-name: Merchant Onboarding
-      x-proxy-name: Additional Outlet
+      x-proxy-name: SUBMIT - Additional Outlet
       x-default-example: Sample addMid
       parameters:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
@@ -546,11 +546,11 @@ paths:
     post:
       tags:
       - Merchant Onboarding
-      summary: Additional Device
+      summary: SUBMIT - Additional Device
       description: In Merchant Onboarding Submit the application details for additional Device for an existing merchant.
       operationId: submitAdditionalTidApplication
       x-group-name: Merchant Onboarding
-      x-proxy-name: Additional Device
+      x-proxy-name: SUBMIT - Additional Device
       x-default-example: Sample Add TID
       parameters:
         - {$ref: "#/components/parameters/ApiKeyHeader"}
