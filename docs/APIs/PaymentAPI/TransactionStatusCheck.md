@@ -70,43 +70,43 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ### Request
 | Variable | Type | Length |  Mandatory / Optional/ Conditional <br>(M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-| `merchantId` | *string* | 15 | M | Merchant ID assigned. |
-| `ain` | *string* | 07 | M | Acquirer institution number. |
+| `merchantId` | *string* | 15 | M | Merchant ID assigned |
+| `ain` | *string* | 07 | M | Acquirer institution number |
 | `functionCode` | *string* | 02 | M | E.g. |
-|  |  |  |  | 00 = Sale  - Digital and Card. |
-|  |  |  |  | 01 = Sale - Card.|
-|  |  |  |  | 02 = Pre-Authorization. |
-|  |  |  |  | 03 = Pre-Authorization Completion. |
+|  |  |  |  | 00 = Sale  - Digital and Card |
+|  |  |  |  | 01 = Sale - Card|
+|  |  |  |  | 02 = Pre-Authorization |
+|  |  |  |  | 03 = Pre-Authorization Completion |
 |  |  |  |  | 04 = Refund|
 |  |  |  |  | 12 = Settlement |
-|  |  |  |  | 11 = Transaction Status Check (Inquiry). |
+|  |  |  |  | 11 = Transaction Status Check (Inquiry) |
 |  |  |  |  | 05 = Void |
 |  |  |  |  | 04 = Refund |
-| `terminalId` | *string* | 07 | M | Terminal ID. |
+| `terminalId` | *string* | 07 | M | Terminal ID |
 | `billerId` | *string* | 03 | M | Biller ID provided by Fiserv. |
-| `merchantRefNumber` | *string* | 14 | M | Unique number for each transaction. Inquiry transaction should have same MRN of original transaction.For BOCM pass the value as (50 bytes). |
-| `customerRefNumber` | *string* | 20 | O | Customer's Reference Number. |
+| `merchantRefNumber` | *string* | 14 | M | Unique number for each transaction. Inquiry transaction should have same MRN of original transaction. For BOCM pass the value as (50 bytes). |
+| `customerRefNumber` | *string* | 20 | O | Customer's Reference Number |
 | `authAmount` | *string* | 19 | M | Bill amount including decimal (E.g. 50.00 for $50 sale). Send 0.00 for inquiry transaction. |
 | `convFee` | *string* | 10 | C| Convenience Fee including decimal (E.g. 5.00 for $5 fee). To be sent if fee is charged. |
-| `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST).If CGST is included in the total amount. |
-| `IGST` | *string* | 10 | C | Integrated GST Including decimal (E.g. 10.00 for $10 IGST).If IGST is included in the total amount. |
-| `SGST` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 SGST).If SGST is included in the total amount. |
+| `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount. |
+| `IGST` | *string* | 10 | C | Integrated GST Including decimal (E.g. 10.00 for $10 IGST). If IGST is included in the total amount. |
+| `SGST` | *string* | 10 | C | State GST Including decimal (E.g. 100.00 for $10 SGST). If SGST is included in the total amount. |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts) including decimal (E.g. 57.00 for $57 sale). |
-| `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value). |
-| `reqDate` | *Date* | DDMMYYYY | M | Transaction initiated date. |
-| `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time. |
-| `tranDate` | *Date* | DDMMYYYY | C  |Original transaction date. |
-| `tranTime` | *Timestamp* | HHMMSS | C | Transaction Time. |
+| `tranCurrency` | *string* | 03 | M | Transaction Currency Code (3-digit numeric value) |
+| `reqDate` | *Date* | DDMMYYYY | M | Transaction initiated date |
+| `reqTime` | *Timestamp* | HHMMSS | M | Transaction initiated time |
+| `tranDate` | *Date* | DDMMYYYY | C  |Original transaction date |
+| `tranTime` | *Timestamp* | HHMMSS | C | Transaction Time |
 | `cardLastNumber` | *string* | 04 | C | Last 4 digits of Card Number. To be included for Pre-Authorization completion transaction. |
-| `cardBin` | *string* | 06 | C | First 6 digits of the Card, used in the original (sale) transaction.To be included for Refund transaction. |
-| `callbackURL` | *string* | 100 | O | Response URL, place holder for notification API call feature. |
+| `cardBin` | *string* | 06 | C | First 6 digits of the Card, used in the original (sale) transaction. To be included for Refund transaction. |
+| `callbackURL` | *string* | 100 | O | Response URL, placeholder for notification API call feature. |
 | `mrchCountryCode` | *string* | 03 | M | Merchant Country Code (3-digit numeric value). |
 | `tranType` | *string* | 50 | O | Transaction Description. |
 | `rrn` | *string* | 20 | C  | The same value received in original transaction response needs to be submitted across. |
 | `emiTenure` | *string* | 02 | C | Installment / EMI duration. If Installment / EMI transactions are included. |
 | `paramList` | *array* | NA | O | Biller can pass any additional details if required in array format "paramList": [{"param_lit": "param1 key","param": "23"}]. |
-| `udf1` | *string* | 100 | O | User Defined Field. |
-| `udf2` | *string* | 100 | O | User Defined Field. |
+| `udf1` | *string* | 100 | O | User Defined Field |
+| `udf2` | *string* | 100 | O | User Defined Field |
 
 ### Successful Response Payload
 
@@ -169,7 +169,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ```
 
 ### Response
-| Variable | Type | Length |   Mandatory / Optional/ Conditional <br> (M / O / C)  | Description /Values |
+| Variable | Type | Length |   Mandatory / Optional/ Conditional <br> (M / O / C)  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID. |
 | `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table). |
