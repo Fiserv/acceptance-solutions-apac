@@ -29,16 +29,16 @@ https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/secure/d
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/document/{appUrn}).
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional / Conditional  (M / O / C)  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional  (M / O / C)  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-|`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API|
+|`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API.|
 |`docType`|Alphanumeric|30||Document Name of document being uploaded. |
-|`fileType`|Alphanumeric|10|M|The type of the file that is uploaded|
+|`fileType`|Alphanumeric|10|M|The type of the file that is uploaded.|
 |`principalNo`|Alphanumeric|2|M|If there are 2 Principal Owners for which the documents are uploaded, first set will have value as 1 and the second set will have value as 2.If there are multiple set of UBO for which documents are uploaded, each set will have its respective number in sequential manner.|
 |`imageFront`|File|-|M|Front copy of the document. If document has single part, same has to be uploaded as part of file 1. |
-|`imageBack`|File|-|O|Back copy of the document. If document has single part, file 2 remains blank|
-|`categoryName`|Alphanumeric|30|M|Category of document being uploaded. This can be refered from tag categoryName in Get Document Matrix API|
-|`level`|Alphanumeric|2|M|Level of document being uploaded. This can be referred from tag level in Get Document Matrix API|
+|`imageBack`|File|-|O|Back copy of the document. If document has single part, file 2 remains blank.|
+|`categoryName`|Alphanumeric|30|M|Category of document being uploaded. This can be refered from tag categoryName in Get Document Matrix API.|
+|`level`|Alphanumeric|2|M|Level of document being uploaded. This can be referred from tag level in Get Document Matrix API.|
 
 
 ### Successful Response Payload
@@ -85,28 +85,28 @@ The table below contains the mandatory fields required for a successful request.
 ```
 
 The table below provides the list of application's error code and its description.
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
 |`100`| Invalid Request |
 |`101`| Missing Mandatory Fields |  
-|`103`| Data Not Found.Please contact Application Support Team |
+|`103`| Data Not Found. Please contact Application Support Team. |
 |`200`|  Success |  
 |`301`| Document Type Required |
 |`302`| IOException |
-|`303`| Atleast One Document Required |  
+|`303`| Atleast One Document Required. |  
 |`304`| Invalid Document Type |
-|`400`| Terminal not in Proper Status |  
+|`400`| Terminal not in Proper Status. |  
 |`415`| Invalid media type |
-|`500`| Internal Error. Please contact Application Support Team |
-|`700`| No record found for given AppURN and Sales Id |
-|`701`| Unable to create APPURN |  
-|`708`| AppURN already submitted |
+|`500`| Internal Error. Please contact Application Support Team. |
+|`700`| No record found for given AppURN and Sales Id. |
+|`701`| Unable to create APPURN. |  
+|`708`| AppURN already submitted. |
 |`900`|  Invalid AppURN |  
 |`901`| AppURN Not Match |
-|`902`| AppURN is Mandatory |
-|`903`| Application already Submitted |  
+|`902`| AppURN is Mandatory. |
+|`903`| Application already Submitted. |  
 |`904`| Json Processing Error |
 |`905`|  Json Parse Error |  
 |`906`| Json Mapping Error |
-|`907`| Comments are empty |
-|`908`| App URN not matching |
+|`907`| Comments are empty. |
+|`908`| App URN not matching. |
