@@ -34,9 +34,9 @@ The table below identifies the required parameters in the request payload.
 
 | Variable |	Type |	Length | Mandatory / Optional /Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
-|`username`|	String|	15|	M|	User Id / Fiserv Lan ID. |
-|`password`|	String|	15|	M|	Password. |
-|`source`|	String |	10|	M|	Source Type like API / TAB. |
+|`username`|	String|	15|	M|	User ID / Fiserv Lan ID |
+|`password`|	String|	15|	M|	Password |
+|`source`|	String |	10|	M|	Source Type like API / TAB |
 |`ain`|	String	 |16|	M|	This is a query parameter which should be keyed as a part of request. |
 
 
@@ -66,9 +66,9 @@ The table below provides the list of application's error code and its descriptio
 
 
 
-|  Error Code   |  Description /Values    | Comments |
+|  Error Code   |  Description / Values    | Comments |
 |  -----------  | ---------------------- |----------|
-|200|	Request execute.|	Request is successfully processed. Merchant should use the generated token and proceed with Payment API transaction Initiation.|
-|300|	Request failure.|	Redirection error. Merchant should validate and retry with new request.|
-|404|	Not found.|	Server cannot find the requested resource. Contact Customer Support / Business Manager.|
-|500|	Internal Server Error.|	Server Error. Contact Customer Support / Business Manager.|
+|200|	Request execute |	Request is successfully processed. Merchant should use the generated token and proceed with Payment API transaction Initiation.|
+|300|	Request failure |	Redirection error. Merchant should validate and retry with new request.|
+|404|	Not found |	Server cannot find the requested resource. Contact Customer Support / Business Manager.|
+|500|	Internal Server Error |	Server Error. Contact Customer Support / Business Manager.|
