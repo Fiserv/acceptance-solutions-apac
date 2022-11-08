@@ -47,22 +47,22 @@ GET `https://www.uat.fdmerchantservices.com/boardinggateway/Externalboarding/sec
 The table below contains the mandatory fields required for a successful request. The full request schemas are available in our [API Explorer](../api/?type=get&path=/Externalboarding/secure/document).
 
 ### Request
-| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C)  | Description/Values |
+| Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C)  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 |`boardingType`|Alphanumeric|20|M|Type of Merchant: New MID / Add MID / Add TID|
-|`institutionCode`|Alphanumeric|3|M|The unique value assigned to each channel|
+|`institutionCode`|Alphanumeric|3|M|The unique value assigned to each channel.|
 |`appChannel`|Alphanumeric|20|M|Application Channel|
-|`appType`|Alphanumeric|8|M|Fixed Value **API**|
-|`institutionId`|Numeric|10|M|Institution number assigned to the institution|
-|`typeOfBusiness`|Alphanumeric|50|M|Type of Bussiness means Sole Proprieter, Individual etc|
-|`mccCode`|Numeric|20|M|Unique value assigned for each industry|
-|`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover|
+|`appType`|Alphanumeric|8|M|Fixed Value **API**.|
+|`institutionId`|Numeric|10|M|Institution number assigned to the institution.|
+|`typeOfBusiness`|Alphanumeric|50|M|Type of Bussiness means Sole Proprieter, Individual etc.|
+|`mccCode`|Numeric|20|M|Unique value assigned for each industry.|
+|`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover.|
 |`merchantType`|Alphanumeric|20|M|Type of Merchant whether Small or Large Merchant|
 |`acceptanceType`|Alphanumeric|10|M|Static Value: 'ECOM' / 'POSMOB'|
-|`international`|Alphanumeric|3|M|Applicable if the merchant accepts international transactions|
-|`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder|
-|`dcc`|Alphanumeric|3|O|It is applicable for Foreign rate conversion(Y/N)|
-|`fundingCurrency`|Alphanumeric|8|M|The currency is settled to the merchant NET_INR, NET_USD, NET_AUD etc|
+|`international`|Alphanumeric|3|M|Applicable if the merchant accepts international transactions.|
+|`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder.|
+|`dcc`|Alphanumeric|3|O|It is applicable for Foreign rate conversion(Y/N).|
+|`fundingCurrency`|Alphanumeric|8|M|The currency is settled to the merchant NET_INR, NET_USD, NET_AUD etc.|
 |`newFundingAc`|Alphanumeric|20|O|Merchant settlement account|
 
 
@@ -1623,17 +1623,17 @@ The table below contains the mandatory fields required for a successful request.
 
 The table below provides the list of application's error code and its description.
 
-| ErrorCode |  Description/Values |
+| Error Code |  Description / Values |
 | --------  | ------------------ |
 |`200`| Success |
-|`400`| Terminal not in Proper Status |  
+|`400`| Terminal not in Proper Status. |  
 |`401`| Unauthorized |
 |`900`|  Invalid AppURN |  
 |`901`| AppURN Not Match |
-|`902`| AppURN is Mandatory |
-|`903`| Application already Submitted |  
+|`902`| AppURN is Mandatory. |
+|`903`| Application already Submitted. |  
 |`904`| Json Processing Error |
 |`905`|  Json Parse Error |  
 |`906`| Json Mapping Error |
-|`907`| Comments are empty |
-|`908`| App URN not matching |
+|`907`| Comments are empty. |
+|`908`| App URN not matching. |
