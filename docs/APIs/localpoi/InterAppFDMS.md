@@ -445,7 +445,7 @@ The table below identifies the required properties in the request message
 |`tipAmount`|String|10|O|Transaction Tip Amount for sale.|
 |`InvoiceNo`|String|6|M|6 digits invoicenumber for voiding a transaction.|
 |`type`|String|2|M|Use type to indicate the print details
-| | | | | 1- Current summary batch. |
+| | | | | 1- Current summary . |
 | | | | |2- Current detail. |
 | | | | | 3- Last settlement. |
 |`totalTxnAmount`|String|10|M|Total Amount in decimals - "100.00".|
@@ -601,21 +601,21 @@ The below table identifies the required properties in the response message
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
-|`appId`|String|20||FAMS_BASE24 App Id.|
+|`appId`|String|20||FAMS_BASE24 App ID.|
 |`rspCode`|String|20|M|Description of the response code.|
-|`issuerName`|String|20|M|Issuer name.|
-|`acquirerName`|String|20|M|Acquirer name.|
-|`transTime`|String|20|M|Transaction time.|
-|`amount`|String|10|M|Transaction amount.|
+|`issuerName`|String|20|M|Issuer name|
+|`acquirerName`|String|20|M|Acquirer name |
+|`transTime`|String|20|M|Transaction time |
+|`amount`|String|10|M|Transaction amount |
 |`appCode`|String|8|M|Approval code of the transaction.|
-|`signature`|String|3|O|Signature data.|
-|`referNo`|String|10|O|Reference Number.|
-|`traceNo`|String|6|O|Trace Number (6-digit value). |
-|`batchNo`|String|6|M| Batch Number (6-digit value). |
-|`merchantName`|String|20|M|Merchant name.|
-|`merchantId`|String|8|M| Merchant ID (15-digit value). |
-|`cardNo`|String|16|M|Card Number.|
-|`terminalId`|String|15|M| Terminal ID (8-digit value). |
+|`signature`|String|3|O|Signature data |
+|`referNo`|String|10|O|Reference Number |
+|`traceNo`|String|6|O|Trace Number (6-digit value) |
+|`batchNo`|String|6|M| Batch Number (6-digit value) |
+|`merchantName`|String|20|M|Merchant name |
+|`merchantId`|String|8|M| Merchant ID (15-digit value) |
+|`cardNo`|String|16|M|Card Number |
+|`terminalId`|String|15|M| Terminal ID (8-digit value) |
 |`saleTotal Amt`|String|10|O|Total sale amount.|
 |`saleTotalNum`|String|10|O|Total sale number.|
 |`saleVoidTotalAmt`|String|10|O|Total void sale amount.|
@@ -624,9 +624,9 @@ The below table identifies the required properties in the response message
 |`refundTotalNum`|String|10|O|Total refund number.|
 |`refundVoidTotalAmt`|String|10|O|Total void refund amount.|
 |`refundVoidTotalNum`|String|10|O|Total void refund number.|
-|`settleMsg`|String|2|O|Settlement message.|
-|`cardholderName`|String|20|O|Cardholder name.|
-|`tipAmount`|String|10|O|Transaction tip amount.|
+|`settleMsg`|String|2|O|Settlement message|
+|`cardholderName`|String|20|O|Cardholder name|
+|`tipAmount`|String|10|O|Transaction tip amount|
 |`enterMode`|String|1|O|Entry mode:(1-character value)|
 | | | | | F=Fallback|
 | | | | | S=Swipe |
@@ -655,7 +655,7 @@ The below table identifies the required properties in the response message
 |`sequenceNum`|String|10|O|Sequence Number – an optional field for Oracle Payment Interface (OPI) applicable transactions.|
 |`dccFlag`|Boolean|2|O|DCC Conversion flag - Yes or No. Response contains converted amount, exchange rate and margin fee.|
 |`pinVerify`|Boolean|2|O|PIN will be validated when value is set = ‘True’.|
-|`expDate`|String|4|O|Expiry Date.|
+|`expDate`|String|4|O|Expiry Date |
 |`currency`|String|3|O|Currency code / currency that had been selected.|
 |`signed`|Boolean|5|O|If the signature is captured, the value will be ‘True’ for this field.|
 |`signedData`|String|5|O|The signature data field captured in the receipt.|
@@ -670,35 +670,35 @@ The table below provides the list of application's error code and its descriptio
 |`02`|Special condition, cardholder to contact Issuing Bank|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`03`| Invalid merchant|Contact Customer Support / Business Manager.|
 |`04`|Pick-up card|Issuer Declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
-|`05`|Do not honour, cardholder to contact Issuing bank|Issuer declined the transaction.Merchant should advise cardholder to use a different valid card for the transaction.|
+|`05`|Do not honour, cardholder to contact Issuing bank|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`06`|Error|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`07`|Pick-up card, special condition|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`08`| Honour with identification|Merchant should confirm cardholder's ID/verification.|
 |`09`|Request in progress|Transaction request in progress, merchant should wait for transaction completion.|
 |`10`|Partial approval|Contact Customer Support / Business Manager.|
 |`11`|Approved(V.I.P)|Contact Customer Support / Business Manager.|
-|`12`|Invalid Transaction|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
+|`12`|Invalid Transaction|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`13`|Invalid amount|Invalid amount or currency conversion field overflow. Merchant should enter a valid amount.|
 |`14`|Invalid account|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`15`|No such issuer|Cannot verify PIN; for example, no PVV Contact Customer Support / Business Manager.|
 |`19`|Re-enter transaction|Contact Customer Support / Business Manager.|
 |`20`|Invalid response|Contact Customer Support / Business Manager.|
-|`21`|Card not Initialized|Issuer declined the transaction.For CUP transaction – this means the card had not been activated. Merchant should advise cardholder to use a different card for the transaction.|
-|`22`|Suspected malfunction|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
+|`21`|Card not Initialized|Issuer declined the transaction. For CUP transaction – this means the card had not been activated. Merchant should advise cardholder to use a different card for the transaction.|
+|`22`|Suspected malfunction|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`25`| Unable to locate the original transaction|Contact Customer Support / Business Manager.|
 |`30`|Invalid message format|Invalid message format received. Contact Customer Support / Business Manager.|
 |`31`|Bank not supported|Merchant should advisent should advise cardholder to use a different card for the transaction.|
-|`32`|Expired card, pick-up|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
+|`32`|Expired card, pick-up|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`33`|Suspected fraud, pick-up|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`34`|Fraud|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
-|`36`|Restricted card, pick-up|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction.|
-|`38`|PIN tries exceeded|Issuer Decline. Merchants cardholder to use a different card for the transaction. Contact Customer Support|
+|`36`|Restricted card, pick-up|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
+|`38`|PIN tries exceeded|Issuer Decline. Merchants cardholder to use a different card for the transaction. Contact Customer Support.|
 |`39`|No credit account|Issuer Decline. Merchant should advise cardholder to use a different card for the transaction. |
 |`40`|Function not supported|Requested function is not supported. Contact Customer Support / Business Manager.|
 |`41`|Lost card,pick up|Lost card, contact Customer Support / Business Manager.|
 |`42`|No universal account|Credit account does not exist at the issuing bank. Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`43`|Stolen card|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
-|`45`|Fallback not allowed|Contact Customer Support / Business Manager|
+|`45`|Fallback not allowed|Contact Customer Support / Business Manager.|
 |`51`|Insufficient funds|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`52`|No checking account|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`53`|No savings account|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
@@ -716,7 +716,7 @@ The table below provides the list of application's error code and its descriptio
 |`68`|Response received too late, reversal (unsupported)|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`75`|Allowable number of PIN tries exceeded|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`77`|Bank approval required|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction. (Decline reasons may vary for different schemes)|
-|`78`|Bank approval required|Issuer declined the transaction.Merchant should advise cardholder to use a different card for the transaction. (Decline reasons may vary for different schemes)|
+|`78`|Bank approval required|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction. (Decline reasons may vary for different schemes)|
 |`85`|Transaction not declined|Issuer has no reason to decline the transaction (Account Verification).|
 |`90`|Cut-off in progress|Contact Customer Support / Business Manager.|
 |`91`|Issuer or switch inoperative|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
