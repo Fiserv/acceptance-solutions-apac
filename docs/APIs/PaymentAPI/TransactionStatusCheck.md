@@ -171,25 +171,25 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ### Response
 | Variable | Type | Length |   Mandatory / Optional/ Conditional <br> (M / O / C)  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-| `merchantId` | *string* | 20 | M | Merchant ID. |
-| `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table). |
+| `merchantId` | *string* | 20 | M | Merchant ID |
+| `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table) |
 | `functionCode` | *string* | 02 | M | Same as request. |
-| `invoiceNumber` | *string* | 20 | O | Terminal Invoice Number. |
+| `invoiceNumber` | *string* | 20 | O | Terminal Invoice Number |
 | `cardLastNumber` | *string* | 4 | C | Last 4 Digits of Card Number. To be included for Pre-Authorization completion transaction. |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts, tip) including decimal (E.g. 57.00 for $57 sale). |
 | `tipAmount` | *string* | 10 | C | Last 4 Digits of Card Number. To be included for PreAuth completion transaction. |
-| `merchantRefNumber` | *string* | 14 | M | Merchant Reference Number. |
-| `customerRefNumber` | *string* | 20 | 0 | Customer's Reference Number. |
-| `respCode` | *string* | 05 | M | 200 / 300 / actual switch response. |
-| `response` | *string* | 20 | M | SUCCESS / FAILURE. |
-| `respMsg` | *string* | 20 | O | Error Message. |
+| `merchantRefNumber` | *string* | 14 | M | Merchant Reference Number |
+| `customerRefNumber` | *string* | 20 | 0 | Customer's Reference Number |
+| `respCode` | *string* | 05 | M | 200 / 300 / actual switch response |
+| `response` | *string* | 20 | M | SUCCESS / FAILURE |
+| `respMsg` | *string* | 20 | O | Error Message |
 | `authCode` | *string* | 06 | C  | Received from Issuer Host. |
 | `rrn` | *string* | 20 | C | Received from Issuer Host. |
 | `cardBin` | *string* | 06 | O | First 6 digits of the Card, used in the original (sale) transaction. To be included for Refund transaction. |
-| `dccIndicator` | *string* | 01 | M | 0 = Non DCC transaction, 1 = DCC transaction. |
-| `billingCurrency` | *string* | 03 | C | DCC currency code. |
-| `billingAmount` | *string* | 19 | C | DCC amount. |
-| `dccExchangeRate` | *string* | 20 | M | Currency exchange rate. |
+| `dccIndicator` | *string* | 01 | M | 0 = Non DCC transaction, 1 = DCC transaction |
+| `billingCurrency` | *string* | 03 | C | DCC currency code |
+| `billingAmount` | *string* | 19 | C | DCC amount |
+| `dccExchangeRate` | *string* | 20 | M | Currency exchange rate |
 | `amexSeNumber` | *string* | 10 | C | Applicable for AMEX transaction. |
 | `emiFlag` | *string* | 01 | M | 0 = Non-EMI (Non-Installment) 1 = EMI (Installment). |
 | `emiTenure` | *string* | 02 | C | Installment / EMI duration. If Installment / EMI transactions are included. |
@@ -197,21 +197,21 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `emiProcessingFee` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
 | `emiDiscAmt` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
 | `emiPerMonth` | *string* | 10 | C | Applicable for Installment / EMI transaction. |
-| `cardNumber` | *string* | 19 | O | Card Number. |
+| `cardNumber` | *string* | 19 | O | Card Number |
 | `expDate` | *string* | 4 | O | Expiry date of the card. |
 | `posEntryMode` | *string* | 10 | M | MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC. |
 | `walletType` | *string* | 10 | C  | Type of wallet used such as UPI, Amazon Pay etc. |
 | `primaryId` | *string* | 20 | C | Reference Number of the QR Request. |
 | `custId` | *string* | 35 | O | Customer’s Identifier, Vehicle Number for FASTag VPA for UPI QR. |
 | `walletId` | *string* | 05 | O | Unique wallet ID associated with each wallet. |
-| `Source` | *string* | 20 | O | Transaction Initiated source. |
-| `customerMobile` | *string* | 20 | O | Customer's Mobile Number. |
-| `customerName` | *string* | 20 | O | Cardholder's Name. |
-| `cardType` | *string* | 5 | O | Card Type. |
-| `offlineFlag` | *string* | 01 | O | Offline Flag. |
-| `tranDate` | *date* | DDMMYYYY | O | Transaction Date. |
-| `tranTime` | *string* | HHMMSS | O | Transaction Time. |
-| `settlementDetails` | *string* | 2000 | O | Set settlement Details. |
+| `Source` | *string* | 20 | O | Transaction Initiated source |
+| `customerMobile` | *string* | 20 | O | Customer's Mobile Number |
+| `customerName` | *string* | 20 | O | Cardholder's Name |
+| `cardType` | *string* | 5 | O | Card Type |
+| `offlineFlag` | *string* | 01 | O | Offline Flag |
+| `tranDate` | *date* | DDMMYYYY | O | Transaction Date |
+| `tranTime` | *string* | HHMMSS | O | Transaction Time |
+| `settlementDetails` | *string* | 2000 | O | Set settlement Details |
 
 
 The table below provides the list of error codes and description for this application.
