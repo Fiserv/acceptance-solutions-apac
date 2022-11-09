@@ -310,13 +310,13 @@ The table below identifies the required properties in the request message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  | Description / Values      |
 | -------- | -------- | -------------- | -----------------------| ------------------------- |
-|`dataType`|String|2|M|01 - Sale (Sale, DCC). 
-| | | | | 02 - Pre-Authorization Sale. |
-| | | | | 03 - Pre-Authorization Completion. |
+|`dataType`|String|2|M|01 - Sale (Sale, DCC)
+| | | | | 02 - Pre-Authorization Sale |
+| | | | | 03 - Pre-Authorization Completion |
 | | | | | 04 - Refund |
 | | | | | 05 - Void | 
-| | | | | 08 - EMI Sale. |
-| | | | | 12 - Settlement Transaction. |
+| | | | | 08 - EMI Sale |
+| | | | | 12 - Settlement Transaction |
 |`amt`|String|10|M|Transaction amount in decimals - "100.00".|
 |`detail`|String|2|O|To define the response message in detail format. 
 | | | | | 'Y' means detail message, 'N' means skip this format.|
@@ -324,8 +324,8 @@ The table below identifies the required properties in the request message
 |`merchantReferenceNumber`|String|10|O|Unique merchant number for reconcilation - Value to be populated in statement in FT Number.|
 |`terminalInvoiceNumber`|String|20|M|Use the terminal Invoice No to indicate the invoice of terminal.|
 |`acqName`|String|20|O|To identify this transaction is initiated by respective Acquirer (Mandatory for void & PreAuth Completion transaction).|
-|`userDefinedFields`|String|20|O|UDF fields.|
-|`pwd `|String|8|O|Void password.|
+|`userDefinedFields`|String|20|O|UDF fields|
+|`pwd `|String|8|O|Void password|
 |`rrn`|String|12|M|The same value received in the original transaction response needs to be submitted across.|
 |`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
 |`printChargeslip`|String|1|O| To enable charge slip printing - Y or N ( Default mode = Y ).|
@@ -455,40 +455,40 @@ The table below identifies the required properties in the response message
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------- | ------------------ | 
-|`dataType`|String|2|M|01 - Sale (Sale, DCC). |
-| | | | | 02 - Pre-Authorization Sale. |
-| | | | | 03 - Pre-Authorization Completion. | 
+|`dataType`|String|2|M|01 - Sale (Sale, DCC) |
+| | | | | 02 - Pre-Authorization Sale |
+| | | | | 03 - Pre-Authorization Completion | 
 | | | | | 04 - Refund |
 | | | | | 05 - Void  |
-| | | | | 08 - EMI Sale. | 
-| | | | | 12 - Settlement Transaction.|
-|`amt`|String|10|M|Transaction amount in decimals - "100.00".|
-|`aid`|String|10|O|Acquirer ID.|
-|`adjAmt`|String|10|O|Adjustment Amount.|
-|`authCode`|String|8|M|Auth Code.|
-|`atc`|String|12|O|Application Counter Value.|
-|`batchNumber`|String|6|M|Terminal Batch Number.|
-|`cardholderName`|String|25|O|Name of the cardholder.|
+| | | | | 08 - EMI Sale| 
+| | | | | 12 - Settlement Transaction|
+|`amt`|String|10|M|Transaction amount in decimals - "100.00"|
+|`aid`|String|10|O|Acquirer ID|
+|`adjAmt`|String|10|O|Adjustment Amount|
+|`authCode`|String|8|M|Auth Code|
+|`atc`|String|12|O|Application Counter Value|
+|`batchNumber`|String|6|M|Terminal Batch Number|
+|`cardholderName`|String|25|O|Name of the cardholder|
 |`cardType`|String|10|M|Type of card.|
 |`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
-|`cardExpDate`|String|4|O|Transaction card expiry date.|
-|`merchantID`|String|16|M|Merchant ID.|
-|`signature`|String|2|O|Y' or 'N'.|
+|`cardExpDate`|String|4|O|Transaction card expiry date|
+|`merchantID`|String|16|M|Merchant ID|
+|`signature`|String|2|O|Y' or 'N'|
 |`panNumber`|String|16|O|This will identify as Card number.|
 |`referenceNumber`|String|20|M|This will identify as Reference Number.|
-|`status`|String|2|O|Status - "A".|
-|`tc`|String|10|O|Transaction Number.|
-|`terminalID`|String|8|M|Terminal ID.|
-|`tvr`|String|10|O|Terminal Reference.|
-|`txndate`|Timestamp|10|M|Transaction date.|
-|`txntime`|Timestamp|10|M|Transaction time.|
-|`txnid`|String|10|M|Transaction ID.|
+|`status`|String|2|O|Status - "A"|
+|`tc`|String|10|O|Transaction Number|
+|`terminalID`|String|8|M|Terminal ID|
+|`tvr`|String|10|O|Terminal Reference|
+|`txndate`|Timestamp|10|M|Transaction date|
+|`txntime`|Timestamp|10|M|Transaction time|
+|`txnid`|String|10|M|Transaction ID |
 |`checksum`|String|50|O|Checksum for "data" field.Use SHA256 method to calculate “data” field.|
-|`acquirerName`|String|20|M|Acquirer Name.|
+|`acquirerName`|String|20|M|Acquirer Name|
 |`emi`|String|20|O|EMI details – emi flag is 1/0 
 | | | | |EMI reference number generated is 8 bytes
 | | | | |Tenure, discount amount, product amount, EMI per month.|
-|`batchUpload`|String|2|O|Y' or 'N'.|
+|`batchUpload`|String|2|O|Y' or 'N'|
 |`responseCode`|String|2|M|Host Response code, it has response message.|
 |`responseText`|String|20|M|Text of response message.|
 
