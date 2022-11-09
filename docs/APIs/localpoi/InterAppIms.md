@@ -334,15 +334,15 @@ The table below identifies the required properties in the request message
 | | | | | 06 = TIP | 
 | | | | | 07 = Cash @ POS |
 | | | | | 08 = Installment/EMI Sale |
-| | | | | 11 = Settlement Transaction. |
-| | | | | 12 = Transaction status. |
-| | | | | 13 = UPI QR  Generation. | 
-| | | | | 14 = UPI QR Last Transaction Status. |
-| | | | | 15 = Bharat QR  Generation. |
-| | | | | 16 = Bharat  QR Last Transaction Status. |
-| | | | | 17 = Google Pay Wallet. |
-| | | | | 18 = Tone Tag Wallet. |
-| | | | | 19 = Non-carded Transactions. |
+| | | | | 11 = Settlement Transaction|
+| | | | | 12 = Transaction status |
+| | | | | 13 = UPI QR  Generation | 
+| | | | | 14 = UPI QR Last Transaction Status|
+| | | | | 15 = Bharat QR  Generation |
+| | | | | 16 = Bharat  QR Last Transaction Status |
+| | | | | 17 = Google Pay Wallet |
+| | | | | 18 = Tone Tag Wallet |
+| | | | | 19 = Non-carded Transactions |
 |`source`|String|10|O|APOS (Android Point of Sale), Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine).|
 |`totalTxnAmount`|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals - "100.00".|
 | `CGST` | *string* | 10 | C | Central GST Including decimal (E.g. 10.00 for $10 CGST). If CGST is included in the total amount. |
@@ -361,11 +361,11 @@ The table below identifies the required properties in the request message
 |`maskedCardNumber`|String|21|M|First 6 digit and last 4 digit. The numbers in between should be masked.|
 |`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable.
 |`applicationVersionNumber`|String|10|M|Version number of terminal application used.|
-|`aTID`|String|8|M|Acquirer TID (Terminal ID).|
-|`aMID`|String|15|M|Acquirer MID (Merchant ID).|
+|`aTID`|String|8|M|Acquirer TID (Terminal ID)|
+|`aMID`|String|15|M|Acquirer MID (Merchant ID)|
 |`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
-|`billerID`|String|10|O|Biller ID received. |
-|`dccFlag`|String|1|O| DCC Conversion flag - Y or N.|
+|`billerID`|String|10|O|Biller ID received |
+|`dccFlag`|String|1|O| DCC Conversion flag - Y or N|
 
 
 ### Response in Payload
@@ -390,23 +390,23 @@ The table below identifies the required properties in the response message
 
 | Variable | Type |     Length     | Mandatory / Optional / Conditional (M / O / C)  |     Description / Values      |
 | -------- | ------- | ------- | -------------------------------------------------------| ------------------------- 
-|`functionCode`|String|2| M|01 = Sale ( Sale, DCC ).|
-| | | | | 02 = Pre-Authorization. |
-| | | | | 03 = Pre-Authorization Completion. |
+|`functionCode`|String|2| M|01 = Sale ( Sale, DCC )|
+| | | | | 02 = Pre-Authorization |
+| | | | | 03 = Pre-Authorization Completion |
 | | | | | 04 = Refund |
 | | | | | 05 = Void |
 | | | | | 06 = TIP | 
-| | | | | 07 = Cash @ POS. |
-| | | | | 08 = Installment/EMI Sale. |
-| | | | | 11 = Settlement Transaction. |
-| | | | | 12 = Transaction status. |
-| | | | | 13 = UPI QR  Generation. | 
-| | | | | 14 = UPI QR Last Transaction Status. |
-| | | | | 15 = Bharat QR  Generation. |
-| | | | | 16 = Bharat  QR Last Transaction Status.|
-| | | | | 17 = Google Pay Wallet. |
-| | | | | 18 = Tone Tag Wallet. |
-| | | | | 19 = Non-carded Transactions. |
+| | | | | 07 = Cash @ POS |
+| | | | | 08 = Installment/EMI Sale |
+| | | | | 11 = Settlement Transaction |
+| | | | | 12 = Transaction status |
+| | | | | 13 = UPI QR  Generation | 
+| | | | | 14 = UPI QR Last Transaction Status |
+| | | | | 15 = Bharat QR  Generation |
+| | | | | 16 = Bharat  QR Last Transaction Status|
+| | | | | 17 = Google Pay Wallet |
+| | | | | 18 = Tone Tag Wallet |
+| | | | | 19 = Non-carded Transactions |
 |`source`|String|10|O|APOS, Mobile, ECR (Electronic Cash Register), ATVM (Automatic Vending Machine).|
 |`tipAmount`|String|10|O|Tip Amount entered during the transaction.|
 |`totalTxnAmount `|String|10|M|Total Amount including (Auth + ConvFee+ GST) in decimals.|
@@ -423,12 +423,12 @@ The table below identifies the required properties in the response message
 |`userDefinedFields`|String|30|O|CRN + UDF - Value to be populated in statement in session ID.|
 |`maskedCardNumber`|String|21|M|First 6 digit and last 4 digit. The numbers in between should be masked.|
 |`applicationVersionNumber`|String|10|M|Version number of terminal application used.|
-|`date & Time`|Timestamp|20|M|Host Date & Time.|
-|`aTID`|String|8|M|Acquirer TID (Terminal ID).|
-|`aMID`|String|15|M|Acquirer MID (Merchant ID).|
-|`acquirerName`|String|20|M|Acquirer Name.|
+|`date & Time`|Timestamp|20|M|Host Date & Time|
+|`aTID`|String|8|M|Acquirer TID (Terminal ID)|
+|`aMID`|String|15|M|Acquirer MID (Merchant ID)|
+|`acquirerName`|String|20|M|Acquirer Name|
 |`responseCode`|String|12|M|Host Response code, it has response message.|
-|`batchNumber`|String|6|M|Terminal Batch Number.|
+|`batchNumber`|String|6|M|Terminal Batch Number|
 |`cardType`|String|10|M|Type of card.|
 |`rrn`|String|12|M|The same value received in the original transaction response needs to be submitted across.|
 |`se`|String|10|O|Value would be populated incase of Amex transactions.|
@@ -445,12 +445,12 @@ The table below identifies the required properties in the response message
 |`consumerNumber`|String|20|M|Consumer number ( CRN ) The value that is populated in statement of the session ID.|
 |`cardLastFourDigit`|String|4|O| Last 4 digits of Card Number. To be included for Pre-Authorization completion and cancellation transaction. |
 |`emailID`|String|50|O|Email ID of the email that needs to be received. This is an optional 50 bytes variable. |
-|`cardTxnMode`|String|3|O|Transaction Mode.|
-|`purchaseAmount `|String|10|O|Purchase amount.|
-|`cashBackAmount`|String|10|O| Transaction cash back amount.|
+|`cardTxnMode`|String|3|O|Transaction Mode|
+|`purchaseAmount `|String|10|O|Purchase amount|
+|`cashBackAmount`|String|10|O| Transaction cash back amount|
 |`nacStatus `|String|3|O|Identifies the network status <br> - True = private network <br> - False = public network.|
-|`cardExpDate`|String|4|O|Transaction card expire date.|
-|`dccFlag`|String|1|O| DCC Conversion flag - Y or N.|
+|`cardExpDate`|String|4|O|Transaction card expire date|
+|`dccFlag`|String|1|O| DCC Conversion flag - Y or N|
 |`printChargeslip`|String|1|O| To enable charge slip printing - Y or N ( Default mode = Y ).|
 
 
