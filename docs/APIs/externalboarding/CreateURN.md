@@ -43,7 +43,7 @@ The table below contains the mandatory fields required for a successful request.
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-| `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value **API** |
+| `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value API |
 | **KeySelection** |	 |	 | |	This is the object. |
 | `boardingType` | *Alphanumeric* |	20 |	M |	Type of merchant: NEWMID / ADDMID / ADDTID |
 | **MerchantDetails** | |	 |  |	This is the object. |
@@ -167,4 +167,4 @@ The table below provides the list of application's error code and its descriptio
 |`401`| Unauthorized | 
 |`100`| Invalid Request | 
 |`702`| Unable to create merchant. | 
-|`500`| Internal Error, Please contact application support team. | 
+|`500`| Internal Error, please contact application support team. | 
