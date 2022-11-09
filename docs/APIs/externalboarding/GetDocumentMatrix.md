@@ -52,7 +52,7 @@ The table below contains the mandatory fields required for a successful request.
 |`boardingType`|Alphanumeric|20|M|Type of Merchant: New MID / Add MID / Add TID|
 |`institutionCode`|Alphanumeric|3|M|The unique value assigned to each channel.|
 |`appChannel`|Alphanumeric|20|M|Application Channel|
-|`appType`|Alphanumeric|8|M|Fixed Value **API**.|
+|`appType`|Alphanumeric|8|M|Fixed Value API.|
 |`institutionId`|Numeric|10|M|Institution number assigned to the institution.|
 |`typeOfBusiness`|Alphanumeric|50|M|Type of Bussiness means Sole Proprieter, Individual etc.|
 |`mccCode`|Numeric|20|M|Unique value assigned for each industry.|
@@ -1628,12 +1628,12 @@ The table below provides the list of application's error code and its descriptio
 |`200`| Success |
 |`400`| Terminal not in Proper Status. |  
 |`401`| Unauthorized |
-|`900`|  Invalid AppURN |  
-|`901`| AppURN Not Match |
-|`902`| AppURN is Mandatory. |
+|`900`|  Invalid App URN |  
+|`901`| App URN Not Match |
+|`902`| App URN is Mandatory. |
 |`903`| Application already Submitted. |  
-|`904`| Json Processing Error |
-|`905`|  Json Parse Error |  
-|`906`| Json Mapping Error |
+|`904`| JSON Processing Error |
+|`905`| JSON Parse Error |  
+|`906`| JSON Mapping Error |
 |`907`| Comments are empty. |
 |`908`| App URN not matching. |
