@@ -360,7 +360,7 @@ The table below provides the list of application's error code and its descriptio
 |`200`| Success |
 |`400`| Termial not in proper Status. |
 |`401`| Unauthorized |
-|`405`| HttpClientError Exception |
+|`405`| Http Client Error exception |
 |`700`| No record found for given App URN and Sales ID. |
 |`900`| Invalid App URN |
 |`901`| App URN Not Match. |
