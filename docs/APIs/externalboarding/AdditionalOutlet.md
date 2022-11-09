@@ -405,7 +405,7 @@ The table below contains the mandatory fields required for a successful request.
 | Field Name | Type | Length | Mandatory / Optional / Conditional (M / O / C ) | Description / Values | 
 | -------- | ------- | -- | ------------ | -- | 
 |`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API.|
-|`appType`|Alphanumeric|8|M|Fixed Value 'API'|
+|`appType`|Alphanumeric|8|M|Fixed Value API |
 |`salesId`|Alphanumeric|70|M|User Credential created for each partner.|
 |`channelCode`|Alphanumeric|10|C|Static Channel Code shared with each partner.|
 |`institutionId`|Numeric|10|C|Institution number assigned to the institution.|
@@ -705,19 +705,19 @@ The table below provides the list of application's error code and its descriptio
 | Error Code |  Description / Values |
 | --------  | ------------------ |
 |`100`| Invalid Request |
-|`103`| Data Not Found.Please contact Application Support Team. |
+|`103`| Data Not Found, please contact Application Support Team. |
 |`200`| Success |
-|`302`| IOException |
+|`302`| IO Exception |
 |`404`| Not Found |
 |`401`| Unauthorized |
-|`500`| Internal Error.Please contact Application Support Team. |
-|`505`| Internal Error.Please contact Application Support Team. |
-|`708`| AppURN already submitted. |
-|`902`| AppURN is mandatory. |
+|`500`| Internal Error, please contact Application Support Team. |
+|`505`| Internal Error, Please contact Application Support Team. |
+|`708`| App URN already submitted. |
+|`902`| App URN is mandatory. |
 |`903`| Application already Submitted. |
-|`904`| Json Processing Error |
-|`905`| Json Parse Error |
-|`906`| Json Mapping Error |
+|`904`| JSON Processing Error |
+|`905`| JSON Parse Error |
+|`906`| JSON Mapping Error |
 |`907`| Comments are empty. |
 |`908`| App URN not matching. |
 |`909`| Given Merchant Hierarchy Cannot handle via TAB. Please contact Application Support Team. |
