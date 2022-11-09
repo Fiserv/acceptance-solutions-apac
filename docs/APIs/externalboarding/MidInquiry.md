@@ -32,8 +32,9 @@ The table below contains the mandatory fields required for a successful request.
 
 | Variable | Type      | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
 | -------- | ----------- | -- | ------------ | ------------------ |
-|`appType`|Alphanumeric|8|M|Fixed Value **API**|
-|`refMid`|Numeric|8|M|MID generated for the new application needs to be passed for generating Add MID & Add TID.|
+|`appType`|Alphanumeric|8|M|Fixed Value API |
+|`refMid`|Numeric|8|M|MID generated for new application. This needs to be passed for generating either
+Add MID or during Add TID request.|
 
 
 
@@ -55,12 +56,12 @@ The table below contains the mandatory fields required for a successful request.
   "typeOfBusiness": null,
   "merchantDetails": {
     "businessName": null,
-    "legalName": "ezetap provisioning testing",
+    "legalName": "XYZ provisioning testing",
     "businessType": "Sole proprietor",
     "registrationNo": null,
     "dateIncorporated": null,
     "websiteURL": null,
-    "communicationEmail": "prerana.kumbhar@Fiserv.com",
+    "communicationEmail": "sampleMail@Fiserv.com",
     "legalAddress": {
       "addressLine": "Near central fire briged, Ganj peth,, opposite kamble lane, ",
       "addressLine2": null,
@@ -69,7 +70,7 @@ The table below contains the mandatory fields required for a successful request.
       "state": "MAH",
       "pincode": "411042",
       "country": null,
-      "phone1": "8358353553",
+      "phone1": "1234567891",
       "phone2": null,
       "contactName": "Test",
       "mobileNo": null,
