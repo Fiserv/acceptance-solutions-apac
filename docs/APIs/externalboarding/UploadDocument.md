@@ -89,7 +89,7 @@ The table below provides the list of application's error code and its descriptio
 | --------  | ------------------ |
 |`100`| Invalid Request |
 |`101`| Missing Mandatory Fields |  
-|`103`| Data Not Found. Please contact Application Support Team. |
+|`103`| Data Not Found, please contact Application Support Team. |
 |`200`|  Success |  
 |`301`| Document Type Required |
 |`302`| IOException |
@@ -97,16 +97,16 @@ The table below provides the list of application's error code and its descriptio
 |`304`| Invalid Document Type |
 |`400`| Terminal not in Proper Status. |  
 |`415`| Invalid media type |
-|`500`| Internal Error. Please contact Application Support Team. |
-|`700`| No record found for given AppURN and Sales Id. |
-|`701`| Unable to create APPURN. |  
-|`708`| AppURN already submitted. |
-|`900`|  Invalid AppURN |  
-|`901`| AppURN Not Match |
-|`902`| AppURN is Mandatory. |
+|`500`| Internal Error, please contact Application Support Team. |
+|`700`| No record found for given App URN and Sales ID. |
+|`701`| Unable to create App URN. |  
+|`708`| App URN already submitted. |
+|`900`|  Invalid App URN |  
+|`901`| App URN Not Match |
+|`902`| App URN is Mandatory. |
 |`903`| Application already Submitted. |  
-|`904`| Json Processing Error |
-|`905`|  Json Parse Error |  
-|`906`| Json Mapping Error |
+|`904`| JSON Processing Error |
+|`905`| JSON Parse Error |  
+|`906`| JSON Mapping Error |
 |`907`| Comments are empty. |
 |`908`| App URN not matching. |
