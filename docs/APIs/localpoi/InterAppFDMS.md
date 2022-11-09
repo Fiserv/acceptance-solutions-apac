@@ -440,14 +440,14 @@ The table below identifies the required properties in the request message
 
 | Variable |  Type | Length | Mandatory / Optional / Conditional <br> (M / O / C) | Description / Values |
 | -------- | ------- | ------- |------------------ | ------------------ |
-|` appId`|String|20|M|FAMS_BASE24 App ID.|
-|`packageName`|String|20|M|FAMS_BASE24 App Package Name.|
+|` appId`|String|20|M|FAMS_BASE24 App ID|
+|`packageName`|String|20|M|FAMS_BASE24 App Package Name|
 |`tipAmount`|String|10|O|Transaction Tip Amount for sale.|
 |`InvoiceNo`|String|6|M|6 digits invoicenumber for voiding a transaction.|
 |`type`|String|2|M|Use type to indicate the print details
-| | | | | 1- Current summary . |
-| | | | |2- Current detail. |
-| | | | | 3- Last settlement. |
+| | | | | 1- Current summary  |
+| | | | |2- Current detail |
+| | | | | 3- Last settlement |
 |`totalTxnAmount`|String|10|M|Total Amount in decimals - "100.00".|
 |`acquirerName`|String|20|M|Acquirer Name for settlement or print.|
 |`staffId`|String|20|O|Optional field in an offline transaction.|
@@ -601,7 +601,7 @@ The below table identifies the required properties in the response message
 
 | Variable |	Type |	Length | Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | ------- | ------------------ | ------------------ |
-|`appId`|String|20||FAMS_BASE24 App ID.|
+|`appId`|String|20||FAMS_BASE24 App ID|
 |`rspCode`|String|20|M|Description of the response code.|
 |`issuerName`|String|20|M|Issuer name|
 |`acquirerName`|String|20|M|Acquirer name |
@@ -633,22 +633,22 @@ The below table identifies the required properties in the response message
 | | | | | C= Insert |
 | | | | | T=Contactless |
 | | | | | M= Manual|
-|`app`|String|5|O|EMV application label name.|
-|`aid`|String|16|O| EMV application ID(16-digit value).|
-|`tc`|String|16|O|EMV  transaction cryptogram (16-digit value).|
-|`tvr`|String|10|O| EMV terminal  verification result(10-digit value).|
-|`tsi`|String|4|O|EMV transaction status information (4-digit value). |
-|`atc`|String|2|O|EMV Application transaction counter (2-digit value). |
+|`app`|String|5|O|EMV application label name |
+|`aid`|String|16|O| EMV application ID(16-digit value)|
+|`tc`|String|16|O|EMV  transaction cryptogram (16-digit value)|
+|`tvr`|String|10|O| EMV terminal  verification result(10-digit value)|
+|`tsi`|String|4|O|EMV transaction status information (4-digit value) |
+|`atc`|String|2|O|EMV Application transaction counter (2-digit value) |
 |`localCurrCode`|String|3|O|Local currency code for DCC transactions.|
 |`cardholderCode`|String|3|O|Cardholder currency code.For Dcc transactions.|
 |`fxRate`|String|6|O|Exchange rate for Dcc transactions. |
 |`foreignAmt`|String|10|O|Amount in cardholder’s home currency for DCC transaction.|
 |`tenure`|String|3|O|Installment / EMI duration. If Installment / EMI transactions are included.|
 |`productCode`|String|3|O|Product code for Installment / EMI transactions if these transactions when applicable.|
-|`interestAmt`|String|10|O|Monthly installment / EMI interest amount.|
+|`interestAmt`|String|10|O|Monthly installment / EMI interest amount |
 |`deviceId`|String|10|O|Device ID – an optional field for Oracle Payment Interface (OPI) applicable transactions. |
 |`requestId`|String|10|O|For  OPI transaction.|
-|`deviceSN`|String|10|O|Terminal device serial Number.|
+|`deviceSN`|String|10|O|Terminal device serial Number |
 |`flagNac`|Boolean|2|O|Flag NAC – an optional field for Oracle Payment Interface (OPI) applicable transactions. |
 |`isMicros`|Boolean|2|O|Micros enabled – an optional field for Oracle Payment Interface (OPI) applicable transactions. |
 |`token`|String|10|O|Micros Token value – an optional field for Oracle Payment Interface (OPI) applicable transactions.|
