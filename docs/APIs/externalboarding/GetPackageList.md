@@ -48,10 +48,11 @@ The table contains the mandatory fields required for a successful request. The f
 |`mccCode`|Numeric|20|M|Unique value assigned for each industry.|
 |`merchantType`|Alphanumeric|20|M|Type of merchant whether Small or Large Merchant.|
 |`acceptanceType`|Alphanumeric|10|M|Static Value: 'ECOM' / 'POSMOB'|
-|`typeOfBusiness`|Alphanumeric|50|M|Type of bussiness means Sole Proprieter, Individual etc.|
+|`typeOfBusiness`|Alphanumeric|50|M|Type of business means Sole Proprieter, Individual etc.|
 |`international`|Alphanumeric|3|O|Applicable if the merchant supports international Card Transactions.|
 |`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder.|
-|`dcc`|Alphanumeric|3|O|If enable for foreign rate conversion value return Y / N.|
+|`dcc`|Alphanumeric|3|O|If enabled for foreign rate currency, the value returned should be
+captured as either Y / N.|
 |`fundingCurrency`|Alphanumeric|8|M|The currency settled to the merchant NET_INR, NET_USD, NET_AUD etc|
 |`boardingType`|Alphanumeric|20|M|Type of merchant: New MID / Add MID / Add TID|
 |`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover.|
@@ -65,7 +66,7 @@ The table contains the mandatory fields required for a successful request. The f
 {
 "id": "15001",
 "name": "Test Package AU 1_NEWMID",
-"desc": "NAB Test Package",
+"desc": "Package Name",
 "shrtName": null,
 "level": null,
 "image": null,
@@ -281,7 +282,7 @@ The table contains the mandatory fields required for a successful request. The f
 "attributeList": [
 {
 "name": "MDR",
-"value": "Visa@2%,MC@1%,CUP@2% & EFTPOS@1.5%",
+"value": "Visa@X%,MC@X%,CUP@X% & EFTPOS@X%",
 "codeType": "Package Tariffs",
 "applicableForFilter": false
 },
@@ -355,19 +356,19 @@ The table below provides the list of application's error code and its descriptio
 
 | Error Code |  Description / Values |
 | --------  | ------------------ |
-|`103`| Data Not Found. Please contact Application Support Team |
+|`103`| Data Not Found, please contact Application Support Team |
 |`105`| Given RM details not found. |
 |`200`| Success |
 |`400`| Termial not in proper Status. |
 |`401`| Unauthorized |
 |`405`| HttpClientError Exception |
-|`700`| No record found for given AppURN and Sales Id. |
-|`900`| Invalid AppURN |
-|`901`| AppURN Not Match. |
-|`902`| AppURN is mandatory. |
+|`700`| No record found for given App URN and Sales ID. |
+|`900`| Invalid App URN |
+|`901`| App URN Not Match. |
+|`902`| App URN is mandatory. |
 |`903`| Application already Submitted. |
-|`904`| Json Processing Error |
-|`905`| Json Parse Error |
-|`906`| Json Mapping Error |
+|`904`| JSON Processing Error |
+|`905`| JSON Parse Error |
+|`906`| JSON Mapping Error |
 |`907`| Comments are empty. |
 |`908`| App URN not matching. |
