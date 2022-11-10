@@ -210,8 +210,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | `offlineFlag` | *string* | 01 | O | Offline Flag |
 | `tranDate` | *date* | DDMMYYYY | O | Transaction Date |
 | `tranTime` | *string* | HHMMSS | O | Transaction Time |
-| `settlementDetails` | *string* | 
-0 | O | Set settlement Details |
+| `settlementDetails` | *string* | 20 | O | Set settlement Details |
 
 
 The table below provides the list of error codes and description for this application.
