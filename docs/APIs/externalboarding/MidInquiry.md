@@ -33,7 +33,8 @@ The table below contains the mandatory fields required for a successful request.
 | Variable | Type      | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
 | -------- | ----------- | -- | ------------ | ------------------ |
 |`appType`|Alphanumeric|8|M|Fixed Value API |
-|`refMid`|Numeric|8| M | MID generated for new application. This needs to be passed for generating either Add MID or during Add TID request.|
+|`refMid`|Numeric|8|M|MID generated for new application. This needs to be passed for generating either
+Add MID or during Add TID request.|
 
 
 
@@ -101,7 +102,7 @@ The table below contains the mandatory fields required for a successful request.
   "tradingLocations": [
     {
       "locationNo": 1,
-      "tradingName": "ezetap provisioning te",
+      "tradingName": "XYZ provisioning te",
       "tradingAddress": {
         "addressLine": "test, , ",
         "addressLine2": null,
@@ -110,9 +111,9 @@ The table below contains the mandatory fields required for a successful request.
         "state": "MAH",
         "pincode": "400606",
         "country": null,
-        "phone1": "8600433238",
-        "phone2": "8600433238",
-        "contactName": "Prerana",
+        "phone1": "1234567891",
+        "phone2": "1234567892",
+        "contactName": "Prerawu",
         "mobileNo": null,
         "email": null
       },
@@ -160,7 +161,7 @@ The table below contains the mandatory fields required for a successful request.
         "state": "MAH",
         "pincode": "411036",
         "country": null,
-        "phone1": "9426855672",
+        "phone1": "1234567891",
         "phone2": null,
         "contactName": "Manan",
         "mobileNo": null,
@@ -202,7 +203,7 @@ The table below contains the mandatory fields required for a successful request.
         "state": "MAH",
         "pincode": "411036",
         "country": null,
-        "phone1": "9426855672",
+        "phone1": "1345678912",
         "phone2": null,
         "contactName": "Manan",
         "mobileNo": null,
@@ -233,7 +234,7 @@ The table below contains the mandatory fields required for a successful request.
     "accountNo": "12231000013575757",
     "accountName": "test",
     "ifsc": "JANA0000012",
-    "bankName": "JANASEVA SAHAKARI BANK LIMITED",
+    "bankName": "ABC BANK LIMITED",
     "branch": "",
     "currency": null,
     "accType": null,
