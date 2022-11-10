@@ -33,7 +33,7 @@ The table below contains the mandatory fields required for a successful request.
 | Variable | Type      | Length |  Mandatory / Optional/ Conditional (M / O / C) | Description / Values |
 | -------- | ----------- | -- | ------------ | ------------------ |
 |`appType`|Alphanumeric|8|M|Fixed Value API |
-|`refMid`|Numeric|8|M|MID generated for new application. This needs to be passed for generating either Add MID or during Add TID request.|
+|`refMid`|Numeric|8|M| MID generated for new application. This needs to be passed for generating either Add MID or during Add TID request. |
 
 
 
