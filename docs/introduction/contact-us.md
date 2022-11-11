@@ -9,7 +9,7 @@ For APAC related integration, our dedicated support teams would be available to 
 
 
 
-<table  width="270%">
+<table  width="280%">
 
   <tr style="height: 36px;">
     <th width="20%"> <b>Region</b></th>
@@ -34,13 +34,15 @@ For APAC related integration, our dedicated support teams would be available to 
   <a href="#top">Back to top</a>
   </td>
    <td><b> Queries Point-of-Sale</b><br>
-•  Integration Support:<a href="mailto:merchantcare@icicims.com"> merchantcare@icicims.com </a><br>
+•  Integration Support:<a href = "mailto:merchantcare@icicims.com" ?Subject=ABC&Body=Body" title="title" > merchantcare@icicims.com  </a><br>
 •  Contact: 1800-266-6545 / 1800-102-1671 <br>
 •  Operational hours: 24/7 support<br>
 •  Sales Enquiries Contact: 1800-266-6545 / 1800-102-1671 </td> 
   
 </tr>
- 
+
+    
+
  <tr>
    <td><b> POS (premium) </b><br>
 •  Integration Support:<a href="mailto:imspremiumservice@icicims.com"> 
@@ -59,7 +61,7 @@ imspremiumservice@icicims.com</a> <br>
  </tr>
 
 <tr style="height: 36px;">
-  <td> Australia 
+  <td> Australia  
   <br>
   <br>
   <br>
@@ -111,7 +113,7 @@ imspremiumservice@icicims.com</a> <br>
 •  Sales Enquiries Contact: <a href="mailto:merchantservices@fiserv.com">merchantservices@fiserv.com</a>
  </td>
  </tr>
-
+ 
 <tr>
   <td> Hong Kong
   <br>
