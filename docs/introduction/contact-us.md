@@ -45,7 +45,7 @@ For APAC related integration, our dedicated support teams would be available to 
 
  <tr>
    <td><b> POS (premium) </b><br>
-•  Integration Support:<a  onClick="javascript:window.open('mailto:imspremiumservice@icicims.com', 'mail'); return false; event.preventDefault()" href="mailto:imspremiumservice@icicims.com">
+•  Integration Support:<a  onClick="javascript:window.open('mailto:imspremiumservice@icicims.com', 'mail'); return false; event.preventDefault()" href="#mailto:imspremiumservice@icicims.com">
 imspremiumservice@icicims.com</a> <br>
 •  Contact: 1800-266-6546 / 1800-102-1672 <br>
 •  Operational hours: 24/7 support </td>
