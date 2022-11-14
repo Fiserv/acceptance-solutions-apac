@@ -34,7 +34,7 @@ For APAC related integration, our dedicated support teams would be available to 
   <a href="#top">Back to top</a>
   </td>
    <td><b> Queries Point-of-Sale</b><br>
-•  Integration Support:<a onClick="javascript:window.open('mailto:merchantcare@icicims.com', 'mail'); return false; event.preventDefault()" href="mailto:merchantcare@icicims.com"> merchantcare@icicims.com </a><br>
+•  Integration Support:<a onClick="topFunction()"; id="myBtn" href="mailto:merchantcare@icicims.com"> merchantcare@icicims.com </a><br>
 •  Contact: 1800-266-6545 / 1800-102-1671 <br>
 •  Operational hours: 24/7 support<br>
 •  Sales Enquiries Contact: 1800-266-6545 / 1800-102-1671 </td> 
