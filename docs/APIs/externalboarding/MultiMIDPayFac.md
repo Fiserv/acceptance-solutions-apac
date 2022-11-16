@@ -238,7 +238,7 @@ The table below contains the mandatory fields required for a successful request.
 |**tradingLocations**|-|||This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application.|
 |`locationNo`|Numeric|2|M|Trading location number of the Merchant.|
 |`tradingName`|Alphanumeric|22|M|Trade Name of the Merchant.|
-|**tradingAddress**|-|||This is the object|
+|**tradingAddress**|||||
 |`addressLine`|Alphanumeric|35|M|Address of the Merchant.|
 |`addressLine2`|Alphanumeric|35|M|Address of the Merchant.|
 |`addressLine3`|Alphanumeric|35|M|Address of the Merchant.|
