@@ -313,7 +313,7 @@ The table below contains the mandatory fields required for a successful request.
 |`middleName`| Alphanumeric | 25 | O | Middle Name of the Merchant. | 
 |`gender`| Alphanumeric | 10 | O | Gender of the Merchant. | 
 |`ddateOfBirth`| Numeric | 8 | M | YYYYMMDD | 
-|**KYCDetails**|  |  |  | This is the object | 
+|**KYCDetails**|  |  |  |  | 
 |`kYCCategory`| - |  |  | POI/POA of the Merchant. | 
 |`identityType`| Alphanumeric | 50 | O | Type of KYC Document submitted | 
 |`identityType`| Alphanumeric | 50 | O | For India - PAN/AADHAR | 
