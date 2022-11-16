@@ -35,7 +35,9 @@
       sections:
         - title: Contact Us
           link: docs/introduction/contact-us.md
-
+          body:
+          - title: merchantcare@icicims.com
+            link: docs/introduction/contact-us.md
 
 - sections:
     - title: Getting Started
