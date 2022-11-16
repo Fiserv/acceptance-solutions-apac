@@ -410,7 +410,7 @@ The table below contains the mandatory fields required for a successful request.
 |`legalName`| Alphanumeric | 35 | M | Legal Name of the Merchant. | 
 |`businessType`| Alphanumeric | 50 | M | Type of Business of the Merchant. | 
 |`registrationNo`| Alphanumeric | 100 | M | Registration number of the Merchant. | 
-|**taxDetails**|  |  |  |  | 
+|**taxDetails**|  |  |  | | 
 |`taxidType`| Alphanumeric | 50 | M | Tax ID Type provided for the merchant.
 | | | | | For India - PAN |
 | | | | |For AU - ABN  | 
@@ -426,7 +426,7 @@ The table below contains the mandatory fields required for a successful request.
 | | | | | Static Value - ''ECOM'' for ECOM merchant | 
 |`iciciMerchant`| Alphanumeric | 100 | M | Applicable if the merchant has ICICI account. | 
 |`newFundingAc`| Alphanumeric | 100 | M | Applicable if the merchant wants the new settlement account. | 
-|**legalAddress**| Numeric | 8 | M |  | 
+|**legalAddress**|  |  |  || 
 |`addressLine`| Alphanumeric | 100 | C | Address of the Merchant. | 
 |`addressLine2`| Alphanumeric | 60 | M | Address of the Merchant. | 
 |`addressLine3`| Alphanumeric | 20 | M | Address of the Merchant. | 
@@ -454,13 +454,13 @@ The table below contains the mandatory fields required for a successful request.
 |`docId`| Alphanumeric | 20 | C | Value of docID received as response of uploaded document. | 
 |`categoryName`| Alphanumeric | 20 | C | Value of categoryName received as response of uploaded document. | 
 |`level`| Alphanumeric | 20 | C | Value of level received as response of uploaded document. | 
-|**geoLocation**| Numeric | 20 | C |  | 
+|**geoLocation**| Numeric |  |  |  | 
 |`latitude`| Alphanumeric | 20 | C | Latitude of the Merchant. | 
 |`longitude`| Alphanumeric | 20 | C | Longitude of the Merchant. | 
 |**tradingLocations**| Alphanumeric | 20 | C | This section contains the trading location details of merchants that is being onboarded. A maximum upto 3 trading locations can be added under a single Application. | 
 |`locationNo`| Alphanumeric | 20 | C | Trading location number of the Merchant.| 
 |`tradingName`| Alphanumeric | 20 | C | Trade Name of the Merchant. | 
-|**tradingAddress**| Numeric | 20 | C |  | 
+|**tradingAddress**|  | |  | | 
 |`addressLine`| - |  |  | Address of the Merchant. | 
 |`addressLine2`| Numeric | 20 | O | Address of the Merchant. | 
 |`addressLine3`| Numeric | 20 | O | Address of the Merchant. | 
@@ -477,7 +477,7 @@ The table below contains the mandatory fields required for a successful request.
 |`cpvGroupId`| Alphanumeric | 25 | M | Cpv groupid of the Merchant. | 
 |`regionalcpvGroupid`| Numeric | 15 | M | Regional cpv groupid of the Merchant. | 
 |`commerceConnectReferenceMID`| Numeric | 15 | O | Commerce connect reference mid of the Merchant. | 
-|**terminals**| Numeric | 30 | O |  | 
+|**terminals**|  |  |  | | 
 |`count`| Alphanumeric | 35 | M | Count of terminals for the Merchant. | 
 |`preferedDate`| Numeric | 10 | M | YYYYMMDD | 
 |`preferedTime`| Numeric | 6 | O | HHMMSS | 
@@ -513,7 +513,7 @@ The table below contains the mandatory fields required for a successful request.
 |`middleName`| Alphanumeric | 10 | O | Middle Name of the Merchant. | 
 |`gender`| - |  |  | Gender of the Merchant. | 
 |`dateOfBirth`| Alphanumeric | 2 | M | YYYYMMDD | 
-|**kycDetails**| Alphanumeric | 20 | M |  | 
+|**kycDetails**|  |  |  |  | 
 |`kycCategory`| Alphanumeric | 20 | M | POI/POA of the Merchant. | 
 |`identityType`| Alphanumeric | 25 | M | Type of KYC Document submitted. |
 | | | | |For India - PAN/AADHAR |
@@ -551,7 +551,7 @@ The table below contains the mandatory fields required for a successful request.
 |`dateOfBirth`| Alphanumeric | 20 | C | Format - YYYYMMDD | 
 |`shareholderPercentage`| Alphanumeric | 20 | C | Shareholder percentage the Ultimate Benefeciary Owner. | 
 |`nationality`| - |  | C | Nationality of the Ultimate Benefeciary Owner. | 
-|**kycDetails**| Alphanumeric | 30 | C |  | 
+|**kycDetails**|  |  |  |  | 
 |`kycCategory`| - |  |  | POI/POA of the Ultimate Benefeciary Owner. | 
 |`identityType`| Numeric | 2 | C | Type of KYC Document submitted for UBO.|
 | | | | | For India - PAN/AADHAR |
@@ -562,7 +562,7 @@ The table below contains the mandatory fields required for a successful request.
 | | | | | For AU - Driving License State Code | 
 |`identitymetaValue1`| Alphanumeric | 25 | C | Additional information pertaning to the KYC docuements submitted.|
 | | | | | For AU - Value Driving License State Code | 
-|**uboAddress**| Alphanumeric | 25 | O |  | 
+|**uboAddress**|  |  |  |  | 
 |`addressLine`| Numeric | 10 | C | Address  of the Ultimate Benefeciary Owner. | 
 |`addressLine2`| Numeric | 8 | C | Address Line2 Ultimate Benefeciary Owner. | 
 |`addressLine3`| Alphanumeric | 35 | C | Address Line3 Ultimate Benefeciary Owner. | 
