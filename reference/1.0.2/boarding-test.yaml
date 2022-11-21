@@ -472,6 +472,7 @@ paths:
             application/json:
                 schema:
                   $ref: '#/components/examples/Mid302'
+                  
         "404":
           description: Not Found 
           content:
