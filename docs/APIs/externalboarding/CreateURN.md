@@ -44,9 +44,9 @@ The table below contains the mandatory fields required for a successful request.
 | Variable | Type | Length |  Mandatory / Optional / Conditional (M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 | `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value API |
-| **KeySelection** |	 |	 | |	This is the object. |
+| **KeySelection** |	 |	 | |   |
 | `boardingType` | *Alphanumeric* |	20 |	M |	Type of merchant: NEWMID / ADDMID / ADDTID |
-| **MerchantDetails** | |	 |  |	This is the object. |
+| **MerchantDetails** | |	 |  |	  |
 | `businessName` |	*Alphanumeric* |	64 | M | Trade Name of the Merchant. |
 | `legalName` |	*Alphanumeric* |	64	| M	 | Legal Name of the Merchant. |
 | `institutionId` |	*Numeric* |	10 | O | Institution number assigned to the institution. |
