@@ -13,7 +13,7 @@ For APAC related integration, our dedicated support teams would be available to 
 
   <tr style="height: 36px;">
     <th width="20%"> <b>Region</b></th>
-    <th width="100%"><b>Contact Us</b></th>
+    <th width="180%"><b>Contact Us</b></th>
   </tr>
 India<br>
   <br>
@@ -34,8 +34,8 @@ India<br>
   <a href="#top">Back to top</a>
   </td>
    <td><b> Queries Point-of-Sale</b><br>
-•  Integration Support:<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=merchantcare@icicims.com
-" target="_self"> merchantcare@icicims.com </a><br>
+•  Integration Support:<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=merchantcare@icicims.com" target="_self"> 
+   merchantcare@icicims.com </a><br>
 •  Contact: 1800-266-6545 / 1800-102-1671 <br>
 •  Operational hours: 24/7 support<br>
 •  Sales Enquiries Contact: 1800-266-6545 / 1800-102-1671 </td> 
@@ -47,7 +47,7 @@ India<br>
  <tr>
    <td><b> POS (premium) </b><br>
 •  Integration Support:<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=imspremiumservice@icicims.com" target="_self">
-imspremiumservice@icicims.com </a> <br>
+   imspremiumservice@icicims.com </a> <br>
 •  Contact: 1800-266-6546 / 1800-102-1672 <br>
 •  Operational hours: 24/7 support </td>
  </tr>
