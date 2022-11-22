@@ -34,7 +34,8 @@ India<br>
   <a href="#top">Back to top</a>
   </td>
    <td><b> Queries Point-of-Sale</b><br>
-•  Integration Support:<a href="mailto:merchantcare@icicims.com" target="_self"> merchantcare@icicims.com </a><br>
+•  Integration Support:<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=merchantcare@icicims.com
+" target="_self"> merchantcare@icicims.com </a><br>
 •  Contact: 1800-266-6545 / 1800-102-1671 <br>
 •  Operational hours: 24/7 support<br>
 •  Sales Enquiries Contact: 1800-266-6545 / 1800-102-1671 </td> 
