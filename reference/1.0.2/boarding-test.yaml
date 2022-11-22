@@ -32,44 +32,45 @@ paths:
           description: Success
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/Response"
-             
+             examples:
+                "200":
+                  $ref: "#/components/examples/LoginRs200"
         "401":
           description: Unauthorized
           content:
             application/json:
               examples:
-                 schema:
-                  $ref: '#/components/examples/LoginRs401'
-        '300':
+                 "401":
+                  $ref: "#/components/examples/LoginRs401"
+        "300":
           description:  "Request failure"
           content:
             application/json:
               examples:
-                schema:
+                "300":
                   $ref: "#/components/examples/LoginRs300"
-        '404':
+        "404":
           description:  "Not found"
           content:
             application/json:
               examples:
-                 schema:
+                "404":
                   $ref: "#/components/examples/LoginRs404"
-        '500':
+        "500":
           description:  "Internal Server Error"
           content:
             application/json:
               examples:
-                schema:
+                "500":
                   $ref: "#/components/examples/LoginRs500"
         default:
           description: Success
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response200'
-            
+              examples:
+                "200":
+                  $ref: "#/components/examples/LoginRs200"
+
   /boardinggateway/externalboarding/secure/newmid:
     post:
       tags:
@@ -114,16 +115,18 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
+              examples:
+                "401":
+                  $ref: "#/components/examples/Response401"
               
         default:
           description: Success
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
-             
+              examples:
+                "200":
+                  $ref: "#/components/examples/NewMerchantResponse"
+
   /boardinggateway/externalboarding/secure/packages/{packageId}:
     get:
       tags:
@@ -151,17 +154,17 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/CreateAppResponse'
-              
+              examples:
+                "401":
+                  $ref: "#/components/examples/Response401"
 
         default:
           description: Success
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/AppResponse200'
-             
+              examples:
+                "200":
+                  $ref: "#/components/examples/GetPackageIDResponse"
   
   /boardinggateway/Externalboarding/secure/appstatus/{appUrn}:
     get:
@@ -214,16 +217,16 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
-             
+              examples:
+                "401":
+                  $ref: "#/components/examples/Response401"
         default:
            description: Success
            content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
-             
+              examples:
+                "200":
+                  $ref: "#/components/examples/DocumentListResponse"
                   
   /boardinggateway/Externalboarding/secure/refmid/{appType}/{referenceMID}:
     get:
@@ -255,35 +258,41 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/MerchantApplication'
-              
-        '400':
+              examples:
+                "401":
+                  $ref: "#/components/examples/Response401"
+
+        "400":
           description:  "Generic Error"
           content:
             application/json:
-                schema:
+              examples:
+                "400":
                   $ref: "#/components/examples/LoginRs400"
-        '403':
+
+        "403":
           description:  "Forbidden"
           content:
             application/json:
-                schema:
+              examples:
+                "403":
                   $ref: "#/components/examples/LoginRs403"
-        '500':
+
+        "500":
           description:  "Internal Server Error"
           content:
             application/json:
-              schema:
+             examples:
+              "500":
                 $ref: "#/components/examples/LoginRes500"
 
         default:
           description: Success
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/MerchantApplication'
-            
+              examples:
+                "200":
+                  $ref: "#/components/examples/MerchantAppResponse"
 
 
   /boardinggateway/externalboarding/secure/create:
@@ -321,15 +330,15 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/CreateAppResponse'
-             
+              examples:
+                "401":
+                  $ref: "#/components/examples/Response401"
         default:
           description: Unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateAppResponse'
+                $ref: "#/components/schemas/CreateAppResponse"
 
   /boardinggateway/externalboarding/secure/packages:
     get:
@@ -358,16 +367,18 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/CreateAppResponse'
+             examples:
+                 "401":
+                  $ref: "#/components/schemas/CreateAppResponse"
              
         default:
           description: Success
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/Response"
-             
+              examples:
+                "200":
+                 $ref: "#/components/examples/DocAndPkgRequestParamRes"
+
   /boardinggateway/externalboarding/secure/document/{appUrn}:
     post:
       tags:
@@ -401,16 +412,17 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
+              examples:
+                "401":
+                  $ref: "#/components/examples/Response401"
         
         default:
           description: Success
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
-             
+              examples:
+                "200":
+                  $ref: "#/components/examples/DocUploadRes"
                   
   /boardinggateway/externalboarding/secure/addmid:
     post:
@@ -448,62 +460,68 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
-            
+              examples:
+                "401":
+                  $ref: "#/components/examples/Response401"
+                  
         "100":
           description: Invalid Request
           content:
             application/json:
-                schema:
-                  $ref: '#/components/examples/Mid100'
-
+              examples:
+                "100":
+                  $ref: "#/components/examples/Mid100"
 
         "103":
           description: Data Not Found.Please contact Application Support Team 
           content:
             application/json:
-              schema:
-                  $ref: '#/components/examples/Mid103'
+              examples:
+                "103":
+                  $ref: "#/components/examples/Mid103"
 
         "302":
           description: IOException 
           content:
             application/json:
-                schema:
-                  $ref: '#/components/examples/Mid302'
-                  
+              examples:
+                "302":
+                  $ref: "#/components/examples/Mid302"
         "404":
           description: Not Found 
           content:
             application/json:
-              schema:
-                  $ref: '#/components/examples/Mid404'
+              examples:
+                "404":
+                  $ref: "#/components/examples/Mid404"
 
         "500":
           description: Internal Error.Please contact Application Support Team  
           content:
             application/json:
-              schema:
-                  $ref: '#/components/examples/Mid500'
+              examples:
+                "500":
+                  $ref: "#/components/examples/Mid500"
 
         "505":
           description: Internal Error.Please contact Application Support Team  
           content:
             application/json:
-                schema:
-                  $ref: '#/components/examples/Mid505'
+              examples:
+                "505":
+                  $ref: "#/components/examples/Mid505"
         
         default:
           description: Success
           content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/Response'
-              
-                  
+            application/json:
+              examples:
+                "200":
+                  $ref: "#/components/examples/ADDMIDRes"
+                
+
   /boardinggateway/externalboarding/secure/addtid:
-    post:
+     post:
       tags:
       - Merchant Onboarding
       summary: SUBMIT - Additional Device
@@ -539,53 +557,67 @@ paths:
           description: Unauthorized
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
-              
+              examples:
+                "401":
+                  $ref: "#/components/examples/Response401"
+
         "100":
           description: Invalid Request
           content:
             application/json:
-              schema:
-                  $ref: '#/components/examples/Mid100'
+              examples:
+                "100":
+                  $ref: "#/components/examples/Mid100"
+
         "103":
           description: Data Not Found.Please contact Application Support Team 
           content:
             application/json:
-                schema:
-                  $ref: '#/components/examples/Mid103'
+              examples:
+                "103":
+                  $ref: "#/components/examples/Mid103"
+
         "302":
           description: IOException 
           content:
             application/json:
-                schema:
-                  $ref: '#/components/examples/Mid302'
+              examples:
+                "302":
+                  $ref: "#/components/examples/Mid302"
+                  
         "404":
           description: Not Found 
           content:
             application/json:
-                 schema:
-                  $ref: '#/components/examples/Mid404'
+              examples:
+                "404":
+                  $ref: "#/components/examples/Mid404"
+
         "500":
           description: Internal Error.Please contact Application Support Team  
           content:
             application/json:
-                schema:
-                  $ref: '#/components/examples/Mid500'
+              examples:
+                "500":
+                  $ref: "#/components/examples/Mid500"
+
         "505":
           description: Internal Error.Please contact Application Support Team  
           content:
             application/json:
-                schema:
-                  $ref: '#/components/examples/Mid505'
+              examples:
+                 "505":
+                   $ref: "#/components/examples/Mid505"
 
         default:
           description: Success
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
-              
+              examples:
+                "200":
+                  $ref: "#/components/examples/ADDTIDRes"  
+
+
 components:
   parameters:
     ApiKeyHeader:
