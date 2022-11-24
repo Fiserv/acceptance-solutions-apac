@@ -19,39 +19,13 @@ For APAC related integration, our dedicated support teams would be available to 
   <br>
   <br>
   <tr>
-  <td rowspan="3"> India<br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <td> India
   <br>
   <br>
   <br>
   <br>
   <a href="#top">Back to top</a>
   </td>
-   <td><b> Queries Point-of-Sale</b><br>
-•  Integration Support:<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=merchantcare@icicims.com" target="_self">
-   merchantcare@icicims.com </a><br>
-•  Contact: 1800-266-6545 / 1800-102-1671 <br>
-•  Operational hours: 24/7 support<br>
-•  Sales Enquiries Contact: 1800-266-6545 / 1800-102-1671 </td> 
-  
-</tr>
-
-    
-
- <tr>
-   <td><b> POS (premium) </b><br>
-•  Integration Support:<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=imspremiumservice@icicims.com" target="_self">
-   imspremiumservice@icicims.com </a> <br>
-•  Contact: 1800-266-6546 / 1800-102-1672 <br>
-•  Operational hours: 24/7 support </td>
- </tr>
-
- <tr>
   <td> <b>Digital / Online Support</b><br>
 •  Integration Support:<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=pghelpdesk@fiserv.com" target="_self">pghelpdesk@fiserv.com</a><br>
 •  Contact: 1800-102-1673<br>
@@ -59,6 +33,7 @@ For APAC related integration, our dedicated support teams would be available to 
 •  Sales Enquiries Contact: 1800-102-1673
 </td>
  </tr>
+
 
 <tr style="height: 36px;">
   <td> Australia  
