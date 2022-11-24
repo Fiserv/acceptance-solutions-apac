@@ -400,7 +400,7 @@ The table below contains the mandatory fields required for a successful request.
 |`salesId`| Alphanumeric | 70 | M | User Credential created for each partner. | 
 |`channelCode`| Alphanumeric | 10 | C | Static Channel Code shared with each partner. | 
 |`institutionId`| Numeric | 10 | C | Institution number assigned to the institution. | 
-|`boardingType`| Alphanumeric | 20 | O | Type of Merchant: New MID/Add MID/Add TID | 
+|`boardingType`| Alphanumeric | 20 | O | Type of Merchant: New MID / Add MID / Add TID | 
 |`IS_ADD_LOCATION`| Alphanumeric | 20 | O | Applicable if the merchant wants additional location. | 
 |`IS_ADD_MID`| Alphanumeric | 20 | O | Applicable if the merchant wants additional MID. | 
 |`appChannel`| Alphanumeric | 20 | O | Application channel | 
@@ -482,8 +482,8 @@ The table below contains the mandatory fields required for a successful request.
 |`preferedDate`| Numeric | 10 | M | YYYYMMDD | 
 |`preferedTime`| Numeric | 6 | O | HHMMSS | 
 |`discount`| Alphanumeric | 50 | O | Discount of the Merchant. | 
-|`userInstruction1`| Alphanumeric | 50 | O | User Instruction1 of the Merchant. | 
-|`userInstruction2`| Alphanumeric | 8 | O | User Instruction2 of the Merchant. | 
+|`userInstruction1`| Alphanumeric | 50 | O | User Instruction 1 of the Merchant. | 
+|`userInstruction2`| Alphanumeric | 8 | O | User Instruction 2 of the Merchant. | 
 |**surchargeAmount**| - |  |  | This object is not applicable for ISO. Surcharge values currently selected by Partner on MVSI in AU. | 
 |`visaBase`| Numeric | 2 | M | For AU Only. | 
 |`visaPercent`| Numeric | 8 | M | For AU Only. | 
@@ -501,7 +501,7 @@ The table below contains the mandatory fields required for a successful request.
 |`dinersPercent`| Numeric | 11 | C | For AU Only. | 
 |`altmerchCode`| Numeric | 11 | C | This is an optional field which has to be populated only if there is merchant MID or Dealer Code has to be captured at MID Level. | 
 |`sameLocation`| Numeric | 11 | C | This flag has to be set to 'Y' if Partner wants multiple MIDs at the same location. | 
-|`mid`| Numeric | 11 | C | This is the reference Member MID which needs to be given in case of ADD MID/ ADD TID. | 
+|`mid`| Numeric | 11 | C | This is the reference Member MID which needs to be given in case of ADD MID / ADD TID. | 
 |`parentmid`| Numeric | 11 | C | This is the SG (parent MID) of the reference MID which needs to be given in case of ADD MID & ADD TID. | 
 |`otpEnabled`| Numeric | 11 | C | Otp enabled for the merchant. | 
 |**principalDetails**| Numeric | 11 | C | This section is used to capture details of Principal Owner for the said merchant. The same section can be repeated for multiple Principal Owners. We can have upto maximum of 2 Principal Owners per merchant. | 
@@ -516,17 +516,17 @@ The table below contains the mandatory fields required for a successful request.
 |**kycDetails**|  |  |  |  | 
 |`kycCategory`| Alphanumeric | 20 | M | POI/POA of the Merchant. | 
 |`identityType`| Alphanumeric | 25 | M | Type of KYC Document submitted. |
-| | | | |For India - PAN/AADHAR |
-| | | | | For ASEAN - Passport/Driving Licence/HKID or SGID or MYID |
-| | | | |For AU - Passport/Driving Licence |
+| | | | |For India - PAN / AADHAR |
+| | | | | For ASEAN - Passport / Driving Licence / HKID or SGID or MYID |
+| | | | |For AU - Passport / Driving Licence |
 |`identityValue`| Alphanumeric | 25 | M | Value of the KYC Document submitted | 
 |`identitymetaName1`| Alphanumeric | 25 | O | Additional information pertaning to the KYC documents submitted. For AU - Driving License State Code. | 
 |`identitymetaValue1`| Alphanumeric | 10 | M | Additional information pertaning to the KYC documents submitted. For AU - Value Driving License State Code. | 
 |`nationality`| Numeric | 8 | M | Nationality of the Merchant. | 
 |**principalAddress**|  |  |  |  | 
 |`addressLine`| - |  |  | Address  line of the Merchant. | 
-|`addressLine2`| Alphanumeric | 50 | M | Address Line2 of the Merchant. | 
-|`addressLine3`| Alphanumeric | 50 | M | Address Line3 of the Merchant. | 
+|`addressLine2`| Alphanumeric | 50 | M | Address Line 2 of the Merchant. | 
+|`addressLine3`| Alphanumeric | 50 | M | Address Line 3 of the Merchant. | 
 |`city`| Alphanumeric | 50 | M | City of the Merchant. | 
 |`state`| Alphanumeric | 50 | M | State of the Merchant. | 
 |`pincode`| Alphanumeric | 100 | M | Pincode of the Merchant.| 
@@ -554,9 +554,9 @@ The table below contains the mandatory fields required for a successful request.
 |**kycDetails**|  |  |  |  | 
 |`kycCategory`| - |  |  | POI/POA of the Ultimate Benefeciary Owner. | 
 |`identityType`| Numeric | 2 | C | Type of KYC Document submitted for UBO.|
-| | | | | For India - PAN/AADHAR |
-| | | | | For ASEAN - Passport/Driving Licence/HKID or SGID or MYID |
-| | | | | For AU - Passport/Driving Licence | 
+| | | | | For India - PAN / AADHAR |
+| | | | | For ASEAN - Passport / Driving Licence / HKID or SGID or MYID |
+| | | | | For AU - Passport / Driving Licence | 
 |`identityValue`| Alphanumeric | 20 | C | Value of the KYC Document submitted. | 
 |`identitymetaName1`| Alphanumeric | 25 | C | Additional information pertaning to the KYC documents submitted for UBO.|
 | | | | | For AU - Driving License State Code | 
@@ -564,8 +564,8 @@ The table below contains the mandatory fields required for a successful request.
 | | | | | For AU - Value Driving License State Code | 
 |**uboAddress**|  |  |  |  | 
 |`addressLine`| Numeric | 10 | C | Address  of the Ultimate Benefeciary Owner. | 
-|`addressLine2`| Numeric | 8 | C | Address Line2 Ultimate Benefeciary Owner. | 
-|`addressLine3`| Alphanumeric | 35 | C | Address Line3 Ultimate Benefeciary Owner. | 
+|`addressLine2`| Numeric | 8 | C | Address Line 2 Ultimate Benefeciary Owner. | 
+|`addressLine3`| Alphanumeric | 35 | C | Address Line 3 Ultimate Benefeciary Owner. | 
 |`city`| - |  |  | City of the Ultimate Benefeciary Owner. | 
 |`state`| - |  |  | State of the Ultimate Benefeciary Owner. | 
 |`pincode`| Alphanumeric | 50 | C | Pincode of the Ultimate Benefeciary Owner. | 
@@ -621,11 +621,11 @@ The table below contains the mandatory fields required for a successful request.
 |`tranVolumeInternet`| Numeric | 15 | C | Tran volume internet of the Merchant.| 
 |`tranVolumeMoto`| Numeric | 15 | C | Tran volume moto of the Merchant.| 
 |`tranVolumeinStore`| - |  |  | Tran volume in store of the Merchant.| 
-|`deliveryDays0`| Alphanumeric | 100 | M | Delivery Days0 of the Merchant.| 
-|`deliveryDays7`| Alphanumeric | 100 | O | Delivery Days7 of the Merchant.| 
-|`deliveryDays14`| Numeric | 20 | M | Delivery Days14 of the Merchant.| 
-|`deliveryDays30`| Alphanumeric | 200 | M | Delivery Days30 of the Merchant.| 
-|`deliveryDaysOver30`| Numeric | 20 | M | Delivery Days Over30 of the Merchant.| 
+|`deliveryDays0`| Alphanumeric | 100 | M | Delivery Days 0 of the Merchant.| 
+|`deliveryDays7`| Alphanumeric | 100 | O | Delivery Days 7 of the Merchant.| 
+|`deliveryDays14`| Numeric | 20 | M | Delivery Days 14 of the Merchant.| 
+|`deliveryDays30`| Alphanumeric | 200 | M | Delivery Days 30 of the Merchant.| 
+|`deliveryDaysOver30`| Numeric | 20 | M | Delivery Days Over 30 of the Merchant.| 
 |`tranTypeMagStrip`| Numeric | 20 | M | Tran type magstripe of the Merchant.| 
 |`tranTypeChip`| Numeric | 20 | M | Tran type chip of the Merchant.| 
 |`tranTypeKeyed`| Numeric | 20 | M | Tran type keyed of the Merchant.| 
@@ -638,9 +638,9 @@ The table below contains the mandatory fields required for a successful request.
 |`thirdPartyProcessorFlag`| Numeric | 20 | M | Thirdparty processor flag of the Merchant.| 
 |`thirdPartyProcessorName`| Numeric | 20 | M | Thirdparty processor name of the Merchant.| 
 |`smallMerchant`| Numeric | 20 | M | Applicable if the merchant is a Small Merchant. | 
-|`deliveryDays14`| Numeric | 20 | M | Delivery Days14 of the Merchant.| 
-|`deliveryDays30`| Numeric | 20 | M | Delivery Days30 of the Merchant.| 
-|`deliveryDaysOver30`| Numeric | 20 | M | Delivery Days Over30 of the Merchant.| 
+|`deliveryDays14`| Numeric | 20 | M | Delivery Days 14 of the Merchant.| 
+|`deliveryDays30`| Numeric | 20 | M | Delivery Days 30 of the Merchant.| 
+|`deliveryDaysOver30`| Numeric | 20 | M | Delivery Days Over 30 of the Merchant.| 
 |`tranTypeMagStrip`| Numeric | 20 | M | Tran type magstripe of the Merchant.| 
 |`tranTypeChip`| Numeric | 20 | M | Tran type chip of the Merchant.| 
 |`tranTypeKeyed`| Numeric | 20 | M | Tran type keyed of the Merchant.| 
@@ -695,9 +695,9 @@ The table below provides the list of application's error code and its descriptio
 | Error Code |  Description / Values |
 | --------  | ------------------ |
 |`100`| Invalid Request |
-|`103`| Data Not Found, please contact Application Support Team |
+|`103`| Data not found, please contact Application Support Team |
 |`200`| Sucess |
-|`302`| IOException |
+|`302`| IO Exception |
 |`404`| Not Found |
 |`401`| Unauthorized |
 |`500`| Internal Error, please contact Application Support Team. |
@@ -709,7 +709,7 @@ The table below provides the list of application's error code and its descriptio
 |`905`| JSON Parse Error |
 |`906`| JSON Mapping Error |
 |`907`| Comments are empty. |
-|`908`| App URN not matching. |
+|`908`| App URN is not matching. |
 |`909`| Given Merchant Hierarchy Cannot handle via TAB. Please contact Application Support Team. |
 |`910`| Given Merchant Id Doesnt qualify for Add Outlet. Please contact Application Support Team. |
 |`911`| Given Merchant Super MID is InActive. Please contact Application Support Team. |
