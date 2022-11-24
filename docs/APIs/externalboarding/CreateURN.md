@@ -45,10 +45,10 @@ The table below contains the mandatory fields required for a successful request.
 | -------- | ------- | -- | ------------ | ------------------ |
 | `appType` |	*Alphanumeric* |	8 |	M	| Fixed Value API |
 | **KeySelection** |	 |	 | |   |
-| `boardingType` | *Alphanumeric* |	20 |	M |	Type of merchant: NEWMID / ADDMID / ADDTID |
+| `boardingType` | *Alphanumeric* |	20 |	M |	Type of merchant: NEW MID / ADD MID / ADD TID |
 | **MerchantDetails** | |	 |  |	  |
-| `businessName` |	*Alphanumeric* |	64 | M | Trade Name of the Merchant. |
-| `legalName` |	*Alphanumeric* |	64	| M	 | Legal Name of the Merchant. |
+| `businessName` |	*Alphanumeric* |	64 | M | Trade name of the Merchant. |
+| `legalName` |	*Alphanumeric* |	64	| M	 | Legal name of the Merchant. |
 | `institutionId` |	*Numeric* |	10 | O | Institution number assigned to the institution. |
 | `countryCode` |	*Numeric* |	10 | O	| Country code where the institution belongs.  |
 
@@ -165,6 +165,6 @@ The table below provides the list of application's error code and its descriptio
 | --------  | ------------------ |
 |`200`| Token not found. | 
 |`401`| Unauthorized | 
-|`100`| Invalid Request | 
+|`100`| Invalid request | 
 |`702`| Unable to create merchant. | 
-|`500`| Internal Error, please contact application support team. | 
+|`500`| Internal error, please contact application support team. | 
