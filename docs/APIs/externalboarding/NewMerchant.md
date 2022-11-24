@@ -485,7 +485,7 @@ The table below contains the mandatory fields required for a successful request.
 |`pincode`|Alphanumeric|8|M|Pincode of the Merchant.|
 |`country`|Alphanumeric|25|M|Country of the Merchant.|
 |`mobileNo`|Numeric|15|M|Mobile number of the Merchant.|
-|`phone1`|Numeric|15|M|phone1 of the Merchant.|
+|`phone1`|Numeric|15|M|phone 1 of the Merchant.|
 |`email`|Numeric|30|M|Email of the Merchant.|
 |`contactName`|Alphanumeric|35|M|Contact name of the Merchant.|
 |`packageId`|Numeric|10|M|Package number assigned to the Merchant|
@@ -493,14 +493,14 @@ The table below contains the mandatory fields required for a successful request.
 |`cpvGroupId`|Alphanumeric|50|NA|Cpv groupid of the Merchant.|
 |`regionalcpvGroupid`|Alphanumeric|50|O|Regional cpv groupid of the Merchant.|
 |`commerceConnectReferenceMID`|Alphanumeric|8|O|Commerce connect reference mid of the Merchant.|
-|`terminals`|||||
+|**terminals**|||||
 |`count`|Numeric|2|M|Count of terminals for the Merchant.|
 |`preferedDate`|Numeric|8|M|YYYYMMDD|
 |`preferedTime`|Numeric|6|M|HHMMSS|
 |`discount`|Numeric|3|M|Discount of the Merchant.|
 |`userInstruction1`|Alphanumeric|100|O|User Instruction 1 of the Merchant.|
 |`userInstruction2`|Alphanumeric|100|O|User Instruction 2 of the Merchant.|
-|**surchargeAmount***|-|||This object is not applicable for ISO. Surcharge values currently selected by Partner on MVSI in AU|
+|**surchargeAmount**|-|||This object is not applicable for ISO. Surcharge values currently selected by Partner on MVSI in AU|
 |`visaBase`|Numeric|11|NA|For AU Only.|
 |`visaPercent`|Numeric|11|NA|For AU Only.|
 |`mcBase`|Numeric|11|NA|For AU Only.|
@@ -603,7 +603,7 @@ The table below contains the mandatory fields required for a successful request.
 |`accountNo`|Numeric|100|NA|If different from UW details.|
 |`accountName`|Alphanumeric|35|NA|Account name of the Merchant.|
 |`ifsc`|Alphanumeric|15|NA|Ifsc of the Merchant.|
-|`bankName`|Alphanumeric|80|NA|Bank Name of the Cerchant|
+|`bankName`|Alphanumeric|80|NA|Bank Name of the Merchant.|
 |`currency`|Alphanumeric|3|NA|Currency of the Merchant.|
 |`branch`|Alphanumeric|500|NA|Branch of the Merchant.|
 |`bankAddress`|Alphanumeric|500|NA|Bank address of the Merchant.|
@@ -687,7 +687,7 @@ The table below provides the list of application's error code and its descriptio
 | Error Code |  Description / Values |
 | --------  | ------------------ |
 |`100`| Invalid Request |
-|`103`| Data Not Found, please contact Application Support Team. |
+|`103`| Data not found, please contact Application Support Team. |
 |`200`| Success |
 |`302`| IO Exception |
 |`404`| Not Found |
@@ -701,7 +701,7 @@ The table below provides the list of application's error code and its descriptio
 |`905`| JSON Parse Error |
 |`906`| JSON Mapping Error |
 |`907`| Comments are empty. |
-|`908`| App URN not matching. |
+|`908`| App URN is not matching. |
 |`909`| Given Merchant Hierarchy Cannot handle via TAB. Please contact Application Support Team. |
 |`910`| Given Merchant Id Doesnt qualify for Add Outlet. Please contact Application Support Team. |
 |`911`| Given Merchant Super MID is Inactive. Please contact Application Support Team. |
