@@ -454,8 +454,8 @@ The table below provides the list of application's error code and its descriptio
 |`302`| IO Exception |
 |`404`| Not Found |
 |`401`| Unauthorized |	
-|`500`| Internal Error, please contact Application Support Team. |
-|`505`| Internal server Error, please contact Application Support Team. |
+|`500`| Internal Error, please contact application support team. |
+|`505`| Internal server Error, please contact application support team. |
 |`708`| App URN already submitted. |
 |`902`| App URN is a mandatory value. |
 |`903`| Application already submitted. |
