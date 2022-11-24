@@ -89,8 +89,8 @@ The table below provides the list of application's error code and its descriptio
 | --------  | ------------------ |
 |`100`| Invalid Request |
 |`101`| Missing Mandatory Fields |  
-|`103`| Data not found, please contact Application Support Team. |
-|`200`|  Success |  
+|`103`| Data not found, please contact application support team. |
+|`200`| Success |  
 |`301`| Document Type Required |
 |`302`| IO Exception |
 |`303`| Atleast One Document Required. |  
@@ -98,15 +98,15 @@ The table below provides the list of application's error code and its descriptio
 |`400`| Terminal had not been set up correctly. |  
 |`415`| Invalid media type |
 |`500`| Internal Error, please contact Application Support Team. |
-|`700`| No record found for given App URN and Sales ID. |
+|`700`| No record found for the given App URN and Sales ID. |
 |`701`| Unable to create App URN. |  
 |`708`| App URN already submitted. |
-|`900`|  Invalid App URN |  
+|`900`| Invalid App URN |  
 |`901`| App URN is not matching. |
-|`902`| App URN is Mandatory. |
-|`903`| Application already Submitted. |  
+|`902`| App URN is a mandatory value. |
+|`903`| Application already submitted. |  
 |`904`| JSON Processing Error |
 |`905`| JSON Parse Error |  
 |`906`| JSON Mapping Error |
-|`907`| Comments are empty. |
-|`908`| App URN is not matching. |
+|`907`| Comment field empty. |
+|`908`| App URN does not match. |
