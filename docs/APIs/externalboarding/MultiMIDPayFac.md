@@ -456,7 +456,7 @@ The table below provides the list of application's error code and its descriptio
 |`401`| Unauthorized |	
 |`500`| Internal Error, please contact application support team. |
 |`505`| Internal server Error, please contact application support team. |
-|`708`| App URN already submitted. |
+|`708`| App URN had already submitted. |
 |`902`| App URN is a mandatory value. |
 |`903`| Application already submitted. |
 |`904`| JSON Processing Error |
