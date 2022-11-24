@@ -87,10 +87,10 @@ The table below provides the list of application's error code and its descriptio
 | Error Code |  Description / Values |
 | --------  | ------------------ |
 |`100`| Invalid Request |
-|`103`| Data not found, please contact Application Support Team. |  
+|`103`| Data not found, please contact application support team. |  
 |`200`| Success |
-|`400`| Generic Error |
+|`400`| Terminal had not been set up correctly. |
 |`401`| Unauthorized |
-|`500`| Internal Error, please contact Application Support Team. |  
+|`500`| Internal Error, please contact application support team. |  
 
  
