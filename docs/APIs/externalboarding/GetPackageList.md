@@ -364,8 +364,8 @@ The table below provides the list of application's error code and its descriptio
 |`700`| No record found for given App URN and Sales ID. |
 |`900`| Invalid App URN |
 |`901`| App URN is not matching. |
-|`902`| App URN is Mandatory. |
-|`903`| Application had already been Submitted. |
+|`902`| App URN is a mandatory value. |
+|`903`| Application had already submitted. |
 |`904`| JSON Processing Error |
 |`905`| JSON Parse Error |
 |`906`| JSON Mapping Error |
