@@ -298,19 +298,19 @@ The table below provides the list of application's error code and its descriptio
 
 | Error Code |  Description / Values |
 | --------  | ------------------ |
-|`103`| Data not found, please contact Application Support Team. |
+|`103`| Data not found, please contact application support team. |
 |`105`| Given RM details not found. |  
 |`200`| Success |
 |`400`| Terminal had not been set up correctly. |
 |`401`| Unauthorized |
-|`405`| Http Client Error Exception |  
-|`700`| No record found for given AppURN and Sales ID. |
+|`405`| Http client error exception |  
+|`700`| No record found for the given AppURN and Sales ID. |
 |`900`|  Invalid App URN |  
 |`901`| App URN is not matching. |
-|`902`| App URN is Mandatory. |
-|`903`| Application already Submitted. |  
+|`902`| App URN is a mandatory value. |
+|`903`| Application had already Submitted. |  
 |`904`| JSON Processing Error |
 |`905`| JSON Parse Error |  
 |`906`| JSON Mapping Error |
-|`907`| Comments are empty. |
-|`908`| App URN is not matching. |
+|`907`| Comments field empty. |
+|`908`| App URN does not match. |
