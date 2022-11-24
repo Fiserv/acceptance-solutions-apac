@@ -3,8 +3,8 @@
 This API is used to fetch the Document Matrix details using certain criteria sent in request message.
 
 ## How it works
-1. Merchant needs to use this API if the merchant documents are submitted to Fiserv for partner Credit Underwriting process.
-2. API has to be used to fetch the document matrix and use subsequent Upload Document API.
+1. Merchant needs to use this API if the merchant documents are submitted to Fiserv for partner credit underwriting process.
+2. API has to be used to fetch the document matrix and use subsequent upload document API.
 3. API response will contain the possible set of documents which the Partner can provide as part of Funding proof, Partner POI,
    Partner POA, Other categories, etc. 
 
@@ -54,16 +54,16 @@ The table below contains the mandatory fields required for a successful request.
 |`appChannel`|Alphanumeric|20|M|Application Channel|
 |`appType`|Alphanumeric|8|M|Fixed Value API.|
 |`institutionId`|Numeric|10|M|Institution number assigned to the institution.|
-|`typeOfBusiness`|Alphanumeric|50|M|Type of Business means Sole Proprieter, Individual etc.|
+|`typeOfBusiness`|Alphanumeric|50|M|Type of business (eg.Sole Proprietor, Individual etc.)|
 |`mccCode`|Numeric|20|M|Unique value assigned for each industry.|
 |`merchantGrade`|Alphanumeric|40|M|The grade of the merchant decided as per the turnover.|
-|`merchantType`|Alphanumeric|20|M|Type of Merchant whether Small or Large Merchant|
-|`acceptanceType`|Alphanumeric|10|M|Static Value: 'ECOM' / 'POSMOB'|
+|`merchantType`|Alphanumeric|20|M|Type of merchant (eg.Large merchant,SME|
+|`acceptanceType`|Alphanumeric|10|M|Static Value: ECOM / POSMOB |
 |`international`|Alphanumeric|3|M|Applicable if the merchant accepts international transactions.|
 |`iciciMerchant`|Alphanumeric|20|O|Applicable if the merchant is ICICI current bank account holder.|
-|`dcc`|Alphanumeric|3|O|It is applicable for Foreign rate conversion(Y/N).|
+|`dcc`|Alphanumeric|3|O|Applicable if the merchant has foreign rate conversion (Y/N).|
 |`fundingCurrency`|Alphanumeric|8|M|The currency is settled to the merchant NET_INR, NET_USD, NET_AUD etc.|
-|`newFundingAc`|Alphanumeric|20|O|Merchant settlement account|
+|`newFundingAc`|Alphanumeric|20|O|Merchant's settlement account|
 
 
 ### Successful Response Payload
@@ -1630,10 +1630,10 @@ The table below provides the list of application's error code and its descriptio
 |`401`| Unauthorized |
 |`900`|  Invalid App URN |  
 |`901`| App URN is not matching. |
-|`902`| App URN is Mandatory. |
-|`903`| Application already Submitted. |  
+|`902`| App URN is a mandatory value. |
+|`903`| Application had already Submitted. |  
 |`904`| JSON Processing Error |
 |`905`| JSON Parse Error |  
 |`906`| JSON Mapping Error |
-|`907`| Comments are empty. |
-|`908`| App URN is not matching. |
+|`907`| Comments field empty. |
+|`908`| App URN does not match. |
