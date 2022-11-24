@@ -92,7 +92,7 @@ The table below provides the list of application's error code and its descriptio
 |`103`| Data not found, please contact Application Support Team. |
 |`200`|  Success |  
 |`301`| Document Type Required |
-|`302`| IOException |
+|`302`| IO Exception |
 |`303`| Atleast One Document Required. |  
 |`304`| Invalid Document Type |
 |`400`| Terminal had not been set up correctly. |  
