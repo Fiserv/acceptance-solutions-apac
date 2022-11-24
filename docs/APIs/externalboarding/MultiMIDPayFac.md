@@ -180,7 +180,7 @@ The table below contains the mandatory fields required for a successful request.
 |`salesId`|Alphanumeric|70|O|User Credential created for each partner.|
 |`channelCode`|Alphanumeric|10|O|Static Channel Code shared with each partner.|
 |`institutionId`|Numeric|10|O|Institution number assigned to the institution.|
-|`boardingType`|Alphanumeric|20|NA|Type of Merchant: New MID/Add MID/Add TID|
+|`boardingType`|Alphanumeric|20|NA|Type of Merchant: New MID / Add MID / Add TID|
 |`IS_ADD_LOCATION`|Alphanumeric|20|NA|Applicable if the merchant wants additional location.|
 |`IS_ADD_MID`|Alphanumeric|20|NA|Applicable if the merchant wants additional MID.|
 |`appChannel`|Alphanumeric|20|NA|Application channel|
@@ -260,8 +260,8 @@ The table below contains the mandatory fields required for a successful request.
 |`preferedDate`|Numeric|8|O|YYYYMMDD|
 |`preferedTime`|Numeric|6|O|HHMMSS|
 |`discount`|Numeric|3|NA|Discount of the Merchant.|
-|`userInstruction1`|Alphanumeric|100|NA|User Instruction1 of the Merchant.|
-|`userInstruction2`|Alphanumeric|100|NA|User Instruction2 of the Merchant.|
+|`userInstruction1`|Alphanumeric|100|NA|User Instruction 1 of the Merchant.|
+|`userInstruction2`|Alphanumeric|100|NA|User Instruction 2 of the Merchant.|
 |**surchargeAmount**|-|||This object is not applicable for ISO. Surcharge values currently selected by Partner on MVSI in AU.|
 |`visaBase`|Numeric|11|NA|For AU Only.|
 |`visaPercent`|Numeric|11|NA|For AU Only.|
@@ -294,17 +294,17 @@ The table below contains the mandatory fields required for a successful request.
 |**KYCDetails**|||||
 |`kYCCategory`|-|||POI/POA of the Merchant.|
 |`identityType`|Alphanumeric|50|O|Type of KYC Document submitted.|
-|`identityType`|Alphanumeric|50|O|For India - PAN/AADHAR.|
-|`identityType`|Alphanumeric|50|O|For ASEAN - Passport/Driving Licence/HKID or SGID or MYID.|
-|`identityType`|Alphanumeric|50|O|For AU - Passport/Driving Licence.|
+|`identityType`|Alphanumeric|50|O|For India - PAN / AADHAR.|
+|`identityType`|Alphanumeric|50|O|For ASEAN - Passport / Driving Licence / HKID or SGID or MYID.|
+|`identityType`|Alphanumeric|50|O|For AU - Passport / Driving Licence.|
 |`identityValue`|Alphanumeric|100|O|Value of the KYC Document submitted.|
 |`identitymetaName1`|Alphanumeric|100|O|Additional information pertaning to the KYC documents submitted. For AU - Driving License State Code.|
 |`identitymetaValue1`|Alphanumeric|100|O|Additional information pertaning to the KYC documents submitted. For AU - Value Driving License State Code.|
 |`nationality`|Alphanumeric|35|O|Nationality of the Merchant.|
 |**principalAddress**|||||
 |`addressLine`|Alphanumeric|35|M|Address  line of the Merchant.|
-|`addressLine2`|Alphanumeric|35|M|Address Line2 of the Merchant.|
-|`addressLine3`|Alphanumeric|35|M|Address Line3 of the Merchant.|
+|`addressLine2`|Alphanumeric|35|M|Address Line 2 of the Merchant.|
+|`addressLine3`|Alphanumeric|35|M|Address Line 3 of the Merchant.|
 |`city`|Alphanumeric|25|M|City of the Merchant.|
 |`state`|Alphanumeric|25|M|State of the Merchant.|
 |`pincode`|Alphanumeric|8|M|Pincode of the Merchant.|
@@ -332,9 +332,9 @@ The table below contains the mandatory fields required for a successful request.
 |**kycDetails**|||||
 |**kycCategory**|-|||POI/POA of the Ultimate Benefeciary Owner.|
 |`identityType`|Alphanumeric|50|C|Type of KYC Document submitted for UBO.|
-|`identityType`|Alphanumeric|50|C|For India - PAN/AADHAR|
-|`identityType`|Alphanumeric|50|C|For ASEAN - Passport/Driving Licence/HKID or SGID or MYID|
-|`identityType`|Alphanumeric|50|C|For AU - Passport/Driving Licence|
+|`identityType`|Alphanumeric|50|C|For India - PAN / AADHAR|
+|`identityType`|Alphanumeric|50|C|For ASEAN - Passport / Driving Licence / HKID or SGID or MYID|
+|`identityType`|Alphanumeric|50|C|For AU - Passport / Driving Licence|
 |`identityValue`|Alphanumeric|100|C|Value of the KYC Document submitted.|
 |`identitymetaName1`|Alphanumeric|100|NA|Additional information pertaning to the KYC documents submitted for UBO. For AU - Driving License State Code.|
 |`identitymetaValue1`|Alphanumeric|100|NA|Additional information pertaning to the KYC docuements submitted. For AU - Value Driving License State Code.|
@@ -397,11 +397,11 @@ The table below contains the mandatory fields required for a successful request.
 |`tranVolumeInternet`|Numeric|20|M|Tran volume internet of the Merchant.|
 |`tranVolumeMoto`|Numeric|20|M|Tran volume moto of the Merchant.|
 |`tranVolumeinStore`|Numeric|20|M|Tran volume in store of the Merchant.|
-|`deliveryDays0`|Numeric|20|M|Delivery Days0 of the Merchant.|
-|`deliveryDays7`|Numeric|20|M|Delivery Days7 of the Merchant.|
-|`deliveryDays14`|Numeric|20|M|Delivery Days14 of the Merchant.|
-|`deliveryDays30`|Numeric|20|M|Delivery Days30 of the Merchant.|
-|`deliveryDaysOver30`|Numeric|20|M|Delivery Days Over30 of the Merchant.|
+|`deliveryDays0`|Numeric|20|M|Delivery Days 0 of the Merchant.|
+|`deliveryDays7`|Numeric|20|M|Delivery Days 7 of the Merchant.|
+|`deliveryDays14`|Numeric|20|M|Delivery Days 14 of the Merchant.|
+|`deliveryDays30`|Numeric|20|M|Delivery Days 30 of the Merchant.|
+|`deliveryDaysOver30`|Numeric|20|M|Delivery Days Over 30 of the Merchant.|
 |`tranTypeMagStrip`|Numeric|20|O|Tran type magstripe of the Merchant.|
 |`tranTypeChip`|Numeric|20|O|Tran type chip of the Merchant.|
 |`tranTypeKeyed`|Numeric|20|O|Tran type keyed of the Merchant.|
@@ -449,7 +449,7 @@ The table below provides the list of application's error code and its descriptio
 | Error Code |  Description / Values |
 | --------  | ------------------ |
 |`100`| Invalid Request |
-|`103`| Data Not Found, please contact Application Support Team. |
+|`103`| Data not found, please contact Application Support Team. |
 |`200`| Success |
 |`302`| IO Exception |
 |`404`| Not Found |
@@ -463,7 +463,7 @@ The table below provides the list of application's error code and its descriptio
 |`905`| JSON Parse Error |
 |`906`| JSON Mapping Error |
 |`907`| Comments are empty. |
-|`908`| App URN not matching. |
+|`908`| App URN is not matching. |
 |`909`| Given Merchant Hierarchy Cannot handle via TAB. Please contact Application Support Team. |
 |`910`| Given Merchant Id Doesnt qualify for Add Outlet. Please contact Application Support Team. |
 |`911`| Given Merchant Super MID is Inactive. Please contact Application Support Team. |
