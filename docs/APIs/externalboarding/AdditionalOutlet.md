@@ -714,7 +714,7 @@ The table below provides the list of application's error code and its descriptio
 |`505`| Internal Error, Please contact application support team. |
 |`708`| App URN already submitted. |
 |`902`| App URN is a mandatory value. |
-|`903`| Application had already Submitted. |
+|`903`| Application had already submitted. |
 |`904`| JSON Processing Error |
 |`905`| JSON Parse Error |
 |`906`| JSON Mapping Error |
