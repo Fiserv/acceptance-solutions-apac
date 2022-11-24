@@ -27,7 +27,7 @@ For APAC related integration, our dedicated support teams would be available to 
   <a href="#top">Back to top</a>
   </td>
   <td> <b>Digital / Online Support</b><br>
-•  Integration Support:<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=pghelpdesk@fiserv.com" target="_self">pghelpdesk@fiserv.com</a><br>
+•  Integration Support: <a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=pghelpdesk@fiserv.com" target="_self">pghelpdesk@fiserv.com</a><br>
 •  Contact: 1800-102-1673<br>
 •  Operational hours: 19/7 Support Local Time 5:00am to 11:00pm IST <br>
 •  Sales Enquiries Contact: 1800-102-1673
