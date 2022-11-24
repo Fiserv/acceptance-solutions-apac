@@ -15,12 +15,11 @@ For APAC related integration, our dedicated support teams would be available to 
     <th width="20%"> <b>Region</b></th>
     <th width="250%"><b>Contact Us</b></th>
   </tr>
-India<br>
   <br>
   <br>
   <br>
   <tr>
-  <td rowspan="3"
+  <td rowspan="3"> India<br>
   <br>
   <br>
   <br>
