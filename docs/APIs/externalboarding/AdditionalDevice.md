@@ -695,21 +695,21 @@ The table below provides the list of application's error code and its descriptio
 | Error Code |  Description / Values |
 | --------  | ------------------ |
 |`100`| Invalid Request |
-|`103`| Data not found, please contact Application Support Team |
-|`200`| Sucess |
+|`103`| Data not found, please contact application support team |
+|`200`| Success |
 |`302`| IO Exception |
 |`404`| Not Found |
 |`401`| Unauthorized |
-|`500`| Internal Error, please contact Application Support Team. |
-|`505`| Internal Error, please contact Application Support Team. |
+|`500`| Internal Error, please contact application support team. |
+|`505`| Internal Error, please contact application support team. |
 |`708`| App URN already submitted. |
-|`902`| App URN is mandatory. |
-|`903`| Application already Submitted. |
+|`902`| App URN is a mandatory value. |
+|`903`| Application had already submitted. |
 |`904`| JSON Processing Error |
 |`905`| JSON Parse Error |
 |`906`| JSON Mapping Error |
-|`907`| Comments are empty. |
-|`908`| App URN is not matching. |
+|`907`| Comment field empty. |
+|`908`| App URN does not match. |
 |`909`| Given Merchant Hierarchy Cannot handle via TAB. Please contact Application Support Team. |
 |`910`| Given Merchant Id Doesnt qualify for Add Outlet. Please contact Application Support Team. |
 |`911`| Given Merchant Super MID is InActive. Please contact Application Support Team. |
