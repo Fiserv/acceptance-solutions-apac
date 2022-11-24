@@ -358,7 +358,7 @@ The table below provides the list of application's error code and its descriptio
 |`103`| Data not found, please contact Application Support Team |
 |`105`| Given RM details not found. |
 |`200`| Success |
-|`400`| Terminal had not been set up correctly. |
+|`400`| Terminal had not been set up correctly.  |
 |`401`| Unauthorized |
 |`405`| Http Client Error exception |
 |`700`| No record found for given App URN and Sales ID. |
