@@ -297,7 +297,7 @@ The table below provides the list of application's error code and its descriptio
 | Error Code |  Description / Values |
 | --------  | ------------------ |  
 |`200`| Success |
-|`400`| Terminal had not been set up correctly. |
+|`400`| Terminal not in proper status. |
 |`401`| Unauthorized |
 |`403`| Forbidden |  
 |`500`| Not Found |
