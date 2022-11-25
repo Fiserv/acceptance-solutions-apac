@@ -89,7 +89,7 @@ The table below provides the list of application's error code and its descriptio
 |`100`| Invalid Request |
 |`103`| Data not found, please contact application support team. |  
 |`200`| Success |
-|`400`| Terminal had not been set up correctly. |
+|`400`| Terminal not in proper status. |
 |`401`| Unauthorized |
 |`500`| Internal Error, please contact application support team. |  
 
