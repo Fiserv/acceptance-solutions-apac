@@ -95,14 +95,14 @@ The table below provides the list of application's error code and its descriptio
 |`302`| IO Exception |
 |`303`| Atleast One Document Required. |  
 |`304`| Invalid Document Type |
-|`400`| Terminal had not been set up correctly. |  
+|`400`| Terminal not in proper status. |  
 |`415`| Invalid media type |
 |`500`| Internal Error, please contact Application Support Team. |
 |`700`| No record found for the given App URN and Sales ID. |
 |`701`| Unable to create App URN. |  
 |`708`| App URN already submitted. |
 |`900`| Invalid App URN |  
-|`901`| App URN is not matching. |
+|`901`| App URN not match |
 |`902`| App URN is a mandatory value. |
 |`903`| Application already submitted. |  
 |`904`| JSON Processing Error |
