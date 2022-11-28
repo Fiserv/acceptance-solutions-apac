@@ -1,12 +1,12 @@
 # Document Upload
 
-This API is used to upload documents for merchants.
+This API is used for uploading of documents by merchants.
 
 ## How it works
-1. Merchant needs to use this API as a part of Create URN API with application URN generated in the request API to tag the documents to 
+1. Merchant needs to use this API as a part of Create URN API with application URN generated in the request API, to tag the documents to 
    a particular Application URN.
-2. API would follow the Get Document matrix API and has to be submitted before Application Submit API.
-3. API response will give unique document ids for each document which has to be provided in subsequent application APIs. 
+2. This API would follow the Get Document matrix API and has to be submitted before Application Submit API.
+3. The API response will give unique document IDs for each document which has to be provided in subsequent application APIs. 
 
 ## Endpoint
 
@@ -31,14 +31,15 @@ The table below contains the mandatory fields required for a successful request.
 ### Request
 | Variable | Type | Length |  Mandatory / Optional / Conditional  (M / O / C)  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-|`appURN`|Alphanumeric|30|M|App URN retured as part of Create URN API.|
-|`docType`|Alphanumeric|30||Document Name of document being uploaded. |
-|`fileType`|Alphanumeric|10|M|The type of the file that is uploaded.|
-|`principalNo`|Alphanumeric|2|M|If there are 2 Principal Owners for which the documents are uploaded, first set will have value as 1 and the second set will have value as 2.If there are multiple set of UBO for which documents are uploaded, each set will have its respective number in sequential manner.|
-|`imageFront`|File|-|M|Front copy of the document. If document has single part, same has to be uploaded as part of file 1. |
-|`imageBack`|File|-|O|Back copy of the document. If document has single part, file 2 remains blank.|
-|`categoryName`|Alphanumeric|30|M|Category of document being uploaded. This can be refered from tag categoryName in Get Document Matrix API.|
-|`level`|Alphanumeric|2|M|Level of document being uploaded. This can be referred from tag level in Get Document Matrix API.|
+|`appURN`|Alphanumeric|30|M|App URN is returned as part of Create URN API.|
+|`docType`|Alphanumeric|30|| Name of document being uploaded. |
+|`fileType`|Alphanumeric|10|M| Type of the file uploaded. |
+|`principalNo`|Alphanumeric|2|M|If there are two Principal Owners for which the documents are uploaded. - the first set value
+should be set as 1 - the second set value should be set as 2. If there are multiple sets of UBO for which documents are to be uploaded, each set will have its respective number listed in sequential manner.|
+|`imageFront`|File|-|M|Front copy of the document. If the document only consists of a single part, the same file has to be uploaded as part of file 1. |
+|`imageBack`|File|-|O|Back copy of the document. If the document only consists of a single part, file 2 remains blank.|
+|`categoryName`|Alphanumeric|30|M| Category of document that is being uploaded. This can be referred to, from tag categoryName in the Get Document Matrix API..|
+|`level`|Alphanumeric|2|M|Level of document that is being uploaded. This can be referred from tag level in the Get Document Matrix API.|
 
 
 ### Successful Response Payload
@@ -87,26 +88,26 @@ The table below contains the mandatory fields required for a successful request.
 The table below provides the list of application's error code and its description.
 | Error Code |  Description / Values |
 | --------  | ------------------ |
-|`100`| Invalid Request |
-|`101`| Missing Mandatory Fields |  
+|`100`| Invalid request |
+|`101`| Missing mandatory fields |  
 |`103`| Data not found, please contact application support team. |
 |`200`| Success |  
-|`301`| Document Type Required |
-|`302`| IO Exception |
-|`303`| Atleast One Document Required. |  
-|`304`| Invalid Document Type |
-|`400`| Terminal not in proper status. |  
+|`301`| Document type required |
+|`302`| IO exception |
+|`303`| Atleast one document required. |  
+|`304`| Invalid document type |
+|`400`| Terminal had not been set up correctly. |  
 |`415`| Invalid media type |
-|`500`| Internal Error, please contact Application Support Team. |
+|`500`| Internal error, please contact Application Support Team. |
 |`700`| No record found for the given App URN and Sales ID. |
 |`701`| Unable to create App URN. |  
-|`708`| App URN already submitted. |
+|`708`| App URN had already been submitted. |
 |`900`| Invalid App URN |  
-|`901`| App URN not match |
+|`901`| App URN mismatch |
 |`902`| App URN is a mandatory value. |
-|`903`| Application already submitted. |  
+|`903`| Application had already submitted. |  
 |`904`| JSON Processing Error |
 |`905`| JSON Parse Error |  
 |`906`| JSON Mapping Error |
 |`907`| Comment field empty. |
-|`908`| App URN does not match. |
+|`908`| App URN does mismatch |
