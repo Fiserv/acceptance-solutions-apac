@@ -1,10 +1,10 @@
-# Mid Inquiry
+# MID Inquiry
 
-This API is used to fetch the details of existing MID which merchants would have boarded in past.
+This API is used to fetch the details of existing MID which merchants would have onboarded previously.
 
 ## How it works
-1. Merchant needs to use this API predominantly while boarding Additional Trading Location or Additional Device on existing MID.
-2. API should be used before submitting Additional Trading Location or Additional Device Application request.
+1. Merchant needs to use this API for boarding a Additional Trading Location or Additional Device with an existing MID.
+2. This API should be used before submitting an Additional Trading Location or Additional Device Application request.
 
 
 ## Endpoint
