@@ -222,11 +222,143 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 
 ```json
 {
-  "status": {
-    "statusCode": 401,
-    "message": "Token not found"
-  }
+    "response": {
+        "merchantDetails": {
+            "ain": "",
+            "billerId": "",
+            "merchantId": "",
+            "terminalId": "",
+            "mrchCountryCode": "",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "300",
+            "response": "Failure:",
+            "respMsg": "[Field Name: merchantId is mandatory, Field Name: terminalId is mandatory, Field Name: billerId is mandatory]"
+        },
+        "txnDetails": {
+            "functionCode": "",
+            "customerRefNumber": "",
+            "merchantRefNumber": "",
+            "transactionId": "",
+            "reqDate": "",
+            "reqTime": "",
+            "originalTranDate": "",
+            "originalTranTime": "",
+            "authCode": "",
+            "rrn": "",
+            "tokenId": "",
+            "invoiceNumber": "",
+            "batchNo": "",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": null
+        },
+        "amounts": {
+            "authAmount": "",
+            "mrchDiscountAmt": "",
+            "convFee": "",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": "",
+            "totalAmount": "",
+            "tranCurrency": "",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
 }
+
+{
+    "response": {
+        "merchantDetails": {
+            "ain": "2100000",
+            "billerId": "14",
+            "merchantId": "42298585549376",
+            "terminalId": "85549376",
+            "mrchCountryCode": "036",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "504",
+            "response": "REQUEST TIMED OUT",
+            "respMsg": "FAILURE"
+        },
+        "txnDetails": {
+            "functionCode": "02",
+            "customerRefNumber": "2511202203112022031",
+            "merchantRefNumber": "2511202203112022031120220311202203112022031121323",
+            "transactionId": "202212059437208",
+            "reqDate": "05122022",
+            "reqTime": "163455",
+            "originalTranDate": "",
+            "originalTranTime": "",
+            "authCode": "",
+            "rrn": "",
+            "tokenId": "",
+            "invoiceNumber": "49",
+            "batchNo": "007",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "N",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": "unknownMethod"
+        },
+        "amounts": {
+            "authAmount": "20.00",
+            "mrchDiscountAmt": "",
+            "convFee": ".10",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": ".10",
+            "totalAmount": "56.59",
+            "tranCurrency": "036",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "0",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
+}
+
 ```
 
 ### Response
