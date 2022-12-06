@@ -218,11 +218,143 @@ The below table identifies the required json properties in the request message.
 
 ```json
 {
-  "status": {
-    "statusCode": 401,
-    "message": "Token not found"
-  }
+    "response": {
+        "merchantDetails": {
+            "ain": "",
+            "billerId": "",
+            "merchantId": "",
+            "terminalId": "",
+            "mrchCountryCode": "",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "300",
+            "response": "Failure:",
+            "respMsg": "[Field Name: merchantId is mandatory]"
+        },
+        "txnDetails": {
+            "functionCode": "",
+            "customerRefNumber": "",
+            "merchantRefNumber": "",
+            "transactionId": "",
+            "reqDate": "",
+            "reqTime": "",
+            "originalTranDate": "",
+            "originalTranTime": "",
+            "authCode": "",
+            "rrn": "",
+            "tokenId": "",
+            "invoiceNumber": "",
+            "batchNo": "",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": null
+        },
+        "amounts": {
+            "authAmount": "",
+            "mrchDiscountAmt": "",
+            "convFee": "",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": "",
+            "totalAmount": "",
+            "tranCurrency": "",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
 }
+
+{
+    "response": {
+        "merchantDetails": {
+            "ain": "2100000",
+            "billerId": "14",
+            "merchantId": "42298585549376",
+            "terminalId": "85549376",
+            "mrchCountryCode": "036",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "300",
+            "response": "FAILURE",
+            "respMsg": "USER RESPONSE TIMED OUT"
+        },
+        "txnDetails": {
+            "functionCode": "00",
+            "customerRefNumber": "",
+            "merchantRefNumber": "",
+            "transactionId": "",
+            "reqDate": "28112022",
+            "reqTime": "180200",
+            "originalTranDate": "",
+            "originalTranTime": "",
+            "authCode": "",
+            "rrn": "",
+            "tokenId": "",
+            "invoiceNumber": "",
+            "batchNo": "",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": "unknownMethod"
+        },
+        "amounts": {
+            "authAmount": "21.00",
+            "mrchDiscountAmt": "",
+            "convFee": "",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": "",
+            "totalAmount": "",
+            "tranCurrency": "036",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
+}
+
 ```
 
 ### Response
