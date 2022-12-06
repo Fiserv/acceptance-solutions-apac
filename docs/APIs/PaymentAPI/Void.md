@@ -178,11 +178,212 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 
 ```json
 {
-  "status": {
-    "statusCode": 401,
-    "message": "Token not found"
-  }
+    "response": {
+        "merchantDetails": {
+            "ain": "",
+            "billerId": "",
+            "merchantId": "",
+            "terminalId": "",
+            "mrchCountryCode": "",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "300",
+            "response": "Failure:",
+            "respMsg": "[Field Name: merchantId is mandatory, Field Name: terminalId is mandatory, Field Name: billerId is mandatory]"
+        },
+        "txnDetails": {
+            "functionCode": "",
+            "customerRefNumber": "",
+            "merchantRefNumber": "",
+            "transactionId": "",
+            "reqDate": "",
+            "reqTime": "",
+            "originalTranDate": "",
+            "originalTranTime": "",
+            "authCode": "",
+            "rrn": "",
+            "tokenId": "",
+            "invoiceNumber": "",
+            "batchNo": "",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": null
+        },
+        "amounts": {
+            "authAmount": "",
+            "mrchDiscountAmt": "",
+            "convFee": "",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": "",{
+    "response": {
+        "merchantDetails": {
+            "ain": "",
+            "billerId": "",
+            "merchantId": "",
+            "terminalId": "",
+            "mrchCountryCode": "",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "300",
+            "response": "Failure:",
+            "respMsg": "[Field Name: terminalId should be not exceed length :8]"
+        },
+        "txnDetails": {
+            "functionCode": "",
+            "customerRefNumber": "",
+            "merchantRefNumber": "",
+            "transactionId": "",
+            "reqDate": "",
+            "reqTime": "",
+            "originalTranDate": "",
+            "originalTranTime": "",
+            "authCode": "",
+            "rrn": "",
+            "tokenId": "",
+            "invoiceNumber": "",
+            "batchNo": "",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": null
+        },
+        "amounts": {
+            "authAmount": "",
+            "mrchDiscountAmt": "",
+            "convFee": "",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": "",
+            "totalAmount": "",
+            "tranCurrency": "",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
 }
+
+            "totalAmount": "",
+            "tranCurrency": "",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
+}
+
+{
+    "response": {
+        "merchantDetails": {
+            "ain": "",
+            "billerId": "",
+            "merchantId": "",
+            "terminalId": "",
+            "mrchCountryCode": "",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "300",
+            "response": "Failure:",
+            "respMsg": "[Field Name: terminalId should be not exceed length :8]"
+        },
+        "txnDetails": {
+            "functionCode": "",
+            "customerRefNumber": "",
+            "merchantRefNumber": "",
+            "transactionId": "",
+            "reqDate": "",
+            "reqTime": "",
+            "originalTranDate": "",
+            "originalTranTime": "",
+            "authCode": "",
+            "rrn": "",
+            "tokenId": "",
+            "invoiceNumber": "",
+            "batchNo": "",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": null
+        },
+        "amounts": {
+            "authAmount": "",
+            "mrchDiscountAmt": "",
+            "convFee": "",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": "",
+            "totalAmount": "",
+            "tranCurrency": "",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
+}
+
+
 ```
 
 ### Response
