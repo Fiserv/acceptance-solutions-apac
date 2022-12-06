@@ -215,10 +215,141 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 
 ```json
 {
-  "status": {
-    "statusCode": 401,
-    "message": "Token not found"
-  }
+    "response": {
+        "merchantDetails": {
+            "ain": "",
+            "billerId": "",
+            "merchantId": "",
+            "terminalId": "",
+            "mrchCountryCode": "",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "300",
+            "response": "Failure:",
+            "respMsg": "[Field Name: merchantId is mandatory, Field Name: billerId is mandatory, Field name: rrn is mandatory for the :functionCode: 04, Field name: authCode is mandatory for the :functionCode: 04]"
+        },
+        "txnDetails": {
+            "functionCode": "",
+            "customerRefNumber": "",
+            "merchantRefNumber": "",
+            "transactionId": "",
+            "reqDate": "",
+            "reqTime": "",
+            "originalTranDate": "",
+            "originalTranTime": "",
+            "authCode": "",
+            "rrn": "",
+            "tokenId": "",
+            "invoiceNumber": "",
+            "batchNo": "",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": null
+        },
+        "amounts": {
+            "authAmount": "",
+            "mrchDiscountAmt": "",
+            "convFee": "",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": "",
+            "totalAmount": "",
+            "tranCurrency": "",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
+}
+
+{
+    "response": {
+        "merchantDetails": {
+            "ain": "2100000",
+            "billerId": "14",
+            "merchantId": "42298585549376",
+            "terminalId": "85549376",
+            "mrchCountryCode": "036",
+            "siteId": "",
+            "workStationId": ""
+        },
+        "txnStatus": {
+            "respCode": "300",
+            "response": "FAILURE",
+            "respMsg": "Refund Amount is Greater than balance Sale Amount"
+        },
+        "txnDetails": {
+            "functionCode": "04",
+            "customerRefNumber": "",
+            "merchantRefNumber": "Vinayvisa111347112022031119911111930",
+            "transactionId": "202212058165549",
+            "reqDate": "01122022",
+            "reqTime": "173701",
+            "originalTranDate": "29112022",
+            "originalTranTime": "162201",
+            "authCode": "015692",
+            "rrn": "233310137855",
+            "tokenId": "",
+            "invoiceNumber": "",
+            "batchNo": "",
+            "amexSeNumber": "",
+            "posEntryMode": "",
+            "walletType": "",
+            "walletId": "",
+            "schemeId": "",
+            "cardLastNumber": "1",
+            "primaryId": "",
+            "customerName": "",
+            "offlineFlag": "",
+            "aTC": "",
+            "tVR": "",
+            "appLabel": "",
+            "aID": "",
+            "panSeqNo": "",
+            "schemeTranInfo": "",
+            "isInternalCall": null,
+            "authenticationMethod": null
+        },
+        "amounts": {
+            "authAmount": "10000.00",
+            "mrchDiscountAmt": "",
+            "convFee": "",
+            "cgst": "",
+            "igst": "",
+            "sgst": "",
+            "gst": "",
+            "totalAmount": "10000.00",
+            "tranCurrency": "036",
+            "tip": ""
+        },
+        "dccInfo": {
+            "dccIndicator": "",
+            "dccCurrency": "",
+            "dccAmount": "",
+            "dccExchangeRate": ""
+        }
+    }
 }
 ```
 
