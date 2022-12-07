@@ -367,9 +367,11 @@ paths:
           description: Unauthorized
           content:
             application/json:
+             schema:
+               $ref: "#/components/schemas/Response401"
              examples:
                  "401":
-                  $ref: "#/components/schemas/CreateAppResponse"
+                    $ref: "#/components/schemas/CreateAppResponse"
              
         default:
           description: Success
