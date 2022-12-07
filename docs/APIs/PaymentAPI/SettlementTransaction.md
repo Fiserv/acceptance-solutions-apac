@@ -12,6 +12,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 
 ### Request Payload
 
+
 ```json
 {
   "ain": "4700000",
@@ -154,6 +155,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
     "walletId": ""
 }
 ```
+
 
 ### Error Response Payload
 
