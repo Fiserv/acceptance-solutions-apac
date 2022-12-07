@@ -13,6 +13,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ### Request Payload
 
 
+
 ```json
 {
   "ain": "4700000",
