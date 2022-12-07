@@ -231,6 +231,8 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 }
 ```
 
+
+
 ### Response
 | Variable | Type | Length | Mandatory / Optional /Conditional <br>(M / O / C) | Description / Values |
 | -------- | ------- | -- | ----------------------------------------------- | ------------------ |
