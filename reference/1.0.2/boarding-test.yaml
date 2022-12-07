@@ -156,7 +156,7 @@ paths:
             application/json:
               examples:
                 "401":
-                  $ref: "#/components/examples/Response401"
+                  $ref: "#/components/examples/GetPackageIDResponse"
 
         default:
           description: Success
