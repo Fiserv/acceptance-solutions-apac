@@ -364,13 +364,16 @@ paths:
               examples:
                 GetPackageList Sample:
                   $ref: "#/components/examples/DocAndPkgRequestParamRes"
+                  
         "401":
           description: Unauthorized
           content:
             application/json:
+             schema:
+                 $ref: "#/components/schemas/Response"
              examples:
                  "401":
-                    $ref: "#/components/schemas/CreateAppResponse"
+                    $ref: "#/components/examples/DocAndPkgRequestParamRes"
              
         default:
           description: Success
