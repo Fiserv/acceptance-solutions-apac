@@ -36,33 +36,7 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 - [Settlement](./?path=docs/APIs/PaymentAPI/SettlementTransaction.md)
 
-#  Merchant Onboarding
 
-- [Login](./?path=/docs/APIs/externalboarding/Login.md)
-
-- [Create URN](./?path=/docs/APIs/externalboarding/CreateURN.md)
-
-- [Get Package List](./?path=/docs/APIs/externalboarding/GetPackageList.md)
-
-- [Get Package ID](./?path=/docs/APIs/externalboarding/GetPackageId.md)
-
-- [Get Document Matrix](./?path=/docs/APIs/externalboarding/GetDocumentMatrix.md)
-
-- [Upload Document](./?path=/docs/APIs/externalboarding/UploadDocument.md)
-
-- [MID - Inquiry](./?path=/docs/APIs/externalboarding/MidInquiry.md)
-
-- [SUBMIT - New Merchant](./?path=/docs/APIs/externalboarding/NewMerchant.md)
-
-- [SUBMIT - Additional Outlet](./?path=/docs/APIs/externalboarding/AdditionalOutlet.md)
-
-- [SUBMIT - Additional Device](./?path=/docs/APIs/externalboarding/AdditionalDevice.md)
-
-- [SUBMIT - Single MID Payfac](./?path=/docs/APIs/externalboarding/SingleMIDPayFac.md)
-
-- [SUBMIT - Multi MID Payfac](./?path=/docs/APIs/externalboarding/MultiMIDPayFac.md)
-
-- [Application Status Inquiry](./?path=/docs/APIs/externalboarding/ApplicationStatusInquiry.md)
 
 #  Local Based Integration
 
