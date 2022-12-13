@@ -513,1094 +513,1036 @@ components:
           type: string
           description: Bad Credential
           example: 'Bad Credential'
+  examples:
+    NonOpiProcessAmountRequest_SALE:
+      value:
+        request:
+          merchantDetails:
+            ain: '2100000'
+            billerId: '14'
+            merchantId: '42298585547594'
+            terminalId: '85547596'
+            mrchCountryCode: '036'
+            siteId: ''
+            workStationId: ''
+          txnDetails:
+            functionCode: '01'
+            customerRefNumber: '2511202203112022031'
+            merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+            transactionId: '202211250950162'
+            reqDate: '25112022'
+            reqTime: '144955'
+            originalTranDate: ''
+            originalTranTime: ''
+            authCode: ''
+            rrn: ''
+            tokenId: ''
+            invoiceNumber: ''
+            batchNo: ''
+            amexSeNumber: ''
+            posEntryMode: ''
+            walletType: ''
+            walletId: ''
+            schemeId: ''
+            cardLastNumber: ''
+            primaryId: ''
+            customerName: ''
+            offlineFlag: ''
+            aTC: ''
+            tVR: ''
+            appLabel: ''
+            aID: ''
+            panSeqNo: ''
+            schemeTranInfo: ''
+            isInternalCall: null
+            authenticationMethod: null
+          amounts:
+            authAmount: '56.39'
+            mrchDiscountAmt: '.10'
+            convFee: '.10'
+            cgst: ''
+            igst: ''
+            sgst: ''
+            gst: '.10'
+            totalAmount: '56.59'
+            tranCurrency: '036'
+            tip: ''
+          additionalParams:
+            udf1: '23133'
+            udf2: '21313'
+            callbackURL: ''
+            paramList:
+              - param: '23'
+                param_lit: param1 key
+              - param: '54'
+                param_lit: param 2 key
+        
+        
 
-NonOpiProcessAmountRequest_SALE:
-  {
-    "request": {
-      "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585547594",
-	      "terminalId":"85547596",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnDetails":{
-	      "functionCode":"01",
-	      "customerRefNumber":"2511202203112022031",
-	      "merchantRefNumber":"2511202203112022031120220311202203112022031121323",
-	      "transactionId":"202211250950162",
-	      "reqDate":"25112022",
-	      "reqTime":"144955",
-	      "originalTranDate":"",
-	      "originalTranTime":"",
-	      "authCode":"",
-	      "rrn":"",
-	      "tokenId":"",
-	      "invoiceNumber":"",
-	      "batchNo":"",
-	      "amexSeNumber":"",
-	      "posEntryMode":"",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"",
-	      "cardLastNumber":"",
-	      "primaryId":"",
-	      "customerName":"",
-	      "offlineFlag":"",
-	      "aTC":"",
-	      "tVR":"",
-	      "appLabel":"",
-	      "aID":"",
-	      "panSeqNo":"",
-	      "schemeTranInfo":"",
-	      "isInternalCall":null,
-	      "authenticationMethod":null
-	   },
-	   "amounts":{
-	      "authAmount":"56.39",
-	      "mrchDiscountAmt":".10",
-	      "convFee":".10",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":".10",
-	      "totalAmount":"56.59",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "additionalParams":{
-	      "udf1":"23133",
-	      "udf2":"21313",
-	      "callbackURL":"",
-	      "paramList":[
-		 {
-		    "param":"23",
-		    "param_lit":"param1 key"
-		 },
-		 {
-		    "param":"54",
-		    "param_lit":"param 2 key"
-		 }
-	      ]
-	   }
-	}
-}
 
-NonOpiProcessAmountRequest_LPM:
-  {
-	  "request": {
-	    "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585547594",
-	      "terminalId":"85547596",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnDetails":{
-	      "functionCode":"00",
-	      "customerRefNumber":"2511202203112022031",
-	      "merchantRefNumber":"2511202203112022031120220311202203112022031121323",
-	      "transactionId":"202211250950162",
-	      "reqDate":"25112022",
-	      "reqTime":"144955",
-	      "originalTranDate":"",
-	      "originalTranTime":"",
-	      "authCode":"",
-	      "rrn":"",
-	      "tokenId":"",
-	      "invoiceNumber":"",
-	      "batchNo":"",
-	      "amexSeNumber":"",
-	      "posEntryMode":"",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"",
-	      "cardLastNumber":"",
-	      "primaryId":"",
-	      "customerName":"",
-	      "offlineFlag":"",
-	      "aTC":"",
-	      "tVR":"",
-	      "appLabel":"",
-	      "aID":"",
-	      "panSeqNo":"",
-	      "schemeTranInfo":"",
-	      "isInternalCall":null,
-	      "authenticationMethod":null
-	   },
-	   "amounts":{
-	      "authAmount":"56.39",
-	      "mrchDiscountAmt":".10",
-	      "convFee":".10",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":".10",
-	      "totalAmount":"56.59",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "additionalParams":{
-	      "udf1":"23133",
-	      "udf2":"21313",
-	      "callbackURL":"",
-	      "paramList":[
-		 {
-		    "param":"23",
-		    "param_lit":"param1 key"
-		 },
-		 {
-		    "param":"54",
-		    "param_lit":"param 2 key"
-		 }
-	      ]
-	   }
-	}
-}
-
-NonOpiProcessAmountRequest_PREAUTCOMPLETION:
-  {
-	  "request": 
-	   {
-	      "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585549376",
-	      "terminalId":"85549376",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnDetails":{
-	      "functionCode":"03",
-	      "customerRefNumber":"",
-	      "merchantRefNumber":"VinayAMEX111347112022031119911111431",
-	      "transactionId":"202211250040180",
-	      "reqDate":"21112022",
-	      "reqTime":"150155",
-	      "originalTranDate":"17112022",
-	      "originalTranTime":"",
-	      "authCode":"041232",
-	      "rrn":"232122006000",
-	      "tokenId":"",
-	      "invoiceNumber":"10",
-	      "batchNo":"",
-	      "amexSeNumber":"",
-	      "posEntryMode":"",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"",
-	      "cardLastNumber":"1234",
-	      "primaryId":"",
-	      "customerName":"",
-	      "offlineFlag":"",
-	      "aTC":"",
-	      "tVR":"",
-	      "appLabel":"",
-	      "aID":"",
-	      "panSeqNo":"",
-	      "schemeTranInfo":"",
-	      "isInternalCall":"N",
-	      "authenticationMethod":null
-	   },
-	   "amounts":{
-	      "authAmount":"56.59",
-	      "mrchDiscountAmt":"",
-	      "convFee":"",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":"",
-	      "totalAmount":"56.59",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "additionalParams":{
-	      "udf1":"",
-	      "udf2":"",
-	      "callbackURL":"",
-	      "paramList":[
-		 {
-		    "param":"",
-		    "param_lit":""
-		 }
-	      ]
-	   }
-	}
-}
-          
-NonOpiProcessAmountRequest_Refund:
-   {
-    "request": {
-	    "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585549376",
-	      "terminalId":"85549376",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnDetails":{
-	      "functionCode":"04",
-	      "customerRefNumber":"",
-	      "merchantRefNumber":"VinayVISA111347112022031119911111494",
-	      "transactionId":"202211257151105",
-	      "reqDate":"25112022",
-	      "reqTime":"125600",
-	      "originalTranDate":"17112022",
-	      "originalTranTime":"125401",
-	      "authCode":"353319",
-	      "rrn":"000000000095",
-	      "tokenId":"",
-	      "invoiceNumber":"10",
-	      "batchNo":"",
-	      "amexSeNumber":"",
-	      "posEntryMode":"",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"",
-	      "cardLastNumber":"",
-	      "primaryId":"",
-	      "customerName":"",
-	      "offlineFlag":"",
-	      "aTC":"",
-	      "tVR":"",
-	      "appLabel":"",
-	      "aID":"",
-	      "panSeqNo":"",
-	      "schemeTranInfo":"",
-	      "isInternalCall":null
-	   },
-	   "amounts":{
-	      "authAmount":"22.00",
-	      "mrchDiscountAmt":"",
-	      "convFee":"",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":"",
-	      "totalAmount":"22.00",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "additionalParams":{
-	      "udf1":"",
-	      "udf2":"",
-	      "callbackURL":"",
-	      "paramList":[
-		  {
-		    "param":"",
-		    "param_lit":""
-		  }
-	   ]
-	 }
- }
-}
-
-NonOpiProcessAmountRequest_Void:
-
- {
-   "request":{
-      "merchantDetails":{
-         "ain":"2100000",
-         "billerId":"14",
-         "merchantId":"42298519014704",
-         "terminalId":"19014704",
-         "mrchCountryCode":"036"
-      },
-      "txnDetails":{
-         "functionCode":"05",
-         "merchantRefNumber":"900000700012",
-         "transactionId":"202211172224141",
-         "reqDate":"17112022",
-         "reqTime":"154900",
-         "originalTranDate":"14022022",
-         "originalTranTime":"133955",
-         "authCode":"318861",
-         "rrn":"232110980240",
-         "tokenId":null,
-         "isInternalCall":"Y",
-         "invoiceNumber":"4"
-      },
-      "amounts":{
-         "totalAmount":"3",
-         "tranCurrency":"036",
-         "authAmount":"100.00"
-      }
-   }
- }
- 
-NonOpiProcessAmountRequest_EmiSale:
-    {
-      "request": {
-	      "merchantDetails":{
-          "ain":"2100000",
-          "billerId":"14",
-          "merchantId":"42298585547594",
-          "terminalId":"85547596",
-          "mrchCountryCode":"036",
-          "siteId":"",
-          "workStationId":""
-	     },
-	     "txnDetails":{
-          "functionCode":"08",
-          "customerRefNumber":"2511202203112022031",
-          "merchantRefNumber":"2511202203112022031120220311202203112022031121323",
-          "transactionId":"202211250950162",
-          "reqDate":"25112022",
-          "reqTime":"144955",
-          "originalTranDate":"",
-          "originalTranTime":"",
-          "authCode":"",
-          "rrn":"",
-          "tokenId":"",
-          "invoiceNumber":"",
-          "batchNo":"",
-          "amexSeNumber":"",
-          "posEntryMode":"",
-          "walletType":"",
-          "walletId":"",
-          "schemeId":"",
-          "cardLastNumber":"",
-          "primaryId":"",
-          "customerName":"",
-          "offlineFlag":"",
-          "aTC":"",
-          "tVR":"",
-          "appLabel":"",
-          "aID":"",
-          "panSeqNo":"",
-          "schemeTranInfo":"",
-          "isInternalCall":null,
-          "authenticationMethod":null
-	    },
-	     "amounts":{
-          "authAmount":"56.39",
-          "mrchDiscountAmt":".10",
-          "convFee":".10",
-          "cgst":"",
-          "igst":"",
-          "sgst":"",
-          "gst":".10",
-          "totalAmount":"56.59",
-          "tranCurrency":"036",
-          "tip":""
-	   },
-	   "additionalParams":{
-	      "udf1":"23133",
-	      "udf2":"21313",
-	      "callbackURL":"",
-	      "paramList":[
-		 {
-		    "param":"23",
-		    "param_lit":"param1 key"
-		 },
-		 {
-		    "param":"54",
-		    "param_lit":"param 2 key"
-		 }
-	      ]
-	   }
-	  }
-  }
-
-NonOpiProcessAmountRequest_TransactionStatusCheck:
-   {
-    "request": {
-        "merchantDetails": {
-            "billerId": "14",
-            "ain": "2100000",
-            "merchantId": "42298585549376",
-            "terminalId": "85549376",
-            "mrchCountryCode": "036"
-        },
-        "txnDetails": {
-            "functionCode": "11",
-            "merchantRefNumber": "111347112022031119911111494",
-            "reqDate": "03112022",
-            "reqTime": "134201",
-            "originalTranDate": "25112022",
-            "originalTranTime": "104523"
-        },
-        "amounts": {
-            "authAmount": "36.79",
-            "totalAmount": "36.79",
-            "tranCurrency": "036"
-        },
-        "additionalParams": {
-            "callbackURL": "",
-            "udf1": "",
-            "udf2": "",
-            "paramList": [
-                {
-                    "param_lit": "",
-                    "param": ""
-                }
-            ]
-        }
-      }
-    }
-
-NonOpiProcessAmountRequest_SettlementTransaction:
-      
-    {
-      "request": {
-        "merchantDetails":{
-          "ain":"2100000",
-          "billerId":"14",
-          "merchantId":"42298585547594",
-          "terminalId":"85547596",
-          "mrchCountryCode":"036",
-          "siteId":"",
-          "workStationId":""
-	   },
-	     "txnDetails":{
-	      "functionCode":"12",
-	      "customerRefNumber":"2511202203112022031",
-	      "merchantRefNumber":"2511202203112022031120220311202203112022031121323",
-	      "reqDate":"25112022",
-	      "reqTime":"144955"
-	    }
-	  }
-  }
+    NonOpiProcessAmountRequest_LPM:
+      value:
+       request:
+         merchantDetails:
+           ain: '2100000'
+           billerId: '14'
+           merchantId: '42298585547594'
+           terminalId: '85547596'
+           mrchCountryCode: '036'
+           siteId: ''
+           workStationId: ''
+         txnDetails:
+           functionCode: '00'
+           customerRefNumber: '2511202203112022031'
+           merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+           transactionId: '202211250950162'
+           reqDate: '25112022'
+           reqTime: '144955'
+           originalTranDate: ''
+           originalTranTime: ''
+           authCode: ''
+           rrn: ''
+           tokenId: ''
+           invoiceNumber: ''
+           batchNo: ''
+           amexSeNumber: ''
+           posEntryMode: ''
+           walletType: ''
+           walletId: ''
+           schemeId: ''
+           cardLastNumber: ''
+           primaryId: ''
+           customerName: ''
+           offlineFlag: ''
+           aTC: ''
+           tVR: ''
+           appLabel: ''
+           aID: ''
+           panSeqNo: ''
+           schemeTranInfo: ''
+           isInternalCall: null
+           authenticationMethod: null
+         amounts:
+           authAmount: '56.39'
+           mrchDiscountAmt: '.10'
+           convFee: '.10'
+           cgst: ''
+           igst: ''
+           sgst: ''
+           gst: '.10'
+           totalAmount: '56.59'
+           tranCurrency: '036'
+           tip: ''
+         additionalParams:
+           udf1: '23133'
+           udf2: '21313'
+           callbackURL: ''
+           paramList:
+             - param: '23'
+               param_lit: param1 key
+             - param: '54'
+               param_lit: param 2 key
+       
   
-ResponseSettlementTransacton:
-      {
-
-	"response": {
-	   "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585547594",
-	      "terminalId":"85547596",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnStatus":{
-	      "respCode":"200",
-	      "response":"SUCCESS",
-	      "respMsg":"SETTLEMENT ACCEPTED"
-	   },
-        "txnDetails": {
-            "functionCode": "12",
-            "customerRefNumber": "",
-            "merchantRefNumber": "",
-            "transactionId": "",
-            "reqDate": "29112022",
-            "reqTime": "134901",
-            "originalTranDate": "",
-            "originalTranTime": "",
-            "authCode": "",
-            "rrn": "",
-            "tokenId": "",
-            "invoiceNumber": "",
-            "batchNo": "",
-            "amexSeNumber": "",
-            "posEntryMode": "",
-            "walletType": "",
-            "walletId": "",
-            "schemeId": "",
-            "cardLastNumber": "",
-            "primaryId": "",
-            "customerName": "",
-            "offlineFlag": "",
-            "aTC": "",
-            "tVR": "",
-            "appLabel": "",
-            "aID": "",
-            "panSeqNo": "",
-            "schemeTranInfo": "",
-            "isInternalCall": null,
-            "authenticationMethod": null
-        },
-        "amounts": {
-            "authAmount": "",
-            "mrchDiscountAmt": "",
-            "convFee": "",
-            "cgst": "",
-            "igst": "",
-            "sgst": "",
-            "gst": "",
-            "totalAmount": "",
-            "tranCurrency": "",
-            "tip": ""
-        },
-        "dccInfo": {
-            "dccIndicator": "",
-            "dccCurrency": "",
-            "dccAmount": "",
-            "dccExchangeRate": ""
-        }
-	  }
-  }
-  
-ResponseSALE:
- {
-	"response": {
-	   "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585547594",
-	      "terminalId":"85547596",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnStatus":{
-	      "respCode":"200",
-	      "response":"SUCCESS",
-	      "respMsg":"Transaction Success"
-	   },
-	   "txnDetails":{
-	      "functionCode":"01",
-	      "customerRefNumber":"2511202203112022031",
-	      "merchantRefNumber":"2511202203112022031120220311202203112022031121323",
-	      "transactionId":"202211250950162",
-	      "reqDate":"25112022",
-	      "reqTime":"144955",
-	      "originalTranDate":"",
-	      "originalTranTime":"",
-	      "authCode":"015108",
-	      "rrn":"232907066550",
-	      "tokenId":"855475962511000002000040172756",
-	      "invoiceNumber":"23",
-	      "batchNo":"001",
-	      "amexSeNumber":"",
-	      "posEntryMode":"INSERT",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"VISA CARD",
-	      "cardLastNumber":"0025",
-	      "primaryId":"",
-	      "customerName":"CARD 2/VISA TEST",
-	      "offlineFlag":"N",
-	      "aTC":"01BA",
-	      "tVR":"8080008000",
-	      "appLabel":"VISA TEST",
-	      "aID":"A0000000031010",
-	      "panSeqNo":"01",
-	      "schemeTranInfo":"00000000Y26232965026672600000005",
-	      "isInternalCall":null,
-	      "authenticationMethod":"OnlinePIN"
-	   },
-	   "amounts":{
-	      "authAmount":"56.39",
-	      "mrchDiscountAmt":".10",
-	      "convFee":".10",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":".10",
-	      "totalAmount":"56.59",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "dccInfo":{
-	      "dccIndicator":"0",
-	      "dccCurrency":"",
-	      "dccAmount":"",
-	      "dccExchangeRate":""
-	   }
-	 }
- }
-
-ResponseSALEWITHLPM:
-  {
-    "response": {
-	   "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585547594",
-	      "terminalId":"85547596",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnStatus":{
-	      "respCode":"200",
-	      "response":"SUCCESS",
-	      "respMsg":"Transaction Success"
-	   },
-	   "txnDetails":{
-	      "functionCode":"00",
-	      "customerRefNumber":"2511202203112022031",
-	      "merchantRefNumber":"2511202203112022031120220311202203112022031121323",
-	      "transactionId":"202211250950162",
-	      "reqDate":"25112022",
-	      "reqTime":"144955",
-	      "originalTranDate":"",
-	      "originalTranTime":"",
-	      "authCode":"015108",
-	      "rrn":"232907066550",
-	      "tokenId":"855475962511000002000040172756",
-	      "invoiceNumber":"23",
-	      "batchNo":"001",
-	      "amexSeNumber":"",
-	      "posEntryMode":"INSERT",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"VISA CARD",
-	      "cardLastNumber":"0025",
-	      "primaryId":"",
-	      "customerName":"CARD 2/VISA TEST",
-	      "offlineFlag":"N",
-	      "aTC":"01BA",
-	      "tVR":"8080008000",
-	      "appLabel":"VISA TEST",
-	      "aID":"A0000000031010",
-	      "panSeqNo":"01",
-	      "schemeTranInfo":"00000000Y26232965026672600000005",
-	      "isInternalCall":null,
-	      "authenticationMethod":"OnlinePIN"
-	   },
-	   "amounts":{
-	      "authAmount":"56.39",
-	      "mrchDiscountAmt":".10",
-	      "convFee":".10",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":".10",
-	      "totalAmount":"56.59",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "dccInfo":{
-	      "dccIndicator":"0",
-	      "dccCurrency":"",
-	      "dccAmount":"",
-	      "dccExchangeRate":""
-	   }
-	 }
- }
- 
-ResponsePreAuthSale:
-  {
-	  "response": {
-	   "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585547594",
-	      "terminalId":"85547596",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnStatus":{
-	      "respCode":"200",
-	      "response":"SUCCESS",
-	      "respMsg":"Transaction Success"
-	   },
-	   "txnDetails":{
-	      "functionCode":"02",
-	      "customerRefNumber":"2511202203112022031",
-	      "merchantRefNumber":"2511202203112022031120220311202203112022031121323",
-	      "transactionId":"202211250950162",
-	      "reqDate":"25112022",
-	      "reqTime":"144955",
-	      "originalTranDate":"",
-	      "originalTranTime":"",
-	      "authCode":"015108",
-	      "rrn":"232907066550",
-	      "tokenId":"855475962511000002000040172756",
-	      "invoiceNumber":"23",
-	      "batchNo":"001",
-	      "amexSeNumber":"",
-	      "posEntryMode":"INSERT",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"VISA CARD",
-	      "cardLastNumber":"0025",
-	      "primaryId":"",
-	      "customerName":"CARD 2/VISA TEST",
-	      "offlineFlag":"N",
-	      "aTC":"01BA",
-	      "tVR":"8080008000",
-	      "appLabel":"VISA TEST",
-	      "aID":"A0000000031010",
-	      "panSeqNo":"01",
-	      "schemeTranInfo":"00000000Y26232965026672600000005",
-	      "isInternalCall":null,
-	      "authenticationMethod":"OnlinePIN"
-	   },
-	   "amounts":{
-	      "authAmount":"56.39",
-	      "mrchDiscountAmt":".10",
-	      "convFee":".10",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":".10",
-	      "totalAmount":"56.59",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "dccInfo":{
-	      "dccIndicator":"0",
-	      "dccCurrency":"",
-	      "dccAmount":"",
-	      "dccExchangeRate":""
-	   }
-	}
-}
-
-ResponsePreAuthCompletion:
-  {
-	  "response": {
-	   "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585549376",
-	      "terminalId":"85549376",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnStatus":{
-	      "respCode":"200",
-	      "response":"SUCCESS",
-	      "respMsg":"Transaction Success"
-	   },
-	   "txnDetails":{
-	      "functionCode":"03",
-	      "customerRefNumber":"",
-	      "merchantRefNumber":"",
-	      "transactionId":"",
-	      "reqDate":"21112022",
-	      "reqTime":"150155",
-	      "originalTranDate":"17112022",
-	      "originalTranTime":"",
-	      "authCode":"353319",
-	      "rrn":"000000000095",
-	      "tokenId":"",
-	      "invoiceNumber":"",
-	      "batchNo":"",
-	      "amexSeNumber":"",
-	      "posEntryMode":"",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"",
-	      "cardLastNumber":"",
-	      "primaryId":"",
-	      "customerName":"",
-	      "offlineFlag":"",
-	      "aTC":"",
-	      "tVR":"",
-	      "appLabel":"",
-	      "aID":"",
-	      "panSeqNo":"",
-	      "schemeTranInfo":"",
-	      "isInternalCall":null,
-	      "authenticationMethod":null
-	   },
-	   "amounts":{
-	      "authAmount":"56.59",
-	      "mrchDiscountAmt":"",
-	      "convFee":"",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":"",
-	      "totalAmount":"56.59",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "dccInfo":{
-	      "dccIndicator":"",
-	      "dccCurrency":"",
-	      "dccAmount":"",
-	      "dccExchangeRate":""
-	   }
-	}
-}
-
-ResponseRefund:
- {
-	"response": {
-	   "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585549376",
-	      "terminalId":"85549376",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnStatus":{
-	      "respCode":"200",
-	      "response":"SUCCESS",
-	      "respMsg":"Transaction Success"
-	   },
-	   "txnDetails":{
-	      "functionCode":"04",
-	      "customerRefNumber":"",
-	      "merchantRefNumber":"VinayVISA111347112022031119911111494",
-	      "transactionId":"202211257151105",
-	      "reqDate":"25112022",
-	      "reqTime":"125600",
-	      "originalTranDate":"17112022",
-	      "originalTranTime":"125401",
-	      "authCode":"353319",
-	      "rrn":"000000000095",
-	      "tokenId":"",
-	      "invoiceNumber":"10",
-	      "batchNo":"",
-	      "amexSeNumber":"",
-	      "posEntryMode":"",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"",
-	      "cardLastNumber":"",
-	      "primaryId":"",
-	      "customerName":"",
-	      "offlineFlag":"",
-	      "aTC":"",
-	      "tVR":"",
-	      "appLabel":"",
-	      "aID":"",
-	      "panSeqNo":"",
-	      "schemeTranInfo":"",
-	      "isInternalCall":null
-	   },
-	   "amounts":{
-	      "authAmount":"22.00",
-	      "mrchDiscountAmt":"",
-	      "convFee":"",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":"",
-	      "totalAmount":"22.00",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "dccInfo":{
-	      "dccIndicator":"",
-	      "dccCurrency":"",
-	      "dccAmount":"",
-	      "dccExchangeRate":""
-	   }
-	}
-}
-
-ResponseVoid:
-  {
-    "response": {
-	   "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298519014704",
-	      "terminalId":"19014704",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnStatus":{
-	      "respCode":"200",
-	      "response":"",
-	      "respMsg":"SUCCESS"
-	   },
-	   "txnDetails":{
-	      "functionCode":"05",
-	      "customerRefNumber":"",
-	      "merchantRefNumber":"",
-	      "transactionId":"",
-	      "reqDate":"17112022",
-	      "reqTime":"154900",
-	      "originalTranDate":"14022022",
-	      "originalTranTime":"133955",
-	      "authCode":"",
-	      "rrn":"",
-	      "tokenId":"",
-	      "invoiceNumber":"",
-	      "batchNo":"",
-	      "amexSeNumber":"",
-	      "posEntryMode":"",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"",
-	      "cardLastNumber":"",
-	      "primaryId":"",
-	      "customerName":"",
-	      "offlineFlag":"",
-	      "aTC":"",
-	      "tVR":"",
-	      "appLabel":"",
-	      "aID":"",
-	      "panSeqNo":"",
-	      "schemeTranInfo":"",
-	      "isInternalCall":null
-	   },
-	   "amounts":{
-	      "authAmount":"100.00",
-	      "mrchDiscountAmt":"",
-	      "convFee":"",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":"",
-	      "totalAmount":"3",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "dccInfo":{
-	      "dccIndicator":"",
-	      "dccCurrency":"",
-	      "dccAmount":"",
-	      "dccExchangeRate":""
-	   }
-	}
-}
-
-ResponseEmiSale:
-  {
-	  "response": {
-	   "merchantDetails":{
-	      "ain":"2100000",
-	      "billerId":"14",
-	      "merchantId":"42298585547594",
-	      "terminalId":"85547596",
-	      "mrchCountryCode":"036",
-	      "siteId":"",
-	      "workStationId":""
-	   },
-	   "txnStatus":{
-	      "respCode":"200",
-	      "response":"SUCCESS",
-	      "respMsg":"Transaction Success"
-	   },
-	   "txnDetails":{
-	      "functionCode":"08",
-	      "customerRefNumber":"2511202203112022031",
-	      "merchantRefNumber":"2511202203112022031120220311202203112022031121323",
-	      "transactionId":"202211250950162",
-	      "reqDate":"25112022",
-	      "reqTime":"144955",
-	      "originalTranDate":"",
-	      "originalTranTime":"",
-	      "authCode":"015108",
-	      "rrn":"232907066550",
-	      "tokenId":"855475962511000002000040172756",
-	      "invoiceNumber":"23",
-	      "batchNo":"001",
-	      "amexSeNumber":"",
-	      "posEntryMode":"INSERT",
-	      "walletType":"",
-	      "walletId":"",
-	      "schemeId":"VISA CARD",
-	      "cardLastNumber":"0025",
-	      "primaryId":"",
-	      "customerName":"CARD 2/VISA TEST",
-	      "offlineFlag":"N",
-	      "aTC":"01BA",
-	      "tVR":"8080008000",
-	      "appLabel":"VISA TEST",
-	      "aID":"A0000000031010",
-	      "panSeqNo":"01",
-	      "schemeTranInfo":"00000000Y26232965026672600000005",
-	      "isInternalCall":null,
-	      "authenticationMethod":"OnlinePIN"
-	   },
-	   "amounts":{
-	      "authAmount":"56.39",
-	      "mrchDiscountAmt":".10",
-	      "convFee":".10",
-	      "cgst":"",
-	      "igst":"",
-	      "sgst":"",
-	      "gst":".10",
-	      "totalAmount":"56.59",
-	      "tranCurrency":"036",
-	      "tip":""
-	   },
-	   "dccInfo":{
-	      "dccIndicator":"0",
-	      "dccCurrency":"",
-	      "dccAmount":"",
-	      "dccExchangeRate":""
-	   }
-	}
-}
-
-ResponseTransactionStatusCheck:
-  {
-    "response": {
-        "merchantDetails": {
-            "ain": "2100000",
-            "billerId": "14",
-            "merchantId": "42298585549376",
-            "terminalId": "85549376",
-            "mrchCountryCode": "036",
-            "siteId": "",
-            "workStationId": ""
-        },
-        "txnStatus": {
-            "respCode": "200",
-            "response": "SUCCESS",
-            "respMsg": "Transaction Success"
-        },
-        "txnDetails": {
-            "functionCode": "11",
-            "customerRefNumber": "123457772495",
-            "merchantRefNumber": "111347112022031119911111494",
-            "transactionId": "202211258230893",
-            "reqDate": "03112022",
-            "reqTime": "134201",
-            "originalTranDate": "25112022",
-            "originalTranTime": "104523",
-            "authCode": "353319",
-            "rrn": "232905064994",
-            "tokenId": "855493762511000002000095161633",
-            "invoiceNumber": "78",
-            "batchNo": "001",
-            "amexSeNumber": "",
-            "posEntryMode": "INSERT",
-            "walletType": "",
-            "walletId": "",
-            "schemeId": "VISA CARD",
-            "cardLastNumber": "0176",
-            "primaryId": "",
-            "customerName": "VISA ACQUIRER TEST/CARD 17",
-            "offlineFlag": "N",
-            "aTC": "0002",
-            "tVR": "8080008000",
-            "appLabel": "VISA CREDIT",
-            "aID": "A0000000031010",
-            "panSeqNo": "",
-            "schemeTranInfo": "00000000E500000000353328XF340005",
-            "isInternalCall": null,
-            "authenticationMethod": "unknownMethod"
-        },
-        "amounts": {
-            "authAmount": "21.00",
-            "mrchDiscountAmt": "",
-            "convFee": "",
-            "cgst": "",
-            "igst": "",
-            "sgst": "",
-            "gst": "",
-            "totalAmount": "45.20",
-            "tranCurrency": "AUD",
-            "tip": "1.20"
-        },
-        "dccInfo": {
-            "dccIndicator": "0",
-            "dccCurrency": "",
-            "dccAmount": "",
-            "dccExchangeRate": ""
-        }
-    }
-}
-
-ResponseDefault:
-  value:
-    data:
+    NonOpiProcessAmountRequest_PREAUTHSALE:
+      value:
+        request:
+          merchantDetails:
+            ain: '2100000'
+            billerId: '14'
+            merchantId: '42298585547594'
+            terminalId: '85547596'
+            mrchCountryCode: '036'
+            siteId: ''
+            workStationId: ''
+          txnDetails:
+            functionCode: '02'
+            customerRefNumber: '2511202203112022031'
+            merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+            transactionId: '202211250950162'
+            reqDate: '25112022'
+            reqTime: '144955'
+            originalTranDate: ''
+            originalTranTime: ''
+            authCode: ''
+            rrn: ''
+            tokenId: ''
+            invoiceNumber: ''
+            batchNo: ''
+            amexSeNumber: ''
+            posEntryMode: ''
+            walletType: ''
+            walletId: ''
+            schemeId: ''
+            cardLastNumber: ''
+            primaryId: ''
+            customerName: ''
+            offlineFlag: ''
+            aTC: ''
+            tVR: ''
+            appLabel: ''
+            aID: ''
+            panSeqNo: ''
+            schemeTranInfo: ''
+            isInternalCall: null
+            authenticationMethod: null
+          amounts:
+            authAmount: '56.39'
+            mrchDiscountAmt: '.10'
+            convFee: '.10'
+            cgst: ''
+            igst: ''
+            sgst: ''
+            gst: '.10'
+            totalAmount: '56.59'
+            tranCurrency: '036'
+            tip: ''
+          additionalParams:
+            udf1: '23133'
+            udf2: '21313'
+            callbackURL: ''
+            paramList:
+              - param: '23'
+                param_lit: param1 key
+              - param: '54'
+                param_lit: param 2 key
+        
+    NonOpiProcessAmountRequest_PREAUTCOMPLETION:
+      value:
+        request:
+          merchantDetails:
+            ain: '2100000'
+            billerId: '14'
+            merchantId: '42298585549376'
+            terminalId: '85549376'
+            mrchCountryCode: '036'
+            siteId: ''
+            workStationId: ''
+          txnDetails:
+            functionCode: '03'
+            customerRefNumber: ''
+            merchantRefNumber: VinayAMEX111347112022031119911111431
+            transactionId: '202211250040180'
+            reqDate: '21112022'
+            reqTime: '150155'
+            originalTranDate: '17112022'
+            originalTranTime: ''
+            authCode: '041232'
+            rrn: '232122006000'
+            tokenId: ''
+            invoiceNumber: '10'
+            batchNo: ''
+            amexSeNumber: ''
+            posEntryMode: ''
+            walletType: ''
+            walletId: ''
+            schemeId: ''
+            cardLastNumber: '1234'
+            primaryId: ''
+            customerName: ''
+            offlineFlag: ''
+            aTC: ''
+            tVR: ''
+            appLabel: ''
+            aID: ''
+            panSeqNo: ''
+            schemeTranInfo: ''
+            isInternalCall: 'N'
+            authenticationMethod: null
+          amounts:
+            authAmount: '56.59'
+            mrchDiscountAmt: ''
+            convFee: ''
+            cgst: ''
+            igst: ''
+            sgst: ''
+            gst: ''
+            totalAmount: '56.59'
+            tranCurrency: '036'
+            tip: ''
+          additionalParams:
+            udf1: ''
+            udf2: ''
+            callbackURL: ''
+            paramList:
+              - param: ''
+                param_lit: ''
+        
+    NonOpiProcessAmountRequest_Refund:
+      value:
+        request:
+          merchantDetails:
+            ain: '2100000'
+            billerId: '14'
+            merchantId: '42298585549376'
+            terminalId: '85549376'
+            mrchCountryCode: '036'
+            siteId: ''
+            workStationId: ''
+          txnDetails:
+            functionCode: '04'
+            customerRefNumber: ''
+            merchantRefNumber: VinayVISA111347112022031119911111494
+            transactionId: '202211257151105'
+            reqDate: '25112022'
+            reqTime: '125600'
+            originalTranDate: '17112022'
+            originalTranTime: '125401'
+            authCode: '353319'
+            rrn: '000000000095'
+            tokenId: ''
+            invoiceNumber: '10'
+            batchNo: ''
+            amexSeNumber: ''
+            posEntryMode: ''
+            walletType: ''
+            walletId: ''
+            schemeId: ''
+            cardLastNumber: ''
+            primaryId: ''
+            customerName: ''
+            offlineFlag: ''
+            aTC: ''
+            tVR: ''
+            appLabel: ''
+            aID: ''
+            panSeqNo: ''
+            schemeTranInfo: ''
+            isInternalCall: null
+          amounts:
+            authAmount: '22.00'
+            mrchDiscountAmt: ''
+            convFee: ''
+            cgst: ''
+            igst: ''
+            sgst: ''
+            gst: ''
+            totalAmount: '22.00'
+            tranCurrency: '036'
+            tip: ''
+          additionalParams:
+            udf1: ''
+            udf2: ''
+            callbackURL: ''
+            paramList:
+              - param: ''
+                param_lit: ''
+        
+    NonOpiProcessAmountRequest_Void:
+      value:
+        request:
+          merchantDetails:
+            ain: '2100000'
+            billerId: '14'
+            merchantId: '42298519014704'
+            terminalId: '19014704'
+            mrchCountryCode: '036'
+          txnDetails:
+            functionCode: '05'
+            merchantRefNumber: '900000700012'
+            transactionId: '202211172224141'
+            reqDate: '17112022'
+            reqTime: '154900'
+            originalTranDate: '14022022'
+            originalTranTime: '133955'
+            authCode: '318861'
+            rrn: '232110980240'
+            tokenId: null
+            isInternalCall: 'Y'
+            invoiceNumber: '4'
+          amounts:
+            totalAmount: '3'
+            tranCurrency: '036'
+            authAmount: '100.00'
+        
+    NonOpiProcessAmountRequest_EmiSale:
+      value:
+        request:
+          merchantDetails:
+            ain: '2100000'
+            billerId: '14'
+            merchantId: '42298585547594'
+            terminalId: '85547596'
+            mrchCountryCode: '036'
+            siteId: ''
+            workStationId: ''
+          txnDetails:
+            functionCode: '08'
+            customerRefNumber: '2511202203112022031'
+            merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+            transactionId: '202211250950162'
+            reqDate: '25112022'
+            reqTime: '144955'
+            originalTranDate: ''
+            originalTranTime: ''
+            authCode: ''
+            rrn: ''
+            tokenId: ''
+            invoiceNumber: ''
+            batchNo: ''
+            amexSeNumber: ''
+            posEntryMode: ''
+            walletType: ''
+            walletId: ''
+            schemeId: ''
+            cardLastNumber: ''
+            primaryId: ''
+            customerName: ''
+            offlineFlag: ''
+            aTC: ''
+            tVR: ''
+            appLabel: ''
+            aID: ''
+            panSeqNo: ''
+            schemeTranInfo: ''
+            isInternalCall: null
+            authenticationMethod: null
+          amounts:
+            authAmount: '56.39'
+            mrchDiscountAmt: '.10'
+            convFee: '.10'
+            cgst: ''
+            igst: ''
+            sgst: ''
+            gst: '.10'
+            totalAmount: '56.59'
+            tranCurrency: '036'
+            tip: ''
+          additionalParams:
+            udf1: '23133'
+            udf2: '21313'
+            callbackURL: ''
+            paramList:
+              - param: '23'
+                param_lit: param1 key
+              - param: '54'
+                param_lit: param 2 key
+        
+    NonOpiProcessAmountRequest_TransactionStatusCheck:
+      value:
+        request:
+          merchantDetails:
+            billerId: '14'
+            ain: '2100000'
+            merchantId: '42298585549376'
+            terminalId: '85549376'
+            mrchCountryCode: '036'
+          txnDetails:
+            functionCode: '11'
+            merchantRefNumber: '111347112022031119911111494'
+            reqDate: '03112022'
+            reqTime: '134201'
+            originalTranDate: '25112022'
+            originalTranTime: '104523'
+          amounts:
+            authAmount: '36.79'
+            totalAmount: '36.79'
+            tranCurrency: '036'
+          additionalParams:
+            callbackURL: ''
+            udf1: ''
+            udf2: ''
+            paramList:
+              - param_lit: ''
+                param: ''
+        
+        
+    NonOpiProcessAmountRequest_SettlementTransaction:
+      value:
+        request:
+          merchantDetails:
+            ain: '2100000'
+            billerId: '14'
+            merchantId: '42298585547594'
+            terminalId: '85547596'
+            mrchCountryCode: '036'
+            siteId: ''
+            workStationId: ''
+          txnDetails:
+            functionCode: '12'
+            customerRefNumber: '2511202203112022031'
+            merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+            reqDate: '25112022'
+            reqTime: '144955'
+        
+    ResponseSettlementTransacton:
+      value:
+        data:
+            response:
+              merchantDetails:
+                ain: '2100000'
+                billerId: '14'
+                merchantId: '42298585547594'
+                terminalId: '85547596'
+                mrchCountryCode: '036'
+                siteId: ''
+                workStationId: ''
+              txnStatus:
+                respCode: '200'
+                response: SUCCESS
+                respMsg: SETTLEMENT ACCEPTED
+              txnDetails:
+                functionCode: '12'
+                customerRefNumber: ''
+                merchantRefNumber: ''
+                transactionId: ''
+                reqDate: '29112022'
+                reqTime: '134901'
+                originalTranDate: ''
+                originalTranTime: ''
+                authCode: ''
+                rrn: ''
+                tokenId: ''
+                invoiceNumber: ''
+                batchNo: ''
+                amexSeNumber: ''
+                posEntryMode: ''
+                walletType: ''
+                walletId: ''
+                schemeId: ''
+                cardLastNumber: ''
+                primaryId: ''
+                customerName: ''
+                offlineFlag: ''
+                aTC: ''
+                tVR: ''
+                appLabel: ''
+                aID: ''
+                panSeqNo: ''
+                schemeTranInfo: ''
+                isInternalCall: null
+                authenticationMethod: null
+              amounts:
+                authAmount: ''
+                mrchDiscountAmt: ''
+                convFee: ''
+                cgst: ''
+                igst: ''
+                sgst: ''
+                gst: ''
+                totalAmount: ''
+                tranCurrency: ''
+                tip: ''
+              dccInfo:
+                dccIndicator: ''
+                dccCurrency: ''
+                dccAmount: ''
+                dccExchangeRate: ''
+            
+    ResponseSALE:
+      value:
+        data:
+           response:
+             merchantDetails:
+               ain: '2100000'
+               billerId: '14'
+               merchantId: '42298585547594'
+               terminalId: '85547596'
+               mrchCountryCode: '036'
+               siteId: ''
+               workStationId: ''
+             txnStatus:
+               respCode: '200'
+               response: SUCCESS
+               respMsg: Transaction Success
+             txnDetails:
+               functionCode: '01'
+               customerRefNumber: '2511202203112022031'
+               merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+               transactionId: '202211250950162'
+               reqDate: '25112022'
+               reqTime: '144955'
+               originalTranDate: ''
+               originalTranTime: ''
+               authCode: '015108'
+               rrn: '232907066550'
+               tokenId: '855475962511000002000040172756'
+               invoiceNumber: '23'
+               batchNo: '001'
+               amexSeNumber: ''
+               posEntryMode: INSERT
+               walletType: ''
+               walletId: ''
+               schemeId: VISA CARD
+               cardLastNumber: '0025'
+               primaryId: ''
+               customerName: CARD 2/VISA TEST
+               offlineFlag: 'N'
+               aTC: 01BA
+               tVR: '8080008000'
+               appLabel: VISA TEST
+               aID: A0000000031010
+               panSeqNo: '01'
+               schemeTranInfo: 00000000Y26232965026672600000005
+               isInternalCall: null
+               authenticationMethod: OnlinePIN
+             amounts:
+               authAmount: '56.39'
+               mrchDiscountAmt: '.10'
+               convFee: '.10'
+               cgst: ''
+               igst: ''
+               sgst: ''
+               gst: '.10'
+               totalAmount: '56.59'
+               tranCurrency: '036'
+               tip: ''
+             dccInfo:
+               dccIndicator: '0'
+               dccCurrency: ''
+               dccAmount: ''
+               dccExchangeRate: ''
+            
+           
+    ResponseSALEWITHLPM:
+      value:
+        data:
+           response:
+             merchantDetails:
+               ain: '2100000'
+               billerId: '14'
+               merchantId: '42298585547594'
+               terminalId: '85547596'
+               mrchCountryCode: '036'
+               siteId: ''
+               workStationId: ''
+             txnStatus:
+               respCode: '200'
+               response: SUCCESS
+               respMsg: Transaction Success
+             txnDetails:
+               functionCode: '00'
+               customerRefNumber: '2511202203112022031'
+               merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+               transactionId: '202211250950162'
+               reqDate: '25112022'
+               reqTime: '144955'
+               originalTranDate: ''
+               originalTranTime: ''
+               authCode: '015108'
+               rrn: '232907066550'
+               tokenId: '855475962511000002000040172756'
+               invoiceNumber: '23'
+               batchNo: '001'
+               amexSeNumber: ''
+               posEntryMode: INSERT
+               walletType: ''
+               walletId: ''
+               schemeId: VISA CARD
+               cardLastNumber: '0025'
+               primaryId: ''
+               customerName: CARD 2/VISA TEST
+               offlineFlag: 'N'
+               aTC: 01BA
+               tVR: '8080008000'
+               appLabel: VISA TEST
+               aID: A0000000031010
+               panSeqNo: '01'
+               schemeTranInfo: 00000000Y26232965026672600000005
+               isInternalCall: null
+               authenticationMethod: OnlinePIN
+             amounts:
+               authAmount: '56.39'
+               mrchDiscountAmt: '.10'
+               convFee: '.10'
+               cgst: ''
+               igst: ''
+               sgst: ''
+               gst: '.10'
+               totalAmount: '56.59'
+               tranCurrency: '036'
+               tip: ''
+             dccInfo:
+               dccIndicator: '0'
+               dccCurrency: ''
+               dccAmount: ''
+               dccExchangeRate: ''
+           
+    ResponsePreAuthSale:
+      value:
+        data:
+           response:
+             merchantDetails:
+               ain: '2100000'
+               billerId: '14'
+               merchantId: '42298585547594'
+               terminalId: '85547596'
+               mrchCountryCode: '036'
+               siteId: ''
+               workStationId: ''
+             txnStatus:
+               respCode: '200'
+               response: SUCCESS
+               respMsg: Transaction Success
+             txnDetails:
+               functionCode: '02'
+               customerRefNumber: '2511202203112022031'
+               merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+               transactionId: '202211250950162'
+               reqDate: '25112022'
+               reqTime: '144955'
+               originalTranDate: ''
+               originalTranTime: ''
+               authCode: '015108'
+               rrn: '232907066550'
+               tokenId: '855475962511000002000040172756'
+               invoiceNumber: '23'
+               batchNo: '001'
+               amexSeNumber: ''
+               posEntryMode: INSERT
+               walletType: ''
+               walletId: ''
+               schemeId: VISA CARD
+               cardLastNumber: '0025'
+               primaryId: ''
+               customerName: CARD 2/VISA TEST
+               offlineFlag: 'N'
+               aTC: 01BA
+               tVR: '8080008000'
+               appLabel: VISA TEST
+               aID: A0000000031010
+               panSeqNo: '01'
+               schemeTranInfo: 00000000Y26232965026672600000005
+               isInternalCall: null
+               authenticationMethod: OnlinePIN
+             amounts:
+               authAmount: '56.39'
+               mrchDiscountAmt: '.10'
+               convFee: '.10'
+               cgst: ''
+               igst: ''
+               sgst: ''
+               gst: '.10'
+               totalAmount: '56.59'
+               tranCurrency: '036'
+               tip: ''
+             dccInfo:
+               dccIndicator: '0'
+               dccCurrency: ''
+               dccAmount: ''
+               dccExchangeRate: ''
+           
+    ResponsePreAuthCompletion:
+      value:
+        data:
+            response:
+              merchantDetails:
+                ain: '2100000'
+                billerId: '14'
+                merchantId: '42298585549376'
+                terminalId: '85549376'
+                mrchCountryCode: '036'
+                siteId: ''
+                workStationId: ''
+              txnStatus:
+                respCode: '200'
+                response: SUCCESS
+                respMsg: Transaction Success
+              txnDetails:
+                functionCode: '03'
+                customerRefNumber: ''
+                merchantRefNumber: ''
+                transactionId: ''
+                reqDate: '21112022'
+                reqTime: '150155'
+                originalTranDate: '17112022'
+                originalTranTime: ''
+                authCode: '353319'
+                rrn: '000000000095'
+                tokenId: ''
+                invoiceNumber: ''
+                batchNo: ''
+                amexSeNumber: ''
+                posEntryMode: ''
+                walletType: ''
+                walletId: ''
+                schemeId: ''
+                cardLastNumber: ''
+                primaryId: ''
+                customerName: ''
+                offlineFlag: ''
+                aTC: ''
+                tVR: ''
+                appLabel: ''
+                aID: ''
+                panSeqNo: ''
+                schemeTranInfo: ''
+                isInternalCall: null
+                authenticationMethod: null
+              amounts:
+                authAmount: '56.59'
+                mrchDiscountAmt: ''
+                convFee: ''
+                cgst: ''
+                igst: ''
+                sgst: ''
+                gst: ''
+                totalAmount: '56.59'
+                tranCurrency: '036'
+                tip: ''
+              dccInfo:
+                dccIndicator: ''
+                dccCurrency: ''
+                dccAmount: ''
+                dccExchangeRate: ''
+            
+    ResponseRefund:
+      value:
+        data:
+            response:
+              merchantDetails:
+                ain: '2100000'
+                billerId: '14'
+                merchantId: '42298585549376'
+                terminalId: '85549376'
+                mrchCountryCode: '036'
+                siteId: ''
+                workStationId: ''
+              txnStatus:
+                respCode: '200'
+                response: SUCCESS
+                respMsg: Transaction Success
+              txnDetails:
+                functionCode: '04'
+                customerRefNumber: ''
+                merchantRefNumber: VinayVISA111347112022031119911111494
+                transactionId: '202211257151105'
+                reqDate: '25112022'
+                reqTime: '125600'
+                originalTranDate: '17112022'
+                originalTranTime: '125401'
+                authCode: '353319'
+                rrn: '000000000095'
+                tokenId: ''
+                invoiceNumber: '10'
+                batchNo: ''
+                amexSeNumber: ''
+                posEntryMode: ''
+                walletType: ''
+                walletId: ''
+                schemeId: ''
+                cardLastNumber: ''
+                primaryId: ''
+                customerName: ''
+                offlineFlag: ''
+                aTC: ''
+                tVR: ''
+                appLabel: ''
+                aID: ''
+                panSeqNo: ''
+                schemeTranInfo: ''
+                isInternalCall: null
+              amounts:
+                authAmount: '22.00'
+                mrchDiscountAmt: ''
+                convFee: ''
+                cgst: ''
+                igst: ''
+                sgst: ''
+                gst: ''
+                totalAmount: '22.00'
+                tranCurrency: '036'
+                tip: ''
+              dccInfo:
+                dccIndicator: ''
+                dccCurrency: ''
+                dccAmount: ''
+                dccExchangeRate: ''
+            
+    ResponseVoid:
+      value:
+        data:
+            response:
+              merchantDetails:
+                ain: '2100000'
+                billerId: '14'
+                merchantId: '42298519014704'
+                terminalId: '19014704'
+                mrchCountryCode: '036'
+                siteId: ''
+                workStationId: ''
+              txnStatus:
+                respCode: '200'
+                response: ''
+                respMsg: SUCCESS
+              txnDetails:
+                functionCode: '05'
+                customerRefNumber: ''
+                merchantRefNumber: ''
+                transactionId: ''
+                reqDate: '17112022'
+                reqTime: '154900'
+                originalTranDate: '14022022'
+                originalTranTime: '133955'
+                authCode: ''
+                rrn: ''
+                tokenId: ''
+                invoiceNumber: ''
+                batchNo: ''
+                amexSeNumber: ''
+                posEntryMode: ''
+                walletType: ''
+                walletId: ''
+                schemeId: ''
+                cardLastNumber: ''
+                primaryId: ''
+                customerName: ''
+                offlineFlag: ''
+                aTC: ''
+                tVR: ''
+                appLabel: ''
+                aID: ''
+                panSeqNo: ''
+                schemeTranInfo: ''
+                isInternalCall: null
+              amounts:
+                authAmount: '100.00'
+                mrchDiscountAmt: ''
+                convFee: ''
+                cgst: ''
+                igst: ''
+                sgst: ''
+                gst: ''
+                totalAmount: '3'
+                tranCurrency: '036'
+                tip: ''
+              dccInfo:
+                dccIndicator: ''
+                dccCurrency: ''
+                dccAmount: ''
+                dccExchangeRate: ''
+            
+    ResponseEmiSale:
+      value:
+        data:
+            response:
+              merchantDetails:
+                ain: '2100000'
+                billerId: '14'
+                merchantId: '42298585547594'
+                terminalId: '85547596'
+                mrchCountryCode: '036'
+                siteId: ''
+                workStationId: ''
+              txnStatus:
+                respCode: '200'
+                response: SUCCESS
+                respMsg: Transaction Success
+              txnDetails:
+                functionCode: '08'
+                customerRefNumber: '2511202203112022031'
+                merchantRefNumber: '2511202203112022031120220311202203112022031121323'
+                transactionId: '202211250950162'
+                reqDate: '25112022'
+                reqTime: '144955'
+                originalTranDate: ''
+                originalTranTime: ''
+                authCode: '015108'
+                rrn: '232907066550'
+                tokenId: '855475962511000002000040172756'
+                invoiceNumber: '23'
+                batchNo: '001'
+                amexSeNumber: ''
+                posEntryMode: INSERT
+                walletType: ''
+                walletId: ''
+                schemeId: VISA CARD
+                cardLastNumber: '0025'
+                primaryId: ''
+                customerName: CARD 2/VISA TEST
+                offlineFlag: 'N'
+                aTC: 01BA
+                tVR: '8080008000'
+                appLabel: VISA TEST
+                aID: A0000000031010
+                panSeqNo: '01'
+                schemeTranInfo: 00000000Y26232965026672600000005
+                isInternalCall: null
+                authenticationMethod: OnlinePIN
+              amounts:
+                authAmount: '56.39'
+                mrchDiscountAmt: '.10'
+                convFee: '.10'
+                cgst: ''
+                igst: ''
+                sgst: ''
+                gst: '.10'
+                totalAmount: '56.59'
+                tranCurrency: '036'
+                tip: ''
+              dccInfo:
+                dccIndicator: '0'
+                dccCurrency: ''
+                dccAmount: ''
+                dccExchangeRate: ''
+            
+    ResponseTransactionStatusCheck:
+      value:
+        data:
+             response:
+               merchantDetails:
+                 ain: '2100000'
+                 billerId: '14'
+                 merchantId: '42298585549376'
+                 terminalId: '85549376'
+                 mrchCountryCode: '036'
+                 siteId: ''
+                 workStationId: ''
+               txnStatus:
+                 respCode: '200'
+                 response: SUCCESS
+                 respMsg: Transaction Success
+               txnDetails:
+                 functionCode: '11'
+                 customerRefNumber: '123457772495'
+                 merchantRefNumber: '111347112022031119911111494'
+                 transactionId: '202211258230893'
+                 reqDate: '03112022'
+                 reqTime: '134201'
+                 originalTranDate: '25112022'
+                 originalTranTime: '104523'
+                 authCode: '353319'
+                 rrn: '232905064994'
+                 tokenId: '855493762511000002000095161633'
+                 invoiceNumber: '78'
+                 batchNo: '001'
+                 amexSeNumber: ''
+                 posEntryMode: INSERT
+                 walletType: ''
+                 walletId: ''
+                 schemeId: VISA CARD
+                 cardLastNumber: '0176'
+                 primaryId: ''
+                 customerName: VISA ACQUIRER TEST/CARD 17
+                 offlineFlag: 'N'
+                 aTC: '0002'
+                 tVR: '8080008000'
+                 appLabel: VISA CREDIT
+                 aID: A0000000031010
+                 panSeqNo: ''
+                 schemeTranInfo: 00000000E500000000353328XF340005
+                 isInternalCall: null
+                 authenticationMethod: unknownMethod
+               amounts:
+                 authAmount: '21.00'
+                 mrchDiscountAmt: ''
+                 convFee: ''
+                 cgst: ''
+                 igst: ''
+                 sgst: ''
+                 gst: ''
+                 totalAmount: '45.20'
+                 tranCurrency: AUD
+                 tip: '1.20'
+               dccInfo:
+                 dccIndicator: '0'
+                 dccCurrency: ''
+                 dccAmount: ''
+                 dccExchangeRate: ''
+             
+    ResponseDefault:
+      value:
+        data:
             functionCode: "00"
             source: null
             billingAmount: null
