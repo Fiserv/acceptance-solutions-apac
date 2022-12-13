@@ -78,35 +78,7 @@
               link: docs/APIs/PaymentAPI/TransactionStatusCheck.md
             - title: Settlement
               link: docs/APIs/PaymentAPI/SettlementTransaction.md
-        - title: Merchant Onboarding
-          link: docs/MerchantBoarding.md
-          sections:
-            - title: Login
-              link: docs/APIs/externalboarding/Login.md
-            - title: Create URN
-              link: docs/APIs/externalboarding/CreateURN.md
-            - title: Get Package List
-              link: docs/APIs/externalboarding/GetPackageList.md
-            - title: Get Package ID
-              link: docs/APIs/externalboarding/GetPackageId.md
-            - title: Get Document Matrix
-              link: docs/APIs/externalboarding/GetDocumentMatrix.md
-            - title: Upload Document
-              link: docs/APIs/externalboarding/UploadDocument.md
-            - title: MID - Inquiry
-              link: docs/APIs/externalboarding/MidInquiry.md
-            - title: SUBMIT - New Merchant
-              link: docs/APIs/externalboarding/NewMerchant.md
-            - title: SUBMIT - Additional Outlet
-              link: docs/APIs/externalboarding/AdditionalOutlet.md
-            - title: SUBMIT - Additional Device
-              link: docs/APIs/externalboarding/AdditionalDevice.md
-            - title: SUBMIT - Single MID Payfac
-              link: docs/APIs/externalboarding/SingleMIDPayFac.md
-            - title: SUBMIT - Multi MID Payfac
-              link: docs/APIs/externalboarding/MultiMIDPayFac.md
-            - title: Application Status Inquiry
-              link: docs/APIs/externalboarding/ApplicationStatusInquiry.md
+       
         - title: Local Based Integration
           link: docs/LocalPOI.md
           sections:
