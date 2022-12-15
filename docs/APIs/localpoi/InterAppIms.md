@@ -5,42 +5,6 @@ E.g. A biller can integrate with a payment application and complete the payment 
 
 Financial payment transactions that are supported by inter-application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion, Transaction Status Check,Installment/EMI Sale, Void, Settlement and Bharat QR code generation.
 
-
-
-
-<table width="130%"border="0">
-  <tr>
-    <th>Value Added Services</th>
-    <th>India</th>
-    <th>Australia</th>
-  </tr>
-  <tr>
-    <td>BBPS (Bharat Bill Pay)</td>
-     <td align="center">&#10004;</td>
-     <td></td>
-  </tr>
-   <tr>
-    <td>UPI QR</td>
-     <td align="center">&#10004;</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>Bharat QR</td>
-     <td align="center">&#10004;</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>FASTag</td>
-     <td align="center">&#10004;</td>
-    <td></td>
-  </tr>
-     <tr>
-    <td>MobiKwik</td>
-     <td align="center">&#10004;</td>
-     <td></td>
-  </tr>
-</table>
-
 For card transactions, the supported functionalities are listed below.
 
   <table width="120%" border="0">
@@ -157,7 +121,37 @@ For card transactions, the supported functionalities are listed below.
   </tr>
   </table>
   
-
+<table width="130%"border="0">
+  <tr>
+    <th>Value Added Services</th>
+    <th>India</th>
+  </tr>
+  <tr>
+    <td>BBPS (Bharat Bill Pay)</td>
+     <td align="center">&#10004;</td>
+   
+  </tr>
+   <tr>
+    <td>UPI QR</td>
+     <td align="center">&#10004;</td>
+   
+  </tr>
+   <tr>
+    <td>Bharat QR</td>
+     <td align="center">&#10004;</td>
+    
+  </tr>
+   <tr>
+    <td>FASTag</td>
+     <td align="center">&#10004;</td>
+    
+  </tr>
+     <tr>
+    <td>MobiKwik</td>
+     <td align="center">&#10004;</td>
+     
+  </tr>
+</table>
 
 ### Payload Examples - Request
 
