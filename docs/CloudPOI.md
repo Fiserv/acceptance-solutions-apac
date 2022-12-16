@@ -16,6 +16,6 @@ Fiserv Cloud Based Integration caters to merchants who have their payment system
 ## Certified Fiserv Terminals for Cloud Based Integration    
 
 Terminal models certified with Fiserv for Cloud Based Integration :
-- PAX APOS Device
+- PAX Android Device
 
 
