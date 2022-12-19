@@ -1,20 +1,20 @@
-# Local Based Integration Checklist
+# Local Integration Checklist
 
 <img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos3.jpg " width="1185">
 
-### Local Based Integration Use Cases 
+### Local Integration Use Cases 
 
 Our local integration APIs facilitates to connect with your in-house central or any standalone systems to automate the entire billing to payments transactions.<BR/>
 
-From inventory tracking, reservations, billing and reconciliation applications that your business is using, our local-based API opens many possibilities for your business to cater to your business’ payment eco-system.<BR/> <br>
+From inventory tracking, reservations, billing and reconciliation applications that your business is using, our local integration API opens many possibilities for your business to cater to your business’ payment eco-system.<BR/> <br>
 <br>
 
 
 
-<B> Use case considerations on how our local based integration can support your ecosystem: </B>
+<B> Use case considerations on how our Local integration can support your ecosystem: </B>
 
- - Your current point of sale (POS) system(s) have been implemented on local-based connectivity
- - Technically your business direction for your payment and reporting ecosystem is planned to be on local-based integrations
+ - Your current point of sale (POS) system(s) have been implemented on local connectivity
+ - Technically your business direction for your payment and reporting ecosystem is planned to be on local integrations
  - *If you are a hospitality-based business using Oracle Opera Payment Interface (OPI) to support Oracle Property Management System (PMS) solutions
    - Enjoy the benefits of enabling tokenized payment transactions to be integrated to Oracle Payment Interface (OPI)
  - Optimize your financial management with digitalized receipts that can be viewed and downloaded on Fiserv Business Point (merchant portal)
@@ -27,7 +27,7 @@ From inventory tracking, reservations, billing and reconciliation applications t
 <img src="https://raw.githubusercontent.com/Fiserv/acceptance-solutions-apac/develop/assets/images/pos5.jpg " width="1185">
 
 
-### Welcome to Fiserv Local Based integration solution
+### Welcome to Fiserv Local integration solution
 
 The local integration acts as an interface / communication layer between the Fiserv terminal application ('Parent application') and the third-party application ('Consumer application').<BR/> 
 
@@ -38,7 +38,7 @@ Before you begin, both the consumer application and the parent app must be insta
  - The Parent application completes the transaction and communicates back the result to the Fiserv Interface library.
  - The Fiserv Interface in turn communicates back the result to the Consumer application.
 
-  Handy tips for you to kick start your local based integration:
+  Handy tips for you to kick start your Local integration:
 
 1. <B>Set up your test account [here](./?path=docs/introduction/contact-us.md&branch=develop)</B>
 
