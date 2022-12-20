@@ -38,7 +38,7 @@ Browse our catalogue and integrate with our APIs to enrich your clients' digital
 
 
 
-#  Local Based Integration
+#  Local Integration
 
 ## India / Australia
 
