@@ -40,37 +40,7 @@ System Requirements to setup USB / Static Wi-fi
    - Trigger transactions from PC application to check the line status
             
 
-For digital transactions, the supported functionalities are listed below.
-
-</body>
-<table border="0">
-  <tr>
-    <th> Value Added Services </th>
-    <th> Rest of APAC <br>(SG, HK, MY) </th>
-     </tr>
-    <tr>
-    <td>WeChat</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>Alipay</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>FPS</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>GrabPay</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>CUP QR (UnionPay QR)</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    </table>
-
-  For a normal Sale request, the supported functionalities are listed below.
+ For a normal Sale request, the supported functionalities are listed below.
     
     
  <table border="0">
@@ -192,6 +162,51 @@ For digital transactions, the supported functionalities are listed below.
     </tr>
     </tr>
     </table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+For digital transactions, the supported functionalities are listed below.
+
+</body>
+<table border="0">
+  <tr>
+    <th> Value Added Services </th>
+    <th> Rest of APAC <br>(SG, HK, MY) </th>
+     </tr>
+    <tr>
+    <td>WeChat</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>Alipay</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>FPS</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>GrabPay</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>CUP QR (UnionPay QR)</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    </table>
+
+ 
    
 
 
