@@ -31,46 +31,7 @@ System Requirements to setup USB / Static Wi-fi
    - Connect the desired cable (USB) to PC 
    - Trigger transactions from PC application to check the line status
             
-          
-
-For digital transactions, the supported functionalities are listed below.
-
-   <table border="0">
-  <tr>
-    <th>Value Added Services</th>
-    <th>India</th>
-    <th>Australia</th>
-  </tr>
-  <tr>
-    <td>BBPS (Bharat Bill Pay)</td>
-     <td align="center">&#10004;</td>
-  <td></td>
-  </tr>
-   <tr>
-    <td>UPI QR</td>
-     <td align="center">&#10004;</td>
-  <td></td>
-  </tr>
-   <tr>
-    <td>Bharat QR</td>
-     <td align="center">&#10004;</td>
-   <td></td>
-  </tr>
-   <tr>
-    <td>FASTag</td>
-     <td align="center">&#10004;</td>
-   <td></td>
-  </tr>
-     <tr>
-    <td>MobiKwik</td>
-     <td align="center">&#10004;</td>
-  <td></td>
-  </tr>
-</table>
-
-
-
-For card transactions, the supported functionalities are listed below.
+ For card transactions, the supported functionalities are listed below.
 
 <table border="0">
   <tr>
@@ -183,6 +144,45 @@ For card transactions, the supported functionalities are listed below.
      <td align="center">&#10004;</td>
      <td align="center">&#10004;</td>
  </tr>
+</table>
+
+For digital transactions, the supported functionalities are listed below.
+
+   <table border="0">
+  <tr>
+    <th>Value Added Services</th>
+    <th>India</th>
+  </tr>
+  <tr>
+    <td>BBPS (Bharat Bill Pay)</td>
+     <td align="center">&#10004;</td>
+ 
+  </tr>
+   <tr>
+    <td>UPI QR</td>
+     <td align="center">&#10004;</td>
+  
+  </tr>
+   <tr>
+    <td>Bharat QR</td>
+     <td align="center">&#10004;</td>
+   
+  </tr>
+   <tr>
+    <td>FASTag</td>
+     <td align="center">&#10004;</td>
+  
+  </tr>
+     <tr>
+    <td>MobiKwik</td>
+     <td align="center">&#10004;</td>
+  
+  </tr>
+</table>
+
+
+
+
   
 
 |  Param1    | Descriptions  |  Comment |
