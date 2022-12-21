@@ -9,7 +9,7 @@ For a normal Sale request, the supported functionalities are listed below.
 
 - Card Transaction (navigating to direct card payment application) 
 
- For a normal Sale request, the supported functionalities are listed below.
+For a normal Sale request, the supported functionalities are listed below.
  
  <table border="0">
     <tr>
