@@ -10,8 +10,8 @@ For a normal Sale request, the supported functionalities are listed below.
 - Card Transaction (navigating to direct card payment application) 
 
 For a normal Sale request, the supported functionalities are listed below.
- 
- <table border="0">
+
+<table border="0">
     <tr>
     <th>Transactions Supported</th>
     <th> Rest of APAC (SG, HK, MY)  </th>
