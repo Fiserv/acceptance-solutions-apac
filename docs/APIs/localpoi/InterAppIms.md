@@ -121,6 +121,7 @@ For card transactions, the supported functionalities are listed below.
   </tr>
   </table>
   
+ For digital transactions, the supported functionalities are listed below.
 <table width="130%"border="0">
   <tr>
     <th>Value Added Services</th>
