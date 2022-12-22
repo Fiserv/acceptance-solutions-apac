@@ -4,14 +4,7 @@ Many businesses have multiple systems working in silos. Given the fast-moving tr
 
 Fiserv Cloud based integration is an Application Programming Interface (API) based integration which facilitates the connection with the retailer's central or standalone systems, to automate the entire billing to payment transactions. Explore more of our Cloud based integration Payment APIs below.
 
-<html>
-  <head>
-    <meta http-equiv="refresh" content="7; url='https://dev-developerstudio.fiserv.com/product/AcceptanceSolutionsAPAC/docs/?path=docs/CloudPOI.md&branch=develop'" />
-  </head>
-  <body>
-    <p><a href="https://dev-developerstudio.fiserv.com/product/AcceptanceSolutionsAPAC/docs/?path=docs/CloudPOI.md&branch=develop">  Cloud based Integration</a>.</p>
-  </body>
-</html>
+- [Cloud based integration](./?path=docs/CloudPOI.md)
 
 - [Installment / EMI Sale](./?path=docs/APIs/PaymentAPI/EMISale.md)
 
