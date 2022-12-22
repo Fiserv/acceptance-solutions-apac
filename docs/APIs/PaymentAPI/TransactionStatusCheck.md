@@ -64,7 +64,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ### Request
 | Variable | Type | Length |  Mandatory / Optional/ Conditional <br>(M / O / C) | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-|`Merchant Info`|||||
+|**Merchant Info**|||||
 |`billerId`|String|3|M|Biller Id provided by Fiserv.|
 |`ain`|String |7|M|Acquirer institution number provided by Fiserv.|
 |`siteId`|String|15|C|Merchant's MID reference (not required if MID is sent)|
@@ -327,7 +327,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | Variable | Type | Length |   Mandatory / Optional/ Conditional <br> (M / O / C)  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
 
-|`Merchant Info`|||||
+|**Merchant Info**|||||
 |`billerId`|String |3|M|Same as request|
 |`ain`|String|7|M|Same as request|
 |`siteId`|String|15|C|Same as request|
