@@ -107,7 +107,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 |`merchantId`|String |15|C|Merchant ID assigned|
 |`terminalId`|String |8|C|Terminal ID where transaction to be pushed.|
 |`mrchCountryCode`|String |3|M|Merchant Country Code (3-digit numeric value)|
-|**Txn Info**|||||
+|**Transaction Info**|||||
 |`functionCode`|String |2|M|00 - Sale |
 |   |    |    |  |02 - Preauth |
 |   |    |    |  |03 - Preauth Completion|
@@ -369,50 +369,50 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 |`merchantId`|String |15|C|Same as request|
 |`terminalId`|String|8|C|Same as request|
 |`mrchCountryCode`|String|3|M|Merchant Country Code (3-digit numeric value)|
-|**Txn Status**|||||
-|`respCode`|String|5|M|200/300/actual switch response|
-|`response`|String|20|M|SUCCESS/FAILURE|
+|**Transaction Status**|||||
+|`respCode`|String|5|M|200 / 300 / Actual Response from switch |
+|`response`|String|20|M|Success / Failure|
 |`respMsg`|String|20|O|Error Message|
-|**Txn Info**|||||
-|`functionCode`|String|2|M|Same as request except Inquiry txn. For Inquiry txn Original txn function code will be returned.|
+|**Transaction Info**|||||
+|`functionCode`|String|2|M|Same as request except Inquiry transaction.<br>For Inquiry transaction, the original transaction function code will be returned.|
 |`merchantRefNumber`|String|50|M|Same as request|
 |`customerRefNumber`|String|20|O|Same as request|
-|`transactionId`|String|20|M|Unique Id for the transaction|
+|`transactionId`|String|20|M|Unique ID for the transaction|
 |`reqDate`|DDMMYYYY||M|Same as request|
 |`reqTime`|HHMMSS||M|Same as request|
 |`originalTranDate`|DDMMYYYY||N/A|Same as request|
 |`originalTranTime`|HHMMSS||N/A|Same as request|
-|`authCode`|String|6|M|Received from Issuer Host. Return the auth code received in response from Base24 for refund.|
-|`rrn`|String|20|M|Received from Issuer Host. Return the auth code received in responsefrom Base24 for refund.|
+|`authCode`|String|6|M|Received from the Issuer Host.<br>Return the auth code received in response from Fiserv switch (Base 24) for refund.|
+|`rrn`|String|20|M|Received from the Issuer Host.<br>Return the auth code received in response from Fiserv switch (Base 24) for refund.|
 |`invoiceNumber`|String|20|M|Terminal Invoice Number|
 |`batchNo`|String|3|M|Terminal Batch Number|
 |`amexSeNumber`|String|10|C|Applicable for AMEX transaction.|
 |`posEntryMode`|String|10|M|MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC|
-|`walletType`|String|10|C|Wallet Type will be passed for QR txn.|
-|`walletId`|String|5|C|Wallet Id will be passed for LPM txn.|
-|`schemeId`|String|10|C|Scheme Name will be passed for Card txn.|
-|`cardLastNumber`|String|4|C|Card Last 4 digits for Carded txn.|
-|`primaryId`|String |20|C|Reference Number of the QR Request.|
+|`walletType`|String|10|C|Wallet type will be passed for QR transactions.|
+|`walletId`|String|5|C|Wallet ID will be passed for local payment method (LPM) transaction.|
+|`schemeId`|String|10|C|Scheme name will be passed for card transactions.|
+|`cardLastNumber`|String|4|C|Last 4-digits of the card used in the transactions.|
+|`primaryId`|String |20|C|Reference number of the QR request.|
 |`customerName`|String |20|O|Cardholder Name|
 |`offlineFlag`|String|1|O|Offline flag|
-|`tokenId`|String|30|C|Token Id - for the merchant requires token PAN.|
-|`aTC`|String|4|C|Application Txn Counter (EMV Tag 9F36)|
-|`tVR`|String |10|C|Terminal Verification Result (EMV Tag - 95)|
+|`tokenId`|String|30|C|Token ID - for the merchant requires token PAN.|
+|`aTC`|String|4|C|EMV application transaction counter (EMV Tag 9F36)|
+|`tVR`|String |10|C|EMV terminal verification result (EMV Tag - 95)|
 |`appLabel`|String|32|C|Application Label (EMV tag - 50)|
 |`aID`|String|14|C|Application Identifier (EMV tag - 84)|
-|`panSeqNo`|String|2|C|PAN Sequence No (EMV Tag - 5F34)|
+|`panSeqNo`|String|2|C|PAN Sequence Number (EMV Tag - 5F34)|
 |`schemeTranInfo`|String|32|O|Refer Appendix A for the tag layout.|
 |**Amounts**|||||
-|`authAmount`|String|12|M|Same as Request|
-|`mrchDiscountAmt`|String |10|O|discount given to card holder.|
-|`convFee`|String |10|C|Same as Request|
-|`cgst`|String |10|C|Same as Request|
-|`igst`|String |10|C|Same as Request|
-|`sgst`|String |10|C|Same as Request|
-|`gst`|String|10|C|Same as Request|
+|`authAmount`|String|12|M|Same value as request table.<br>Bill amount including decimal (E.g. 50.00 for $50 sale).|
+|`mrchDiscountAmt`|String |10|O|Discount given to card holder.|
+|`convFee`|String |10|C|Same value as request table.<br>Convenience Fee including decimal (E.g: “5.00” for $5 fee)<br> - To be sent if fee is charged.|
+|`cgst`|String |10|C|Same value as request table.<br>Central GST Including decimal (E.g: “10.00” for $10 cgst)<br> - To be sent if CGST is included in the total amount (Applicable only for India).|
+|`igst`|String |10|C|Same value as request table.<br>Integrated GST Including decimal (E.g: “10.00” for $10 igst)<br> - To be sent if IGST is included in the total amount (Applicable only for India).|
+|`sgst`|String |10|C|Same value as request table.<br>State GST Including decimal (E.g: “10.00” for $10 sgst)<br> - To be sent if SGST is included in the total amount (Applicable only for India).|
+|`gst`|String|10|C|Same value as request table.<br>GST - applicable except India|
 |`tipAmount`|String |12|O|Tip Amount If applicable|
-|`totalAmount`|String|12|M|Total Amount (auth, fee, gsts, tip) including decimal ((Ex: “57.00” for $57 sale).|
-|`tranCurrency`|String|3|M|Same as Request|
+|`totalAmount`|String|12|M|Same value as request table.<br>Total Amount (auth, fee, gsts) including decimal (E.g: “57.00” for $57 sale)<br>Send 0.00 for inquiry transaction and Get Token.|
+|`tranCurrency`|String|3|M|Same value as request table.<br>Transaction Currency Code (3-digit numeric value)|
 |**DCC**|||||
 |`dccIndicator`|String|1|M|0 – Non DCC <br>  1 – DCC|
 |`dccCurrency`|String|3|C|DCC Currency|
