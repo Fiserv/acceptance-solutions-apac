@@ -24,7 +24,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
       "siteId":"",
       "workStationId":""
    },
-   "txnDetails":{
+   "transactionDetails":{
       "functionCode":"04",
       "customerRefNumber":"",
       "merchantRefNumber":"VinayVISA111347112022031119911111494",
@@ -97,24 +97,24 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | Variable | Type | Length | Mandatory / Optional /Conditional <br>(M / O / C) | Description / Values |
 | -------- | ------- | -- | ----------------------------------------------- | ------------------ |
 |**Merchant Info**|||||
-|`billerId`|String|3|M|Biller Id provided by Fiserv.|
+|`billerId`|String|3|M|Biller ID provided by Fiserv.|
 |`ain`|String |7|M|Acquirer institution number provided by Fiserv.|
 |`siteId`|String|15|C|Merchant's MID reference (not required if MID is sent)|
 |`workStationId`|String |8|C|Merchant's TID reference (not required if TID is sent)|
 |`merchantId`|String |15|C|Merchant ID assigned|
 |`terminalId`|String |8|C|Terminal ID where transaction to be pushed.|
 |`mrchCountryCode`|String |3|M|Merchant Country Code (3-digit numeric value)|
-|**Txn Info**|||||
+|**Transaction Info**|||||
 |`functionCode`|String |2|M|00 - Sale | 
- | | |  |               |02 - Preauth |
- | | |  |               |03 - Preauth Completion|
+ | | |  |               |02 - Pre-authorization |
+ | | |  |               |03 - Pre-authorization Completion|
  | | |  |               |04 - Refund|
  | | |  |               |05 - Void|
- | | |  |               |06 - TopUp (Incremental Preauth)|
+ | | |  |               |06 - Top Up (Incremental Pre-authorization)|
  | | |  |               |11 - Transaction Status Check (Inquiry)|
  | | |  |               |12 - Settlement|
  | | |  |               |38 - Get Token|
-|`merchantRefNumber`|String|50|M|Unique number for Sale, Pre-auth and Get Token.|
+|`merchantRefNumber`|String|50|M|Unique number for Sale, Pre-authorization and Get Token.|
 |`customerRefNumber`|String |20|O|Consumer Number |
 |`transactionId`|String|20|M|Pass the same value from original transaction response.|
 |`reqDate`|DDMMYYYY||M|Transaction Initiated date|
@@ -123,19 +123,19 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 |`originalTranTime`|HHMMSS||M|Original transaction time|
 |`authCode`|String |6|M|Pass the same value from original transaction response.|
 |`rrn`|String |20|M|Pass the same value from original transaction response.|
-|`tokenId`|String|30|C|Token Id returned during initial auth / get token.|
+|`tokenId`|String|30|C|Token ID returned during initial auth / get token.|
 |**Amounts**|||||
-|`authAmount`|String|12|M|Bill Amount including decimal (Ex: “50.00” for $50 sale). Send 0.00 for inquiry txn and Get Token.|
-|`mrchDiscountAmt`|String|10|N/A|discount given to card holder.|
-|`convFee`|String |10|N/A|Convenience Fee including decimal (Ex: “5.00” for $5 fee) - To be sent if fee is charged.|
-|`cgst`|String |10|N/A|Central GST Including decimal (Ex: “10.00” for $10 cgst) - To be sent if CGST is included in the total amount (Applicable only for India).|
-|`igst`|String |10|N/A|Integrated GST Including decimal (Ex: “10.00” for $10 igst) - To be sent if IGST is included in the total amount (Applicable only for India).|
-|`sgst`|String |10|N/A|State GST Including decimal (Ex: “10.00” for $10 igst) - To be sent if SGST is included in the total amount (Applicable only for India).|
+|`authAmount`|String|12|M|Bill Amount including decimal (Ex: “50.00” for $50 sale). Send 0.00 for inquiry transaction and Get Token.|
+|`mrchDiscountAmt`|String|10|N/A|Discount given to card holder.|
+|`convFee`|String |10|N/A|Convenience Fee including decimal (E.g: “5.00” for $5 fee) - To be sent if fee is charged.|
+|`cgst`|String |10|N/A|Central GST Including decimal (E.g: “10.00” for $10 cgst) - To be sent if CGST is included in the total amount (Applicable only for India).|
+|`igst`|String |10|N/A|Integrated GST Including decimal (E.g: “10.00” for $10 igst) - To be sent if IGST is included in the total amount (Applicable only for India).|
+|`sgst`|String |10|N/A|State GST Including decimal (E.g: “10.00” for $10 igst) - To be sent if SGST is included in the total amount (Applicable only for India).|
 |`gst`|String |10|N/A|GST - applicable except India|
-|`totalAmount`|String |12|M|Total Amount (auth, fee, gsts) including decimal (Ex: “57.00” for $57 sale). Send 0.00 for inquiry txn and Get Token.|
+|`totalAmount`|String |12|M|Total Amount (auth, fee, gsts) including decimal (E.g: “57.00” for $57 sale). Send 0.00 for inquiry transaction and Get Token.|
 |`tranCurrency`|String |3|M|Transaction Currency Code (3-digit numeric value)|
 |**Additional Params**|||||
-|`callbackURL`|String|100|O|Response URL, place holder for notification API call feature.|
+|`callbackURL`|String|100|O|Response URL, placeholder for notification API call feature.|
 |`param_lit`|Array||O|Biller can pass any additional details if required in arrary format as below,<br>"paramList": [<br> {<br>"param_lit": "param1 key",<br>"param"": "23"<br>},<br>{<br>"param_lit": "param 2 key",<br>"param": "54"<br>}<br>]|"
 |`udf1`|String |100|O|User Defined Field|
 |`udf2`|String|100|O|User Defined Field|
@@ -154,12 +154,12 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
       "siteId":"",
       "workStationId":""
    },
-   "txnStatus":{
+   "transactionStatus":{
       "respCode":"200",
       "response":"SUCCESS",
       "respMsg":"Transaction Success"
    },
-   "txnDetails":{
+   "transactionDetails":{
       "functionCode":"04",
       "customerRefNumber":"",
       "merchantRefNumber":"VinayVISA111347112022031119911111494",
@@ -225,12 +225,12 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
             "siteId": "",
             "workStationId": ""
         },
-        "txnStatus": {
+        "transactionStatus": {
             "respCode": "300",
             "response": "Failure:",
             "respMsg": "[Field Name: merchantId is mandatory, Field Name: billerId is mandatory, Field name: rrn is mandatory for the :functionCode: 04, Field name: authCode is mandatory for the :functionCode: 04]"
         },
-        "txnDetails": {
+        "transactionDetails": {
             "functionCode": "",
             "customerRefNumber": "",
             "merchantRefNumber": "",
@@ -294,12 +294,12 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
             "siteId": "",
             "workStationId": ""
         },
-        "txnStatus": {
+        "transactionStatus": {
             "respCode": "300",
             "response": "FAILURE",
             "respMsg": "Refund Amount is Greater than balance Sale Amount"
         },
-        "txnDetails": {
+        "transactionDetails": {
             "functionCode": "04",
             "customerRefNumber": "",
             "merchantRefNumber": "Vinayvisa111347112022031119911111930",
@@ -357,21 +357,21 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | Variable | Type | Length | Mandatory / Optional /Conditional <br>(M / O / C) | Description / Values |
 | -------- | ------- | -- | ----------------------------------------------- | ------------------ |
 |**Merchant Info**|||||
-|`billerId`|String |3|M|Same as request|
-|`ain`|String|7|M|Same as request|
-|`siteId`|String|15|C|Same as request|
-|`workStationId`|String|8|C|Same as request|
-|`merchantId`|String |15|C|Same as request|
-|`terminalId`|String|8|C|Same as request|
-|`mrchCountryCode`|String|3|M|Merchant Country Code (3-digit numeric value)|
-|**Txn Status**|||||
+|`billerId`|String |3|M|Same value as request table.<br>Biller ID provided by Fiserv.|
+|`ain`|String|7|M|Same value as request table.<br>Acquirer institution number provided by Fiserv.|
+|`siteId`|String|15|C|Same value as request table.<br>Merchant's MID reference (not required if MID is sent)|
+|`workStationId`|String|8|C|Same value as request table.<br> Merchant's TID reference (not required if TID is sent)|
+|`merchantId`|String |15|C|Same value as request table.<br> Merchant ID assigned|
+|`terminalId`|String|8|C|Same value as request table.<br> Terminal ID where transaction to be pushed.|
+|`mrchCountryCode`|String|3|M|Same value as request table.<br>Merchant Country Code (3-digit numeric value)|
+|**Transaction Status**|||||
 |`respCode`|String|5|M|200/300/actual switch response|
 |`response`|String|20|M|SUCCESS/FAILURE|
 |`respMsg`|String|20|O|Error Message|
-|**Txn Info**|||||
-|`functionCode`|String|2|M|Same as request except Inquiry txn. For Inquiry txn Original txn function code will be returned.|
-|`merchantRefNumber`|String|50|M|Same as request|
-|`customerRefNumber`|String|20|O|Same as request|
+|**Transaction Info**|||||
+|`functionCode`|String|2|M|Same as request except Inquiry transaction.<br> For Inquiry transaction original transaction function code will be returned.| 
+|`merchantRefNumber`|String|50|M|Unique number for Sale, Pre-authorization and Get Token.|
+|`customerRefNumber`|String|20|O|Consumer Number|
 |`transactionId`|String|20|M|Unique Id for the transaction.|
 |`reqDate`|DDMMYYYY||M|Same as request|
 |`reqTime`|HHMMSS||M|Same as request|
@@ -383,33 +383,32 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 |`batchNo`|String|3|O|Terminal Batch Number|
 |`amexSeNumber`|String|10|C|Applicable for AMEX transaction.|
 |`posEntryMode`|String|10|M|MANUAL / SWIPE / INSERT / CLSS / FALLBACK / CLSS_MSR / QRC|
-|`walletType`|String|10|O|Wallet Type will be passed for QR txn.|
-|`walletId`|String|5|O|Wallet Id will be passed for LPM txn.|
-|`schemeId`|String|10|O|Scheme Name will be passed for Card txn.|
-|`cardLastNumber`|String|4|O|Card Last 4 digits for Carded txn.|
+|`walletType`|String|10|O|Wallet Type will be passed for QR transaction.|
+|`schemeId`|String|10|O|Scheme Name will be passed for Card transaction.|
+|`cardLastNumber`|String|4|O|Card Last 4 digits for Carded transaction.|
 |`primaryId`|String |20|O|Reference Number of the QR Request.|
 |`customerName`|String |20|O|Cardholder Name|
 |`offlineFlag`|String|1|O|Offline flag|
-|`tokenId`|String|30|O|Token Id - for the merchant requires token PAN.|
-|`aTC`|String|4|O|Application Txn Counter (EMV Tag 9F36)|
+|`tokenId`|String|30|O|Token ID returned during initial authorization / get token.|
+|`aTC`|String|4|O|Application Transaction Counter (EMV Tag 9F36)|
 |`tVR`|String |10|O|Terminal Verification Result (EMV Tag - 95)|
 |`appLabel`|String|32|O|Application Label (EMV tag - 50)|
 |`aID`|String|14|O|Application Identifier (EMV tag - 84)|
 |`panSeqNo`|String|2|O|PAN Sequence No (EMV Tag - 5F34)|
 |`schemeTranInfo`|String|32|O|Refer Appendix A for the tag layout.|
 |**Amounts**|||||
-|`authAmount`|String|12|M|Same as Request|
-|`mrchDiscountAmt`|String |10|O|discount given to card holder.|
-|`convFee`|String |10|O|Same as Request|
-|`cgst`|String |10|O|Same as Request|
-|`igst`|String |10|O|Same as Request|
-|`sgst`|String |10|O|Same as Request|
-|`gst`|String|10|O|Same as Request|
+|`authAmount`|String|12|M|Total Amount (auth, fee, gsts) including decimal<br>(E.g: “57.00” for $57 sale). Send 0.00 for inquiry transaction and Get Token.|
+|`mrchDiscountAmt`|String |10|O|Same value as request table. Discount given to card holder|
+|`convFee`|String |10|O|Convenience Fee including decimal<br>(E.g: “5.00” for $5 fee) - To be sent if fee is charged.|
+|`cgst`|String |10|O|Same value as request table. Central GST Including decimal (E.g: “10.00” for $10 igst)<br> - To be sent if IGST is included in the total amount (Applicable only for India).|
+|`igst`|String |10|O|Same value as request table. Integrated GST Including decimal (E.g: “10.00” for $10 igst)<br> - To be sent if IGST is included in the total amount (Applicable only for India).|
+|`sgst`|String |10|O|Same value as request table. State GST Including decimal (E.g: “10.00” for $10 igst)<br> - To be sent if sGST is included in the total amount (Applicable only for India).|
+|`gst`|String|10|O|Same value as request table. Same value as request table.<br> GST - applicable except India|
 |`tipAmount`|String |12|O|Tip Amount If applicable|
-|`totalAmount`|String|12|M|Total Amount (auth, fee, gsts, tip) including decimal ((Ex: “57.00” for $57 sale).|
-|`tranCurrency`|String|3|M|Same as Request|
+|`totalAmount`|String|12|M|Total Amount (auth, fee, gsts) including decimal<br>(E.g: “57.00” for $57 sale). Send 0.00 for inquiry transaction and Get Token.|
+|`tranCurrency`|String|3|M|Same value as request table. Transaction Currency Code (3-digit numeric value)|
 |**DCC**|||||
-|`dccIndicator`|String|1|M|0 – Non DCC <br> 1 – DCC|
+|`dccIndicator`|String|1|M|0 – Non-DCC <br> 1 – DCC|
 |`dccCurrency`|String|3|C|DCC Currency|
 |`dccAmount`|String|19|C|DCC Amount|
 |`dccExchangeRate`|String|20|C|Currency exchange rate|
