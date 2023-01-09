@@ -4,6 +4,7 @@ This API is used to send transaction inquiry request. Merchants will be required
 token received during login API call in the header of this API.
 
 
+
 ## Endpoint
 
 POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/standardNonOpiProcess`
