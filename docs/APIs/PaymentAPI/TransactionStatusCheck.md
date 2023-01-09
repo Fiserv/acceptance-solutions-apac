@@ -326,7 +326,6 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ### Response
 | Variable | Type | Length |   Mandatory / Optional/ Conditional <br> (M / O / C)  | Description / Values |
 | -------- | ------- | -- | ------------ | ------------------ |
-
 |**Merchant Info**|||||
 |`billerId`|String |3|M|Same as request|
 |`ain`|String|7|M|Same as request|
