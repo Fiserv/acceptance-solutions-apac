@@ -174,12 +174,12 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
             "siteId": "",
             "workStationId": ""
         },
-        "txnStatus": {
+        "transactionStatus": {
             "respCode": "300",
             "response": "Failure:",
             "respMsg": "[Field Name: merchantId is mandatory]"
         },
-        "txnDetails": {
+        "transactionDetails": {
             "functionCode": "",
             "customerRefNumber": "",
             "merchantRefNumber": "",
@@ -239,16 +239,16 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 | Variable | Type | Length | Mandatory / Optional /Conditional <br>(M / O / C) | Description / Values |
 | -------- | ------- | -- | ----------------------------------------------- | ------------------ |
 | `merchantId` | *string* | 20 | M | Merchant ID |
-| `transactionId` | *string* | 20 | M | Unique ID (Biller tran details table) |
+| `transactionId` | *string* | 20 | M | Unique ID (Biller transaction details table) |
 | `functionCode` | *string* | 02 | M | Same as request. |
 | `invoiceNumber` | *string* | 20 | O | Terminal Invoice Number |
-| `cardLastNumber` | *string* | 4 | C | Last 4 Digits of Card Number. To be included for PreAuth completion transaction. |
+| `cardLastNumber` | *string* | 4 | C | Last 4-digits of the card used in the transactions. To be included for Pre-Authorization completion transaction. |
 | `totalAmount` | *string* | 19 | M | Total Amount (auth, fee, gsts, tip) including decimal (E.g. 57.00 for $57 sale). |
-| `tipAmount` | *string* | 10 | C | Last 4 Digits of Card Number. To be included for PreAuth completion transaction. |
+| `tipAmount` | *string* | 10 | C | Tip amount if applicable |
 | `merchantRefNumber` | *string* | 14 | M | Merchant Reference Number |
 | `customerRefNumber` | *string* | 20 | 0 | Customer's Reference Number |
 | `respCode` | *string* | 05 | M | 200 / 300 / actual switch response |
-| `response` | *string* | 20 | M | SUCCESS / FAILURE |
+| `response` | *string* | 20 | M | Success / Failure |
 | `respMsg` | *string* | 20 | O | Error Message |
 | `authCode` | *string* | 06 | C  | Received from Issuer Host. |
 | `rrn` | *string* | 20 | C | The same value received in the original transaction response needs to be submitted across. |
