@@ -131,16 +131,11 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 |`authAmount`|String|12|M|Bill Amount including decimal (E.g: “50.00” for $50 sale). Send 0.00 for inquiry transaction and Get Token.|
 |`mrchDiscountAmt`|String|10|C|Discount given to card holder|
 |`convFee`|String |10|C|Convenience Fee including decimal (E.g: “50.00” for $50 sale). Send 0.00 for inquiry transaction and Get Token.|
-|`mrchDiscountAmt`|String|10|C|Discount given to card holder “5.00” for $5 fee) - To be sent if fee is charged.|
 |`cgst`|String |10|C|Central GST Including decimal (E.g: “50.00” for $50 sale). Send 0.00 for inquiry transaction and Get Token.|
-|`mrchDiscountAmt`|String|10|C|Discount given to card holder “10.00” for $10 cgst) - To be sent if CGST is included in the total amount (Applicable only for India).|
 |`igst`|String |10|C|Integrated GST Including decimal (E.g: “50.00” for $50 sale). Send 0.00 for inquiry transaction and Get Token.|
-|`mrchDiscountAmt`|String|10|C|Discount given to card holder “10.00” for $10 igst) - To be sent if IGST is included in the total amount (Applicable only for India).|
 |`sgst`|String |10|C|State GST Including decimal (E.g: “50.00” for $50 sale). Send 0.00 for inquiry transaction and Get Token.|
-|`mrchDiscountAmt`|String|10|C|Discount given to card holder “10.00” for $10 igst) - To be sent if SGST is included in the total amount (Applicable only for India).|
 |`gst`|String |10|C|GST - applicable except India|
 |`totalAmount`|String |12|M|Total Amount (auth, fee, gsts) including decimal (E.g: “50.00” for $50 sale). Send 0.00 for inquiry transaction and Get Token.|
-|`mrchDiscountAmt`|String|10|C|Discount given to card holder “57.00” for $57 sale) Send 0.00 for inquiry transaction and Get Token.|
 |`tranCurrency`|String |3|M|Transaction Currency Code (3-digit numeric value)|
 |**Additional Params**|||||
 |`callbackURL`|String|100|O|Response URL, placeholder for notification API call feature.|
