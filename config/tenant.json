@@ -23,7 +23,7 @@
         "version": "1.0.2",
         "versionType": "major",
         "releaseNotesPath": "/release-notes/2022/august.md",
-        "apiSpecFileNames": ["cloudPoi","boarding-test"]
+        "apiSpecFileNames": ["cloudPoi"]
 	   
       } 
   ],
