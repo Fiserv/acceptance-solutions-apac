@@ -664,7 +664,7 @@ The table below provides the list of application's error code and its descriptio
 
 | Error Code |  Description / Values | Comments |
 | --------  | ------------------ | ---------- |
-|`00`|Transaction is approved / successful.|Request had been approved. Merchant should go ahead with receipt generation.|
+|`00`|Transaction is approved / successful.|Request had been approved. Merchant should proceed with receipt generation.|
 |`01`|Cardholder to contact Issuing Bank|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`02`|Special condition, cardholder to contact Issuing Bank|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`03`| Invalid merchant|Contact Customer Support / Business Manager.|
