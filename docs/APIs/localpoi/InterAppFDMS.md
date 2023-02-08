@@ -639,8 +639,8 @@ The below table identifies the required properties in the response message
 |`tsi`|String|4|O|EMV transaction status information (4-digit value) |
 |`atc`|String|2|O|EMV Application transaction counter (2-digit value) |
 |`localCurrCode`|String|3|O|Local currency code for DCC transactions.|
-|`cardholderCode`|String|3|O|Cardholder currency code.For Dcc transactions.|
-|`fxRate`|String|6|O|Exchange rate for Dcc transactions. |
+|`cardholderCode`|String|3|O|Cardholder currency code. For DCC transactions.|
+|`fxRate`|String|6|O|Exchange rate for DCC transactions. |
 |`foreignAmt`|String|10|O|Amount in cardholder’s home currency for DCC transaction.|
 |`tenure`|String|3|O|Installment / EMI duration. If Installment / EMI transactions are included.|
 |`productCode`|String|3|O|Product code for Installment / EMI transactions if these transactions when applicable.|
@@ -672,10 +672,10 @@ The table below provides the list of application's error code and its descriptio
 |`05`|Do not honour, cardholder to contact Issuing bank|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`06`|Error|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`07`|Pick-up card, special condition|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
-|`08`| Honour with identification|Merchant should confirm cardholder's ID/verification.|
+|`08`| Honour with identification|Merchant should confirm cardholder's ID for verification.|
 |`09`|Request in progress|Transaction request in progress, merchant should wait for transaction completion.|
 |`10`|Partial approval|Contact Customer Support / Business Manager.|
-|`11`|Approved(V.I.P)|Contact Customer Support / Business Manager.|
+|`11`|Approved (V.I.P)|Contact Customer Support / Business Manager.|
 |`12`|Invalid Transaction|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`13`|Invalid amount|Invalid amount or currency conversion field overflow. Merchant should enter a valid amount.|
 |`14`|Invalid account|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
