@@ -714,7 +714,7 @@ The table below identifies the required properties in the response message
 |`se`|String|10|O|Value would be populated incase of Amex txns.|
 |`emv`|String|256|O|EMV data like TC , Application identifier, Application Name, TSI, etc.|
 |`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC) transactions such as: - Installment / EMI Sale - Installment / EMI Void Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI) 1 = EMI (Installment / EMI.|
-|`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
+|`posEntryMode`|String|3|O|Magstripe, Chip, Contactless, Manual entry, etc.|
 |`pinVerified`|String|3|O|"Yes" when PIN was entered & "No" when pin was not prompt.|
 |`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
 |`billerID`|String|10|O|Same as request.|
@@ -737,7 +737,7 @@ The table below identifies the required properties in the response message
 The table below provides the list of error codes and description for this application.
 | Error Code |  Description / Values | Comments |
 | --------  | ------------------ | -------------|
-|`00`|Balance is approved|Merchant should go ahead with reciept generation.|
+|`00`|Balance is approved|Merchant should proceed with reciept generation.|
 |`01`|Place Call|Contact Customer Support / Business Manager.|
 |`02`|Over Floor Limit|Contact Customer Support / Business Manager.|
 |`03`|Merchant Not on File|Contact Customer Support / Business Manager.|
