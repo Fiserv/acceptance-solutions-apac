@@ -11,7 +11,7 @@ POST `https://www.uat.fdmerchantservices.com/boardinggateway/cloudpoidp/PosPush/
 ### Request Payload
 
 ```json
-{]
+{
    "merchantDetails":{
       "ain":"2100000",
       "billerId":"14",
@@ -101,8 +101,8 @@ The below table identifies the required json properties in the request message.
 |**Merchant Information**| ||||
 |`billerId`|String|3|M|Biller ID provided by Fiserv|
 |`ain`|String |7|M|Acquirer institution number provided by Fiserv|
-|`siteId`|String|15|C|Merchant's MID reference (not required if MID is sent)|
-|`workStationId`|String |8|C|Merchant's TID reference (not required if TID is sent)|
+|`siteId`|String|15|C|Merchant's MID reference (Not required if MID is sent)|
+|`workStationId`|String |8|C|Merchant's TID reference (Not required if TID is sent)|
 |`merchantId`|String |15|C|Merchant ID assigned|
 |`terminalId`|String |8|C|Terminal ID where transactions to be pushed.|
 |`mrchCountryCode`|String |3|M|Merchant Country Code (3-digit numeric value)|
@@ -138,7 +138,7 @@ The below table identifies the required json properties in the request message.
 |`tranCurrency`|String |3|M|Transaction Currency Code (3-digit numeric value)|
 |**Additional Params**|||||
 |`callbackURL`|String|100|O|Response URL, placeholder for notification API call feature.|
-|`param_lit`|Array||O|Biller can pass any additional details if required in arrary format as below,<br> "paramList": [<br> { <br>"param_lit": "param1 key",<br> "param": "23" <br>}, <br>{ <br> "param_lit": "param 2 key",<br>"param": "54" <br>}  <br>]  |
+|`param_lit`|Array||O|Biller can pass any additional details if required in array format as below,<br> "paramList": [<br> { <br>"param_lit": "param1 key",<br> "param": "23" <br>}, <br>{ <br> "param_lit": "param 2 key",<br>"param": "54" <br>}  <br>]  |
 |`udf1`|String |100|O|User Defined Field|
 |`udf2`|String|100|O|User Defined Field|
 
@@ -363,8 +363,8 @@ The below table identifies the required json properties in the request message.
 |**Merchant Information**|||||
 |`billerId`|String |3|M|Same value as request table.<br>Biller ID provided by Fiserv.|
 |`ain`|String|7|M|Same value as request table.<br>Acquirer institution number provided by Fiserv.|
-|`siteId`|String|15|C|Same value as request table.<br>Merchant's MID reference (not required if MID is sent)|
-|`workStationId`|String|8|C|Same value as request table.<br>Merchant's TID reference (not required if TID is sent)|
+|`siteId`|String|15|C|Same value as request table.<br>Merchant's MID reference (Not required if MID is sent)|
+|`workStationId`|String|8|C|Same value as request table.<br>Merchant's TID reference (Not required if TID is sent)|
 |`merchantId`|String |15|C|Same value as request table.<br>Merchant ID assigned|
 |`terminalId`|String|8|C|Same value as request table.<br>Terminal ID where transaction to be pushed.|
 |`mrchCountryCode`|String|3|M|Same value as request table.<br>Merchant Country Code (3-digit numeric value)|
