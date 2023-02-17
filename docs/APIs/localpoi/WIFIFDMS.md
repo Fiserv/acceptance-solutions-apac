@@ -533,7 +533,7 @@ The table below provides the list of error codes and description for this applic
 |`22`|Suspected malfunction|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|"
 |`25`| Unable to locate Original Transaction|Contact Customer Support / Business Manager.|
 |`30`|Format Error|Contact Customer Support / Business Manager.|
-|`31`|Bank not supported|Contact Customer Support / Business Manager.|
+|`31`|Bank not supported|Merchant should advise cardholder to use a different card for the transaction.|
 |`32`|Expired card, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`33`|Suspected fraud, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`34`|Fraud|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
