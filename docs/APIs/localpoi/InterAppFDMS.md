@@ -686,7 +686,7 @@ The table below provides the list of application's error code and its descriptio
 |`22`|Suspected malfunction|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`25`| Unable to locate the original transaction|Contact Customer Support / Business Manager.|
 |`30`|Invalid message format|Invalid message format received. Contact Customer Support / Business Manager.|
-|`31`|Bank not supported|Merchant should advisent should advise cardholder to use a different card for the transaction.|
+|`31`|Bank not supported|Merchant should advise cardholder to use a different card for the transaction.|
 |`32`|Expired card, pick-up|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`33`|Suspected fraud, pick-up|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`34`|Fraud|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
