@@ -1,4 +1,4 @@
-# Local Based Integration
+# Local Integration
 
 Fiserv Local integration is an Application Programming Interface (API) based local integration which facilitates the connection with the retailer's central or standalone systems, in order to automate the entire billing to payment transactions.
 
@@ -13,7 +13,7 @@ Fiserv Local integration API caters to merchants who decided to have your paymen
 
 ## Certified Point of Sale Fiserv Terminals 
 
-List of certified terminals for Fiserv Local Based Integration :
+List of certified terminals for Fiserv Local Integration :
    -  India : Inter-Application Integration - PAX A920 / A910,   Verifone X990
    -  India : USB / Static Wi-fi - PAX A920 / A910
    -  Australia & Rest of APAC : Inter-Application Integration - PAX A920 

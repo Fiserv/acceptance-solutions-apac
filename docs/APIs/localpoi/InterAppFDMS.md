@@ -9,39 +9,9 @@ For a normal Sale request, the supported functionalities are listed below.
 
 - Card Transaction (navigating to direct card payment application) 
 
-For digital transactions, the supported functionalities are listed below.
+For a normal Sale request, the supported functionalities are listed below.
 
 <table border="0">
-  <tr>
-    <th>Value Added Services</th>
-    <th> Rest of APAC <br>(SG, HK, MY) </th>
-     </tr>
-    <tr>
-    <td>WeChat</td>
-    <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>Alipay</td>
-    <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>FPS</td>
-    <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>GrabPay</td>
-    <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>CUP QR (UnionPay QR)</td>
-    <td align="center">&#10004;</td>
-    </tr>
-    </table>
-
-  For a normal Sale request, the supported functionalities are listed below.
-    
-    
- <table border="0">
     <tr>
     <th>Transactions Supported</th>
     <th> Rest of APAC (SG, HK, MY)  </th>
@@ -177,7 +147,36 @@ For digital transactions, the supported functionalities are listed below.
     </tr>
     </table>
    
+For digital transactions, the supported functionalities are listed below.
 
+<table border="0">
+  <tr>
+    <th>Value Added Services</th>
+    <th> Rest of APAC <br>(SG, HK, MY) </th>
+     </tr>
+    <tr>
+    <td>WeChat</td>
+    <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>Alipay</td>
+    <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>FPS</td>
+    <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>GrabPay</td>
+    <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>CUP QR (UnionPay QR)</td>
+    <td align="center">&#10004;</td>
+    </tr>
+    </table>
+
+ 
 
 
  
@@ -640,8 +639,8 @@ The below table identifies the required properties in the response message
 |`tsi`|String|4|O|EMV transaction status information (4-digit value) |
 |`atc`|String|2|O|EMV Application transaction counter (2-digit value) |
 |`localCurrCode`|String|3|O|Local currency code for DCC transactions.|
-|`cardholderCode`|String|3|O|Cardholder currency code.For Dcc transactions.|
-|`fxRate`|String|6|O|Exchange rate for Dcc transactions. |
+|`cardholderCode`|String|3|O|Cardholder currency code. For DCC transactions.|
+|`fxRate`|String|6|O|Exchange rate for DCC transactions. |
 |`foreignAmt`|String|10|O|Amount in cardholder’s home currency for DCC transaction.|
 |`tenure`|String|3|O|Installment / EMI duration. If Installment / EMI transactions are included.|
 |`productCode`|String|3|O|Product code for Installment / EMI transactions if these transactions when applicable.|
@@ -665,7 +664,7 @@ The table below provides the list of application's error code and its descriptio
 
 | Error Code |  Description / Values | Comments |
 | --------  | ------------------ | ---------- |
-|`00`|Transaction is approved / successful.|Request had been approved. Merchant should go ahead with receipt generation.|
+|`00`|Transaction is approved / successful.|Request had been approved. Merchant should proceed with receipt generation.|
 |`01`|Cardholder to contact Issuing Bank|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`02`|Special condition, cardholder to contact Issuing Bank|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`03`| Invalid merchant|Contact Customer Support / Business Manager.|
@@ -673,10 +672,10 @@ The table below provides the list of application's error code and its descriptio
 |`05`|Do not honour, cardholder to contact Issuing bank|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`06`|Error|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
 |`07`|Pick-up card, special condition|Issuer declined the transaction. Merchant should advise cardholder to use a different valid card for the transaction.|
-|`08`| Honour with identification|Merchant should confirm cardholder's ID/verification.|
+|`08`| Honour with identification|Merchant should confirm cardholder's ID for verification.|
 |`09`|Request in progress|Transaction request in progress, merchant should wait for transaction completion.|
 |`10`|Partial approval|Contact Customer Support / Business Manager.|
-|`11`|Approved(V.I.P)|Contact Customer Support / Business Manager.|
+|`11`|Approved (V.I.P)|Contact Customer Support / Business Manager.|
 |`12`|Invalid Transaction|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`13`|Invalid amount|Invalid amount or currency conversion field overflow. Merchant should enter a valid amount.|
 |`14`|Invalid account|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
@@ -687,7 +686,7 @@ The table below provides the list of application's error code and its descriptio
 |`22`|Suspected malfunction|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`25`| Unable to locate the original transaction|Contact Customer Support / Business Manager.|
 |`30`|Invalid message format|Invalid message format received. Contact Customer Support / Business Manager.|
-|`31`|Bank not supported|Merchant should advisent should advise cardholder to use a different card for the transaction.|
+|`31`|Bank not supported|Merchant should advise cardholder to use a different card for the transaction.|
 |`32`|Expired card, pick-up|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`33`|Suspected fraud, pick-up|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|
 |`34`|Fraud|Issuer declined the transaction. Merchant should advise cardholder to use a different card for the transaction.|

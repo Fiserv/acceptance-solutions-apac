@@ -47,7 +47,7 @@
               link: docs/PosOverview.md
             - title: Cloud Based Integration Checklist
               link: docs/CloudIntegrationCheckList.md
-            - title: Local Based Integration Checklist
+            - title: Local Integration Checklist
               link: docs/LocalIntegrationCheckList.md
 
 - sections:
@@ -79,7 +79,7 @@
             - title: Settlement
               link: docs/APIs/PaymentAPI/SettlementTransaction.md
        
-        - title: Local Based Integration
+        - title: Local Integration
           link: docs/LocalPOI.md
           sections:
             - title: India / Australia

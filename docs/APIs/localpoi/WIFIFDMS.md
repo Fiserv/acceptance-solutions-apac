@@ -40,37 +40,7 @@ System Requirements to setup USB / Static Wi-fi
    - Trigger transactions from PC application to check the line status
             
 
-For digital transactions, the supported functionalities are listed below.
-
-</body>
-<table border="0">
-  <tr>
-    <th> Value Added Services </th>
-    <th> Rest of APAC <br>(SG, HK, MY) </th>
-     </tr>
-    <tr>
-    <td>WeChat</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>Alipay</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>FPS</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>GrabPay</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    <tr>
-    <td>CUP QR (UnionPay QR)</td>
-     <td align="center">&#10004;</td>
-    </tr>
-    </table>
-
-  For a normal Sale request, the supported functionalities are listed below.
+ For a normal Sale request, the supported functionalities are listed below.
     
     
  <table border="0">
@@ -192,6 +162,51 @@ For digital transactions, the supported functionalities are listed below.
     </tr>
     </tr>
     </table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+For digital transactions, the supported functionalities are listed below.
+
+</body>
+<table border="0">
+  <tr>
+    <th> Value Added Services </th>
+    <th> Rest of APAC <br>(SG, HK, MY) </th>
+     </tr>
+    <tr>
+    <td>WeChat</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>Alipay</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>FPS</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>GrabPay</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    <tr>
+    <td>CUP QR (UnionPay QR)</td>
+     <td align="center">&#10004;</td>
+    </tr>
+    </table>
+
+ 
    
 
 
@@ -470,7 +485,7 @@ The table below identifies the required properties in the response message
 |`batchNumber`|String|6|M|Terminal Batch Number|
 |`cardholderName`|String|25|O|Name of the cardholder|
 |`cardType`|String|10|M|Type of card.|
-|`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
+|`posEntryMode`|String|3|O|Magstripe, Chip, Contactless, Manual entry, etc.|
 |`cardExpDate`|String|4|O|Transaction card expiry date|
 |`merchantID`|String|16|M|Merchant ID|
 |`signature`|String|2|O|Y' or 'N'|
@@ -496,7 +511,7 @@ The table below identifies the required properties in the response message
 The table below provides the list of error codes and description for this application.
 | Error Code |  Description / Values | Comments |
 | --------  | ------------------ | ---------- |
-|`00`|Approved or completed successfully|Merchant should go ahead with reciept generation.|
+|`00`|Approved or completed successfully|Merchant should proceed with reciept generation.|
 |`01`|Refer to card issuer, Cardholder to contact Issuing Bank|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`02`|Refer to card issuer, special condition|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`03`| Invalid merchant|Contact Customer Support / Business Manager.|
@@ -518,7 +533,7 @@ The table below provides the list of error codes and description for this applic
 |`22`|Suspected malfunction|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|"
 |`25`| Unable to locate Original Transaction|Contact Customer Support / Business Manager.|
 |`30`|Format Error|Contact Customer Support / Business Manager.|
-|`31`|Bank not supported|Contact Customer Support / Business Manager.|
+|`31`|Bank not supported|Merchant should advise cardholder to use a different card for the transaction.|
 |`32`|Expired card, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`33`|Suspected fraud, pick-up|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|
 |`34`|Fraud|Issuer Decline. Merchant should advise cardholder to use different card for transaction.|

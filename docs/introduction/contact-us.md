@@ -85,7 +85,7 @@ AEST<br>
   <td> <b>Queries Point-of-Sale / Digital / Online Support</b><br>
 •  Integration Support: POS : <a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=merchantservices@fiserv.com" target="_self">merchantservices@fiserv.com</a><br>
 •  Integration Support: Digital / Online :<a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=firstdatagateway@fiserv.com" target="_self">firstdatagateway@fiserv.com</a><br>
-•  Contact: +603 6207 4888<br>
+•  Contact: +603 6207 4888 select option 5<br>
 •  Operational hours: Local Time: 9am – 11pm<br>
 •  Sales Enquiries Contact: <a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=merchantservices@fiserv.com" target="_self">merchantservices@fiserv.com</a>
  </td>
