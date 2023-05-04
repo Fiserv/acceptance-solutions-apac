@@ -31,46 +31,7 @@ System Requirements to setup USB / Static Wi-fi
    - Connect the desired cable (USB) to PC 
    - Trigger transactions from PC application to check the line status
             
-          
-
-For digital transactions, the supported functionalities are listed below.
-
-   <table border="0">
-  <tr>
-    <th>Value Added Services</th>
-    <th>India</th>
-    <th>Australia</th>
-  </tr>
-  <tr>
-    <td>BBPS (Bharat Bill Pay)</td>
-     <td align="center">&#10004;</td>
-  <td></td>
-  </tr>
-   <tr>
-    <td>UPI QR</td>
-     <td align="center">&#10004;</td>
-  <td></td>
-  </tr>
-   <tr>
-    <td>Bharat QR</td>
-     <td align="center">&#10004;</td>
-   <td></td>
-  </tr>
-   <tr>
-    <td>FASTag</td>
-     <td align="center">&#10004;</td>
-   <td></td>
-  </tr>
-     <tr>
-    <td>MobiKwik</td>
-     <td align="center">&#10004;</td>
-  <td></td>
-  </tr>
-</table>
-
-
-
-For card transactions, the supported functionalities are listed below.
+ For card transactions, the supported functionalities are listed below.
 
 <table border="0">
   <tr>
@@ -183,6 +144,45 @@ For card transactions, the supported functionalities are listed below.
      <td align="center">&#10004;</td>
      <td align="center">&#10004;</td>
  </tr>
+</table>
+
+For digital transactions, the supported functionalities are listed below.
+
+   <table border="0">
+  <tr>
+    <th>Value Added Services</th>
+    <th>India</th>
+  </tr>
+  <tr>
+    <td>BBPS (Bharat Bill Pay)</td>
+     <td align="center">&#10004;</td>
+ 
+  </tr>
+   <tr>
+    <td>UPI QR</td>
+     <td align="center">&#10004;</td>
+  
+  </tr>
+   <tr>
+    <td>Bharat QR</td>
+     <td align="center">&#10004;</td>
+   
+  </tr>
+   <tr>
+    <td>FASTag</td>
+     <td align="center">&#10004;</td>
+  
+  </tr>
+     <tr>
+    <td>MobiKwik</td>
+     <td align="center">&#10004;</td>
+  
+  </tr>
+</table>
+
+
+
+
   
 
 |  Param1    | Descriptions  |  Comment |
@@ -714,7 +714,7 @@ The table below identifies the required properties in the response message
 |`se`|String|10|O|Value would be populated incase of Amex txns.|
 |`emv`|String|256|O|EMV data like TC , Application identifier, Application Name, TSI, etc.|
 |`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC) transactions such as: - Installment / EMI Sale - Installment / EMI Void Flag is defined as: 0 = Non-EMI (Non-installment / Non-EMI) 1 = EMI (Installment / EMI.|
-|`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
+|`posEntryMode`|String|3|O|Magstripe, Chip, Contactless, Manual entry, etc.|
 |`pinVerified`|String|3|O|"Yes" when PIN was entered & "No" when pin was not prompt.|
 |`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
 |`billerID`|String|10|O|Same as request.|
@@ -737,7 +737,7 @@ The table below identifies the required properties in the response message
 The table below provides the list of error codes and description for this application.
 | Error Code |  Description / Values | Comments |
 | --------  | ------------------ | -------------|
-|`00`|Balance is approved|Merchant should go ahead with reciept generation.|
+|`00`|Balance is approved|Merchant should proceed with reciept generation.|
 |`01`|Place Call|Contact Customer Support / Business Manager.|
 |`02`|Over Floor Limit|Contact Customer Support / Business Manager.|
 |`03`|Merchant Not on File|Contact Customer Support / Business Manager.|

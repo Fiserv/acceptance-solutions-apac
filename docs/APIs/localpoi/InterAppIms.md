@@ -5,42 +5,6 @@ E.g. A biller can integrate with a payment application and complete the payment 
 
 Financial payment transactions that are supported by inter-application to billers include functions like Sale, Pre-Authorisation Sale, Pre-Authorisation Completion, Transaction Status Check,Installment/EMI Sale, Void, Settlement and Bharat QR code generation.
 
-
-
-
-<table width="130%"border="0">
-  <tr>
-    <th>Value Added Services</th>
-    <th>India</th>
-    <th>Australia</th>
-  </tr>
-  <tr>
-    <td>BBPS (Bharat Bill Pay)</td>
-     <td align="center">&#10004;</td>
-     <td></td>
-  </tr>
-   <tr>
-    <td>UPI QR</td>
-     <td align="center">&#10004;</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>Bharat QR</td>
-     <td align="center">&#10004;</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>FASTag</td>
-     <td align="center">&#10004;</td>
-    <td></td>
-  </tr>
-     <tr>
-    <td>MobiKwik</td>
-     <td align="center">&#10004;</td>
-     <td></td>
-  </tr>
-</table>
-
 For card transactions, the supported functionalities are listed below.
 
   <table width="120%" border="0">
@@ -157,7 +121,38 @@ For card transactions, the supported functionalities are listed below.
   </tr>
   </table>
   
-
+ For digital transactions, the supported functionalities are listed below.
+<table width="130%"border="0">
+  <tr>
+    <th>Value Added Services</th>
+    <th>India</th>
+  </tr>
+  <tr>
+    <td>BBPS (Bharat Bill Pay)</td>
+     <td align="center">&#10004;</td>
+   
+  </tr>
+   <tr>
+    <td>UPI QR</td>
+     <td align="center">&#10004;</td>
+   
+  </tr>
+   <tr>
+    <td>Bharat QR</td>
+     <td align="center">&#10004;</td>
+    
+  </tr>
+   <tr>
+    <td>FASTag</td>
+     <td align="center">&#10004;</td>
+    
+  </tr>
+     <tr>
+    <td>MobiKwik</td>
+     <td align="center">&#10004;</td>
+     
+  </tr>
+</table>
 
 ### Payload Examples - Request
 
@@ -434,7 +429,7 @@ The table below identifies the required properties in the response message
 |`se`|String|10|O|Value would be populated incase of Amex transactions.|
 |`emv`|String|256|O|EMV data like TC , Application identifier, Application Name, TSI, etc.|
 |`emiFlag`|String|1|O|To be sent in for Over the Counter (OTC)<br> transactions such as:<br> - Installment / EMI Sale <br>- Installment / EMI Void <br>Flag is defined as:<br>0 = Non-EMI (Non-installment / Non-EMI)<br> 1 = EMI (Installment / EMI).|
-|`posEntryMode`|String|3|O|Magstripe,Chip, Contactless, Manual entry, etc.|
+|`posEntryMode`|String|3|O|Magstripe, Chip, Contactless, Manual entry, etc.|
 |`pinVerified`|String|3|O|Yes= when PIN was entered <br> No = when pin was not prompted.|
 |`authCode`|String|8|M|Used for Pre-authorization completion & cancellation transaction.|
 |`billerID`|String|10|O|Biller ID received.|
@@ -449,7 +444,7 @@ The table below identifies the required properties in the response message
 |`purchaseAmount `|String|10|O|Purchase amount|
 |`cashBackAmount`|String|10|O| Transaction cash back amount|
 |`nacStatus `|String|3|O|Identifies the network status <br> - True = private network <br> - False = public network.|
-|`cardExpDate`|String|4|O|Transaction card expire date|
+|`cardExpDate`|String|4|O|Transaction card expiry date|
 |`dccFlag`|String|1|O| DCC Conversion flag - Y or N|
 |`printChargeslip`|String|1|O| To enable charge slip printing - Y or N ( Default mode = Y ).|
 
@@ -458,7 +453,7 @@ The table below provides the list of application's error code and its descriptio
 
 | Error Code |  Description / Values | Comments |
 | --------  | ------------------ | ----------- |
-|`00`|Approved Balances|Merchant should go ahead with reciept generation.|
+|`00`|Approved Balances|Merchant should proceed with reciept generation.|
 |`01`|Place Call|Contact Customer Support / Business Manager.|
 |`02`|Over Floor Limit|Contact Customer Support / Business Manager.|
 |`03`|Merchant Not on File|Contact Customer Support / Business Manager|.
