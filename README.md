@@ -4,6 +4,7 @@ This repo contains the content for tenants of Developer Studio.
 
 ## Directory structure
 
+
 - /docs : All markdown files are to be placed in this directory
 - /assets :  Static assets like image etc here
 - /config/document-explorer-definition.yaml : Provide document explorer structure for dev studio.  Also known as the ded (dead) file.
