@@ -12,7 +12,7 @@ Point of sale connects directly with the payment terminal using your local netwo
 
 ## Cloud Based Integration
 
-Point of sale connects the payment terminal using Cloud based integrations with our payment platform via Fiserv APIs. Find out [more](./path=docs/CloudPOI.md).
+Point of sale connects the payment terminal using Cloud based integrations with our payment platform via Fiserv APIs. Find out [more](./?path=docs/CloudPOI.md).
 
 ## Standalone Terminals
 For basic payment terminal solutions that do not require any integration, we offer state of the art standalone terminals for your businesses.
