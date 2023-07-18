@@ -29,6 +29,10 @@
 ################################################################################
 
 - sections:
+  - title: Getting Started
+    link: docs/Getting-Started-APAC.md
+
+- sections:
     - title: Introduction
       link: docs/Getting-Started-APAC.md
       open: true
