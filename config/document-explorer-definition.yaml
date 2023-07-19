@@ -27,28 +27,43 @@
 # are granted or extended by this work or 
 # the delivery of this work
 ################################################################################
-
-- sections:
-    - title: Introduction
-      link: docs/Getting-Started-APAC.md
-      open: true
-      sections:
-        - title: Contact Us
-          link: docs/introduction/contact-us.md
-
 - sections:
     - title: Getting Started
       link: docs/Getting-Started-APAC.md
       open: true
       sections:
-        - title: Point of Sale Integration
-          sections:
-            - title: Overview
-              link: docs/PosOverview.md
-            - title: Cloud Based Integration Checklist
-              link: docs/CloudIntegrationCheckList.md
-            - title: Local Integration Checklist
-              link: docs/LocalIntegrationCheckList.md
+        - title: Contact Us
+          link: docs/introduction/contact-us.md
+- sections:
+    - title: Point of Sale Integration
+      sections:
+        - title: Overview
+          link: docs/PosOverview.md
+        - title: Cloud Based Integration Checklist
+          link: docs/CloudIntegrationCheckList.md
+        - title: Local Integration Checklist
+          link: docs/LocalIntegrationCheckList.md
+# - sections:
+#     - title: Introduction
+#       link: docs/Getting-Started-APAC.md
+#       open: true
+#       sections:
+#         - title: Contact Us
+#           link: docs/introduction/contact-us.md
+
+# - sections:
+#     - title: Getting Started
+#       link: docs/Getting-Started-APAC.md
+#       open: true
+#       sections:
+#         - title: Point of Sale Integration
+#           sections:
+#             - title: Overview
+#               link: docs/PosOverview.md
+#             - title: Cloud Based Integration Checklist
+#               link: docs/CloudIntegrationCheckList.md
+#             - title: Local Integration Checklist
+#               link: docs/LocalIntegrationCheckList.md
 
 - sections:
     - title: Features
