@@ -5,7 +5,6 @@ header:
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: AcceptanceSolutionsAPAC™
-getStarted: /docs/Getting-Started-APAC.md
 featuredFeatures:
   - title: Cloud Based Integration
     description: Fiserv Cloud based integration is an Application Programming Interface (API) based integration which facilitates the connection with the retailer's central or  standalone systems, in order to automate the entire billing to payment transactions.
